@@ -28,7 +28,6 @@ Version=13.4
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-	Private xui As XUI
 End Sub
 
 Sub Globals
@@ -47,6 +46,3 @@ Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
-Sub Button1_Click
-	xui.MsgboxAsync("test change", "B4X")
-End Sub
