@@ -1,16 +1,25 @@
 ﻿Build1=Default,b4a.example
-File1=Layout.bal
-File2=LEBRON JAMES.jpg
+File1=darkMdeBtn.bal
+File2=Layout.bal
+File3=LEBRON JAMES.jpg
+File4=test.bal
+File5=test2.bal
 FileGroup1=Default Group
 FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
 Group=Default Group
 Library1=core
 Library2=xui
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
-Module1=Starter
-NumberOfFiles=2
+Module1=darkmodeBtn
+Module2=lofibutton
+Module3=Starter
+Module4=test
+NumberOfFiles=5
 NumberOfLibraries=2
-NumberOfModules=1
+NumberOfModules=4
 Version=13.4
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -48,3 +57,38 @@ Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
+Private Sub schoolBtn_Click
+	StartActivity(test)
+End Sub
+
+Private Sub pmdrBtn_Click
+	StartActivity(test)
+End Sub
+
+Private Sub nteBtn_Click
+	StartActivity(test)
+End Sub
+
+Private Sub navBtn_Click
+	StartActivity(test)
+End Sub
+
+Private Sub lofiBtn_Click
+	StartActivity(lofibutton)
+End Sub
+
+Private Sub fcBtn_Click
+	StartActivity(test)
+End Sub
+
+Private Sub darkBtn_Click
+	StartActivity(darkmodeBtn)
+End Sub
+
+Private Sub comBtn_Click
+	StartActivity(test)
+End Sub
+
+Private Sub cbBtn_Click
+	StartActivity(test)
+End Sub

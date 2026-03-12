@@ -351,6 +351,9 @@ public static void initializeProcessGlobals() {
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
+vis = vis | (test.mostCurrent != null);
+vis = vis | (lofibutton.mostCurrent != null);
+vis = vis | (darkmodebtn.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -375,9 +378,48 @@ public static void killProgram() {
 				__a.finish();}
 
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
+ {
+            Activity __a = null;
+            if (test.previousOne != null) {
+				__a = test.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(test.mostCurrent == null ? null : test.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (lofibutton.previousOne != null) {
+				__a = lofibutton.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(lofibutton.mostCurrent == null ? null : lofibutton.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (darkmodebtn.previousOne != null) {
+				__a = darkmodebtn.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(darkmodebtn.mostCurrent == null ? null : darkmodebtn.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public b4a.example.starter _starter = null;
+public b4a.example.test _test = null;
+public b4a.example.lofibutton _lofibutton = null;
+public b4a.example.darkmodebtn _darkmodebtn = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -407,6 +449,105 @@ RDebugUtils.currentLine=196608;
  //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
 RDebugUtils.currentLine=196610;
  //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+return "";
+}
+public static String  _cbbtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "cbbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "cbbtn_click", null));}
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Private Sub cbBtn_Click";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="End Sub";
+return "";
+}
+public static String  _combtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "combtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "combtn_click", null));}
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Private Sub comBtn_Click";
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="End Sub";
+return "";
+}
+public static String  _darkbtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "darkbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "darkbtn_click", null));}
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Private Sub darkBtn_Click";
+RDebugUtils.currentLine=1179649;
+ //BA.debugLineNum = 1179649;BA.debugLine="StartActivity(darkmodeBtn)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._darkmodebtn.getObject()));
+RDebugUtils.currentLine=1179650;
+ //BA.debugLineNum = 1179650;BA.debugLine="End Sub";
+return "";
+}
+public static String  _fcbtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "fcbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "fcbtn_click", null));}
+RDebugUtils.currentLine=1114112;
+ //BA.debugLineNum = 1114112;BA.debugLine="Private Sub fcBtn_Click";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lofibtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "lofibtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lofibtn_click", null));}
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Private Sub lofiBtn_Click";
+RDebugUtils.currentLine=1048577;
+ //BA.debugLineNum = 1048577;BA.debugLine="StartActivity(lofibutton)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._lofibutton.getObject()));
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
+return "";
+}
+public static String  _navbtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "navbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "navbtn_click", null));}
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Private Sub navBtn_Click";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="End Sub";
+return "";
+}
+public static String  _ntebtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "ntebtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "ntebtn_click", null));}
+RDebugUtils.currentLine=917504;
+ //BA.debugLineNum = 917504;BA.debugLine="Private Sub nteBtn_Click";
+RDebugUtils.currentLine=917506;
+ //BA.debugLineNum = 917506;BA.debugLine="End Sub";
+return "";
+}
+public static String  _pmdrbtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "pmdrbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pmdrbtn_click", null));}
+RDebugUtils.currentLine=851968;
+ //BA.debugLineNum = 851968;BA.debugLine="Private Sub pmdrBtn_Click";
+RDebugUtils.currentLine=851969;
+ //BA.debugLineNum = 851969;BA.debugLine="StartActivity(test)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._test.getObject()));
+RDebugUtils.currentLine=851970;
+ //BA.debugLineNum = 851970;BA.debugLine="End Sub";
+return "";
+}
+public static String  _schoolbtn_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "schoolbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "schoolbtn_click", null));}
+RDebugUtils.currentLine=786432;
+ //BA.debugLineNum = 786432;BA.debugLine="Private Sub schoolBtn_Click";
+RDebugUtils.currentLine=786434;
+ //BA.debugLineNum = 786434;BA.debugLine="End Sub";
 return "";
 }
 }
