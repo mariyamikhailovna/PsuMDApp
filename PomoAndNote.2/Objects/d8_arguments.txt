@@ -1,0 +1,64 @@
+--release
+--output
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects
+--lib
+C:\android\platforms\android-36\android.jar
+--min-api
+21
+C:\android\tools\..\extras\b4a_local\unpacked-b4ashared-63888229486000\dex_v1\b4ashared.zip
+C:\android\tools\..\extras\b4a_local\unpacked-debug-63888229486000\dex_v1\debug.zip
+c:\android\tools\..\extras\b4a_remote\androidx\multidex\multidex\2.0.1\unpacked-multidex-2.0.1\jars\classes.zip
+C:\android\tools\..\extras\b4a_local\unpacked-core-63888229486000\dex_v1\core.zip
+C:\android\tools\..\extras\b4a_local\unpacked-sql-63888229488000\dex_v1\sql.zip
+C:\android\tools\..\extras\b4a_local\unpacked-xui-63888229488000\dex_v1\xui.zip
+C:\android\tools\..\extras\b4a_local\unpacked-xcustomlistview-63888229488000\dex_v1\xcustomlistview.zip
+C:\android\tools\..\extras\b4a_local\unpacked-stringutils-63888229488000\dex_v1\stringutils.zip
+C:\android\tools\..\extras\b4a_local\unpacked-javaobject-63888229486000\dex_v1\javaobject.zip
+C:\android\tools\..\extras\b4a_local\unpacked-randomaccessfile-63888229488000\dex_v1\randomaccessfile.zip
+C:\android\tools\..\extras\b4a_local\unpacked-remotelogger-63888229488000\dex_v1\remotelogger.zip
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\clock$1.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\clock$B4AMenuItemsClickListener.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\clock$HandleKeyDelayed.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\clock$ResumeMessage.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\clock$WaitForLayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\clock.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\cork$1.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\cork$B4AMenuItemsClickListener.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\cork$HandleKeyDelayed.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\cork$ResumeMessage.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\cork$WaitForLayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\cork.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\editnote$1.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\editnote$B4AMenuItemsClickListener.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\editnote$HandleKeyDelayed.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\editnote$ResumeMessage.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\editnote$WaitForLayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\editnote.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\keyvaluestore$ResumableSub_GetMapAsync.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\keyvaluestore$ResumableSub_PutMapAsync.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\keyvaluestore.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main$1.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main$B4AMenuItemsClickListener.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main$HandleKeyDelayed.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main$ResumeMessage.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main$WaitForLayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main$_mynote.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\main.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note$1.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note$B4AMenuItemsClickListener.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note$HandleKeyDelayed.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note$ResumableSub_noteClv_ItemLongClick.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note$ResumeMessage.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note$WaitForLayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\note.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\R$drawable.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\R$style.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\R.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\starter$1.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\starter$2.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\starter$starter_BR.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\starter.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\designerscripts\LS_clocklayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\designerscripts\LS_editnotelayout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\designerscripts\LS_layout.dex
+C:\Users\ricar\OneDrive\Desktop\PROJECTS MOBDEV\test\Objects\dexed\b4a\example\designerscripts\LS_notepadlayout.dex
