@@ -8,7 +8,7 @@ public class test_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (test) ","test",2,test.mostCurrent.activityBA,test.mostCurrent,18);
+		Debug.PushSubsStack("Activity_Create (test) ","test",1,test.mostCurrent.activityBA,test.mostCurrent,18);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.test.remoteMe.runUserSub(false, "test","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 18;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -28,7 +28,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (test) ","test",2,test.mostCurrent.activityBA,test.mostCurrent,26);
+		Debug.PushSubsStack("Activity_Pause (test) ","test",1,test.mostCurrent.activityBA,test.mostCurrent,26);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.test.remoteMe.runUserSub(false, "test","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 26;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -45,7 +45,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (test) ","test",2,test.mostCurrent.activityBA,test.mostCurrent,22);
+		Debug.PushSubsStack("Activity_Resume (test) ","test",1,test.mostCurrent.activityBA,test.mostCurrent,22);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.test.remoteMe.runUserSub(false, "test","activity_resume");}
  BA.debugLineNum = 22;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(2097152);
@@ -61,7 +61,7 @@ finally {
 		}}
 public static RemoteObject  _button2_click() throws Exception{
 try {
-		Debug.PushSubsStack("Button2_Click (test) ","test",2,test.mostCurrent.activityBA,test.mostCurrent,31);
+		Debug.PushSubsStack("Button2_Click (test) ","test",1,test.mostCurrent.activityBA,test.mostCurrent,31);
 if (RapidSub.canDelegate("button2_click")) { return b4a.example.test.remoteMe.runUserSub(false, "test","button2_click");}
  BA.debugLineNum = 31;BA.debugLine="Private Sub Button2_Click";
 Debug.ShouldStop(1073741824);

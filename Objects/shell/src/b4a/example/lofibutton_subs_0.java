@@ -8,7 +8,7 @@ public class lofibutton_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (lofibutton) ","lofibutton",3,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,18);
+		Debug.PushSubsStack("Activity_Create (lofibutton) ","lofibutton",2,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,18);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.lofibutton.remoteMe.runUserSub(false, "lofibutton","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 18;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -28,7 +28,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (lofibutton) ","lofibutton",3,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,28);
+		Debug.PushSubsStack("Activity_Pause (lofibutton) ","lofibutton",2,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,28);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.lofibutton.remoteMe.runUserSub(false, "lofibutton","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 28;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -45,7 +45,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (lofibutton) ","lofibutton",3,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,24);
+		Debug.PushSubsStack("Activity_Resume (lofibutton) ","lofibutton",2,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,24);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.lofibutton.remoteMe.runUserSub(false, "lofibutton","activity_resume");}
  BA.debugLineNum = 24;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(8388608);
@@ -61,7 +61,7 @@ finally {
 		}}
 public static RemoteObject  _button2_click() throws Exception{
 try {
-		Debug.PushSubsStack("Button2_Click (lofibutton) ","lofibutton",3,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,33);
+		Debug.PushSubsStack("Button2_Click (lofibutton) ","lofibutton",2,lofibutton.mostCurrent.activityBA,lofibutton.mostCurrent,33);
 if (RapidSub.canDelegate("button2_click")) { return b4a.example.lofibutton.remoteMe.runUserSub(false, "lofibutton","button2_click");}
  BA.debugLineNum = 33;BA.debugLine="Private Sub Button2_Click";
 Debug.ShouldStop(1);

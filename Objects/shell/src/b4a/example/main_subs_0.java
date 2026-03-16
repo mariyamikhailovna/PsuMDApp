@@ -65,6 +65,9 @@ try {
 if (RapidSub.canDelegate("cbbtn_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","cbbtn_click");}
  BA.debugLineNum = 68;BA.debugLine="Private Sub cbBtn_Click";
 Debug.ShouldStop(8);
+ BA.debugLineNum = 69;BA.debugLine="StartActivity(test)";
+Debug.ShouldStop(16);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._test.getObject())));
  BA.debugLineNum = 70;BA.debugLine="End Sub";
 Debug.ShouldStop(32);
 return RemoteObject.createImmutable("");
@@ -81,6 +84,9 @@ try {
 if (RapidSub.canDelegate("combtn_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","combtn_click");}
  BA.debugLineNum = 64;BA.debugLine="Private Sub comBtn_Click";
 Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 65;BA.debugLine="StartActivity(test)";
+Debug.ShouldStop(1);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._test.getObject())));
  BA.debugLineNum = 66;BA.debugLine="End Sub";
 Debug.ShouldStop(2);
 return RemoteObject.createImmutable("");
@@ -116,6 +122,9 @@ try {
 if (RapidSub.canDelegate("fcbtn_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","fcbtn_click");}
  BA.debugLineNum = 56;BA.debugLine="Private Sub fcBtn_Click";
 Debug.ShouldStop(8388608);
+ BA.debugLineNum = 57;BA.debugLine="StartActivity(test)";
+Debug.ShouldStop(16777216);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._test.getObject())));
  BA.debugLineNum = 58;BA.debugLine="End Sub";
 Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
@@ -156,6 +165,9 @@ try {
 if (RapidSub.canDelegate("navbtn_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","navbtn_click");}
  BA.debugLineNum = 48;BA.debugLine="Private Sub navBtn_Click";
 Debug.ShouldStop(32768);
+ BA.debugLineNum = 49;BA.debugLine="StartActivity(test)";
+Debug.ShouldStop(65536);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._test.getObject())));
  BA.debugLineNum = 50;BA.debugLine="End Sub";
 Debug.ShouldStop(131072);
 return RemoteObject.createImmutable("");
@@ -172,6 +184,9 @@ try {
 if (RapidSub.canDelegate("ntebtn_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","ntebtn_click");}
  BA.debugLineNum = 44;BA.debugLine="Private Sub nteBtn_Click";
 Debug.ShouldStop(2048);
+ BA.debugLineNum = 45;BA.debugLine="StartActivity(test)";
+Debug.ShouldStop(4096);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._test.getObject())));
  BA.debugLineNum = 46;BA.debugLine="End Sub";
 Debug.ShouldStop(8192);
 return RemoteObject.createImmutable("");
@@ -208,14 +223,14 @@ public static void initializeProcessGlobals() {
 	    main.processGlobalsRun = true;
 		try {
 		        main_subs_0._process_globals();
-starter_subs_0._process_globals();
 test_subs_0._process_globals();
 lofibutton_subs_0._process_globals();
+starter_subs_0._process_globals();
 darkmodebtn_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
-starter.myClass = BA.getDeviceClass ("b4a.example.starter");
 test.myClass = BA.getDeviceClass ("b4a.example.test");
 lofibutton.myClass = BA.getDeviceClass ("b4a.example.lofibutton");
+starter.myClass = BA.getDeviceClass ("b4a.example.starter");
 darkmodebtn.myClass = BA.getDeviceClass ("b4a.example.darkmodebtn");
 		
         } catch (Exception e) {
@@ -233,6 +248,9 @@ try {
 if (RapidSub.canDelegate("schoolbtn_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","schoolbtn_click");}
  BA.debugLineNum = 36;BA.debugLine="Private Sub schoolBtn_Click";
 Debug.ShouldStop(8);
+ BA.debugLineNum = 37;BA.debugLine="StartActivity(test)";
+Debug.ShouldStop(16);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._test.getObject())));
  BA.debugLineNum = 38;BA.debugLine="End Sub";
 Debug.ShouldStop(32);
 return RemoteObject.createImmutable("");
