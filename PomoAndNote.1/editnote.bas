@@ -1,0 +1,81 @@
+﻿B4A=true
+Group=Default Group
+ModulesStructureVersion=1
+Type=Activity
+Version=13.4
+@EndOfDesignText@
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Public ActiveNote As MyNote
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Private contentTxt As EditText
+	Private saveBtn As Button
+	Private tagsTxt As EditText
+	Private titleTxt As EditText
+	Dim defaultID As Long = 0
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("editnoteLayout")
+'	titleTxt.Background = Null
+'	tagsTxt.Background = Null
+	contentTxt.Background = Null
+	contentTxt.Gravity = Bit.Or(Gravity.TOP, Gravity.LEFT)
+	' If ActiveNote is initialized, fill the fields
+	If ActiveNote.IsInitialized Then
+		titleTxt.Text = ActiveNote.Title
+		tagsTxt.Text = ActiveNote.Tags
+		contentTxt.Text = ActiveNote.Content
+	End If
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+	If UserClosed Then ActiveNote.Initialize
+End Sub
+
+Sub saveBtn_Click
+	If titleTxt.Text.Trim = "" Then
+		MsgboxAsync("Please add a title", "")
+		Return
+	End If
+
+	Dim n As MyNote
+	n.Initialize
+    
+	' --- THE LOGIC CHANGE ---
+	If ActiveNote.IsInitialized Then
+		' We are editing! Keep the original ID
+		n.noteID = ActiveNote.noteID
+	Else
+		' It's a brand new note! Generate a unique ID using ticks
+		n.noteID = DateTime.Now
+	End If
+	' -------------------------
+
+	n.Title = titleTxt.Text
+	n.Tags = tagsTxt.Text
+	n.Content = contentTxt.Text
+	n.DateAdded = DateTime.Now
+
+	' Save using the ID as the key instead of the Title
+	' This ensures that even if the Title changes, the file is OVERWRITTEN, not duplicated
+	Main.kvs.Put("Note_" & n.noteID, n)
+    
+	ToastMessageShow("Note Saved", False)
+	Activity.Finish
+End Sub
