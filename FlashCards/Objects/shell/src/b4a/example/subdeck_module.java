@@ -72,12 +72,12 @@ public static RemoteObject _renamepanel = RemoteObject.declareNull("anywheresoft
 public static RemoteObject _renameet = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.add_card_module _add_card_module = null;
 public static b4a.example.card_module _card_module = null;
 public static b4a.example.all_active_recall _all_active_recall = null;
 public static b4a.example.active_recall _active_recall = null;
 public static b4a.example.add_card_module2 _add_card_module2 = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
+public static b4a.example.add_card_module _add_card_module = null;
   public Object[] GetGlobals() {
 		return new Object[] {"ACTIVE_RECALL",Debug.moduleToString(b4a.example.active_recall.class),"Activity",subdeck_module.mostCurrent._activity,"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"Add_Card_Module2",Debug.moduleToString(b4a.example.add_card_module2.class),"Addbtn",subdeck_module.mostCurrent._addbtn,"addpanel",subdeck_module.mostCurrent._addpanel,"addpanel2",subdeck_module.mostCurrent._addpanel2,"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"alldecks",subdeck_module.mostCurrent._alldecks,"alterpanel",subdeck_module.mostCurrent._alterpanel,"AR_confirmationpanel",subdeck_module.mostCurrent._ar_confirmationpanel,"Card_Module",Debug.moduleToString(b4a.example.card_module.class),"confirmlabel",subdeck_module.mostCurrent._confirmlabel,"DECK_ALL_CARDS",Debug.moduleToString(b4a.example.deck_all_cards.class),"decknamelabel",subdeck_module.mostCurrent._decknamelabel,"et1",subdeck_module.mostCurrent._et1,"LVSubdecks",subdeck_module.mostCurrent._lvsubdecks,"Main",Debug.moduleToString(b4a.example.main.class),"number_of_cards",subdeck_module._number_of_cards,"renameet",subdeck_module.mostCurrent._renameet,"renamepanel",subdeck_module.mostCurrent._renamepanel,"selecteddeck",subdeck_module.mostCurrent._selecteddeck,"selectedsubdeck",subdeck_module._selectedsubdeck,"Starter",Debug.moduleToString(b4a.example.starter.class)};
 }

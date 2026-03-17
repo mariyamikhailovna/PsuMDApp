@@ -60,12 +60,12 @@ public static RemoteObject _questionet = RemoteObject.declareNull("anywheresoftw
 public static RemoteObject _answeret = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.add_card_module _add_card_module = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
 public static b4a.example.card_module _card_module = null;
 public static b4a.example.all_active_recall _all_active_recall = null;
 public static b4a.example.active_recall _active_recall = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
+public static b4a.example.add_card_module _add_card_module = null;
   public Object[] GetGlobals() {
 		return new Object[] {"ACTIVE_RECALL",Debug.moduleToString(b4a.example.active_recall.class),"Activity",add_card_module2.mostCurrent._activity,"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"AnswerET",add_card_module2.mostCurrent._answeret,"Card_Module",Debug.moduleToString(b4a.example.card_module.class),"DECK_ALL_CARDS",Debug.moduleToString(b4a.example.deck_all_cards.class),"Main",Debug.moduleToString(b4a.example.main.class),"QuestionET",add_card_module2.mostCurrent._questionet,"Starter",Debug.moduleToString(b4a.example.starter.class),"Subdeck_Module",Debug.moduleToString(b4a.example.subdeck_module.class),"subdeckname",add_card_module2.mostCurrent._subdeckname};
 }

@@ -60,12 +60,12 @@ public static RemoteObject _scrollview1 = RemoteObject.declareNull("anywheresoft
 public static RemoteObject _deckname = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.add_card_module _add_card_module = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
 public static b4a.example.card_module _card_module = null;
 public static b4a.example.all_active_recall _all_active_recall = null;
 public static b4a.example.active_recall _active_recall = null;
 public static b4a.example.add_card_module2 _add_card_module2 = null;
+public static b4a.example.add_card_module _add_card_module = null;
   public Object[] GetGlobals() {
 		return new Object[] {"ACTIVE_RECALL",Debug.moduleToString(b4a.example.active_recall.class),"Activity",deck_all_cards.mostCurrent._activity,"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"Add_Card_Module2",Debug.moduleToString(b4a.example.add_card_module2.class),"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"Card_Module",Debug.moduleToString(b4a.example.card_module.class),"cards",deck_all_cards.mostCurrent._cards,"deckname",deck_all_cards.mostCurrent._deckname,"Main",Debug.moduleToString(b4a.example.main.class),"ScrollView1",deck_all_cards.mostCurrent._scrollview1,"Starter",Debug.moduleToString(b4a.example.starter.class),"Subdeck_Module",Debug.moduleToString(b4a.example.subdeck_module.class)};
 }

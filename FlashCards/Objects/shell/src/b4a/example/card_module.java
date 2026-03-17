@@ -62,12 +62,12 @@ public static RemoteObject _subdecklabel = RemoteObject.declareNull("anywheresof
 public static RemoteObject _scrollview1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.ScrollViewWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.add_card_module _add_card_module = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
 public static b4a.example.all_active_recall _all_active_recall = null;
 public static b4a.example.active_recall _active_recall = null;
 public static b4a.example.add_card_module2 _add_card_module2 = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
+public static b4a.example.add_card_module _add_card_module = null;
   public Object[] GetGlobals() {
 		return new Object[] {"ACTIVE_RECALL",Debug.moduleToString(b4a.example.active_recall.class),"Activity",card_module.mostCurrent._activity,"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"Add_Card_Module2",Debug.moduleToString(b4a.example.add_card_module2.class),"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"DECK_ALL_CARDS",Debug.moduleToString(b4a.example.deck_all_cards.class),"editindex",card_module._editindex,"isEdit",card_module._isedit,"Main",Debug.moduleToString(b4a.example.main.class),"ScrollView1",card_module.mostCurrent._scrollview1,"Starter",Debug.moduleToString(b4a.example.starter.class),"subdeck",card_module._subdeck,"Subdeck_Module",Debug.moduleToString(b4a.example.subdeck_module.class),"subdecklabel",card_module.mostCurrent._subdecklabel};
 }

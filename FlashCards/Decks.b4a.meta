@@ -25,6 +25,6 @@ ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=1
 ModuleClosedNodes8=
-NavigationStack=Main,LVdecks_ItemClick,165,0,Main,create_Click,148,0,Main,cancel_Click,117,0,Main,Activity_Create,74,6,Subdeck_Module,confirmrename_Click,217,6,Card_Module,deletebtn_click,100,0,ALL_ACTIVE_RECALL,Activity_Pause,75,0,ACTIVE_RECALL,ShowCard,50,0,Add_Card_Module2,SaveCard_Click,109,0,DECK_ALL_CARDS,ShowALLCards,79,0,Add_Card_Module,backbtn_Click,91,0
+NavigationStack=Main,LVdecks_ItemClick,162,0,Main,addcards_Click,181,0,Main,create_Click,138,0,Main,Activity_Pause,98,0,Main,Process_Globals,19,0,Main,Globals,41,0,Main,SaveDecks,102,0,Main,Activity_Resume,95,0,Main,cancel_Click,114,0,Main,Activity_Create,84,0
 SelectedBuild=0
 VisibleModules=7,8,5,4,1,3,6,2

@@ -5,7 +5,7 @@ keyvaluestore
 1
 keyvaluestore
 main,activity_create,1,1,46,92
-,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,,deck
+,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,deck,,kvs
 ,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,deck
 keyvaluestore,initialize,keyvaluestore,get,,refreshbtn_click,keyvaluestore,createtable
 main,refreshbtn_click,0,0,154,160
@@ -180,38 +180,6 @@ starter,service_taskremoved,0,0,22,24
 
 
 
-add_card_module,activity_create,1,0,22,38
-,answeret,,questionet,,spsubdecks,main,deck,main,selecteddeck
-,answeret,,questionet,,spsubdecks
-
-add_card_module,activity_pause,0,0,44,46
-
-
-
-add_card_module,activity_resume,0,0,40,42
-
-
-
-add_card_module,backbtn_click,0,0,89,92
-
-
-
-add_card_module,globals,0,1,12,20
-
-
-
-add_card_module,process_globals,0,1,6,10
-
-
-
-add_card_module,savecard_click,1,0,52,87
-main,deck,main,selecteddeck,,questionet,,answeret,,spsubdecks,main,kvs
-
-,savedecks,keyvaluestore,put
-add_card_module,savedecks,0,0,47,49
-main,kvs,main,deck
-
-keyvaluestore,put
 subdeck_module,activerecall_click,0,0,148,162
 ,number_of_cards,,alldecks,,selecteddeck,,ar_confirmationpanel,,confirmlabel
 ,number_of_cards
@@ -264,7 +232,7 @@ subdeck_module,cancelrename_click,1,0,211,214
 ,renamepanel,,renameet
 
 
-subdeck_module,confirmrename_click,1,1,216,240
+subdeck_module,confirmrename_click,1,0,216,240
 main,deck,main,selecteddeck,,renameet,,selectedsubdeck,,renamepanel,main,kvs,,lvsubdecks,,alldecks,,selecteddeck
 
 ,savedecks,,refresh,keyvaluestore,put
@@ -396,44 +364,24 @@ all_active_recall,showanswerbtn_click,0,0,79,90
 ,cards,,currentindex,,showanswerbtn,,answer
 
 
-active_recall,activity_create,1,0,25,41
-,answer,,deckname_label,,question,,showanswerbtn,main,deck,main,selecteddeck,,cards,subdeck_module,selectedsubdeck,,currentindex
-,answer,,deckname_label,,question,,showanswerbtn,,cards,,currentindex
-,showcard
-active_recall,showcard,0,0,43,50
-,cards,,currentindex,,question,,answer
-
-
-active_recall,activity_pause,0,0,57,59
+active_recall,activity_create,1,0,18,23
 
 
 
-active_recall,activity_resume,0,0,53,55
+active_recall,activity_pause,0,0,29,31
 
 
 
-active_recall,backbtn_click,0,0,97,107
-,showanswerbtn,,currentindex,,cards,,question,,answer
-,currentindex
-,showcard
-active_recall,globals,0,1,12,23
+active_recall,activity_resume,0,0,25,27
 
 
 
-active_recall,goback_click,0,0,92,95
+active_recall,globals,0,1,12,16
 
 
 
-active_recall,nextbtn_click,0,0,81,90
-,showanswerbtn,,currentindex,,cards,,question,,answer
-,currentindex
-,showcard
 active_recall,process_globals,0,1,6,10
 
-
-
-active_recall,showanswerbtn_click,0,0,62,79
-,cards,,currentindex,,showanswerbtn,,answer
 
 
 add_card_module2,activity_create,1,0,22,39
@@ -500,3 +448,35 @@ deck_all_cards,process_globals,0,1,6,10
 
 
 
+add_card_module,activity_create,1,0,22,38
+,answeret,,questionet,,spsubdecks,main,deck,main,selecteddeck
+,answeret,,questionet,,spsubdecks
+
+add_card_module,activity_pause,0,0,44,46
+
+
+
+add_card_module,activity_resume,0,0,40,42
+
+
+
+add_card_module,backbtn_click,0,0,89,92
+
+
+
+add_card_module,globals,0,1,12,20
+
+
+
+add_card_module,process_globals,0,1,6,10
+
+
+
+add_card_module,savecard_click,1,0,52,87
+main,deck,main,selecteddeck,,questionet,,answeret,,spsubdecks,main,kvs
+
+,savedecks,keyvaluestore,put
+add_card_module,savedecks,0,0,47,49
+main,kvs,main,deck
+
+keyvaluestore,put

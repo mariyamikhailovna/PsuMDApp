@@ -33,12 +33,12 @@ main.mostCurrent._addbtn.runMethod(false,"setBackground",(_cd.getObject()));
  BA.debugLineNum = 58;BA.debugLine="LVdecks.SingleLineLayout.Label.textcolor = Colors";
 Debug.ShouldStop(33554432);
 main.mostCurrent._lvdecks.runMethod(false,"getSingleLineLayout").getField(false,"Label").runMethod(true,"setTextColor",main.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 81;BA.debugLine="kvs.Initialize(File.DirInternal, \"mydata\")";
+ BA.debugLineNum = 81;BA.debugLine="deck.Initialize";
 Debug.ShouldStop(65536);
-main._kvs.runClassMethod (b4a.example.keyvaluestore.class, "_initialize" /*RemoteObject*/ ,main.processBA,(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("mydata")));
- BA.debugLineNum = 82;BA.debugLine="deck.Initialize";
-Debug.ShouldStop(131072);
 main._deck.runVoidMethod ("Initialize");
+ BA.debugLineNum = 82;BA.debugLine="kvs.Initialize(File.DirInternal, \"mydata\")";
+Debug.ShouldStop(131072);
+main._kvs.runClassMethod (b4a.example.keyvaluestore.class, "_initialize" /*RemoteObject*/ ,main.processBA,(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("mydata")));
  BA.debugLineNum = 83;BA.debugLine="deck = kvs.Get(\"deck_data\")";
 Debug.ShouldStop(262144);
 main._deck = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), main._kvs.runClassMethod (b4a.example.keyvaluestore.class, "_get" /*RemoteObject*/ ,(Object)(RemoteObject.createImmutable("deck_data"))));
@@ -611,22 +611,22 @@ public static void initializeProcessGlobals() {
 		try {
 		        main_subs_0._process_globals();
 starter_subs_0._process_globals();
-add_card_module_subs_0._process_globals();
 subdeck_module_subs_0._process_globals();
 card_module_subs_0._process_globals();
 all_active_recall_subs_0._process_globals();
 active_recall_subs_0._process_globals();
 add_card_module2_subs_0._process_globals();
 deck_all_cards_subs_0._process_globals();
+add_card_module_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 starter.myClass = BA.getDeviceClass ("b4a.example.starter");
-add_card_module.myClass = BA.getDeviceClass ("b4a.example.add_card_module");
 subdeck_module.myClass = BA.getDeviceClass ("b4a.example.subdeck_module");
 card_module.myClass = BA.getDeviceClass ("b4a.example.card_module");
 all_active_recall.myClass = BA.getDeviceClass ("b4a.example.all_active_recall");
 active_recall.myClass = BA.getDeviceClass ("b4a.example.active_recall");
 add_card_module2.myClass = BA.getDeviceClass ("b4a.example.add_card_module2");
 deck_all_cards.myClass = BA.getDeviceClass ("b4a.example.deck_all_cards");
+add_card_module.myClass = BA.getDeviceClass ("b4a.example.add_card_module");
 keyvaluestore.myClass = BA.getDeviceClass ("b4a.example.keyvaluestore");
 		
         } catch (Exception e) {

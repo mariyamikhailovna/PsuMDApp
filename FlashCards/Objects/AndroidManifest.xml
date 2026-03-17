@@ -42,14 +42,6 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".add_card_module"
-			android:label="B4A Example"
-			android:screenOrientation="unspecified"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
 			android:name=".subdeck_module"
 			android:label="B4A Example"
 			android:screenOrientation="unspecified"
@@ -91,6 +83,14 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".deck_all_cards"
+			android:label="B4A Example"
+			android:screenOrientation="unspecified"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".add_card_module"
 			android:label="B4A Example"
 			android:screenOrientation="unspecified"
 			android:exported="true">

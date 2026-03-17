@@ -362,17 +362,17 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
 String _subdeckname = "";
-RDebugUtils.currentLine=1310720;
- //BA.debugLineNum = 1310720;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=1310726;
- //BA.debugLineNum = 1310726;BA.debugLine="Activity.LoadLayout(\"Layout3\")";
+RDebugUtils.currentLine=6356992;
+ //BA.debugLineNum = 6356992;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=6356998;
+ //BA.debugLineNum = 6356998;BA.debugLine="Activity.LoadLayout(\"Layout3\")";
 mostCurrent._activity.LoadLayout("Layout3",mostCurrent.activityBA);
-RDebugUtils.currentLine=1310729;
- //BA.debugLineNum = 1310729;BA.debugLine="Dim tappeddeck As Map =  Main.deck.Get(Main.selec";
+RDebugUtils.currentLine=6357001;
+ //BA.debugLineNum = 6357001;BA.debugLine="Dim tappeddeck As Map =  Main.deck.Get(Main.selec";
 _tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
 _tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._main._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._main._selecteddeck /*String*/ ))));
-RDebugUtils.currentLine=1310732;
- //BA.debugLineNum = 1310732;BA.debugLine="For Each subdeckName As String In tappeddeck.keys";
+RDebugUtils.currentLine=6357004;
+ //BA.debugLineNum = 6357004;BA.debugLine="For Each subdeckName As String In tappeddeck.keys";
 {
 final anywheresoftware.b4a.BA.IterableList group3 = _tappeddeck.Keys();
 final int groupLen3 = group3.getSize()
@@ -380,44 +380,44 @@ final int groupLen3 = group3.getSize()
 ;
 for (; index3 < groupLen3;index3++){
 _subdeckname = BA.ObjectToString(group3.Get(index3));
-RDebugUtils.currentLine=1310733;
- //BA.debugLineNum = 1310733;BA.debugLine="spsubdecks.Add(subdeckName)";
+RDebugUtils.currentLine=6357005;
+ //BA.debugLineNum = 6357005;BA.debugLine="spsubdecks.Add(subdeckName)";
 mostCurrent._spsubdecks.Add(_subdeckname);
  }
 };
-RDebugUtils.currentLine=1310736;
- //BA.debugLineNum = 1310736;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6357008;
+ //BA.debugLineNum = 6357008;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="add_card_module";
-RDebugUtils.currentLine=1441792;
- //BA.debugLineNum = 1441792;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=1441794;
- //BA.debugLineNum = 1441794;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6488064;
+ //BA.debugLineNum = 6488064;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=6488066;
+ //BA.debugLineNum = 6488066;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="add_card_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=1376256;
- //BA.debugLineNum = 1376256;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=1376258;
- //BA.debugLineNum = 1376258;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6422528;
+ //BA.debugLineNum = 6422528;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=6422530;
+ //BA.debugLineNum = 6422530;BA.debugLine="End Sub";
 return "";
 }
 public static String  _backbtn_click() throws Exception{
 RDebugUtils.currentModule="add_card_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "backbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "backbtn_click", null));}
-RDebugUtils.currentLine=1572864;
- //BA.debugLineNum = 1572864;BA.debugLine="Private Sub backbtn_Click";
-RDebugUtils.currentLine=1572866;
- //BA.debugLineNum = 1572866;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=6684672;
+ //BA.debugLineNum = 6684672;BA.debugLine="Private Sub backbtn_Click";
+RDebugUtils.currentLine=6684674;
+ //BA.debugLineNum = 6684674;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=1572867;
- //BA.debugLineNum = 1572867;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6684675;
+ //BA.debugLineNum = 6684675;BA.debugLine="End Sub";
 return "";
 }
 public static String  _savecard_click() throws Exception{
@@ -428,77 +428,77 @@ anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
 String _chosensubdeck = "";
 anywheresoftware.b4a.objects.collections.List _flashcards = null;
 anywheresoftware.b4a.objects.collections.Map _cards = null;
-RDebugUtils.currentLine=1507328;
- //BA.debugLineNum = 1507328;BA.debugLine="Private Sub SaveCard_Click";
-RDebugUtils.currentLine=1507332;
- //BA.debugLineNum = 1507332;BA.debugLine="Dim tappeddeck As Map = Main.deck.Get(Main.select";
+RDebugUtils.currentLine=6619136;
+ //BA.debugLineNum = 6619136;BA.debugLine="Private Sub SaveCard_Click";
+RDebugUtils.currentLine=6619140;
+ //BA.debugLineNum = 6619140;BA.debugLine="Dim tappeddeck As Map = Main.deck.Get(Main.select";
 _tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
 _tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._main._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._main._selecteddeck /*String*/ ))));
-RDebugUtils.currentLine=1507335;
- //BA.debugLineNum = 1507335;BA.debugLine="If QuestionET.Text = \"\" Then";
+RDebugUtils.currentLine=6619143;
+ //BA.debugLineNum = 6619143;BA.debugLine="If QuestionET.Text = \"\" Then";
 if ((mostCurrent._questionet.getText()).equals("")) { 
-RDebugUtils.currentLine=1507336;
- //BA.debugLineNum = 1507336;BA.debugLine="MsgboxAsync(\"Enter the Question!\", \"Error\")";
+RDebugUtils.currentLine=6619144;
+ //BA.debugLineNum = 6619144;BA.debugLine="MsgboxAsync(\"Enter the Question!\", \"Error\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Enter the Question!"),BA.ObjectToCharSequence("Error"),processBA);
  }else 
-{RDebugUtils.currentLine=1507337;
- //BA.debugLineNum = 1507337;BA.debugLine="Else if AnswerET.Text = \"\" Then";
+{RDebugUtils.currentLine=6619145;
+ //BA.debugLineNum = 6619145;BA.debugLine="Else if AnswerET.Text = \"\" Then";
 if ((mostCurrent._answeret.getText()).equals("")) { 
-RDebugUtils.currentLine=1507338;
- //BA.debugLineNum = 1507338;BA.debugLine="MsgboxAsync(\"Enter the Answer!\", \"Error\")";
+RDebugUtils.currentLine=6619146;
+ //BA.debugLineNum = 6619146;BA.debugLine="MsgboxAsync(\"Enter the Answer!\", \"Error\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Enter the Answer!"),BA.ObjectToCharSequence("Error"),processBA);
  }else {
-RDebugUtils.currentLine=1507342;
- //BA.debugLineNum = 1507342;BA.debugLine="Dim chosensubdeck As String = spsubdecks.Selecte";
+RDebugUtils.currentLine=6619150;
+ //BA.debugLineNum = 6619150;BA.debugLine="Dim chosensubdeck As String = spsubdecks.Selecte";
 _chosensubdeck = mostCurrent._spsubdecks.getSelectedItem();
-RDebugUtils.currentLine=1507345;
- //BA.debugLineNum = 1507345;BA.debugLine="Dim flashcards As List = tappeddeck.Get(chosensu";
+RDebugUtils.currentLine=6619153;
+ //BA.debugLineNum = 6619153;BA.debugLine="Dim flashcards As List = tappeddeck.Get(chosensu";
 _flashcards = new anywheresoftware.b4a.objects.collections.List();
 _flashcards = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_tappeddeck.Get((Object)(_chosensubdeck))));
-RDebugUtils.currentLine=1507348;
- //BA.debugLineNum = 1507348;BA.debugLine="Dim cards As Map";
+RDebugUtils.currentLine=6619156;
+ //BA.debugLineNum = 6619156;BA.debugLine="Dim cards As Map";
 _cards = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=1507349;
- //BA.debugLineNum = 1507349;BA.debugLine="cards.initialize";
+RDebugUtils.currentLine=6619157;
+ //BA.debugLineNum = 6619157;BA.debugLine="cards.initialize";
 _cards.Initialize();
-RDebugUtils.currentLine=1507350;
- //BA.debugLineNum = 1507350;BA.debugLine="cards.Put(\"Q\", QuestionET.Text)";
+RDebugUtils.currentLine=6619158;
+ //BA.debugLineNum = 6619158;BA.debugLine="cards.Put(\"Q\", QuestionET.Text)";
 _cards.Put((Object)("Q"),(Object)(mostCurrent._questionet.getText()));
-RDebugUtils.currentLine=1507351;
- //BA.debugLineNum = 1507351;BA.debugLine="cards.Put(\"A\", AnswerET.Text)";
+RDebugUtils.currentLine=6619159;
+ //BA.debugLineNum = 6619159;BA.debugLine="cards.Put(\"A\", AnswerET.Text)";
 _cards.Put((Object)("A"),(Object)(mostCurrent._answeret.getText()));
-RDebugUtils.currentLine=1507354;
- //BA.debugLineNum = 1507354;BA.debugLine="flashcards.Add(cards)";
+RDebugUtils.currentLine=6619162;
+ //BA.debugLineNum = 6619162;BA.debugLine="flashcards.Add(cards)";
 _flashcards.Add((Object)(_cards.getObject()));
-RDebugUtils.currentLine=1507355;
- //BA.debugLineNum = 1507355;BA.debugLine="QuestionET.Text = \"\"";
+RDebugUtils.currentLine=6619163;
+ //BA.debugLineNum = 6619163;BA.debugLine="QuestionET.Text = \"\"";
 mostCurrent._questionet.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=1507356;
- //BA.debugLineNum = 1507356;BA.debugLine="AnswerET.Text = \"\"";
+RDebugUtils.currentLine=6619164;
+ //BA.debugLineNum = 6619164;BA.debugLine="AnswerET.Text = \"\"";
 mostCurrent._answeret.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=1507358;
- //BA.debugLineNum = 1507358;BA.debugLine="SaveDecks";
+RDebugUtils.currentLine=6619166;
+ //BA.debugLineNum = 6619166;BA.debugLine="SaveDecks";
 _savedecks();
-RDebugUtils.currentLine=1507360;
- //BA.debugLineNum = 1507360;BA.debugLine="MsgboxAsync(\"Card is Successfully Saved\", \"Card";
+RDebugUtils.currentLine=6619168;
+ //BA.debugLineNum = 6619168;BA.debugLine="MsgboxAsync(\"Card is Successfully Saved\", \"Card";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Card is Successfully Saved"),BA.ObjectToCharSequence("Card Saved!"),processBA);
  }}
 ;
-RDebugUtils.currentLine=1507363;
- //BA.debugLineNum = 1507363;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6619171;
+ //BA.debugLineNum = 6619171;BA.debugLine="End Sub";
 return "";
 }
 public static String  _savedecks() throws Exception{
 RDebugUtils.currentModule="add_card_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "savedecks", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "savedecks", null));}
-RDebugUtils.currentLine=9699328;
- //BA.debugLineNum = 9699328;BA.debugLine="Sub SaveDecks";
-RDebugUtils.currentLine=9699329;
- //BA.debugLineNum = 9699329;BA.debugLine="Main.kvs.Put(\"deck_data\", Main.deck)";
+RDebugUtils.currentLine=6553600;
+ //BA.debugLineNum = 6553600;BA.debugLine="Sub SaveDecks";
+RDebugUtils.currentLine=6553601;
+ //BA.debugLineNum = 6553601;BA.debugLine="Main.kvs.Put(\"deck_data\", Main.deck)";
 mostCurrent._main._kvs /*b4a.example.keyvaluestore*/ ._put /*String*/ (null,"deck_data",(Object)(mostCurrent._main._deck /*anywheresoftware.b4a.objects.collections.Map*/ .getObject()));
-RDebugUtils.currentLine=9699330;
- //BA.debugLineNum = 9699330;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6553602;
+ //BA.debugLineNum = 6553602;BA.debugLine="End Sub";
 return "";
 }
 }

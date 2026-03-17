@@ -21,14 +21,14 @@ Library2=xcustomlistview
 Library3=xui
 Library4=keyvaluestore
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
-Module1=|relative|..\ACTIVE_RECALL
-Module2=|relative|..\Add_Card_Module
-Module3=|relative|..\Add_Card_Module2
-Module4=|relative|..\ALL_ACTIVE_RECALL
-Module5=|relative|..\Card_Module
-Module6=|relative|..\DECK_ALL_CARDS
+Module1=ACTIVE_RECALL
+Module2=Add_Card_Module
+Module3=Add_Card_Module2
+Module4=ALL_ACTIVE_RECALL
+Module5=Card_Module
+Module6=DECK_ALL_CARDS
 Module7=Starter
-Module8=|relative|..\Subdeck_Module
+Module8=Subdeck_Module
 NumberOfFiles=8
 NumberOfLibraries=4
 NumberOfModules=8
@@ -114,8 +114,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	'subdeck.Initialize
 	'subdeck.Put("Arithmetic", flashcards)
 	
-	kvs.Initialize(File.DirInternal, "mydata")
 	deck.Initialize
+	kvs.Initialize(File.DirInternal, "mydata")
 	deck = kvs.Get("deck_data")
 	
 	

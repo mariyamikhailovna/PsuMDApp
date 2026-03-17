@@ -52,13 +52,13 @@ public boolean isSingleton() {
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static b4a.example.main _main = null;
-public static b4a.example.add_card_module _add_card_module = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
 public static b4a.example.card_module _card_module = null;
 public static b4a.example.all_active_recall _all_active_recall = null;
 public static b4a.example.active_recall _active_recall = null;
 public static b4a.example.add_card_module2 _add_card_module2 = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
+public static b4a.example.add_card_module _add_card_module = null;
   public Object[] GetGlobals() {
 		return new Object[] {"ACTIVE_RECALL",Debug.moduleToString(b4a.example.active_recall.class),"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"Add_Card_Module2",Debug.moduleToString(b4a.example.add_card_module2.class),"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"Card_Module",Debug.moduleToString(b4a.example.card_module.class),"DECK_ALL_CARDS",Debug.moduleToString(b4a.example.deck_all_cards.class),"Main",Debug.moduleToString(b4a.example.main.class),"Service",starter.mostCurrent._service,"Subdeck_Module",Debug.moduleToString(b4a.example.subdeck_module.class)};
 }
