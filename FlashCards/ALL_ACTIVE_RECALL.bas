@@ -112,7 +112,7 @@ Private Sub nextbtn_Click
 	currentindex = currentindex +1
 	If currentindex >= cards.Size Then
 		MsgboxAsync("Decks Finished", "Active Recall")
-		praise = true
+		praise = True
 		Activity.finish
 		Return
 	End If

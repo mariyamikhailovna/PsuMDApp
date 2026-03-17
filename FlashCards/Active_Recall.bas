@@ -104,7 +104,8 @@ Private Sub nextbtn_Click
 	If currentindex >= cards.Size Then
 		ShuffleCards(cards)
 		MsgboxAsync("You've finished your subdeck", "Congratulations")
-		currentindex = 0
+		Activity.finish
+		Return
 	End If
 	ShowCard
 End Sub
