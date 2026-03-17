@@ -1,0 +1,144 @@
+﻿B4A=true
+Group=Default Group
+ModulesStructureVersion=1
+Type=Activity
+Version=13.4
+@EndOfDesignText@
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim subdeck As String
+	Dim isEdit As Boolean
+	Dim editindex As Int
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Private subdecklabel As Label
+	Private ScrollView1 As ScrollView
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	'Activity.LoadLayout("Layout1")
+	Activity.LoadLayout("Layout4")
+	'subdeck name
+	subdecklabel.Text = Subdeck_Module.selectedsubdeck
+	
+	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
+	Dim subdeckcards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
+	
+	'show all cards function in list view
+	ShowSubdeckCards(subdeckcards)
+	
+End Sub
+
+Sub ShowSubdeckCards(cardsList As List)
+	'custom scrollview
+	ScrollView1.Panel.RemoveAllViews
+	'initializing card sizes for the scroll view
+	Dim topPos As Int = 0
+	Dim cardHeight As Int = 150dip 'height
+	
+	For i = 0 To cardsList.Size -1
+	Dim card As Map = cardsList.Get(i)
+	Dim p As Panel
+	p.Initialize("")
+	p.Color = Colors.White
+	ScrollView1.Panel.AddView(p, 10dip, topPos, ScrollView1.Width - 20dip, cardHeight)
+	
+		Dim lbl As Label
+		lbl.Initialize("")
+		lbl.Text = "Q: " & card.Get("Q") & CRLF & "A: " & card.Get("A")
+		lbl.TextColor = Colors.black
+		lbl.TextSize = 12
+		lbl.SingleLine = False
+		
+		p.AddView(lbl, 10dip, 10dip, ScrollView1.Width - 20dip, 30dip)
+		topPos = topPos + lbl.height + 10dip
+		
+		Dim btnwidth As Int = 100dip
+		
+		Dim editbtn As Button 
+		editbtn.Initialize("Editbtn") 'btn name
+		editbtn.Tag = i 'tag/index
+		editbtn.Text = "Edit" 'button text display
+		p.AddView(editbtn, 10dip, 115dip, btnwidth, 40dip) '(horizontal position, vertical position, width, height)
+		
+		Dim deletebtn As Button
+		deletebtn.Initialize("Deletebtn")
+		deletebtn.Tag = i
+		deletebtn.Text = "Delete"
+		p.AddView(deletebtn, 200dip, 115dip, btnwidth, 40dip) 
+		topPos = topPos + cardHeight + 10dip
+	Next
+	ScrollView1.Panel.Height = topPos + 10dip
+End Sub
+
+'edit card
+Sub editbtn_Click
+	'edit card - reuse the activity for saving a card
+	subdeck = Subdeck_Module.selectedsubdeck
+	Dim b As Button = Sender
+	Dim index As Int = b.Tag
+	editindex = index
+	isEdit = True
+	
+	StartActivity(Add_Card_Module2)
+	
+End Sub
+'delete card
+Sub deletebtn_click
+	'directly deleting the index and reload
+	Dim b As Button = Sender
+	Dim index As Int = b.Tag
+	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
+	Dim cards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
+	
+	cards.RemoveAt(index)
+	ShowSubdeckCards(cards)
+End Sub
+
+Sub Activity_Resume
+	'update when activity is started and needs update
+	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
+	Dim subdeckcards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
+	ShowSubdeckCards(subdeckcards)
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+
+Private Sub backbtn_Click
+	'go back
+	Activity.Finish
+End Sub
+
+Private Sub activerecall_Click
+	'active recall activity
+	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
+	Dim subdeckcards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
+	Dim number_of_cards As Int = subdeckcards.size
+	
+	If number_of_cards = 0 Then
+		MsgboxAsync("No cards available", "Error")
+		Return
+	End If
+	StartActivity(ACTIVE_RECALL)
+End Sub
+
+Private Sub addbtn_Click
+	'add card button
+	subdeck = Subdeck_Module.selectedsubdeck
+	StartActivity(Add_Card_Module2)
+End Sub
