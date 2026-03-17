@@ -23,6 +23,8 @@ Sub Globals
 
 	Private subdecklabel As Label
 	Private ScrollView1 As ScrollView
+	Private deleteconfirmation As Panel
+	Dim numtag As Int
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -99,11 +101,9 @@ Sub deletebtn_click
 	'directly deleting the index and reload
 	Dim b As Button = Sender
 	Dim index As Int = b.Tag
-	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
-	Dim cards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
+	numtag = index
+	deleteconfirmation.Visible = True
 	
-	cards.RemoveAt(index)
-	ShowSubdeckCards(cards)
 End Sub
 
 Sub Activity_Resume
@@ -141,4 +141,17 @@ Private Sub addbtn_Click
 	'add card button
 	subdeck = Subdeck_Module.selectedsubdeck
 	StartActivity(Add_Card_Module2)
+End Sub
+
+Private Sub confirmdelete_Click
+	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
+	Dim cards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
+	
+	cards.RemoveAt(numtag)
+	ShowSubdeckCards(cards)
+	deleteconfirmation.Visible = False
+End Sub
+
+Private Sub canceldelete_Click
+	deleteconfirmation.Visible = False
 End Sub

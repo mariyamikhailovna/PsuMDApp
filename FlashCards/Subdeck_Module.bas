@@ -36,6 +36,7 @@ Sub Globals
 	Private alterpanel As Panel
 	Private renamepanel As Panel
 	Private renameet As EditText
+	Private deleteconfirmation As Panel
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -194,10 +195,7 @@ End Sub
 
 Private Sub deletesubdeck_Click
 	alterpanel.Visible = False
-	Dim tappeddeck As Map = Main.deck.get(Main.selecteddeck)
-	tappeddeck.Remove(selectedsubdeck)
-	SaveDecks
-	Refresh
+	deleteconfirmation.Visible = True
 End Sub
 
 Private Sub renamesubdeck_Click
@@ -221,7 +219,7 @@ End Sub
 
 Private Sub confirmrename_Click
 	
-	Dim getsubdeck As list
+	Dim getsubdeck As List
 	Dim tappeddeck As Map = Main.deck.Get(Main.selecteddeck)
 	If renameet.Text = "" Then
 		MsgboxAsync("New Name must have a name", "Error")
@@ -243,4 +241,16 @@ Private Sub confirmrename_Click
 	renamepanel.Visible = False
 	
 	
+End Sub
+
+Private Sub confirmdelete_Click
+	Dim tappeddeck As Map = Main.deck.get(Main.selecteddeck)
+	tappeddeck.Remove(selectedsubdeck)
+	SaveDecks
+	Refresh
+	deleteconfirmation.Visible = False
+End Sub
+
+Private Sub canceldelete_Click
+	deleteconfirmation.Visible = False
 End Sub

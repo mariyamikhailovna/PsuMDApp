@@ -77,6 +77,7 @@ Sub Globals
 	
 	Private newsubdeckpanel As Panel
 	Private newsubdecket As EditText
+	Private deleteconfirmation As Panel
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -114,10 +115,12 @@ Sub Activity_Create(FirstTime As Boolean)
 	'subdeck.Initialize
 	'subdeck.Put("Arithmetic", flashcards)
 	
-	deck.Initialize
 	kvs.Initialize(File.DirInternal, "mydata")
-	deck = kvs.Get("deck_data")
-	
+	If  kvs.ContainsKey("deck_data") Then
+		deck = kvs.Get("deck_data")
+	Else
+		deck.Initialize
+	End If
 	
 	'deck.Put("Math", subdeck)
 	
@@ -226,9 +229,8 @@ Private Sub rename_deck_Click
 End Sub
 
 Private Sub delete_deck_Click
-	deck.Remove(item_longclick)
 	decksettingpanel.Visible = False
-	refreshbtn_Click
+	deleteconfirmation.Visible = True
 End Sub
 
 Private Sub create_subdeck_Click
@@ -295,4 +297,15 @@ End Sub
 Private Sub cancelnewsubdeck_Click
 	newsubdecket.Text = ""
 	newsubdeckpanel.Visible = False
+End Sub
+
+Private Sub confirmdelete_Click
+	deck.Remove(item_longclick)
+	decksettingpanel.Visible = False
+	deleteconfirmation.Visible = false
+	refreshbtn_Click
+End Sub
+
+Private Sub canceldelete_Click
+	deleteconfirmation.Visible = False
 End Sub
