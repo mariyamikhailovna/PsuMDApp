@@ -77,6 +77,10 @@ Sub Refresh
 End Sub
 
 Sub Activity_Resume
+	If ALL_ACTIVE_RECALL.praise = True Then
+		ALL_ACTIVE_RECALL.praise = False
+		MsgboxAsync("You Finished Your Deck", "Congratulations")
+	End If
  	AR_confirmationpanel.Visible = False
 End Sub
 

@@ -103,6 +103,7 @@ Private Sub nextbtn_Click
 	'go back to index 0  when index = size
 	If currentindex >= cards.Size Then
 		ShuffleCards(cards)
+		MsgboxAsync("You've finished your subdeck", "Congratulations")
 		currentindex = 0
 	End If
 	ShowCard
