@@ -77,7 +77,7 @@ Sub Refresh
 End Sub
 
 Sub Activity_Resume
-
+ 	AR_confirmationpanel.Visible = False
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)

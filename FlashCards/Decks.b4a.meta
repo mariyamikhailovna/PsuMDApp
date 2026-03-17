@@ -25,6 +25,6 @@ ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=1
 ModuleClosedNodes8=
-NavigationStack=ALL_ACTIVE_RECALL,Activity_Create,40,0,ALL_ACTIVE_RECALL,Activity_Resume,70,0,ALL_ACTIVE_RECALL,Activity_Pause,73,0,ALL_ACTIVE_RECALL,ShuffleCards,51,0,ACTIVE_RECALL,Activity_Resume,53,0,ACTIVE_RECALL,Activity_Create,37,2,ACTIVE_RECALL,ShuffleCards,53,0,ACTIVE_RECALL,ShowCard,54,0,ACTIVE_RECALL,showAnswerbtn_Click,84,0,ACTIVE_RECALL,backbtn_Click,118,0,ACTIVE_RECALL,nextbtn_Click,98,2
+NavigationStack=ACTIVE_RECALL,nextbtn_Click,98,2,Subdeck_Module,Globals,31,0,Subdeck_Module,addsub_Click,105,0,Subdeck_Module,startArbtn_Click,170,0,Subdeck_Module,activerecall_Click,150,0,Subdeck_Module,create_Click,119,0,Subdeck_Module,Addbtn_Click,89,0,Subdeck_Module,SaveDecks,59,0,Subdeck_Module,Activity_Create,55,0,Subdeck_Module,Activity_Resume,73,3,Subdeck_Module,Refresh,70,0
 SelectedBuild=0
 VisibleModules=7,8,5,4,3,6,2,1
