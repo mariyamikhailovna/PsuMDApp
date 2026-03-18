@@ -12,7 +12,7 @@ Version=13.4
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-
+	Dim praise As Boolean =False	
 End Sub
 
 Sub Globals
@@ -104,6 +104,7 @@ Private Sub nextbtn_Click
 	If currentindex >= cards.Size Then
 		ShuffleCards(cards)
 		MsgboxAsync("You've finished your subdeck", "Congratulations")
+		praise = True
 		Activity.finish
 		Return
 	End If

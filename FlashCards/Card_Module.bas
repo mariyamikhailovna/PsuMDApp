@@ -111,6 +111,11 @@ Sub Activity_Resume
 	Dim tappedDeck As Map = Main.deck.Get(Main.selecteddeck)
 	Dim subdeckcards As List = tappedDeck.Get(Subdeck_Module.selectedsubdeck)
 	ShowSubdeckCards(subdeckcards)
+	
+	If ACTIVE_RECALL.praise = True Then
+		ACTIVE_RECALL.praise = False
+		MsgboxAsync("You've finished your subdeck", "Congratulations")
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
