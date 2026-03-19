@@ -34,6 +34,7 @@ End Sub
 
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
+	Private Panel1 As Panel
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -48,3 +49,12 @@ Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
+
+
+Private Sub Button1_Click
+	Log("hello")
+End Sub
+
+Private Sub Panel1_Click
+	Panel1.Left = Panel1.Left + 50
+End Sub
