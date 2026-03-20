@@ -1,0 +1,102 @@
+﻿Build1=Default,b4a.example
+File1=626407250_1885588195428622_4938467824422465026_n.jpg
+File2=clockLayout.bal
+File3=corkboardLayout.bal
+File4=dumbass.png
+File5=editnoteLayout.bal
+File6=Layout.bal
+File7=notepadLayout.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+Group=Default Group
+Library1=core
+Library2=keyvaluestore
+Library3=phone
+Library4=sql
+Library5=xcustomlistview
+Library6=xui
+Library7=sd_xui_dragview
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=clock
+Module2=cork
+Module3=editnote
+Module4=note
+Module5=Starter
+NumberOfFiles=7
+NumberOfLibraries=7
+NumberOfModules=5
+Version=13.4
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+	Private timerClock As Timer
+	Public format24h As Boolean = False
+	Type MyNote (Title As String, Tags As String, Content As String, DateAdded As Long, noteID As Long)
+	Public kvs As KeyValueStore
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+
+	Private clockBtn As Button
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+	
+	If FirstTime Then
+		kvs.Initialize(File.DirInternal, "notes_data")
+		timerClock.Initialize("timerClock", 1000)
+		timerClock.Enabled = True
+	End If
+	Activity.LoadLayout("Layout")
+End Sub
+
+Sub timerClock_Tick
+	clockBtn.Text = DateTime.Time(DateTime.Now)
+End Sub
+
+Sub Activity_Resume
+	If format24h Then
+		DateTime.TimeFormat = "HH:mm"
+	Else
+		DateTime.TimeFormat = "hh:mm a"
+	End If
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Private Sub clockBtn_Click
+	StartActivity(clock)
+End Sub
+
+Private Sub noteBtn_Click
+	StartActivity(note)
+End Sub
+
+Private Sub corkBtn_Click
+	StartActivity(cork)
+End Sub
