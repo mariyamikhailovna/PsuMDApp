@@ -1,0 +1,89 @@
+﻿Build1=Default,b4a.example
+File1=BackgroundAndShadows.PNG
+File10=BtnMusicPlayer On.GIF
+File11=BtnNotebook.PNG
+File12=Default theme.PNG
+File13=ImgPlant.PNG
+File14=ImgShelf.PNG
+File15=KeyboardMouseImg.PNG
+File16=Layout.bal
+File2=bg.bal
+File3=BtnBook.PNG
+File4=BtnCalendar.PNG
+File5=BtnClock.PNG
+File6=BtnComputer.GIF
+File7=BtnCorkboard.PNG
+File8=BtnLamp.PNG
+File9=BtnMusicPlayer Off.PNG
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=core
+Library2=xui
+Library3=b4xgifview
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=16
+NumberOfLibraries=3
+NumberOfModules=1
+Version=13.4
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private hsv As HorizontalScrollView
+	Private imgBG As ImageView
+	Private gifComputer As B4XGifView
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+	hsv.Panel.LoadLayout("bg")
+	hsv.Panel.Width = 100%y 'to set the width of the scroll view
+	imgBG.Width = 100%y
+	imgBG.Height = imgBG.Width
+	Sleep(50) 'to render the ui
+	hsv.ScrollPosition = (hsv.Panel.Width - 100%x) / 2 'to center the scroll when starting
+	gifComputer.SetGif(File.DirAssets, "BtnComputer.GIF") 'to set the gif
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
