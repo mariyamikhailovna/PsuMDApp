@@ -16,6 +16,6 @@ ModuleClosedNodes2=
 ModuleClosedNodes3=
 ModuleClosedNodes4=
 ModuleClosedNodes5=1
-NavigationStack=MainActivity,helpBtn_Click,77,0,Main,Globals,17,0,clockActivity,Activity_Resume,27,0,MainActivity,Globals,10,0,Visual Designer,loadingLayout.bal,-100,5,Main,Activity_Create,20,0,Main,Activity_Resume,25,1,Main,startLoad,33,0,Main,Process_Globals,14,0
+NavigationStack=MainActivity,helpBtn_Click,77,0,Main,Globals,17,0,clockActivity,Activity_Resume,27,0,MainActivity,Globals,10,0,Main,startLoad,33,0,Main,Process_Globals,14,0,Main,Activity_Create,20,0,Visual Designer,loadingLayout.bal,-100,6,Visual Designer,clocklayout.bal,-100,6,Main,Activity_Resume,25,1
 SelectedBuild=0
 VisibleModules=5,1,4,2,3
