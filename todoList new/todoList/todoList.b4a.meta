@@ -2,8 +2,8 @@
 ModuleBookmarks1=
 ModuleBreakpoints0=
 ModuleBreakpoints1=
-ModuleClosedNodes0=1,2,6,7,16
+ModuleClosedNodes0=1,2
 ModuleClosedNodes1=1
-NavigationStack=Main,Globals,30,6,Main,tasksListUI,208,6,Main,taskCheckbox_CheckedChange,201,0,Main,Activity_Create,47,6,Main,newAddTaskBtn,66,0,Main,newListBtn_Click,91,0,Main,addTitleTextArea_EnterPressed,119,6,Main,addTaskBtn_Click,171,0,Main,listsList_ItemClick,138,6,Main,enterTaskBtn_Click,205,6
+NavigationStack=Main,addTaskBtn_Click,193,0,Main,tasksListUI,283,0,Main,taskCheckbox_CheckedChange,250,4,Main,Process_Globals,19,0,Main,Activity_Create,49,6,Main,newAddTaskBtn,72,0,Main,listsList_ItemClick,162,0,Main,newListBtn_Click,90,6,Main,addTitleTextArea_EnterPressed,123,6,Main,enterTaskBtn_Click,233,6
 SelectedBuild=0
-VisibleModules=
+VisibleModules=1

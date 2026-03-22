@@ -54,6 +54,8 @@ Sub Globals
 	Dim addTaskPanel As Panel
 	Dim addTaskTextArea As EditText
 	Dim enterTaskBtn As Button 'button for entering the task to the task list
+	
+	Dim untitledNo As Int = 1
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -68,7 +70,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	If kvs.ContainsKey("lists") Then
 		Dim savedLists As List = kvs.Get("lists")
 		For Each title As String In savedLists
-			listsList.AddTextItem(title, listsList.Size + 1) 
+			listsList.AddTextItem(title, title)
 		Next
 	End If
 	
@@ -106,7 +108,10 @@ Sub newListBtn_Click 'for making a new list
 	addTitleTextArea.Hint = "+ add a title..."
 	addTitleTextArea.RequestFocus
 	
+	tasksList.Clear
 	newListBtn.Enabled = False
+	
+	
 	
 	tasksList.GetBase.Visible = True
 	addTaskBtn.Visible = True
@@ -116,15 +121,35 @@ End Sub
 Sub addTitleTextArea_EnterPressed 'after entering the list's title
 	
 	Dim title As String = addTitleTextArea.Text
-	
-	If title = "" Then
-		MsgboxAsync("Add a title.", "List Untitled")
-		addTitleTextArea.RequestFocus
-		Return
-	End If
-	
+		
 	Dim savedLists As List
 	savedLists.Initialize
+	
+	If title = "" Then
+		title = "Untitled" & untitledNo
+
+		savedLists = kvs.Get("lists")
+		For Each existingTitle As String In savedLists
+			If title = existingTitle Then
+				untitledNo = untitledNo + 1
+				title = "Untitled" & untitledNo
+			End If
+		Next
+		
+		newListBtn.Enabled = True
+	End If
+
+	If kvs.ContainsKey("lists") Then
+		Dim savedLists As List = kvs.Get("lists")
+		For Each existingTitle As String In savedLists
+			If existingTitle = title Then
+				MsgboxAsync("List already exists.", "Duplicate title")
+				newListBtn.Enabled = True
+				addTitleTextArea.Text = ""
+				Return
+			End If
+		Next
+	End If
 	
 	If kvs.ContainsKey("lists") Then
 		savedLists = kvs.Get("lists")
@@ -133,13 +158,14 @@ Sub addTitleTextArea_EnterPressed 'after entering the list's title
 	savedLists.Add(title)
 	kvs.Put("lists", savedLists)
 	
-	Dim index As Int = listsList.Size + 1
-	listsList.AddTextItem(title, index)
+	listsList.AddTextItem(title, title)
 	
 	addTitleTextArea.Text = ""
 	addTitleTextArea.Enabled = False
 	addTitleTextArea.Visible = False
 	newListBtn.Enabled = True
+	
+	listsList_ItemClick(listsList.Size - 1, title)
 	
 End Sub
 
@@ -217,11 +243,24 @@ Sub enterTaskBtn_Click
 	
 	Dim key As String = "list_" & currentList
 	Dim savedTasks As List
+	
+	If kvs.ContainsKey(key) Then
+		savedTasks = kvs.Get(key)
+		For Each existingTask As String In savedTasks
+			If existingTask = newTask Then
+				MsgboxAsync("Task already exists.", "Duplicate task")
+				newAddTaskBtn
+				Return
+			End If
+		Next
+	End If
+	
 	If kvs.ContainsKey(key) Then
 		savedTasks = kvs.Get(key)
 	Else
 		savedTasks.Initialize
 	End If
+	
 	savedTasks.Add(newTask)
 	kvs.Put(key, savedTasks)
 	
@@ -243,30 +282,45 @@ Sub taskCheckbox_CheckedChange(Checked As Boolean)
 		taskLBL.TextColor = Colors.Black
 	End If
 
+	' Save checked state to kvs
+	Dim key As String = "checked_" & currentList & "_" & taskLBL.Text
+	kvs.Put(key, Checked)
+
 End Sub
 
 Sub tasksListUI(newTask As String)'sub for task list, treating this as a displayFUnc() lmao
 	
-	Dim taskPNL As Panel 'panel for the tasks
+	Dim taskPNL As Panel
 	taskPNL.Initialize("taskPNL")
 	taskPNL.SetLayout(0, 0, 100%x, 60dip)
-	
-	Dim taskCheckbox As CheckBox 'checkbox
+    
+	Dim taskCheckbox As CheckBox
 	taskCheckbox.Initialize("taskCheckbox")
 	taskPNL.AddView(taskCheckbox, 10dip, 15dip, 40dip, 40dip)
-	
+    
 	Dim taskLBL As Label
 	taskLBL.Initialize("taskLBL")
 	taskLBL.Text = newTask
 	taskLBL.TextColor = Colors.Black
 	taskPNL.AddView(taskLBL, 60dip, 25dip, 80%x, 40dip)
-	
+    
 	Dim divider As Panel
 	divider.Initialize("line")
 	divider.Color = Colors.ARGB(255, 60, 60, 60)
 	taskPNL.AddView(divider, 0, 59dip, 100%x, 1dip)
-	
+    
 	taskCheckbox.Tag = taskLBL
+
+	' Restore saved checkbox state
+	Dim checkedKey As String = "checked_" & currentList & "_" & newTask
+	If kvs.ContainsKey(checkedKey) Then
+		Dim isChecked As Boolean = kvs.Get(checkedKey)
+		taskCheckbox.Checked = isChecked
+		If isChecked Then
+			taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)
+		End If
+	End If
+    
 	tasksList.Add(taskPNL, newTask)
 	
 End Sub

@@ -67,8 +67,9 @@ public static RemoteObject _currentlist = RemoteObject.createImmutable("");
 public static RemoteObject _addtaskpanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _addtasktextarea = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _entertaskbtn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _untitledno = RemoteObject.createImmutable(0);
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"addTaskBtn",main.mostCurrent._addtaskbtn,"addTaskBtnPNL",main.mostCurrent._addtaskbtnpnl,"addTaskPanel",main.mostCurrent._addtaskpanel,"addTaskTextArea",main.mostCurrent._addtasktextarea,"addTitleTextArea",main.mostCurrent._addtitletextarea,"currentList",main.mostCurrent._currentlist,"enterTaskBtn",main.mostCurrent._entertaskbtn,"kvs",main._kvs,"listsList",main.mostCurrent._listslist,"newListBtn",main.mostCurrent._newlistbtn,"Starter",Debug.moduleToString(b4a.example.starter.class),"tasksList",main.mostCurrent._taskslist,"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"addTaskBtn",main.mostCurrent._addtaskbtn,"addTaskBtnPNL",main.mostCurrent._addtaskbtnpnl,"addTaskPanel",main.mostCurrent._addtaskpanel,"addTaskTextArea",main.mostCurrent._addtasktextarea,"addTitleTextArea",main.mostCurrent._addtitletextarea,"currentList",main.mostCurrent._currentlist,"enterTaskBtn",main.mostCurrent._entertaskbtn,"kvs",main._kvs,"listsList",main.mostCurrent._listslist,"newListBtn",main.mostCurrent._newlistbtn,"Starter",Debug.moduleToString(b4a.example.starter.class),"tasksList",main.mostCurrent._taskslist,"untitledNo",main._untitledno,"xui",main._xui};
 }
 }

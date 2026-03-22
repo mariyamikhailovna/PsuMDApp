@@ -4,60 +4,60 @@ b4a.example
 keyvaluestore
 1
 keyvaluestore
-main,activity_create,1,0,41,57
+main,activity_create,1,0,43,59
 ,addtitletextarea,,listslist,,newlistbtn,,taskslist,,kvs,,addtaskbtnpnl,,addtaskbtn
 ,addtitletextarea,,listslist,,newlistbtn,,taskslist
 ,newaddtaskbtn
-main,newaddtaskbtn,0,0,67,80
+main,newaddtaskbtn,0,0,69,82
 ,addtaskbtnpnl,,addtaskbtn,,taskslist
 
 
-main,activity_pause,0,0,63,65
+main,activity_pause,0,0,65,67
 
 
 
-main,activity_resume,0,0,59,61
+main,activity_resume,0,0,61,63
 
 
 
-main,addtaskbtn_click,0,0,168,188
+main,addtaskbtn_click,0,0,194,214
 ,addtaskbtn,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn
 
 
-main,addtitletextarea_enterpressed,1,1,98,126
-,addtitletextarea,,kvs,,listslist,,newlistbtn
-
-
-main,entertaskbtn_click,0,1,190,215
-,addtasktextarea,,taskslist,,currentlist,,kvs,,addtaskbtn,,addtaskbtnpnl
-
-,taskslistui,,newaddtaskbtn
-main,taskslistui,0,0,230,254
-,taskslist
-
-
-main,globals,0,1,23,39
-,currentlist
-,currentlist
-
-main,listslist_itemclick,1,1,128,151
+main,addtitletextarea_enterpressed,1,1,103,152
+,addtitletextarea,,untitledno,,kvs,,newlistbtn,,listslist,,currentlist,,taskslist,,addtaskbtnpnl,,addtaskbtn
+,untitledno,,currentlist
+,listslist_itemclick,,taskslistui,,newaddtaskbtn
+main,listslist_itemclick,1,0,154,177
 ,listslist,,currentlist,,addtitletextarea,,taskslist,,kvs,,addtaskbtnpnl,,addtaskbtn
 ,currentlist
 ,taskslistui,,newaddtaskbtn
-main,listslist_itemlongclick,0,0,153,166
+main,entertaskbtn_click,1,1,216,254
+,addtasktextarea,,taskslist,,currentlist,,kvs,,addtaskbtn,,addtaskbtnpnl
+
+,newaddtaskbtn,,taskslistui
+main,taskslistui,1,0,273,308
+,currentlist,,kvs,,taskslist
+
+
+main,globals,0,1,23,41
+,currentlist,,untitledno
+,currentlist,,untitledno
+
+main,listslist_itemlongclick,0,0,179,192
 ,kvs,,listslist
 
 
-main,newlistbtn_click,1,1,82,96
-,addtitletextarea,,newlistbtn,,taskslist,,addtaskbtn
+main,newlistbtn_click,1,1,84,101
+,addtitletextarea,,taskslist,,newlistbtn,,addtaskbtn
 
 
 main,process_globals,0,1,15,21
 
 
 
-main,taskcheckbox_checkedchange,0,0,217,228
-
+main,taskcheckbox_checkedchange,0,0,256,271
+,currentlist,,kvs
 
 
 starter,application_error,0,0,27,29
