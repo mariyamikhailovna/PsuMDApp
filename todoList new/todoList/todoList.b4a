@@ -1,0 +1,272 @@
+﻿Build1=Default,b4a.example
+File1=Layout.bal
+File2=todoListLayout.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+Group=Default Group
+Library1=core
+Library2=keyvaluestore
+Library3=keyvaluestore2
+Library4=xui
+Library5=xcustomlistview
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Starter
+NumberOfFiles=2
+NumberOfLibraries=5
+NumberOfModules=1
+Version=13.4
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	
+	Private xui As XUI
+	Public kvs As KeyValueStore
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	
+	Private addTitleTextArea As EditText 'et to enter a title
+	Private listsList As CustomListView 'list of the lists
+	Private newListBtn As Button 'btn to add a new list
+	Private tasksList As CustomListView 'list of the tasks
+	
+	Dim addTaskBtnPNL As Panel 'panel for addTaskBtn
+	Dim addTaskBtn As Button 'button for adding tasks
+	
+	Private currentList As String = "" 'for displaying what list you're currently on at addTitleTextArea
+	
+	Dim addTaskPanel As Panel
+	Dim addTaskTextArea As EditText
+	Dim enterTaskBtn As Button 'button for entering the task to the task list
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	
+	Activity.LoadLayout("todoListLayout.bal")
+	
+	newAddTaskBtn
+	tasksList.GetBase.Visible = False
+	
+	kvs.Initialize(File.DirInternal, "todoListData")
+	
+	If kvs.ContainsKey("lists") Then
+		Dim savedLists As List = kvs.Get("lists")
+		For Each title As String In savedLists
+			listsList.AddTextItem(title, listsList.Size + 1) 
+		Next
+	End If
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub newAddTaskBtn 'for making the add task button show up
+	
+	addTaskBtnPNL.Initialize("addTaskBtnPNL")
+	addTaskBtnPNL.SetLayout(0, 0, 350dip, 50dip)
+	addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250, 250)
+	
+	addTaskBtn.Initialize("addTaskBtn")
+	
+	addTaskBtn.Text = "+ add a task "
+	addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, 300dip, 50dip)
+	
+	tasksList.Add(addTaskBtnPNL, "")
+	
+End Sub
+
+Sub newListBtn_Click 'for making a new list
+	
+	addTitleTextArea.Visible = True
+	addTitleTextArea.Enabled = True
+	addTitleTextArea.Background = Null
+	addTitleTextArea.Text = ""
+	addTitleTextArea.Hint = "+ add a title..."
+	addTitleTextArea.RequestFocus
+	
+	newListBtn.Enabled = False
+	
+	tasksList.GetBase.Visible = True
+	addTaskBtn.Visible = True
+	
+End Sub
+
+Sub addTitleTextArea_EnterPressed 'after entering the list's title
+	
+	Dim title As String = addTitleTextArea.Text
+	
+	If title = "" Then
+		MsgboxAsync("Add a title.", "List Untitled")
+		addTitleTextArea.RequestFocus
+		Return
+	End If
+	
+	Dim savedLists As List
+	savedLists.Initialize
+	
+	If kvs.ContainsKey("lists") Then
+		savedLists = kvs.Get("lists")
+	End If
+	
+	savedLists.Add(title)
+	kvs.Put("lists", savedLists)
+	
+	Dim index As Int = listsList.Size + 1
+	listsList.AddTextItem(title, index)
+	
+	addTitleTextArea.Text = ""
+	addTitleTextArea.Enabled = False
+	addTitleTextArea.Visible = False
+	newListBtn.Enabled = True
+	
+End Sub
+
+Sub listsList_ItemClick(Index As Int, Value As Object)
+	
+	Dim listPNL As B4XView = listsList.GetPanel(Index)
+	Dim listLBL As Label = listPNL.GetView(0)
+	
+	currentList = listLBL.Text
+	addTitleTextArea.Text = currentList
+	addTitleTextArea.Visible = True
+	
+	tasksList.Clear
+	
+	Dim key As String = "list_" & currentList
+	
+	If kvs.ContainsKey(key) Then
+		Dim savedTasks As List = kvs.Get(key)
+		For Each task As String In savedTasks
+			tasksListUI(task)
+		Next
+	End If
+	
+	tasksList.GetBase.Visible = True
+	newAddTaskBtn
+	
+End Sub
+
+Sub listsList_ItemLongClick (Index As Int, Value As Object) 'deleting a list
+	
+	Msgbox2Async("Are you sure you want to delete the list """ & Value & """?", "Delete List", "No", "", "Yes", Null, False)
+	Wait For Msgbox_Result (res As Int)
+	If res = DialogResponse.NEGATIVE Then
+		
+		Dim savedLists As List = kvs.Get("lists")
+		savedLists.RemoveAt(Index)
+		kvs.Put("lists", savedLists)
+		listsList.RemoveAt(Index)
+		
+		ToastMessageShow("Category deleted", False)
+	End If
+End Sub
+
+Sub addTaskBtn_Click 'adding tasks in
+	
+	addTaskBtn.Enabled = False
+	tasksList.RemoveAt(tasksList.Size - 1)
+	
+	addTaskPanel.Initialize("addTaskPanel")
+	addTaskPanel.SetLayout(10dip, 0, 200dip, 100dip)
+	addTaskPanel.Color = Colors.ARGB(255, 247, 247, 247)
+	
+	addTaskTextArea.Initialize("addTodoText")
+	addTaskTextArea.Hint = "Add a task..."
+	
+	enterTaskBtn.Initialize("enterTaskBtn")
+	enterTaskBtn.Text = "Enter task"
+	
+	addTaskPanel.AddView(addTaskTextArea, 0, 0, 280dip, 60dip)
+	addTaskPanel.AddView(enterTaskBtn, 0, 50dip, 280dip, 40dip)
+	
+	tasksList.Add(addTaskPanel, addTaskPanel)
+	
+End Sub
+
+Sub enterTaskBtn_Click
+	
+	Dim newTask As String = addTaskTextArea.Text.Trim 'gets the string of the new task added
+	If newTask = "" Then
+		MsgboxAsync("Please enter a task.", "No task entered")
+		Return
+	End If
+	
+	tasksList.RemoveAt(tasksList.Size - 1)
+	
+	Dim key As String = "list_" & currentList
+	Dim savedTasks As List
+	If kvs.ContainsKey(key) Then
+		savedTasks = kvs.Get(key)
+	Else
+		savedTasks.Initialize
+	End If
+	savedTasks.Add(newTask)
+	kvs.Put(key, savedTasks)
+	
+	tasksListUI(newTask)
+	
+	newAddTaskBtn
+	addTaskBtn.Enabled = True
+	
+End Sub
+
+Sub taskCheckbox_CheckedChange(Checked As Boolean)
+	
+	Dim taskCheckbox As CheckBox = Sender
+	Dim taskLBL As Label = taskCheckbox.Tag
+    
+	If Checked Then
+		taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)
+	Else
+		taskLBL.TextColor = Colors.Black
+	End If
+
+End Sub
+
+Sub tasksListUI(newTask As String)'sub for task list, treating this as a displayFUnc() lmao
+	
+	Dim taskPNL As Panel 'panel for the tasks
+	taskPNL.Initialize("taskPNL")
+	taskPNL.SetLayout(0, 0, 100%x, 60dip)
+	
+	Dim taskCheckbox As CheckBox 'checkbox
+	taskCheckbox.Initialize("taskCheckbox")
+	taskPNL.AddView(taskCheckbox, 10dip, 15dip, 40dip, 40dip)
+	
+	Dim taskLBL As Label
+	taskLBL.Initialize("taskLBL")
+	taskLBL.Text = newTask
+	taskLBL.TextColor = Colors.Black
+	taskPNL.AddView(taskLBL, 60dip, 25dip, 80%x, 40dip)
+	
+	Dim divider As Panel
+	divider.Initialize("line")
+	divider.Color = Colors.ARGB(255, 60, 60, 60)
+	taskPNL.AddView(divider, 0, 59dip, 100%x, 1dip)
+	
+	taskCheckbox.Tag = taskLBL
+	tasksList.Add(taskPNL, newTask)
+	
+End Sub
