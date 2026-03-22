@@ -34,7 +34,7 @@ public class main extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,19 +335,14 @@ public class main extends Activity implements B4AActivity{
             
     }
 
+public anywheresoftware.b4a.keywords.Common __c = null;
+public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
+public b4a.example.starter _starter = null;
+public b4a.example.clockactivity _clockactivity = null;
+public b4a.example.navactivity _navactivity = null;
+public b4a.example.helpactivity _helpactivity = null;
+public b4a.example.mainactivity _mainactivity = null;
 
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
@@ -356,102 +351,14 @@ vis = vis | (navactivity.mostCurrent != null);
 vis = vis | (helpactivity.mostCurrent != null);
 vis = vis | (mainactivity.mostCurrent != null);
 return vis;}
-
-private static BA killProgramHelper(BA ba) {
-    if (ba == null)
-        return null;
-    anywheresoftware.b4a.BA.SharedProcessBA sharedProcessBA = ba.sharedProcessBA;
-    if (sharedProcessBA == null || sharedProcessBA.activityBA == null)
-        return null;
-    return sharedProcessBA.activityBA.get();
-}
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(main.mostCurrent == null ? null : main.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
- {
-            Activity __a = null;
-            if (clockactivity.previousOne != null) {
-				__a = clockactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(clockactivity.mostCurrent == null ? null : clockactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (navactivity.previousOne != null) {
-				__a = navactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(navactivity.mostCurrent == null ? null : navactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (helpactivity.previousOne != null) {
-				__a = helpactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(helpactivity.mostCurrent == null ? null : helpactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (mainactivity.previousOne != null) {
-				__a = mainactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(mainactivity.mostCurrent == null ? null : mainactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-}
-public anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
-public b4a.example.starter _starter = null;
-public b4a.example.clockactivity _clockactivity = null;
-public b4a.example.navactivity _navactivity = null;
-public b4a.example.helpactivity _helpactivity = null;
-public b4a.example.mainactivity _mainactivity = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
+ //BA.debugLineNum = 21;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 22;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
 mostCurrent._activity.LoadLayout("loadingLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="End Sub";
+ //BA.debugLineNum = 23;BA.debugLine="End Sub";
 return "";
 }
 public static void  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {Debug.delegate(mostCurrent.activityBA, "activity_resume", null); return;}
 ResumableSub_Activity_Resume rsub = new ResumableSub_Activity_Resume(null);
 rsub.resume(processBA, null);
 }
@@ -464,7 +371,6 @@ boolean _result = false;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="main";
 
     while (true) {
         switch (state) {
@@ -474,9 +380,8 @@ return;
 case 0:
 //C
 this.state = -1;
-RDebugUtils.currentLine=196609;
- //BA.debugLineNum = 196609;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
-anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "activity_resume"), _startload());
+ //BA.debugLineNum = 26;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _startload());
 this.state = 1;
 return;
 case 1:
@@ -484,18 +389,45 @@ case 1:
 this.state = -1;
 _result = (Boolean) result[0];
 ;
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 27;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
+public static void  _complete(boolean _result) throws Exception{
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 18;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+starter._process_globals();
+clockactivity._process_globals();
+navactivity._process_globals();
+helpactivity._process_globals();
+mainactivity._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 14;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 15;BA.debugLine="Dim xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 16;BA.debugLine="End Sub";
+return "";
+}
 public static anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _startload() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "startload", false))
-	 {return ((anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) Debug.delegate(mostCurrent.activityBA, "startload", null));}
 ResumableSub_startLoad rsub = new ResumableSub_startLoad(null);
 rsub.resume(processBA, null);
 return (anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper(), rsub);
@@ -508,7 +440,6 @@ b4a.example.main parent;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="main";
 
     while (true) {
         switch (state) {
@@ -518,27 +449,22 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = -1;
-RDebugUtils.currentLine=262145;
- //BA.debugLineNum = 262145;BA.debugLine="Sleep(2000)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "startload"),(int) (2000));
+ //BA.debugLineNum = 30;BA.debugLine="Sleep(2000)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (2000));
 this.state = 1;
 return;
 case 1:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="StartActivity(MainActivity)";
+ //BA.debugLineNum = 31;BA.debugLine="StartActivity(MainActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._mainactivity.getObject()));
-RDebugUtils.currentLine=262147;
- //BA.debugLineNum = 262147;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 32;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
-RDebugUtils.currentLine=262148;
- //BA.debugLineNum = 262148;BA.debugLine="Return True";
+ //BA.debugLineNum = 33;BA.debugLine="Return True";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
-RDebugUtils.currentLine=262149;
- //BA.debugLineNum = 262149;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
 if (true) break;
 
             }

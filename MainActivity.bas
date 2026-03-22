@@ -14,18 +14,38 @@ Sub Process_Globals
 End Sub
 
 Sub Globals
-	Dim regLayout, darkModeLayout As B4XView
+	Dim regLayout, darkModeLayout As B4XView 
+	Dim size As Int = 100%y
+	Private hsv As HorizontalScrollView
+	Private computerGif As B4XGifView 
+	Private dcomputerGif As B4XGifView
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
+
+	Activity.LoadLayout("Layouthsv")
+
+	hsv.Panel.Width = size
+	hsv.Panel.Height = size
+
 	regLayout = xui.CreatePanel("")
 	darkModeLayout = xui.CreatePanel("")
+
+	hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Width, hsv.Panel.Height)
+	hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel.Width, hsv.Panel.Height)
 	
-	Activity.AddView(darkModeLayout, 0, 0, 100%x, 100%y)
-	Activity.AddView(regLayout, 0, 0, 100%x, 100%y)
+	regLayout.BringToFront
+
+	regLayout.LoadLayout("Layout")      'light mode
+	darkModeLayout.LoadLayout("Layout2") 'dark mode
+
+	computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
+	dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
+	darkModeLayout.Visible = False
 	
-	regLayout.LoadLayout("Layout")
-	darkModeLayout.LoadLayout("Layout2")
+	Sleep(50)
+	hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 100%x) / 2)
+	
 End Sub
 
 Sub Activity_Resume
@@ -39,6 +59,7 @@ End Sub
 Private Sub lamp_Click
 	Starter.darkMode = True
 	darkModeLayout.Visible = True
+	darkModeLayout.BringToFront
 	darkModeLayout.Alpha = 0
 	darkModeLayout.SetAlphaAnimated(250, 1)
 	regLayout.SetAlphaAnimated(250, 0)
@@ -49,6 +70,7 @@ End Sub
 Private Sub dlamp_Click
 	Starter.darkMode = False
 	regLayout.Visible = True
+	regLayout.BringToFront
 	regLayout.Alpha = 0
 	regLayout.SetAlphaAnimated(250, 1)
 	darkModeLayout.SetAlphaAnimated(250, 0)

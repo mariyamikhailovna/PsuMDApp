@@ -34,7 +34,7 @@ public class helpactivity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.helpactivity");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.helpactivity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class helpactivity extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static int _helppage = 0;
 public anywheresoftware.b4a.objects.LabelWrapper _titlelbl = null;
@@ -355,141 +346,117 @@ public b4a.example.starter _starter = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.navactivity _navactivity = null;
 public b4a.example.mainactivity _mainactivity = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=1703936;
- //BA.debugLineNum = 1703936;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=1703938;
- //BA.debugLineNum = 1703938;BA.debugLine="Activity.LoadLayout(\"helpAct\")";
+ //BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 24;BA.debugLine="Activity.LoadLayout(\"helpAct\")";
 mostCurrent._activity.LoadLayout("helpAct",mostCurrent.activityBA);
-RDebugUtils.currentLine=1703939;
- //BA.debugLineNum = 1703939;BA.debugLine="showHelpPage(0)";
+ //BA.debugLineNum = 25;BA.debugLine="showHelpPage(0)";
 _showhelppage((int) (0));
-RDebugUtils.currentLine=1703940;
- //BA.debugLineNum = 1703940;BA.debugLine="End Sub";
+ //BA.debugLineNum = 26;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+ //BA.debugLineNum = 32;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+ //BA.debugLineNum = 28;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
+return "";
+}
+public static String  _backbtn_click() throws Exception{
+ //BA.debugLineNum = 68;BA.debugLine="Sub backBtn_Click";
+ //BA.debugLineNum = 69;BA.debugLine="If helpPage > 0 Then";
+if (_helppage>0) { 
+ //BA.debugLineNum = 70;BA.debugLine="showHelpPage(helpPage - 1)";
+_showhelppage((int) (_helppage-1));
+ };
+ //BA.debugLineNum = 72;BA.debugLine="End Sub";
+return "";
+}
+public static String  _closedashi_click() throws Exception{
+ //BA.debugLineNum = 74;BA.debugLine="Sub closedaShi_Click";
+ //BA.debugLineNum = 75;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 76;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Private titleLbl As Label";
+mostCurrent._titlelbl = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 17;BA.debugLine="Private descriptionLbl As Label";
+mostCurrent._descriptionlbl = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="Private backBtn As Button";
+mostCurrent._backbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="Private nextBtn As Button";
+mostCurrent._nextbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
+return "";
+}
+public static String  _nextbtn_click() throws Exception{
+ //BA.debugLineNum = 62;BA.debugLine="Sub nextBtn_Click";
+ //BA.debugLineNum = 63;BA.debugLine="If helpPage < 3 Then";
+if (_helppage<3) { 
+ //BA.debugLineNum = 64;BA.debugLine="showHelpPage(helpPage + 1)";
+_showhelppage((int) (_helppage+1));
+ };
+ //BA.debugLineNum = 66;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Dim helpPage As Int = 0";
+_helppage = (int) (0);
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showhelppage(int _page) throws Exception{
-RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "showhelppage", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showhelppage", new Object[] {_page}));}
-RDebugUtils.currentLine=1900544;
- //BA.debugLineNum = 1900544;BA.debugLine="Sub showHelpPage(page As Int)";
-RDebugUtils.currentLine=1900545;
- //BA.debugLineNum = 1900545;BA.debugLine="helpPage = page";
+ //BA.debugLineNum = 36;BA.debugLine="Sub showHelpPage(page As Int)";
+ //BA.debugLineNum = 37;BA.debugLine="helpPage = page";
 _helppage = _page;
-RDebugUtils.currentLine=1900547;
- //BA.debugLineNum = 1900547;BA.debugLine="Select page";
+ //BA.debugLineNum = 39;BA.debugLine="Select page";
 switch (_page) {
 case 0: {
-RDebugUtils.currentLine=1900549;
- //BA.debugLineNum = 1900549;BA.debugLine="titleLbl.Text = \"Welcome\"";
+ //BA.debugLineNum = 41;BA.debugLine="titleLbl.Text = \"Welcome\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Welcome"));
-RDebugUtils.currentLine=1900550;
- //BA.debugLineNum = 1900550;BA.debugLine="descriptionLbl.Text = \"This app is tailor-made";
+ //BA.debugLineNum = 42;BA.debugLine="descriptionLbl.Text = \"This app is tailor-made";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("This app is tailor-made for students—or anyone who wants to learn. It has all the features you'll need in order to learn effectively!"));
  break; }
 case 1: {
-RDebugUtils.currentLine=1900553;
- //BA.debugLineNum = 1900553;BA.debugLine="titleLbl.Text = \"Clock\"";
+ //BA.debugLineNum = 45;BA.debugLine="titleLbl.Text = \"Clock\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Clock"));
-RDebugUtils.currentLine=1900554;
- //BA.debugLineNum = 1900554;BA.debugLine="descriptionLbl.Text = \"This is the pomodoro fea";
+ //BA.debugLineNum = 46;BA.debugLine="descriptionLbl.Text = \"This is the pomodoro fea";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("This is the pomodoro feature, explanation goes here yada yada"));
  break; }
 case 2: {
-RDebugUtils.currentLine=1900557;
- //BA.debugLineNum = 1900557;BA.debugLine="titleLbl.Text = \"Notetaking\"";
+ //BA.debugLineNum = 49;BA.debugLine="titleLbl.Text = \"Notetaking\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Notetaking"));
-RDebugUtils.currentLine=1900558;
- //BA.debugLineNum = 1900558;BA.debugLine="descriptionLbl.Text = \"We take notes here, and";
+ //BA.debugLineNum = 50;BA.debugLine="descriptionLbl.Text = \"We take notes here, and";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("We take notes here, and we save em."));
  break; }
 case 3: {
-RDebugUtils.currentLine=1900561;
- //BA.debugLineNum = 1900561;BA.debugLine="titleLbl.Text = \"Minions\"";
+ //BA.debugLineNum = 53;BA.debugLine="titleLbl.Text = \"Minions\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Minions"));
-RDebugUtils.currentLine=1900562;
- //BA.debugLineNum = 1900562;BA.debugLine="descriptionLbl.Text = \"Can we just praise Bob?";
+ //BA.debugLineNum = 54;BA.debugLine="descriptionLbl.Text = \"Can we just praise Bob?";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("Can we just praise Bob? I love the guy"));
  break; }
 }
 ;
-RDebugUtils.currentLine=1900566;
- //BA.debugLineNum = 1900566;BA.debugLine="backBtn.Enabled = (page > 0)";
+ //BA.debugLineNum = 58;BA.debugLine="backBtn.Enabled = (page > 0)";
 mostCurrent._backbtn.setEnabled((_page>0));
-RDebugUtils.currentLine=1900567;
- //BA.debugLineNum = 1900567;BA.debugLine="nextBtn.Enabled = (page < 3)";
+ //BA.debugLineNum = 59;BA.debugLine="nextBtn.Enabled = (page < 3)";
 mostCurrent._nextbtn.setEnabled((_page<3));
-RDebugUtils.currentLine=1900568;
- //BA.debugLineNum = 1900568;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="helpactivity";
-RDebugUtils.currentLine=1835008;
- //BA.debugLineNum = 1835008;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=1835010;
- //BA.debugLineNum = 1835010;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=1769472;
- //BA.debugLineNum = 1769472;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=1769474;
- //BA.debugLineNum = 1769474;BA.debugLine="End Sub";
-return "";
-}
-public static String  _backbtn_click() throws Exception{
-RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "backbtn_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "backbtn_click", null));}
-RDebugUtils.currentLine=2031616;
- //BA.debugLineNum = 2031616;BA.debugLine="Sub backBtn_Click";
-RDebugUtils.currentLine=2031617;
- //BA.debugLineNum = 2031617;BA.debugLine="If helpPage > 0 Then";
-if (_helppage>0) { 
-RDebugUtils.currentLine=2031618;
- //BA.debugLineNum = 2031618;BA.debugLine="showHelpPage(helpPage - 1)";
-_showhelppage((int) (_helppage-1));
- };
-RDebugUtils.currentLine=2031620;
- //BA.debugLineNum = 2031620;BA.debugLine="End Sub";
-return "";
-}
-public static String  _closedashi_click() throws Exception{
-RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "closedashi_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "closedashi_click", null));}
-RDebugUtils.currentLine=2097152;
- //BA.debugLineNum = 2097152;BA.debugLine="Sub closedaShi_Click";
-RDebugUtils.currentLine=2097153;
- //BA.debugLineNum = 2097153;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
-RDebugUtils.currentLine=2097154;
- //BA.debugLineNum = 2097154;BA.debugLine="End Sub";
-return "";
-}
-public static String  _nextbtn_click() throws Exception{
-RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "nextbtn_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "nextbtn_click", null));}
-RDebugUtils.currentLine=1966080;
- //BA.debugLineNum = 1966080;BA.debugLine="Sub nextBtn_Click";
-RDebugUtils.currentLine=1966081;
- //BA.debugLineNum = 1966081;BA.debugLine="If helpPage < 3 Then";
-if (_helppage<3) { 
-RDebugUtils.currentLine=1966082;
- //BA.debugLineNum = 1966082;BA.debugLine="showHelpPage(helpPage + 1)";
-_showhelppage((int) (_helppage+1));
- };
-RDebugUtils.currentLine=1966084;
- //BA.debugLineNum = 1966084;BA.debugLine="End Sub";
+ //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
 }
