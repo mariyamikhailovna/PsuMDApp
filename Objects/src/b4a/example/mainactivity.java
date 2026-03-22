@@ -25,7 +25,7 @@ public class mainactivity extends Activity implements B4AActivity{
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
 	public static final boolean fullScreen = false;
-	public static final boolean includeTitle = true;
+	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;
 
@@ -337,12 +337,15 @@ public class mainactivity extends Activity implements B4AActivity{
 
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
+public static anywheresoftware.b4a.objects.Timer _timerclock = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper _reglayout = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper _darkmodelayout = null;
 public static int _size = 0;
 public anywheresoftware.b4a.objects.HorizontalScrollViewWrapper _hsv = null;
 public b4a.example.b4xgifview _computergif = null;
 public b4a.example.b4xgifview _dcomputergif = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _clockbtn = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _clocklightbtn = null;
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
 public b4a.example.clockactivity _clockactivity = null;
@@ -378,44 +381,103 @@ return;
 
 case 0:
 //C
-this.state = -1;
- //BA.debugLineNum = 20;BA.debugLine="Activity.LoadLayout(\"Layouthsv\")";
-parent.mostCurrent._activity.LoadLayout("Layouthsv",mostCurrent.activityBA);
- //BA.debugLineNum = 22;BA.debugLine="hsv.Panel.Width = size";
-parent.mostCurrent._hsv.getPanel().setWidth(parent._size);
- //BA.debugLineNum = 23;BA.debugLine="hsv.Panel.Height = size";
-parent.mostCurrent._hsv.getPanel().setHeight(parent._size);
- //BA.debugLineNum = 25;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
-parent.mostCurrent._reglayout = parent._xui.CreatePanel(processBA,"");
- //BA.debugLineNum = 26;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
-parent.mostCurrent._darkmodelayout = parent._xui.CreatePanel(processBA,"");
- //BA.debugLineNum = 28;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
-parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._reglayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
- //BA.debugLineNum = 29;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
-parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._darkmodelayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
- //BA.debugLineNum = 31;BA.debugLine="regLayout.BringToFront";
-parent.mostCurrent._reglayout.BringToFront();
- //BA.debugLineNum = 33;BA.debugLine="regLayout.LoadLayout(\"Layout\")      'light mode";
-parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
- //BA.debugLineNum = 34;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
-parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
- //BA.debugLineNum = 36;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer.G";
-parent.mostCurrent._computergif._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
- //BA.debugLineNum = 37;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"Dark BtnComp";
-parent.mostCurrent._dcomputergif._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dark BtnComputer.GIF");
- //BA.debugLineNum = 39;BA.debugLine="darkModeLayout.Visible = False";
-parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 41;BA.debugLine="Sleep(50)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (50));
 this.state = 1;
-return;
+ //BA.debugLineNum = 23;BA.debugLine="Activity.LoadLayout(\"Layouthsv\")";
+parent.mostCurrent._activity.LoadLayout("Layouthsv",mostCurrent.activityBA);
+ //BA.debugLineNum = 25;BA.debugLine="If FirstTime Then";
+if (true) break;
+
 case 1:
+//if
+this.state = 4;
+if (_firsttime) { 
+this.state = 3;
+}if (true) break;
+
+case 3:
+//C
+this.state = 4;
+ //BA.debugLineNum = 26;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
+parent._timerclock.Initialize(processBA,"timerClock",(long) (1000));
+ //BA.debugLineNum = 27;BA.debugLine="timerClock.Enabled = True";
+parent._timerclock.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ if (true) break;
+
+case 4:
+//C
+this.state = 5;
+;
+ //BA.debugLineNum = 30;BA.debugLine="hsv.Panel.Width = size";
+parent.mostCurrent._hsv.getPanel().setWidth(parent._size);
+ //BA.debugLineNum = 31;BA.debugLine="hsv.Panel.Height = size";
+parent.mostCurrent._hsv.getPanel().setHeight(parent._size);
+ //BA.debugLineNum = 33;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
+parent.mostCurrent._reglayout = parent._xui.CreatePanel(processBA,"");
+ //BA.debugLineNum = 34;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
+parent.mostCurrent._darkmodelayout = parent._xui.CreatePanel(processBA,"");
+ //BA.debugLineNum = 36;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
+parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._reglayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
+ //BA.debugLineNum = 37;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
+parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._darkmodelayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
+ //BA.debugLineNum = 39;BA.debugLine="regLayout.BringToFront";
+parent.mostCurrent._reglayout.BringToFront();
+ //BA.debugLineNum = 41;BA.debugLine="Select Starter.themeNumber";
+if (true) break;
+
+case 5:
+//select
+this.state = 10;
+switch (BA.switchObjectToInt(parent.mostCurrent._starter._themenumber /*int*/ ,(int) (0),(int) (1))) {
+case 0: {
+this.state = 7;
+if (true) break;
+}
+case 1: {
+this.state = 9;
+if (true) break;
+}
+}
+if (true) break;
+
+case 7:
+//C
+this.state = 10;
+ //BA.debugLineNum = 43;BA.debugLine="regLayout.LoadLayout(\"Layout\") 'light mode for";
+parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
+ //BA.debugLineNum = 44;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
+parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
+ if (true) break;
+
+case 9:
+//C
+this.state = 10;
+ //BA.debugLineNum = 46;BA.debugLine="regLayout.LoadLayout(\"Layout\") 'light mode for";
+parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
+ //BA.debugLineNum = 47;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
+parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
+ if (true) break;
+
+case 10:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 42;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
+ //BA.debugLineNum = 50;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer.G";
+parent.mostCurrent._computergif._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
+ //BA.debugLineNum = 51;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"Dark BtnComp";
+parent.mostCurrent._dcomputergif._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dark BtnComputer.GIF");
+ //BA.debugLineNum = 52;BA.debugLine="darkModeLayout.Visible = False";
+parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 54;BA.debugLine="Sleep(50)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (50));
+this.state = 11;
+return;
+case 11:
+//C
+this.state = -1;
+;
+ //BA.debugLineNum = 55;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
 parent.mostCurrent._hsv.setScrollPosition((int) (anywheresoftware.b4a.keywords.Common.Max(0,(parent.mostCurrent._hsv.getPanel().getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA))/(double)2)));
- //BA.debugLineNum = 44;BA.debugLine="End Sub";
+ //BA.debugLineNum = 57;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -423,25 +485,32 @@ if (true) break;
     }
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 50;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 52;BA.debugLine="End Sub";
+ //BA.debugLineNum = 63;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 46;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 48;BA.debugLine="End Sub";
+ //BA.debugLineNum = 59;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 61;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clockbtn_click() throws Exception{
- //BA.debugLineNum = 78;BA.debugLine="Private Sub clockBtn_Click";
- //BA.debugLineNum = 79;BA.debugLine="StartActivity(clockActivity)";
+ //BA.debugLineNum = 94;BA.debugLine="Private Sub clockBtn_Click";
+ //BA.debugLineNum = 95;BA.debugLine="StartActivity(clockActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._clockactivity.getObject()));
- //BA.debugLineNum = 80;BA.debugLine="End Sub";
+ //BA.debugLineNum = 96;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clockbtn_longclick() throws Exception{
- //BA.debugLineNum = 82;BA.debugLine="Private Sub clockBtn_LongClick";
- //BA.debugLineNum = 84;BA.debugLine="End Sub";
+ //BA.debugLineNum = 102;BA.debugLine="Private Sub clockBtn_LongClick";
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
+return "";
+}
+public static String  _clocklightbtn_click() throws Exception{
+ //BA.debugLineNum = 98;BA.debugLine="Private Sub  clockLightBtn_Click";
+ //BA.debugLineNum = 99;BA.debugLine="StartActivity(clockActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._clockactivity.getObject()));
+ //BA.debugLineNum = 100;BA.debugLine="End Sub";
 return "";
 }
 public static void  _dlamp_click() throws Exception{
@@ -465,19 +534,19 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 66;BA.debugLine="Starter.darkMode = False";
+ //BA.debugLineNum = 79;BA.debugLine="Starter.darkMode = False";
 parent.mostCurrent._starter._darkmode /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 67;BA.debugLine="regLayout.Visible = True";
+ //BA.debugLineNum = 80;BA.debugLine="regLayout.Visible = True";
 parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 68;BA.debugLine="regLayout.BringToFront";
+ //BA.debugLineNum = 81;BA.debugLine="regLayout.BringToFront";
 parent.mostCurrent._reglayout.BringToFront();
- //BA.debugLineNum = 69;BA.debugLine="regLayout.Alpha = 0";
+ //BA.debugLineNum = 82;BA.debugLine="regLayout.Alpha = 0";
 parent.mostCurrent._reglayout.setAlpha((float) (0));
- //BA.debugLineNum = 70;BA.debugLine="regLayout.SetAlphaAnimated(250, 1)";
+ //BA.debugLineNum = 83;BA.debugLine="regLayout.SetAlphaAnimated(250, 1)";
 parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (1));
- //BA.debugLineNum = 71;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 0)";
+ //BA.debugLineNum = 84;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 0)";
 parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (0));
- //BA.debugLineNum = 72;BA.debugLine="Sleep(250)";
+ //BA.debugLineNum = 85;BA.debugLine="Sleep(250)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (250));
 this.state = 1;
 return;
@@ -485,9 +554,9 @@ case 1:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 73;BA.debugLine="darkModeLayout.Visible = False";
+ //BA.debugLineNum = 86;BA.debugLine="darkModeLayout.Visible = False";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 74;BA.debugLine="End Sub";
+ //BA.debugLineNum = 87;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -495,26 +564,30 @@ if (true) break;
     }
 }
 public static String  _globals() throws Exception{
- //BA.debugLineNum = 10;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 11;BA.debugLine="Dim regLayout, darkModeLayout As B4XView";
+ //BA.debugLineNum = 11;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 12;BA.debugLine="Dim regLayout, darkModeLayout As B4XView";
 mostCurrent._reglayout = new anywheresoftware.b4a.objects.B4XViewWrapper();
 mostCurrent._darkmodelayout = new anywheresoftware.b4a.objects.B4XViewWrapper();
- //BA.debugLineNum = 12;BA.debugLine="Dim size As Int = 100%y";
+ //BA.debugLineNum = 13;BA.debugLine="Dim size As Int = 100%y";
 _size = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA);
- //BA.debugLineNum = 13;BA.debugLine="Private hsv As HorizontalScrollView";
+ //BA.debugLineNum = 14;BA.debugLine="Private hsv As HorizontalScrollView";
 mostCurrent._hsv = new anywheresoftware.b4a.objects.HorizontalScrollViewWrapper();
- //BA.debugLineNum = 14;BA.debugLine="Private computerGif As B4XGifView";
+ //BA.debugLineNum = 15;BA.debugLine="Private computerGif As B4XGifView";
 mostCurrent._computergif = new b4a.example.b4xgifview();
- //BA.debugLineNum = 15;BA.debugLine="Private dcomputerGif As B4XGifView";
+ //BA.debugLineNum = 16;BA.debugLine="Private dcomputerGif As B4XGifView";
 mostCurrent._dcomputergif = new b4a.example.b4xgifview();
- //BA.debugLineNum = 16;BA.debugLine="End Sub";
+ //BA.debugLineNum = 17;BA.debugLine="Private clockBtn As Button";
+mostCurrent._clockbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="Private clockLightBtn As Button";
+mostCurrent._clocklightbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
 public static String  _helpbtn_click() throws Exception{
- //BA.debugLineNum = 90;BA.debugLine="Private Sub helpBtn_Click";
- //BA.debugLineNum = 91;BA.debugLine="StartActivity(helpActivity)";
+ //BA.debugLineNum = 110;BA.debugLine="Private Sub helpBtn_Click";
+ //BA.debugLineNum = 111;BA.debugLine="StartActivity(helpActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._helpactivity.getObject()));
- //BA.debugLineNum = 92;BA.debugLine="End Sub";
+ //BA.debugLineNum = 112;BA.debugLine="End Sub";
 return "";
 }
 public static void  _lamp_click() throws Exception{
@@ -538,19 +611,19 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 55;BA.debugLine="Starter.darkMode = True";
+ //BA.debugLineNum = 68;BA.debugLine="Starter.darkMode = True";
 parent.mostCurrent._starter._darkmode /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 56;BA.debugLine="darkModeLayout.Visible = True";
+ //BA.debugLineNum = 69;BA.debugLine="darkModeLayout.Visible = True";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 57;BA.debugLine="darkModeLayout.BringToFront";
+ //BA.debugLineNum = 70;BA.debugLine="darkModeLayout.BringToFront";
 parent.mostCurrent._darkmodelayout.BringToFront();
- //BA.debugLineNum = 58;BA.debugLine="darkModeLayout.Alpha = 0";
+ //BA.debugLineNum = 71;BA.debugLine="darkModeLayout.Alpha = 0";
 parent.mostCurrent._darkmodelayout.setAlpha((float) (0));
- //BA.debugLineNum = 59;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 1)";
+ //BA.debugLineNum = 72;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 1)";
 parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (1));
- //BA.debugLineNum = 60;BA.debugLine="regLayout.SetAlphaAnimated(250, 0)";
+ //BA.debugLineNum = 73;BA.debugLine="regLayout.SetAlphaAnimated(250, 0)";
 parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (0));
- //BA.debugLineNum = 61;BA.debugLine="Sleep(250)";
+ //BA.debugLineNum = 74;BA.debugLine="Sleep(250)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (250));
 this.state = 1;
 return;
@@ -558,9 +631,9 @@ case 1:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 62;BA.debugLine="regLayout.Visible = False";
+ //BA.debugLineNum = 75;BA.debugLine="regLayout.Visible = False";
 parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 63;BA.debugLine="End Sub";
+ //BA.debugLineNum = 76;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -568,17 +641,28 @@ if (true) break;
     }
 }
 public static String  _navbtn_click() throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Private Sub navBtn_Click";
- //BA.debugLineNum = 87;BA.debugLine="StartActivity(navActivity)";
+ //BA.debugLineNum = 106;BA.debugLine="Private Sub navBtn_Click";
+ //BA.debugLineNum = 107;BA.debugLine="StartActivity(navActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._navactivity.getObject()));
- //BA.debugLineNum = 88;BA.debugLine="End Sub";
+ //BA.debugLineNum = 108;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 7;BA.debugLine="Dim xui As XUI";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
- //BA.debugLineNum = 8;BA.debugLine="End Sub";
+ //BA.debugLineNum = 8;BA.debugLine="Private timerClock As Timer";
+_timerclock = new anywheresoftware.b4a.objects.Timer();
+ //BA.debugLineNum = 9;BA.debugLine="End Sub";
+return "";
+}
+public static String  _timerclock_tick() throws Exception{
+ //BA.debugLineNum = 89;BA.debugLine="Sub timerClock_Tick";
+ //BA.debugLineNum = 90;BA.debugLine="clockBtn.Text = DateTime.Time(DateTime.Now)";
+mostCurrent._clockbtn.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
+ //BA.debugLineNum = 91;BA.debugLine="clockLightBtn.Text = DateTime.Time(DateTime.Now)";
+mostCurrent._clocklightbtn.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
+ //BA.debugLineNum = 92;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -9,35 +9,34 @@ File15=Dark BtnBook.PNG
 File16=Dark BtnCalendar.PNG
 File17=Dark BtnClock.PNG
 File18=Dark BtnComputer.GIF
-File19=Dark BtnCorkboard.PNG
+File19=Dark BtnLamp.PNG
 File2=BtnBook.PNG
-File20=Dark BtnLamp.PNG
-File21=Dark BtnMusicPlayer.GIF
-File22=Dark BtnMusicPlayer.PNG
-File23=Dark BtnNotebook.PNG
-File24=Dark KeyboardMouse.PNG
-File25=Dark Shelf.PNG
-File26=darkbg.PNG
-File27=darkClock.PNG
-File28=DarkClosebook.GIF
-File29=darkCorkboard.PNG
+File20=Dark BtnMusicPlayer.GIF
+File21=Dark BtnMusicPlayer.PNG
+File22=Dark BtnNotebook.PNG
+File23=Dark KeyboardMouse.PNG
+File24=Dark Shelf.PNG
+File25=darkbg.PNG
+File26=darkClock.PNG
+File27=DarkClosebook.GIF
+File28=darkCorkboard.PNG
+File29=DarkOpenbook.GIF
 File3=BtnCalendar.PNG
-File30=DarkOpenbook.GIF
-File31=darkPlant.PNG
-File32=darkShelf.PNG
-File33=helpAct.bal
-File34=ImgPlant.PNG
-File35=ImgShelf.PNG
-File36=KeyboardMouseImg.PNG
-File37=Layout.bal
-File38=Layout2.bal
-File39=Layouthsv.bal
+File30=darkPlant.PNG
+File31=darkShelf.PNG
+File32=helpAct.bal
+File33=ImgPlant.PNG
+File34=ImgShelf.PNG
+File35=KeyboardMouseImg.PNG
+File36=Layout.bal
+File37=Layout2.bal
+File38=Layouthsv.bal
+File39=LEBRON JAMES.jpg
 File4=BtnClock.PNG
-File40=LEBRON JAMES.jpg
-File41=lightbg.PNG
-File42=loadingLayout.bal
-File43=navAct.bal
-File44=Openbook.GIF
+File40=lightbg.PNG
+File41=loadingLayout.bal
+File42=navAct.bal
+File43=Openbook.GIF
 File5=BtnComputer.GIF
 File6=BtnCorkboard.PNG
 File7=BtnLamp.PNG
@@ -81,7 +80,6 @@ FileGroup40=Default Group
 FileGroup41=Default Group
 FileGroup42=Default Group
 FileGroup43=Default Group
-FileGroup44=Default Group
 FileGroup5=Default Group
 FileGroup6=Default Group
 FileGroup7=Default Group
@@ -102,22 +100,22 @@ Module2=helpActivity
 Module3=MainActivity
 Module4=navActivity
 Module5=Starter
-NumberOfFiles=44
+NumberOfFiles=43
 NumberOfLibraries=8
 NumberOfModules=5
 Version=13.4
 @EndOfDesignText@
 #Region  Project Attributes 
-    #ApplicationLabel: Minions
+    #ApplicationLabel: Makoto Niijima
     #VersionCode: 1
-    #VersionName:
+    #VersionName: High Priestess
     #SupportedOrientations: unspecified
     #CanInstallToExternalStorage: False
 #End Region
 
 #Region  Activity Attributes 
 	#FullScreen: False
-	#IncludeTitle: True
+	#IncludeTitle: False
 #End Region
 
 Sub Process_Globals

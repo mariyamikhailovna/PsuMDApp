@@ -6,11 +6,12 @@ Version=13.4
 @EndOfDesignText@
 #Region  Activity Attributes 
 	#FullScreen: False
-	#IncludeTitle: True
+	#IncludeTitle: False
 #End Region
 
 Sub Process_Globals
 	Dim xui As XUI
+	Private timerClock As Timer
 End Sub
 
 Sub Globals
@@ -19,12 +20,19 @@ Sub Globals
 	Private hsv As HorizontalScrollView
 	Private computerGif As B4XGifView 
 	Private dcomputerGif As B4XGifView
+	Private clockBtn As Button
+	Private clockLightBtn As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 
 	Activity.LoadLayout("Layouthsv")
 
+	If FirstTime Then
+		timerClock.Initialize("timerClock", 1000)
+		timerClock.Enabled = True
+	End If
+	
 	hsv.Panel.Width = size
 	hsv.Panel.Height = size
 
@@ -35,10 +43,16 @@ Sub Activity_Create(FirstTime As Boolean)
 	hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel.Width, hsv.Panel.Height)
 	
 	regLayout.BringToFront
-
-	regLayout.LoadLayout("Layout")      'light mode
-	darkModeLayout.LoadLayout("Layout2") 'dark mode
-
+	
+	Select Starter.themeNumber
+		Case 0
+			regLayout.LoadLayout("Layout") 'light mode for theme 1
+			darkModeLayout.LoadLayout("Layout2") 'dark mode for theme 1
+		Case 1
+			regLayout.LoadLayout("Layout") 'light mode for theme 2, not yet made
+			darkModeLayout.LoadLayout("Layout2") 'dark mode for theme 2, not yet made
+	End Select
+	
 	computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
 	dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
 	darkModeLayout.Visible = False
@@ -78,9 +92,16 @@ Private Sub dlamp_Click
 	darkModeLayout.Visible = False
 End Sub
 
-
+Sub timerClock_Tick
+	clockBtn.Text = DateTime.Time(DateTime.Now)
+	clockLightBtn.Text = DateTime.Time(DateTime.Now)
+End Sub
 
 Private Sub clockBtn_Click
+	StartActivity(clockActivity)
+End Sub
+
+Private Sub  clockLightBtn_Click
 	StartActivity(clockActivity)
 End Sub
 

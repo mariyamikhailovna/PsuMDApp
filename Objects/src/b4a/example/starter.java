@@ -137,45 +137,48 @@ public class starter extends android.app.Service{
 		return null;
 	}public anywheresoftware.b4a.keywords.Common __c = null;
 public static boolean _darkmode = false;
+public static int _themenumber = 0;
 public b4a.example.main _main = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.navactivity _navactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.mainactivity _mainactivity = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
- //BA.debugLineNum = 27;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
- //BA.debugLineNum = 28;BA.debugLine="Return True";
+ //BA.debugLineNum = 28;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
+ //BA.debugLineNum = 29;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 29;BA.debugLine="End Sub";
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
 return false;
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 9;BA.debugLine="Public darkMode As Boolean = False";
 _darkmode = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 10;BA.debugLine="End Sub";
+ //BA.debugLineNum = 10;BA.debugLine="Public themeNumber as Int = 0";
+_themenumber = (int) (0);
+ //BA.debugLineNum = 11;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_create() throws Exception{
- //BA.debugLineNum = 12;BA.debugLine="Sub Service_Create";
- //BA.debugLineNum = 16;BA.debugLine="End Sub";
+ //BA.debugLineNum = 13;BA.debugLine="Sub Service_Create";
+ //BA.debugLineNum = 17;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
- //BA.debugLineNum = 31;BA.debugLine="Sub Service_Destroy";
- //BA.debugLineNum = 33;BA.debugLine="End Sub";
+ //BA.debugLineNum = 32;BA.debugLine="Sub Service_Destroy";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
- //BA.debugLineNum = 18;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
- //BA.debugLineNum = 19;BA.debugLine="Service.StopAutomaticForeground 'Starter service";
+ //BA.debugLineNum = 19;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+ //BA.debugLineNum = 20;BA.debugLine="Service.StopAutomaticForeground 'Starter service";
 mostCurrent._service.StopAutomaticForeground();
- //BA.debugLineNum = 20;BA.debugLine="End Sub";
+ //BA.debugLineNum = 21;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_taskremoved() throws Exception{
- //BA.debugLineNum = 22;BA.debugLine="Sub Service_TaskRemoved";
- //BA.debugLineNum = 24;BA.debugLine="End Sub";
+ //BA.debugLineNum = 23;BA.debugLine="Sub Service_TaskRemoved";
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
 return "";
 }
 }
