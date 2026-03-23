@@ -54,17 +54,23 @@ Sub DrawSchedule
 	sortedDates.Sort(True)
 	
 	For Each date As String In sortedDates
+		Dim eventmap As Map = Main.CalendarMap.Get(date)
+		Dim allevents As List = eventmap.Get("AllEvents")
+		Dim timeline As List = eventmap.Get("Timeline")
+		
 		Dim lbldate As Label
 		lbldate.initialize("")
 		lbldate.Text = SetDate(date)
 		lbldate.TextSize = 16
 		lbldate.Color = Colors.LightGray
 		lbldate.TextColor = Colors.Black
-	
+		
+		If allevents.Size = 0 And timeline.size = 0 Then
+			Continue
+		End If
+		
 		scheduleSV.Panel.AddView(lbldate, 0, y, scheduleSV.Width, 40dip)
 		y = y+ 40dip
-		Dim eventmap As Map = Main.CalendarMap.Get(date)
-		Dim allevents As List = eventmap.Get("AllEvents")
 		
 		For Each ev As Map In allevents
 			Dim lbl As Label
@@ -77,7 +83,6 @@ Sub DrawSchedule
 			
 		Next
 		
-		Dim timeline As List = eventmap.Get("Timeline")
 		For Each ev As Map In timeline
 			Dim lbl As Label
 			lbl.Initialize("")

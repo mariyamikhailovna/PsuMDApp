@@ -164,7 +164,7 @@ Sub DrawHourLabels
 		Dim lbl As Label
 		lbl.Initialize("")
 		lbl.Text = GetTimeString(h)
-		lbl.Gravity = Gravity.CENTER_VERTICAL
+		lbl.Gravity = Gravity.left
 		p.AddView(lbl, 0, 0, 60dip, rowh)
 	Next
 End Sub
@@ -532,7 +532,7 @@ Private Sub deleteTLconfirm_btn_Click
 		End If
 		
 	Next
-	
+	addTL_et.Text = ""
 	deleteTLevent_confirmationpanel.Visible = False
 	addEventTL_panel.Visible = False
 	SaveCalendar

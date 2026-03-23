@@ -16,6 +16,6 @@ ModuleClosedNodes2=
 ModuleClosedNodes3=
 ModuleClosedNodes4=1
 ModuleClosedNodes5=
-NavigationStack=Main,Weekday,301,0,Main,Daysinamonth,290,0,Main,cell_click_click,260,0,Main,DrawCalendar,138,0,Main,Activity_Create,65,2,Visual Designer,Layout3.bal,-100,1,Visual Designer,Layout.bal,-100,2,Visual Designer,Layout4.bal,-100,1,Visual Designer,Layout5.bal,-100,1,Main,Globals,36,0
+NavigationStack=Day_MODULE,eventrb_CheckedChange,544,0,Day_MODULE,taskrb_CheckedChange,549,0,Day_MODULE,cancelTLdelete_btn_Click,515,0,Day_MODULE,deleteTLconfirm_btn_Click,521,4,Day_MODULE,x_TLevent_btn_Click,503,0,Day_MODULE,saveEdit_btn_Click,472,0,Day_MODULE,ooo_btn_Click,450,0,Day_MODULE,birthday_btn_Click,443,0,Day_MODULE,addnew_btn_Click,426,0,Day_MODULE,Addevent_btn_Click,417,0,Day_MODULE,Month_btn_Click,412,0
 SelectedBuild=0
 VisibleModules=4,5,2,3,1

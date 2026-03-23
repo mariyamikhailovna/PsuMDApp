@@ -4,7 +4,7 @@ b4a.example
 keyvaluestore
 1
 keyvaluestore
-main,activity_create,1,1,53,108
+main,activity_create,1,0,53,108
 ,calendarpanel,,menupanel,,month_btn,,monthsp,,weekpanel,,yearsp,,kvs,,calendarmap,,months,,day_of_week
 ,calendarpanel,,menupanel,,month_btn,,monthsp,,weekpanel,,yearsp,,calendarmap,,day_of_week
 keyvaluestore,initialize,keyvaluestore,containskey,keyvaluestore,get,,drawcalendar,,weekday,keyvaluestore,createtable,,daysinamonth,,identifycolor
@@ -280,15 +280,15 @@ day_module,deleteevent_btn_click,0,0,464,466
 ,deletepanel
 
 
-day_module,deletetlconfirm_btn_click,0,0,517,534
-main,calendarmap,,currentdate,,timeindex,,deletetlevent_confirmationpanel,,addeventtl_panel,main,kvs,,svevents,,svtimeline
+day_module,deletetlconfirm_btn_click,1,1,517,534
+main,calendarmap,,currentdate,,timeindex,,addtl_et,,deletetlevent_confirmationpanel,,addeventtl_panel,main,kvs,,svevents,,svtimeline
 
 ,savecalendar,,updatetimeline,keyvaluestore,put,,drawmainevents,,drawhourlabels,,drawtimelineevents,,identifycolor,,gettimestring
 day_module,deletetlevent_btn_click,0,0,509,511
 ,deletetlevent_confirmationpanel
 
 
-day_module,drawhourlabels,0,0,144,164
+day_module,drawhourlabels,0,1,144,164
 ,svtimeline
 
 ,gettimestring
@@ -384,31 +384,31 @@ schedule_module,activity_create,1,0,22,30
 ,menupanel,,noschedlabel,,sched_btn,,schedulesv,main,calendarmap
 ,menupanel,,noschedlabel,,sched_btn,,schedulesv
 ,drawschedule,,setdate,,identifycolor,,gettimestring
-schedule_module,drawschedule,0,0,32,90
+schedule_module,drawschedule,0,1,32,95
 ,schedulesv,main,calendarmap,,noschedlabel
 
 ,setdate,,identifycolor,,gettimestring
-schedule_module,activity_pause,0,0,177,179
+schedule_module,activity_pause,0,0,182,184
 
 
 
-schedule_module,activity_resume,0,0,173,175
+schedule_module,activity_resume,0,0,178,180
 
 
 
-schedule_module,day_btn_click,0,0,190,197
+schedule_module,day_btn_click,0,0,195,202
 day_module,currentdate
 day_module,currentdate
 
-schedule_module,setdate,0,0,134,171
+schedule_module,setdate,0,0,139,176
 
 
 
-schedule_module,identifycolor,0,0,119,132
+schedule_module,identifycolor,0,0,124,137
 
 
 
-schedule_module,gettimestring,0,0,93,116
+schedule_module,gettimestring,0,0,98,121
 
 
 
@@ -416,11 +416,11 @@ schedule_module,globals,0,1,12,20
 
 
 
-schedule_module,menu_btn_click,0,0,181,183
+schedule_module,menu_btn_click,0,0,186,188
 ,menupanel
 
 
-schedule_module,month_btn_click,0,0,204,207
+schedule_module,month_btn_click,0,0,209,212
 
 
 
@@ -428,11 +428,11 @@ schedule_module,process_globals,0,1,6,10
 
 
 
-schedule_module,sched_btn_click,0,0,186,188
+schedule_module,sched_btn_click,0,0,191,193
 ,menupanel
 
 
-schedule_module,week_btn_click,0,0,199,202
+schedule_module,week_btn_click,0,0,204,207
 
 
 
