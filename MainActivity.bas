@@ -12,6 +12,8 @@ Version=13.4
 Sub Process_Globals
 	Dim xui As XUI
 	Private timerClock As Timer
+	Public kvs As KeyValueStore
+	Public format24h As Boolean = False
 End Sub
 
 Sub Globals
@@ -22,6 +24,12 @@ Sub Globals
 	Private dcomputerGif As B4XGifView
 	Private clockBtn As Button
 	Private clockLightBtn As Button
+	Public kvs As KeyValueStore
+	Private infoPnl As B4XView
+	Private infoTitleLbl As Label
+	Private infoDescLbl As Label
+	Private infoPageLbl As Label
+	Dim infoPage As Int = 0
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -29,6 +37,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layouthsv")
 
 	If FirstTime Then
+		kvs.Initialize(File.DirInternal, "notes_data")
 		timerClock.Initialize("timerClock", 1000)
 		timerClock.Enabled = True
 	End If
@@ -63,7 +72,11 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
-
+	If format24h Then
+		DateTime.TimeFormat = "HH:mm" ' 24-Hour Format
+	Else
+		DateTime.TimeFormat = "hh:mm a" ' AM/PM Format
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
@@ -107,6 +120,23 @@ End Sub
 
 Private Sub clockBtn_LongClick
 	'there should be a pop-up panel saying that this is the pomodoro feature, etc.
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(0)
+		Return
+	End If
+End Sub
+Private Sub clockLightBtn_LongClick
+	'there should be a pop-up panel saying that this is the pomodoro feature, etc.
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(0)
+		Return
+	End If
 End Sub
 
 Private Sub navBtn_Click
@@ -115,4 +145,59 @@ End Sub
 
 Private Sub helpBtn_Click
 	StartActivity(helpActivity)
+End Sub
+
+Private Sub showInfoPopup
+	
+
+	infoPnl = xui.CreatePanel("infoPnl")
+	Activity.AddView(infoPnl, 75dip, 225dip, 300dip, 220dip)
+	infoPnl.SetColorAndBorder(xui.Color_White, 2dip, xui.Color_Black, 3dip)
+
+	Dim closeBtn As Button
+	closeBtn.Initialize("infoPnlClose")
+	closeBtn.Text = "X"
+	closeBtn.TextSize = 8
+	infoPnl.AddView(closeBtn, 265dip, 8dip, 28dip, 28dip)
+
+	infoTitleLbl.Initialize("")
+	infoTitleLbl.TextSize = 16
+	infoTitleLbl.Gravity = Gravity.CENTER_HORIZONTAL
+	infoPnl.AddView(infoTitleLbl, 10dip, 12dip, 248dip, 30dip)
+
+	infoDescLbl.Initialize("")
+	infoDescLbl.TextSize = 13
+	infoDescLbl.Gravity = Gravity.TOP
+	infoDescLbl.SingleLine = False
+	infoPnl.AddView(infoDescLbl, 12dip, 52dip, 276dip, 110dip)
+
+	infoPageLbl.Initialize("")
+	infoPageLbl.Gravity = Gravity.CENTER_HORIZONTAL
+	infoPageLbl.TextSize = 11
+	infoPnl.AddView(infoPageLbl, 95dip, 184dip, 110dip, 22dip)
+
+
+	showInfoPage(0)
+End Sub
+
+Private Sub showInfoPage(page As Int)
+	infoPage = page
+	Select page
+		Case 0
+			infoTitleLbl.Text = "func 1"
+			infoDescLbl.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nisi eu risus sollicitudin, in mattis velit laoreet. Quisque iaculis elit sit amet ex fermentum, at vehicula odio rutrum."
+		Case 1
+			infoTitleLbl.Text = "func 2"
+			infoDescLbl.Text = "Aenean blandit a lorem ut laoreet. Sed gravida turpis sed dui porttitor porta. Donec vel mi id neque pretium varius vitae sed eros. Nullam gravida rhoncus fringilla."
+		Case 2
+			infoTitleLbl.Text = "func 3"
+			infoDescLbl.Text = "Sed eget facilisis purus, sed porta justo. Aliquam vitae lorem semper, pharetra enim a, tincidunt urna. Sed egestas felis non metus interdum, sit amet ornare dui tempor."
+		Case 3
+			infoTitleLbl.Text = "func 4"
+			infoDescLbl.Text = "Proin volutpat turpis at lorem commodo sollicitudin. Aenean eget ullamcorper ex, non scelerisque arcu. Duis sed vestibulum lacus, vel fringilla sapien. Quisque feugiat dui sit amet magna placerat convallis."
+	End Select
+End Sub
+
+Private Sub infoPnlClose_Click
+	infoPnl.Visible = False
 End Sub

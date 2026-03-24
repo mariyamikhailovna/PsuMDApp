@@ -34,7 +34,7 @@ public class mainactivity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.mainactivity");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.mainactivity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,22 +335,7 @@ public class mainactivity extends Activity implements B4AActivity{
             
     }
 
-public anywheresoftware.b4a.keywords.Common __c = null;
-public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
-public static anywheresoftware.b4a.objects.Timer _timerclock = null;
-public anywheresoftware.b4a.objects.B4XViewWrapper _reglayout = null;
-public anywheresoftware.b4a.objects.B4XViewWrapper _darkmodelayout = null;
-public static int _size = 0;
-public anywheresoftware.b4a.objects.HorizontalScrollViewWrapper _hsv = null;
-public b4a.example.b4xgifview _computergif = null;
-public b4a.example.b4xgifview _dcomputergif = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _clockbtn = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _clocklightbtn = null;
-public b4a.example.main _main = null;
-public b4a.example.starter _starter = null;
-public b4a.example.clockactivity _clockactivity = null;
-public b4a.example.navactivity _navactivity = null;
-public b4a.example.helpactivity _helpactivity = null;
+
 
 public static void initializeProcessGlobals() {
              try {
@@ -359,7 +344,36 @@ public static void initializeProcessGlobals() {
                 throw new RuntimeException(e);
             }
 }
+public anywheresoftware.b4a.keywords.Common __c = null;
+public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
+public static anywheresoftware.b4a.objects.Timer _timerclock = null;
+public static b4a.example3.keyvaluestore _kvs = null;
+public static boolean _format24h = false;
+public anywheresoftware.b4a.objects.B4XViewWrapper _reglayout = null;
+public anywheresoftware.b4a.objects.B4XViewWrapper _darkmodelayout = null;
+public static int _size = 0;
+public anywheresoftware.b4a.objects.HorizontalScrollViewWrapper _hsv = null;
+public b4a.example.b4xgifview _computergif = null;
+public b4a.example.b4xgifview _dcomputergif = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _clockbtn = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _clocklightbtn = null;
+public anywheresoftware.b4a.objects.B4XViewWrapper _infopnl = null;
+public anywheresoftware.b4a.objects.LabelWrapper _infotitlelbl = null;
+public anywheresoftware.b4a.objects.LabelWrapper _infodesclbl = null;
+public anywheresoftware.b4a.objects.LabelWrapper _infopagelbl = null;
+public static int _infopage = 0;
+public b4a.example.main _main = null;
+public b4a.example.starter _starter = null;
+public b4a.example.navactivity _navactivity = null;
+public b4a.example.helpactivity _helpactivity = null;
+public b4a.example.clockactivity _clockactivity = null;
+public b4a.example.noteactivity _noteactivity = null;
+public b4a.example.editnote _editnote = null;
+public b4a.example.corkactivity _corkactivity = null;
 public static void  _activity_create(boolean _firsttime) throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}); return;}
 ResumableSub_Activity_Create rsub = new ResumableSub_Activity_Create(null,_firsttime);
 rsub.resume(processBA, null);
 }
@@ -373,6 +387,7 @@ boolean _firsttime;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="mainactivity";
 
     while (true) {
         switch (state) {
@@ -382,9 +397,11 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 23;BA.debugLine="Activity.LoadLayout(\"Layouthsv\")";
+RDebugUtils.currentLine=851970;
+ //BA.debugLineNum = 851970;BA.debugLine="Activity.LoadLayout(\"Layouthsv\")";
 parent.mostCurrent._activity.LoadLayout("Layouthsv",mostCurrent.activityBA);
- //BA.debugLineNum = 25;BA.debugLine="If FirstTime Then";
+RDebugUtils.currentLine=851972;
+ //BA.debugLineNum = 851972;BA.debugLine="If FirstTime Then";
 if (true) break;
 
 case 1:
@@ -397,9 +414,14 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- //BA.debugLineNum = 26;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
+RDebugUtils.currentLine=851973;
+ //BA.debugLineNum = 851973;BA.debugLine="kvs.Initialize(File.DirInternal, \"notes_data\")";
+parent._kvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"notes_data");
+RDebugUtils.currentLine=851974;
+ //BA.debugLineNum = 851974;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
 parent._timerclock.Initialize(processBA,"timerClock",(long) (1000));
- //BA.debugLineNum = 27;BA.debugLine="timerClock.Enabled = True";
+RDebugUtils.currentLine=851975;
+ //BA.debugLineNum = 851975;BA.debugLine="timerClock.Enabled = True";
 parent._timerclock.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -407,21 +429,29 @@ case 4:
 //C
 this.state = 5;
 ;
- //BA.debugLineNum = 30;BA.debugLine="hsv.Panel.Width = size";
+RDebugUtils.currentLine=851978;
+ //BA.debugLineNum = 851978;BA.debugLine="hsv.Panel.Width = size";
 parent.mostCurrent._hsv.getPanel().setWidth(parent._size);
- //BA.debugLineNum = 31;BA.debugLine="hsv.Panel.Height = size";
+RDebugUtils.currentLine=851979;
+ //BA.debugLineNum = 851979;BA.debugLine="hsv.Panel.Height = size";
 parent.mostCurrent._hsv.getPanel().setHeight(parent._size);
- //BA.debugLineNum = 33;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
+RDebugUtils.currentLine=851981;
+ //BA.debugLineNum = 851981;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
 parent.mostCurrent._reglayout = parent._xui.CreatePanel(processBA,"");
- //BA.debugLineNum = 34;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
+RDebugUtils.currentLine=851982;
+ //BA.debugLineNum = 851982;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
 parent.mostCurrent._darkmodelayout = parent._xui.CreatePanel(processBA,"");
- //BA.debugLineNum = 36;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
+RDebugUtils.currentLine=851984;
+ //BA.debugLineNum = 851984;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
 parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._reglayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
- //BA.debugLineNum = 37;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
+RDebugUtils.currentLine=851985;
+ //BA.debugLineNum = 851985;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
 parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._darkmodelayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
- //BA.debugLineNum = 39;BA.debugLine="regLayout.BringToFront";
+RDebugUtils.currentLine=851987;
+ //BA.debugLineNum = 851987;BA.debugLine="regLayout.BringToFront";
 parent.mostCurrent._reglayout.BringToFront();
- //BA.debugLineNum = 41;BA.debugLine="Select Starter.themeNumber";
+RDebugUtils.currentLine=851989;
+ //BA.debugLineNum = 851989;BA.debugLine="Select Starter.themeNumber";
 if (true) break;
 
 case 5:
@@ -442,18 +472,22 @@ if (true) break;
 case 7:
 //C
 this.state = 10;
- //BA.debugLineNum = 43;BA.debugLine="regLayout.LoadLayout(\"Layout\") 'light mode for";
+RDebugUtils.currentLine=851991;
+ //BA.debugLineNum = 851991;BA.debugLine="regLayout.LoadLayout(\"Layout\") 'light mode for";
 parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
- //BA.debugLineNum = 44;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
+RDebugUtils.currentLine=851992;
+ //BA.debugLineNum = 851992;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
  if (true) break;
 
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 46;BA.debugLine="regLayout.LoadLayout(\"Layout\") 'light mode for";
+RDebugUtils.currentLine=851994;
+ //BA.debugLineNum = 851994;BA.debugLine="regLayout.LoadLayout(\"Layout\") 'light mode for";
 parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
- //BA.debugLineNum = 47;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
+RDebugUtils.currentLine=851995;
+ //BA.debugLineNum = 851995;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\") 'dark mode";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
  if (true) break;
 
@@ -461,23 +495,29 @@ case 10:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 50;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer.G";
-parent.mostCurrent._computergif._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
- //BA.debugLineNum = 51;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"Dark BtnComp";
-parent.mostCurrent._dcomputergif._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dark BtnComputer.GIF");
- //BA.debugLineNum = 52;BA.debugLine="darkModeLayout.Visible = False";
+RDebugUtils.currentLine=851998;
+ //BA.debugLineNum = 851998;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer.G";
+parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
+RDebugUtils.currentLine=851999;
+ //BA.debugLineNum = 851999;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"Dark BtnComp";
+parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dark BtnComputer.GIF");
+RDebugUtils.currentLine=852000;
+ //BA.debugLineNum = 852000;BA.debugLine="darkModeLayout.Visible = False";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 54;BA.debugLine="Sleep(50)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (50));
+RDebugUtils.currentLine=852002;
+ //BA.debugLineNum = 852002;BA.debugLine="Sleep(50)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "activity_create"),(int) (50));
 this.state = 11;
 return;
 case 11:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 55;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
+RDebugUtils.currentLine=852003;
+ //BA.debugLineNum = 852003;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
 parent.mostCurrent._hsv.setScrollPosition((int) (anywheresoftware.b4a.keywords.Common.Max(0,(parent.mostCurrent._hsv.getPanel().getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA))/(double)2)));
- //BA.debugLineNum = 57;BA.debugLine="End Sub";
+RDebugUtils.currentLine=852005;
+ //BA.debugLineNum = 852005;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -485,35 +525,249 @@ if (true) break;
     }
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 63;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 65;BA.debugLine="End Sub";
+RDebugUtils.currentModule="mainactivity";
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 59;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 61;BA.debugLine="End Sub";
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
+RDebugUtils.currentLine=917504;
+ //BA.debugLineNum = 917504;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=917505;
+ //BA.debugLineNum = 917505;BA.debugLine="If format24h Then";
+if (_format24h) { 
+RDebugUtils.currentLine=917506;
+ //BA.debugLineNum = 917506;BA.debugLine="DateTime.TimeFormat = \"HH:mm\" ' 24-Hour Format";
+anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("HH:mm");
+ }else {
+RDebugUtils.currentLine=917508;
+ //BA.debugLineNum = 917508;BA.debugLine="DateTime.TimeFormat = \"hh:mm a\" ' AM/PM Format";
+anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("hh:mm a");
+ };
+RDebugUtils.currentLine=917510;
+ //BA.debugLineNum = 917510;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clockbtn_click() throws Exception{
- //BA.debugLineNum = 94;BA.debugLine="Private Sub clockBtn_Click";
- //BA.debugLineNum = 95;BA.debugLine="StartActivity(clockActivity)";
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "clockbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "clockbtn_click", null));}
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Private Sub clockBtn_Click";
+RDebugUtils.currentLine=1245185;
+ //BA.debugLineNum = 1245185;BA.debugLine="StartActivity(clockActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._clockactivity.getObject()));
- //BA.debugLineNum = 96;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clockbtn_longclick() throws Exception{
- //BA.debugLineNum = 102;BA.debugLine="Private Sub clockBtn_LongClick";
- //BA.debugLineNum = 104;BA.debugLine="End Sub";
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "clockbtn_longclick", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "clockbtn_longclick", null));}
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Private Sub clockBtn_LongClick";
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="showInfoPopup";
+_showinfopopup();
+RDebugUtils.currentLine=1376259;
+ //BA.debugLineNum = 1376259;BA.debugLine="If infoPnl <> Null Then";
+if (mostCurrent._infopnl!= null) { 
+RDebugUtils.currentLine=1376260;
+ //BA.debugLineNum = 1376260;BA.debugLine="infoPnl.Visible = True";
+mostCurrent._infopnl.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1376261;
+ //BA.debugLineNum = 1376261;BA.debugLine="infoPnl.BringToFront";
+mostCurrent._infopnl.BringToFront();
+RDebugUtils.currentLine=1376262;
+ //BA.debugLineNum = 1376262;BA.debugLine="showInfoPage(0)";
+_showinfopage((int) (0));
+RDebugUtils.currentLine=1376263;
+ //BA.debugLineNum = 1376263;BA.debugLine="Return";
+if (true) return "";
+ };
+RDebugUtils.currentLine=1376265;
+ //BA.debugLineNum = 1376265;BA.debugLine="End Sub";
+return "";
+}
+public static String  _showinfopopup() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "showinfopopup", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showinfopopup", null));}
+anywheresoftware.b4a.objects.ButtonWrapper _closebtn = null;
+RDebugUtils.currentLine=1638400;
+ //BA.debugLineNum = 1638400;BA.debugLine="Private Sub showInfoPopup";
+RDebugUtils.currentLine=1638403;
+ //BA.debugLineNum = 1638403;BA.debugLine="infoPnl = xui.CreatePanel(\"infoPnl\")";
+mostCurrent._infopnl = _xui.CreatePanel(processBA,"infoPnl");
+RDebugUtils.currentLine=1638404;
+ //BA.debugLineNum = 1638404;BA.debugLine="Activity.AddView(infoPnl, 75dip, 225dip, 300dip,";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._infopnl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (75)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (225)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (300)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (220)));
+RDebugUtils.currentLine=1638405;
+ //BA.debugLineNum = 1638405;BA.debugLine="infoPnl.SetColorAndBorder(xui.Color_White, 2dip,";
+mostCurrent._infopnl.SetColorAndBorder(_xui.Color_White,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)),_xui.Color_Black,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (3)));
+RDebugUtils.currentLine=1638407;
+ //BA.debugLineNum = 1638407;BA.debugLine="Dim closeBtn As Button";
+_closebtn = new anywheresoftware.b4a.objects.ButtonWrapper();
+RDebugUtils.currentLine=1638408;
+ //BA.debugLineNum = 1638408;BA.debugLine="closeBtn.Initialize(\"infoPnlClose\")";
+_closebtn.Initialize(mostCurrent.activityBA,"infoPnlClose");
+RDebugUtils.currentLine=1638409;
+ //BA.debugLineNum = 1638409;BA.debugLine="closeBtn.Text = \"X\"";
+_closebtn.setText(BA.ObjectToCharSequence("X"));
+RDebugUtils.currentLine=1638410;
+ //BA.debugLineNum = 1638410;BA.debugLine="closeBtn.TextSize = 8";
+_closebtn.setTextSize((float) (8));
+RDebugUtils.currentLine=1638411;
+ //BA.debugLineNum = 1638411;BA.debugLine="infoPnl.AddView(closeBtn, 265dip, 8dip, 28dip, 28";
+mostCurrent._infopnl.AddView((android.view.View)(_closebtn.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (265)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (8)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (28)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (28)));
+RDebugUtils.currentLine=1638413;
+ //BA.debugLineNum = 1638413;BA.debugLine="infoTitleLbl.Initialize(\"\")";
+mostCurrent._infotitlelbl.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=1638414;
+ //BA.debugLineNum = 1638414;BA.debugLine="infoTitleLbl.TextSize = 16";
+mostCurrent._infotitlelbl.setTextSize((float) (16));
+RDebugUtils.currentLine=1638415;
+ //BA.debugLineNum = 1638415;BA.debugLine="infoTitleLbl.Gravity = Gravity.CENTER_HORIZONTAL";
+mostCurrent._infotitlelbl.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER_HORIZONTAL);
+RDebugUtils.currentLine=1638416;
+ //BA.debugLineNum = 1638416;BA.debugLine="infoPnl.AddView(infoTitleLbl, 10dip, 12dip, 248di";
+mostCurrent._infopnl.AddView((android.view.View)(mostCurrent._infotitlelbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (12)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (248)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (30)));
+RDebugUtils.currentLine=1638418;
+ //BA.debugLineNum = 1638418;BA.debugLine="infoDescLbl.Initialize(\"\")";
+mostCurrent._infodesclbl.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=1638419;
+ //BA.debugLineNum = 1638419;BA.debugLine="infoDescLbl.TextSize = 13";
+mostCurrent._infodesclbl.setTextSize((float) (13));
+RDebugUtils.currentLine=1638420;
+ //BA.debugLineNum = 1638420;BA.debugLine="infoDescLbl.Gravity = Gravity.TOP";
+mostCurrent._infodesclbl.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.TOP);
+RDebugUtils.currentLine=1638421;
+ //BA.debugLineNum = 1638421;BA.debugLine="infoDescLbl.SingleLine = False";
+mostCurrent._infodesclbl.setSingleLine(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1638422;
+ //BA.debugLineNum = 1638422;BA.debugLine="infoPnl.AddView(infoDescLbl, 12dip, 52dip, 276dip";
+mostCurrent._infopnl.AddView((android.view.View)(mostCurrent._infodesclbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (12)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (52)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (276)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (110)));
+RDebugUtils.currentLine=1638424;
+ //BA.debugLineNum = 1638424;BA.debugLine="infoPageLbl.Initialize(\"\")";
+mostCurrent._infopagelbl.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=1638425;
+ //BA.debugLineNum = 1638425;BA.debugLine="infoPageLbl.Gravity = Gravity.CENTER_HORIZONTAL";
+mostCurrent._infopagelbl.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER_HORIZONTAL);
+RDebugUtils.currentLine=1638426;
+ //BA.debugLineNum = 1638426;BA.debugLine="infoPageLbl.TextSize = 11";
+mostCurrent._infopagelbl.setTextSize((float) (11));
+RDebugUtils.currentLine=1638427;
+ //BA.debugLineNum = 1638427;BA.debugLine="infoPnl.AddView(infoPageLbl, 95dip, 184dip, 110di";
+mostCurrent._infopnl.AddView((android.view.View)(mostCurrent._infopagelbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (95)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (184)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (110)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (22)));
+RDebugUtils.currentLine=1638430;
+ //BA.debugLineNum = 1638430;BA.debugLine="showInfoPage(0)";
+_showinfopage((int) (0));
+RDebugUtils.currentLine=1638431;
+ //BA.debugLineNum = 1638431;BA.debugLine="End Sub";
+return "";
+}
+public static String  _showinfopage(int _page) throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "showinfopage", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showinfopage", new Object[] {_page}));}
+RDebugUtils.currentLine=1703936;
+ //BA.debugLineNum = 1703936;BA.debugLine="Private Sub showInfoPage(page As Int)";
+RDebugUtils.currentLine=1703937;
+ //BA.debugLineNum = 1703937;BA.debugLine="infoPage = page";
+_infopage = _page;
+RDebugUtils.currentLine=1703938;
+ //BA.debugLineNum = 1703938;BA.debugLine="Select page";
+switch (_page) {
+case 0: {
+RDebugUtils.currentLine=1703940;
+ //BA.debugLineNum = 1703940;BA.debugLine="infoTitleLbl.Text = \"func 1\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 1"));
+RDebugUtils.currentLine=1703941;
+ //BA.debugLineNum = 1703941;BA.debugLine="infoDescLbl.Text = \"Lorem ipsum dolor sit amet,";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nisi eu risus sollicitudin, in mattis velit laoreet. Quisque iaculis elit sit amet ex fermentum, at vehicula odio rutrum."));
+ break; }
+case 1: {
+RDebugUtils.currentLine=1703943;
+ //BA.debugLineNum = 1703943;BA.debugLine="infoTitleLbl.Text = \"func 2\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 2"));
+RDebugUtils.currentLine=1703944;
+ //BA.debugLineNum = 1703944;BA.debugLine="infoDescLbl.Text = \"Aenean blandit a lorem ut l";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Aenean blandit a lorem ut laoreet. Sed gravida turpis sed dui porttitor porta. Donec vel mi id neque pretium varius vitae sed eros. Nullam gravida rhoncus fringilla."));
+ break; }
+case 2: {
+RDebugUtils.currentLine=1703946;
+ //BA.debugLineNum = 1703946;BA.debugLine="infoTitleLbl.Text = \"func 3\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 3"));
+RDebugUtils.currentLine=1703947;
+ //BA.debugLineNum = 1703947;BA.debugLine="infoDescLbl.Text = \"Sed eget facilisis purus, s";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Sed eget facilisis purus, sed porta justo. Aliquam vitae lorem semper, pharetra enim a, tincidunt urna. Sed egestas felis non metus interdum, sit amet ornare dui tempor."));
+ break; }
+case 3: {
+RDebugUtils.currentLine=1703949;
+ //BA.debugLineNum = 1703949;BA.debugLine="infoTitleLbl.Text = \"func 4\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 4"));
+RDebugUtils.currentLine=1703950;
+ //BA.debugLineNum = 1703950;BA.debugLine="infoDescLbl.Text = \"Proin volutpat turpis at lo";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Proin volutpat turpis at lorem commodo sollicitudin. Aenean eget ullamcorper ex, non scelerisque arcu. Duis sed vestibulum lacus, vel fringilla sapien. Quisque feugiat dui sit amet magna placerat convallis."));
+ break; }
+}
+;
+RDebugUtils.currentLine=1703952;
+ //BA.debugLineNum = 1703952;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clocklightbtn_click() throws Exception{
- //BA.debugLineNum = 98;BA.debugLine="Private Sub  clockLightBtn_Click";
- //BA.debugLineNum = 99;BA.debugLine="StartActivity(clockActivity)";
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "clocklightbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "clocklightbtn_click", null));}
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Private Sub  clockLightBtn_Click";
+RDebugUtils.currentLine=1310721;
+ //BA.debugLineNum = 1310721;BA.debugLine="StartActivity(clockActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._clockactivity.getObject()));
- //BA.debugLineNum = 100;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="End Sub";
+return "";
+}
+public static String  _clocklightbtn_longclick() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "clocklightbtn_longclick", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "clocklightbtn_longclick", null));}
+RDebugUtils.currentLine=1441792;
+ //BA.debugLineNum = 1441792;BA.debugLine="Private Sub clockLightBtn_LongClick";
+RDebugUtils.currentLine=1441794;
+ //BA.debugLineNum = 1441794;BA.debugLine="showInfoPopup";
+_showinfopopup();
+RDebugUtils.currentLine=1441795;
+ //BA.debugLineNum = 1441795;BA.debugLine="If infoPnl <> Null Then";
+if (mostCurrent._infopnl!= null) { 
+RDebugUtils.currentLine=1441796;
+ //BA.debugLineNum = 1441796;BA.debugLine="infoPnl.Visible = True";
+mostCurrent._infopnl.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1441797;
+ //BA.debugLineNum = 1441797;BA.debugLine="infoPnl.BringToFront";
+mostCurrent._infopnl.BringToFront();
+RDebugUtils.currentLine=1441798;
+ //BA.debugLineNum = 1441798;BA.debugLine="showInfoPage(0)";
+_showinfopage((int) (0));
+RDebugUtils.currentLine=1441799;
+ //BA.debugLineNum = 1441799;BA.debugLine="Return";
+if (true) return "";
+ };
+RDebugUtils.currentLine=1441801;
+ //BA.debugLineNum = 1441801;BA.debugLine="End Sub";
 return "";
 }
 public static void  _dlamp_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "dlamp_click", false))
+	 {Debug.delegate(mostCurrent.activityBA, "dlamp_click", null); return;}
 ResumableSub_dlamp_Click rsub = new ResumableSub_dlamp_Click(null);
 rsub.resume(processBA, null);
 }
@@ -525,6 +779,7 @@ b4a.example.mainactivity parent;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="mainactivity";
 
     while (true) {
         switch (state) {
@@ -534,63 +789,74 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 79;BA.debugLine="Starter.darkMode = False";
+RDebugUtils.currentLine=1114113;
+ //BA.debugLineNum = 1114113;BA.debugLine="Starter.darkMode = False";
 parent.mostCurrent._starter._darkmode /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 80;BA.debugLine="regLayout.Visible = True";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="regLayout.Visible = True";
 parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 81;BA.debugLine="regLayout.BringToFront";
+RDebugUtils.currentLine=1114115;
+ //BA.debugLineNum = 1114115;BA.debugLine="regLayout.BringToFront";
 parent.mostCurrent._reglayout.BringToFront();
- //BA.debugLineNum = 82;BA.debugLine="regLayout.Alpha = 0";
+RDebugUtils.currentLine=1114116;
+ //BA.debugLineNum = 1114116;BA.debugLine="regLayout.Alpha = 0";
 parent.mostCurrent._reglayout.setAlpha((float) (0));
- //BA.debugLineNum = 83;BA.debugLine="regLayout.SetAlphaAnimated(250, 1)";
+RDebugUtils.currentLine=1114117;
+ //BA.debugLineNum = 1114117;BA.debugLine="regLayout.SetAlphaAnimated(250, 1)";
 parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (1));
- //BA.debugLineNum = 84;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 0)";
+RDebugUtils.currentLine=1114118;
+ //BA.debugLineNum = 1114118;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 0)";
 parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (0));
- //BA.debugLineNum = 85;BA.debugLine="Sleep(250)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (250));
+RDebugUtils.currentLine=1114119;
+ //BA.debugLineNum = 1114119;BA.debugLine="Sleep(250)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "dlamp_click"),(int) (250));
 this.state = 1;
 return;
 case 1:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 86;BA.debugLine="darkModeLayout.Visible = False";
+RDebugUtils.currentLine=1114120;
+ //BA.debugLineNum = 1114120;BA.debugLine="darkModeLayout.Visible = False";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 87;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114121;
+ //BA.debugLineNum = 1114121;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 11;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 12;BA.debugLine="Dim regLayout, darkModeLayout As B4XView";
-mostCurrent._reglayout = new anywheresoftware.b4a.objects.B4XViewWrapper();
-mostCurrent._darkmodelayout = new anywheresoftware.b4a.objects.B4XViewWrapper();
- //BA.debugLineNum = 13;BA.debugLine="Dim size As Int = 100%y";
-_size = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA);
- //BA.debugLineNum = 14;BA.debugLine="Private hsv As HorizontalScrollView";
-mostCurrent._hsv = new anywheresoftware.b4a.objects.HorizontalScrollViewWrapper();
- //BA.debugLineNum = 15;BA.debugLine="Private computerGif As B4XGifView";
-mostCurrent._computergif = new b4a.example.b4xgifview();
- //BA.debugLineNum = 16;BA.debugLine="Private dcomputerGif As B4XGifView";
-mostCurrent._dcomputergif = new b4a.example.b4xgifview();
- //BA.debugLineNum = 17;BA.debugLine="Private clockBtn As Button";
-mostCurrent._clockbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 18;BA.debugLine="Private clockLightBtn As Button";
-mostCurrent._clocklightbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 19;BA.debugLine="End Sub";
+public static String  _helpbtn_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "helpbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "helpbtn_click", null));}
+RDebugUtils.currentLine=1572864;
+ //BA.debugLineNum = 1572864;BA.debugLine="Private Sub helpBtn_Click";
+RDebugUtils.currentLine=1572865;
+ //BA.debugLineNum = 1572865;BA.debugLine="StartActivity(helpActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._helpactivity.getObject()));
+RDebugUtils.currentLine=1572866;
+ //BA.debugLineNum = 1572866;BA.debugLine="End Sub";
 return "";
 }
-public static String  _helpbtn_click() throws Exception{
- //BA.debugLineNum = 110;BA.debugLine="Private Sub helpBtn_Click";
- //BA.debugLineNum = 111;BA.debugLine="StartActivity(helpActivity)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._helpactivity.getObject()));
- //BA.debugLineNum = 112;BA.debugLine="End Sub";
+public static String  _infopnlclose_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "infopnlclose_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "infopnlclose_click", null));}
+RDebugUtils.currentLine=1769472;
+ //BA.debugLineNum = 1769472;BA.debugLine="Private Sub infoPnlClose_Click";
+RDebugUtils.currentLine=1769473;
+ //BA.debugLineNum = 1769473;BA.debugLine="infoPnl.Visible = False";
+mostCurrent._infopnl.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1769474;
+ //BA.debugLineNum = 1769474;BA.debugLine="End Sub";
 return "";
 }
 public static void  _lamp_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "lamp_click", false))
+	 {Debug.delegate(mostCurrent.activityBA, "lamp_click", null); return;}
 ResumableSub_lamp_Click rsub = new ResumableSub_lamp_Click(null);
 rsub.resume(processBA, null);
 }
@@ -602,6 +868,7 @@ b4a.example.mainactivity parent;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="mainactivity";
 
     while (true) {
         switch (state) {
@@ -611,29 +878,38 @@ return;
 case 0:
 //C
 this.state = -1;
- //BA.debugLineNum = 68;BA.debugLine="Starter.darkMode = True";
+RDebugUtils.currentLine=1048577;
+ //BA.debugLineNum = 1048577;BA.debugLine="Starter.darkMode = True";
 parent.mostCurrent._starter._darkmode /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 69;BA.debugLine="darkModeLayout.Visible = True";
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="darkModeLayout.Visible = True";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 70;BA.debugLine="darkModeLayout.BringToFront";
+RDebugUtils.currentLine=1048579;
+ //BA.debugLineNum = 1048579;BA.debugLine="darkModeLayout.BringToFront";
 parent.mostCurrent._darkmodelayout.BringToFront();
- //BA.debugLineNum = 71;BA.debugLine="darkModeLayout.Alpha = 0";
+RDebugUtils.currentLine=1048580;
+ //BA.debugLineNum = 1048580;BA.debugLine="darkModeLayout.Alpha = 0";
 parent.mostCurrent._darkmodelayout.setAlpha((float) (0));
- //BA.debugLineNum = 72;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 1)";
+RDebugUtils.currentLine=1048581;
+ //BA.debugLineNum = 1048581;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 1)";
 parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (1));
- //BA.debugLineNum = 73;BA.debugLine="regLayout.SetAlphaAnimated(250, 0)";
+RDebugUtils.currentLine=1048582;
+ //BA.debugLineNum = 1048582;BA.debugLine="regLayout.SetAlphaAnimated(250, 0)";
 parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (0));
- //BA.debugLineNum = 74;BA.debugLine="Sleep(250)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (250));
+RDebugUtils.currentLine=1048583;
+ //BA.debugLineNum = 1048583;BA.debugLine="Sleep(250)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "lamp_click"),(int) (250));
 this.state = 1;
 return;
 case 1:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 75;BA.debugLine="regLayout.Visible = False";
+RDebugUtils.currentLine=1048584;
+ //BA.debugLineNum = 1048584;BA.debugLine="regLayout.Visible = False";
 parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 76;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048585;
+ //BA.debugLineNum = 1048585;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -641,28 +917,32 @@ if (true) break;
     }
 }
 public static String  _navbtn_click() throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Private Sub navBtn_Click";
- //BA.debugLineNum = 107;BA.debugLine="StartActivity(navActivity)";
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "navbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "navbtn_click", null));}
+RDebugUtils.currentLine=1507328;
+ //BA.debugLineNum = 1507328;BA.debugLine="Private Sub navBtn_Click";
+RDebugUtils.currentLine=1507329;
+ //BA.debugLineNum = 1507329;BA.debugLine="StartActivity(navActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._navactivity.getObject()));
- //BA.debugLineNum = 108;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 7;BA.debugLine="Dim xui As XUI";
-_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
- //BA.debugLineNum = 8;BA.debugLine="Private timerClock As Timer";
-_timerclock = new anywheresoftware.b4a.objects.Timer();
- //BA.debugLineNum = 9;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1507330;
+ //BA.debugLineNum = 1507330;BA.debugLine="End Sub";
 return "";
 }
 public static String  _timerclock_tick() throws Exception{
- //BA.debugLineNum = 89;BA.debugLine="Sub timerClock_Tick";
- //BA.debugLineNum = 90;BA.debugLine="clockBtn.Text = DateTime.Time(DateTime.Now)";
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "timerclock_tick", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "timerclock_tick", null));}
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Sub timerClock_Tick";
+RDebugUtils.currentLine=1179649;
+ //BA.debugLineNum = 1179649;BA.debugLine="clockBtn.Text = DateTime.Time(DateTime.Now)";
 mostCurrent._clockbtn.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
- //BA.debugLineNum = 91;BA.debugLine="clockLightBtn.Text = DateTime.Time(DateTime.Now)";
+RDebugUtils.currentLine=1179650;
+ //BA.debugLineNum = 1179650;BA.debugLine="clockLightBtn.Text = DateTime.Time(DateTime.Now)";
 mostCurrent._clocklightbtn.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
- //BA.debugLineNum = 92;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179651;
+ //BA.debugLineNum = 1179651;BA.debugLine="End Sub";
 return "";
 }
 }

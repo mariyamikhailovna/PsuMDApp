@@ -43,3 +43,9 @@ End Sub
 Private Sub clkBtn_Click
 	StartActivity(clockActivity)
 End Sub
+Private Sub ntpdBtn_Click
+	StartActivity(noteActivity)
+End Sub
+Private Sub wwwBtn_Click
+	StartActivity(corkActivity)
+End Sub
