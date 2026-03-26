@@ -66,7 +66,7 @@ mainactivity,clockbtn_click,0,0,107,109
 
 
 
-mainactivity,clockbtn_longclick,0,0,115,124
+mainactivity,clockbtn_longclick,0,1,115,124
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
@@ -74,7 +74,7 @@ mainactivity,showinfopopup,0,0,144,175
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopage
-mainactivity,showinfopage,0,0,177,193
+mainactivity,showinfopage,0,1,177,202
 ,infopage,,infotitlelbl,,infodesclbl
 ,infopage
 
@@ -82,7 +82,7 @@ mainactivity,clocklightbtn_click,0,0,111,113
 
 
 
-mainactivity,clocklightbtn_longclick,0,0,125,134
+mainactivity,clocklightbtn_longclick,0,1,125,134
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
@@ -98,7 +98,7 @@ mainactivity,helpbtn_click,0,0,140,142
 
 
 
-mainactivity,infopnlclose_click,0,0,195,197
+mainactivity,infopnlclose_click,0,0,204,206
 ,infopnl
 
 
@@ -166,7 +166,11 @@ navactivity,clkbtn_click,0,0,37,39
 
 
 
-navactivity,exitbtn_click,0,0,33,35
+navactivity,corkpadbtn_click,0,1,41,43
+
+
+
+navactivity,exitbtn_click,0,0,61,63
 
 
 
@@ -174,7 +178,7 @@ navactivity,globals,0,1,12,16
 
 
 
-navactivity,ntpdbtn_click,0,0,40,42
+navactivity,ntpdbtn_click,0,0,53,55
 
 
 
@@ -182,15 +186,11 @@ navactivity,process_globals,0,1,6,10
 
 
 
-navactivity,wwwbtn_click,0,0,43,45
-
-
-
 helpactivity,activity_create,1,0,26,30
 ,backbtn,,descriptionlbl,,helpimage,,nextbtn,,titlelbl,,helppage,,xui
 ,backbtn,,descriptionlbl,,helpimage,,nextbtn,,titlelbl,,helppage
 ,showhelppage
-helpactivity,showhelppage,0,0,40,65
+helpactivity,showhelppage,0,1,40,81
 ,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,backbtn,,nextbtn
 ,helppage
 
@@ -202,11 +202,11 @@ helpactivity,activity_resume,0,0,32,34
 
 
 
-helpactivity,backbtn_click,0,0,73,77
+helpactivity,backbtn_click,0,0,89,93
 ,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,backbtn,,nextbtn
 ,helppage
 ,showhelppage
-helpactivity,closedashi_click,0,0,79,81
+helpactivity,closedashi_click,0,0,95,97
 
 
 
@@ -214,7 +214,7 @@ helpactivity,globals,0,1,15,24
 
 
 
-helpactivity,nextbtn_click,0,0,67,71
+helpactivity,nextbtn_click,0,1,83,87
 ,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,backbtn,,nextbtn
 ,helppage
 ,showhelppage

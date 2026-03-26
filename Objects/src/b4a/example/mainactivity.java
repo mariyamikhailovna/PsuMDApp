@@ -686,40 +686,64 @@ RDebugUtils.currentLine=1703938;
 switch (_page) {
 case 0: {
 RDebugUtils.currentLine=1703940;
- //BA.debugLineNum = 1703940;BA.debugLine="infoTitleLbl.Text = \"func 1\"";
-mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 1"));
+ //BA.debugLineNum = 1703940;BA.debugLine="infoTitleLbl.Text = \"Calendar\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("Calendar"));
 RDebugUtils.currentLine=1703941;
- //BA.debugLineNum = 1703941;BA.debugLine="infoDescLbl.Text = \"Lorem ipsum dolor sit amet,";
-mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nisi eu risus sollicitudin, in mattis velit laoreet. Quisque iaculis elit sit amet ex fermentum, at vehicula odio rutrum."));
+ //BA.debugLineNum = 1703941;BA.debugLine="infoDescLbl.Text = \"The calendar comes in three";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The calendar comes in three views to match however you like to plan. The Schedule view lets you see all your upcoming days at a glance, with major events and to-do items laid out on a timeline. The Day view shows you the full timeline for a single day, where you can add events, tasks, or birthdays, and color-coded backgrounds make each type of entry easy to tell apart. The Month view presents the classic calendar layout, complete with a month and year spinner to jump around quickly, a sneak peek of events on each day's cell, and neighboring dates filling in the empty cells so the grid always looks complete."));
  break; }
 case 1: {
 RDebugUtils.currentLine=1703943;
- //BA.debugLineNum = 1703943;BA.debugLine="infoTitleLbl.Text = \"func 2\"";
-mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 2"));
+ //BA.debugLineNum = 1703943;BA.debugLine="infoTitleLbl.Text = \"Clock\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("Clock"));
 RDebugUtils.currentLine=1703944;
- //BA.debugLineNum = 1703944;BA.debugLine="infoDescLbl.Text = \"Aenean blandit a lorem ut l";
-mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Aenean blandit a lorem ut laoreet. Sed gravida turpis sed dui porttitor porta. Donec vel mi id neque pretium varius vitae sed eros. Nullam gravida rhoncus fringilla."));
+ //BA.debugLineNum = 1703944;BA.debugLine="infoDescLbl.Text = \"The clock keeps you on time";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The clock keeps you on time and on task all in one place. A format button lets you switch between clock displays to whatever you prefer. It also comes with a built-in Pomodoro timer to help you stay focused and productive, and if the default durations don't work for you, you can freely adjust them to fit your own rhythm."));
  break; }
 case 2: {
 RDebugUtils.currentLine=1703946;
- //BA.debugLineNum = 1703946;BA.debugLine="infoTitleLbl.Text = \"func 3\"";
-mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 3"));
+ //BA.debugLineNum = 1703946;BA.debugLine="infoTitleLbl.Text = \"Corkboard\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("Corkboard"));
 RDebugUtils.currentLine=1703947;
- //BA.debugLineNum = 1703947;BA.debugLine="infoDescLbl.Text = \"Sed eget facilisis purus, s";
-mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Sed eget facilisis purus, sed porta justo. Aliquam vitae lorem semper, pharetra enim a, tincidunt urna. Sed egestas felis non metus interdum, sit amet ornare dui tempor."));
+ //BA.debugLineNum = 1703947;BA.debugLine="infoDescLbl.Text = \"The corkboard gives you a c";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The corkboard gives you a creative space to pin your thoughts and ideas. You can place sticky notes in a variety of colors to keep things visually organized and easy to tell apart. Images from your gallery can be attached right onto the board for extra context or inspiration. And when words and notes aren't enough, you can open up a drawable canvas with a selection of colored pens and sketch, doodle, or diagram anything you have in mind."));
  break; }
 case 3: {
 RDebugUtils.currentLine=1703949;
- //BA.debugLineNum = 1703949;BA.debugLine="infoTitleLbl.Text = \"func 4\"";
-mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("func 4"));
+ //BA.debugLineNum = 1703949;BA.debugLine="infoTitleLbl.Text = \"Flashcards\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("Flashcards"));
 RDebugUtils.currentLine=1703950;
- //BA.debugLineNum = 1703950;BA.debugLine="infoDescLbl.Text = \"Proin volutpat turpis at lo";
-mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("Proin volutpat turpis at lorem commodo sollicitudin. Aenean eget ullamcorper ex, non scelerisque arcu. Duis sed vestibulum lacus, vel fringilla sapien. Quisque feugiat dui sit amet magna placerat convallis."));
+ //BA.debugLineNum = 1703950;BA.debugLine="infoDescLbl.Text = \"The flashcard feature organ";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The flashcard feature organizes your cards into decks and subdecks, and you have the freedom to add, rename, or delete any of them — with a confirmation before anything gets deleted for good. Cards are automatically shuffled so every session feels fresh. A progress bar and percentage track how far you've made it through a deck, and when you're ready to dive back in, two buttons have you covered — restart the entire deck from scratch, or continue right where you left off."));
+ break; }
+case 4: {
+RDebugUtils.currentLine=1703952;
+ //BA.debugLineNum = 1703952;BA.debugLine="infoTitleLbl.Text = \"Music Player\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("Music Player"));
+RDebugUtils.currentLine=1703953;
+ //BA.debugLineNum = 1703953;BA.debugLine="infoDescLbl.Text = \"The music player plays the";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The music player plays the music on startup, meaning the app greets you with songs! Filled with chill, lo-fi tracks, you have the freedom to choose what track you want to play--either through the previous/next song buttons, or through the list of songs below where you can click on whatever chooses your fancy. There's a segment of the song that you want to listen to again or you want to zoom through a certain bit of a song? The seek bar presents itself to you where you can navigate within the music.  "));
+ break; }
+case 5: {
+RDebugUtils.currentLine=1703955;
+ //BA.debugLineNum = 1703955;BA.debugLine="infoTitleLbl.Text = \"Notepad\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("Notepad"));
+RDebugUtils.currentLine=1703956;
+ //BA.debugLineNum = 1703956;BA.debugLine="infoDescLbl.Text = \"The notepad keeps all your";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The notepad keeps all your notes in one tidy list that's easy to browse through. A search bar lets you quickly find any note by its title or tags, so nothing ever gets lost in the pile. Adding a new note is simple — just give it a title, attach some tags to keep things organized, and write away to your heart's content."));
+ break; }
+case 6: {
+RDebugUtils.currentLine=1703958;
+ //BA.debugLineNum = 1703958;BA.debugLine="infoTitleLbl.Text = \"To-do List\"";
+mostCurrent._infotitlelbl.setText(BA.ObjectToCharSequence("To-do List"));
+RDebugUtils.currentLine=1703959;
+ //BA.debugLineNum = 1703959;BA.debugLine="infoDescLbl.Text = \"The to-do list enables you";
+mostCurrent._infodesclbl.setText(BA.ObjectToCharSequence("The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."));
  break; }
 }
 ;
-RDebugUtils.currentLine=1703952;
- //BA.debugLineNum = 1703952;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1703961;
+ //BA.debugLineNum = 1703961;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clocklightbtn_click() throws Exception{

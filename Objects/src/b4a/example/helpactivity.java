@@ -403,47 +403,91 @@ mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize
  break; }
 case 1: {
 RDebugUtils.currentLine=2752521;
- //BA.debugLineNum = 2752521;BA.debugLine="titleLbl.Text = \"Clock\"";
-mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Clock"));
+ //BA.debugLineNum = 2752521;BA.debugLine="titleLbl.Text = \"Calendar\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Calendar"));
 RDebugUtils.currentLine=2752522;
- //BA.debugLineNum = 2752522;BA.debugLine="descriptionLbl.Text = \"This is the pomodoro fea";
-mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("This is the pomodoro feature, explanation goes here yada yada"));
+ //BA.debugLineNum = 2752522;BA.debugLine="descriptionLbl.Text = \"The calendar comes in th";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The calendar comes in three views to match however you like to plan. The Schedule view lets you see all your upcoming days at a glance, with major events and to-do items laid out on a timeline. The Day view shows you the full timeline for a single day, where you can add events, tasks, or birthdays, and color-coded backgrounds make each type of entry easy to tell apart. The Month view presents the classic calendar layout, complete with a month and year spinner to jump around quickly, a sneak peek of events on each day's cell, and neighboring dates filling in the empty cells so the grid always looks complete."));
 RDebugUtils.currentLine=2752523;
  //BA.debugLineNum = 2752523;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
-mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"psulogo.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"creature.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 2: {
 RDebugUtils.currentLine=2752525;
- //BA.debugLineNum = 2752525;BA.debugLine="titleLbl.Text = \"Notetaking\"";
-mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Notetaking"));
+ //BA.debugLineNum = 2752525;BA.debugLine="titleLbl.Text = \"Clock\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Clock"));
 RDebugUtils.currentLine=2752526;
- //BA.debugLineNum = 2752526;BA.debugLine="descriptionLbl.Text = \"We take notes here, and";
-mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("We take notes here, and we save em."));
+ //BA.debugLineNum = 2752526;BA.debugLine="descriptionLbl.Text = \"The clock keeps you on t";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The clock keeps you on time and on task all in one place. A format button lets you switch between clock displays to whatever you prefer. It also comes with a built-in Pomodoro timer to help you stay focused and productive, and if the default durations don't work for you, you can freely adjust them to fit your own rhythm."));
 RDebugUtils.currentLine=2752527;
  //BA.debugLineNum = 2752527;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
-mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"dumbass.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 3: {
 RDebugUtils.currentLine=2752529;
- //BA.debugLineNum = 2752529;BA.debugLine="titleLbl.Text = \"Minions\"";
-mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Minions"));
+ //BA.debugLineNum = 2752529;BA.debugLine="titleLbl.Text = \"Corkboard\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Corkboard"));
 RDebugUtils.currentLine=2752530;
- //BA.debugLineNum = 2752530;BA.debugLine="descriptionLbl.Text = \"Can we just praise Bob?";
-mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("Can we just praise Bob? I love the guy"));
+ //BA.debugLineNum = 2752530;BA.debugLine="descriptionLbl.Text = \"The corkboard gives you";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The corkboard gives you a creative space to pin your thoughts and ideas. You can place sticky notes in a variety of colors to keep things visually organized and easy to tell apart. Images from your gallery can be attached right onto the board for extra context or inspiration. And when words and notes aren't enough, you can open up a drawable canvas with a selection of colored pens and sketch, doodle, or diagram anything you have in mind."));
 RDebugUtils.currentLine=2752531;
  //BA.debugLineNum = 2752531;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"psulogo.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
+case 4: {
+RDebugUtils.currentLine=2752533;
+ //BA.debugLineNum = 2752533;BA.debugLine="titleLbl.Text = \"Flashcards\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Flashcards"));
+RDebugUtils.currentLine=2752534;
+ //BA.debugLineNum = 2752534;BA.debugLine="descriptionLbl.Text = \"The flashcard feature or";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The flashcard feature organizes your cards into decks and subdecks, and you have the freedom to add, rename, or delete any of them — with a confirmation before anything gets deleted for good. Cards are automatically shuffled so every session feels fresh. A progress bar and percentage track how far you've made it through a deck, and when you're ready to dive back in, two buttons have you covered — restart the entire deck from scratch, or continue right where you left off."));
+RDebugUtils.currentLine=2752535;
+ //BA.debugLineNum = 2752535;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"creature.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
+case 5: {
+RDebugUtils.currentLine=2752537;
+ //BA.debugLineNum = 2752537;BA.debugLine="titleLbl.Text = \"Music Player\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Music Player"));
+RDebugUtils.currentLine=2752538;
+ //BA.debugLineNum = 2752538;BA.debugLine="descriptionLbl.Text = \"The music player plays t";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The music player plays the music on startup, meaning the app greets you with songs! Filled with chill, lo-fi tracks, you have the freedom to choose what track you want to play--either through the previous/next song buttons, or through the list of songs below where you can click on whatever chooses your fancy. There's a segment of the song that you want to listen to again or you want to zoom through a certain bit of a song? The seek bar presents itself to you where you can navigate within the music."));
+RDebugUtils.currentLine=2752539;
+ //BA.debugLineNum = 2752539;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"dumbass.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
+case 6: {
+RDebugUtils.currentLine=2752541;
+ //BA.debugLineNum = 2752541;BA.debugLine="titleLbl.Text = \"Notepad\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Notepad"));
+RDebugUtils.currentLine=2752542;
+ //BA.debugLineNum = 2752542;BA.debugLine="descriptionLbl.Text = \"The notepad keeps all yo";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The notepad keeps all your notes in one tidy list that's easy to browse through. A search bar lets you quickly find any note by its title or tags, so nothing ever gets lost in the pile. Adding a new note is simple — just give it a title, attach some tags to keep things organized, and write away to your heart's content."));
+RDebugUtils.currentLine=2752543;
+ //BA.debugLineNum = 2752543;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
+case 7: {
+RDebugUtils.currentLine=2752545;
+ //BA.debugLineNum = 2752545;BA.debugLine="titleLbl.Text = \"To-do List\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("To-do List"));
+RDebugUtils.currentLine=2752546;
+ //BA.debugLineNum = 2752546;BA.debugLine="descriptionLbl.Text = \"The to-do list enables y";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."));
+RDebugUtils.currentLine=2752547;
+ //BA.debugLineNum = 2752547;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"dumbass.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 }
 ;
-RDebugUtils.currentLine=2752535;
- //BA.debugLineNum = 2752535;BA.debugLine="backBtn.Enabled = (page > 0)";
+RDebugUtils.currentLine=2752551;
+ //BA.debugLineNum = 2752551;BA.debugLine="backBtn.Enabled = (page > 0)";
 mostCurrent._backbtn.setEnabled((_page>0));
-RDebugUtils.currentLine=2752536;
- //BA.debugLineNum = 2752536;BA.debugLine="nextBtn.Enabled = (page < 3)";
-mostCurrent._nextbtn.setEnabled((_page<3));
-RDebugUtils.currentLine=2752537;
- //BA.debugLineNum = 2752537;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2752552;
+ //BA.debugLineNum = 2752552;BA.debugLine="nextBtn.Enabled = (page < 7)";
+mostCurrent._nextbtn.setEnabled((_page<7));
+RDebugUtils.currentLine=2752553;
+ //BA.debugLineNum = 2752553;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -501,8 +545,8 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "nextbtn_click", false))
 RDebugUtils.currentLine=2818048;
  //BA.debugLineNum = 2818048;BA.debugLine="Sub nextBtn_Click";
 RDebugUtils.currentLine=2818049;
- //BA.debugLineNum = 2818049;BA.debugLine="If helpPage < 3 Then";
-if (_helppage<3) { 
+ //BA.debugLineNum = 2818049;BA.debugLine="If helpPage < 7 Then";
+if (_helppage<7) { 
 RDebugUtils.currentLine=2818050;
  //BA.debugLineNum = 2818050;BA.debugLine="showHelpPage(helpPage + 1)";
 _showhelppage((int) (_helppage+1));

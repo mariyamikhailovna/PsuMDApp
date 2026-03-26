@@ -36,16 +36,34 @@ Sub Activity_Pause (UserClosed As Boolean)
 End Sub
 
 
-Private Sub exitBtn_Click
-	Activity.Finish
-End Sub
+'Private Sub calendarBtn_Click
+'	
+'End Sub
 
 Private Sub clkBtn_Click
 	StartActivity(clockActivity)
 End Sub
+
+Private Sub corkpadBtn_Click
+	StartActivity(corkActivity)
+End Sub
+
+'Private Sub flashBtn_Click
+'	
+'End Sub
+
+'Private Sub musicBtn_Click
+'	
+'End Sub
+
 Private Sub ntpdBtn_Click
 	StartActivity(noteActivity)
 End Sub
-Private Sub wwwBtn_Click
-	StartActivity(corkActivity)
+
+'Private Sub todoBtn_Click
+'	
+'End Sub
+
+Private Sub exitBtn_Click
+	Activity.Finish
 End Sub

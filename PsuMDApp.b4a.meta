@@ -25,6 +25,6 @@ ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=1
-NavigationStack=corkActivity,sizeSpnr_ItemClick,243,0,noteActivity,addBtn_Click,91,0,corkActivity,penSpnr_ItemClick,289,0,clockActivity,updateLbl,126,0,clockActivity,Process_Globals,9,0,helpActivity,Process_Globals,8,0,helpActivity,Globals,22,5,MainActivity,Globals,25,0,Visual Designer,helpAct.bal,-100,6,helpActivity,showHelpPage,61,6,clockActivity,Globals,23,0
+NavigationStack=navActivity,ntpdBtn_Click,54,0,Visual Designer,navAct.bal,-100,6,Visual Designer,Layout.bal,-100,2,Visual Designer,Layout2.bal,-100,6,helpActivity,closedaShi_Click,97,0,MainActivity,showInfoPage,177,6,MainActivity,clockBtn_LongClick,120,0,MainActivity,clockLightBtn_LongClick,132,0,navActivity,corkpadBtn_Click,48,0,helpActivity,showHelpPage,76,0
 SelectedBuild=0
 VisibleModules=8,5,6,4,1,7,3,2

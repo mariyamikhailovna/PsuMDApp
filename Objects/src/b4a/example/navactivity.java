@@ -397,6 +397,19 @@ RDebugUtils.currentLine=2228226;
  //BA.debugLineNum = 2228226;BA.debugLine="End Sub";
 return "";
 }
+public static String  _corkpadbtn_click() throws Exception{
+RDebugUtils.currentModule="navactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "corkpadbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "corkpadbtn_click", null));}
+RDebugUtils.currentLine=9109504;
+ //BA.debugLineNum = 9109504;BA.debugLine="Private Sub corkpadBtn_Click";
+RDebugUtils.currentLine=9109505;
+ //BA.debugLineNum = 9109505;BA.debugLine="StartActivity(corkActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._corkactivity.getObject()));
+RDebugUtils.currentLine=9109506;
+ //BA.debugLineNum = 9109506;BA.debugLine="End Sub";
+return "";
+}
 public static String  _exitbtn_click() throws Exception{
 RDebugUtils.currentModule="navactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "exitbtn_click", false))
@@ -421,19 +434,6 @@ RDebugUtils.currentLine=2293761;
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._noteactivity.getObject()));
 RDebugUtils.currentLine=2293762;
  //BA.debugLineNum = 2293762;BA.debugLine="End Sub";
-return "";
-}
-public static String  _wwwbtn_click() throws Exception{
-RDebugUtils.currentModule="navactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "wwwbtn_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "wwwbtn_click", null));}
-RDebugUtils.currentLine=2359296;
- //BA.debugLineNum = 2359296;BA.debugLine="Private Sub wwwBtn_Click";
-RDebugUtils.currentLine=2359297;
- //BA.debugLineNum = 2359297;BA.debugLine="StartActivity(corkActivity)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._corkactivity.getObject()));
-RDebugUtils.currentLine=2359298;
- //BA.debugLineNum = 2359298;BA.debugLine="End Sub";
 return "";
 }
 }

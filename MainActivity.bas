@@ -124,7 +124,7 @@ Private Sub clockBtn_LongClick
 	If infoPnl <> Null Then
 		infoPnl.Visible = True
 		infoPnl.BringToFront
-		showInfoPage(0)
+		showInfoPage(1)
 		Return
 	End If
 End Sub
@@ -134,7 +134,7 @@ Private Sub clockLightBtn_LongClick
 	If infoPnl <> Null Then
 		infoPnl.Visible = True
 		infoPnl.BringToFront
-		showInfoPage(0)
+		showInfoPage(1)
 		Return
 	End If
 End Sub
@@ -184,17 +184,26 @@ Private Sub showInfoPage(page As Int)
 	infoPage = page
 	Select page
 		Case 0
-			infoTitleLbl.Text = "func 1"
-			infoDescLbl.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nisi eu risus sollicitudin, in mattis velit laoreet. Quisque iaculis elit sit amet ex fermentum, at vehicula odio rutrum."
+			infoTitleLbl.Text = "Calendar"
+			infoDescLbl.Text = "The calendar comes in three views to match however you like to plan. The Schedule view lets you see all your upcoming days at a glance, with major events and to-do items laid out on a timeline. The Day view shows you the full timeline for a single day, where you can add events, tasks, or birthdays, and color-coded backgrounds make each type of entry easy to tell apart. The Month view presents the classic calendar layout, complete with a month and year spinner to jump around quickly, a sneak peek of events on each day's cell, and neighboring dates filling in the empty cells so the grid always looks complete."
 		Case 1
-			infoTitleLbl.Text = "func 2"
-			infoDescLbl.Text = "Aenean blandit a lorem ut laoreet. Sed gravida turpis sed dui porttitor porta. Donec vel mi id neque pretium varius vitae sed eros. Nullam gravida rhoncus fringilla."
+			infoTitleLbl.Text = "Clock"
+			infoDescLbl.Text = "The clock keeps you on time and on task all in one place. A format button lets you switch between clock displays to whatever you prefer. It also comes with a built-in Pomodoro timer to help you stay focused and productive, and if the default durations don't work for you, you can freely adjust them to fit your own rhythm."
 		Case 2
-			infoTitleLbl.Text = "func 3"
-			infoDescLbl.Text = "Sed eget facilisis purus, sed porta justo. Aliquam vitae lorem semper, pharetra enim a, tincidunt urna. Sed egestas felis non metus interdum, sit amet ornare dui tempor."
+			infoTitleLbl.Text = "Corkboard"
+			infoDescLbl.Text = "The corkboard gives you a creative space to pin your thoughts and ideas. You can place sticky notes in a variety of colors to keep things visually organized and easy to tell apart. Images from your gallery can be attached right onto the board for extra context or inspiration. And when words and notes aren't enough, you can open up a drawable canvas with a selection of colored pens and sketch, doodle, or diagram anything you have in mind."
 		Case 3
-			infoTitleLbl.Text = "func 4"
-			infoDescLbl.Text = "Proin volutpat turpis at lorem commodo sollicitudin. Aenean eget ullamcorper ex, non scelerisque arcu. Duis sed vestibulum lacus, vel fringilla sapien. Quisque feugiat dui sit amet magna placerat convallis."
+			infoTitleLbl.Text = "Flashcards"
+			infoDescLbl.Text = "The flashcard feature organizes your cards into decks and subdecks, and you have the freedom to add, rename, or delete any of them — with a confirmation before anything gets deleted for good. Cards are automatically shuffled so every session feels fresh. A progress bar and percentage track how far you've made it through a deck, and when you're ready to dive back in, two buttons have you covered — restart the entire deck from scratch, or continue right where you left off."
+		Case 4
+			infoTitleLbl.Text = "Music Player"
+			infoDescLbl.Text = "The music player plays the music on startup, meaning the app greets you with songs! Filled with chill, lo-fi tracks, you have the freedom to choose what track you want to play--either through the previous/next song buttons, or through the list of songs below where you can click on whatever chooses your fancy. There's a segment of the song that you want to listen to again or you want to zoom through a certain bit of a song? The seek bar presents itself to you where you can navigate within the music.  "
+		Case 5
+			infoTitleLbl.Text = "Notepad"
+			infoDescLbl.Text = "The notepad keeps all your notes in one tidy list that's easy to browse through. A search bar lets you quickly find any note by its title or tags, so nothing ever gets lost in the pile. Adding a new note is simple — just give it a title, attach some tags to keep things organized, and write away to your heart's content."
+		Case 6
+			infoTitleLbl.Text = "To-do List"
+			infoDescLbl.Text = "The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."
 	End Select
 End Sub
 

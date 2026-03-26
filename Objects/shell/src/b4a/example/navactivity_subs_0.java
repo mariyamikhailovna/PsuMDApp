@@ -78,17 +78,36 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+public static RemoteObject  _corkpadbtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("corkpadBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,41);
+if (RapidSub.canDelegate("corkpadbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","corkpadbtn_click");}
+ BA.debugLineNum = 41;BA.debugLine="Private Sub corkpadBtn_Click";
+Debug.ShouldStop(256);
+ BA.debugLineNum = 42;BA.debugLine="StartActivity(corkActivity)";
+Debug.ShouldStop(512);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._corkactivity.getObject())));
+ BA.debugLineNum = 43;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _exitbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("exitBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,33);
+		Debug.PushSubsStack("exitBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,61);
 if (RapidSub.canDelegate("exitbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","exitbtn_click");}
- BA.debugLineNum = 33;BA.debugLine="Private Sub exitBtn_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 34;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 61;BA.debugLine="Private Sub exitBtn_Click";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 62;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(536870912);
 navactivity.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 35;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 63;BA.debugLine="End Sub";
+Debug.ShouldStop(1073741824);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -104,15 +123,15 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _ntpdbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("ntpdBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,40);
+		Debug.PushSubsStack("ntpdBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,53);
 if (RapidSub.canDelegate("ntpdbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","ntpdbtn_click");}
- BA.debugLineNum = 40;BA.debugLine="Private Sub ntpdBtn_Click";
-Debug.ShouldStop(128);
- BA.debugLineNum = 41;BA.debugLine="StartActivity(noteActivity)";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 53;BA.debugLine="Private Sub ntpdBtn_Click";
+Debug.ShouldStop(1048576);
+ BA.debugLineNum = 54;BA.debugLine="StartActivity(noteActivity)";
+Debug.ShouldStop(2097152);
 navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._noteactivity.getObject())));
- BA.debugLineNum = 42;BA.debugLine="End Sub";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 55;BA.debugLine="End Sub";
+Debug.ShouldStop(4194304);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -126,23 +145,4 @@ public static RemoteObject  _process_globals() throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
-public static RemoteObject  _wwwbtn_click() throws Exception{
-try {
-		Debug.PushSubsStack("wwwBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,43);
-if (RapidSub.canDelegate("wwwbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","wwwbtn_click");}
- BA.debugLineNum = 43;BA.debugLine="Private Sub wwwBtn_Click";
-Debug.ShouldStop(1024);
- BA.debugLineNum = 44;BA.debugLine="StartActivity(corkActivity)";
-Debug.ShouldStop(2048);
-navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._corkactivity.getObject())));
- BA.debugLineNum = 45;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
-return RemoteObject.createImmutable("");
-}
-catch (Exception e) {
-			throw Debug.ErrorCaught(e);
-		} 
-finally {
-			Debug.PopSubsStack();
-		}}
 }
