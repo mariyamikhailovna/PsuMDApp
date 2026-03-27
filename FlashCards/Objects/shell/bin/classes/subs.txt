@@ -344,48 +344,52 @@ card_module,process_globals,0,1,6,12
 
 
 
-all_active_recall,activity_create,1,0,23,49
-,answer,,deckname_label,,question,,showanswerbtn,,cards,main,deck,main,selecteddeck,,currentindex
-,answer,,deckname_label,,question,,showanswerbtn,,currentindex
-,shufflecards,,showcard
-all_active_recall,shufflecards,0,0,51,60
+all_active_recall,activity_create,1,0,26,53
+,answer,,deckname_label,,nextbtn,,pb,,progress,,question,,showanswerbtn,,cards,main,deck,main,selecteddeck,,currentindex
+,answer,,deckname_label,,nextbtn,,pb,,progress,,question,,showanswerbtn,,currentindex
+,shufflecards,,showcard,,showprogress
+all_active_recall,shufflecards,0,0,63,72
 
 
 
-all_active_recall,showcard,0,0,62,68
+all_active_recall,showcard,0,0,74,80
 ,cards,,currentindex,,question,,answer,,deckname_label
 
 
-all_active_recall,activity_pause,0,0,74,76
+all_active_recall,showprogress,0,0,55,61
+,cards,,currentindex,,pb,,progress
+
+
+all_active_recall,activity_pause,0,0,86,88
 
 
 
-all_active_recall,activity_resume,0,0,70,72
+all_active_recall,activity_resume,0,0,82,84
 
 
 
-all_active_recall,backbtn_click,0,0,92,101
+all_active_recall,backbtn_click,0,0,105,114
 ,showanswerbtn,,currentindex,,cards,,question,,answer,,deckname_label
 ,currentindex
 ,showcard
-all_active_recall,globals,0,1,12,21
+all_active_recall,globals,0,1,12,24
 
 
 
-all_active_recall,goback_click,0,0,117,119
+all_active_recall,goback_click,0,0,132,134
 
 
 
-all_active_recall,nextbtn_click,0,0,103,115
-,showanswerbtn,,currentindex,,cards,,praise,,question,,answer,,deckname_label
+all_active_recall,nextbtn_click,0,0,116,130
+,nextbtn,,showanswerbtn,,currentindex,,cards,,praise,,question,,answer,,deckname_label,,pb,,progress
 ,currentindex,,praise
-,showcard
+,showcard,,showprogress
 all_active_recall,process_globals,0,1,6,10
 ,praise
 ,praise
 
-all_active_recall,showanswerbtn_click,0,0,79,90
-,cards,,currentindex,,showanswerbtn,,answer
+all_active_recall,showanswerbtn_click,0,0,91,103
+,cards,,currentindex,,showanswerbtn,,answer,,nextbtn
 
 
 add_card_module2,activity_create,1,0,22,39
@@ -484,47 +488,51 @@ add_card_module,savedecks,0,0,47,49
 main,kvs,main,deck
 
 keyvaluestore,put
-active_recall,activity_create,1,0,25,42
-,answer,,deckname_label,,question,,showanswerbtn,main,deck,main,selecteddeck,,cards,subdeck_module,selectedsubdeck,,currentindex
-,answer,,deckname_label,,question,,showanswerbtn,,cards,,currentindex
-,shufflecards,,showcard
-active_recall,shufflecards,0,0,44,53
+active_recall,activity_create,1,0,28,46
+,answer,,deckname_label,,nextbtn,,pb,,progress,,question,,showanswerbtn,main,deck,main,selecteddeck,,cards,subdeck_module,selectedsubdeck,,currentindex
+,answer,,deckname_label,,nextbtn,,pb,,progress,,question,,showanswerbtn,,cards,,currentindex
+,shufflecards,,showprogress,,showcard
+active_recall,shufflecards,0,0,56,65
 
 
 
-active_recall,showcard,0,0,55,62
+active_recall,showprogress,0,0,48,54
+,cards,,currentindex,,pb,,progress
+
+
+active_recall,showcard,0,0,67,74
 ,cards,,currentindex,,question,,answer
 
 
-active_recall,activity_pause,0,0,69,71
+active_recall,activity_pause,0,0,81,83
 
 
 
-active_recall,activity_resume,0,0,65,67
+active_recall,activity_resume,0,0,77,79
 
 
 
-active_recall,backbtn_click,0,0,111,121
+active_recall,backbtn_click,0,0,126,136
 ,showanswerbtn,,currentindex,,cards,,question,,answer
 ,currentindex
 ,showcard
-active_recall,globals,0,1,12,23
+active_recall,globals,0,1,12,26
 
 
 
-active_recall,goback_click,0,0,106,109
+active_recall,goback_click,0,0,121,124
 
 
 
-active_recall,nextbtn_click,0,0,93,104
-,showanswerbtn,,currentindex,,cards,,question,,answer
+active_recall,nextbtn_click,0,0,105,119
+,nextbtn,,showanswerbtn,,currentindex,,cards,,question,,answer,,pb,,progress
 ,currentindex
-,shufflecards,,showcard
+,shufflecards,,showcard,,showprogress
 active_recall,process_globals,0,1,6,10
 
 
 
-active_recall,showanswerbtn_click,0,0,74,91
-,cards,,currentindex,,showanswerbtn,,answer
+active_recall,showanswerbtn_click,0,0,86,103
+,cards,,currentindex,,showanswerbtn,,answer,,nextbtn
 
 

@@ -61,6 +61,9 @@ public static RemoteObject _answer = RemoteObject.declareNull("anywheresoftware.
 public static RemoteObject _cards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 public static RemoteObject _currentindex = RemoteObject.createImmutable(0);
 public static RemoteObject _showanswerbtn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+public static RemoteObject _pb = RemoteObject.declareNull("anywheresoftware.b4a.objects.ProgressBarWrapper");
+public static RemoteObject _progress = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _nextbtn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
@@ -70,6 +73,6 @@ public static b4a.example.add_card_module2 _add_card_module2 = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
 public static b4a.example.add_card_module _add_card_module = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",active_recall.mostCurrent._activity,"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"Add_Card_Module2",Debug.moduleToString(b4a.example.add_card_module2.class),"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"Answer",active_recall.mostCurrent._answer,"Card_Module",Debug.moduleToString(b4a.example.card_module.class),"cards",active_recall.mostCurrent._cards,"currentindex",active_recall._currentindex,"DECK_ALL_CARDS",Debug.moduleToString(b4a.example.deck_all_cards.class),"DeckName_Label",active_recall.mostCurrent._deckname_label,"Main",Debug.moduleToString(b4a.example.main.class),"Question",active_recall.mostCurrent._question,"showAnswerbtn",active_recall.mostCurrent._showanswerbtn,"Starter",Debug.moduleToString(b4a.example.starter.class),"Subdeck_Module",Debug.moduleToString(b4a.example.subdeck_module.class)};
+		return new Object[] {"Activity",active_recall.mostCurrent._activity,"Add_Card_Module",Debug.moduleToString(b4a.example.add_card_module.class),"Add_Card_Module2",Debug.moduleToString(b4a.example.add_card_module2.class),"ALL_ACTIVE_RECALL",Debug.moduleToString(b4a.example.all_active_recall.class),"Answer",active_recall.mostCurrent._answer,"Card_Module",Debug.moduleToString(b4a.example.card_module.class),"cards",active_recall.mostCurrent._cards,"currentindex",active_recall._currentindex,"DECK_ALL_CARDS",Debug.moduleToString(b4a.example.deck_all_cards.class),"DeckName_Label",active_recall.mostCurrent._deckname_label,"Main",Debug.moduleToString(b4a.example.main.class),"nextbtn",active_recall.mostCurrent._nextbtn,"pb",active_recall.mostCurrent._pb,"Progress",active_recall.mostCurrent._progress,"Question",active_recall.mostCurrent._question,"showAnswerbtn",active_recall.mostCurrent._showanswerbtn,"Starter",Debug.moduleToString(b4a.example.starter.class),"Subdeck_Module",Debug.moduleToString(b4a.example.subdeck_module.class)};
 }
 }

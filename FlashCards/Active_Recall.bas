@@ -12,7 +12,7 @@ Version=13.4
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-	Dim praise As Boolean =False	
+
 End Sub
 
 Sub Globals
@@ -26,6 +26,9 @@ Sub Globals
 	Dim cards As List
 	Dim currentindex As Int 'to find the current index of the card
 	Private showAnswerbtn As Button
+	Private pb As ProgressBar
+	Private Progress As Label
+	Private nextbtn As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -42,9 +45,18 @@ Sub Activity_Create(FirstTime As Boolean)
 	DeckName_Label.text = Subdeck_Module.selectedsubdeck
 	
 	ShuffleCards(cards)
+	ShowProgress
 	'function for showing the card itself
 	ShowCard
 	
+End Sub
+
+Sub ShowProgress
+	Dim totalsession As Int = cards.Size
+	Dim studied As Int = currentindex
+	Dim percent As Int = (studied * 100)/ totalsession
+	pb.Progress = percent
+	Progress.Text = studied & "/" & totalsession & " " & percent & "%"
 End Sub
 
 Sub ShuffleCards(cardList As List)
@@ -93,10 +105,11 @@ Private Sub showAnswerbtn_Click
 		
 	End If
 	
-	
+	nextbtn.Visible = True
 End Sub
 
 Private Sub nextbtn_Click
+	nextbtn.Visible = false
 	'next card by incrementing index and usinf the show function
 	showAnswerbtn.Text = "Show Answer"
 	currentindex = currentindex +1
@@ -104,11 +117,11 @@ Private Sub nextbtn_Click
 	If currentindex >= cards.Size Then
 		ShuffleCards(cards)
 		MsgboxAsync("You've finished your subdeck", "Congratulations")
-		praise = True
 		Activity.finish
 		Return
 	End If
 	ShowCard
+	ShowProgress
 End Sub
 
 Private Sub goback_Click

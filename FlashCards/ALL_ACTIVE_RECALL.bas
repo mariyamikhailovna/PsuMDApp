@@ -24,6 +24,9 @@ Sub Globals
 	Private Answer As Label
 	Private DeckName_Label As Label
 	Private showAnswerbtn As Button
+	Private pb As ProgressBar
+	Private Progress As Label
+	Private nextbtn As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -52,6 +55,15 @@ Sub Activity_Create(FirstTime As Boolean)
 	currentindex = 0
 	'use the function showcard to show the card
 	Showcard
+	ShowProgress
+End Sub
+
+Sub ShowProgress
+	Dim totalsession As Int = cards.Size
+	Dim studied As Int = currentindex
+	Dim percent As Int = (studied * 100)/ totalsession
+	pb.Progress = percent
+	Progress.Text = studied & "/" & totalsession & " " & percent & "%"
 End Sub
 
 Sub ShuffleCards(cardList As List)
@@ -93,6 +105,7 @@ Private Sub showAnswerbtn_Click
 		Answer.Text = ""
 		showAnswerbtn.Text = "Show Answer"
 	End If
+	nextbtn.Visible = true
 End Sub
 
 Private Sub backbtn_Click
@@ -108,6 +121,7 @@ End Sub
 
 Private Sub nextbtn_Click
 	'next
+	nextbtn.Visible = False
 	showAnswerbtn.Text = "Show Answer"
 	currentindex = currentindex +1
 	If currentindex >= cards.Size Then
@@ -118,6 +132,7 @@ Private Sub nextbtn_Click
 	End If
 	
 	Showcard
+	ShowProgress
 End Sub
 
 Private Sub goback_Click
