@@ -68,7 +68,10 @@ public static b4a.example.helpactivity _helpactivity = null;
 public static b4a.example.clockactivity _clockactivity = null;
 public static b4a.example.noteactivity _noteactivity = null;
 public static b4a.example.corkactivity _corkactivity = null;
+public static b4a.example.todoactivity _todoactivity = null;
+public static b4a.example.musicservice _musicservice = null;
+public static b4a.example.musicactivity _musicactivity = null;
   public Object[] GetGlobals() {
-		return new Object[] {"ActiveNote",editnote._activenote,"Activity",editnote.mostCurrent._activity,"clockActivity",Debug.moduleToString(b4a.example.clockactivity.class),"contentTxt",editnote.mostCurrent._contenttxt,"corkActivity",Debug.moduleToString(b4a.example.corkactivity.class),"helpActivity",Debug.moduleToString(b4a.example.helpactivity.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainActivity",Debug.moduleToString(b4a.example.mainactivity.class),"navActivity",Debug.moduleToString(b4a.example.navactivity.class),"noteActivity",Debug.moduleToString(b4a.example.noteactivity.class),"saveBtn",editnote.mostCurrent._savebtn,"Starter",Debug.moduleToString(b4a.example.starter.class),"tagsTxt",editnote.mostCurrent._tagstxt,"titleTxt",editnote.mostCurrent._titletxt};
+		return new Object[] {"ActiveNote",editnote._activenote,"Activity",editnote.mostCurrent._activity,"clockActivity",Debug.moduleToString(b4a.example.clockactivity.class),"contentTxt",editnote.mostCurrent._contenttxt,"corkActivity",Debug.moduleToString(b4a.example.corkactivity.class),"helpActivity",Debug.moduleToString(b4a.example.helpactivity.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainActivity",Debug.moduleToString(b4a.example.mainactivity.class),"musicActivity",Debug.moduleToString(b4a.example.musicactivity.class),"musicService",Debug.moduleToString(b4a.example.musicservice.class),"navActivity",Debug.moduleToString(b4a.example.navactivity.class),"noteActivity",Debug.moduleToString(b4a.example.noteactivity.class),"saveBtn",editnote.mostCurrent._savebtn,"Starter",Debug.moduleToString(b4a.example.starter.class),"tagsTxt",editnote.mostCurrent._tagstxt,"titleTxt",editnote.mostCurrent._titletxt,"todoActivity",Debug.moduleToString(b4a.example.todoactivity.class)};
 }
 }

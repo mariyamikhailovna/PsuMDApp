@@ -29,23 +29,40 @@ File33=darkShelf.PNG
 File34=dumbass.png
 File35=editnotelayout.bal
 File36=helpAct.bal
-File37=ImgPlant.PNG
-File38=ImgShelf.PNG
-File39=KeyboardMouseImg.PNG
+File37=HELVETICA.TTF
+File38=HELVETICA-BOLD.TTF
+File39=HELVETICA-BOLDOBLIQUE.TTF
 File4=BtnCalendar.PNG
-File40=Layout.bal
-File41=Layout2.bal
-File42=Layouthsv.bal
-File43=LEBRON JAMES.jpg
-File44=lightbg.PNG
-File45=loadingLayout.bal
-File46=navAct.bal
-File47=notepadlayout.bal
-File48=Openbook.GIF
-File49=psulogo.png
+File40=HELVETICA-COMPRESSED-5871D14B6903A.OTF
+File41=HELVETICA-LIGHT-587EBE5A59211.TTF
+File42=HELVETICA-OBLIQUE.TTF
+File43=ImgPlant.PNG
+File44=ImgShelf.PNG
+File45=KeyboardMouseImg.PNG
+File46=Layout.bal
+File47=Layout2.bal
+File48=Layouthsv.bal
+File49=LEBRON JAMES.jpg
 File5=BtnClock.PNG
-File50=rei.png
+File50=lightbg.PNG
+File51=loadingLayout.bal
+File52=musicLayout.bal
+File53=navAct.bal
+File54=notepadlayout.bal
+File55=Openbook.GIF
+File56=psulogo.png
+File57=rei.png
+File58=SFPRODISPLAYBLACKITALIC.OTF
+File59=SFPRODISPLAYBOLD.OTF
 File6=BtnComputer.GIF
+File60=SFPRODISPLAYHEAVYITALIC.OTF
+File61=SFPRODISPLAYLIGHTITALIC.OTF
+File62=SFPRODISPLAYMEDIUM.OTF
+File63=SFPRODISPLAYREGULAR.OTF
+File64=SFPRODISPLAYSEMIBOLDITALIC.OTF
+File65=SFPRODISPLAYTHINITALIC.OTF
+File66=SFPRODISPLAYULTRALIGHTITALIC.OTF
+File67=todolistlayout.bal
 File7=BtnCorkboard.PNG
 File8=BtnLamp.PNG
 File9=BtnMusicPlayer Off.PNG
@@ -95,40 +112,60 @@ FileGroup48=Default Group
 FileGroup49=Default Group
 FileGroup5=Default Group
 FileGroup50=Default Group
+FileGroup51=Default Group
+FileGroup52=Default Group
+FileGroup53=Default Group
+FileGroup54=Default Group
+FileGroup55=Default Group
+FileGroup56=Default Group
+FileGroup57=Default Group
+FileGroup58=Default Group
+FileGroup59=Default Group
 FileGroup6=Default Group
+FileGroup60=Default Group
+FileGroup61=Default Group
+FileGroup62=Default Group
+FileGroup63=Default Group
+FileGroup64=Default Group
+FileGroup65=Default Group
+FileGroup66=Default Group
+FileGroup67=Default Group
 FileGroup7=Default Group
 FileGroup8=Default Group
 FileGroup9=Default Group
 Group=Default Group
-Library1=b4xgifview
-Library10=phone
-Library2=core
-Library3=javaobject
-Library4=keyvaluestore
-Library5=keyvaluestore2
+Library1=core
+Library10=b4xgifview
+Library2=javaobject
+Library3=keyvaluestore
+Library4=keyvaluestore2
+Library5=phone
 Library6=sd_xui_dragview
 Library7=sql
 Library8=xcustomlistview
 Library9=xui
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="35"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=clockActivity
+Module10=Starter
+Module11=todoActivity
 Module2=corkActivity
 Module3=editnote
 Module4=helpActivity
 Module5=MainActivity
-Module6=navActivity
-Module7=noteActivity
-Module8=Starter
-NumberOfFiles=50
+Module6=musicActivity
+Module7=musicService
+Module8=navActivity
+Module9=noteActivity
+NumberOfFiles=67
 NumberOfLibraries=10
-NumberOfModules=8
+NumberOfModules=11
 Version=13.4
 @EndOfDesignText@
 #Region  Project Attributes 
     #ApplicationLabel: Makoto Niijima
     #VersionCode: 1
     #VersionName: High Priestess
-    #SupportedOrientations: unspecified
+    #SupportedOrientations: portrait
     #CanInstallToExternalStorage: False
 #End Region
 
@@ -149,6 +186,7 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("loadingLayout")
+	StartService(musicService)
 End Sub
 
 Sub Activity_Resume

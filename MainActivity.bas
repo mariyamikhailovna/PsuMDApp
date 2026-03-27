@@ -210,3 +210,11 @@ End Sub
 Private Sub infoPnlClose_Click
 	infoPnl.Visible = False
 End Sub
+
+Private Sub todolistBtn_Click
+	StartActivity(todoActivity)
+End Sub
+
+Private Sub mP_Click
+	StartActivity(musicActivity)
+End Sub

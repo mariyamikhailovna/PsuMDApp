@@ -1,20 +1,20 @@
 b4a.example
 0
 2
-b4xgifview
 keyvaluestore
+b4xgifview
 2
-b4xgifview
 keyvaluestore
-main,activity_create,1,0,24,26
+b4xgifview
+main,activity_create,1,0,24,27
 
 
 
-main,activity_resume,0,0,28,30
+main,activity_resume,0,0,29,31
 
 
 ,startload
-main,startload,0,0,32,37
+main,startload,0,0,33,38
 
 
 
@@ -66,7 +66,7 @@ mainactivity,clockbtn_click,0,0,107,109
 
 
 
-mainactivity,clockbtn_longclick,0,1,115,124
+mainactivity,clockbtn_longclick,0,0,115,124
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
@@ -74,7 +74,7 @@ mainactivity,showinfopopup,0,0,144,175
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopage
-mainactivity,showinfopage,0,1,177,202
+mainactivity,showinfopage,0,0,177,202
 ,infopage,,infotitlelbl,,infodesclbl
 ,infopage
 
@@ -82,7 +82,7 @@ mainactivity,clocklightbtn_click,0,0,111,113
 
 
 
-mainactivity,clocklightbtn_longclick,0,1,125,134
+mainactivity,clocklightbtn_longclick,0,0,125,134
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
@@ -106,6 +106,10 @@ mainactivity,lamp_click,0,0,80,89
 starter,darkmode,,darkmodelayout,,reglayout
 starter,darkmode
 
+mainactivity,mp_click,0,0,212,214
+
+
+
 mainactivity,navbtn_click,0,0,136,138
 
 
@@ -116,6 +120,10 @@ mainactivity,process_globals,0,1,6,11
 
 mainactivity,timerclock_tick,0,0,102,105
 ,clockbtn,,clocklightbtn
+
+
+mainactivity,todolistbtn_click,0,0,208,210
+
 
 
 b4xgifview,setgif,0,0,41,53
@@ -166,7 +174,7 @@ navactivity,clkbtn_click,0,0,37,39
 
 
 
-navactivity,corkpadbtn_click,0,1,41,43
+navactivity,corkpadbtn_click,0,0,41,43
 
 
 
@@ -190,7 +198,7 @@ helpactivity,activity_create,1,0,26,30
 ,backbtn,,descriptionlbl,,helpimage,,nextbtn,,titlelbl,,helppage,,xui
 ,backbtn,,descriptionlbl,,helpimage,,nextbtn,,titlelbl,,helppage
 ,showhelppage
-helpactivity,showhelppage,0,1,40,81
+helpactivity,showhelppage,0,0,40,81
 ,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,backbtn,,nextbtn
 ,helppage
 
@@ -214,7 +222,7 @@ helpactivity,globals,0,1,15,24
 
 
 
-helpactivity,nextbtn_click,0,1,83,87
+helpactivity,nextbtn_click,0,0,83,87
 ,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,backbtn,,nextbtn
 ,helppage
 ,showhelppage
@@ -446,6 +454,166 @@ corkactivity,stickybtn_click,0,0,152,155
 ,notepnl,,xui
 ,notepnl
 ,notewindow
+todoactivity,activity_create,1,0,38,62
+starter,darkmode,,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist,,kvs,,addtaskbtnpnl,,addtaskbtn
+,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist
+,newaddtaskbtn
+todoactivity,newaddtaskbtn,0,0,72,84
+,addtaskbtnpnl,,addtaskbtn,,taskslist
+
+
+todoactivity,activity_pause,0,0,68,70
+
+
+
+todoactivity,activity_resume,0,0,64,66
+
+
+
+todoactivity,addtaskbtn_click,0,0,323,344
+,addtaskbtn,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn
+
+
+todoactivity,addtitletextarea_enterpressed,1,0,110,235
+,addtitletextarea,,currentlist,,kvs,,listslist,,newlistbtn,,isaddinglist,,untitledno,,taskslist,,progressnumber,,progresspercent,,progressbar,,addtaskbtnpnl,,addtaskbtn
+,currentlist,,isaddinglist,,untitledno
+,newaddtaskbtn
+todoactivity,entertaskbtn_click,1,0,346,408
+,addtasktextarea,,currentlist,,kvs,,taskslist,,addtaskbtn,,addtaskbtnpnl,,progressnumber,,progresspercent,,progressbar
+
+,taskslistui,,newaddtaskbtn,,updateprogress
+todoactivity,taskslistui,1,0,477,512
+,currentlist,,kvs,,taskslist
+
+
+todoactivity,updateprogress,0,0,514,550
+,currentlist,,progressnumber,,kvs,,progresspercent,,progressbar
+
+
+todoactivity,globals,0,1,13,36
+,isaddinglist,,currentlist,,untitledno
+,isaddinglist,,currentlist,,untitledno
+
+todoactivity,listslist_itemclick,1,0,237,263
+,isaddinglist,,listslist,,currentlist,,addtitletextarea,,taskslist,,kvs,,addtaskbtnpnl,,addtaskbtn,,progressnumber,,progresspercent,,progressbar
+,currentlist
+,taskslistui,,newaddtaskbtn,,updateprogress
+todoactivity,listslist_itemlongclick,1,0,265,306
+,kvs,,listslist,,currentlist,,taskslist,,addtitletextarea
+,currentlist
+,showrenamelistpanel
+todoactivity,showrenamelistpanel,1,0,308,321
+,addtitletextarea
+
+
+todoactivity,newlistbtn_click,1,0,86,108
+,taskslist,,isaddinglist,,progressnumber,,progresspercent,,progressbar,,addtitletextarea,,newlistbtn,,addtaskbtn
+,isaddinglist
+
+todoactivity,process_globals,0,1,6,11
+
+
+
+todoactivity,showrenametaskpanel,1,0,433,457
+,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn
+
+
+todoactivity,taskcheckbox_checkedchange,0,0,459,475
+,currentlist,,kvs,,progressnumber,,progresspercent,,progressbar
+
+,updateprogress
+todoactivity,taskslist_itemlongclick,1,0,410,431
+,currentlist,,kvs,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,progressnumber,,progresspercent,,progressbar
+
+,showrenametaskpanel,,updateprogress
+musicservice,nextsong,0,0,71,77
+,currentsong,,musicplaylist,,mediaplayer
+,currentsong
+,playsong
+musicservice,playsong,0,0,57,63
+,mediaplayer,,musicplaylist,,currentsong
+
+
+musicservice,pausetoggle,0,0,87,93
+,mediaplayer
+
+
+musicservice,prevsong,0,0,79,85
+,currentsong,,musicplaylist,,mediaplayer
+,currentsong
+,playsong
+musicservice,process_globals,0,1,6,11
+
+
+
+musicservice,service_create,0,0,13,42
+,mediaplayer,,musicplaylist,,currentsong,,songtimer
+,currentsong
+,playsong
+musicservice,service_destroy,0,0,48,50
+
+
+
+musicservice,service_start,0,0,44,46
+
+
+
+musicservice,setsong,0,0,52,55
+,currentsong,,mediaplayer,,musicplaylist
+,currentsong
+,playsong
+musicservice,songtimer_tick,0,0,65,69
+,mediaplayer,,currentsong,,musicplaylist
+,currentsong
+,nextsong,,playsong
+musicactivity,activity_create,1,0,19,36
+,listview1,,pausebtn,,seekbar1,,songruntime,,songtitle,musicservice,musicplaylist,,uitimer
+,listview1,,pausebtn,,seekbar1,,songruntime,,songtitle
+
+musicactivity,activity_pause,0,0,42,44
+,uitimer
+
+
+musicactivity,activity_resume,0,0,38,40
+,uitimer
+
+
+musicactivity,formatsongdur,0,0,46,51
+
+
+
+musicactivity,globals,0,1,11,17
+
+
+
+musicactivity,listview1_itemclick,0,0,92,94
+musicservice,currentsong,musicservice,mediaplayer,musicservice,musicplaylist
+musicservice,currentsong
+musicservice,setsong,musicservice,playsong
+musicactivity,nextbtn_click,0,0,80,82
+musicservice,currentsong,musicservice,musicplaylist,musicservice,mediaplayer
+musicservice,currentsong
+musicservice,nextsong,musicservice,playsong
+musicactivity,pausebtn_click,0,0,88,90
+musicservice,mediaplayer
+
+musicservice,pausetoggle
+musicactivity,prevbtn_click,0,0,84,86
+musicservice,currentsong,musicservice,musicplaylist,musicservice,mediaplayer
+musicservice,currentsong
+musicservice,prevsong,musicservice,playsong
+musicactivity,process_globals,0,1,6,9
+
+
+
+musicactivity,seekbar1_valuechanged,0,0,74,78
+musicservice,mediaplayer
+
+
+musicactivity,uitimer_tick,0,0,54,72
+musicservice,mediaplayer,musicservice,musicplaylist,musicservice,currentsong,,seekbar1,,songruntime,,songtitle,,pausebtn
+
+,formatsongdur
 keyvaluestore,class_globals,0,0,1,4
 
 

@@ -61,7 +61,10 @@ public static b4a.example.clockactivity _clockactivity = null;
 public static b4a.example.noteactivity _noteactivity = null;
 public static b4a.example.editnote _editnote = null;
 public static b4a.example.corkactivity _corkactivity = null;
+public static b4a.example.todoactivity _todoactivity = null;
+public static b4a.example.musicservice _musicservice = null;
+public static b4a.example.musicactivity _musicactivity = null;
   public Object[] GetGlobals() {
-		return new Object[] {"clockActivity",Debug.moduleToString(b4a.example.clockactivity.class),"corkActivity",Debug.moduleToString(b4a.example.corkactivity.class),"darkMode",starter._darkmode,"editnote",Debug.moduleToString(b4a.example.editnote.class),"helpActivity",Debug.moduleToString(b4a.example.helpactivity.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainActivity",Debug.moduleToString(b4a.example.mainactivity.class),"navActivity",Debug.moduleToString(b4a.example.navactivity.class),"noteActivity",Debug.moduleToString(b4a.example.noteactivity.class),"Service",starter.mostCurrent._service,"themeNumber",starter._themenumber};
+		return new Object[] {"clockActivity",Debug.moduleToString(b4a.example.clockactivity.class),"corkActivity",Debug.moduleToString(b4a.example.corkactivity.class),"darkMode",starter._darkmode,"editnote",Debug.moduleToString(b4a.example.editnote.class),"helpActivity",Debug.moduleToString(b4a.example.helpactivity.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainActivity",Debug.moduleToString(b4a.example.mainactivity.class),"musicActivity",Debug.moduleToString(b4a.example.musicactivity.class),"musicService",Debug.moduleToString(b4a.example.musicservice.class),"navActivity",Debug.moduleToString(b4a.example.navactivity.class),"noteActivity",Debug.moduleToString(b4a.example.noteactivity.class),"Service",starter.mostCurrent._service,"themeNumber",starter._themenumber,"todoActivity",Debug.moduleToString(b4a.example.todoactivity.class)};
 }
 }

@@ -66,7 +66,10 @@ public static b4a.example.clockactivity _clockactivity = null;
 public static b4a.example.noteactivity _noteactivity = null;
 public static b4a.example.editnote _editnote = null;
 public static b4a.example.corkactivity _corkactivity = null;
+public static b4a.example.todoactivity _todoactivity = null;
+public static b4a.example.musicservice _musicservice = null;
+public static b4a.example.musicactivity _musicactivity = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"clockActivity",Debug.moduleToString(b4a.example.clockactivity.class),"corkActivity",Debug.moduleToString(b4a.example.corkactivity.class),"editnote",Debug.moduleToString(b4a.example.editnote.class),"format24h",main._format24h,"helpActivity",Debug.moduleToString(b4a.example.helpactivity.class),"kvs",main._kvs,"MainActivity",Debug.moduleToString(b4a.example.mainactivity.class),"navActivity",Debug.moduleToString(b4a.example.navactivity.class),"noteActivity",Debug.moduleToString(b4a.example.noteactivity.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"clockActivity",Debug.moduleToString(b4a.example.clockactivity.class),"corkActivity",Debug.moduleToString(b4a.example.corkactivity.class),"editnote",Debug.moduleToString(b4a.example.editnote.class),"format24h",main._format24h,"helpActivity",Debug.moduleToString(b4a.example.helpactivity.class),"kvs",main._kvs,"MainActivity",Debug.moduleToString(b4a.example.mainactivity.class),"musicActivity",Debug.moduleToString(b4a.example.musicactivity.class),"musicService",Debug.moduleToString(b4a.example.musicservice.class),"navActivity",Debug.moduleToString(b4a.example.navactivity.class),"noteActivity",Debug.moduleToString(b4a.example.noteactivity.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"todoActivity",Debug.moduleToString(b4a.example.todoactivity.class),"xui",main._xui};
 }
 }

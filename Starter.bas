@@ -13,7 +13,7 @@ Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
 	Public darkMode As Boolean = False
-	Public themeNumber as Int = 0
+	Public themeNumber As Int = 0
 End Sub
 
 Sub Service_Create

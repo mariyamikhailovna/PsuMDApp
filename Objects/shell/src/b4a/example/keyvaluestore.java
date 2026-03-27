@@ -22,6 +22,9 @@ public static b4a.example.clockactivity _clockactivity = null;
 public static b4a.example.noteactivity _noteactivity = null;
 public static b4a.example.editnote _editnote = null;
 public static b4a.example.corkactivity _corkactivity = null;
+public static b4a.example.todoactivity _todoactivity = null;
+public static b4a.example.musicservice _musicservice = null;
+public static b4a.example.musicactivity _musicactivity = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"ser",_ref.getField(false, "_ser"),"sql1",_ref.getField(false, "_sql1")};
 }

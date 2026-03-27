@@ -31,7 +31,7 @@ public static RemoteObject  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 9;BA.debugLine="Public darkMode As Boolean = False";
 starter._darkmode = starter.mostCurrent.__c.getField(true,"False");
- //BA.debugLineNum = 10;BA.debugLine="Public themeNumber as Int = 0";
+ //BA.debugLineNum = 10;BA.debugLine="Public themeNumber As Int = 0";
 starter._themenumber = BA.numberCast(int.class, 0);
  //BA.debugLineNum = 11;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");

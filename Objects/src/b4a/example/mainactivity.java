@@ -370,6 +370,9 @@ public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
 public b4a.example.editnote _editnote = null;
 public b4a.example.corkactivity _corkactivity = null;
+public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.musicservice _musicservice = null;
+public b4a.example.musicactivity _musicactivity = null;
 public static void  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="mainactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -585,8 +588,8 @@ RDebugUtils.currentLine=1376261;
  //BA.debugLineNum = 1376261;BA.debugLine="infoPnl.BringToFront";
 mostCurrent._infopnl.BringToFront();
 RDebugUtils.currentLine=1376262;
- //BA.debugLineNum = 1376262;BA.debugLine="showInfoPage(0)";
-_showinfopage((int) (0));
+ //BA.debugLineNum = 1376262;BA.debugLine="showInfoPage(1)";
+_showinfopage((int) (1));
 RDebugUtils.currentLine=1376263;
  //BA.debugLineNum = 1376263;BA.debugLine="Return";
 if (true) return "";
@@ -778,8 +781,8 @@ RDebugUtils.currentLine=1441797;
  //BA.debugLineNum = 1441797;BA.debugLine="infoPnl.BringToFront";
 mostCurrent._infopnl.BringToFront();
 RDebugUtils.currentLine=1441798;
- //BA.debugLineNum = 1441798;BA.debugLine="showInfoPage(0)";
-_showinfopage((int) (0));
+ //BA.debugLineNum = 1441798;BA.debugLine="showInfoPage(1)";
+_showinfopage((int) (1));
 RDebugUtils.currentLine=1441799;
  //BA.debugLineNum = 1441799;BA.debugLine="Return";
 if (true) return "";
@@ -940,6 +943,19 @@ if (true) break;
         }
     }
 }
+public static String  _mp_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "mp_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "mp_click", null));}
+RDebugUtils.currentLine=1900544;
+ //BA.debugLineNum = 1900544;BA.debugLine="Private Sub mP_Click";
+RDebugUtils.currentLine=1900545;
+ //BA.debugLineNum = 1900545;BA.debugLine="StartActivity(musicActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._musicactivity.getObject()));
+RDebugUtils.currentLine=1900546;
+ //BA.debugLineNum = 1900546;BA.debugLine="End Sub";
+return "";
+}
 public static String  _navbtn_click() throws Exception{
 RDebugUtils.currentModule="mainactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "navbtn_click", false))
@@ -967,6 +983,19 @@ RDebugUtils.currentLine=1179650;
 mostCurrent._clocklightbtn.setText(BA.ObjectToCharSequence(anywheresoftware.b4a.keywords.Common.DateTime.Time(anywheresoftware.b4a.keywords.Common.DateTime.getNow())));
 RDebugUtils.currentLine=1179651;
  //BA.debugLineNum = 1179651;BA.debugLine="End Sub";
+return "";
+}
+public static String  _todolistbtn_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "todolistbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "todolistbtn_click", null));}
+RDebugUtils.currentLine=1835008;
+ //BA.debugLineNum = 1835008;BA.debugLine="Private Sub todolistBtn_Click";
+RDebugUtils.currentLine=1835009;
+ //BA.debugLineNum = 1835009;BA.debugLine="StartActivity(todoActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._todoactivity.getObject()));
+RDebugUtils.currentLine=1835010;
+ //BA.debugLineNum = 1835010;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -16,8 +16,11 @@ Debug.ShouldStop(8388608);
  BA.debugLineNum = 25;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
 Debug.ShouldStop(16777216);
 main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("loadingLayout")),main.mostCurrent.activityBA);
- BA.debugLineNum = 26;BA.debugLine="End Sub";
+ BA.debugLineNum = 26;BA.debugLine="StartService(musicService)";
 Debug.ShouldStop(33554432);
+main.mostCurrent.__c.runVoidMethod ("StartService",main.processBA,(Object)((main.mostCurrent._musicservice.getObject())));
+ BA.debugLineNum = 27;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -28,7 +31,7 @@ finally {
 		}}
 public static void  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,28);
+		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,29);
 if (RapidSub.canDelegate("activity_resume")) { b4a.example.main.remoteMe.runUserSub(false, "main","activity_resume"); return;}
 ResumableSub_Activity_Resume rsub = new ResumableSub_Activity_Resume(null);
 rsub.resume(null, null);
@@ -50,7 +53,7 @@ RemoteObject _result = RemoteObject.createImmutable(false);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,28);
+		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,29);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -61,8 +64,8 @@ return;
 case 0:
 //C
 this.state = -1;
- BA.debugLineNum = 29;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 30;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
+Debug.ShouldStop(536870912);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","complete", main.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "main", "activity_resume"), _startload());
 this.state = 1;
 return;
@@ -71,8 +74,8 @@ case 1:
 this.state = -1;
 _result = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
 ;
- BA.debugLineNum = 30;BA.debugLine="End Sub";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 31;BA.debugLine="End Sub";
+Debug.ShouldStop(1073741824);
 if (true) break;
 
             }
@@ -107,6 +110,9 @@ clockactivity_subs_0._process_globals();
 noteactivity_subs_0._process_globals();
 editnote_subs_0._process_globals();
 corkactivity_subs_0._process_globals();
+todoactivity_subs_0._process_globals();
+musicservice_subs_0._process_globals();
+musicactivity_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 starter.myClass = BA.getDeviceClass ("b4a.example.starter");
 mainactivity.myClass = BA.getDeviceClass ("b4a.example.mainactivity");
@@ -116,8 +122,11 @@ clockactivity.myClass = BA.getDeviceClass ("b4a.example.clockactivity");
 noteactivity.myClass = BA.getDeviceClass ("b4a.example.noteactivity");
 editnote.myClass = BA.getDeviceClass ("b4a.example.editnote");
 corkactivity.myClass = BA.getDeviceClass ("b4a.example.corkactivity");
-b4xgifview.myClass = BA.getDeviceClass ("b4a.example.b4xgifview");
+todoactivity.myClass = BA.getDeviceClass ("b4a.example.todoactivity");
+musicservice.myClass = BA.getDeviceClass ("b4a.example.musicservice");
+musicactivity.myClass = BA.getDeviceClass ("b4a.example.musicactivity");
 keyvaluestore.myClass = BA.getDeviceClass ("b4a.example.keyvaluestore");
+b4xgifview.myClass = BA.getDeviceClass ("b4a.example.b4xgifview");
 		
         } catch (Exception e) {
 			throw new RuntimeException(e);
@@ -138,7 +147,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _startload() throws Exception{
 try {
-		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,32);
+		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,33);
 if (RapidSub.canDelegate("startload")) { return b4a.example.main.remoteMe.runUserSub(false, "main","startload");}
 ResumableSub_startLoad rsub = new ResumableSub_startLoad(null);
 rsub.remoteResumableSub = anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSubForFilter();
@@ -161,7 +170,7 @@ b4a.example.main parent;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,32);
+		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,33);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -172,8 +181,8 @@ parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResuma
 case 0:
 //C
 this.state = -1;
- BA.debugLineNum = 33;BA.debugLine="Sleep(2000)";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 34;BA.debugLine="Sleep(2000)";
+Debug.ShouldStop(2);
 parent.mostCurrent.__c.runVoidMethod ("Sleep",main.mostCurrent.activityBA,anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "main", "startload"),BA.numberCast(int.class, 2000));
 this.state = 1;
 return;
@@ -181,18 +190,18 @@ case 1:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 34;BA.debugLine="StartActivity(MainActivity)";
-Debug.ShouldStop(2);
-parent.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((parent.mostCurrent._mainactivity.getObject())));
- BA.debugLineNum = 35;BA.debugLine="Activity.Finish";
+ BA.debugLineNum = 35;BA.debugLine="StartActivity(MainActivity)";
 Debug.ShouldStop(4);
-parent.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 36;BA.debugLine="Return True";
+parent.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((parent.mostCurrent._mainactivity.getObject())));
+ BA.debugLineNum = 36;BA.debugLine="Activity.Finish";
 Debug.ShouldStop(8);
+parent.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 37;BA.debugLine="Return True";
+Debug.ShouldStop(16);
 if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"True")));return;};
- BA.debugLineNum = 37;BA.debugLine="End Sub";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 38;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
 if (true) break;
 
             }

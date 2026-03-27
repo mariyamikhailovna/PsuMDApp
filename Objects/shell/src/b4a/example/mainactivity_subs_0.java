@@ -257,9 +257,9 @@ mainactivity.mostCurrent._infopnl.runMethod(true,"setVisible",mainactivity.mostC
  BA.debugLineNum = 120;BA.debugLine="infoPnl.BringToFront";
 Debug.ShouldStop(8388608);
 mainactivity.mostCurrent._infopnl.runVoidMethod ("BringToFront");
- BA.debugLineNum = 121;BA.debugLine="showInfoPage(0)";
+ BA.debugLineNum = 121;BA.debugLine="showInfoPage(1)";
 Debug.ShouldStop(16777216);
-_showinfopage(BA.numberCast(int.class, 0));
+_showinfopage(BA.numberCast(int.class, 1));
  BA.debugLineNum = 122;BA.debugLine="Return";
 Debug.ShouldStop(33554432);
 if (true) return RemoteObject.createImmutable("");
@@ -311,9 +311,9 @@ mainactivity.mostCurrent._infopnl.runMethod(true,"setVisible",mainactivity.mostC
  BA.debugLineNum = 130;BA.debugLine="infoPnl.BringToFront";
 Debug.ShouldStop(2);
 mainactivity.mostCurrent._infopnl.runVoidMethod ("BringToFront");
- BA.debugLineNum = 131;BA.debugLine="showInfoPage(0)";
+ BA.debugLineNum = 131;BA.debugLine="showInfoPage(1)";
 Debug.ShouldStop(4);
-_showinfopage(BA.numberCast(int.class, 0));
+_showinfopage(BA.numberCast(int.class, 1));
  BA.debugLineNum = 132;BA.debugLine="Return";
 Debug.ShouldStop(8);
 if (true) return RemoteObject.createImmutable("");
@@ -554,6 +554,25 @@ finally {
 			Debug.PopSubsStack();
 		}}
 }
+public static RemoteObject  _mp_click() throws Exception{
+try {
+		Debug.PushSubsStack("mP_Click (mainactivity) ","mainactivity",2,mainactivity.mostCurrent.activityBA,mainactivity.mostCurrent,212);
+if (RapidSub.canDelegate("mp_click")) { return b4a.example.mainactivity.remoteMe.runUserSub(false, "mainactivity","mp_click");}
+ BA.debugLineNum = 212;BA.debugLine="Private Sub mP_Click";
+Debug.ShouldStop(524288);
+ BA.debugLineNum = 213;BA.debugLine="StartActivity(musicActivity)";
+Debug.ShouldStop(1048576);
+mainactivity.mostCurrent.__c.runVoidMethod ("StartActivity",mainactivity.processBA,(Object)((mainactivity.mostCurrent._musicactivity.getObject())));
+ BA.debugLineNum = 214;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _navbtn_click() throws Exception{
 try {
 		Debug.PushSubsStack("navBtn_Click (mainactivity) ","mainactivity",2,mainactivity.mostCurrent.activityBA,mainactivity.mostCurrent,136);
@@ -764,6 +783,25 @@ Debug.ShouldStop(128);
 mainactivity.mostCurrent._clocklightbtn.runMethod(true,"setText",BA.ObjectToCharSequence(mainactivity.mostCurrent.__c.getField(false,"DateTime").runMethod(true,"Time",(Object)(mainactivity.mostCurrent.__c.getField(false,"DateTime").runMethod(true,"getNow")))));
  BA.debugLineNum = 105;BA.debugLine="End Sub";
 Debug.ShouldStop(256);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _todolistbtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("todolistBtn_Click (mainactivity) ","mainactivity",2,mainactivity.mostCurrent.activityBA,mainactivity.mostCurrent,208);
+if (RapidSub.canDelegate("todolistbtn_click")) { return b4a.example.mainactivity.remoteMe.runUserSub(false, "mainactivity","todolistbtn_click");}
+ BA.debugLineNum = 208;BA.debugLine="Private Sub todolistBtn_Click";
+Debug.ShouldStop(32768);
+ BA.debugLineNum = 209;BA.debugLine="StartActivity(todoActivity)";
+Debug.ShouldStop(65536);
+mainactivity.mostCurrent.__c.runVoidMethod ("StartActivity",mainactivity.processBA,(Object)((mainactivity.mostCurrent._todoactivity.getObject())));
+ BA.debugLineNum = 210;BA.debugLine="End Sub";
+Debug.ShouldStop(131072);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
