@@ -177,7 +177,7 @@ Debug.ShouldStop(8192);
 helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("This app is tailor-made for students—or anyone who wants to learn. It has all the features you'll need in order to learn effectively!"));
  BA.debugLineNum = 47;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(16384);
-helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("rei.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 case 1: {
  BA.debugLineNum = 49;BA.debugLine="titleLbl.Text = \"Calendar\"";
@@ -188,7 +188,7 @@ Debug.ShouldStop(131072);
 helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("The calendar comes in three views to match however you like to plan. The Schedule view lets you see all your upcoming days at a glance, with major events and to-do items laid out on a timeline. The Day view shows you the full timeline for a single day, where you can add events, tasks, or birthdays, and color-coded backgrounds make each type of entry easy to tell apart. The Month view presents the classic calendar layout, complete with a month and year spinner to jump around quickly, a sneak peek of events on each day's cell, and neighboring dates filling in the empty cells so the grid always looks complete."));
  BA.debugLineNum = 51;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(262144);
-helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("psulogo.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 case 2: {
  BA.debugLineNum = 53;BA.debugLine="titleLbl.Text = \"Clock\"";
@@ -221,7 +221,7 @@ Debug.ShouldStop(536870912);
 helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("The flashcard feature organizes your cards into decks and subdecks, and you have the freedom to add, rename, or delete any of them — with a confirmation before anything gets deleted for good. Cards are automatically shuffled so every session feels fresh. A progress bar and percentage track how far you've made it through a deck, and when you're ready to dive back in, two buttons have you covered — restart the entire deck from scratch, or continue right where you left off."));
  BA.debugLineNum = 63;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(1073741824);
-helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("psulogo.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 case 5: {
  BA.debugLineNum = 65;BA.debugLine="titleLbl.Text = \"Music Player\"";
@@ -232,7 +232,7 @@ Debug.ShouldStop(2);
 helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("The music player plays the music on startup, meaning the app greets you with songs! Filled with chill, lo-fi tracks, you have the freedom to choose what track you want to play--either through the previous/next song buttons, or through the list of songs below where you can click on whatever chooses your fancy. There's a segment of the song that you want to listen to again or you want to zoom through a certain bit of a song? The seek bar presents itself to you where you can navigate within the music."));
  BA.debugLineNum = 67;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(4);
-helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("dumbass.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 case 6: {
  BA.debugLineNum = 69;BA.debugLine="titleLbl.Text = \"Notepad\"";
@@ -254,7 +254,7 @@ Debug.ShouldStop(512);
 helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."));
  BA.debugLineNum = 75;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(1024);
-helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("dumbass.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 }
 ;

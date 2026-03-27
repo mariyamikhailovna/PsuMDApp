@@ -218,3 +218,11 @@ End Sub
 Private Sub mP_Click
 	StartActivity(musicActivity)
 End Sub
+
+Private Sub bookie_Click
+	StartActivity(FlashcardActivity)
+End Sub
+
+Private Sub calendar_Click
+	StartActivity(CalendarActivity)
+End Sub

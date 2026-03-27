@@ -8,7 +8,7 @@ public class musicactivity_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,19);
+		Debug.PushSubsStack("Activity_Create (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,19);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","activity_create", _firsttime);}
 int _i = 0;
 RemoteObject _title = RemoteObject.createImmutable("");
@@ -65,7 +65,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,42);
+		Debug.PushSubsStack("Activity_Pause (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,42);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 42;BA.debugLine="Sub Activity_Pause(UserClosed As Boolean)";
@@ -85,7 +85,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,38);
+		Debug.PushSubsStack("Activity_Resume (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,38);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","activity_resume");}
  BA.debugLineNum = 38;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(32);
@@ -104,7 +104,7 @@ finally {
 		}}
 public static RemoteObject  _formatsongdur(RemoteObject _ms) throws Exception{
 try {
-		Debug.PushSubsStack("formatSongDur (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,46);
+		Debug.PushSubsStack("formatSongDur (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,46);
 if (RapidSub.canDelegate("formatsongdur")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","formatsongdur", _ms);}
 RemoteObject _seconds = RemoteObject.createImmutable(0);
 RemoteObject _minutes = RemoteObject.createImmutable(0);
@@ -150,7 +150,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _listview1_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("ListView1_ItemClick (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,92);
+		Debug.PushSubsStack("ListView1_ItemClick (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,92);
 if (RapidSub.canDelegate("listview1_itemclick")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","listview1_itemclick", _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
@@ -171,7 +171,7 @@ finally {
 		}}
 public static RemoteObject  _nextbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("nextBtn_Click (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,80);
+		Debug.PushSubsStack("nextBtn_Click (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,80);
 if (RapidSub.canDelegate("nextbtn_click")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","nextbtn_click");}
  BA.debugLineNum = 80;BA.debugLine="Sub nextBtn_Click";
 Debug.ShouldStop(32768);
@@ -190,7 +190,7 @@ finally {
 		}}
 public static RemoteObject  _pausebtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("pauseBtn_Click (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,88);
+		Debug.PushSubsStack("pauseBtn_Click (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,88);
 if (RapidSub.canDelegate("pausebtn_click")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","pausebtn_click");}
  BA.debugLineNum = 88;BA.debugLine="Sub pauseBtn_Click";
 Debug.ShouldStop(8388608);
@@ -209,7 +209,7 @@ finally {
 		}}
 public static RemoteObject  _prevbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("prevBtn_Click (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,84);
+		Debug.PushSubsStack("prevBtn_Click (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,84);
 if (RapidSub.canDelegate("prevbtn_click")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","prevbtn_click");}
  BA.debugLineNum = 84;BA.debugLine="Sub prevBtn_Click";
 Debug.ShouldStop(524288);
@@ -237,7 +237,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _seekbar1_valuechanged(RemoteObject _value,RemoteObject _userchanged) throws Exception{
 try {
-		Debug.PushSubsStack("SeekBar1_ValueChanged (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,74);
+		Debug.PushSubsStack("SeekBar1_ValueChanged (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,74);
 if (RapidSub.canDelegate("seekbar1_valuechanged")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","seekbar1_valuechanged", _value, _userchanged);}
 Debug.locals.put("Value", _value);
 Debug.locals.put("UserChanged", _userchanged);
@@ -262,7 +262,7 @@ finally {
 		}}
 public static RemoteObject  _uitimer_tick() throws Exception{
 try {
-		Debug.PushSubsStack("uiTimer_Tick (musicactivity) ","musicactivity",11,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,54);
+		Debug.PushSubsStack("uiTimer_Tick (musicactivity) ","musicactivity",21,musicactivity.mostCurrent.activityBA,musicactivity.mostCurrent,54);
 if (RapidSub.canDelegate("uitimer_tick")) { return b4a.example.musicactivity.remoteMe.runUserSub(false, "musicactivity","uitimer_tick");}
 RemoteObject _title = RemoteObject.createImmutable("");
  BA.debugLineNum = 54;BA.debugLine="Sub uiTimer_Tick";

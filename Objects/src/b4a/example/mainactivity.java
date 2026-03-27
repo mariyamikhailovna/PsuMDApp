@@ -372,7 +372,19 @@ public b4a.example.editnote _editnote = null;
 public b4a.example.corkactivity _corkactivity = null;
 public b4a.example.todoactivity _todoactivity = null;
 public b4a.example.musicservice _musicservice = null;
+public b4a.example.active_recall _active_recall = null;
+public b4a.example.add_card_module _add_card_module = null;
+public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.add_events_module _add_events_module = null;
+public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.day_module _day_module = null;
+public b4a.example.deck_all_cards _deck_all_cards = null;
+public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
+public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.subdeck_module _subdeck_module = null;
 public static void  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="mainactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -554,6 +566,32 @@ anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("hh:mm a");
  };
 RDebugUtils.currentLine=917510;
  //BA.debugLineNum = 917510;BA.debugLine="End Sub";
+return "";
+}
+public static String  _bookie_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "bookie_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "bookie_click", null));}
+RDebugUtils.currentLine=1966080;
+ //BA.debugLineNum = 1966080;BA.debugLine="Private Sub bookie_Click";
+RDebugUtils.currentLine=1966081;
+ //BA.debugLineNum = 1966081;BA.debugLine="StartActivity(FlashcardActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._flashcardactivity.getObject()));
+RDebugUtils.currentLine=1966082;
+ //BA.debugLineNum = 1966082;BA.debugLine="End Sub";
+return "";
+}
+public static String  _calendar_click() throws Exception{
+RDebugUtils.currentModule="mainactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "calendar_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "calendar_click", null));}
+RDebugUtils.currentLine=2031616;
+ //BA.debugLineNum = 2031616;BA.debugLine="Private Sub calendar_Click";
+RDebugUtils.currentLine=2031617;
+ //BA.debugLineNum = 2031617;BA.debugLine="StartActivity(CalendarActivity)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._calendaractivity.getObject()));
+RDebugUtils.currentLine=2031618;
+ //BA.debugLineNum = 2031618;BA.debugLine="End Sub";
 return "";
 }
 public static String  _clockbtn_click() throws Exception{

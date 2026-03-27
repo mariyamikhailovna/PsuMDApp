@@ -59,6 +59,25 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+public static RemoteObject  _calendarbtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("calendarBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,33);
+if (RapidSub.canDelegate("calendarbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","calendarbtn_click");}
+ BA.debugLineNum = 33;BA.debugLine="Private Sub calendarBtn_Click";
+Debug.ShouldStop(1);
+ BA.debugLineNum = 34;BA.debugLine="StartActivity(CalendarActivity)";
+Debug.ShouldStop(2);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._calendaractivity.getObject())));
+ BA.debugLineNum = 35;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _clkbtn_click() throws Exception{
 try {
 		Debug.PushSubsStack("clkBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,37);
@@ -108,6 +127,25 @@ Debug.ShouldStop(536870912);
 navactivity.mostCurrent._activity.runVoidMethod ("Finish");
  BA.debugLineNum = 63;BA.debugLine="End Sub";
 Debug.ShouldStop(1073741824);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _flashbtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("flashBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,45);
+if (RapidSub.canDelegate("flashbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","flashbtn_click");}
+ BA.debugLineNum = 45;BA.debugLine="Private Sub flashBtn_Click";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 46;BA.debugLine="StartActivity(FlashcardActivity)";
+Debug.ShouldStop(8192);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._flashcardactivity.getObject())));
+ BA.debugLineNum = 47;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

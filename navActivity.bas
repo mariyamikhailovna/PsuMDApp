@@ -36,9 +36,9 @@ Sub Activity_Pause (UserClosed As Boolean)
 End Sub
 
 
-'Private Sub calendarBtn_Click
-'	
-'End Sub
+Private Sub calendarBtn_Click
+	StartActivity(CalendarActivity)
+End Sub
 
 Private Sub clkBtn_Click
 	StartActivity(clockActivity)
@@ -48,9 +48,9 @@ Private Sub corkpadBtn_Click
 	StartActivity(corkActivity)
 End Sub
 
-'Private Sub flashBtn_Click
-'	
-'End Sub
+Private Sub flashBtn_Click
+	StartActivity(FlashcardActivity)	
+End Sub
 
 'Private Sub musicBtn_Click
 '	

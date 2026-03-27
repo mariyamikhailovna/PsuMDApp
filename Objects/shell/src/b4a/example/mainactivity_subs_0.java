@@ -220,6 +220,44 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+public static RemoteObject  _bookie_click() throws Exception{
+try {
+		Debug.PushSubsStack("bookie_Click (mainactivity) ","mainactivity",2,mainactivity.mostCurrent.activityBA,mainactivity.mostCurrent,216);
+if (RapidSub.canDelegate("bookie_click")) { return b4a.example.mainactivity.remoteMe.runUserSub(false, "mainactivity","bookie_click");}
+ BA.debugLineNum = 216;BA.debugLine="Private Sub bookie_Click";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 217;BA.debugLine="StartActivity(FlashcardActivity)";
+Debug.ShouldStop(16777216);
+mainactivity.mostCurrent.__c.runVoidMethod ("StartActivity",mainactivity.processBA,(Object)((mainactivity.mostCurrent._flashcardactivity.getObject())));
+ BA.debugLineNum = 218;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _calendar_click() throws Exception{
+try {
+		Debug.PushSubsStack("calendar_Click (mainactivity) ","mainactivity",2,mainactivity.mostCurrent.activityBA,mainactivity.mostCurrent,220);
+if (RapidSub.canDelegate("calendar_click")) { return b4a.example.mainactivity.remoteMe.runUserSub(false, "mainactivity","calendar_click");}
+ BA.debugLineNum = 220;BA.debugLine="Private Sub calendar_Click";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 221;BA.debugLine="StartActivity(CalendarActivity)";
+Debug.ShouldStop(268435456);
+mainactivity.mostCurrent.__c.runVoidMethod ("StartActivity",mainactivity.processBA,(Object)((mainactivity.mostCurrent._calendaractivity.getObject())));
+ BA.debugLineNum = 222;BA.debugLine="End Sub";
+Debug.ShouldStop(536870912);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _clockbtn_click() throws Exception{
 try {
 		Debug.PushSubsStack("clockBtn_Click (mainactivity) ","mainactivity",2,mainactivity.mostCurrent.activityBA,mainactivity.mostCurrent,107);
