@@ -45,7 +45,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
 	If Starter.darkMode Then
-		Activity.LoadLayout("todolistLayoutDark.bal")
+		Activity.LoadLayout("todoListLayoutDark")
 	Else
 		Activity.LoadLayout("todoListLayout.bal")
 	End If

@@ -18,9 +18,9 @@ Debug.ShouldStop(32);
  BA.debugLineNum = 41;BA.debugLine="If Starter.darkMode Then";
 Debug.ShouldStop(256);
 if (todoactivity.mostCurrent._starter._darkmode /*RemoteObject*/ .<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 42;BA.debugLine="Activity.LoadLayout(\"todolistLayoutDark.bal\")";
+ BA.debugLineNum = 42;BA.debugLine="Activity.LoadLayout(\"todoListLayoutDark\")";
 Debug.ShouldStop(512);
-todoactivity.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("todolistLayoutDark.bal")),todoactivity.mostCurrent.activityBA);
+todoactivity.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("todoListLayoutDark")),todoactivity.mostCurrent.activityBA);
  }else {
  BA.debugLineNum = 44;BA.debugLine="Activity.LoadLayout(\"todoListLayout.bal\")";
 Debug.ShouldStop(2048);

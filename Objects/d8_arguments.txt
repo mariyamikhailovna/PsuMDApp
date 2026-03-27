@@ -124,6 +124,7 @@ C:\b4a\PsuMDApp\Objects\dexed\b4a\example\designerscripts\LS_musiclayout.dex
 C:\b4a\PsuMDApp\Objects\dexed\b4a\example\designerscripts\LS_navact.dex
 C:\b4a\PsuMDApp\Objects\dexed\b4a\example\designerscripts\LS_notepadlayout.dex
 C:\b4a\PsuMDApp\Objects\dexed\b4a\example\designerscripts\LS_todolistlayout.dex
+C:\b4a\PsuMDApp\Objects\dexed\b4a\example\designerscripts\LS_todolistlayoutdark.dex
 C:\b4a\PsuMDApp\Objects\dexed\pl\droidsonroids\gif\R$attr.dex
 C:\b4a\PsuMDApp\Objects\dexed\pl\droidsonroids\gif\R$drawable.dex
 C:\b4a\PsuMDApp\Objects\dexed\pl\droidsonroids\gif\R$style.dex

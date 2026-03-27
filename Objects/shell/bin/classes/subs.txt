@@ -526,19 +526,23 @@ todoactivity,taskslist_itemlongclick,1,0,410,431
 ,currentlist,,kvs,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,progressnumber,,progresspercent,,progressbar
 
 ,showrenametaskpanel,,updateprogress
-musicservice,nextsong,0,0,71,77
+musicservice,copytracksifneeded,0,0,47,61
+,musicplaylist
+
+
+musicservice,nextsong,0,0,104,110
 ,currentsong,,musicplaylist,,mediaplayer
 ,currentsong
 ,playsong
-musicservice,playsong,0,0,57,63
+musicservice,playsong,0,0,84,93
 ,mediaplayer,,musicplaylist,,currentsong
 
 
-musicservice,pausetoggle,0,0,87,93
+musicservice,pausetoggle,0,0,71,77
 ,mediaplayer
 
 
-musicservice,prevsong,0,0,79,85
+musicservice,prevsong,0,0,112,118
 ,currentsong,,musicplaylist,,mediaplayer
 ,currentsong
 ,playsong
@@ -546,23 +550,23 @@ musicservice,process_globals,0,1,6,11
 
 
 
-musicservice,service_create,0,0,13,42
+musicservice,service_create,0,0,13,45
 ,mediaplayer,,musicplaylist,,currentsong,,songtimer
 ,currentsong
-,playsong
-musicservice,service_destroy,0,0,48,50
+,copytracksifneeded,,playsong
+musicservice,service_destroy,0,0,67,69
 
 
 
-musicservice,service_start,0,0,44,46
+musicservice,service_start,0,0,63,65
 
 
 
-musicservice,setsong,0,0,52,55
+musicservice,setsong,0,0,79,82
 ,currentsong,,mediaplayer,,musicplaylist
 ,currentsong
 ,playsong
-musicservice,songtimer_tick,0,0,65,69
+musicservice,songtimer_tick,0,0,95,103
 ,mediaplayer,,currentsong,,musicplaylist
 ,currentsong
 ,nextsong,,playsong
