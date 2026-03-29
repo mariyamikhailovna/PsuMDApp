@@ -40,22 +40,29 @@ Sub Globals
 	Private place10 As Label
 	Private place11 As Label
 	Private place12 As Label
-	Private R, G, B As Int
+	Private R = 255, G = 105, B = 97 As Int
 	Private R2, G2, B2 As Int
 	Private penSpnr As Spinner
 	Private Width As Int
 	Private Height As Int
+	Private deleteLbl As Label
+	Dim ddn As DragDropView
+	Dim ddi As DragDropView
+	Dim ddc As DragDropView
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("corkboardLayout")
-	penSpnr.AddAll(Array As String("Red", "Blue", "Green", "Black", "Yellow", "Eraser"))
+	penSpnr.AddAll(Array As String("Black", "Blue", "Green", "Red", "Yellow", "Eraser"))
 	If FirstTime Then
 		imgPicker.Initialize("CC")
 	End If
 	penSpnr.Visible = False
 	Width = 80dip
 	Height = 60dip
+	ddn.Initialize(Me, "NoteDrag")
+	ddi.Initialize(Me, "ImgDrag")
+	ddc.Initialize(Me, "CanvasDrag")
 End Sub
 
 Sub Activity_Resume
@@ -70,6 +77,8 @@ End Sub
 '1. Sticky Notes
 '2. Images
 '3. Canvas
+
+'----------------------MAIN SPAWNING/ADDINNG EVENTS---------------------------
 
 Sub AddStickyNote(Text As String, x As Int, y As Int)
 	Dim p As Panel
@@ -87,11 +96,10 @@ Sub AddStickyNote(Text As String, x As Int, y As Int)
 	p.AddView(txt, 5dip, 15dip, 90dip, 70dip)
 	
 	boardPnl.AddView(p, x, y, 100dip, 100dip)
+
+	ddn.AddDragView(p, False)
+	ddn.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
 	
-	Dim dd As DragDropView
-	dd.Initialize(Me, "NoteDrag")
-	dd.AddDragView(p, False)
-	dd.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12)
 End Sub
 
 Sub CC_Result (Success As Boolean, Dir As String, FileName As String)
@@ -104,21 +112,17 @@ End Sub
 
 Sub imgPick
 	imgView.Initialize("ImgView")
-	Dim randomX As Int = Rnd(20dip, 300dip)
-	Dim randomY As Int = Rnd(20dip, 500dip)
-	boardPnl.AddView(imgView, randomX, randomY, 100dip, 100dip)
-	
-	Dim dd As DragDropView
-	dd.Initialize(Me, "ImgDrag")
-	dd.AddDragView(imgView, False)
-	dd.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9)
+	boardPnl.AddView(imgView, 150dip, 500dip, 100dip, 100dip)
+
+	ddi.AddDragView(imgView, False)
+	ddi.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
 	
 End Sub
 
 Sub AddCanvas(x As Int, y As Int)
 	Dim f As Panel
 	f.Initialize("CanvasFrame")
-	f.Color = Colors.Gray
+	f.Color = Colors.Black
 	boardPnl.AddView(f, x, y, Width + 20dip, Height + 40dip)
 	
 	Dim p As Panel
@@ -133,11 +137,9 @@ Sub AddCanvas(x As Int, y As Int)
 	cvs.DrawRect(cvs.TargetRect, Colors.LightGray, False, 1dip)
 	cvs.Invalidate
 	p.Tag = cvs
-	
-	Dim dd As DragDropView
-	dd.Initialize(Me, "CanvasDrag")
-	dd.AddDragView(f, False)
-	dd.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12)
+
+	ddc.AddDragView(f, False)
+	ddc.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
 End Sub
 
 Sub CanvasPanel_Touch (Action As Int, X As Float, Y As Float)
@@ -149,16 +151,13 @@ Sub CanvasPanel_Touch (Action As Int, X As Float, Y As Float)
 			LastY = Y
 		Case Activity.ACTION_MOVE
 			cvs.DrawLine(LastX, LastY, X, Y, Colors.RGB(R2,G2,B2), 3dip)
-			cvs.Invalidate 
+			cvs.Invalidate
 			LastX = X
 			LastY = Y
 	End Select
 End Sub
 
-Private Sub stickyBtn_Click
-	noteWindow(250dip, 180dip)
-	notePnl.Visible = True
-End Sub
+'---------------PANELS/WINDOWS SPAWNED AND BUTTONS INSIDE IT------------------
 
 Private Sub noteWindow(pW As Int, pH As Int)
 	notePnl = xui.CreatePanel("notePnl")
@@ -168,7 +167,7 @@ Private Sub noteWindow(pW As Int, pH As Int)
 
 	Dim colorsSpnr As Spinner
 	colorsSpnr.Initialize("colorsSpnr")
-	colorsSpnr.AddAll(Array As String("Red", "Blue", "Green"))
+	colorsSpnr.AddAll(Array As String("Red", "Blue", "Yellow"))
 	notePnl.AddView(colorsSpnr, 10dip, 10dip, pW - 20dip, 40dip)
 	
 	Dim addnBtn As Button
@@ -201,20 +200,25 @@ Private Sub canvasWindow(pW As Int, pH As Int)
 End Sub
 
 Private Sub addnBtn_Click
-	Dim randomX As Int = Rnd(20dip, 300dip)
-	Dim randomY As Int = Rnd(20dip, 500dip)
-	AddStickyNote("", randomX, randomY)
+	AddStickyNote("", 150dip, 500dip)
 	notePnl.Visible = False
 	R = 255
-	G = 0
-	B = 0
+	G = 105
+	B = 97
+	stickyBtn.Enabled = True
 End Sub
 
 Private Sub addcBtn_Click
-	Dim randomX As Int = Rnd(20dip, 300dip)
-	Dim randomY As Int = Rnd(20dip, 500dip)
-	AddCanvas(randomX, randomY)
+	AddCanvas(150dip, 500dip)
 	canvasPnl.Visible = False
+End Sub
+
+'--------------------------MAIN ADDING BUTTONS--------------------------------
+
+Private Sub stickyBtn_Click
+	noteWindow(250dip, 180dip)
+	notePnl.Visible = True
+	stickyBtn.Enabled = False
 End Sub
 
 Private Sub imgBtn_Click
@@ -227,6 +231,8 @@ Private Sub canvaBtn_Click
 	canvasPnl.Visible = True
 	penSpnr.Visible = True
 End Sub
+
+'------------------------------SPINNERS---------------------------------------
 
 Private Sub sizeSpnr_ItemClick (Position As Int, Value As Object)
 	Select Position
@@ -255,23 +261,23 @@ Private Sub colorsSpnr_ItemClick (Position As Int, Value As Object)
 	Select Position
 		Case 0
 			R = 255
-			G = 0
-			B = 0
+			G = 105
+			B = 97
 		Case 1
-			R = 0
-			G = 0
-			B = 255
+			R = 155
+			G = 190
+			B = 237
 		Case 2
-			R = 0
-			G = 255
-			B = 0
+			R = 248
+			G = 241
+			B = 174
 	End Select
 End Sub
 
 Private Sub penSpnr_ItemClick (Position As Int, Value As Object)
 	Select Position
 		Case 0
-			R2 = 255
+			R2 = 0
 			G2 = 0
 			B2 = 0
 		Case 1
@@ -283,7 +289,7 @@ Private Sub penSpnr_ItemClick (Position As Int, Value As Object)
 			G2 = 255
 			B2 = 0
 		Case 3
-			R2 = 0
+			R2 = 255
 			G2 = 0
 			B2 = 0
 		Case 4
@@ -295,4 +301,42 @@ Private Sub penSpnr_ItemClick (Position As Int, Value As Object)
 			G2 = 255
 			B2 = 255
 	End Select
+End Sub
+
+'---------------------------DELETE FUNCTION-----------------------------------
+
+Sub NoteDrag_PlacedView(DragView As B4XView, PlaceView As B4XView)
+	If PlaceView = deleteLbl Then
+		Msgbox2Async("Are you sure you want to delete note?", "Delete Note", "No", "", "Yes", Null, False)
+		Wait For Msgbox_Result (res As Int)
+		If res = DialogResponse.NEGATIVE Then
+			DragView.Visible = False
+			DragView = Null
+			ToastMessageShow("Note Deleted", False)
+		End If
+	End If
+End Sub
+
+Sub ImgDrag_PlacedView(DragView As B4XView, PlaceView As B4XView)
+	If PlaceView = deleteLbl Then
+		Msgbox2Async("Are you sure you want to delete image?", "Delete Image", "No", "", "Yes", Null, False)
+		Wait For Msgbox_Result (res As Int)
+		If res = DialogResponse.NEGATIVE Then
+			DragView.Visible = False
+			DragView = Null
+			ToastMessageShow("Image Deleted", False)
+		End If
+	End If
+End Sub
+
+Sub CanvasDrag_PlacedView(DragView As B4XView, PlaceView As B4XView)
+	If PlaceView = deleteLbl Then
+		Msgbox2Async("Are you sure you want to delete canvas?", "Delete Canvas", "No", "", "Yes", Null, False)
+		Wait For Msgbox_Result (res As Int)
+		If res = DialogResponse.NEGATIVE Then
+			DragView.Visible = False
+			DragView = Null
+			ToastMessageShow("Canvas Deleted", False)
+		End If
+	End If
 End Sub
