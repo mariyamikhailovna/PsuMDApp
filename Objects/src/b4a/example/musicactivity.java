@@ -386,41 +386,44 @@ RDebugUtils.currentLine=19464192;
 RDebugUtils.currentLine=19464193;
  //BA.debugLineNum = 19464193;BA.debugLine="Activity.LoadLayout(\"musicLayout.bal\")";
 mostCurrent._activity.LoadLayout("musicLayout.bal",mostCurrent.activityBA);
-RDebugUtils.currentLine=19464196;
- //BA.debugLineNum = 19464196;BA.debugLine="StartService(musicService)";
+RDebugUtils.currentLine=19464194;
+ //BA.debugLineNum = 19464194;BA.debugLine="Log(GetDeviceLayoutValues)";
+anywheresoftware.b4a.keywords.Common.LogImpl("219464194",BA.ObjectToString(anywheresoftware.b4a.keywords.Common.GetDeviceLayoutValues(mostCurrent.activityBA)),0);
+RDebugUtils.currentLine=19464197;
+ //BA.debugLineNum = 19464197;BA.debugLine="StartService(musicService)";
 anywheresoftware.b4a.keywords.Common.StartService(processBA,(Object)(mostCurrent._musicservice.getObject()));
-RDebugUtils.currentLine=19464198;
- //BA.debugLineNum = 19464198;BA.debugLine="For i = 0 To musicService.musicPlaylist.Size - 1";
-{
-final int step3 = 1;
-final int limit3 = (int) (mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .getSize()-1);
-_i = (int) (0) ;
-for (;_i <= limit3 ;_i = _i + step3 ) {
 RDebugUtils.currentLine=19464199;
- //BA.debugLineNum = 19464199;BA.debugLine="Dim title As String = musicService.musicPlaylist";
-_title = BA.ObjectToString(mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .Get(_i));
+ //BA.debugLineNum = 19464199;BA.debugLine="For i = 0 To musicService.musicPlaylist.Size - 1";
+{
+final int step4 = 1;
+final int limit4 = (int) (mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .getSize()-1);
+_i = (int) (0) ;
+for (;_i <= limit4 ;_i = _i + step4 ) {
 RDebugUtils.currentLine=19464200;
- //BA.debugLineNum = 19464200;BA.debugLine="title = title.SubString2(0, title.Length - 4)  '";
-_title = _title.substring((int) (0),(int) (_title.length()-4));
+ //BA.debugLineNum = 19464200;BA.debugLine="Dim title As String = musicService.musicPlaylist";
+_title = BA.ObjectToString(mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .Get(_i));
 RDebugUtils.currentLine=19464201;
- //BA.debugLineNum = 19464201;BA.debugLine="title = title.SubString(7)";
-_title = _title.substring((int) (7));
+ //BA.debugLineNum = 19464201;BA.debugLine="title = title.SubString2(0, title.Length - 4)  '";
+_title = _title.substring((int) (0),(int) (_title.length()-4));
 RDebugUtils.currentLine=19464202;
- //BA.debugLineNum = 19464202;BA.debugLine="ListView1.AddSingleLine((i + 1) & \" \" & title)";
-mostCurrent._listview1.AddSingleLine(BA.ObjectToCharSequence(BA.NumberToString((_i+1))+" "+_title));
+ //BA.debugLineNum = 19464202;BA.debugLine="title = title.SubString(7)";
+_title = _title.substring((int) (7));
 RDebugUtils.currentLine=19464203;
- //BA.debugLineNum = 19464203;BA.debugLine="ListView1.SingleLineLayout.Label.TextColor = Col";
+ //BA.debugLineNum = 19464203;BA.debugLine="ListView1.AddSingleLine((i + 1) & \"   \" & title)";
+mostCurrent._listview1.AddSingleLine(BA.ObjectToCharSequence(BA.NumberToString((_i+1))+"   "+_title));
+RDebugUtils.currentLine=19464204;
+ //BA.debugLineNum = 19464204;BA.debugLine="ListView1.SingleLineLayout.Label.TextColor = Col";
 mostCurrent._listview1.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
  }
 };
-RDebugUtils.currentLine=19464207;
- //BA.debugLineNum = 19464207;BA.debugLine="uiTimer.Initialize(\"uiTimer\", 500)";
-_uitimer.Initialize(processBA,"uiTimer",(long) (500));
 RDebugUtils.currentLine=19464208;
- //BA.debugLineNum = 19464208;BA.debugLine="uiTimer.Enabled = True";
-_uitimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 19464208;BA.debugLine="uiTimer.Initialize(\"uiTimer\", 500)";
+_uitimer.Initialize(processBA,"uiTimer",(long) (500));
 RDebugUtils.currentLine=19464209;
- //BA.debugLineNum = 19464209;BA.debugLine="End Sub";
+ //BA.debugLineNum = 19464209;BA.debugLine="uiTimer.Enabled = True";
+_uitimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=19464210;
+ //BA.debugLineNum = 19464210;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -431,7 +434,14 @@ RDebugUtils.currentLine=19595265;
  //BA.debugLineNum = 19595265;BA.debugLine="uiTimer.Enabled = False";
 _uitimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=19595266;
- //BA.debugLineNum = 19595266;BA.debugLine="End Sub";
+ //BA.debugLineNum = 19595266;BA.debugLine="If musicService.mediaPlayer.IsInitialized Then";
+if (mostCurrent._musicservice._mediaplayer /*anywheresoftware.b4a.objects.MediaPlayerWrapper*/ .IsInitialized()) { 
+RDebugUtils.currentLine=19595267;
+ //BA.debugLineNum = 19595267;BA.debugLine="CallSub(musicService, \"pauseMusic\")";
+anywheresoftware.b4a.keywords.Common.CallSubDebug(processBA,(Object)(mostCurrent._musicservice.getObject()),"pauseMusic");
+ };
+RDebugUtils.currentLine=19595269;
+ //BA.debugLineNum = 19595269;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
@@ -444,7 +454,14 @@ RDebugUtils.currentLine=19529729;
  //BA.debugLineNum = 19529729;BA.debugLine="uiTimer.Enabled = True";
 _uitimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=19529730;
- //BA.debugLineNum = 19529730;BA.debugLine="End Sub";
+ //BA.debugLineNum = 19529730;BA.debugLine="If musicService.mediaPlayer.IsInitialized Then";
+if (mostCurrent._musicservice._mediaplayer /*anywheresoftware.b4a.objects.MediaPlayerWrapper*/ .IsInitialized()) { 
+RDebugUtils.currentLine=19529731;
+ //BA.debugLineNum = 19529731;BA.debugLine="CallSub(musicService, \"resumeMusic\")";
+anywheresoftware.b4a.keywords.Common.CallSubDebug(processBA,(Object)(mostCurrent._musicservice.getObject()),"resumeMusic");
+ };
+RDebugUtils.currentLine=19529733;
+ //BA.debugLineNum = 19529733;BA.debugLine="End Sub";
 return "";
 }
 public static String  _formatsongdur(int _ms) throws Exception{

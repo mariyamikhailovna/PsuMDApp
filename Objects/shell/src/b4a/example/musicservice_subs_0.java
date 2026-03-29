@@ -85,6 +85,29 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
+public static RemoteObject  _pausemusic() throws Exception{
+try {
+		Debug.PushSubsStack("pauseMusic (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,120);
+if (RapidSub.canDelegate("pausemusic")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","pausemusic");}
+ BA.debugLineNum = 120;BA.debugLine="Sub pauseMusic";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 121;BA.debugLine="If mediaPlayer.IsPlaying Then";
+Debug.ShouldStop(16777216);
+if (musicservice._mediaplayer.runMethod(true,"IsPlaying").<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 122;BA.debugLine="mediaPlayer.Pause";
+Debug.ShouldStop(33554432);
+musicservice._mediaplayer.runVoidMethod ("Pause");
+ };
+ BA.debugLineNum = 124;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _pausetoggle() throws Exception{
 try {
 		Debug.PushSubsStack("pauseToggle (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,71);
@@ -191,6 +214,29 @@ musicservice._songtimer = RemoteObject.createNew ("anywheresoftware.b4a.objects.
  //BA.debugLineNum = 11;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
+public static RemoteObject  _resumemusic() throws Exception{
+try {
+		Debug.PushSubsStack("resumeMusic (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,126);
+if (RapidSub.canDelegate("resumemusic")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","resumemusic");}
+ BA.debugLineNum = 126;BA.debugLine="Sub resumeMusic";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 127;BA.debugLine="If mediaPlayer.IsInitialized Then";
+Debug.ShouldStop(1073741824);
+if (musicservice._mediaplayer.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 128;BA.debugLine="mediaPlayer.Play";
+Debug.ShouldStop(-2147483648);
+musicservice._mediaplayer.runVoidMethod ("Play");
+ };
+ BA.debugLineNum = 130;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _service_create() throws Exception{
 try {
 		Debug.PushSubsStack("Service_Create (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,13);

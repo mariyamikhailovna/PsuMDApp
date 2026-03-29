@@ -64,19 +64,19 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backBtn_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,89);
+		Debug.PushSubsStack("backBtn_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,101);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","backbtn_click");}
- BA.debugLineNum = 89;BA.debugLine="Sub backBtn_Click";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 90;BA.debugLine="If helpPage > 0 Then";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 101;BA.debugLine="Sub backBtn_Click";
+Debug.ShouldStop(16);
+ BA.debugLineNum = 102;BA.debugLine="If helpPage > 0 Then";
+Debug.ShouldStop(32);
 if (RemoteObject.solveBoolean(">",helpactivity._helppage,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 91;BA.debugLine="showHelpPage(helpPage - 1)";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 103;BA.debugLine="showHelpPage(helpPage - 1)";
+Debug.ShouldStop(64);
 _showhelppage(RemoteObject.solve(new RemoteObject[] {helpactivity._helppage,RemoteObject.createImmutable(1)}, "-",1, 1));
  };
- BA.debugLineNum = 93;BA.debugLine="End Sub";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 105;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -85,17 +85,17 @@ catch (Exception e) {
 finally {
 			Debug.PopSubsStack();
 		}}
-public static RemoteObject  _closedashi_click() throws Exception{
+public static RemoteObject  _closehelp_click() throws Exception{
 try {
-		Debug.PushSubsStack("closedaShi_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,95);
-if (RapidSub.canDelegate("closedashi_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","closedashi_click");}
- BA.debugLineNum = 95;BA.debugLine="Sub closedaShi_Click";
-Debug.ShouldStop(1073741824);
- BA.debugLineNum = 96;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(-2147483648);
+		Debug.PushSubsStack("closeHelp_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,107);
+if (RapidSub.canDelegate("closehelp_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","closehelp_click");}
+ BA.debugLineNum = 107;BA.debugLine="Sub closeHelp_Click";
+Debug.ShouldStop(1024);
+ BA.debugLineNum = 108;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(2048);
 helpactivity.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 97;BA.debugLine="End Sub";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 109;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -121,19 +121,19 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _nextbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("nextBtn_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,83);
+		Debug.PushSubsStack("nextBtn_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,95);
 if (RapidSub.canDelegate("nextbtn_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","nextbtn_click");}
- BA.debugLineNum = 83;BA.debugLine="Sub nextBtn_Click";
-Debug.ShouldStop(262144);
- BA.debugLineNum = 84;BA.debugLine="If helpPage < 7 Then";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 95;BA.debugLine="Sub nextBtn_Click";
+Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 96;BA.debugLine="If helpPage < 7 Then";
+Debug.ShouldStop(-2147483648);
 if (RemoteObject.solveBoolean("<",helpactivity._helppage,BA.numberCast(double.class, 7))) { 
- BA.debugLineNum = 85;BA.debugLine="showHelpPage(helpPage + 1)";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 97;BA.debugLine="showHelpPage(helpPage + 1)";
+Debug.ShouldStop(1);
 _showhelppage(RemoteObject.solve(new RemoteObject[] {helpactivity._helppage,RemoteObject.createImmutable(1)}, "+",1, 1));
  };
- BA.debugLineNum = 87;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 99;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -167,7 +167,7 @@ Debug.ShouldStop(256);
 helpactivity._helppage = _page;
  BA.debugLineNum = 43;BA.debugLine="Select page";
 Debug.ShouldStop(1024);
-switch (BA.switchObjectToInt(_page,BA.numberCast(int.class, 0),BA.numberCast(int.class, 1),BA.numberCast(int.class, 2),BA.numberCast(int.class, 3),BA.numberCast(int.class, 4),BA.numberCast(int.class, 5),BA.numberCast(int.class, 6),BA.numberCast(int.class, 7))) {
+switch (BA.switchObjectToInt(_page,BA.numberCast(int.class, 0),BA.numberCast(int.class, 1),BA.numberCast(int.class, 2),BA.numberCast(int.class, 3),BA.numberCast(int.class, 4),BA.numberCast(int.class, 5),BA.numberCast(int.class, 6),BA.numberCast(int.class, 7),BA.numberCast(int.class, 8),BA.numberCast(int.class, 9),BA.numberCast(int.class, 10))) {
 case 0: {
  BA.debugLineNum = 45;BA.debugLine="titleLbl.Text = \"Welcome\"";
 Debug.ShouldStop(4096);
@@ -256,16 +256,49 @@ helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCha
 Debug.ShouldStop(1024);
 helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
+case 8: {
+ BA.debugLineNum = 77;BA.debugLine="titleLbl.Text = \"Themes\"";
+Debug.ShouldStop(4096);
+helpactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Themes"));
+ BA.debugLineNum = 78;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+Debug.ShouldStop(8192);
+helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+ BA.debugLineNum = 79;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+Debug.ShouldStop(16384);
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+ break; }
+case 9: {
+ BA.debugLineNum = 81;BA.debugLine="titleLbl.Text = \"Lamp\"";
+Debug.ShouldStop(65536);
+helpactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Lamp"));
+ BA.debugLineNum = 82;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+Debug.ShouldStop(131072);
+helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+ BA.debugLineNum = 83;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+Debug.ShouldStop(262144);
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+ break; }
+case 10: {
+ BA.debugLineNum = 85;BA.debugLine="titleLbl.Text = \"Navigation\"";
+Debug.ShouldStop(1048576);
+helpactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Navigation"));
+ BA.debugLineNum = 86;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+Debug.ShouldStop(2097152);
+helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+ BA.debugLineNum = 87;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+Debug.ShouldStop(4194304);
+helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+ break; }
 }
 ;
- BA.debugLineNum = 79;BA.debugLine="backBtn.Enabled = (page > 0)";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 91;BA.debugLine="backBtn.Enabled = (page > 0)";
+Debug.ShouldStop(67108864);
 helpactivity.mostCurrent._backbtn.runMethod(true,"setEnabled",BA.ObjectToBoolean((RemoteObject.solveBoolean(">",_page,BA.numberCast(double.class, 0)))));
- BA.debugLineNum = 80;BA.debugLine="nextBtn.Enabled = (page < 7)";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 92;BA.debugLine="nextBtn.Enabled = (page < 7)";
+Debug.ShouldStop(134217728);
 helpactivity.mostCurrent._nextbtn.runMethod(true,"setEnabled",BA.ObjectToBoolean((RemoteObject.solveBoolean("<",_page,BA.numberCast(double.class, 7)))));
- BA.debugLineNum = 81;BA.debugLine="End Sub";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 93;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

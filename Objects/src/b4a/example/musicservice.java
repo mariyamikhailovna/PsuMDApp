@@ -260,6 +260,23 @@ RDebugUtils.currentLine=8716297;
  //BA.debugLineNum = 8716297;BA.debugLine="End Sub";
 return "";
 }
+public static String  _pausemusic() throws Exception{
+RDebugUtils.currentModule="musicservice";
+if (Debug.shouldDelegate(processBA, "pausemusic", false))
+	 {return ((String) Debug.delegate(processBA, "pausemusic", null));}
+RDebugUtils.currentLine=24313856;
+ //BA.debugLineNum = 24313856;BA.debugLine="Sub pauseMusic";
+RDebugUtils.currentLine=24313857;
+ //BA.debugLineNum = 24313857;BA.debugLine="If mediaPlayer.IsPlaying Then";
+if (_mediaplayer.IsPlaying()) { 
+RDebugUtils.currentLine=24313858;
+ //BA.debugLineNum = 24313858;BA.debugLine="mediaPlayer.Pause";
+_mediaplayer.Pause();
+ };
+RDebugUtils.currentLine=24313860;
+ //BA.debugLineNum = 24313860;BA.debugLine="End Sub";
+return "";
+}
 public static String  _pausetoggle() throws Exception{
 RDebugUtils.currentModule="musicservice";
 if (Debug.shouldDelegate(processBA, "pausetoggle", false))
@@ -302,6 +319,23 @@ RDebugUtils.currentLine=8912901;
 _playsong();
 RDebugUtils.currentLine=8912902;
  //BA.debugLineNum = 8912902;BA.debugLine="End Sub";
+return "";
+}
+public static String  _resumemusic() throws Exception{
+RDebugUtils.currentModule="musicservice";
+if (Debug.shouldDelegate(processBA, "resumemusic", false))
+	 {return ((String) Debug.delegate(processBA, "resumemusic", null));}
+RDebugUtils.currentLine=24379392;
+ //BA.debugLineNum = 24379392;BA.debugLine="Sub resumeMusic";
+RDebugUtils.currentLine=24379393;
+ //BA.debugLineNum = 24379393;BA.debugLine="If mediaPlayer.IsInitialized Then";
+if (_mediaplayer.IsInitialized()) { 
+RDebugUtils.currentLine=24379394;
+ //BA.debugLineNum = 24379394;BA.debugLine="mediaPlayer.Play";
+_mediaplayer.Play();
+ };
+RDebugUtils.currentLine=24379396;
+ //BA.debugLineNum = 24379396;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_create() throws Exception{

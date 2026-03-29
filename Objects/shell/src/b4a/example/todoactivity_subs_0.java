@@ -123,9 +123,9 @@ todoactivity.mostCurrent._taskslist.runVoidMethod ("_removeat",(Object)(RemoteOb
  BA.debugLineNum = 328;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
 Debug.ShouldStop(128);
 todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("addTaskPanel")));
- BA.debugLineNum = 329;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 200dip, 100dip)";
+ BA.debugLineNum = 329;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)";
 Debug.ShouldStop(256);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("SetLayout",(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))));
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("SetLayout",(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 250)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))));
  BA.debugLineNum = 330;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
 Debug.ShouldStop(512);
 todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("setColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 255)),(Object)(BA.numberCast(int.class, 247)),(Object)(BA.numberCast(int.class, 247)),(Object)(BA.numberCast(int.class, 247))));
@@ -144,12 +144,12 @@ todoactivity.mostCurrent._entertaskbtn.runVoidMethod ("Initialize",todoactivity.
  BA.debugLineNum = 337;BA.debugLine="enterTaskBtn.Text = \"Enter task\"";
 Debug.ShouldStop(65536);
 todoactivity.mostCurrent._entertaskbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Enter task"));
- BA.debugLineNum = 339;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, 280di";
+ BA.debugLineNum = 339;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, addTa";
 Debug.ShouldStop(262144);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._addtasktextarea.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 280)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))));
- BA.debugLineNum = 340;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, 280d";
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._addtasktextarea.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent._addtaskbtnpnl.runMethod(true,"getWidth")),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))));
+ BA.debugLineNum = 340;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addT";
 Debug.ShouldStop(524288);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._entertaskbtn.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 280)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._entertaskbtn.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))),(Object)(todoactivity.mostCurrent._addtaskbtnpnl.runMethod(true,"getWidth")),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
  BA.debugLineNum = 342;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
 Debug.ShouldStop(2097152);
 todoactivity.mostCurrent._taskslist.runVoidMethod ("_add",RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), todoactivity.mostCurrent._addtaskpanel.getObject()),(Object)((todoactivity.mostCurrent._addtaskpanel.getObject())));
@@ -635,26 +635,26 @@ _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").
 Debug.ShouldStop(8192);
 _savedtasks.runVoidMethod ("Initialize");
  };
- BA.debugLineNum = 400;BA.debugLine="savedTasks.Add(newTask)";
-Debug.ShouldStop(32768);
-_savedtasks.runVoidMethod ("Add",(Object)((_newtask)));
- BA.debugLineNum = 401;BA.debugLine="kvs.Put(key, savedTasks)";
+ BA.debugLineNum = 401;BA.debugLine="savedTasks.Add(newTask)";
 Debug.ShouldStop(65536);
+_savedtasks.runVoidMethod ("Add",(Object)((_newtask)));
+ BA.debugLineNum = 402;BA.debugLine="kvs.Put(key, savedTasks)";
+Debug.ShouldStop(131072);
 todoactivity._kvs.runVoidMethod ("_put",(Object)(_key),(Object)((_savedtasks.getObject())));
- BA.debugLineNum = 403;BA.debugLine="tasksListUI(newTask)";
-Debug.ShouldStop(262144);
-_taskslistui(_newtask);
- BA.debugLineNum = 404;BA.debugLine="newAddTaskBtn";
+ BA.debugLineNum = 404;BA.debugLine="tasksListUI(newTask)";
 Debug.ShouldStop(524288);
-_newaddtaskbtn();
- BA.debugLineNum = 405;BA.debugLine="addTaskBtn.Enabled = True";
+_taskslistui(_newtask);
+ BA.debugLineNum = 405;BA.debugLine="newAddTaskBtn";
 Debug.ShouldStop(1048576);
-todoactivity.mostCurrent._addtaskbtn.runMethod(true,"setEnabled",todoactivity.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 406;BA.debugLine="updateProgress";
+_newaddtaskbtn();
+ BA.debugLineNum = 406;BA.debugLine="addTaskBtn.Enabled = True";
 Debug.ShouldStop(2097152);
+todoactivity.mostCurrent._addtaskbtn.runMethod(true,"setEnabled",todoactivity.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 407;BA.debugLine="updateProgress";
+Debug.ShouldStop(4194304);
 _updateprogress();
- BA.debugLineNum = 408;BA.debugLine="End Sub";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 409;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1053,9 +1053,9 @@ Debug.ShouldStop(128);
  BA.debugLineNum = 74;BA.debugLine="addTaskBtnPNL.Initialize(\"addTaskBtnPNL\")";
 Debug.ShouldStop(512);
 todoactivity.mostCurrent._addtaskbtnpnl.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("addTaskBtnPNL")));
- BA.debugLineNum = 75;BA.debugLine="addTaskBtnPNL.SetLayout(0, 0, 350dip, 50dip)";
+ BA.debugLineNum = 75;BA.debugLine="addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)";
 Debug.ShouldStop(1024);
-todoactivity.mostCurrent._addtaskbtnpnl.runVoidMethod ("SetLayout",(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 350)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))));
+todoactivity.mostCurrent._addtaskbtnpnl.runVoidMethod ("SetLayout",(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 235)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))));
  BA.debugLineNum = 76;BA.debugLine="addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250,";
 Debug.ShouldStop(2048);
 todoactivity.mostCurrent._addtaskbtnpnl.runVoidMethod ("setColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 255)),(Object)(BA.numberCast(int.class, 250)),(Object)(BA.numberCast(int.class, 250)),(Object)(BA.numberCast(int.class, 250))));
@@ -1065,9 +1065,9 @@ todoactivity.mostCurrent._addtaskbtn.runVoidMethod ("Initialize",todoactivity.mo
  BA.debugLineNum = 79;BA.debugLine="addTaskBtn.Text = \"+ add a task \"";
 Debug.ShouldStop(16384);
 todoactivity.mostCurrent._addtaskbtn.runMethod(true,"setText",BA.ObjectToCharSequence("+ add a task "));
- BA.debugLineNum = 80;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, 300d";
+ BA.debugLineNum = 80;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, addT";
 Debug.ShouldStop(32768);
-todoactivity.mostCurrent._addtaskbtnpnl.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._addtaskbtn.getObject())),(Object)(BA.numberCast(int.class, -(double) (0 + todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10))).<Integer>get().intValue()))),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 300)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))));
+todoactivity.mostCurrent._addtaskbtnpnl.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._addtaskbtn.getObject())),(Object)(BA.numberCast(int.class, -(double) (0 + todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10))).<Integer>get().intValue()))),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent._addtaskbtnpnl.runMethod(true,"getWidth")),(Object)(todoactivity.mostCurrent._addtaskbtnpnl.runMethod(true,"getHeight")));
  BA.debugLineNum = 82;BA.debugLine="tasksList.Add(addTaskBtnPNL, \"\")";
 Debug.ShouldStop(131072);
 todoactivity.mostCurrent._taskslist.runVoidMethod ("_add",RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), todoactivity.mostCurrent._addtaskbtnpnl.getObject()),(Object)((RemoteObject.createImmutable(""))));
@@ -1199,63 +1199,63 @@ finally {
 		}}
 public static RemoteObject  _showrenametaskpanel(RemoteObject _index,RemoteObject _oldtask) throws Exception{
 try {
-		Debug.PushSubsStack("showRenameTaskPanel (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,433);
+		Debug.PushSubsStack("showRenameTaskPanel (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,434);
 if (RapidSub.canDelegate("showrenametaskpanel")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","showrenametaskpanel", _index, _oldtask);}
 RemoteObject _ctx = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 Debug.locals.put("Index", _index);
 Debug.locals.put("oldTask", _oldtask);
- BA.debugLineNum = 433;BA.debugLine="Sub showRenameTaskPanel(Index As Int, oldTask As S";
-Debug.ShouldStop(65536);
- BA.debugLineNum = 435;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1) ' remove \"";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 434;BA.debugLine="Sub showRenameTaskPanel(Index As Int, oldTask As S";
+Debug.ShouldStop(131072);
+ BA.debugLineNum = 436;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1) ' remove \"";
+Debug.ShouldStop(524288);
 todoactivity.mostCurrent._taskslist.runVoidMethod ("_removeat",(Object)(RemoteObject.solve(new RemoteObject[] {todoactivity.mostCurrent._taskslist.runMethod(true,"_getsize"),RemoteObject.createImmutable(1)}, "-",1, 1)));
- BA.debugLineNum = 437;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
-Debug.ShouldStop(1048576);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("addTaskPanel")));
- BA.debugLineNum = 438;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 200dip, 100dip)";
+ BA.debugLineNum = 438;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
 Debug.ShouldStop(2097152);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("SetLayout",(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))));
- BA.debugLineNum = 439;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("addTaskPanel")));
+ BA.debugLineNum = 439;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)";
 Debug.ShouldStop(4194304);
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("SetLayout",(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 250)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))));
+ BA.debugLineNum = 440;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
+Debug.ShouldStop(8388608);
 todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("setColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 255)),(Object)(BA.numberCast(int.class, 247)),(Object)(BA.numberCast(int.class, 247)),(Object)(BA.numberCast(int.class, 247))));
- BA.debugLineNum = 441;BA.debugLine="addTaskTextArea.Initialize(\"addTodoText\")";
-Debug.ShouldStop(16777216);
-todoactivity.mostCurrent._addtasktextarea.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("addTodoText")));
- BA.debugLineNum = 442;BA.debugLine="addTaskTextArea.Text = oldTask";
+ BA.debugLineNum = 442;BA.debugLine="addTaskTextArea.Initialize(\"addTodoText\")";
 Debug.ShouldStop(33554432);
-todoactivity.mostCurrent._addtasktextarea.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(_oldtask));
- BA.debugLineNum = 443;BA.debugLine="Dim ctx As List";
+todoactivity.mostCurrent._addtasktextarea.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("addTodoText")));
+ BA.debugLineNum = 443;BA.debugLine="addTaskTextArea.Text = oldTask";
 Debug.ShouldStop(67108864);
-_ctx = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("ctx", _ctx);
- BA.debugLineNum = 444;BA.debugLine="ctx.Initialize";
+todoactivity.mostCurrent._addtasktextarea.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(_oldtask));
+ BA.debugLineNum = 444;BA.debugLine="Dim ctx As List";
 Debug.ShouldStop(134217728);
-_ctx.runVoidMethod ("Initialize");
- BA.debugLineNum = 445;BA.debugLine="ctx.Add(Index)";
+_ctx = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("ctx", _ctx);
+ BA.debugLineNum = 445;BA.debugLine="ctx.Initialize";
 Debug.ShouldStop(268435456);
-_ctx.runVoidMethod ("Add",(Object)((_index)));
- BA.debugLineNum = 446;BA.debugLine="ctx.Add(oldTask)";
+_ctx.runVoidMethod ("Initialize");
+ BA.debugLineNum = 446;BA.debugLine="ctx.Add(Index)";
 Debug.ShouldStop(536870912);
-_ctx.runVoidMethod ("Add",(Object)((_oldtask)));
- BA.debugLineNum = 447;BA.debugLine="addTaskTextArea.Tag = ctx";
+_ctx.runVoidMethod ("Add",(Object)((_index)));
+ BA.debugLineNum = 447;BA.debugLine="ctx.Add(oldTask)";
 Debug.ShouldStop(1073741824);
+_ctx.runVoidMethod ("Add",(Object)((_oldtask)));
+ BA.debugLineNum = 448;BA.debugLine="addTaskTextArea.Tag = ctx";
+Debug.ShouldStop(-2147483648);
 todoactivity.mostCurrent._addtasktextarea.runMethod(false,"setTag",(_ctx.getObject()));
- BA.debugLineNum = 449;BA.debugLine="enterTaskBtn.Initialize(\"enterTaskBtn\")";
-Debug.ShouldStop(1);
-todoactivity.mostCurrent._entertaskbtn.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("enterTaskBtn")));
- BA.debugLineNum = 450;BA.debugLine="enterTaskBtn.Text = \"Rename task\"";
+ BA.debugLineNum = 450;BA.debugLine="enterTaskBtn.Initialize(\"enterTaskBtn\")";
 Debug.ShouldStop(2);
+todoactivity.mostCurrent._entertaskbtn.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("enterTaskBtn")));
+ BA.debugLineNum = 451;BA.debugLine="enterTaskBtn.Text = \"Rename task\"";
+Debug.ShouldStop(4);
 todoactivity.mostCurrent._entertaskbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Rename task"));
- BA.debugLineNum = 452;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, 280di";
-Debug.ShouldStop(8);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._addtasktextarea.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 280)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))));
- BA.debugLineNum = 453;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, 280d";
+ BA.debugLineNum = 453;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, addTa";
 Debug.ShouldStop(16);
-todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._entertaskbtn.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 280)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 455;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
-Debug.ShouldStop(64);
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._addtasktextarea.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent._addtaskbtnpnl.runMethod(true,"getWidth")),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))));
+ BA.debugLineNum = 454;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addT";
+Debug.ShouldStop(32);
+todoactivity.mostCurrent._addtaskpanel.runVoidMethod ("AddView",(Object)((todoactivity.mostCurrent._entertaskbtn.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)))),(Object)(todoactivity.mostCurrent._addtaskbtnpnl.runMethod(true,"getWidth")),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
+ BA.debugLineNum = 456;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
+Debug.ShouldStop(128);
 todoactivity.mostCurrent._taskslist.runVoidMethod ("_add",RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), todoactivity.mostCurrent._addtaskpanel.getObject()),(Object)((todoactivity.mostCurrent._addtaskpanel.getObject())));
- BA.debugLineNum = 457;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 458;BA.debugLine="End Sub";
+Debug.ShouldStop(512);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1266,44 +1266,44 @@ finally {
 		}}
 public static RemoteObject  _taskcheckbox_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("taskCheckbox_CheckedChange (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,459);
+		Debug.PushSubsStack("taskCheckbox_CheckedChange (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,460);
 if (RapidSub.canDelegate("taskcheckbox_checkedchange")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","taskcheckbox_checkedchange", _checked);}
 RemoteObject _taskcheckbox = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
 RemoteObject _tasklbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 RemoteObject _key = RemoteObject.createImmutable("");
 Debug.locals.put("Checked", _checked);
- BA.debugLineNum = 459;BA.debugLine="Sub taskCheckbox_CheckedChange(Checked As Boolean)";
-Debug.ShouldStop(1024);
- BA.debugLineNum = 461;BA.debugLine="Dim taskCheckbox As CheckBox = Sender";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 460;BA.debugLine="Sub taskCheckbox_CheckedChange(Checked As Boolean)";
+Debug.ShouldStop(2048);
+ BA.debugLineNum = 462;BA.debugLine="Dim taskCheckbox As CheckBox = Sender";
+Debug.ShouldStop(8192);
 _taskcheckbox = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
 _taskcheckbox = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper"), todoactivity.mostCurrent.__c.runMethod(false,"Sender",todoactivity.mostCurrent.activityBA));Debug.locals.put("taskCheckbox", _taskcheckbox);Debug.locals.put("taskCheckbox", _taskcheckbox);
- BA.debugLineNum = 462;BA.debugLine="Dim taskLBL As Label = taskCheckbox.Tag";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 463;BA.debugLine="Dim taskLBL As Label = taskCheckbox.Tag";
+Debug.ShouldStop(16384);
 _tasklbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
 _tasklbl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.LabelWrapper"), _taskcheckbox.runMethod(false,"getTag"));Debug.locals.put("taskLBL", _tasklbl);Debug.locals.put("taskLBL", _tasklbl);
- BA.debugLineNum = 464;BA.debugLine="If Checked Then";
-Debug.ShouldStop(32768);
-if (_checked.<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 465;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
+ BA.debugLineNum = 465;BA.debugLine="If Checked Then";
 Debug.ShouldStop(65536);
+if (_checked.<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 466;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
+Debug.ShouldStop(131072);
 _tasklbl.runMethod(true,"setTextColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 50)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0))));
  }else {
- BA.debugLineNum = 467;BA.debugLine="taskLBL.TextColor = Colors.Black";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 468;BA.debugLine="taskLBL.TextColor = Colors.Black";
+Debug.ShouldStop(524288);
 _tasklbl.runMethod(true,"setTextColor",todoactivity.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
  };
- BA.debugLineNum = 470;BA.debugLine="Dim key As String = \"checked_\" & currentList & \"_";
-Debug.ShouldStop(2097152);
-_key = RemoteObject.concat(RemoteObject.createImmutable("checked_"),todoactivity.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_tasklbl.runMethod(true,"getText"));Debug.locals.put("key", _key);Debug.locals.put("key", _key);
- BA.debugLineNum = 471;BA.debugLine="kvs.Put(key, Checked)";
+ BA.debugLineNum = 471;BA.debugLine="Dim key As String = \"checked_\" & currentList & \"_";
 Debug.ShouldStop(4194304);
+_key = RemoteObject.concat(RemoteObject.createImmutable("checked_"),todoactivity.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_tasklbl.runMethod(true,"getText"));Debug.locals.put("key", _key);Debug.locals.put("key", _key);
+ BA.debugLineNum = 472;BA.debugLine="kvs.Put(key, Checked)";
+Debug.ShouldStop(8388608);
 todoactivity._kvs.runVoidMethod ("_put",(Object)(_key),(Object)((_checked)));
- BA.debugLineNum = 473;BA.debugLine="updateProgress";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 474;BA.debugLine="updateProgress";
+Debug.ShouldStop(33554432);
 _updateprogress();
- BA.debugLineNum = 475;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 476;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1314,7 +1314,7 @@ finally {
 		}}
 public static void  _taskslist_itemlongclick(RemoteObject _index,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,410);
+		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,411);
 if (RapidSub.canDelegate("taskslist_itemlongclick")) { b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","taskslist_itemlongclick", _index, _value); return;}
 ResumableSub_tasksList_ItemLongClick rsub = new ResumableSub_tasksList_ItemLongClick(null,_index,_value);
 rsub.resume(null, null);
@@ -1342,7 +1342,7 @@ RemoteObject _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.object
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,410);
+		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,411);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1355,8 +1355,8 @@ case 0:
 this.state = 1;
 Debug.locals.put("Index", _index);
 Debug.locals.put("Value", _value);
- BA.debugLineNum = 412;BA.debugLine="If Value = \"\" Then Return";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 413;BA.debugLine="If Value = \"\" Then Return";
+Debug.ShouldStop(268435456);
 if (true) break;
 
 case 1:
@@ -1376,11 +1376,11 @@ case 6:
 //C
 this.state = 7;
 ;
- BA.debugLineNum = 414;BA.debugLine="Msgbox2Async(\"Delete or rename this task?\", Value";
-Debug.ShouldStop(536870912);
-parent.mostCurrent.__c.runVoidMethod ("Msgbox2Async",(Object)(BA.ObjectToCharSequence("Delete or rename this task?")),(Object)(BA.ObjectToCharSequence(_value)),(Object)(BA.ObjectToString("Rename")),(Object)(BA.ObjectToString("")),(Object)(BA.ObjectToString("Delete")),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper"), parent.mostCurrent.__c.getField(false,"Null")),todoactivity.processBA,(Object)(parent.mostCurrent.__c.getField(true,"True")));
- BA.debugLineNum = 415;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+ BA.debugLineNum = 415;BA.debugLine="Msgbox2Async(\"Delete or rename this task?\", Value";
 Debug.ShouldStop(1073741824);
+parent.mostCurrent.__c.runVoidMethod ("Msgbox2Async",(Object)(BA.ObjectToCharSequence("Delete or rename this task?")),(Object)(BA.ObjectToCharSequence(_value)),(Object)(BA.ObjectToString("Rename")),(Object)(BA.ObjectToString("")),(Object)(BA.ObjectToString("Delete")),RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper"), parent.mostCurrent.__c.getField(false,"Null")),todoactivity.processBA,(Object)(parent.mostCurrent.__c.getField(true,"True")));
+ BA.debugLineNum = 416;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+Debug.ShouldStop(-2147483648);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","msgbox_result", todoactivity.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "todoactivity", "taskslist_itemlongclick"), null);
 this.state = 13;
 return;
@@ -1389,8 +1389,8 @@ case 13:
 this.state = 7;
 _res = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutable(0));Debug.locals.put("res", _res);
 ;
- BA.debugLineNum = 417;BA.debugLine="If res = DialogResponse.POSITIVE Then ' Rename";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 418;BA.debugLine="If res = DialogResponse.POSITIVE Then ' Rename";
+Debug.ShouldStop(2);
 if (true) break;
 
 case 7:
@@ -1399,8 +1399,8 @@ this.state = 12;
 if (RemoteObject.solveBoolean("=",_res,BA.numberCast(double.class, parent.mostCurrent.__c.getField(false,"DialogResponse").getField(true,"POSITIVE")))) { 
 this.state = 9;
 }else 
-{ BA.debugLineNum = 420;BA.debugLine="Else If res = DialogResponse.NEGATIVE Then ' Dele";
-Debug.ShouldStop(8);
+{ BA.debugLineNum = 421;BA.debugLine="Else If res = DialogResponse.NEGATIVE Then ' Dele";
+Debug.ShouldStop(16);
 if (RemoteObject.solveBoolean("=",_res,BA.numberCast(double.class, parent.mostCurrent.__c.getField(false,"DialogResponse").getField(true,"NEGATIVE")))) { 
 this.state = 11;
 }}
@@ -1409,38 +1409,38 @@ if (true) break;
 case 9:
 //C
 this.state = 12;
- BA.debugLineNum = 418;BA.debugLine="showRenameTaskPanel(Index, Value)";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 419;BA.debugLine="showRenameTaskPanel(Index, Value)";
+Debug.ShouldStop(4);
 _showrenametaskpanel(_index,BA.ObjectToString(_value));
  if (true) break;
 
 case 11:
 //C
 this.state = 12;
- BA.debugLineNum = 421;BA.debugLine="Dim key As String = \"list_\" & currentList";
-Debug.ShouldStop(16);
-_key = RemoteObject.concat(RemoteObject.createImmutable("list_"),parent.mostCurrent._currentlist);Debug.locals.put("key", _key);Debug.locals.put("key", _key);
- BA.debugLineNum = 422;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+ BA.debugLineNum = 422;BA.debugLine="Dim key As String = \"list_\" & currentList";
 Debug.ShouldStop(32);
+_key = RemoteObject.concat(RemoteObject.createImmutable("list_"),parent.mostCurrent._currentlist);Debug.locals.put("key", _key);Debug.locals.put("key", _key);
+ BA.debugLineNum = 423;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+Debug.ShouldStop(64);
 _savedtasks = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
 _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), parent._kvs.runMethod(false,"_get",(Object)(_key)));Debug.locals.put("savedTasks", _savedtasks);Debug.locals.put("savedTasks", _savedtasks);
- BA.debugLineNum = 423;BA.debugLine="savedTasks.RemoveAt(Index)";
-Debug.ShouldStop(64);
-_savedtasks.runVoidMethod ("RemoveAt",(Object)(_index));
- BA.debugLineNum = 424;BA.debugLine="kvs.Put(key, savedTasks)";
+ BA.debugLineNum = 424;BA.debugLine="savedTasks.RemoveAt(Index)";
 Debug.ShouldStop(128);
-parent._kvs.runVoidMethod ("_put",(Object)(_key),(Object)((_savedtasks.getObject())));
- BA.debugLineNum = 425;BA.debugLine="kvs.Remove(\"checked_\" & currentList & \"_\" & Valu";
+_savedtasks.runVoidMethod ("RemoveAt",(Object)(_index));
+ BA.debugLineNum = 425;BA.debugLine="kvs.Put(key, savedTasks)";
 Debug.ShouldStop(256);
-parent._kvs.runVoidMethod ("_remove",(Object)(RemoteObject.concat(RemoteObject.createImmutable("checked_"),parent.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_value)));
- BA.debugLineNum = 426;BA.debugLine="tasksList.RemoveAt(Index)";
+parent._kvs.runVoidMethod ("_put",(Object)(_key),(Object)((_savedtasks.getObject())));
+ BA.debugLineNum = 426;BA.debugLine="kvs.Remove(\"checked_\" & currentList & \"_\" & Valu";
 Debug.ShouldStop(512);
-parent.mostCurrent._taskslist.runVoidMethod ("_removeat",(Object)(_index));
- BA.debugLineNum = 427;BA.debugLine="updateProgress";
+parent._kvs.runVoidMethod ("_remove",(Object)(RemoteObject.concat(RemoteObject.createImmutable("checked_"),parent.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_value)));
+ BA.debugLineNum = 427;BA.debugLine="tasksList.RemoveAt(Index)";
 Debug.ShouldStop(1024);
-_updateprogress();
- BA.debugLineNum = 428;BA.debugLine="ToastMessageShow(\"Task deleted\", False)";
+parent.mostCurrent._taskslist.runVoidMethod ("_removeat",(Object)(_index));
+ BA.debugLineNum = 428;BA.debugLine="updateProgress";
 Debug.ShouldStop(2048);
+_updateprogress();
+ BA.debugLineNum = 429;BA.debugLine="ToastMessageShow(\"Task deleted\", False)";
+Debug.ShouldStop(4096);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Task deleted")),(Object)(parent.mostCurrent.__c.getField(true,"False")));
  if (true) break;
 
@@ -1448,8 +1448,8 @@ case 12:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 431;BA.debugLine="End Sub";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 432;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
 if (true) break;
 
             }
@@ -1464,7 +1464,7 @@ finally {
 }
 public static RemoteObject  _taskslistui(RemoteObject _newtask) throws Exception{
 try {
-		Debug.PushSubsStack("tasksListUI (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,477);
+		Debug.PushSubsStack("tasksListUI (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,478);
 if (RapidSub.canDelegate("taskslistui")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","taskslistui", _newtask);}
 RemoteObject _taskpnl = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _taskcheckbox = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
@@ -1473,81 +1473,81 @@ RemoteObject _divider = RemoteObject.declareNull("anywheresoftware.b4a.objects.P
 RemoteObject _checkedkey = RemoteObject.createImmutable("");
 RemoteObject _ischecked = RemoteObject.createImmutable(false);
 Debug.locals.put("newTask", _newtask);
- BA.debugLineNum = 477;BA.debugLine="Sub tasksListUI(newTask As String)";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 479;BA.debugLine="Dim taskPNL As Panel";
-Debug.ShouldStop(1073741824);
-_taskpnl = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("taskPNL", _taskpnl);
- BA.debugLineNum = 480;BA.debugLine="taskPNL.Initialize(\"taskPNL\")";
+ BA.debugLineNum = 478;BA.debugLine="Sub tasksListUI(newTask As String)";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 480;BA.debugLine="Dim taskPNL As Panel";
 Debug.ShouldStop(-2147483648);
-_taskpnl.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("taskPNL")));
- BA.debugLineNum = 481;BA.debugLine="taskPNL.SetLayout(0, 0, 100%x, 60dip)";
+_taskpnl = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("taskPNL", _taskpnl);
+ BA.debugLineNum = 481;BA.debugLine="taskPNL.Initialize(\"taskPNL\")";
 Debug.ShouldStop(1);
-_taskpnl.runVoidMethod ("SetLayout",(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),todoactivity.mostCurrent.activityBA)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))));
- BA.debugLineNum = 483;BA.debugLine="Dim taskCheckbox As CheckBox";
-Debug.ShouldStop(4);
-_taskcheckbox = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");Debug.locals.put("taskCheckbox", _taskcheckbox);
- BA.debugLineNum = 484;BA.debugLine="taskCheckbox.Initialize(\"taskCheckbox\")";
+_taskpnl.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("taskPNL")));
+ BA.debugLineNum = 482;BA.debugLine="taskPNL.SetLayout(0, 0, 250dip, 60dip)";
+Debug.ShouldStop(2);
+_taskpnl.runVoidMethod ("SetLayout",(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 250)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))));
+ BA.debugLineNum = 484;BA.debugLine="Dim taskCheckbox As CheckBox";
 Debug.ShouldStop(8);
-_taskcheckbox.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("taskCheckbox")));
- BA.debugLineNum = 485;BA.debugLine="taskPNL.AddView(taskCheckbox, 10dip, 15dip, 40dip";
+_taskcheckbox = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");Debug.locals.put("taskCheckbox", _taskcheckbox);
+ BA.debugLineNum = 485;BA.debugLine="taskCheckbox.Initialize(\"taskCheckbox\")";
 Debug.ShouldStop(16);
-_taskpnl.runVoidMethod ("AddView",(Object)((_taskcheckbox.getObject())),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 15)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 487;BA.debugLine="Dim taskLBL As Label";
-Debug.ShouldStop(64);
-_tasklbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("taskLBL", _tasklbl);
- BA.debugLineNum = 488;BA.debugLine="taskLBL.Initialize(\"taskLBL\")";
+_taskcheckbox.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("taskCheckbox")));
+ BA.debugLineNum = 486;BA.debugLine="taskPNL.AddView(taskCheckbox, 0dip, 10dip, 40dip,";
+Debug.ShouldStop(32);
+_taskpnl.runVoidMethod ("AddView",(Object)((_taskcheckbox.getObject())),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 0)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
+ BA.debugLineNum = 488;BA.debugLine="Dim taskLBL As Label";
 Debug.ShouldStop(128);
-_tasklbl.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("taskLBL")));
- BA.debugLineNum = 489;BA.debugLine="taskLBL.Text = newTask";
+_tasklbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("taskLBL", _tasklbl);
+ BA.debugLineNum = 489;BA.debugLine="taskLBL.Initialize(\"taskLBL\")";
 Debug.ShouldStop(256);
-_tasklbl.runMethod(true,"setText",BA.ObjectToCharSequence(_newtask));
- BA.debugLineNum = 490;BA.debugLine="taskLBL.TextColor = Colors.Black";
+_tasklbl.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("taskLBL")));
+ BA.debugLineNum = 490;BA.debugLine="taskLBL.Text = newTask";
 Debug.ShouldStop(512);
-_tasklbl.runMethod(true,"setTextColor",todoactivity.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 491;BA.debugLine="taskPNL.AddView(taskLBL, 60dip, 25dip, 80%x, 40di";
+_tasklbl.runMethod(true,"setText",BA.ObjectToCharSequence(_newtask));
+ BA.debugLineNum = 491;BA.debugLine="taskLBL.TextColor = Colors.Black";
 Debug.ShouldStop(1024);
-_taskpnl.runVoidMethod ("AddView",(Object)((_tasklbl.getObject())),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 25)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 80)),todoactivity.mostCurrent.activityBA)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 493;BA.debugLine="Dim divider As Panel";
-Debug.ShouldStop(4096);
-_divider = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("divider", _divider);
- BA.debugLineNum = 494;BA.debugLine="divider.Initialize(\"line\")";
+_tasklbl.runMethod(true,"setTextColor",todoactivity.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ BA.debugLineNum = 492;BA.debugLine="taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Wi";
+Debug.ShouldStop(2048);
+_taskpnl.runVoidMethod ("AddView",(Object)((_tasklbl.getObject())),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))),(Object)(RemoteObject.solve(new RemoteObject[] {_taskpnl.runMethod(true,"getWidth"),todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 80)))}, "-",1, 1)),(Object)(_taskpnl.runMethod(true,"getHeight")));
+ BA.debugLineNum = 494;BA.debugLine="Dim divider As Panel";
 Debug.ShouldStop(8192);
-_divider.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("line")));
- BA.debugLineNum = 495;BA.debugLine="divider.Color = Colors.ARGB(255, 60, 60, 60)";
+_divider = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("divider", _divider);
+ BA.debugLineNum = 495;BA.debugLine="divider.Initialize(\"line\")";
 Debug.ShouldStop(16384);
-_divider.runVoidMethod ("setColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 255)),(Object)(BA.numberCast(int.class, 60)),(Object)(BA.numberCast(int.class, 60)),(Object)(BA.numberCast(int.class, 60))));
- BA.debugLineNum = 496;BA.debugLine="taskPNL.AddView(divider, 0, 59dip, 100%x, 1dip)";
+_divider.runVoidMethod ("Initialize",todoactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("line")));
+ BA.debugLineNum = 496;BA.debugLine="divider.Color = Colors.ARGB(255, 60, 60, 60)";
 Debug.ShouldStop(32768);
-_taskpnl.runVoidMethod ("AddView",(Object)((_divider.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 59)))),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),todoactivity.mostCurrent.activityBA)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 1)))));
- BA.debugLineNum = 498;BA.debugLine="taskCheckbox.Tag = taskLBL";
-Debug.ShouldStop(131072);
+_divider.runVoidMethod ("setColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 255)),(Object)(BA.numberCast(int.class, 60)),(Object)(BA.numberCast(int.class, 60)),(Object)(BA.numberCast(int.class, 60))));
+ BA.debugLineNum = 497;BA.debugLine="taskPNL.AddView(divider, 0, 59dip, taskPNL.Width,";
+Debug.ShouldStop(65536);
+_taskpnl.runVoidMethod ("AddView",(Object)((_divider.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 59)))),(Object)(_taskpnl.runMethod(true,"getWidth")),(Object)(todoactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 1)))));
+ BA.debugLineNum = 499;BA.debugLine="taskCheckbox.Tag = taskLBL";
+Debug.ShouldStop(262144);
 _taskcheckbox.runMethod(false,"setTag",(_tasklbl.getObject()));
- BA.debugLineNum = 501;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentLi";
-Debug.ShouldStop(1048576);
-_checkedkey = RemoteObject.concat(RemoteObject.createImmutable("checked_"),todoactivity.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_newtask);Debug.locals.put("checkedKey", _checkedkey);Debug.locals.put("checkedKey", _checkedkey);
- BA.debugLineNum = 502;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
+ BA.debugLineNum = 502;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentLi";
 Debug.ShouldStop(2097152);
-if (todoactivity._kvs.runMethod(true,"_containskey",(Object)(_checkedkey)).<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 503;BA.debugLine="Dim isChecked As Boolean = kvs.Get(checkedKey)";
+_checkedkey = RemoteObject.concat(RemoteObject.createImmutable("checked_"),todoactivity.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_newtask);Debug.locals.put("checkedKey", _checkedkey);Debug.locals.put("checkedKey", _checkedkey);
+ BA.debugLineNum = 503;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
 Debug.ShouldStop(4194304);
-_ischecked = BA.ObjectToBoolean(todoactivity._kvs.runMethod(false,"_get",(Object)(_checkedkey)));Debug.locals.put("isChecked", _ischecked);Debug.locals.put("isChecked", _ischecked);
- BA.debugLineNum = 504;BA.debugLine="taskCheckbox.Checked = isChecked";
+if (todoactivity._kvs.runMethod(true,"_containskey",(Object)(_checkedkey)).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 504;BA.debugLine="Dim isChecked As Boolean = kvs.Get(checkedKey)";
 Debug.ShouldStop(8388608);
-_taskcheckbox.runMethodAndSync(true,"setChecked",_ischecked);
- BA.debugLineNum = 505;BA.debugLine="If isChecked Then";
+_ischecked = BA.ObjectToBoolean(todoactivity._kvs.runMethod(false,"_get",(Object)(_checkedkey)));Debug.locals.put("isChecked", _ischecked);Debug.locals.put("isChecked", _ischecked);
+ BA.debugLineNum = 505;BA.debugLine="taskCheckbox.Checked = isChecked";
 Debug.ShouldStop(16777216);
-if (_ischecked.<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 506;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
+_taskcheckbox.runMethodAndSync(true,"setChecked",_ischecked);
+ BA.debugLineNum = 506;BA.debugLine="If isChecked Then";
 Debug.ShouldStop(33554432);
+if (_ischecked.<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 507;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
+Debug.ShouldStop(67108864);
 _tasklbl.runMethod(true,"setTextColor",todoactivity.mostCurrent.__c.getField(false,"Colors").runMethod(true,"ARGB",(Object)(BA.numberCast(int.class, 50)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0))));
  };
  };
- BA.debugLineNum = 510;BA.debugLine="tasksList.Add(taskPNL, newTask)";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 511;BA.debugLine="tasksList.Add(taskPNL, newTask)";
+Debug.ShouldStop(1073741824);
 todoactivity.mostCurrent._taskslist.runVoidMethod ("_add",RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), _taskpnl.getObject()),(Object)((_newtask)));
- BA.debugLineNum = 512;BA.debugLine="End Sub";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 513;BA.debugLine="End Sub";
+Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1558,7 +1558,7 @@ finally {
 		}}
 public static RemoteObject  _updateprogress() throws Exception{
 try {
-		Debug.PushSubsStack("updateProgress (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,514);
+		Debug.PushSubsStack("updateProgress (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,515);
 if (RapidSub.canDelegate("updateprogress")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","updateprogress");}
 RemoteObject _key = RemoteObject.createImmutable("");
 RemoteObject _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -1567,52 +1567,52 @@ RemoteObject _donetasks = RemoteObject.createImmutable(0);
 RemoteObject _percentagetasks = RemoteObject.createImmutable(0);
 RemoteObject _task = RemoteObject.createImmutable("");
 RemoteObject _checkedkey = RemoteObject.createImmutable("");
- BA.debugLineNum = 514;BA.debugLine="Sub updateProgress";
-Debug.ShouldStop(2);
- BA.debugLineNum = 516;BA.debugLine="If currentList = \"\" Then";
-Debug.ShouldStop(8);
-if (RemoteObject.solveBoolean("=",todoactivity.mostCurrent._currentlist,BA.ObjectToString(""))) { 
- BA.debugLineNum = 517;BA.debugLine="progressNumber.Text = \"\"";
+ BA.debugLineNum = 515;BA.debugLine="Sub updateProgress";
+Debug.ShouldStop(4);
+ BA.debugLineNum = 517;BA.debugLine="If currentList = \"\" Then";
 Debug.ShouldStop(16);
-todoactivity.mostCurrent._progressnumber.runMethod(true,"setText",BA.ObjectToCharSequence(""));
- BA.debugLineNum = 518;BA.debugLine="Return";
+if (RemoteObject.solveBoolean("=",todoactivity.mostCurrent._currentlist,BA.ObjectToString(""))) { 
+ BA.debugLineNum = 518;BA.debugLine="progressNumber.Text = \"\"";
 Debug.ShouldStop(32);
+todoactivity.mostCurrent._progressnumber.runMethod(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 519;BA.debugLine="Return";
+Debug.ShouldStop(64);
 if (true) return RemoteObject.createImmutable("");
  };
- BA.debugLineNum = 521;BA.debugLine="Dim key As String = \"list_\" & currentList";
-Debug.ShouldStop(256);
-_key = RemoteObject.concat(RemoteObject.createImmutable("list_"),todoactivity.mostCurrent._currentlist);Debug.locals.put("key", _key);Debug.locals.put("key", _key);
- BA.debugLineNum = 522;BA.debugLine="If kvs.ContainsKey(key) = False Then";
+ BA.debugLineNum = 522;BA.debugLine="Dim key As String = \"list_\" & currentList";
 Debug.ShouldStop(512);
-if (RemoteObject.solveBoolean("=",todoactivity._kvs.runMethod(true,"_containskey",(Object)(_key)),todoactivity.mostCurrent.__c.getField(true,"False"))) { 
- BA.debugLineNum = 523;BA.debugLine="progressNumber.Text = \"0 / 0 tasks done!\"";
+_key = RemoteObject.concat(RemoteObject.createImmutable("list_"),todoactivity.mostCurrent._currentlist);Debug.locals.put("key", _key);Debug.locals.put("key", _key);
+ BA.debugLineNum = 523;BA.debugLine="If kvs.ContainsKey(key) = False Then";
 Debug.ShouldStop(1024);
-todoactivity.mostCurrent._progressnumber.runMethod(true,"setText",BA.ObjectToCharSequence("0 / 0 tasks done!"));
- BA.debugLineNum = 524;BA.debugLine="progressPercent.Text = \"0%\"";
+if (RemoteObject.solveBoolean("=",todoactivity._kvs.runMethod(true,"_containskey",(Object)(_key)),todoactivity.mostCurrent.__c.getField(true,"False"))) { 
+ BA.debugLineNum = 524;BA.debugLine="progressNumber.Text = \"0 / 0 tasks done!\"";
 Debug.ShouldStop(2048);
-todoactivity.mostCurrent._progresspercent.runMethod(true,"setText",BA.ObjectToCharSequence("0%"));
- BA.debugLineNum = 525;BA.debugLine="progressBar.Progress = 0";
+todoactivity.mostCurrent._progressnumber.runMethod(true,"setText",BA.ObjectToCharSequence("0 / 0 tasks done!"));
+ BA.debugLineNum = 525;BA.debugLine="progressPercent.Text = \"0%\"";
 Debug.ShouldStop(4096);
-todoactivity.mostCurrent._progressbar.runMethod(true,"setProgress",BA.numberCast(int.class, 0));
- BA.debugLineNum = 526;BA.debugLine="Return";
+todoactivity.mostCurrent._progresspercent.runMethod(true,"setText",BA.ObjectToCharSequence("0%"));
+ BA.debugLineNum = 526;BA.debugLine="progressBar.Progress = 0";
 Debug.ShouldStop(8192);
+todoactivity.mostCurrent._progressbar.runMethod(true,"setProgress",BA.numberCast(int.class, 0));
+ BA.debugLineNum = 527;BA.debugLine="Return";
+Debug.ShouldStop(16384);
 if (true) return RemoteObject.createImmutable("");
  };
- BA.debugLineNum = 530;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 531;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+Debug.ShouldStop(262144);
 _savedtasks = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
 _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), todoactivity._kvs.runMethod(false,"_get",(Object)(_key)));Debug.locals.put("savedTasks", _savedtasks);Debug.locals.put("savedTasks", _savedtasks);
- BA.debugLineNum = 531;BA.debugLine="Dim totalTasks As Int = savedTasks.Size";
-Debug.ShouldStop(262144);
-_totaltasks = _savedtasks.runMethod(true,"getSize");Debug.locals.put("totalTasks", _totaltasks);Debug.locals.put("totalTasks", _totaltasks);
- BA.debugLineNum = 532;BA.debugLine="Dim doneTasks As Int = 0";
+ BA.debugLineNum = 532;BA.debugLine="Dim totalTasks As Int = savedTasks.Size";
 Debug.ShouldStop(524288);
-_donetasks = BA.numberCast(int.class, 0);Debug.locals.put("doneTasks", _donetasks);Debug.locals.put("doneTasks", _donetasks);
- BA.debugLineNum = 533;BA.debugLine="Dim percentageTasks As Int = 0";
+_totaltasks = _savedtasks.runMethod(true,"getSize");Debug.locals.put("totalTasks", _totaltasks);Debug.locals.put("totalTasks", _totaltasks);
+ BA.debugLineNum = 533;BA.debugLine="Dim doneTasks As Int = 0";
 Debug.ShouldStop(1048576);
+_donetasks = BA.numberCast(int.class, 0);Debug.locals.put("doneTasks", _donetasks);Debug.locals.put("doneTasks", _donetasks);
+ BA.debugLineNum = 534;BA.debugLine="Dim percentageTasks As Int = 0";
+Debug.ShouldStop(2097152);
 _percentagetasks = BA.numberCast(int.class, 0);Debug.locals.put("percentageTasks", _percentagetasks);Debug.locals.put("percentageTasks", _percentagetasks);
- BA.debugLineNum = 535;BA.debugLine="For Each task As String In savedTasks";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 536;BA.debugLine="For Each task As String In savedTasks";
+Debug.ShouldStop(8388608);
 {
 final RemoteObject group16 = _savedtasks;
 final int groupLen16 = group16.runMethod(true,"getSize").<Integer>get()
@@ -1621,37 +1621,37 @@ final int groupLen16 = group16.runMethod(true,"getSize").<Integer>get()
 for (; index16 < groupLen16;index16++){
 _task = BA.ObjectToString(group16.runMethod(false,"Get",index16));Debug.locals.put("task", _task);
 Debug.locals.put("task", _task);
- BA.debugLineNum = 536;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentL";
-Debug.ShouldStop(8388608);
-_checkedkey = RemoteObject.concat(RemoteObject.createImmutable("checked_"),todoactivity.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_task);Debug.locals.put("checkedKey", _checkedkey);Debug.locals.put("checkedKey", _checkedkey);
- BA.debugLineNum = 537;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
+ BA.debugLineNum = 537;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentL";
 Debug.ShouldStop(16777216);
-if (todoactivity._kvs.runMethod(true,"_containskey",(Object)(_checkedkey)).<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 538;BA.debugLine="If kvs.Get(checkedKey) = True Then";
+_checkedkey = RemoteObject.concat(RemoteObject.createImmutable("checked_"),todoactivity.mostCurrent._currentlist,RemoteObject.createImmutable("_"),_task);Debug.locals.put("checkedKey", _checkedkey);Debug.locals.put("checkedKey", _checkedkey);
+ BA.debugLineNum = 538;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
 Debug.ShouldStop(33554432);
-if (RemoteObject.solveBoolean("=",todoactivity._kvs.runMethod(false,"_get",(Object)(_checkedkey)),(todoactivity.mostCurrent.__c.getField(true,"True")))) { 
- BA.debugLineNum = 539;BA.debugLine="doneTasks = doneTasks + 1";
+if (todoactivity._kvs.runMethod(true,"_containskey",(Object)(_checkedkey)).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 539;BA.debugLine="If kvs.Get(checkedKey) = True Then";
 Debug.ShouldStop(67108864);
+if (RemoteObject.solveBoolean("=",todoactivity._kvs.runMethod(false,"_get",(Object)(_checkedkey)),(todoactivity.mostCurrent.__c.getField(true,"True")))) { 
+ BA.debugLineNum = 540;BA.debugLine="doneTasks = doneTasks + 1";
+Debug.ShouldStop(134217728);
 _donetasks = RemoteObject.solve(new RemoteObject[] {_donetasks,RemoteObject.createImmutable(1)}, "+",1, 1);Debug.locals.put("doneTasks", _donetasks);
  };
  };
  }
 }Debug.locals.put("task", _task);
 ;
- BA.debugLineNum = 544;BA.debugLine="percentageTasks = (doneTasks / totalTasks) * 100";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 545;BA.debugLine="percentageTasks = (doneTasks / totalTasks) * 100";
+Debug.ShouldStop(1);
 _percentagetasks = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {_donetasks,_totaltasks}, "/",0, 0)),RemoteObject.createImmutable(100)}, "*",0, 0));Debug.locals.put("percentageTasks", _percentagetasks);
- BA.debugLineNum = 546;BA.debugLine="progressNumber.Text = doneTasks & \" / \" & totalTa";
-Debug.ShouldStop(2);
-todoactivity.mostCurrent._progressnumber.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_donetasks,RemoteObject.createImmutable(" / "),_totaltasks,RemoteObject.createImmutable(" tasks done!"))));
- BA.debugLineNum = 547;BA.debugLine="progressPercent.Text = percentageTasks & \"%\"";
+ BA.debugLineNum = 547;BA.debugLine="progressNumber.Text = doneTasks & \" / \" & totalTa";
 Debug.ShouldStop(4);
-todoactivity.mostCurrent._progresspercent.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_percentagetasks,RemoteObject.createImmutable("%"))));
- BA.debugLineNum = 548;BA.debugLine="progressBar.Progress = percentageTasks";
+todoactivity.mostCurrent._progressnumber.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_donetasks,RemoteObject.createImmutable(" / "),_totaltasks,RemoteObject.createImmutable(" tasks done!"))));
+ BA.debugLineNum = 548;BA.debugLine="progressPercent.Text = percentageTasks & \"%\"";
 Debug.ShouldStop(8);
+todoactivity.mostCurrent._progresspercent.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_percentagetasks,RemoteObject.createImmutable("%"))));
+ BA.debugLineNum = 549;BA.debugLine="progressBar.Progress = percentageTasks";
+Debug.ShouldStop(16);
 todoactivity.mostCurrent._progressbar.runMethod(true,"setProgress",_percentagetasks);
- BA.debugLineNum = 550;BA.debugLine="End Sub";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 551;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

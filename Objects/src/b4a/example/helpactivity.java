@@ -493,16 +493,49 @@ RDebugUtils.currentLine=3145763;
  //BA.debugLineNum = 3145763;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
+case 8: {
+RDebugUtils.currentLine=3145765;
+ //BA.debugLineNum = 3145765;BA.debugLine="titleLbl.Text = \"Themes\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Themes"));
+RDebugUtils.currentLine=3145766;
+ //BA.debugLineNum = 3145766;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+RDebugUtils.currentLine=3145767;
+ //BA.debugLineNum = 3145767;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
+case 9: {
+RDebugUtils.currentLine=3145769;
+ //BA.debugLineNum = 3145769;BA.debugLine="titleLbl.Text = \"Lamp\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Lamp"));
+RDebugUtils.currentLine=3145770;
+ //BA.debugLineNum = 3145770;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+RDebugUtils.currentLine=3145771;
+ //BA.debugLineNum = 3145771;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
+case 10: {
+RDebugUtils.currentLine=3145773;
+ //BA.debugLineNum = 3145773;BA.debugLine="titleLbl.Text = \"Navigation\"";
+mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Navigation"));
+RDebugUtils.currentLine=3145774;
+ //BA.debugLineNum = 3145774;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+RDebugUtils.currentLine=3145775;
+ //BA.debugLineNum = 3145775;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ break; }
 }
 ;
-RDebugUtils.currentLine=3145767;
- //BA.debugLineNum = 3145767;BA.debugLine="backBtn.Enabled = (page > 0)";
+RDebugUtils.currentLine=3145779;
+ //BA.debugLineNum = 3145779;BA.debugLine="backBtn.Enabled = (page > 0)";
 mostCurrent._backbtn.setEnabled((_page>0));
-RDebugUtils.currentLine=3145768;
- //BA.debugLineNum = 3145768;BA.debugLine="nextBtn.Enabled = (page < 7)";
+RDebugUtils.currentLine=3145780;
+ //BA.debugLineNum = 3145780;BA.debugLine="nextBtn.Enabled = (page < 7)";
 mostCurrent._nextbtn.setEnabled((_page<7));
-RDebugUtils.currentLine=3145769;
- //BA.debugLineNum = 3145769;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3145781;
+ //BA.debugLineNum = 3145781;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -540,17 +573,17 @@ RDebugUtils.currentLine=3276804;
  //BA.debugLineNum = 3276804;BA.debugLine="End Sub";
 return "";
 }
-public static String  _closedashi_click() throws Exception{
+public static String  _closehelp_click() throws Exception{
 RDebugUtils.currentModule="helpactivity";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "closedashi_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "closedashi_click", null));}
-RDebugUtils.currentLine=3342336;
- //BA.debugLineNum = 3342336;BA.debugLine="Sub closedaShi_Click";
-RDebugUtils.currentLine=3342337;
- //BA.debugLineNum = 3342337;BA.debugLine="Activity.Finish";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "closehelp_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "closehelp_click", null));}
+RDebugUtils.currentLine=24576000;
+ //BA.debugLineNum = 24576000;BA.debugLine="Sub closeHelp_Click";
+RDebugUtils.currentLine=24576001;
+ //BA.debugLineNum = 24576001;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=3342338;
- //BA.debugLineNum = 3342338;BA.debugLine="End Sub";
+RDebugUtils.currentLine=24576002;
+ //BA.debugLineNum = 24576002;BA.debugLine="End Sub";
 return "";
 }
 public static String  _nextbtn_click() throws Exception{

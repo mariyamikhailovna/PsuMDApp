@@ -78,12 +78,12 @@ End Sub
 Sub newAddTaskBtn
 	
 	addTaskBtnPNL.Initialize("addTaskBtnPNL")
-	addTaskBtnPNL.SetLayout(0, 0, 350dip, 50dip)
+	addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)
 	addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250, 250)
 	
 	addTaskBtn.Initialize("addTaskBtn")
 	addTaskBtn.Text = "+ add a task "
-	addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, 300dip, 50dip)
+	addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, addTaskBtnPNL.Width, addTaskBtnPNL.Height)
 	
 	tasksList.Add(addTaskBtnPNL, "")
 	
@@ -332,7 +332,7 @@ Sub addTaskBtn_Click
 	tasksList.RemoveAt(tasksList.Size - 1)
 	
 	addTaskPanel.Initialize("addTaskPanel")
-	addTaskPanel.SetLayout(10dip, 0, 200dip, 100dip)
+	addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)
 	addTaskPanel.Color = Colors.ARGB(255, 247, 247, 247)
 	
 	addTaskTextArea.Initialize("addTodoText")
@@ -342,8 +342,8 @@ Sub addTaskBtn_Click
 	enterTaskBtn.Initialize("enterTaskBtn")
 	enterTaskBtn.Text = "Enter task"
 	
-	addTaskPanel.AddView(addTaskTextArea, 0, 0, 280dip, 60dip)
-	addTaskPanel.AddView(enterTaskBtn, 0, 50dip, 280dip, 40dip)
+	addTaskPanel.AddView(addTaskTextArea, 0, 0, addTaskBtnPNL.Width, 60dip)
+	addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addTaskBtnPNL.Width, 40dip)
 	
 	tasksList.Add(addTaskPanel, addTaskPanel)
 	
@@ -403,6 +403,7 @@ Sub enterTaskBtn_Click
 	Else
 		savedTasks.Initialize
 	End If
+	
 	savedTasks.Add(newTask)
 	kvs.Put(key, savedTasks)
 
@@ -441,7 +442,7 @@ Sub showRenameTaskPanel(Index As Int, oldTask As String)
 	tasksList.RemoveAt(tasksList.Size - 1) ' remove "+ add a task" btn
 
 	addTaskPanel.Initialize("addTaskPanel")
-	addTaskPanel.SetLayout(10dip, 0, 200dip, 100dip)
+	addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)
 	addTaskPanel.Color = Colors.ARGB(255, 247, 247, 247)
 
 	addTaskTextArea.Initialize("addTodoText")
@@ -455,8 +456,8 @@ Sub showRenameTaskPanel(Index As Int, oldTask As String)
 	enterTaskBtn.Initialize("enterTaskBtn")
 	enterTaskBtn.Text = "Rename task"
 
-	addTaskPanel.AddView(addTaskTextArea, 0, 0, 280dip, 60dip)
-	addTaskPanel.AddView(enterTaskBtn, 0, 50dip, 280dip, 40dip)
+	addTaskPanel.AddView(addTaskTextArea, 0, 0, addTaskBtnPNL.Width, 60dip)
+	addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addTaskBtnPNL.Width, 40dip)
 
 	tasksList.Add(addTaskPanel, addTaskPanel)
 
@@ -484,22 +485,22 @@ Sub tasksListUI(newTask As String)
 	
 	Dim taskPNL As Panel
 	taskPNL.Initialize("taskPNL")
-	taskPNL.SetLayout(0, 0, 100%x, 60dip)
+	taskPNL.SetLayout(0, 0, 250dip, 60dip)
 	
 	Dim taskCheckbox As CheckBox
 	taskCheckbox.Initialize("taskCheckbox")
-	taskPNL.AddView(taskCheckbox, 10dip, 15dip, 40dip, 40dip)
+	taskPNL.AddView(taskCheckbox, 0dip, 10dip, 40dip, 40dip)
 	
 	Dim taskLBL As Label
 	taskLBL.Initialize("taskLBL")
 	taskLBL.Text = newTask
 	taskLBL.TextColor = Colors.Black
-	taskPNL.AddView(taskLBL, 60dip, 25dip, 80%x, 40dip)
+	taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Width - 80dip, taskPNL.Height)
 	
 	Dim divider As Panel
 	divider.Initialize("line")
 	divider.Color = Colors.ARGB(255, 60, 60, 60)
-	taskPNL.AddView(divider, 0, 59dip, 100%x, 1dip)
+	taskPNL.AddView(divider, 0, 59dip, taskPNL.Width, 1dip)
 	
 	taskCheckbox.Tag = taskLBL
 

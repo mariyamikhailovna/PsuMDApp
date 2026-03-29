@@ -122,3 +122,15 @@ Sub prevSong
 	End If
 	playSong
 End Sub
+
+Sub pauseMusic
+	If mediaPlayer.IsPlaying Then
+		mediaPlayer.Pause
+	End If
+End Sub
+
+Sub resumeMusic
+	If mediaPlayer.IsInitialized Then
+		mediaPlayer.Play
+	End If
+End Sub

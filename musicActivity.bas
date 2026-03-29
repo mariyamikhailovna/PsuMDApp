@@ -24,6 +24,7 @@ End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("musicLayout.bal")
+	Log(GetDeviceLayoutValues)
     
 	' Populate ListView from service playlist
 	StartService(musicService)
@@ -32,7 +33,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		Dim title As String = musicService.musicPlaylist.Get(i)
 		title = title.SubString2(0, title.Length - 4)  ' remove .mp3
 		title = title.SubString(7)                      ' remove "tracks/"
-		ListView1.AddSingleLine((i + 1) & " " & title)
+		ListView1.AddSingleLine((i + 1) & "   " & title)
 		ListView1.SingleLineLayout.Label.TextColor = Colors.Black
 	Next
     
@@ -43,10 +44,16 @@ End Sub
 
 Sub Activity_Resume
 	uiTimer.Enabled = True
+	If musicService.mediaPlayer.IsInitialized Then
+		CallSub(musicService, "resumeMusic")
+	End If
 End Sub
 
 Sub Activity_Pause(UserClosed As Boolean)
 	uiTimer.Enabled = False
+	If musicService.mediaPlayer.IsInitialized Then
+		CallSub(musicService, "pauseMusic")
+	End If
 End Sub
 
 Sub formatSongDur(ms As Int) As String

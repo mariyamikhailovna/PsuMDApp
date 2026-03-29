@@ -331,21 +331,21 @@ End Sub
 
 Private Sub sched_btn_Click
 	Activity.Finish
-	StartActivity(Schedule_MODULE)
+	StartActivity(Schedule_module)
 End Sub
 
 Private Sub Day_btn_Click
-	If Day_MODULE.currentDate = "" Then
+	If day_module.currentDate = "" Then
 		Dim currentyear As Int = DateTime.GetYear(DateTime.Now)
 		Dim currentmonth As Int = DateTime.GetMonth(DateTime.Now)
 		Dim currentday As Int = DateTime.GetDayOfMonth(DateTime.Now)
 		Dim datestr As String= currentyear & "-" & NumberFormat(currentmonth,2, 0) & "-" & NumberFormat(currentday,2,0)
-		Day_MODULE.currentDate = datestr
-		Log(Day_MODULE.currentDate)
+		day_module.currentDate = datestr
+		Log(day_module.currentDate)
 	End If
 	
 	Activity.Finish
-	StartActivity(Day_MODULE)
+	StartActivity(day_module)
 End Sub
 
 Private Sub Month_btn_Click

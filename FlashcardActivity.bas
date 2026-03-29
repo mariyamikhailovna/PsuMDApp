@@ -160,7 +160,7 @@ Private Sub addcards_Click
 		Return
 	End If
 	decksettingpanel.Visible = False
-	StartActivity(Add_Card_Module)
+	StartActivity(Add_card_module)
 End Sub
 
 Private Sub rename_deck_Click
@@ -180,7 +180,7 @@ End Sub
 
 Private Sub browse_cards_Click
 	decksettingpanel.Visible = False
-	StartActivity(DECK_ALL_CARDS)
+	StartActivity(deck_all_cards)
 End Sub
 
 Private Sub cancelbtn_Click

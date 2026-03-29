@@ -79,6 +79,18 @@ Sub showHelpPage(page As Int)
 			titleLbl.Text = "To-do List"
 			descriptionLbl.Text = "The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
+		Case 8
+			titleLbl.Text = "Themes"
+			descriptionLbl.Text = "read title. does what it's supposed to do."
+			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
+		Case 9
+			titleLbl.Text = "Lamp"
+			descriptionLbl.Text = "read title. does what it's supposed to do."
+			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
+		Case 10
+			titleLbl.Text = "Navigation"
+			descriptionLbl.Text = "read title. does what it's supposed to do."
+			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
 	End Select
     
 	' Disable buttons at limits
@@ -98,6 +110,6 @@ Sub backBtn_Click
 	End If
 End Sub
 
-Sub closedaShi_Click
+Sub closeHelp_Click
 	Activity.Finish
 End Sub
