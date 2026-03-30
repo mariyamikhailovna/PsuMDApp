@@ -37,7 +37,7 @@ Sub Activity_Create(FirstTime As Boolean)
 
 End Sub
 
-Sub Activity_Resume
+Sub Activity_Resume	
 	If eventtype = "Event" Then
 		eventrb.Checked = True
 	Else if eventtype = "Task" Then
@@ -50,6 +50,7 @@ Sub Activity_Resume
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
+
 	eventrb.Checked = False
 	taskrb.Checked = False
 	birthdayrb.Checked = False

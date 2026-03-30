@@ -19,7 +19,8 @@
 		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
 		android:label="Makoto Niijima"
-		android:theme="@style/LightTheme">
+		android:theme="@style/LightTheme"
+		android:largeHeap="true">
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
@@ -119,38 +120,6 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".musicactivity"
-			android:label="Makoto Niijima"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".flashcardactivity"
-			android:label="Makoto Niijima"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".calendaractivity"
-			android:label="Makoto Niijima"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".schedule_module"
-			android:label="Makoto Niijima"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
 			android:name=".active_recall"
 			android:label="Makoto Niijima"
 			android:screenOrientation="portrait"
@@ -191,6 +160,14 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".calendaractivity"
+			android:label="Makoto Niijima"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".card_module"
 			android:label="Makoto Niijima"
 			android:screenOrientation="portrait"
@@ -208,6 +185,30 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".deck_all_cards"
+			android:label="Makoto Niijima"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".flashcardactivity"
+			android:label="Makoto Niijima"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".musicactivity"
+			android:label="Makoto Niijima"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".schedule_module"
 			android:label="Makoto Niijima"
 			android:screenOrientation="portrait"
 			android:exported="true">

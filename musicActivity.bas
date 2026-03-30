@@ -43,17 +43,11 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
-	uiTimer.Enabled = True
-	If musicService.mediaPlayer.IsInitialized Then
-		CallSub(musicService, "resumeMusic")
-	End If
+	
 End Sub
 
 Sub Activity_Pause(UserClosed As Boolean)
-	uiTimer.Enabled = False
-	If musicService.mediaPlayer.IsInitialized Then
-		CallSub(musicService, "pauseMusic")
-	End If
+
 End Sub
 
 Sub formatSongDur(ms As Int) As String

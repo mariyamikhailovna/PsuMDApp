@@ -37,7 +37,7 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
-
+	
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)

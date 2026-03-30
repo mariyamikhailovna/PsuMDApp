@@ -56,12 +56,12 @@ Sub Activity_Create(FirstTime As Boolean)
 			regLayout.LoadLayout("Layout") 
 			darkModeLayout.LoadLayout("Layout2")
 			computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
-			dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "darkbtncomputer.GIF")
 		Case 1
 			regLayout.LoadLayout("Layout3") 
 			darkModeLayout.LoadLayout("Layout4")  
-			computerGif.SetGif(File.DirAssets, "mikuComp2.GIF")
-			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF")
+			computerGif.SetGif(File.DirAssets, "Comp3.GIF") 'miku
+			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")'miku
 		Case 2
 			regLayout.LoadLayout("Layout5") 
 			darkModeLayout.LoadLayout("Layout6") 
@@ -69,7 +69,6 @@ Sub Activity_Create(FirstTime As Boolean)
 			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
 	End Select
 	
-
 	darkModeLayout.Visible = False
 	
 	Sleep(50)
@@ -78,6 +77,7 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
+	
 	If format24h Then
 		DateTime.TimeFormat = "HH:mm" ' 24-Hour Format
 	Else
@@ -92,12 +92,12 @@ Sub Activity_Resume
 			regLayout.LoadLayout("Layout")
 			darkModeLayout.LoadLayout("Layout2")
 			computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
-			dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "darkbtnComputer.GIF")
 		Case 1
 			regLayout.LoadLayout("Layout3")
 			darkModeLayout.LoadLayout("Layout4")
-			computerGif.SetGif(File.DirAssets, "mikuComp2.GIF")
-			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF")
+			computerGif.SetGif(File.DirAssets, "Comp3.GIF") 'miku
+			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF") 'miku
 		Case 2
 			regLayout.LoadLayout("Layout5")
 			darkModeLayout.LoadLayout("Layout6")
@@ -139,7 +139,6 @@ End Sub
 
 
 Private Sub showInfoPopup
-	
 
 	infoPnl = xui.CreatePanel("infoPnl")
 	Activity.AddView(infoPnl, 75dip, 225dip, 300dip, 220dip)
@@ -197,7 +196,7 @@ Private Sub showInfoPage(page As Int)
 			infoDescLbl.Text = "The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."
 		Case 7
 			infoTitleLbl.Text = "Themes"
-			infoDescLbl.Text = "The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."
+			infoDescLbl.Text = "Themes let you put your own fun twist on the app. Choose from a range of styles and color schemes to dress up your experience, making the space you study and plan in feel a little more like yours."
 		Case 8
 			infoTitleLbl.Text = "Lamp"
 			infoDescLbl.Text = "The lamp gives you control over how the app looks in any lighting. Switch effortlessly between light mode for bright environments and dark mode for low-light settings, so your eyes stay comfortable no matter when or where you're working."
