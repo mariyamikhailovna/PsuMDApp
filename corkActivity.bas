@@ -40,15 +40,22 @@ Sub Globals
 	Private place10 As Label
 	Private place11 As Label
 	Private place12 As Label
+	Private deleteLbl As Label
 	Private R = 255, G = 105, B = 97 As Int
 	Private R2, G2, B2 As Int
 	Private penSpnr As Spinner
+	Private sizeSpnr As Spinner
 	Private Width As Int
 	Private Height As Int
-	Private deleteLbl As Label
+
 	Dim ddn As DragDropView
 	Dim ddi As DragDropView
 	Dim ddc As DragDropView
+	
+	Private noteCount As Int = 0
+	Private imgCount As Int = 0
+	Private canvasCount As Int = 0
+	Private isLoading As Boolean = False
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -63,20 +70,92 @@ Sub Activity_Create(FirstTime As Boolean)
 	ddn.Initialize(Me, "NoteDrag")
 	ddi.Initialize(Me, "ImgDrag")
 	ddc.Initialize(Me, "CanvasDrag")
+	
+	If Main.kvs.IsInitialized = False Then
+		Main.kvs.Initialize(File.DirInternal, "notes_data")
+	End If
+	
+	isLoading = True
+	
+	If Main.kvs.ContainsKey("note_count") Then noteCount = Main.kvs.Get("note_count") Else noteCount = 0
+	Dim loadedNoteCount As Int = noteCount
+	For i = 0 To loadedNoteCount - 1
+		Dim nkey As String = "note_" & i
+		If Main.kvs.ContainsKey(nkey & "_text") Then
+			Dim savedColor As Int = Main.kvs.Get(nkey & "_color")
+			R = Bit.And(Bit.ShiftRight(savedColor, 16), 0xFF)
+			G = Bit.And(Bit.ShiftRight(savedColor, 8), 0xFF)
+			B = Bit.And(savedColor, 0xFF)
+			noteCount = i + 1
+			AddStickyNote(Main.kvs.Get(nkey & "_text"), Main.kvs.Get(nkey & "_x"), Main.kvs.Get(nkey & "_y"))
+		End If
+	Next
+
+	If Main.kvs.ContainsKey("img_count") Then imgCount = Main.kvs.Get("img_count") Else imgCount = 0
+	Dim loadedImgCount As Int = imgCount
+	For i = 0 To loadedImgCount - 1
+		Dim ikey As String = "img_" & i
+		If Main.kvs.ContainsKey(ikey & "_file") Then
+			Dim iv As ImageView
+			iv.Initialize("ImgView")
+			boardPnl.AddView(iv, Main.kvs.Get(ikey & "_x"), Main.kvs.Get(ikey & "_y"), 100dip, 100dip)
+			iv.Bitmap = LoadBitmapResize(File.DirInternal, Main.kvs.Get(ikey & "_file"), 100dip, 100dip, True)
+			iv.Tag = ikey
+			ddi.AddDragView(iv, False)
+			ddi.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
+		End If
+	Next
+
+	If Main.kvs.ContainsKey("cvs_count") Then canvasCount = Main.kvs.Get("cvs_count") Else canvasCount = 0
+	Dim loadedCanvasCount As Int = canvasCount
+	For i = 0 To loadedCanvasCount - 1
+		Dim ckey As String = "cvs_" & i
+		If Main.kvs.ContainsKey(ckey & "_x") Then
+			Width = Main.kvs.Get(ckey & "_w")
+			Height = Main.kvs.Get(ckey & "_h")
+      
+			Dim f As Panel
+			f.Initialize("CanvasFrame")
+			f.Color = Colors.Black
+			boardPnl.AddView(f, Main.kvs.Get(ckey & "_x"), Main.kvs.Get(ckey & "_y"), Width + 20dip, Height + 40dip)
+			Dim p As Panel
+			p.Initialize("CanvasPanel")
+			p.Color = Colors.White
+			f.AddView(p, 10dip, 20dip, Width, Height)
+			Sleep(0)
+			Dim cvs As B4XCanvas
+			cvs.Initialize(p)
+			cvs.DrawRect(cvs.TargetRect, Colors.LightGray, False, 1dip)
+			cvs.Invalidate
+			p.Tag = cvs
+			ddc.AddDragView(f, False)
+			ddc.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
+			f.Tag = ckey
+        
+			If File.Exists(File.DirInternal, ckey & ".png") Then
+				Sleep(0)
+				Dim bmp As Bitmap = LoadBitmap(File.DirInternal, ckey & ".png")
+				Dim canvasRect As B4XRect = cvs.TargetRect
+				cvs.DrawBitmap(bmp, canvasRect)
+				cvs.Invalidate
+			End If
+		End If
+	Next
+	canvasCount = loadedCanvasCount
+	Width = 80dip
+	Height = 60dip
+	isLoading = False
 End Sub
 
 Sub Activity_Resume
-
+	If canvasCount > 0 Then
+		penSpnr.Visible = True
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
-
-'THINGS TO ADD
-'1. Sticky Notes
-'2. Images
-'3. Canvas
 
 '----------------------MAIN SPAWNING/ADDINNG EVENTS---------------------------
 
@@ -86,7 +165,8 @@ Sub AddStickyNote(Text As String, x As Int, y As Int)
 	p.Color = Colors.RGB(R, G, B)
 
 	Dim txt As EditText
-	txt.Initialize("")
+	txt.Initialize("NoteText")
+	txt.Tag = p
 	txt.Text = Text
 	txt.TextSize = 12
 	txt.Background = Null
@@ -100,23 +180,51 @@ Sub AddStickyNote(Text As String, x As Int, y As Int)
 	ddn.AddDragView(p, False)
 	ddn.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
 	
+	If isLoading = False Then
+		Dim key As String = "note_" & noteCount
+		Main.kvs.Put(key & "_text", Text)
+		Main.kvs.Put(key & "_color", Colors.RGB(R, G, B))
+		Main.kvs.Put(key & "_x", x)
+		Main.kvs.Put(key & "_y", y)
+		Main.kvs.Put("note_count", noteCount + 1)
+		p.Tag = key
+		noteCount = noteCount + 1
+	Else
+		p.Tag = "note_" & (noteCount - 1)
+	End If
+	Log("deleteLbl initialized: " & (deleteLbl.IsInitialized))
+End Sub
+
+Sub NoteText_TextChanged(Old As String, New As String)
+	Dim txt As EditText = Sender
+	Dim p As Panel = txt.Tag
+	Dim key As String = p.Tag
+	Main.kvs.Put(key & "_text", New)
 End Sub
 
 Sub CC_Result (Success As Boolean, Dir As String, FileName As String)
 	If Success Then
-		imgView.Bitmap = LoadBitmapResize(Dir, FileName, imgView.Width, imgView.Height, True)
+		imgView.Initialize("ImgView")
+		Dim bmp As Bitmap
+		bmp = LoadBitmapResize(Dir, FileName, 100dip, 100dip, True)
+		imgView.Bitmap = bmp
+		boardPnl.AddView(imgView, 150dip, 500dip, 100dip, 100dip)
+		ddi.AddDragView(imgView, False)
+		ddi.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
+		Dim key As String = "img_" & imgCount
+		Dim out As OutputStream
+		out = File.OpenOutput(File.DirInternal, key & ".png", False)
+		bmp.WriteToStream(out, 100, "PNG")
+		out.Close
+		Main.kvs.Put(key & "_file", key & ".png")
+		Main.kvs.Put(key & "_x", 150dip)
+		Main.kvs.Put(key & "_y", 500dip)
+		Main.kvs.Put("img_count", imgCount + 1)
+		imgView.Tag = key
+		imgCount = imgCount + 1
 	Else
 		ToastMessageShow("No image selected", False)
 	End If
-End Sub
-
-Sub imgPick
-	imgView.Initialize("ImgView")
-	boardPnl.AddView(imgView, 150dip, 500dip, 100dip, 100dip)
-
-	ddi.AddDragView(imgView, False)
-	ddi.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
-	
 End Sub
 
 Sub AddCanvas(x As Int, y As Int)
@@ -140,6 +248,18 @@ Sub AddCanvas(x As Int, y As Int)
 
 	ddc.AddDragView(f, False)
 	ddc.AddPlaceView(place1).AddPlaceView(place2).AddPlaceView(place3).AddPlaceView(place4).AddPlaceView(place5).AddPlaceView(place6).AddPlaceView(place7).AddPlaceView(place8).AddPlaceView(place9).AddPlaceView(place10).AddPlaceView(place11).AddPlaceView(place12).AddPlaceView(deleteLbl)
+	If isLoading = False Then
+		Dim key As String = "cvs_" & canvasCount
+		Main.kvs.Put(key & "_x", x)
+		Main.kvs.Put(key & "_y", y)
+		Main.kvs.Put(key & "_w", Width)
+		Main.kvs.Put(key & "_h", Height)
+		Main.kvs.Put("cvs_count", canvasCount + 1)
+		f.Tag = key
+		canvasCount = canvasCount + 1
+	Else
+		f.Tag = "cvs_" & (canvasCount - 1)
+	End If
 End Sub
 
 Sub CanvasPanel_Touch (Action As Int, X As Float, Y As Float)
@@ -154,6 +274,12 @@ Sub CanvasPanel_Touch (Action As Int, X As Float, Y As Float)
 			cvs.Invalidate
 			LastX = X
 			LastY = Y
+			Dim f As Panel = p.Parent
+			Dim key As String = f.Tag
+			Dim out As OutputStream
+			out = File.OpenOutput(File.DirInternal, key & ".png", False)
+			cvs.CreateBitmap.WriteToStream(out, 100, "PNG")
+			out.Close
 	End Select
 End Sub
 
@@ -185,7 +311,7 @@ Private Sub canvasWindow(pW As Int, pH As Int)
 	canvasPnl.Color = xui.Color_RGB(50, 50, 50)
 	canvasPnl.SetColorAndBorder(xui.Color_White, 2dip, xui.Color_Black, 3dip)
 
-	Dim sizeSpnr As Spinner
+
 	sizeSpnr.Initialize("sizeSpnr")
 	sizeSpnr.AddAll(Array As String("1x1", "2x1", "1x2", "2x2", "3x2", "2x3"))
 	canvasPnl.AddView(sizeSpnr, 10dip, 10dip, pW - 20dip, 40dip)
@@ -206,11 +332,16 @@ Private Sub addnBtn_Click
 	G = 105
 	B = 97
 	stickyBtn.Enabled = True
+	canvaBtn.Enabled = True
+	imgBtn.Enabled = True
 End Sub
 
 Private Sub addcBtn_Click
 	AddCanvas(150dip, 500dip)
 	canvasPnl.Visible = False
+	canvaBtn.Enabled = True
+	stickyBtn.Enabled = True
+	imgBtn.Enabled = True
 End Sub
 
 '--------------------------MAIN ADDING BUTTONS--------------------------------
@@ -219,17 +350,21 @@ Private Sub stickyBtn_Click
 	noteWindow(250dip, 180dip)
 	notePnl.Visible = True
 	stickyBtn.Enabled = False
+	canvaBtn.Enabled = False
+	imgBtn.Enabled = False
 End Sub
 
 Private Sub imgBtn_Click
 	imgPicker.Show("image/*", "Select a Photo")
-	imgPick
 End Sub
 
 Private Sub canvaBtn_Click
 	canvasWindow(250dip, 180dip)
 	canvasPnl.Visible = True
 	penSpnr.Visible = True
+	stickyBtn.Enabled = False
+	canvaBtn.Enabled = False
+	imgBtn.Enabled = False
 End Sub
 
 '------------------------------SPINNERS---------------------------------------
@@ -305,38 +440,79 @@ End Sub
 
 '---------------------------DELETE FUNCTION-----------------------------------
 
-Sub NoteDrag_PlacedView(DragView As B4XView, PlaceView As B4XView)
-	If PlaceView = deleteLbl Then
+Sub NoteDrag_PlacedView(nDragView As View, nPlaceView As View)
+	If nPlaceView.Tag = "delete" Then
 		Msgbox2Async("Are you sure you want to delete note?", "Delete Note", "No", "", "Yes", Null, False)
 		Wait For Msgbox_Result (res As Int)
 		If res = DialogResponse.NEGATIVE Then
-			DragView.Visible = False
-			DragView = Null
+			Dim p As Panel = nDragView
+			Dim key As String = p.Tag
+			Main.kvs.Remove(key & "_text")
+			Main.kvs.Remove(key & "_color")
+			Main.kvs.Remove(key & "_x")
+			Main.kvs.Remove(key & "_y")
+			Dim newCount As Int = Main.kvs.Get("note_count")
+			Main.kvs.Put("note_count", newCount - 1)
+			p.Visible = False
 			ToastMessageShow("Note Deleted", False)
 		End If
+	Else
+		Dim p As Panel = nDragView
+		Dim key As String = p.Tag
+		Main.kvs.Put(key & "_x", p.Left)
+		Main.kvs.Put(key & "_y", p.Top)
 	End If
 End Sub
 
-Sub ImgDrag_PlacedView(DragView As B4XView, PlaceView As B4XView)
-	If PlaceView = deleteLbl Then
+Sub ImgDrag_PlacedView(iDragView As View, iPlaceView As View)
+	If iPlaceView.Tag = "delete" Then
 		Msgbox2Async("Are you sure you want to delete image?", "Delete Image", "No", "", "Yes", Null, False)
 		Wait For Msgbox_Result (res As Int)
 		If res = DialogResponse.NEGATIVE Then
-			DragView.Visible = False
-			DragView = Null
+			Dim iv As ImageView = iDragView
+			Dim key As String = iv.Tag
+			File.Delete(File.DirInternal, key & ".png")
+			Main.kvs.Remove(key & "_file")
+			Main.kvs.Remove(key & "_x")
+			Main.kvs.Remove(key & "_y")
+			Dim newCount As Int = Main.kvs.Get("img_count")
+			Main.kvs.Put("img_count", newCount - 1)
+			iv.Visible = False
 			ToastMessageShow("Image Deleted", False)
 		End If
+	Else
+		Dim iv As ImageView = iDragView
+		Dim key As String = iv.Tag
+		Main.kvs.Put(key & "_x", iv.Left)
+		Main.kvs.Put(key & "_y", iv.Top)
 	End If
 End Sub
 
-Sub CanvasDrag_PlacedView(DragView As B4XView, PlaceView As B4XView)
-	If PlaceView = deleteLbl Then
+Sub CanvasDrag_PlacedView(cDragView As View, cPlaceView As View)
+	If cPlaceView.Tag = "delete" Then
 		Msgbox2Async("Are you sure you want to delete canvas?", "Delete Canvas", "No", "", "Yes", Null, False)
 		Wait For Msgbox_Result (res As Int)
 		If res = DialogResponse.NEGATIVE Then
-			DragView.Visible = False
-			DragView = Null
+			Dim f As Panel = cDragView
+			Dim key As String = f.Tag
+			File.Delete(File.DirInternal, key & ".png")
+			Main.kvs.Remove(key & "_x")
+			Main.kvs.Remove(key & "_y")
+			Main.kvs.Remove(key & "_w")
+			Main.kvs.Remove(key & "_h")
+			Dim newCount As Int = Main.kvs.Get("cvs_count")
+			Main.kvs.Put("cvs_count", newCount - 1)
+			canvasCount = canvasCount - 1
+			f.Visible = False
 			ToastMessageShow("Canvas Deleted", False)
+			If canvasCount = 0 Then
+				penSpnr.Visible = False
+			End If
 		End If
+	Else
+		Dim f As Panel = cDragView
+		Dim key As String = f.Tag
+		Main.kvs.Put(key & "_x", f.Left)
+		Main.kvs.Put(key & "_y", f.Top)
 	End If
 End Sub

@@ -8,7 +8,7 @@ public class calendaractivity_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,45);
+		Debug.PushSubsStack("Activity_Create (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,45);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","activity_create", _firsttime);}
 RemoteObject _currentyear = RemoteObject.createImmutable(0);
 RemoteObject _years = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -142,7 +142,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,305);
+		Debug.PushSubsStack("Activity_Pause (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,305);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 305;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -159,7 +159,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,301);
+		Debug.PushSubsStack("Activity_Resume (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,301);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","activity_resume");}
  BA.debugLineNum = 301;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(4096);
@@ -175,7 +175,7 @@ finally {
 		}}
 public static RemoteObject  _cell_click_click() throws Exception{
 try {
-		Debug.PushSubsStack("cell_click_click (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,250);
+		Debug.PushSubsStack("cell_click_click (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,250);
 if (RapidSub.canDelegate("cell_click_click")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","cell_click_click");}
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _datestr = RemoteObject.createImmutable("");
@@ -199,7 +199,7 @@ Debug.ShouldStop(-2147483648);
 calendaractivity.mostCurrent._day_module._currentdate /*RemoteObject*/  = _datestr;
  BA.debugLineNum = 257;BA.debugLine="Log(datestr)";
 Debug.ShouldStop(1);
-calendaractivity.mostCurrent.__c.runVoidMethod ("LogImpl","58716295",_datestr,0);
+calendaractivity.mostCurrent.__c.runVoidMethod ("LogImpl","013631495",_datestr,0);
  BA.debugLineNum = 259;BA.debugLine="End Sub";
 Debug.ShouldStop(4);
 return RemoteObject.createImmutable("");
@@ -212,7 +212,7 @@ finally {
 		}}
 public static RemoteObject  _cleandebugger() throws Exception{
 try {
-		Debug.PushSubsStack("CleanDebugger (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,102);
+		Debug.PushSubsStack("CleanDebugger (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,102);
 if (RapidSub.canDelegate("cleandebugger")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","cleandebugger");}
  BA.debugLineNum = 102;BA.debugLine="Sub CleanDebugger";
 Debug.ShouldStop(32);
@@ -234,7 +234,7 @@ finally {
 		}}
 public static RemoteObject  _day_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("Day_btn_Click (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,331);
+		Debug.PushSubsStack("Day_btn_Click (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,331);
 if (RapidSub.canDelegate("day_btn_click")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","day_btn_click");}
 RemoteObject _currentyear = RemoteObject.createImmutable(0);
 RemoteObject _currentmonth = RemoteObject.createImmutable(0);
@@ -262,7 +262,7 @@ Debug.ShouldStop(65536);
 calendaractivity.mostCurrent._day_module._currentdate /*RemoteObject*/  = _datestr;
  BA.debugLineNum = 338;BA.debugLine="Log(day_module.currentDate)";
 Debug.ShouldStop(131072);
-calendaractivity.mostCurrent.__c.runVoidMethod ("LogImpl","59306119",calendaractivity.mostCurrent._day_module._currentdate /*RemoteObject*/ ,0);
+calendaractivity.mostCurrent.__c.runVoidMethod ("LogImpl","014221319",calendaractivity.mostCurrent._day_module._currentdate /*RemoteObject*/ ,0);
  };
  BA.debugLineNum = 341;BA.debugLine="Activity.Finish";
 Debug.ShouldStop(1048576);
@@ -282,7 +282,7 @@ finally {
 		}}
 public static RemoteObject  _daysinamonth(RemoteObject _month,RemoteObject _year) throws Exception{
 try {
-		Debug.PushSubsStack("Daysinamonth (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,262);
+		Debug.PushSubsStack("Daysinamonth (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,262);
 if (RapidSub.canDelegate("daysinamonth")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","daysinamonth", _month, _year);}
 RemoteObject _nextmonth = RemoteObject.createImmutable(0);
 RemoteObject _nextyear = RemoteObject.createImmutable(0);
@@ -339,7 +339,7 @@ finally {
 		}}
 public static RemoteObject  _drawcalendar(RemoteObject _month,RemoteObject _year) throws Exception{
 try {
-		Debug.PushSubsStack("DrawCalendar (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,107);
+		Debug.PushSubsStack("DrawCalendar (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,107);
 if (RapidSub.canDelegate("drawcalendar")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","drawcalendar", _month, _year);}
 RemoteObject _firstday = RemoteObject.createImmutable(0L);
 RemoteObject _startday = RemoteObject.createImmutable(0);
@@ -715,7 +715,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _identifycolor(RemoteObject _typeofevent) throws Exception{
 try {
-		Debug.PushSubsStack("IdentifyColor (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,234);
+		Debug.PushSubsStack("IdentifyColor (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,234);
 if (RapidSub.canDelegate("identifycolor")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","identifycolor", _typeofevent);}
 RemoteObject _mycolor = RemoteObject.createImmutable(0);
 Debug.locals.put("typeofevent", _typeofevent);
@@ -768,7 +768,7 @@ finally {
 		}}
 public static RemoteObject  _menu_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("menu_btn_Click (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,322);
+		Debug.PushSubsStack("menu_btn_Click (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,322);
 if (RapidSub.canDelegate("menu_btn_click")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","menu_btn_click");}
  BA.debugLineNum = 322;BA.debugLine="Private Sub menu_btn_Click";
 Debug.ShouldStop(2);
@@ -787,7 +787,7 @@ finally {
 		}}
 public static RemoteObject  _month_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("Month_btn_Click (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,345);
+		Debug.PushSubsStack("Month_btn_Click (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,345);
 if (RapidSub.canDelegate("month_btn_click")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","month_btn_click");}
  BA.debugLineNum = 345;BA.debugLine="Private Sub Month_btn_Click";
 Debug.ShouldStop(16777216);
@@ -806,7 +806,7 @@ finally {
 		}}
 public static RemoteObject  _monthsp_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("MonthSp_ItemClick (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,310);
+		Debug.PushSubsStack("MonthSp_ItemClick (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,310);
 if (RapidSub.canDelegate("monthsp_itemclick")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","monthsp_itemclick", _position, _value);}
 RemoteObject _selectedmonth = RemoteObject.createImmutable(0);
 Debug.locals.put("Position", _position);
@@ -842,7 +842,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _sched_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("sched_btn_Click (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,326);
+		Debug.PushSubsStack("sched_btn_Click (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,326);
 if (RapidSub.canDelegate("sched_btn_click")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","sched_btn_click");}
  BA.debugLineNum = 326;BA.debugLine="Private Sub sched_btn_Click";
 Debug.ShouldStop(32);
@@ -864,7 +864,7 @@ finally {
 		}}
 public static RemoteObject  _weekday(RemoteObject _day) throws Exception{
 try {
-		Debug.PushSubsStack("Weekday (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,283);
+		Debug.PushSubsStack("Weekday (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,283);
 if (RapidSub.canDelegate("weekday")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","weekday", _day);}
 Debug.locals.put("Day", _day);
  BA.debugLineNum = 283;BA.debugLine="Sub Weekday (Day As Int)";
@@ -928,7 +928,7 @@ finally {
 		}}
 public static RemoteObject  _yearsp_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("YearSP_ItemClick (calendaractivity) ","calendaractivity",11,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,316);
+		Debug.PushSubsStack("YearSP_ItemClick (calendaractivity) ","calendaractivity",16,calendaractivity.mostCurrent.activityBA,calendaractivity.mostCurrent,316);
 if (RapidSub.canDelegate("yearsp_itemclick")) { return b4a.example.calendaractivity.remoteMe.runUserSub(false, "calendaractivity","yearsp_itemclick", _position, _value);}
 RemoteObject _selectedyear = RemoteObject.createImmutable(0);
 Debug.locals.put("Position", _position);

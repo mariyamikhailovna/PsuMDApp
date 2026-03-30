@@ -8,7 +8,7 @@ public class editnote_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (editnote) ","editnote",6,editnote.mostCurrent.activityBA,editnote.mostCurrent,22);
+		Debug.PushSubsStack("Activity_Create (editnote) ","editnote",7,editnote.mostCurrent.activityBA,editnote.mostCurrent,22);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.editnote.remoteMe.runUserSub(false, "editnote","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -47,7 +47,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (editnote) ","editnote",6,editnote.mostCurrent.activityBA,editnote.mostCurrent,37);
+		Debug.PushSubsStack("Activity_Pause (editnote) ","editnote",7,editnote.mostCurrent.activityBA,editnote.mostCurrent,37);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.editnote.remoteMe.runUserSub(false, "editnote","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 37;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -68,7 +68,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (editnote) ","editnote",6,editnote.mostCurrent.activityBA,editnote.mostCurrent,33);
+		Debug.PushSubsStack("Activity_Resume (editnote) ","editnote",7,editnote.mostCurrent.activityBA,editnote.mostCurrent,33);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.editnote.remoteMe.runUserSub(false, "editnote","activity_resume");}
  BA.debugLineNum = 33;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(1);
@@ -104,7 +104,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _savebtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("saveBtn_Click (editnote) ","editnote",6,editnote.mostCurrent.activityBA,editnote.mostCurrent,41);
+		Debug.PushSubsStack("saveBtn_Click (editnote) ","editnote",7,editnote.mostCurrent.activityBA,editnote.mostCurrent,41);
 if (RapidSub.canDelegate("savebtn_click")) { return b4a.example.editnote.remoteMe.runUserSub(false, "editnote","savebtn_click");}
 RemoteObject _n = RemoteObject.declareNull("b4a.example.main._mynote");
  BA.debugLineNum = 41;BA.debugLine="Sub saveBtn_Click";
