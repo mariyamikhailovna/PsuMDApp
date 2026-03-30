@@ -358,20 +358,21 @@ vis = vis | (clockactivity.mostCurrent != null);
 vis = vis | (noteactivity.mostCurrent != null);
 vis = vis | (editnote.mostCurrent != null);
 vis = vis | (corkactivity.mostCurrent != null);
-vis = vis | (todoactivity.mostCurrent != null);
+vis = vis | (themeactivity.mostCurrent != null);
+vis = vis | (musicactivity.mostCurrent != null);
+vis = vis | (flashcardactivity.mostCurrent != null);
+vis = vis | (calendaractivity.mostCurrent != null);
+vis = vis | (schedule_module.mostCurrent != null);
 vis = vis | (active_recall.mostCurrent != null);
 vis = vis | (add_card_module.mostCurrent != null);
 vis = vis | (add_card_module2.mostCurrent != null);
 vis = vis | (add_events_module.mostCurrent != null);
 vis = vis | (all_active_recall.mostCurrent != null);
-vis = vis | (calendaractivity.mostCurrent != null);
 vis = vis | (card_module.mostCurrent != null);
 vis = vis | (day_module.mostCurrent != null);
 vis = vis | (deck_all_cards.mostCurrent != null);
-vis = vis | (flashcardactivity.mostCurrent != null);
-vis = vis | (musicactivity.mostCurrent != null);
-vis = vis | (schedule_module.mostCurrent != null);
 vis = vis | (subdeck_module.mostCurrent != null);
+vis = vis | (todoactivity.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -482,17 +483,65 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (todoactivity.previousOne != null) {
-				__a = todoactivity.previousOne.get();
+            if (themeactivity.previousOne != null) {
+				__a = themeactivity.previousOne.get();
 			}
             else {
-                BA ba = killProgramHelper(todoactivity.mostCurrent == null ? null : todoactivity.mostCurrent.processBA);
+                BA ba = killProgramHelper(themeactivity.mostCurrent == null ? null : themeactivity.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
 				__a.finish();}
 
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, musicservice.class));
+ {
+            Activity __a = null;
+            if (musicactivity.previousOne != null) {
+				__a = musicactivity.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(musicactivity.mostCurrent == null ? null : musicactivity.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (flashcardactivity.previousOne != null) {
+				__a = flashcardactivity.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(flashcardactivity.mostCurrent == null ? null : flashcardactivity.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (calendaractivity.previousOne != null) {
+				__a = calendaractivity.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(calendaractivity.mostCurrent == null ? null : calendaractivity.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (schedule_module.previousOne != null) {
+				__a = schedule_module.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(schedule_module.mostCurrent == null ? null : schedule_module.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
  {
             Activity __a = null;
             if (active_recall.previousOne != null) {
@@ -555,18 +604,6 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (calendaractivity.previousOne != null) {
-				__a = calendaractivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(calendaractivity.mostCurrent == null ? null : calendaractivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
             if (card_module.previousOne != null) {
 				__a = card_module.previousOne.get();
 			}
@@ -603,47 +640,23 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (flashcardactivity.previousOne != null) {
-				__a = flashcardactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(flashcardactivity.mostCurrent == null ? null : flashcardactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (musicactivity.previousOne != null) {
-				__a = musicactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(musicactivity.mostCurrent == null ? null : musicactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (schedule_module.previousOne != null) {
-				__a = schedule_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(schedule_module.mostCurrent == null ? null : schedule_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
             if (subdeck_module.previousOne != null) {
 				__a = subdeck_module.previousOne.get();
 			}
             else {
                 BA ba = killProgramHelper(subdeck_module.mostCurrent == null ? null : subdeck_module.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (todoactivity.previousOne != null) {
+				__a = todoactivity.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(todoactivity.mostCurrent == null ? null : todoactivity.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -681,21 +694,22 @@ public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
 public b4a.example.editnote _editnote = null;
 public b4a.example.corkactivity _corkactivity = null;
-public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
+public b4a.example.musicactivity _musicactivity = null;
+public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
 public b4a.example.add_card_module2 _add_card_module2 = null;
 public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.all_active_recall _all_active_recall = null;
-public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.card_module _card_module = null;
 public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
-public b4a.example.flashcardactivity _flashcardactivity = null;
-public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.subdeck_module _subdeck_module = null;
+public b4a.example.todoactivity _todoactivity = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))

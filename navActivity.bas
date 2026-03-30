@@ -52,17 +52,25 @@ Private Sub flashBtn_Click
 	StartActivity(FlashcardActivity)	
 End Sub
 
-'Private Sub musicBtn_Click
-'	
-'End Sub
+Private Sub musicBtn_Click
+	StartActivity(musicActivity)
+End Sub
 
 Private Sub ntpdBtn_Click
 	StartActivity(noteActivity)
 End Sub
 
-'Private Sub todoBtn_Click
-'	
-'End Sub
+Private Sub todoBtn_Click
+	StartActivity(todoActivity)
+End Sub
+
+Private Sub helpBtn_Click
+	StartActivity(helpActivity)
+End Sub
+
+Private Sub themeBtn_Click
+	StartActivity(themeActivity)
+End Sub
 
 Private Sub exitBtn_Click
 	Activity.Finish

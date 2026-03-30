@@ -33,9 +33,7 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-
 	Activity.LoadLayout("Layouthsv")
-
 	If FirstTime Then
 		kvs.Initialize(File.DirInternal, "notes_data")
 		timerClock.Initialize("timerClock", 1000)
@@ -55,15 +53,23 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	Select Starter.themeNumber
 		Case 0
-			regLayout.LoadLayout("Layout") 'light mode for theme 1
-			darkModeLayout.LoadLayout("Layout2") 'dark mode for theme 1
+			regLayout.LoadLayout("Layout") 
+			darkModeLayout.LoadLayout("Layout2")
+			computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
 		Case 1
-			regLayout.LoadLayout("Layout") 'light mode for theme 2, not yet made
-			darkModeLayout.LoadLayout("Layout2") 'dark mode for theme 2, not yet made
+			regLayout.LoadLayout("Layout3") 
+			darkModeLayout.LoadLayout("Layout4")  
+			computerGif.SetGif(File.DirAssets, "mikuComp2.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF")
+		Case 2
+			regLayout.LoadLayout("Layout5") 
+			darkModeLayout.LoadLayout("Layout6") 
+			computerGif.SetGif(File.DirAssets, "Comp3.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
 	End Select
 	
-	computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
-	dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
+
 	darkModeLayout.Visible = False
 	
 	Sleep(50)
@@ -77,6 +83,27 @@ Sub Activity_Resume
 	Else
 		DateTime.TimeFormat = "hh:mm a" ' AM/PM Format
 	End If
+	
+	regLayout.RemoveAllViews
+	darkModeLayout.RemoveAllViews
+	
+	Select Starter.themeNumber
+		Case 0
+			regLayout.LoadLayout("Layout")
+			darkModeLayout.LoadLayout("Layout2")
+			computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "Dark BtnComputer.GIF")
+		Case 1
+			regLayout.LoadLayout("Layout3")
+			darkModeLayout.LoadLayout("Layout4")
+			computerGif.SetGif(File.DirAssets, "mikuComp2.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF")
+		Case 2
+			regLayout.LoadLayout("Layout5")
+			darkModeLayout.LoadLayout("Layout6")
+			computerGif.SetGif(File.DirAssets, "Comp3.GIF")
+			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
+	End Select
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
@@ -110,42 +137,6 @@ Sub timerClock_Tick
 	clockLightBtn.Text = DateTime.Time(DateTime.Now)
 End Sub
 
-Private Sub clockBtn_Click
-	StartActivity(clockActivity)
-End Sub
-
-Private Sub  clockLightBtn_Click
-	StartActivity(clockActivity)
-End Sub
-
-Private Sub clockBtn_LongClick
-	'there should be a pop-up panel saying that this is the pomodoro feature, etc.
-	showInfoPopup
-	If infoPnl <> Null Then
-		infoPnl.Visible = True
-		infoPnl.BringToFront
-		showInfoPage(1)
-		Return
-	End If
-End Sub
-Private Sub clockLightBtn_LongClick
-	'there should be a pop-up panel saying that this is the pomodoro feature, etc.
-	showInfoPopup
-	If infoPnl <> Null Then
-		infoPnl.Visible = True
-		infoPnl.BringToFront
-		showInfoPage(1)
-		Return
-	End If
-End Sub
-
-Private Sub navBtn_Click
-	StartActivity(navActivity)
-End Sub
-
-Private Sub helpBtn_Click
-	StartActivity(helpActivity)
-End Sub
 
 Private Sub showInfoPopup
 	
@@ -156,20 +147,20 @@ Private Sub showInfoPopup
 
 	Dim closeBtn As Button
 	closeBtn.Initialize("infoPnlClose")
-	closeBtn.Text = "X"
-	closeBtn.TextSize = 8
+	closeBtn.Text = "x"
+	closeBtn.TextSize = 6
 	infoPnl.AddView(closeBtn, 265dip, 8dip, 28dip, 28dip)
 
 	infoTitleLbl.Initialize("")
 	infoTitleLbl.TextSize = 16
 	infoTitleLbl.Gravity = Gravity.CENTER_HORIZONTAL
-	infoPnl.AddView(infoTitleLbl, 10dip, 12dip, 248dip, 30dip)
+	infoPnl.AddView(infoTitleLbl, 12dip, 12dip, 248dip, 30dip)
 
 	infoDescLbl.Initialize("")
-	infoDescLbl.TextSize = 13
+	infoDescLbl.TextSize = 11
 	infoDescLbl.Gravity = Gravity.TOP
 	infoDescLbl.SingleLine = False
-	infoPnl.AddView(infoDescLbl, 12dip, 52dip, 276dip, 110dip)
+	infoPnl.AddView(infoDescLbl, 12dip, 52dip, 276dip, 120dip)
 
 	infoPageLbl.Initialize("")
 	infoPageLbl.Gravity = Gravity.CENTER_HORIZONTAL
@@ -204,7 +195,34 @@ Private Sub showInfoPage(page As Int)
 		Case 6
 			infoTitleLbl.Text = "To-do List"
 			infoDescLbl.Text = "The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."
+		Case 7
+			infoTitleLbl.Text = "Themes"
+			infoDescLbl.Text = "The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."
+		Case 8
+			infoTitleLbl.Text = "Lamp"
+			infoDescLbl.Text = "The lamp gives you control over how the app looks in any lighting. Switch effortlessly between light mode for bright environments and dark mode for low-light settings, so your eyes stay comfortable no matter when or where you're working."
+		Case 9
+			infoTitleLbl.Text = "Navigation"
+			infoDescLbl.Text = "Navigation is your home base for getting around the app. All of the app's features are laid out in one accessible spot, with clearly labeled and easy-to-read buttons so you can jump to wherever you need to be without any hassle."
+
+			
 	End Select
+End Sub
+
+Private Sub clockBtn_Click
+	StartActivity(clockActivity)
+End Sub
+
+Private Sub  clockLightBtn_Click
+	StartActivity(clockActivity)
+End Sub
+
+Private Sub navBtn_Click
+	StartActivity(navActivity)
+End Sub
+
+Private Sub helpBtn_Click
+	StartActivity(helpActivity)
 End Sub
 
 Private Sub infoPnlClose_Click
@@ -225,4 +243,137 @@ End Sub
 
 Private Sub calendar_Click
 	StartActivity(CalendarActivity)
+End Sub
+
+Private Sub noteBook_Click
+	StartActivity(noteActivity)
+End Sub
+
+Private Sub corkie_Click
+	StartActivity(corkActivity)
+End Sub
+
+Private Sub plant_Click
+	StartActivity(themeActivity)
+End Sub
+'----------------------------------------LONG CLICK---------------------------------------------
+
+Private Sub calendar_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(0)
+		Return
+	End If
+End Sub
+
+Private Sub clockBtn_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(1)
+		Return
+	End If
+End Sub
+
+Private Sub clockLightBtn_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(1)
+		Return
+	End If
+End Sub
+
+Private Sub corkie_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(2)
+		Return
+	End If
+End Sub
+
+Private Sub bookie_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(3)
+		Return
+	End If
+End Sub
+
+Private Sub mP_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(4)
+		Return
+	End If
+End Sub
+
+Private Sub noteBook_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(5)
+		Return
+	End If
+End Sub
+
+Private Sub todolistBtn_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(6)
+		Return
+	End If
+End Sub
+
+Private Sub plant_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(7)
+		Return
+	End If
+End Sub
+
+Private Sub lamp_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(8)
+		Return
+	End If
+End Sub
+
+Private Sub dlamp_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(8)
+		Return
+	End If
+End Sub
+
+Private Sub navBtn_LongClick
+	showInfoPopup
+	If infoPnl <> Null Then
+		infoPnl.Visible = True
+		infoPnl.BringToFront
+		showInfoPage(9)
+		Return
+	End If
 End Sub

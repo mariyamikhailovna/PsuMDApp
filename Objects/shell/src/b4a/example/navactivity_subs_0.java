@@ -118,15 +118,15 @@ finally {
 		}}
 public static RemoteObject  _exitbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("exitBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,61);
+		Debug.PushSubsStack("exitBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,69);
 if (RapidSub.canDelegate("exitbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","exitbtn_click");}
- BA.debugLineNum = 61;BA.debugLine="Private Sub exitBtn_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 62;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 69;BA.debugLine="Private Sub exitBtn_Click";
+Debug.ShouldStop(16);
+ BA.debugLineNum = 70;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(32);
 navactivity.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 63;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 71;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -159,6 +159,44 @@ public static RemoteObject  _globals() throws Exception{
  //BA.debugLineNum = 16;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
+public static RemoteObject  _helpbtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("helpBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,61);
+if (RapidSub.canDelegate("helpbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","helpbtn_click");}
+ BA.debugLineNum = 61;BA.debugLine="Private Sub helpBtn_Click";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 62;BA.debugLine="StartActivity(helpActivity)";
+Debug.ShouldStop(536870912);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._helpactivity.getObject())));
+ BA.debugLineNum = 63;BA.debugLine="End Sub";
+Debug.ShouldStop(1073741824);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _musicbtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("musicBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,49);
+if (RapidSub.canDelegate("musicbtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","musicbtn_click");}
+ BA.debugLineNum = 49;BA.debugLine="Private Sub musicBtn_Click";
+Debug.ShouldStop(65536);
+ BA.debugLineNum = 50;BA.debugLine="StartActivity(musicActivity)";
+Debug.ShouldStop(131072);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._musicactivity.getObject())));
+ BA.debugLineNum = 51;BA.debugLine="End Sub";
+Debug.ShouldStop(262144);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _ntpdbtn_click() throws Exception{
 try {
 		Debug.PushSubsStack("ntpdBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,53);
@@ -183,4 +221,42 @@ public static RemoteObject  _process_globals() throws Exception{
  //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
+public static RemoteObject  _themebtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("themeBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,65);
+if (RapidSub.canDelegate("themebtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","themebtn_click");}
+ BA.debugLineNum = 65;BA.debugLine="Private Sub themeBtn_Click";
+Debug.ShouldStop(1);
+ BA.debugLineNum = 66;BA.debugLine="StartActivity(themeActivity)";
+Debug.ShouldStop(2);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._themeactivity.getObject())));
+ BA.debugLineNum = 67;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _todobtn_click() throws Exception{
+try {
+		Debug.PushSubsStack("todoBtn_Click (navactivity) ","navactivity",3,navactivity.mostCurrent.activityBA,navactivity.mostCurrent,57);
+if (RapidSub.canDelegate("todobtn_click")) { return b4a.example.navactivity.remoteMe.runUserSub(false, "navactivity","todobtn_click");}
+ BA.debugLineNum = 57;BA.debugLine="Private Sub todoBtn_Click";
+Debug.ShouldStop(16777216);
+ BA.debugLineNum = 58;BA.debugLine="StartActivity(todoActivity)";
+Debug.ShouldStop(33554432);
+navactivity.mostCurrent.__c.runVoidMethod ("StartActivity",navactivity.processBA,(Object)((navactivity.mostCurrent._todoactivity.getObject())));
+ BA.debugLineNum = 59;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 }

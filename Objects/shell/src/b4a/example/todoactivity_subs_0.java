@@ -8,7 +8,7 @@ public class todoactivity_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,38);
+		Debug.PushSubsStack("Activity_Create (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,38);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","activity_create", _firsttime);}
 RemoteObject _savedlists = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _title = RemoteObject.createImmutable("");
@@ -77,7 +77,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,68);
+		Debug.PushSubsStack("Activity_Pause (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,68);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 68;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -94,7 +94,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,64);
+		Debug.PushSubsStack("Activity_Resume (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,64);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","activity_resume");}
  BA.debugLineNum = 64;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(-2147483648);
@@ -110,7 +110,7 @@ finally {
 		}}
 public static RemoteObject  _addtaskbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("addTaskBtn_Click (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,323);
+		Debug.PushSubsStack("addTaskBtn_Click (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,323);
 if (RapidSub.canDelegate("addtaskbtn_click")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","addtaskbtn_click");}
  BA.debugLineNum = 323;BA.debugLine="Sub addTaskBtn_Click";
 Debug.ShouldStop(4);
@@ -165,7 +165,7 @@ finally {
 		}}
 public static RemoteObject  _addtitletextarea_enterpressed() throws Exception{
 try {
-		Debug.PushSubsStack("addTitleTextArea_EnterPressed (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,110);
+		Debug.PushSubsStack("addTitleTextArea_EnterPressed (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,110);
 if (RapidSub.canDelegate("addtitletextarea_enterpressed")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","addtitletextarea_enterpressed");}
 RemoteObject _ctx = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _oldindex = RemoteObject.createImmutable(0);
@@ -500,7 +500,7 @@ finally {
 		}}
 public static RemoteObject  _entertaskbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("enterTaskBtn_Click (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,346);
+		Debug.PushSubsStack("enterTaskBtn_Click (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,346);
 if (RapidSub.canDelegate("entertaskbtn_click")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","entertaskbtn_click");}
 RemoteObject _newtask = RemoteObject.createImmutable("");
 RemoteObject _ctx = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -700,7 +700,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _listslist_itemclick(RemoteObject _index,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("listsList_ItemClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,237);
+		Debug.PushSubsStack("listsList_ItemClick (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,237);
 if (RapidSub.canDelegate("listslist_itemclick")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","listslist_itemclick", _index, _value);}
 RemoteObject _listpnl = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 RemoteObject _listlbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
@@ -783,7 +783,7 @@ finally {
 		}}
 public static void  _listslist_itemlongclick(RemoteObject _index,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("listsList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,265);
+		Debug.PushSubsStack("listsList_ItemLongClick (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,265);
 if (RapidSub.canDelegate("listslist_itemlongclick")) { b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","listslist_itemlongclick", _index, _value); return;}
 ResumableSub_listsList_ItemLongClick rsub = new ResumableSub_listsList_ItemLongClick(null,_index,_value);
 rsub.resume(null, null);
@@ -816,7 +816,7 @@ int groupLen17;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("listsList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,265);
+		Debug.PushSubsStack("listsList_ItemLongClick (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,265);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1046,7 +1046,7 @@ public static void  _msgbox_result(RemoteObject _res) throws Exception{
 }
 public static RemoteObject  _newaddtaskbtn() throws Exception{
 try {
-		Debug.PushSubsStack("newAddTaskBtn (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,72);
+		Debug.PushSubsStack("newAddTaskBtn (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,72);
 if (RapidSub.canDelegate("newaddtaskbtn")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","newaddtaskbtn");}
  BA.debugLineNum = 72;BA.debugLine="Sub newAddTaskBtn";
 Debug.ShouldStop(128);
@@ -1083,7 +1083,7 @@ finally {
 		}}
 public static RemoteObject  _newlistbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("newListBtn_Click (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,86);
+		Debug.PushSubsStack("newListBtn_Click (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,86);
 if (RapidSub.canDelegate("newlistbtn_click")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","newlistbtn_click");}
  BA.debugLineNum = 86;BA.debugLine="Sub newListBtn_Click";
 Debug.ShouldStop(2097152);
@@ -1153,7 +1153,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showrenamelistpanel(RemoteObject _index,RemoteObject _oldtitle) throws Exception{
 try {
-		Debug.PushSubsStack("showRenameListPanel (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,308);
+		Debug.PushSubsStack("showRenameListPanel (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,308);
 if (RapidSub.canDelegate("showrenamelistpanel")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","showrenamelistpanel", _index, _oldtitle);}
 RemoteObject _ctx = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 Debug.locals.put("Index", _index);
@@ -1199,7 +1199,7 @@ finally {
 		}}
 public static RemoteObject  _showrenametaskpanel(RemoteObject _index,RemoteObject _oldtask) throws Exception{
 try {
-		Debug.PushSubsStack("showRenameTaskPanel (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,434);
+		Debug.PushSubsStack("showRenameTaskPanel (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,434);
 if (RapidSub.canDelegate("showrenametaskpanel")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","showrenametaskpanel", _index, _oldtask);}
 RemoteObject _ctx = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 Debug.locals.put("Index", _index);
@@ -1266,7 +1266,7 @@ finally {
 		}}
 public static RemoteObject  _taskcheckbox_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("taskCheckbox_CheckedChange (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,460);
+		Debug.PushSubsStack("taskCheckbox_CheckedChange (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,460);
 if (RapidSub.canDelegate("taskcheckbox_checkedchange")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","taskcheckbox_checkedchange", _checked);}
 RemoteObject _taskcheckbox = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
 RemoteObject _tasklbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
@@ -1314,7 +1314,7 @@ finally {
 		}}
 public static void  _taskslist_itemlongclick(RemoteObject _index,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,411);
+		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,411);
 if (RapidSub.canDelegate("taskslist_itemlongclick")) { b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","taskslist_itemlongclick", _index, _value); return;}
 ResumableSub_tasksList_ItemLongClick rsub = new ResumableSub_tasksList_ItemLongClick(null,_index,_value);
 rsub.resume(null, null);
@@ -1342,7 +1342,7 @@ RemoteObject _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.object
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,411);
+		Debug.PushSubsStack("tasksList_ItemLongClick (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,411);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1464,7 +1464,7 @@ finally {
 }
 public static RemoteObject  _taskslistui(RemoteObject _newtask) throws Exception{
 try {
-		Debug.PushSubsStack("tasksListUI (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,478);
+		Debug.PushSubsStack("tasksListUI (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,478);
 if (RapidSub.canDelegate("taskslistui")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","taskslistui", _newtask);}
 RemoteObject _taskpnl = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _taskcheckbox = RemoteObject.declareNull("anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper");
@@ -1558,7 +1558,7 @@ finally {
 		}}
 public static RemoteObject  _updateprogress() throws Exception{
 try {
-		Debug.PushSubsStack("updateProgress (todoactivity) ","todoactivity",9,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,515);
+		Debug.PushSubsStack("updateProgress (todoactivity) ","todoactivity",24,todoactivity.mostCurrent.activityBA,todoactivity.mostCurrent,515);
 if (RapidSub.canDelegate("updateprogress")) { return b4a.example.todoactivity.remoteMe.runUserSub(false, "todoactivity","updateprogress");}
 RemoteObject _key = RemoteObject.createImmutable("");
 RemoteObject _savedtasks = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");

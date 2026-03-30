@@ -81,25 +81,25 @@ Sub showHelpPage(page As Int)
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
 		Case 8
 			titleLbl.Text = "Themes"
-			descriptionLbl.Text = "read title. does what it's supposed to do."
+			descriptionLbl.Text = "Themes let you put your own fun twist on the app. Choose from a range of styles and color schemes to dress up your experience, making the space you study and plan in feel a little more like yours."
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
 		Case 9
 			titleLbl.Text = "Lamp"
-			descriptionLbl.Text = "read title. does what it's supposed to do."
+			descriptionLbl.Text = "The lamp gives you control over how the app looks in any lighting. Switch effortlessly between light mode for bright environments and dark mode for low-light settings, so your eyes stay comfortable no matter when or where you're working."
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
 		Case 10
 			titleLbl.Text = "Navigation"
-			descriptionLbl.Text = "read title. does what it's supposed to do."
+			descriptionLbl.Text = "Navigation is your home base for getting around the app. All of the app's features are laid out in one accessible spot, with clearly labeled and easy-to-read buttons so you can jump to wherever you need to be without any hassle."
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
 	End Select
     
 	' Disable buttons at limits
 	backBtn.Enabled = (page > 0)
-	nextBtn.Enabled = (page < 7)
+	nextBtn.Enabled = (page < 10)
 End Sub
 
 Sub nextBtn_Click
-	If helpPage < 7 Then
+	If helpPage < 10 Then
 		showHelpPage(helpPage + 1)
 	End If
 End Sub

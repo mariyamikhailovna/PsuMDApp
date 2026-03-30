@@ -362,21 +362,22 @@ public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
 public b4a.example.editnote _editnote = null;
 public b4a.example.corkactivity _corkactivity = null;
-public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
+public b4a.example.musicactivity _musicactivity = null;
+public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
 public b4a.example.add_card_module2 _add_card_module2 = null;
 public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.all_active_recall _all_active_recall = null;
-public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.card_module _card_module = null;
 public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
-public b4a.example.flashcardactivity _flashcardactivity = null;
-public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.subdeck_module _subdeck_module = null;
+public b4a.example.todoactivity _todoactivity = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="helpactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -498,8 +499,8 @@ RDebugUtils.currentLine=3145765;
  //BA.debugLineNum = 3145765;BA.debugLine="titleLbl.Text = \"Themes\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Themes"));
 RDebugUtils.currentLine=3145766;
- //BA.debugLineNum = 3145766;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
-mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+ //BA.debugLineNum = 3145766;BA.debugLine="descriptionLbl.Text = \"Themes let you put your";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("Themes let you put your own fun twist on the app. Choose from a range of styles and color schemes to dress up your experience, making the space you study and plan in feel a little more like yours."));
 RDebugUtils.currentLine=3145767;
  //BA.debugLineNum = 3145767;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
@@ -509,8 +510,8 @@ RDebugUtils.currentLine=3145769;
  //BA.debugLineNum = 3145769;BA.debugLine="titleLbl.Text = \"Lamp\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Lamp"));
 RDebugUtils.currentLine=3145770;
- //BA.debugLineNum = 3145770;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
-mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+ //BA.debugLineNum = 3145770;BA.debugLine="descriptionLbl.Text = \"The lamp gives you contr";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The lamp gives you control over how the app looks in any lighting. Switch effortlessly between light mode for bright environments and dark mode for low-light settings, so your eyes stay comfortable no matter when or where you're working."));
 RDebugUtils.currentLine=3145771;
  //BA.debugLineNum = 3145771;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
@@ -520,8 +521,8 @@ RDebugUtils.currentLine=3145773;
  //BA.debugLineNum = 3145773;BA.debugLine="titleLbl.Text = \"Navigation\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Navigation"));
 RDebugUtils.currentLine=3145774;
- //BA.debugLineNum = 3145774;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
-mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+ //BA.debugLineNum = 3145774;BA.debugLine="descriptionLbl.Text = \"Navigation is your home";
+mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("Navigation is your home base for getting around the app. All of the app's features are laid out in one accessible spot, with clearly labeled and easy-to-read buttons so you can jump to wherever you need to be without any hassle."));
 RDebugUtils.currentLine=3145775;
  //BA.debugLineNum = 3145775;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
@@ -532,8 +533,8 @@ RDebugUtils.currentLine=3145779;
  //BA.debugLineNum = 3145779;BA.debugLine="backBtn.Enabled = (page > 0)";
 mostCurrent._backbtn.setEnabled((_page>0));
 RDebugUtils.currentLine=3145780;
- //BA.debugLineNum = 3145780;BA.debugLine="nextBtn.Enabled = (page < 7)";
-mostCurrent._nextbtn.setEnabled((_page<7));
+ //BA.debugLineNum = 3145780;BA.debugLine="nextBtn.Enabled = (page < 10)";
+mostCurrent._nextbtn.setEnabled((_page<10));
 RDebugUtils.currentLine=3145781;
  //BA.debugLineNum = 3145781;BA.debugLine="End Sub";
 return "";
@@ -577,13 +578,13 @@ public static String  _closehelp_click() throws Exception{
 RDebugUtils.currentModule="helpactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "closehelp_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "closehelp_click", null));}
-RDebugUtils.currentLine=24576000;
- //BA.debugLineNum = 24576000;BA.debugLine="Sub closeHelp_Click";
-RDebugUtils.currentLine=24576001;
- //BA.debugLineNum = 24576001;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=3342336;
+ //BA.debugLineNum = 3342336;BA.debugLine="Sub closeHelp_Click";
+RDebugUtils.currentLine=3342337;
+ //BA.debugLineNum = 3342337;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=24576002;
- //BA.debugLineNum = 24576002;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3342338;
+ //BA.debugLineNum = 3342338;BA.debugLine="End Sub";
 return "";
 }
 public static String  _nextbtn_click() throws Exception{
@@ -593,8 +594,8 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "nextbtn_click", false))
 RDebugUtils.currentLine=3211264;
  //BA.debugLineNum = 3211264;BA.debugLine="Sub nextBtn_Click";
 RDebugUtils.currentLine=3211265;
- //BA.debugLineNum = 3211265;BA.debugLine="If helpPage < 7 Then";
-if (_helppage<7) { 
+ //BA.debugLineNum = 3211265;BA.debugLine="If helpPage < 10 Then";
+if (_helppage<10) { 
 RDebugUtils.currentLine=3211266;
  //BA.debugLineNum = 3211266;BA.debugLine="showHelpPage(helpPage + 1)";
 _showhelppage((int) (_helppage+1));

@@ -8,7 +8,7 @@ public class schedule_module_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,22);
+		Debug.PushSubsStack("Activity_Create (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,22);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -34,7 +34,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,182);
+		Debug.PushSubsStack("Activity_Pause (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,182);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 182;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -51,7 +51,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,178);
+		Debug.PushSubsStack("Activity_Resume (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,178);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","activity_resume");}
  BA.debugLineNum = 178;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(131072);
@@ -67,7 +67,7 @@ finally {
 		}}
 public static RemoteObject  _day_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("Day_btn_Click (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,195);
+		Debug.PushSubsStack("Day_btn_Click (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,195);
 if (RapidSub.canDelegate("day_btn_click")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","day_btn_click");}
 RemoteObject _currentyear = RemoteObject.createImmutable(0);
 RemoteObject _currentmonth = RemoteObject.createImmutable(0);
@@ -104,7 +104,7 @@ finally {
 		}}
 public static RemoteObject  _drawschedule() throws Exception{
 try {
-		Debug.PushSubsStack("DrawSchedule (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,32);
+		Debug.PushSubsStack("DrawSchedule (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,32);
 if (RapidSub.canDelegate("drawschedule")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","drawschedule");}
 RemoteObject _y = RemoteObject.createImmutable(0);
 RemoteObject _sorteddates = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -154,7 +154,7 @@ Debug.ShouldStop(2048);
 _sorteddates.runVoidMethod ("Add",(Object)((_keys)));
  BA.debugLineNum = 45;BA.debugLine="Log(keys)";
 Debug.ShouldStop(4096);
-schedule_module.mostCurrent.__c.runVoidMethod ("LogImpl","220316173",_keys,0);
+schedule_module.mostCurrent.__c.runVoidMethod ("LogImpl","412451853",_keys,0);
  }
 }Debug.locals.put("keys", _keys);
 ;
@@ -308,7 +308,7 @@ finally {
 		}}
 public static RemoteObject  _gettimestring(RemoteObject _h) throws Exception{
 try {
-		Debug.PushSubsStack("GetTimeString (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,98);
+		Debug.PushSubsStack("GetTimeString (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,98);
 if (RapidSub.canDelegate("gettimestring")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","gettimestring", _h);}
 RemoteObject _num = RemoteObject.createImmutable(0);
 RemoteObject _ampm = RemoteObject.createImmutable("");
@@ -395,7 +395,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _identifycolor(RemoteObject _typeofevent) throws Exception{
 try {
-		Debug.PushSubsStack("IdentifyColor (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,124);
+		Debug.PushSubsStack("IdentifyColor (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,124);
 if (RapidSub.canDelegate("identifycolor")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","identifycolor", _typeofevent);}
 RemoteObject _mycolor = RemoteObject.createImmutable(0);
 Debug.locals.put("typeofevent", _typeofevent);
@@ -448,7 +448,7 @@ finally {
 		}}
 public static RemoteObject  _menu_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("menu_btn_Click (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,186);
+		Debug.PushSubsStack("menu_btn_Click (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,186);
 if (RapidSub.canDelegate("menu_btn_click")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","menu_btn_click");}
  BA.debugLineNum = 186;BA.debugLine="Private Sub menu_btn_Click";
 Debug.ShouldStop(33554432);
@@ -467,7 +467,7 @@ finally {
 		}}
 public static RemoteObject  _month_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("Month_btn_Click (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,204);
+		Debug.PushSubsStack("Month_btn_Click (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,204);
 if (RapidSub.canDelegate("month_btn_click")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","month_btn_click");}
  BA.debugLineNum = 204;BA.debugLine="Private Sub Month_btn_Click";
 Debug.ShouldStop(2048);
@@ -494,7 +494,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _sched_btn_click() throws Exception{
 try {
-		Debug.PushSubsStack("sched_btn_Click (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,191);
+		Debug.PushSubsStack("sched_btn_Click (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,191);
 if (RapidSub.canDelegate("sched_btn_click")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","sched_btn_click");}
  BA.debugLineNum = 191;BA.debugLine="Private Sub sched_btn_Click";
 Debug.ShouldStop(1073741824);
@@ -513,7 +513,7 @@ finally {
 		}}
 public static RemoteObject  _setdate(RemoteObject _tagdate) throws Exception{
 try {
-		Debug.PushSubsStack("SetDate (schedule_module) ","schedule_module",22,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,139);
+		Debug.PushSubsStack("SetDate (schedule_module) ","schedule_module",14,schedule_module.mostCurrent.activityBA,schedule_module.mostCurrent,139);
 if (RapidSub.canDelegate("setdate")) { return b4a.example.schedule_module.remoteMe.runUserSub(false, "schedule_module","setdate", _tagdate);}
 RemoteObject _parts = null;
 RemoteObject _year = RemoteObject.createImmutable("");

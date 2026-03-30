@@ -125,9 +125,9 @@ try {
 if (RapidSub.canDelegate("nextbtn_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","nextbtn_click");}
  BA.debugLineNum = 95;BA.debugLine="Sub nextBtn_Click";
 Debug.ShouldStop(1073741824);
- BA.debugLineNum = 96;BA.debugLine="If helpPage < 7 Then";
+ BA.debugLineNum = 96;BA.debugLine="If helpPage < 10 Then";
 Debug.ShouldStop(-2147483648);
-if (RemoteObject.solveBoolean("<",helpactivity._helppage,BA.numberCast(double.class, 7))) { 
+if (RemoteObject.solveBoolean("<",helpactivity._helppage,BA.numberCast(double.class, 10))) { 
  BA.debugLineNum = 97;BA.debugLine="showHelpPage(helpPage + 1)";
 Debug.ShouldStop(1);
 _showhelppage(RemoteObject.solve(new RemoteObject[] {helpactivity._helppage,RemoteObject.createImmutable(1)}, "+",1, 1));
@@ -260,9 +260,9 @@ case 8: {
  BA.debugLineNum = 77;BA.debugLine="titleLbl.Text = \"Themes\"";
 Debug.ShouldStop(4096);
 helpactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Themes"));
- BA.debugLineNum = 78;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+ BA.debugLineNum = 78;BA.debugLine="descriptionLbl.Text = \"Themes let you put your";
 Debug.ShouldStop(8192);
-helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("Themes let you put your own fun twist on the app. Choose from a range of styles and color schemes to dress up your experience, making the space you study and plan in feel a little more like yours."));
  BA.debugLineNum = 79;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(16384);
 helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
@@ -271,9 +271,9 @@ case 9: {
  BA.debugLineNum = 81;BA.debugLine="titleLbl.Text = \"Lamp\"";
 Debug.ShouldStop(65536);
 helpactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Lamp"));
- BA.debugLineNum = 82;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+ BA.debugLineNum = 82;BA.debugLine="descriptionLbl.Text = \"The lamp gives you contr";
 Debug.ShouldStop(131072);
-helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("The lamp gives you control over how the app looks in any lighting. Switch effortlessly between light mode for bright environments and dark mode for low-light settings, so your eyes stay comfortable no matter when or where you're working."));
  BA.debugLineNum = 83;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(262144);
 helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
@@ -282,9 +282,9 @@ case 10: {
  BA.debugLineNum = 85;BA.debugLine="titleLbl.Text = \"Navigation\"";
 Debug.ShouldStop(1048576);
 helpactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Navigation"));
- BA.debugLineNum = 86;BA.debugLine="descriptionLbl.Text = \"read title. does what it";
+ BA.debugLineNum = 86;BA.debugLine="descriptionLbl.Text = \"Navigation is your home";
 Debug.ShouldStop(2097152);
-helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("read title. does what it's supposed to do."));
+helpactivity.mostCurrent._descriptionlbl.runMethod(true,"setText",BA.ObjectToCharSequence("Navigation is your home base for getting around the app. All of the app's features are laid out in one accessible spot, with clearly labeled and easy-to-read buttons so you can jump to wherever you need to be without any hassle."));
  BA.debugLineNum = 87;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 Debug.ShouldStop(4194304);
 helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(helpactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getWidth")),(Object)(helpactivity.mostCurrent._helpimage.runMethod(true,"getHeight")),(Object)(helpactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
@@ -294,9 +294,9 @@ helpactivity.mostCurrent._helpimage.runMethod(false,"setBitmap",(helpactivity._x
  BA.debugLineNum = 91;BA.debugLine="backBtn.Enabled = (page > 0)";
 Debug.ShouldStop(67108864);
 helpactivity.mostCurrent._backbtn.runMethod(true,"setEnabled",BA.ObjectToBoolean((RemoteObject.solveBoolean(">",_page,BA.numberCast(double.class, 0)))));
- BA.debugLineNum = 92;BA.debugLine="nextBtn.Enabled = (page < 7)";
+ BA.debugLineNum = 92;BA.debugLine="nextBtn.Enabled = (page < 10)";
 Debug.ShouldStop(134217728);
-helpactivity.mostCurrent._nextbtn.runMethod(true,"setEnabled",BA.ObjectToBoolean((RemoteObject.solveBoolean("<",_page,BA.numberCast(double.class, 7)))));
+helpactivity.mostCurrent._nextbtn.runMethod(true,"setEnabled",BA.ObjectToBoolean((RemoteObject.solveBoolean("<",_page,BA.numberCast(double.class, 10)))));
  BA.debugLineNum = 93;BA.debugLine="End Sub";
 Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable("");
