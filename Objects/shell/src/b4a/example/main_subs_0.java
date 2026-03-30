@@ -8,19 +8,22 @@ public class main_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,24);
+		Debug.PushSubsStack("Activity_Create (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,26);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.main.remoteMe.runUserSub(false, "main","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
- BA.debugLineNum = 24;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-Debug.ShouldStop(8388608);
- BA.debugLineNum = 25;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
-Debug.ShouldStop(16777216);
-main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("loadingLayout")),main.mostCurrent.activityBA);
- BA.debugLineNum = 26;BA.debugLine="StartService(musicService)";
+ BA.debugLineNum = 26;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
 Debug.ShouldStop(33554432);
-main.mostCurrent.__c.runVoidMethod ("StartService",main.processBA,(Object)((main.mostCurrent._musicservice.getObject())));
- BA.debugLineNum = 27;BA.debugLine="End Sub";
+ BA.debugLineNum = 27;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
 Debug.ShouldStop(67108864);
+main.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("loadingLayout")),main.mostCurrent.activityBA);
+ BA.debugLineNum = 28;BA.debugLine="loadingScreen.SetGif(File.DirAssets, \"loading.GIF";
+Debug.ShouldStop(134217728);
+main.mostCurrent._loadingscreen.runClassMethod (b4a.example.b4xgifview.class, "_setgif" /*RemoteObject*/ ,(Object)(main.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(RemoteObject.createImmutable("loading.GIF")));
+ BA.debugLineNum = 29;BA.debugLine="StartService(musicService)";
+Debug.ShouldStop(268435456);
+main.mostCurrent.__c.runVoidMethod ("StartService",main.processBA,(Object)((main.mostCurrent._musicservice.getObject())));
+ BA.debugLineNum = 30;BA.debugLine="End Sub";
+Debug.ShouldStop(536870912);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -31,7 +34,7 @@ finally {
 		}}
 public static void  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,29);
+		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,32);
 if (RapidSub.canDelegate("activity_resume")) { b4a.example.main.remoteMe.runUserSub(false, "main","activity_resume"); return;}
 ResumableSub_Activity_Resume rsub = new ResumableSub_Activity_Resume(null);
 rsub.resume(null, null);
@@ -53,7 +56,7 @@ RemoteObject _result = RemoteObject.createImmutable(false);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,29);
+		Debug.PushSubsStack("Activity_Resume (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,32);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -64,8 +67,8 @@ return;
 case 0:
 //C
 this.state = -1;
- BA.debugLineNum = 30;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 33;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
+Debug.ShouldStop(1);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","complete", main.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "main", "activity_resume"), _startload());
 this.state = 1;
 return;
@@ -74,8 +77,8 @@ case 1:
 this.state = -1;
 _result = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
 ;
- BA.debugLineNum = 31;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 34;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
 if (true) break;
 
             }
@@ -91,8 +94,10 @@ finally {
 public static void  _complete(RemoteObject _result) throws Exception{
 }
 public static RemoteObject  _globals() throws Exception{
- //BA.debugLineNum = 21;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 22;BA.debugLine="End Sub";
+ //BA.debugLineNum = 22;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 23;BA.debugLine="Private loadingScreen As B4XGifView";
+main.mostCurrent._loadingscreen = RemoteObject.createNew ("b4a.example.b4xgifview");
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
 
@@ -103,7 +108,6 @@ public static void initializeProcessGlobals() {
 		try {
 		        main_subs_0._process_globals();
 starter_subs_0._process_globals();
-mainactivity_subs_0._process_globals();
 navactivity_subs_0._process_globals();
 helpactivity_subs_0._process_globals();
 clockactivity_subs_0._process_globals();
@@ -112,24 +116,24 @@ editnote_subs_0._process_globals();
 corkactivity_subs_0._process_globals();
 themeactivity_subs_0._process_globals();
 musicservice_subs_0._process_globals();
+musicactivity_subs_0._process_globals();
+calendaractivity_subs_0._process_globals();
+day_module_subs_0._process_globals();
+mainactivity_subs_0._process_globals();
+musiccodemodule_subs_0._process_globals();
 active_recall_subs_0._process_globals();
 add_card_module_subs_0._process_globals();
 add_card_module2_subs_0._process_globals();
 add_events_module_subs_0._process_globals();
 all_active_recall_subs_0._process_globals();
-calendaractivity_subs_0._process_globals();
 card_module_subs_0._process_globals();
-day_module_subs_0._process_globals();
 deck_all_cards_subs_0._process_globals();
 flashcardactivity_subs_0._process_globals();
-musicactivity_subs_0._process_globals();
 schedule_module_subs_0._process_globals();
 subdeck_module_subs_0._process_globals();
 todoactivity_subs_0._process_globals();
-musiccodemodule_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 starter.myClass = BA.getDeviceClass ("b4a.example.starter");
-mainactivity.myClass = BA.getDeviceClass ("b4a.example.mainactivity");
 navactivity.myClass = BA.getDeviceClass ("b4a.example.navactivity");
 helpactivity.myClass = BA.getDeviceClass ("b4a.example.helpactivity");
 clockactivity.myClass = BA.getDeviceClass ("b4a.example.clockactivity");
@@ -138,21 +142,22 @@ editnote.myClass = BA.getDeviceClass ("b4a.example.editnote");
 corkactivity.myClass = BA.getDeviceClass ("b4a.example.corkactivity");
 themeactivity.myClass = BA.getDeviceClass ("b4a.example.themeactivity");
 musicservice.myClass = BA.getDeviceClass ("b4a.example.musicservice");
+musicactivity.myClass = BA.getDeviceClass ("b4a.example.musicactivity");
+calendaractivity.myClass = BA.getDeviceClass ("b4a.example.calendaractivity");
+day_module.myClass = BA.getDeviceClass ("b4a.example.day_module");
+mainactivity.myClass = BA.getDeviceClass ("b4a.example.mainactivity");
+musiccodemodule.myClass = BA.getDeviceClass ("b4a.example.musiccodemodule");
 active_recall.myClass = BA.getDeviceClass ("b4a.example.active_recall");
 add_card_module.myClass = BA.getDeviceClass ("b4a.example.add_card_module");
 add_card_module2.myClass = BA.getDeviceClass ("b4a.example.add_card_module2");
 add_events_module.myClass = BA.getDeviceClass ("b4a.example.add_events_module");
 all_active_recall.myClass = BA.getDeviceClass ("b4a.example.all_active_recall");
-calendaractivity.myClass = BA.getDeviceClass ("b4a.example.calendaractivity");
 card_module.myClass = BA.getDeviceClass ("b4a.example.card_module");
-day_module.myClass = BA.getDeviceClass ("b4a.example.day_module");
 deck_all_cards.myClass = BA.getDeviceClass ("b4a.example.deck_all_cards");
 flashcardactivity.myClass = BA.getDeviceClass ("b4a.example.flashcardactivity");
-musicactivity.myClass = BA.getDeviceClass ("b4a.example.musicactivity");
 schedule_module.myClass = BA.getDeviceClass ("b4a.example.schedule_module");
 subdeck_module.myClass = BA.getDeviceClass ("b4a.example.subdeck_module");
 todoactivity.myClass = BA.getDeviceClass ("b4a.example.todoactivity");
-musiccodemodule.myClass = BA.getDeviceClass ("b4a.example.musiccodemodule");
 b4xgifview.myClass = BA.getDeviceClass ("b4a.example.b4xgifview");
 keyvaluestore.myClass = BA.getDeviceClass ("b4a.example.keyvaluestore");
 		
@@ -170,12 +175,12 @@ main._format24h = main.mostCurrent.__c.getField(true,"False");
 ;
  //BA.debugLineNum = 18;BA.debugLine="Public kvs As KeyValueStore";
 main._kvs = RemoteObject.createNew ("b4a.example3.keyvaluestore");
- //BA.debugLineNum = 19;BA.debugLine="End Sub";
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _startload() throws Exception{
 try {
-		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,33);
+		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,36);
 if (RapidSub.canDelegate("startload")) { return b4a.example.main.remoteMe.runUserSub(false, "main","startload");}
 ResumableSub_startLoad rsub = new ResumableSub_startLoad(null);
 rsub.remoteResumableSub = anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSubForFilter();
@@ -198,7 +203,7 @@ b4a.example.main parent;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,33);
+		Debug.PushSubsStack("startLoad (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,36);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -209,8 +214,8 @@ parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResuma
 case 0:
 //C
 this.state = -1;
- BA.debugLineNum = 34;BA.debugLine="Sleep(2000)";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 37;BA.debugLine="Sleep(2000)";
+Debug.ShouldStop(16);
 parent.mostCurrent.__c.runVoidMethod ("Sleep",main.mostCurrent.activityBA,anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "main", "startload"),BA.numberCast(int.class, 2000));
 this.state = 1;
 return;
@@ -218,18 +223,18 @@ case 1:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 35;BA.debugLine="StartActivity(MainActivity)";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 38;BA.debugLine="StartActivity(MainActivity)";
+Debug.ShouldStop(32);
 parent.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((parent.mostCurrent._mainactivity.getObject())));
- BA.debugLineNum = 36;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 39;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(64);
 parent.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 37;BA.debugLine="Return True";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 40;BA.debugLine="Return True";
+Debug.ShouldStop(128);
 if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"True")));return;};
- BA.debugLineNum = 38;BA.debugLine="End Sub";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 41;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 if (true) break;
 
             }

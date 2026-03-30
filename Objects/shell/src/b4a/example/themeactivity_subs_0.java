@@ -8,7 +8,7 @@ public class themeactivity_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,23);
+		Debug.PushSubsStack("Activity_Create (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,23);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 23;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -31,7 +31,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,33);
+		Debug.PushSubsStack("Activity_Pause (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,33);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 33;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -48,7 +48,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,29);
+		Debug.PushSubsStack("Activity_Resume (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,29);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","activity_resume");}
  BA.debugLineNum = 29;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(268435456);
@@ -64,7 +64,7 @@ finally {
 		}}
 public static RemoteObject  _applybtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("applyBtn_Click (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,75);
+		Debug.PushSubsStack("applyBtn_Click (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,75);
 if (RapidSub.canDelegate("applybtn_click")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","applybtn_click");}
  BA.debugLineNum = 75;BA.debugLine="Sub applyBtn_Click";
 Debug.ShouldStop(1024);
@@ -102,7 +102,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backBtn_Click (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,65);
+		Debug.PushSubsStack("backBtn_Click (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,65);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","backbtn_click");}
  BA.debugLineNum = 65;BA.debugLine="Sub backBtn_Click";
 Debug.ShouldStop(1);
@@ -125,7 +125,7 @@ finally {
 		}}
 public static RemoteObject  _closehelp_click() throws Exception{
 try {
-		Debug.PushSubsStack("closeHelp_Click (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,71);
+		Debug.PushSubsStack("closeHelp_Click (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,71);
 if (RapidSub.canDelegate("closehelp_click")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","closehelp_click");}
  BA.debugLineNum = 71;BA.debugLine="Sub closeHelp_Click";
 Debug.ShouldStop(64);
@@ -159,7 +159,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _nextbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("nextBtn_Click (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,59);
+		Debug.PushSubsStack("nextBtn_Click (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,59);
 if (RapidSub.canDelegate("nextbtn_click")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","nextbtn_click");}
  BA.debugLineNum = 59;BA.debugLine="Sub nextBtn_Click";
 Debug.ShouldStop(67108864);
@@ -191,7 +191,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showthemepage(RemoteObject _page) throws Exception{
 try {
-		Debug.PushSubsStack("showThemePage (themeactivity) ","themeactivity",9,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,37);
+		Debug.PushSubsStack("showThemePage (themeactivity) ","themeactivity",8,themeactivity.mostCurrent.activityBA,themeactivity.mostCurrent,37);
 if (RapidSub.canDelegate("showthemepage")) { return b4a.example.themeactivity.remoteMe.runUserSub(false, "themeactivity","showthemepage", _page);}
 Debug.locals.put("page", _page);
  BA.debugLineNum = 37;BA.debugLine="Sub showThemePage(page As Int)";

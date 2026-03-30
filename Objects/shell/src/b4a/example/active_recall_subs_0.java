@@ -8,7 +8,7 @@ public class active_recall_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,29);
+		Debug.PushSubsStack("Activity_Create (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,29);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","activity_create", _firsttime);}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 Debug.locals.put("FirstTime", _firsttime);
@@ -51,7 +51,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,82);
+		Debug.PushSubsStack("Activity_Pause (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,82);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 82;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -68,7 +68,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,78);
+		Debug.PushSubsStack("Activity_Resume (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,78);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","activity_resume");}
  BA.debugLineNum = 78;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(8192);
@@ -84,7 +84,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backbtn_Click (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,128);
+		Debug.PushSubsStack("backbtn_Click (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,128);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","backbtn_click");}
  BA.debugLineNum = 128;BA.debugLine="Private Sub backbtn_Click";
 Debug.ShouldStop(-2147483648);
@@ -139,7 +139,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _goback_click() throws Exception{
 try {
-		Debug.PushSubsStack("goback_Click (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,123);
+		Debug.PushSubsStack("goback_Click (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,123);
 if (RapidSub.canDelegate("goback_click")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","goback_click");}
  BA.debugLineNum = 123;BA.debugLine="Private Sub goback_Click";
 Debug.ShouldStop(67108864);
@@ -158,7 +158,7 @@ finally {
 		}}
 public static RemoteObject  _nextbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("nextbtn_Click (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,106);
+		Debug.PushSubsStack("nextbtn_Click (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,106);
 if (RapidSub.canDelegate("nextbtn_click")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","nextbtn_click");}
  BA.debugLineNum = 106;BA.debugLine="Private Sub nextbtn_Click";
 Debug.ShouldStop(512);
@@ -215,7 +215,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showanswerbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("showAnswerbtn_Click (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,87);
+		Debug.PushSubsStack("showAnswerbtn_Click (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,87);
 if (RapidSub.canDelegate("showanswerbtn_click")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","showanswerbtn_click");}
 RemoteObject _card = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
  BA.debugLineNum = 87;BA.debugLine="Private Sub showAnswerbtn_Click";
@@ -256,7 +256,7 @@ finally {
 		}}
 public static RemoteObject  _showcard() throws Exception{
 try {
-		Debug.PushSubsStack("ShowCard (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,68);
+		Debug.PushSubsStack("ShowCard (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,68);
 if (RapidSub.canDelegate("showcard")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","showcard");}
 RemoteObject _card = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
  BA.debugLineNum = 68;BA.debugLine="Sub ShowCard";
@@ -283,7 +283,7 @@ finally {
 		}}
 public static RemoteObject  _showprogress() throws Exception{
 try {
-		Debug.PushSubsStack("ShowProgress (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,49);
+		Debug.PushSubsStack("ShowProgress (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,49);
 if (RapidSub.canDelegate("showprogress")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","showprogress");}
 RemoteObject _totalsession = RemoteObject.createImmutable(0);
 RemoteObject _studied = RemoteObject.createImmutable(0);
@@ -317,7 +317,7 @@ finally {
 		}}
 public static RemoteObject  _shufflecards(RemoteObject _cardlist) throws Exception{
 try {
-		Debug.PushSubsStack("ShuffleCards (active_recall) ","active_recall",11,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,57);
+		Debug.PushSubsStack("ShuffleCards (active_recall) ","active_recall",15,active_recall.mostCurrent.activityBA,active_recall.mostCurrent,57);
 if (RapidSub.canDelegate("shufflecards")) { return b4a.example.active_recall.remoteMe.runUserSub(false, "active_recall","shufflecards", _cardlist);}
 int _i = 0;
 RemoteObject _j = RemoteObject.createImmutable(0);

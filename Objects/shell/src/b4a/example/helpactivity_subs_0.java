@@ -8,7 +8,7 @@ public class helpactivity_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,26);
+		Debug.PushSubsStack("Activity_Create (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,26);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 26;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -31,7 +31,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,36);
+		Debug.PushSubsStack("Activity_Pause (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,36);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 36;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -48,7 +48,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,32);
+		Debug.PushSubsStack("Activity_Resume (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,32);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","activity_resume");}
  BA.debugLineNum = 32;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(-2147483648);
@@ -64,7 +64,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backBtn_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,101);
+		Debug.PushSubsStack("backBtn_Click (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,101);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","backbtn_click");}
  BA.debugLineNum = 101;BA.debugLine="Sub backBtn_Click";
 Debug.ShouldStop(16);
@@ -87,7 +87,7 @@ finally {
 		}}
 public static RemoteObject  _closehelp_click() throws Exception{
 try {
-		Debug.PushSubsStack("closeHelp_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,107);
+		Debug.PushSubsStack("closeHelp_Click (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,107);
 if (RapidSub.canDelegate("closehelp_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","closehelp_click");}
  BA.debugLineNum = 107;BA.debugLine="Sub closeHelp_Click";
 Debug.ShouldStop(1024);
@@ -121,7 +121,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _nextbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("nextBtn_Click (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,95);
+		Debug.PushSubsStack("nextBtn_Click (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,95);
 if (RapidSub.canDelegate("nextbtn_click")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","nextbtn_click");}
  BA.debugLineNum = 95;BA.debugLine="Sub nextBtn_Click";
 Debug.ShouldStop(1073741824);
@@ -157,7 +157,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showhelppage(RemoteObject _page) throws Exception{
 try {
-		Debug.PushSubsStack("showHelpPage (helpactivity) ","helpactivity",4,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,40);
+		Debug.PushSubsStack("showHelpPage (helpactivity) ","helpactivity",3,helpactivity.mostCurrent.activityBA,helpactivity.mostCurrent,40);
 if (RapidSub.canDelegate("showhelppage")) { return b4a.example.helpactivity.remoteMe.runUserSub(false, "helpactivity","showhelppage", _page);}
 Debug.locals.put("page", _page);
  BA.debugLineNum = 40;BA.debugLine="Sub showHelpPage(page As Int)";

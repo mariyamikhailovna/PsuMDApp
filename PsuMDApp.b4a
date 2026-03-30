@@ -4,31 +4,32 @@ File10=Books2.PNG
 File100=Layout6.bal
 File101=Layouthsv.bal
 File102=lightbg.PNG
-File103=loadingLayout.bal
-File104=mikuComp2.GIF
-File105=Mp2.PNG
-File106=Mp3.PNG
-File107=musicLayout.bal
-File108=navAct.bal
-File109=Navbtn.PNG
+File103=Loading.GIF
+File104=loadingLayout.bal
+File105=mikuComp2.GIF
+File106=Mp2.PNG
+File107=Mp3.PNG
+File108=musicLayout.bal
+File109=navAct.bal
 File11=Books3.PNG
-File110=notepadlayout.bal
-File111=Notes2.PNG
-File112=OnMp3.GIF
-File113=Openbook.GIF
-File114=OpenNotes2.GIF
-File115=OpenNotes3.GIF
-File116=Schedule_moduleLayout.bal
-File117=Shelf2.PNG
-File118=Shelf3.PNG
-File119=Subdeck_ModuleLayout.bal
+File110=Navbtn.PNG
+File111=notepadlayout.bal
+File112=Notes2.PNG
+File113=OnMp3.GIF
+File114=Openbook.GIF
+File115=OpenNotes2.GIF
+File116=OpenNotes3.GIF
+File117=Schedule_moduleLayout.bal
+File118=Shelf2.PNG
+File119=Shelf3.PNG
 File12=BtnBook.PNG
-File120=Theme 3.PNG
-File121=Theme2.PNG
-File122=themeLayout.bal
-File123=todolistlayout.bal
-File124=todoListLayoutDark.bal
-File125=transparentOverlay.png
+File120=Subdeck_ModuleLayout.bal
+File121=Theme 3.PNG
+File122=Theme2.PNG
+File123=themeLayout.bal
+File124=todolistlayout.bal
+File125=todoListLayoutDark.bal
+File126=transparentOverlay.png
 File13=BtnCalendar.PNG
 File14=BtnClock.PNG
 File15=BtnComputer.GIF
@@ -154,6 +155,7 @@ FileGroup122=Default Group
 FileGroup123=Default Group
 FileGroup124=Default Group
 FileGroup125=Default Group
+FileGroup126=Default Group
 FileGroup13=Default Group
 FileGroup14=Default Group
 FileGroup15=Default Group
@@ -286,7 +288,7 @@ Module6=CalendarActivity
 Module7=Card_Module
 Module8=clockActivity
 Module9=corkActivity
-NumberOfFiles=125
+NumberOfFiles=126
 NumberOfLibraries=10
 NumberOfModules=25
 Version=13.4
@@ -309,13 +311,16 @@ Sub Process_Globals
 	Public format24h As Boolean = False
 	Type MyNote (Title As String, Tags As String, Content As String, DateAdded As Long, noteID As Long)
 	Public kvs As KeyValueStore
+	
 End Sub
 
 Sub Globals
+	Private loadingScreen As B4XGifView
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("loadingLayout")
+	loadingScreen.SetGif(File.DirAssets, "loading.GIF")
 	StartService(musicService)
 End Sub
 

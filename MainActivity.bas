@@ -60,8 +60,8 @@ Sub Activity_Create(FirstTime As Boolean)
 		Case 1
 			regLayout.LoadLayout("Layout3") 
 			darkModeLayout.LoadLayout("Layout4")  
-			computerGif.SetGif(File.DirAssets, "Comp3.GIF") 'miku
-			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")'miku
+			computerGif.SetGif(File.DirAssets, "mikucomp2.GIF") 'miku
+			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF")'miku
 		Case 2
 			regLayout.LoadLayout("Layout5") 
 			darkModeLayout.LoadLayout("Layout6") 
@@ -96,8 +96,8 @@ Sub Activity_Resume
 		Case 1
 			regLayout.LoadLayout("Layout3")
 			darkModeLayout.LoadLayout("Layout4")
-			computerGif.SetGif(File.DirAssets, "Comp3.GIF") 'miku
-			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF") 'miku
+			computerGif.SetGif(File.DirAssets, "mikucomp2.GIF") 'miku
+			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF") 'miku
 		Case 2
 			regLayout.LoadLayout("Layout5")
 			darkModeLayout.LoadLayout("Layout6")
