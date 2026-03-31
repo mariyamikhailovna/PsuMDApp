@@ -34,7 +34,7 @@ public class todoactivity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.todoactivity");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.todoactivity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,6 +335,15 @@ public class todoactivity extends Activity implements B4AActivity{
             
     }
 
+
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public static b4a.example3.keyvaluestore _kvs = null;
@@ -365,55 +374,62 @@ public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
+public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.add_events_module _add_events_module = null;
+public b4a.example.all_active_recall _all_active_recall = null;
 public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.day_module _day_module = null;
+public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.add_events_module _add_events_module = null;
-public b4a.example.schedule_module _schedule_module = null;
-public b4a.example.subdeck_module _subdeck_module = null;
-public b4a.example.card_module _card_module = null;
-public b4a.example.add_card_module2 _add_card_module2 = null;
-public b4a.example.all_active_recall _all_active_recall = null;
-public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.navactivity _navactivity = null;
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
+public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.subdeck_module _subdeck_module = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 anywheresoftware.b4a.objects.collections.List _savedlists = null;
 String _title = "";
- //BA.debugLineNum = 38;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 41;BA.debugLine="If Starter.darkMode Then";
+RDebugUtils.currentLine=24838144;
+ //BA.debugLineNum = 24838144;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=24838147;
+ //BA.debugLineNum = 24838147;BA.debugLine="If Starter.darkMode Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ) { 
- //BA.debugLineNum = 42;BA.debugLine="Activity.LoadLayout(\"todoListLayoutDark.bal\")";
+RDebugUtils.currentLine=24838148;
+ //BA.debugLineNum = 24838148;BA.debugLine="Activity.LoadLayout(\"todoListLayoutDark.bal\")";
 mostCurrent._activity.LoadLayout("todoListLayoutDark.bal",mostCurrent.activityBA);
  }else {
- //BA.debugLineNum = 44;BA.debugLine="Activity.LoadLayout(\"todoListLayout.bal\")";
+RDebugUtils.currentLine=24838150;
+ //BA.debugLineNum = 24838150;BA.debugLine="Activity.LoadLayout(\"todoListLayout.bal\")";
 mostCurrent._activity.LoadLayout("todoListLayout.bal",mostCurrent.activityBA);
  };
- //BA.debugLineNum = 47;BA.debugLine="addTitleTextArea.Tag = Null";
+RDebugUtils.currentLine=24838153;
+ //BA.debugLineNum = 24838153;BA.debugLine="addTitleTextArea.Tag = Null";
 mostCurrent._addtitletextarea.setTag(anywheresoftware.b4a.keywords.Common.Null);
- //BA.debugLineNum = 48;BA.debugLine="addTitleTextArea.Background = Null";
+RDebugUtils.currentLine=24838154;
+ //BA.debugLineNum = 24838154;BA.debugLine="addTitleTextArea.Background = Null";
 mostCurrent._addtitletextarea.setBackground((android.graphics.drawable.Drawable)(anywheresoftware.b4a.keywords.Common.Null));
- //BA.debugLineNum = 50;BA.debugLine="newAddTaskBtn";
+RDebugUtils.currentLine=24838156;
+ //BA.debugLineNum = 24838156;BA.debugLine="newAddTaskBtn";
 _newaddtaskbtn();
- //BA.debugLineNum = 51;BA.debugLine="tasksList.GetBase.Visible = False";
+RDebugUtils.currentLine=24838157;
+ //BA.debugLineNum = 24838157;BA.debugLine="tasksList.GetBase.Visible = False";
 mostCurrent._taskslist._getbase().setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 53;BA.debugLine="kvs = Starter.taskKvs";
+RDebugUtils.currentLine=24838159;
+ //BA.debugLineNum = 24838159;BA.debugLine="kvs = Starter.taskKvs";
 _kvs = mostCurrent._starter._taskkvs /*b4a.example3.keyvaluestore*/ ;
- //BA.debugLineNum = 55;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
+RDebugUtils.currentLine=24838161;
+ //BA.debugLineNum = 24838161;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
 if (_kvs._containskey("lists")) { 
- //BA.debugLineNum = 56;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=24838162;
+ //BA.debugLineNum = 24838162;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
 _savedlists = new anywheresoftware.b4a.objects.collections.List();
 _savedlists = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get("lists")));
- //BA.debugLineNum = 57;BA.debugLine="For Each title As String In savedLists";
+RDebugUtils.currentLine=24838163;
+ //BA.debugLineNum = 24838163;BA.debugLine="For Each title As String In savedLists";
 {
 final anywheresoftware.b4a.BA.IterableList group13 = _savedlists;
 final int groupLen13 = group13.getSize()
@@ -421,56 +437,118 @@ final int groupLen13 = group13.getSize()
 ;
 for (; index13 < groupLen13;index13++){
 _title = BA.ObjectToString(group13.Get(index13));
- //BA.debugLineNum = 58;BA.debugLine="listsList.AddTextItem(title, title)";
+RDebugUtils.currentLine=24838164;
+ //BA.debugLineNum = 24838164;BA.debugLine="listsList.AddTextItem(title, title)";
 mostCurrent._listslist._addtextitem((Object)(_title),(Object)(_title));
  }
 };
  };
- //BA.debugLineNum = 62;BA.debugLine="End Sub";
+RDebugUtils.currentLine=24838168;
+ //BA.debugLineNum = 24838168;BA.debugLine="End Sub";
+return "";
+}
+public static String  _newaddtaskbtn() throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "newaddtaskbtn", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "newaddtaskbtn", null));}
+RDebugUtils.currentLine=25034752;
+ //BA.debugLineNum = 25034752;BA.debugLine="Sub newAddTaskBtn";
+RDebugUtils.currentLine=25034754;
+ //BA.debugLineNum = 25034754;BA.debugLine="addTaskBtnPNL.Initialize(\"addTaskBtnPNL\")";
+mostCurrent._addtaskbtnpnl.Initialize(mostCurrent.activityBA,"addTaskBtnPNL");
+RDebugUtils.currentLine=25034755;
+ //BA.debugLineNum = 25034755;BA.debugLine="addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)";
+mostCurrent._addtaskbtnpnl.SetLayout((int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (235)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)));
+RDebugUtils.currentLine=25034756;
+ //BA.debugLineNum = 25034756;BA.debugLine="addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250,";
+mostCurrent._addtaskbtnpnl.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (250),(int) (250),(int) (250)));
+RDebugUtils.currentLine=25034758;
+ //BA.debugLineNum = 25034758;BA.debugLine="addTaskBtn.Initialize(\"addTaskBtn\")";
+mostCurrent._addtaskbtn.Initialize(mostCurrent.activityBA,"addTaskBtn");
+RDebugUtils.currentLine=25034759;
+ //BA.debugLineNum = 25034759;BA.debugLine="addTaskBtn.Text = \"+ add a task \"";
+mostCurrent._addtaskbtn.setText(BA.ObjectToCharSequence("+ add a task "));
+RDebugUtils.currentLine=25034760;
+ //BA.debugLineNum = 25034760;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, addT";
+mostCurrent._addtaskbtnpnl.AddView((android.view.View)(mostCurrent._addtaskbtn.getObject()),(int) (-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))),(int) (0),mostCurrent._addtaskbtnpnl.getWidth(),mostCurrent._addtaskbtnpnl.getHeight());
+RDebugUtils.currentLine=25034762;
+ //BA.debugLineNum = 25034762;BA.debugLine="tasksList.Add(addTaskBtnPNL, \"\")";
+mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._addtaskbtnpnl.getObject())),(Object)(""));
+RDebugUtils.currentLine=25034764;
+ //BA.debugLineNum = 25034764;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 68;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 70;BA.debugLine="End Sub";
+RDebugUtils.currentModule="todoactivity";
+RDebugUtils.currentLine=24969216;
+ //BA.debugLineNum = 24969216;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=24969218;
+ //BA.debugLineNum = 24969218;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 64;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 66;BA.debugLine="End Sub";
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
+RDebugUtils.currentLine=24903680;
+ //BA.debugLineNum = 24903680;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=24903682;
+ //BA.debugLineNum = 24903682;BA.debugLine="End Sub";
 return "";
 }
 public static String  _addtaskbtn_click() throws Exception{
- //BA.debugLineNum = 323;BA.debugLine="Sub addTaskBtn_Click";
- //BA.debugLineNum = 325;BA.debugLine="addTaskBtn.Enabled = False";
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "addtaskbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addtaskbtn_click", null));}
+RDebugUtils.currentLine=25427968;
+ //BA.debugLineNum = 25427968;BA.debugLine="Sub addTaskBtn_Click";
+RDebugUtils.currentLine=25427970;
+ //BA.debugLineNum = 25427970;BA.debugLine="addTaskBtn.Enabled = False";
 mostCurrent._addtaskbtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 326;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1)";
+RDebugUtils.currentLine=25427971;
+ //BA.debugLineNum = 25427971;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1)";
 mostCurrent._taskslist._removeat((int) (mostCurrent._taskslist._getsize()-1));
- //BA.debugLineNum = 328;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
+RDebugUtils.currentLine=25427973;
+ //BA.debugLineNum = 25427973;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
 mostCurrent._addtaskpanel.Initialize(mostCurrent.activityBA,"addTaskPanel");
- //BA.debugLineNum = 329;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)";
+RDebugUtils.currentLine=25427974;
+ //BA.debugLineNum = 25427974;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)";
 mostCurrent._addtaskpanel.SetLayout(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (250)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
- //BA.debugLineNum = 330;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
+RDebugUtils.currentLine=25427975;
+ //BA.debugLineNum = 25427975;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
 mostCurrent._addtaskpanel.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (247),(int) (247),(int) (247)));
- //BA.debugLineNum = 332;BA.debugLine="addTaskTextArea.Initialize(\"addTodoText\")";
+RDebugUtils.currentLine=25427977;
+ //BA.debugLineNum = 25427977;BA.debugLine="addTaskTextArea.Initialize(\"addTodoText\")";
 mostCurrent._addtasktextarea.Initialize(mostCurrent.activityBA,"addTodoText");
- //BA.debugLineNum = 333;BA.debugLine="addTaskTextArea.Hint = \"Add a task...\"";
+RDebugUtils.currentLine=25427978;
+ //BA.debugLineNum = 25427978;BA.debugLine="addTaskTextArea.Hint = \"Add a task...\"";
 mostCurrent._addtasktextarea.setHint("Add a task...");
- //BA.debugLineNum = 334;BA.debugLine="addTaskTextArea.Tag = Null";
+RDebugUtils.currentLine=25427979;
+ //BA.debugLineNum = 25427979;BA.debugLine="addTaskTextArea.Tag = Null";
 mostCurrent._addtasktextarea.setTag(anywheresoftware.b4a.keywords.Common.Null);
- //BA.debugLineNum = 336;BA.debugLine="enterTaskBtn.Initialize(\"enterTaskBtn\")";
+RDebugUtils.currentLine=25427981;
+ //BA.debugLineNum = 25427981;BA.debugLine="enterTaskBtn.Initialize(\"enterTaskBtn\")";
 mostCurrent._entertaskbtn.Initialize(mostCurrent.activityBA,"enterTaskBtn");
- //BA.debugLineNum = 337;BA.debugLine="enterTaskBtn.Text = \"Enter task\"";
+RDebugUtils.currentLine=25427982;
+ //BA.debugLineNum = 25427982;BA.debugLine="enterTaskBtn.Text = \"Enter task\"";
 mostCurrent._entertaskbtn.setText(BA.ObjectToCharSequence("Enter task"));
- //BA.debugLineNum = 339;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, addTa";
+RDebugUtils.currentLine=25427984;
+ //BA.debugLineNum = 25427984;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, addTa";
 mostCurrent._addtaskpanel.AddView((android.view.View)(mostCurrent._addtasktextarea.getObject()),(int) (0),(int) (0),mostCurrent._addtaskbtnpnl.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60)));
- //BA.debugLineNum = 340;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addT";
+RDebugUtils.currentLine=25427985;
+ //BA.debugLineNum = 25427985;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addT";
 mostCurrent._addtaskpanel.AddView((android.view.View)(mostCurrent._entertaskbtn.getObject()),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)),mostCurrent._addtaskbtnpnl.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
- //BA.debugLineNum = 342;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
+RDebugUtils.currentLine=25427987;
+ //BA.debugLineNum = 25427987;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
 mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._addtaskpanel.getObject())),(Object)(mostCurrent._addtaskpanel.getObject()));
- //BA.debugLineNum = 344;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25427989;
+ //BA.debugLineNum = 25427989;BA.debugLine="End Sub";
 return "";
 }
 public static String  _addtitletextarea_enterpressed() throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "addtitletextarea_enterpressed", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addtitletextarea_enterpressed", null));}
 anywheresoftware.b4a.objects.collections.List _ctx = null;
 int _oldindex = 0;
 String _oldtitle = "";
@@ -486,33 +564,46 @@ String _newck = "";
 anywheresoftware.b4a.objects.collections.List _savedlists2 = null;
 String _t = "";
 String _title = "";
- //BA.debugLineNum = 110;BA.debugLine="Sub addTitleTextArea_EnterPressed";
- //BA.debugLineNum = 113;BA.debugLine="If addTitleTextArea.Tag <> Null And addTitleTextA";
+RDebugUtils.currentLine=25165824;
+ //BA.debugLineNum = 25165824;BA.debugLine="Sub addTitleTextArea_EnterPressed";
+RDebugUtils.currentLine=25165827;
+ //BA.debugLineNum = 25165827;BA.debugLine="If addTitleTextArea.Tag <> Null And addTitleTextA";
 if (mostCurrent._addtitletextarea.getTag()!= null && mostCurrent._addtitletextarea.getTag() instanceof java.util.List) { 
- //BA.debugLineNum = 114;BA.debugLine="Dim ctx As List = addTitleTextArea.Tag";
+RDebugUtils.currentLine=25165828;
+ //BA.debugLineNum = 25165828;BA.debugLine="Dim ctx As List = addTitleTextArea.Tag";
 _ctx = new anywheresoftware.b4a.objects.collections.List();
 _ctx = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(mostCurrent._addtitletextarea.getTag()));
- //BA.debugLineNum = 115;BA.debugLine="Dim oldIndex As Int = ctx.Get(0)";
+RDebugUtils.currentLine=25165829;
+ //BA.debugLineNum = 25165829;BA.debugLine="Dim oldIndex As Int = ctx.Get(0)";
 _oldindex = (int)(BA.ObjectToNumber(_ctx.Get((int) (0))));
- //BA.debugLineNum = 116;BA.debugLine="Dim oldTitle As String = ctx.Get(1)";
+RDebugUtils.currentLine=25165830;
+ //BA.debugLineNum = 25165830;BA.debugLine="Dim oldTitle As String = ctx.Get(1)";
 _oldtitle = BA.ObjectToString(_ctx.Get((int) (1)));
- //BA.debugLineNum = 117;BA.debugLine="Dim newTitle As String = addTitleTextArea.Text.T";
+RDebugUtils.currentLine=25165831;
+ //BA.debugLineNum = 25165831;BA.debugLine="Dim newTitle As String = addTitleTextArea.Text.T";
 _newtitle = mostCurrent._addtitletextarea.getText().trim();
- //BA.debugLineNum = 119;BA.debugLine="If newTitle = \"\" Or newTitle = oldTitle Then";
+RDebugUtils.currentLine=25165833;
+ //BA.debugLineNum = 25165833;BA.debugLine="If newTitle = \"\" Or newTitle = oldTitle Then";
 if ((_newtitle).equals("") || (_newtitle).equals(_oldtitle)) { 
- //BA.debugLineNum = 120;BA.debugLine="addTitleTextArea.Tag = Null";
+RDebugUtils.currentLine=25165834;
+ //BA.debugLineNum = 25165834;BA.debugLine="addTitleTextArea.Tag = Null";
 mostCurrent._addtitletextarea.setTag(anywheresoftware.b4a.keywords.Common.Null);
- //BA.debugLineNum = 121;BA.debugLine="addTitleTextArea.Text = currentList";
+RDebugUtils.currentLine=25165835;
+ //BA.debugLineNum = 25165835;BA.debugLine="addTitleTextArea.Text = currentList";
 mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(mostCurrent._currentlist));
- //BA.debugLineNum = 122;BA.debugLine="addTitleTextArea.Enabled = False";
+RDebugUtils.currentLine=25165836;
+ //BA.debugLineNum = 25165836;BA.debugLine="addTitleTextArea.Enabled = False";
 mostCurrent._addtitletextarea.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 123;BA.debugLine="Return";
+RDebugUtils.currentLine=25165837;
+ //BA.debugLineNum = 25165837;BA.debugLine="Return";
 if (true) return "";
  };
- //BA.debugLineNum = 127;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=25165841;
+ //BA.debugLineNum = 25165841;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
 _savedlists = new anywheresoftware.b4a.objects.collections.List();
 _savedlists = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get("lists")));
- //BA.debugLineNum = 128;BA.debugLine="For Each existingTitle As String In savedLists";
+RDebugUtils.currentLine=25165842;
+ //BA.debugLineNum = 25165842;BA.debugLine="For Each existingTitle As String In savedLists";
 {
 final anywheresoftware.b4a.BA.IterableList group13 = _savedlists;
 final int groupLen13 = group13.getSize()
@@ -520,29 +611,39 @@ final int groupLen13 = group13.getSize()
 ;
 for (; index13 < groupLen13;index13++){
 _existingtitle = BA.ObjectToString(group13.Get(index13));
- //BA.debugLineNum = 129;BA.debugLine="If existingTitle = newTitle Then";
+RDebugUtils.currentLine=25165843;
+ //BA.debugLineNum = 25165843;BA.debugLine="If existingTitle = newTitle Then";
 if ((_existingtitle).equals(_newtitle)) { 
- //BA.debugLineNum = 130;BA.debugLine="MsgboxAsync(\"A list with that name already exi";
+RDebugUtils.currentLine=25165844;
+ //BA.debugLineNum = 25165844;BA.debugLine="MsgboxAsync(\"A list with that name already exi";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("A list with that name already exists."),BA.ObjectToCharSequence("Duplicate title"),processBA);
- //BA.debugLineNum = 131;BA.debugLine="Return";
+RDebugUtils.currentLine=25165845;
+ //BA.debugLineNum = 25165845;BA.debugLine="Return";
 if (true) return "";
  };
  }
 };
- //BA.debugLineNum = 136;BA.debugLine="savedLists.Set(oldIndex, newTitle)";
+RDebugUtils.currentLine=25165850;
+ //BA.debugLineNum = 25165850;BA.debugLine="savedLists.Set(oldIndex, newTitle)";
 _savedlists.Set(_oldindex,(Object)(_newtitle));
- //BA.debugLineNum = 137;BA.debugLine="kvs.Put(\"lists\", savedLists)";
+RDebugUtils.currentLine=25165851;
+ //BA.debugLineNum = 25165851;BA.debugLine="kvs.Put(\"lists\", savedLists)";
 _kvs._put("lists",(Object)(_savedlists.getObject()));
- //BA.debugLineNum = 140;BA.debugLine="Dim oldKey As String = \"list_\" & oldTitle";
+RDebugUtils.currentLine=25165854;
+ //BA.debugLineNum = 25165854;BA.debugLine="Dim oldKey As String = \"list_\" & oldTitle";
 _oldkey = "list_"+_oldtitle;
- //BA.debugLineNum = 141;BA.debugLine="Dim newKey As String = \"list_\" & newTitle";
+RDebugUtils.currentLine=25165855;
+ //BA.debugLineNum = 25165855;BA.debugLine="Dim newKey As String = \"list_\" & newTitle";
 _newkey = "list_"+_newtitle;
- //BA.debugLineNum = 142;BA.debugLine="If kvs.ContainsKey(oldKey) Then";
+RDebugUtils.currentLine=25165856;
+ //BA.debugLineNum = 25165856;BA.debugLine="If kvs.ContainsKey(oldKey) Then";
 if (_kvs._containskey(_oldkey)) { 
- //BA.debugLineNum = 143;BA.debugLine="Dim savedTasks As List = kvs.Get(oldKey)";
+RDebugUtils.currentLine=25165857;
+ //BA.debugLineNum = 25165857;BA.debugLine="Dim savedTasks As List = kvs.Get(oldKey)";
 _savedtasks = new anywheresoftware.b4a.objects.collections.List();
 _savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_oldkey)));
- //BA.debugLineNum = 144;BA.debugLine="For Each task As String In savedTasks";
+RDebugUtils.currentLine=25165858;
+ //BA.debugLineNum = 25165858;BA.debugLine="For Each task As String In savedTasks";
 {
 final anywheresoftware.b4a.BA.IterableList group25 = _savedtasks;
 final int groupLen25 = group25.getSize()
@@ -550,35 +651,47 @@ final int groupLen25 = group25.getSize()
 ;
 for (; index25 < groupLen25;index25++){
 _task = BA.ObjectToString(group25.Get(index25));
- //BA.debugLineNum = 145;BA.debugLine="Dim oldCK As String = \"checked_\" & oldTitle &";
+RDebugUtils.currentLine=25165859;
+ //BA.debugLineNum = 25165859;BA.debugLine="Dim oldCK As String = \"checked_\" & oldTitle &";
 _oldck = "checked_"+_oldtitle+"_"+_task;
- //BA.debugLineNum = 146;BA.debugLine="Dim newCK As String = \"checked_\" & newTitle &";
+RDebugUtils.currentLine=25165860;
+ //BA.debugLineNum = 25165860;BA.debugLine="Dim newCK As String = \"checked_\" & newTitle &";
 _newck = "checked_"+_newtitle+"_"+_task;
- //BA.debugLineNum = 147;BA.debugLine="If kvs.ContainsKey(oldCK) Then";
+RDebugUtils.currentLine=25165861;
+ //BA.debugLineNum = 25165861;BA.debugLine="If kvs.ContainsKey(oldCK) Then";
 if (_kvs._containskey(_oldck)) { 
- //BA.debugLineNum = 148;BA.debugLine="kvs.Put(newCK, kvs.Get(oldCK))";
+RDebugUtils.currentLine=25165862;
+ //BA.debugLineNum = 25165862;BA.debugLine="kvs.Put(newCK, kvs.Get(oldCK))";
 _kvs._put(_newck,_kvs._get(_oldck));
- //BA.debugLineNum = 149;BA.debugLine="kvs.Remove(oldCK)";
+RDebugUtils.currentLine=25165863;
+ //BA.debugLineNum = 25165863;BA.debugLine="kvs.Remove(oldCK)";
 _kvs._remove(_oldck);
  };
  }
 };
- //BA.debugLineNum = 152;BA.debugLine="kvs.Put(newKey, savedTasks)";
+RDebugUtils.currentLine=25165866;
+ //BA.debugLineNum = 25165866;BA.debugLine="kvs.Put(newKey, savedTasks)";
 _kvs._put(_newkey,(Object)(_savedtasks.getObject()));
- //BA.debugLineNum = 153;BA.debugLine="kvs.Remove(oldKey)";
+RDebugUtils.currentLine=25165867;
+ //BA.debugLineNum = 25165867;BA.debugLine="kvs.Remove(oldKey)";
 _kvs._remove(_oldkey);
  };
- //BA.debugLineNum = 157;BA.debugLine="If currentList = oldTitle Then";
+RDebugUtils.currentLine=25165871;
+ //BA.debugLineNum = 25165871;BA.debugLine="If currentList = oldTitle Then";
 if ((mostCurrent._currentlist).equals(_oldtitle)) { 
- //BA.debugLineNum = 158;BA.debugLine="currentList = newTitle";
+RDebugUtils.currentLine=25165872;
+ //BA.debugLineNum = 25165872;BA.debugLine="currentList = newTitle";
 mostCurrent._currentlist = _newtitle;
  };
- //BA.debugLineNum = 162;BA.debugLine="listsList.Clear";
+RDebugUtils.currentLine=25165876;
+ //BA.debugLineNum = 25165876;BA.debugLine="listsList.Clear";
 mostCurrent._listslist._clear();
- //BA.debugLineNum = 163;BA.debugLine="Dim savedLists2 As List = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=25165877;
+ //BA.debugLineNum = 25165877;BA.debugLine="Dim savedLists2 As List = kvs.Get(\"lists\")";
 _savedlists2 = new anywheresoftware.b4a.objects.collections.List();
 _savedlists2 = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get("lists")));
- //BA.debugLineNum = 164;BA.debugLine="For Each t As String In savedLists2";
+RDebugUtils.currentLine=25165878;
+ //BA.debugLineNum = 25165878;BA.debugLine="For Each t As String In savedLists2";
 {
 final anywheresoftware.b4a.BA.IterableList group41 = _savedlists2;
 final int groupLen41 = group41.getSize()
@@ -586,40 +699,56 @@ final int groupLen41 = group41.getSize()
 ;
 for (; index41 < groupLen41;index41++){
 _t = BA.ObjectToString(group41.Get(index41));
- //BA.debugLineNum = 165;BA.debugLine="listsList.AddTextItem(t, t)";
+RDebugUtils.currentLine=25165879;
+ //BA.debugLineNum = 25165879;BA.debugLine="listsList.AddTextItem(t, t)";
 mostCurrent._listslist._addtextitem((Object)(_t),(Object)(_t));
  }
 };
- //BA.debugLineNum = 168;BA.debugLine="addTitleTextArea.Tag = Null";
+RDebugUtils.currentLine=25165882;
+ //BA.debugLineNum = 25165882;BA.debugLine="addTitleTextArea.Tag = Null";
 mostCurrent._addtitletextarea.setTag(anywheresoftware.b4a.keywords.Common.Null);
- //BA.debugLineNum = 169;BA.debugLine="addTitleTextArea.Text = currentList";
+RDebugUtils.currentLine=25165883;
+ //BA.debugLineNum = 25165883;BA.debugLine="addTitleTextArea.Text = currentList";
 mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(mostCurrent._currentlist));
- //BA.debugLineNum = 170;BA.debugLine="addTitleTextArea.Enabled = False";
+RDebugUtils.currentLine=25165884;
+ //BA.debugLineNum = 25165884;BA.debugLine="addTitleTextArea.Enabled = False";
 mostCurrent._addtitletextarea.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 171;BA.debugLine="newListBtn.Enabled = True";
+RDebugUtils.currentLine=25165885;
+ //BA.debugLineNum = 25165885;BA.debugLine="newListBtn.Enabled = True";
 mostCurrent._newlistbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 172;BA.debugLine="isAddingList = False";
+RDebugUtils.currentLine=25165886;
+ //BA.debugLineNum = 25165886;BA.debugLine="isAddingList = False";
 _isaddinglist = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 173;BA.debugLine="ToastMessageShow(\"List renamed\", False)";
+RDebugUtils.currentLine=25165887;
+ //BA.debugLineNum = 25165887;BA.debugLine="ToastMessageShow(\"List renamed\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("List renamed"),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 174;BA.debugLine="Return";
+RDebugUtils.currentLine=25165888;
+ //BA.debugLineNum = 25165888;BA.debugLine="Return";
 if (true) return "";
  };
- //BA.debugLineNum = 178;BA.debugLine="Dim title As String = addTitleTextArea.Text";
+RDebugUtils.currentLine=25165892;
+ //BA.debugLineNum = 25165892;BA.debugLine="Dim title As String = addTitleTextArea.Text";
 _title = mostCurrent._addtitletextarea.getText();
- //BA.debugLineNum = 180;BA.debugLine="Dim savedLists As List";
+RDebugUtils.currentLine=25165894;
+ //BA.debugLineNum = 25165894;BA.debugLine="Dim savedLists As List";
 _savedlists = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 181;BA.debugLine="savedLists.Initialize";
+RDebugUtils.currentLine=25165895;
+ //BA.debugLineNum = 25165895;BA.debugLine="savedLists.Initialize";
 _savedlists.Initialize();
- //BA.debugLineNum = 183;BA.debugLine="If title = \"\" Then";
+RDebugUtils.currentLine=25165897;
+ //BA.debugLineNum = 25165897;BA.debugLine="If title = \"\" Then";
 if ((_title).equals("")) { 
- //BA.debugLineNum = 184;BA.debugLine="title = \"Untitled\" & untitledNo";
+RDebugUtils.currentLine=25165898;
+ //BA.debugLineNum = 25165898;BA.debugLine="title = \"Untitled\" & untitledNo";
 _title = "Untitled"+BA.NumberToString(_untitledno);
- //BA.debugLineNum = 186;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
+RDebugUtils.currentLine=25165900;
+ //BA.debugLineNum = 25165900;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
 if (_kvs._containskey("lists")) { 
- //BA.debugLineNum = 187;BA.debugLine="savedLists = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=25165901;
+ //BA.debugLineNum = 25165901;BA.debugLine="savedLists = kvs.Get(\"lists\")";
 _savedlists = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get("lists")));
- //BA.debugLineNum = 188;BA.debugLine="For Each existingTitle As String In savedLists";
+RDebugUtils.currentLine=25165902;
+ //BA.debugLineNum = 25165902;BA.debugLine="For Each existingTitle As String In savedLists";
 {
 final anywheresoftware.b4a.BA.IterableList group59 = _savedlists;
 final int groupLen59 = group59.getSize()
@@ -627,25 +756,32 @@ final int groupLen59 = group59.getSize()
 ;
 for (; index59 < groupLen59;index59++){
 _existingtitle = BA.ObjectToString(group59.Get(index59));
- //BA.debugLineNum = 189;BA.debugLine="If title = existingTitle Then";
+RDebugUtils.currentLine=25165903;
+ //BA.debugLineNum = 25165903;BA.debugLine="If title = existingTitle Then";
 if ((_title).equals(_existingtitle)) { 
- //BA.debugLineNum = 190;BA.debugLine="untitledNo = untitledNo + 1";
+RDebugUtils.currentLine=25165904;
+ //BA.debugLineNum = 25165904;BA.debugLine="untitledNo = untitledNo + 1";
 _untitledno = (int) (_untitledno+1);
- //BA.debugLineNum = 191;BA.debugLine="title = \"Untitled\" & untitledNo";
+RDebugUtils.currentLine=25165905;
+ //BA.debugLineNum = 25165905;BA.debugLine="title = \"Untitled\" & untitledNo";
 _title = "Untitled"+BA.NumberToString(_untitledno);
  };
  }
 };
  };
- //BA.debugLineNum = 196;BA.debugLine="newListBtn.Enabled = True";
+RDebugUtils.currentLine=25165910;
+ //BA.debugLineNum = 25165910;BA.debugLine="newListBtn.Enabled = True";
 mostCurrent._newlistbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 199;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
+RDebugUtils.currentLine=25165913;
+ //BA.debugLineNum = 25165913;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
 if (_kvs._containskey("lists")) { 
- //BA.debugLineNum = 200;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=25165914;
+ //BA.debugLineNum = 25165914;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
 _savedlists = new anywheresoftware.b4a.objects.collections.List();
 _savedlists = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get("lists")));
- //BA.debugLineNum = 201;BA.debugLine="For Each existingTitle As String In savedLists";
+RDebugUtils.currentLine=25165915;
+ //BA.debugLineNum = 25165915;BA.debugLine="For Each existingTitle As String In savedLists";
 {
 final anywheresoftware.b4a.BA.IterableList group70 = _savedlists;
 final int groupLen70 = group70.getSize()
@@ -653,59 +789,85 @@ final int groupLen70 = group70.getSize()
 ;
 for (; index70 < groupLen70;index70++){
 _existingtitle = BA.ObjectToString(group70.Get(index70));
- //BA.debugLineNum = 202;BA.debugLine="If existingTitle = title Then";
+RDebugUtils.currentLine=25165916;
+ //BA.debugLineNum = 25165916;BA.debugLine="If existingTitle = title Then";
 if ((_existingtitle).equals(_title)) { 
- //BA.debugLineNum = 203;BA.debugLine="MsgboxAsync(\"List already exists.\", \"Duplicate";
+RDebugUtils.currentLine=25165917;
+ //BA.debugLineNum = 25165917;BA.debugLine="MsgboxAsync(\"List already exists.\", \"Duplicate";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("List already exists."),BA.ObjectToCharSequence("Duplicate title"),processBA);
- //BA.debugLineNum = 204;BA.debugLine="newListBtn.Enabled = True";
+RDebugUtils.currentLine=25165918;
+ //BA.debugLineNum = 25165918;BA.debugLine="newListBtn.Enabled = True";
 mostCurrent._newlistbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 205;BA.debugLine="addTitleTextArea.Text = \"\"";
+RDebugUtils.currentLine=25165919;
+ //BA.debugLineNum = 25165919;BA.debugLine="addTitleTextArea.Text = \"\"";
 mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 206;BA.debugLine="Return";
+RDebugUtils.currentLine=25165920;
+ //BA.debugLineNum = 25165920;BA.debugLine="Return";
 if (true) return "";
  };
  }
 };
  };
- //BA.debugLineNum = 211;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
+RDebugUtils.currentLine=25165925;
+ //BA.debugLineNum = 25165925;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
 if (_kvs._containskey("lists")) { 
- //BA.debugLineNum = 212;BA.debugLine="savedLists = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=25165926;
+ //BA.debugLineNum = 25165926;BA.debugLine="savedLists = kvs.Get(\"lists\")";
 _savedlists = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get("lists")));
  };
- //BA.debugLineNum = 215;BA.debugLine="savedLists.Add(title)";
+RDebugUtils.currentLine=25165929;
+ //BA.debugLineNum = 25165929;BA.debugLine="savedLists.Add(title)";
 _savedlists.Add((Object)(_title));
- //BA.debugLineNum = 216;BA.debugLine="kvs.Put(\"lists\", savedLists)";
+RDebugUtils.currentLine=25165930;
+ //BA.debugLineNum = 25165930;BA.debugLine="kvs.Put(\"lists\", savedLists)";
 _kvs._put("lists",(Object)(_savedlists.getObject()));
- //BA.debugLineNum = 218;BA.debugLine="listsList.AddTextItem(title, title)";
+RDebugUtils.currentLine=25165932;
+ //BA.debugLineNum = 25165932;BA.debugLine="listsList.AddTextItem(title, title)";
 mostCurrent._listslist._addtextitem((Object)(_title),(Object)(_title));
- //BA.debugLineNum = 220;BA.debugLine="currentList = title";
+RDebugUtils.currentLine=25165934;
+ //BA.debugLineNum = 25165934;BA.debugLine="currentList = title";
 mostCurrent._currentlist = _title;
- //BA.debugLineNum = 221;BA.debugLine="addTitleTextArea.Text = currentList";
+RDebugUtils.currentLine=25165935;
+ //BA.debugLineNum = 25165935;BA.debugLine="addTitleTextArea.Text = currentList";
 mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(mostCurrent._currentlist));
- //BA.debugLineNum = 222;BA.debugLine="addTitleTextArea.Visible = True";
+RDebugUtils.currentLine=25165936;
+ //BA.debugLineNum = 25165936;BA.debugLine="addTitleTextArea.Visible = True";
 mostCurrent._addtitletextarea.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 223;BA.debugLine="addTitleTextArea.Enabled = False";
+RDebugUtils.currentLine=25165937;
+ //BA.debugLineNum = 25165937;BA.debugLine="addTitleTextArea.Enabled = False";
 mostCurrent._addtitletextarea.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 225;BA.debugLine="tasksList.Clear";
+RDebugUtils.currentLine=25165939;
+ //BA.debugLineNum = 25165939;BA.debugLine="tasksList.Clear";
 mostCurrent._taskslist._clear();
- //BA.debugLineNum = 226;BA.debugLine="tasksList.GetBase.Visible = True";
+RDebugUtils.currentLine=25165940;
+ //BA.debugLineNum = 25165940;BA.debugLine="tasksList.GetBase.Visible = True";
 mostCurrent._taskslist._getbase().setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 227;BA.debugLine="newAddTaskBtn";
+RDebugUtils.currentLine=25165941;
+ //BA.debugLineNum = 25165941;BA.debugLine="newAddTaskBtn";
 _newaddtaskbtn();
- //BA.debugLineNum = 229;BA.debugLine="newListBtn.Enabled = True";
+RDebugUtils.currentLine=25165943;
+ //BA.debugLineNum = 25165943;BA.debugLine="newListBtn.Enabled = True";
 mostCurrent._newlistbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 230;BA.debugLine="isAddingList = False";
+RDebugUtils.currentLine=25165944;
+ //BA.debugLineNum = 25165944;BA.debugLine="isAddingList = False";
 _isaddinglist = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 231;BA.debugLine="progressNumber.Text = \"0 / 0 tasks done!\"";
+RDebugUtils.currentLine=25165945;
+ //BA.debugLineNum = 25165945;BA.debugLine="progressNumber.Text = \"0 / 0 tasks done!\"";
 mostCurrent._progressnumber.setText(BA.ObjectToCharSequence("0 / 0 tasks done!"));
- //BA.debugLineNum = 232;BA.debugLine="progressPercent.Text = \"0%\"";
+RDebugUtils.currentLine=25165946;
+ //BA.debugLineNum = 25165946;BA.debugLine="progressPercent.Text = \"0%\"";
 mostCurrent._progresspercent.setText(BA.ObjectToCharSequence("0%"));
- //BA.debugLineNum = 233;BA.debugLine="progressBar.Progress = 0";
+RDebugUtils.currentLine=25165947;
+ //BA.debugLineNum = 25165947;BA.debugLine="progressBar.Progress = 0";
 mostCurrent._progressbar.setProgress((int) (0));
- //BA.debugLineNum = 235;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25165949;
+ //BA.debugLineNum = 25165949;BA.debugLine="End Sub";
 return "";
 }
 public static String  _entertaskbtn_click() throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "entertaskbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "entertaskbtn_click", null));}
 String _newtask = "";
 anywheresoftware.b4a.objects.collections.List _ctx = null;
 String _oldtask = "";
@@ -716,56 +878,79 @@ String _oldck = "";
 String _newck = "";
 anywheresoftware.b4a.objects.collections.List _savedtasks2 = null;
 String _t = "";
- //BA.debugLineNum = 346;BA.debugLine="Sub enterTaskBtn_Click";
- //BA.debugLineNum = 348;BA.debugLine="Dim newTask As String = addTaskTextArea.Text.Trim";
+RDebugUtils.currentLine=25493504;
+ //BA.debugLineNum = 25493504;BA.debugLine="Sub enterTaskBtn_Click";
+RDebugUtils.currentLine=25493506;
+ //BA.debugLineNum = 25493506;BA.debugLine="Dim newTask As String = addTaskTextArea.Text.Trim";
 _newtask = mostCurrent._addtasktextarea.getText().trim();
- //BA.debugLineNum = 349;BA.debugLine="If newTask = \"\" Then";
+RDebugUtils.currentLine=25493507;
+ //BA.debugLineNum = 25493507;BA.debugLine="If newTask = \"\" Then";
 if ((_newtask).equals("")) { 
- //BA.debugLineNum = 350;BA.debugLine="MsgboxAsync(\"Please enter a task.\", \"No task ent";
+RDebugUtils.currentLine=25493508;
+ //BA.debugLineNum = 25493508;BA.debugLine="MsgboxAsync(\"Please enter a task.\", \"No task ent";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Please enter a task."),BA.ObjectToCharSequence("No task entered"),processBA);
- //BA.debugLineNum = 351;BA.debugLine="Return";
+RDebugUtils.currentLine=25493509;
+ //BA.debugLineNum = 25493509;BA.debugLine="Return";
 if (true) return "";
  };
- //BA.debugLineNum = 355;BA.debugLine="If addTaskTextArea.Tag <> Null Then";
+RDebugUtils.currentLine=25493513;
+ //BA.debugLineNum = 25493513;BA.debugLine="If addTaskTextArea.Tag <> Null Then";
 if (mostCurrent._addtasktextarea.getTag()!= null) { 
- //BA.debugLineNum = 356;BA.debugLine="Dim ctx As List = addTaskTextArea.Tag";
+RDebugUtils.currentLine=25493514;
+ //BA.debugLineNum = 25493514;BA.debugLine="Dim ctx As List = addTaskTextArea.Tag";
 _ctx = new anywheresoftware.b4a.objects.collections.List();
 _ctx = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(mostCurrent._addtasktextarea.getTag()));
- //BA.debugLineNum = 357;BA.debugLine="Dim oldTask As String = ctx.Get(1)";
+RDebugUtils.currentLine=25493515;
+ //BA.debugLineNum = 25493515;BA.debugLine="Dim oldTask As String = ctx.Get(1)";
 _oldtask = BA.ObjectToString(_ctx.Get((int) (1)));
- //BA.debugLineNum = 359;BA.debugLine="Dim key As String = \"list_\" & currentList";
+RDebugUtils.currentLine=25493517;
+ //BA.debugLineNum = 25493517;BA.debugLine="Dim key As String = \"list_\" & currentList";
 _key = "list_"+mostCurrent._currentlist;
- //BA.debugLineNum = 360;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+RDebugUtils.currentLine=25493518;
+ //BA.debugLineNum = 25493518;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
 _savedtasks = new anywheresoftware.b4a.objects.collections.List();
 _savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_key)));
- //BA.debugLineNum = 361;BA.debugLine="Dim taskIndex As Int = savedTasks.IndexOf(oldTas";
+RDebugUtils.currentLine=25493519;
+ //BA.debugLineNum = 25493519;BA.debugLine="Dim taskIndex As Int = savedTasks.IndexOf(oldTas";
 _taskindex = _savedtasks.IndexOf((Object)(_oldtask));
- //BA.debugLineNum = 362;BA.debugLine="If taskIndex >= 0 Then";
+RDebugUtils.currentLine=25493520;
+ //BA.debugLineNum = 25493520;BA.debugLine="If taskIndex >= 0 Then";
 if (_taskindex>=0) { 
- //BA.debugLineNum = 363;BA.debugLine="savedTasks.Set(taskIndex, newTask)";
+RDebugUtils.currentLine=25493521;
+ //BA.debugLineNum = 25493521;BA.debugLine="savedTasks.Set(taskIndex, newTask)";
 _savedtasks.Set(_taskindex,(Object)(_newtask));
- //BA.debugLineNum = 364;BA.debugLine="kvs.Put(key, savedTasks)";
+RDebugUtils.currentLine=25493522;
+ //BA.debugLineNum = 25493522;BA.debugLine="kvs.Put(key, savedTasks)";
 _kvs._put(_key,(Object)(_savedtasks.getObject()));
  };
- //BA.debugLineNum = 368;BA.debugLine="Dim oldCK As String = \"checked_\" & currentList &";
+RDebugUtils.currentLine=25493526;
+ //BA.debugLineNum = 25493526;BA.debugLine="Dim oldCK As String = \"checked_\" & currentList &";
 _oldck = "checked_"+mostCurrent._currentlist+"_"+_oldtask;
- //BA.debugLineNum = 369;BA.debugLine="Dim newCK As String = \"checked_\" & currentList &";
+RDebugUtils.currentLine=25493527;
+ //BA.debugLineNum = 25493527;BA.debugLine="Dim newCK As String = \"checked_\" & currentList &";
 _newck = "checked_"+mostCurrent._currentlist+"_"+_newtask;
- //BA.debugLineNum = 370;BA.debugLine="If kvs.ContainsKey(oldCK) Then";
+RDebugUtils.currentLine=25493528;
+ //BA.debugLineNum = 25493528;BA.debugLine="If kvs.ContainsKey(oldCK) Then";
 if (_kvs._containskey(_oldck)) { 
- //BA.debugLineNum = 371;BA.debugLine="kvs.Put(newCK, kvs.Get(oldCK))";
+RDebugUtils.currentLine=25493529;
+ //BA.debugLineNum = 25493529;BA.debugLine="kvs.Put(newCK, kvs.Get(oldCK))";
 _kvs._put(_newck,_kvs._get(_oldck));
- //BA.debugLineNum = 372;BA.debugLine="kvs.Remove(oldCK)";
+RDebugUtils.currentLine=25493530;
+ //BA.debugLineNum = 25493530;BA.debugLine="kvs.Remove(oldCK)";
 _kvs._remove(_oldck);
  };
- //BA.debugLineNum = 375;BA.debugLine="addTaskTextArea.Tag = Null";
+RDebugUtils.currentLine=25493533;
+ //BA.debugLineNum = 25493533;BA.debugLine="addTaskTextArea.Tag = Null";
 mostCurrent._addtasktextarea.setTag(anywheresoftware.b4a.keywords.Common.Null);
- //BA.debugLineNum = 378;BA.debugLine="tasksList.Clear";
+RDebugUtils.currentLine=25493536;
+ //BA.debugLineNum = 25493536;BA.debugLine="tasksList.Clear";
 mostCurrent._taskslist._clear();
- //BA.debugLineNum = 379;BA.debugLine="Dim savedTasks2 As List = kvs.Get(key)";
+RDebugUtils.currentLine=25493537;
+ //BA.debugLineNum = 25493537;BA.debugLine="Dim savedTasks2 As List = kvs.Get(key)";
 _savedtasks2 = new anywheresoftware.b4a.objects.collections.List();
 _savedtasks2 = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_key)));
- //BA.debugLineNum = 380;BA.debugLine="For Each t As String In savedTasks2";
+RDebugUtils.currentLine=25493538;
+ //BA.debugLineNum = 25493538;BA.debugLine="For Each t As String In savedTasks2";
 {
 final anywheresoftware.b4a.BA.IterableList group25 = _savedtasks2;
 final int groupLen25 = group25.getSize()
@@ -773,117 +958,299 @@ final int groupLen25 = group25.getSize()
 ;
 for (; index25 < groupLen25;index25++){
 _t = BA.ObjectToString(group25.Get(index25));
- //BA.debugLineNum = 381;BA.debugLine="tasksListUI(t)";
+RDebugUtils.currentLine=25493539;
+ //BA.debugLineNum = 25493539;BA.debugLine="tasksListUI(t)";
 _taskslistui(_t);
  }
 };
- //BA.debugLineNum = 383;BA.debugLine="newAddTaskBtn";
+RDebugUtils.currentLine=25493541;
+ //BA.debugLineNum = 25493541;BA.debugLine="newAddTaskBtn";
 _newaddtaskbtn();
- //BA.debugLineNum = 384;BA.debugLine="addTaskBtn.Enabled = True";
+RDebugUtils.currentLine=25493542;
+ //BA.debugLineNum = 25493542;BA.debugLine="addTaskBtn.Enabled = True";
 mostCurrent._addtaskbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 385;BA.debugLine="updateProgress";
+RDebugUtils.currentLine=25493543;
+ //BA.debugLineNum = 25493543;BA.debugLine="updateProgress";
 _updateprogress();
- //BA.debugLineNum = 386;BA.debugLine="ToastMessageShow(\"Task renamed\", False)";
+RDebugUtils.currentLine=25493544;
+ //BA.debugLineNum = 25493544;BA.debugLine="ToastMessageShow(\"Task renamed\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Task renamed"),anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 387;BA.debugLine="Return";
+RDebugUtils.currentLine=25493545;
+ //BA.debugLineNum = 25493545;BA.debugLine="Return";
 if (true) return "";
  };
- //BA.debugLineNum = 391;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1)";
+RDebugUtils.currentLine=25493549;
+ //BA.debugLineNum = 25493549;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1)";
 mostCurrent._taskslist._removeat((int) (mostCurrent._taskslist._getsize()-1));
- //BA.debugLineNum = 393;BA.debugLine="Dim key As String = \"list_\" & currentList";
+RDebugUtils.currentLine=25493551;
+ //BA.debugLineNum = 25493551;BA.debugLine="Dim key As String = \"list_\" & currentList";
 _key = "list_"+mostCurrent._currentlist;
- //BA.debugLineNum = 394;BA.debugLine="Dim savedTasks As List";
+RDebugUtils.currentLine=25493552;
+ //BA.debugLineNum = 25493552;BA.debugLine="Dim savedTasks As List";
 _savedtasks = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 395;BA.debugLine="If kvs.ContainsKey(key) Then";
+RDebugUtils.currentLine=25493553;
+ //BA.debugLineNum = 25493553;BA.debugLine="If kvs.ContainsKey(key) Then";
 if (_kvs._containskey(_key)) { 
- //BA.debugLineNum = 396;BA.debugLine="savedTasks = kvs.Get(key)";
+RDebugUtils.currentLine=25493554;
+ //BA.debugLineNum = 25493554;BA.debugLine="savedTasks = kvs.Get(key)";
 _savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_key)));
  }else {
- //BA.debugLineNum = 398;BA.debugLine="savedTasks.Initialize";
+RDebugUtils.currentLine=25493556;
+ //BA.debugLineNum = 25493556;BA.debugLine="savedTasks.Initialize";
 _savedtasks.Initialize();
  };
- //BA.debugLineNum = 401;BA.debugLine="savedTasks.Add(newTask)";
+RDebugUtils.currentLine=25493559;
+ //BA.debugLineNum = 25493559;BA.debugLine="savedTasks.Add(newTask)";
 _savedtasks.Add((Object)(_newtask));
- //BA.debugLineNum = 402;BA.debugLine="kvs.Put(key, savedTasks)";
+RDebugUtils.currentLine=25493560;
+ //BA.debugLineNum = 25493560;BA.debugLine="kvs.Put(key, savedTasks)";
 _kvs._put(_key,(Object)(_savedtasks.getObject()));
- //BA.debugLineNum = 404;BA.debugLine="tasksListUI(newTask)";
+RDebugUtils.currentLine=25493562;
+ //BA.debugLineNum = 25493562;BA.debugLine="tasksListUI(newTask)";
 _taskslistui(_newtask);
- //BA.debugLineNum = 405;BA.debugLine="newAddTaskBtn";
+RDebugUtils.currentLine=25493563;
+ //BA.debugLineNum = 25493563;BA.debugLine="newAddTaskBtn";
 _newaddtaskbtn();
- //BA.debugLineNum = 406;BA.debugLine="addTaskBtn.Enabled = True";
+RDebugUtils.currentLine=25493564;
+ //BA.debugLineNum = 25493564;BA.debugLine="addTaskBtn.Enabled = True";
 mostCurrent._addtaskbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 407;BA.debugLine="updateProgress";
+RDebugUtils.currentLine=25493565;
+ //BA.debugLineNum = 25493565;BA.debugLine="updateProgress";
 _updateprogress();
- //BA.debugLineNum = 409;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25493567;
+ //BA.debugLineNum = 25493567;BA.debugLine="End Sub";
 return "";
 }
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 13;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 16;BA.debugLine="Private addTitleTextArea As EditText";
-mostCurrent._addtitletextarea = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 17;BA.debugLine="Private listsList As CustomListView";
-mostCurrent._listslist = new b4a.example3.customlistview();
- //BA.debugLineNum = 18;BA.debugLine="Private newListBtn As Button";
-mostCurrent._newlistbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Private tasksList As CustomListView";
-mostCurrent._taskslist = new b4a.example3.customlistview();
- //BA.debugLineNum = 20;BA.debugLine="Dim isAddingList As Boolean = False";
-_isaddinglist = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 22;BA.debugLine="Dim addTaskBtnPNL As Panel";
-mostCurrent._addtaskbtnpnl = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 23;BA.debugLine="Dim addTaskBtn As Button";
-mostCurrent._addtaskbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 25;BA.debugLine="Private currentList As String = \"\"";
-mostCurrent._currentlist = "";
- //BA.debugLineNum = 27;BA.debugLine="Dim addTaskPanel As Panel";
-mostCurrent._addtaskpanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 28;BA.debugLine="Dim addTaskTextArea As EditText";
-mostCurrent._addtasktextarea = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 29;BA.debugLine="Dim enterTaskBtn As Button";
-mostCurrent._entertaskbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 31;BA.debugLine="Dim untitledNo As Int = 1";
-_untitledno = (int) (1);
- //BA.debugLineNum = 33;BA.debugLine="Private progressNumber As Label";
-mostCurrent._progressnumber = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 34;BA.debugLine="Private progressPercent As Label";
-mostCurrent._progresspercent = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 35;BA.debugLine="Private progressBar As ProgressBar";
-mostCurrent._progressbar = new anywheresoftware.b4a.objects.ProgressBarWrapper();
- //BA.debugLineNum = 36;BA.debugLine="End Sub";
+public static String  _taskslistui(String _newtask) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "taskslistui", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "taskslistui", new Object[] {_newtask}));}
+anywheresoftware.b4a.objects.PanelWrapper _taskpnl = null;
+anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _taskcheckbox = null;
+anywheresoftware.b4a.objects.LabelWrapper _tasklbl = null;
+anywheresoftware.b4a.objects.PanelWrapper _divider = null;
+String _checkedkey = "";
+boolean _ischecked = false;
+RDebugUtils.currentLine=25755648;
+ //BA.debugLineNum = 25755648;BA.debugLine="Sub tasksListUI(newTask As String)";
+RDebugUtils.currentLine=25755650;
+ //BA.debugLineNum = 25755650;BA.debugLine="Dim taskPNL As Panel";
+_taskpnl = new anywheresoftware.b4a.objects.PanelWrapper();
+RDebugUtils.currentLine=25755651;
+ //BA.debugLineNum = 25755651;BA.debugLine="taskPNL.Initialize(\"taskPNL\")";
+_taskpnl.Initialize(mostCurrent.activityBA,"taskPNL");
+RDebugUtils.currentLine=25755652;
+ //BA.debugLineNum = 25755652;BA.debugLine="taskPNL.SetLayout(0, 0, 250dip, 60dip)";
+_taskpnl.SetLayout((int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (250)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60)));
+RDebugUtils.currentLine=25755654;
+ //BA.debugLineNum = 25755654;BA.debugLine="Dim taskCheckbox As CheckBox";
+_taskcheckbox = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+RDebugUtils.currentLine=25755655;
+ //BA.debugLineNum = 25755655;BA.debugLine="taskCheckbox.Initialize(\"taskCheckbox\")";
+_taskcheckbox.Initialize(mostCurrent.activityBA,"taskCheckbox");
+RDebugUtils.currentLine=25755656;
+ //BA.debugLineNum = 25755656;BA.debugLine="taskPNL.AddView(taskCheckbox, 0dip, 10dip, 40dip,";
+_taskpnl.AddView((android.view.View)(_taskcheckbox.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
+RDebugUtils.currentLine=25755658;
+ //BA.debugLineNum = 25755658;BA.debugLine="Dim taskLBL As Label";
+_tasklbl = new anywheresoftware.b4a.objects.LabelWrapper();
+RDebugUtils.currentLine=25755659;
+ //BA.debugLineNum = 25755659;BA.debugLine="taskLBL.Initialize(\"taskLBL\")";
+_tasklbl.Initialize(mostCurrent.activityBA,"taskLBL");
+RDebugUtils.currentLine=25755660;
+ //BA.debugLineNum = 25755660;BA.debugLine="taskLBL.Text = newTask";
+_tasklbl.setText(BA.ObjectToCharSequence(_newtask));
+RDebugUtils.currentLine=25755661;
+ //BA.debugLineNum = 25755661;BA.debugLine="taskLBL.TextColor = Colors.Black";
+_tasklbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=25755662;
+ //BA.debugLineNum = 25755662;BA.debugLine="taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Wi";
+_taskpnl.AddView((android.view.View)(_tasklbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20)),(int) (_taskpnl.getWidth()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (80))),_taskpnl.getHeight());
+RDebugUtils.currentLine=25755664;
+ //BA.debugLineNum = 25755664;BA.debugLine="Dim divider As Panel";
+_divider = new anywheresoftware.b4a.objects.PanelWrapper();
+RDebugUtils.currentLine=25755665;
+ //BA.debugLineNum = 25755665;BA.debugLine="divider.Initialize(\"line\")";
+_divider.Initialize(mostCurrent.activityBA,"line");
+RDebugUtils.currentLine=25755666;
+ //BA.debugLineNum = 25755666;BA.debugLine="divider.Color = Colors.ARGB(255, 60, 60, 60)";
+_divider.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (60),(int) (60),(int) (60)));
+RDebugUtils.currentLine=25755667;
+ //BA.debugLineNum = 25755667;BA.debugLine="taskPNL.AddView(divider, 0, 59dip, taskPNL.Width,";
+_taskpnl.AddView((android.view.View)(_divider.getObject()),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (59)),_taskpnl.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1)));
+RDebugUtils.currentLine=25755669;
+ //BA.debugLineNum = 25755669;BA.debugLine="taskCheckbox.Tag = taskLBL";
+_taskcheckbox.setTag((Object)(_tasklbl.getObject()));
+RDebugUtils.currentLine=25755672;
+ //BA.debugLineNum = 25755672;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentLi";
+_checkedkey = "checked_"+mostCurrent._currentlist+"_"+_newtask;
+RDebugUtils.currentLine=25755673;
+ //BA.debugLineNum = 25755673;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
+if (_kvs._containskey(_checkedkey)) { 
+RDebugUtils.currentLine=25755674;
+ //BA.debugLineNum = 25755674;BA.debugLine="Dim isChecked As Boolean = kvs.Get(checkedKey)";
+_ischecked = BA.ObjectToBoolean(_kvs._get(_checkedkey));
+RDebugUtils.currentLine=25755675;
+ //BA.debugLineNum = 25755675;BA.debugLine="taskCheckbox.Checked = isChecked";
+_taskcheckbox.setChecked(_ischecked);
+RDebugUtils.currentLine=25755676;
+ //BA.debugLineNum = 25755676;BA.debugLine="If isChecked Then";
+if (_ischecked) { 
+RDebugUtils.currentLine=25755677;
+ //BA.debugLineNum = 25755677;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
+_tasklbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (0)));
+ };
+ };
+RDebugUtils.currentLine=25755681;
+ //BA.debugLineNum = 25755681;BA.debugLine="tasksList.Add(taskPNL, newTask)";
+mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_taskpnl.getObject())),(Object)(_newtask));
+RDebugUtils.currentLine=25755683;
+ //BA.debugLineNum = 25755683;BA.debugLine="End Sub";
+return "";
+}
+public static String  _updateprogress() throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "updateprogress", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "updateprogress", null));}
+String _key = "";
+anywheresoftware.b4a.objects.collections.List _savedtasks = null;
+int _totaltasks = 0;
+int _donetasks = 0;
+int _percentagetasks = 0;
+String _task = "";
+String _checkedkey = "";
+RDebugUtils.currentLine=25821184;
+ //BA.debugLineNum = 25821184;BA.debugLine="Sub updateProgress";
+RDebugUtils.currentLine=25821186;
+ //BA.debugLineNum = 25821186;BA.debugLine="If currentList = \"\" Then";
+if ((mostCurrent._currentlist).equals("")) { 
+RDebugUtils.currentLine=25821187;
+ //BA.debugLineNum = 25821187;BA.debugLine="progressNumber.Text = \"\"";
+mostCurrent._progressnumber.setText(BA.ObjectToCharSequence(""));
+RDebugUtils.currentLine=25821188;
+ //BA.debugLineNum = 25821188;BA.debugLine="Return";
+if (true) return "";
+ };
+RDebugUtils.currentLine=25821191;
+ //BA.debugLineNum = 25821191;BA.debugLine="Dim key As String = \"list_\" & currentList";
+_key = "list_"+mostCurrent._currentlist;
+RDebugUtils.currentLine=25821192;
+ //BA.debugLineNum = 25821192;BA.debugLine="If kvs.ContainsKey(key) = False Then";
+if (_kvs._containskey(_key)==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=25821193;
+ //BA.debugLineNum = 25821193;BA.debugLine="progressNumber.Text = \"0 / 0 tasks done!\"";
+mostCurrent._progressnumber.setText(BA.ObjectToCharSequence("0 / 0 tasks done!"));
+RDebugUtils.currentLine=25821194;
+ //BA.debugLineNum = 25821194;BA.debugLine="progressPercent.Text = \"0%\"";
+mostCurrent._progresspercent.setText(BA.ObjectToCharSequence("0%"));
+RDebugUtils.currentLine=25821195;
+ //BA.debugLineNum = 25821195;BA.debugLine="progressBar.Progress = 0";
+mostCurrent._progressbar.setProgress((int) (0));
+RDebugUtils.currentLine=25821196;
+ //BA.debugLineNum = 25821196;BA.debugLine="Return";
+if (true) return "";
+ };
+RDebugUtils.currentLine=25821200;
+ //BA.debugLineNum = 25821200;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+_savedtasks = new anywheresoftware.b4a.objects.collections.List();
+_savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_key)));
+RDebugUtils.currentLine=25821201;
+ //BA.debugLineNum = 25821201;BA.debugLine="Dim totalTasks As Int = savedTasks.Size";
+_totaltasks = _savedtasks.getSize();
+RDebugUtils.currentLine=25821202;
+ //BA.debugLineNum = 25821202;BA.debugLine="Dim doneTasks As Int = 0";
+_donetasks = (int) (0);
+RDebugUtils.currentLine=25821203;
+ //BA.debugLineNum = 25821203;BA.debugLine="Dim percentageTasks As Int = 0";
+_percentagetasks = (int) (0);
+RDebugUtils.currentLine=25821205;
+ //BA.debugLineNum = 25821205;BA.debugLine="For Each task As String In savedTasks";
+{
+final anywheresoftware.b4a.BA.IterableList group16 = _savedtasks;
+final int groupLen16 = group16.getSize()
+;int index16 = 0;
+;
+for (; index16 < groupLen16;index16++){
+_task = BA.ObjectToString(group16.Get(index16));
+RDebugUtils.currentLine=25821206;
+ //BA.debugLineNum = 25821206;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentL";
+_checkedkey = "checked_"+mostCurrent._currentlist+"_"+_task;
+RDebugUtils.currentLine=25821207;
+ //BA.debugLineNum = 25821207;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
+if (_kvs._containskey(_checkedkey)) { 
+RDebugUtils.currentLine=25821208;
+ //BA.debugLineNum = 25821208;BA.debugLine="If kvs.Get(checkedKey) = True Then";
+if ((_kvs._get(_checkedkey)).equals((Object)(anywheresoftware.b4a.keywords.Common.True))) { 
+RDebugUtils.currentLine=25821209;
+ //BA.debugLineNum = 25821209;BA.debugLine="doneTasks = doneTasks + 1";
+_donetasks = (int) (_donetasks+1);
+ };
+ };
+ }
+};
+RDebugUtils.currentLine=25821214;
+ //BA.debugLineNum = 25821214;BA.debugLine="percentageTasks = (doneTasks / totalTasks) * 100";
+_percentagetasks = (int) ((_donetasks/(double)_totaltasks)*100);
+RDebugUtils.currentLine=25821216;
+ //BA.debugLineNum = 25821216;BA.debugLine="progressNumber.Text = doneTasks & \" / \" & totalTa";
+mostCurrent._progressnumber.setText(BA.ObjectToCharSequence(BA.NumberToString(_donetasks)+" / "+BA.NumberToString(_totaltasks)+" tasks done!"));
+RDebugUtils.currentLine=25821217;
+ //BA.debugLineNum = 25821217;BA.debugLine="progressPercent.Text = percentageTasks & \"%\"";
+mostCurrent._progresspercent.setText(BA.ObjectToCharSequence(BA.NumberToString(_percentagetasks)+"%"));
+RDebugUtils.currentLine=25821218;
+ //BA.debugLineNum = 25821218;BA.debugLine="progressBar.Progress = percentageTasks";
+mostCurrent._progressbar.setProgress(_percentagetasks);
+RDebugUtils.currentLine=25821220;
+ //BA.debugLineNum = 25821220;BA.debugLine="End Sub";
 return "";
 }
 public static String  _listslist_itemclick(int _index,Object _value) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "listslist_itemclick", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "listslist_itemclick", new Object[] {_index,_value}));}
 anywheresoftware.b4a.objects.B4XViewWrapper _listpnl = null;
 anywheresoftware.b4a.objects.LabelWrapper _listlbl = null;
 String _key = "";
 anywheresoftware.b4a.objects.collections.List _savedtasks = null;
 String _task = "";
- //BA.debugLineNum = 237;BA.debugLine="Sub listsList_ItemClick(Index As Int, Value As Obj";
- //BA.debugLineNum = 239;BA.debugLine="If isAddingList Then Return";
+RDebugUtils.currentLine=25231360;
+ //BA.debugLineNum = 25231360;BA.debugLine="Sub listsList_ItemClick(Index As Int, Value As Obj";
+RDebugUtils.currentLine=25231362;
+ //BA.debugLineNum = 25231362;BA.debugLine="If isAddingList Then Return";
 if (_isaddinglist) { 
 if (true) return "";};
- //BA.debugLineNum = 241;BA.debugLine="Dim listPNL As B4XView = listsList.GetPanel(Index";
+RDebugUtils.currentLine=25231364;
+ //BA.debugLineNum = 25231364;BA.debugLine="Dim listPNL As B4XView = listsList.GetPanel(Index";
 _listpnl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _listpnl = mostCurrent._listslist._getpanel(_index);
- //BA.debugLineNum = 242;BA.debugLine="Dim listLBL As Label = listPNL.GetView(0)";
+RDebugUtils.currentLine=25231365;
+ //BA.debugLineNum = 25231365;BA.debugLine="Dim listLBL As Label = listPNL.GetView(0)";
 _listlbl = new anywheresoftware.b4a.objects.LabelWrapper();
 _listlbl = (anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(_listpnl.GetView((int) (0)).getObject()));
- //BA.debugLineNum = 244;BA.debugLine="currentList = listLBL.Text";
+RDebugUtils.currentLine=25231367;
+ //BA.debugLineNum = 25231367;BA.debugLine="currentList = listLBL.Text";
 mostCurrent._currentlist = _listlbl.getText();
- //BA.debugLineNum = 245;BA.debugLine="addTitleTextArea.Text = currentList";
+RDebugUtils.currentLine=25231368;
+ //BA.debugLineNum = 25231368;BA.debugLine="addTitleTextArea.Text = currentList";
 mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(mostCurrent._currentlist));
- //BA.debugLineNum = 246;BA.debugLine="addTitleTextArea.Visible = True";
+RDebugUtils.currentLine=25231369;
+ //BA.debugLineNum = 25231369;BA.debugLine="addTitleTextArea.Visible = True";
 mostCurrent._addtitletextarea.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 248;BA.debugLine="tasksList.Clear";
+RDebugUtils.currentLine=25231371;
+ //BA.debugLineNum = 25231371;BA.debugLine="tasksList.Clear";
 mostCurrent._taskslist._clear();
- //BA.debugLineNum = 250;BA.debugLine="Dim key As String = \"list_\" & currentList";
+RDebugUtils.currentLine=25231373;
+ //BA.debugLineNum = 25231373;BA.debugLine="Dim key As String = \"list_\" & currentList";
 _key = "list_"+mostCurrent._currentlist;
- //BA.debugLineNum = 252;BA.debugLine="If kvs.ContainsKey(key) Then";
+RDebugUtils.currentLine=25231375;
+ //BA.debugLineNum = 25231375;BA.debugLine="If kvs.ContainsKey(key) Then";
 if (_kvs._containskey(_key)) { 
- //BA.debugLineNum = 253;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+RDebugUtils.currentLine=25231376;
+ //BA.debugLineNum = 25231376;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
 _savedtasks = new anywheresoftware.b4a.objects.collections.List();
 _savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_key)));
- //BA.debugLineNum = 254;BA.debugLine="For Each task As String In savedTasks";
+RDebugUtils.currentLine=25231377;
+ //BA.debugLineNum = 25231377;BA.debugLine="For Each task As String In savedTasks";
 {
 final anywheresoftware.b4a.BA.IterableList group11 = _savedtasks;
 final int groupLen11 = group11.getSize()
@@ -891,21 +1258,29 @@ final int groupLen11 = group11.getSize()
 ;
 for (; index11 < groupLen11;index11++){
 _task = BA.ObjectToString(group11.Get(index11));
- //BA.debugLineNum = 255;BA.debugLine="tasksListUI(task)";
+RDebugUtils.currentLine=25231378;
+ //BA.debugLineNum = 25231378;BA.debugLine="tasksListUI(task)";
 _taskslistui(_task);
  }
 };
  };
- //BA.debugLineNum = 259;BA.debugLine="tasksList.GetBase.Visible = True";
+RDebugUtils.currentLine=25231382;
+ //BA.debugLineNum = 25231382;BA.debugLine="tasksList.GetBase.Visible = True";
 mostCurrent._taskslist._getbase().setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 260;BA.debugLine="newAddTaskBtn";
+RDebugUtils.currentLine=25231383;
+ //BA.debugLineNum = 25231383;BA.debugLine="newAddTaskBtn";
 _newaddtaskbtn();
- //BA.debugLineNum = 261;BA.debugLine="updateProgress";
+RDebugUtils.currentLine=25231384;
+ //BA.debugLineNum = 25231384;BA.debugLine="updateProgress";
 _updateprogress();
- //BA.debugLineNum = 263;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25231386;
+ //BA.debugLineNum = 25231386;BA.debugLine="End Sub";
 return "";
 }
 public static void  _listslist_itemlongclick(int _index,Object _value) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "listslist_itemlongclick", false))
+	 {Debug.delegate(mostCurrent.activityBA, "listslist_itemlongclick", new Object[] {_index,_value}); return;}
 ResumableSub_listsList_ItemLongClick rsub = new ResumableSub_listsList_ItemLongClick(null,_index,_value);
 rsub.resume(processBA, null);
 }
@@ -929,6 +1304,7 @@ int groupLen17;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="todoactivity";
 
     while (true) {
         switch (state) {
@@ -938,10 +1314,12 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 267;BA.debugLine="Msgbox2Async(\"Delete or rename this list?\", Value";
+RDebugUtils.currentLine=25296898;
+ //BA.debugLineNum = 25296898;BA.debugLine="Msgbox2Async(\"Delete or rename this list?\", Value";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Delete or rename this list?"),BA.ObjectToCharSequence(_value),"Rename","","Delete",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 268;BA.debugLine="Wait For Msgbox_Result (res As Int)";
-anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
+RDebugUtils.currentLine=25296899;
+ //BA.debugLineNum = 25296899;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "todoactivity", "listslist_itemlongclick"), null);
 this.state = 22;
 return;
 case 22:
@@ -949,7 +1327,8 @@ case 22:
 this.state = 1;
 _res = (Integer) result[0];
 ;
- //BA.debugLineNum = 270;BA.debugLine="If res = DialogResponse.POSITIVE Then ' Rename";
+RDebugUtils.currentLine=25296901;
+ //BA.debugLineNum = 25296901;BA.debugLine="If res = DialogResponse.POSITIVE Then ' Rename";
 if (true) break;
 
 case 1:
@@ -957,24 +1336,31 @@ case 1:
 this.state = 21;
 if (_res==anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE) { 
 this.state = 3;
-}else if(_res==anywheresoftware.b4a.keywords.Common.DialogResponse.NEGATIVE) { 
+}else 
+{RDebugUtils.currentLine=25296904;
+ //BA.debugLineNum = 25296904;BA.debugLine="Else If res = DialogResponse.NEGATIVE Then ' Dele";
+if (_res==anywheresoftware.b4a.keywords.Common.DialogResponse.NEGATIVE) { 
 this.state = 5;
-}if (true) break;
+}}
+if (true) break;
 
 case 3:
 //C
 this.state = 21;
- //BA.debugLineNum = 271;BA.debugLine="showRenameListPanel(Index, Value)";
+RDebugUtils.currentLine=25296902;
+ //BA.debugLineNum = 25296902;BA.debugLine="showRenameListPanel(Index, Value)";
 _showrenamelistpanel(_index,BA.ObjectToString(_value));
  if (true) break;
 
 case 5:
 //C
 this.state = 6;
- //BA.debugLineNum = 275;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete th";
+RDebugUtils.currentLine=25296906;
+ //BA.debugLineNum = 25296906;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete th";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Are you sure you want to delete the list \""+BA.ObjectToString(_value)+"\"?"),BA.ObjectToCharSequence("Confirmation"),"No","","Yes",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 276;BA.debugLine="Wait For Msgbox_Result (res As Int)";
-anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
+RDebugUtils.currentLine=25296907;
+ //BA.debugLineNum = 25296907;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "todoactivity", "listslist_itemlongclick"), null);
 this.state = 23;
 return;
 case 23:
@@ -982,7 +1368,8 @@ case 23:
 this.state = 6;
 _res = (Integer) result[0];
 ;
- //BA.debugLineNum = 277;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
+RDebugUtils.currentLine=25296908;
+ //BA.debugLineNum = 25296908;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
 if (true) break;
 
 case 6:
@@ -995,14 +1382,18 @@ this.state = 8;
 case 8:
 //C
 this.state = 9;
- //BA.debugLineNum = 278;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
+RDebugUtils.currentLine=25296909;
+ //BA.debugLineNum = 25296909;BA.debugLine="Dim savedLists As List = kvs.Get(\"lists\")";
 _savedlists = new anywheresoftware.b4a.objects.collections.List();
 _savedlists = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(parent._kvs._get("lists")));
- //BA.debugLineNum = 279;BA.debugLine="savedLists.RemoveAt(Index)";
+RDebugUtils.currentLine=25296910;
+ //BA.debugLineNum = 25296910;BA.debugLine="savedLists.RemoveAt(Index)";
 _savedlists.RemoveAt(_index);
- //BA.debugLineNum = 280;BA.debugLine="kvs.Put(\"lists\", savedLists)";
+RDebugUtils.currentLine=25296911;
+ //BA.debugLineNum = 25296911;BA.debugLine="kvs.Put(\"lists\", savedLists)";
 parent._kvs._put("lists",(Object)(_savedlists.getObject()));
- //BA.debugLineNum = 281;BA.debugLine="listsList.RemoveAt(Index)";
+RDebugUtils.currentLine=25296912;
+ //BA.debugLineNum = 25296912;BA.debugLine="listsList.RemoveAt(Index)";
 parent.mostCurrent._listslist._removeat(_index);
  if (true) break;
 
@@ -1010,9 +1401,11 @@ case 9:
 //C
 this.state = 10;
 ;
- //BA.debugLineNum = 285;BA.debugLine="Dim key As String = \"list_\" & Value";
+RDebugUtils.currentLine=25296916;
+ //BA.debugLineNum = 25296916;BA.debugLine="Dim key As String = \"list_\" & Value";
 _key = "list_"+BA.ObjectToString(_value);
- //BA.debugLineNum = 286;BA.debugLine="If kvs.ContainsKey(key) Then";
+RDebugUtils.currentLine=25296917;
+ //BA.debugLineNum = 25296917;BA.debugLine="If kvs.ContainsKey(key) Then";
 if (true) break;
 
 case 10:
@@ -1025,10 +1418,12 @@ this.state = 12;
 case 12:
 //C
 this.state = 13;
- //BA.debugLineNum = 287;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+RDebugUtils.currentLine=25296918;
+ //BA.debugLineNum = 25296918;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
 _savedtasks = new anywheresoftware.b4a.objects.collections.List();
 _savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(parent._kvs._get(_key)));
- //BA.debugLineNum = 288;BA.debugLine="For Each task As String In savedTasks";
+RDebugUtils.currentLine=25296919;
+ //BA.debugLineNum = 25296919;BA.debugLine="For Each task As String In savedTasks";
 if (true) break;
 
 case 13:
@@ -1057,7 +1452,8 @@ if (true) break;
 case 15:
 //C
 this.state = 25;
- //BA.debugLineNum = 289;BA.debugLine="kvs.Remove(\"checked_\" & Value & \"_\" & task)";
+RDebugUtils.currentLine=25296920;
+ //BA.debugLineNum = 25296920;BA.debugLine="kvs.Remove(\"checked_\" & Value & \"_\" & task)";
 parent._kvs._remove("checked_"+BA.ObjectToString(_value)+"_"+_task);
  if (true) break;
 if (true) break;
@@ -1066,11 +1462,13 @@ case 16:
 //C
 this.state = 17;
 ;
- //BA.debugLineNum = 291;BA.debugLine="kvs.Remove(key)";
+RDebugUtils.currentLine=25296922;
+ //BA.debugLineNum = 25296922;BA.debugLine="kvs.Remove(key)";
 parent._kvs._remove(_key);
  if (true) break;
 ;
- //BA.debugLineNum = 295;BA.debugLine="If currentList = Value Then";
+RDebugUtils.currentLine=25296926;
+ //BA.debugLineNum = 25296926;BA.debugLine="If currentList = Value Then";
 
 case 17:
 //if
@@ -1082,15 +1480,20 @@ this.state = 19;
 case 19:
 //C
 this.state = 20;
- //BA.debugLineNum = 296;BA.debugLine="currentList = \"\"";
+RDebugUtils.currentLine=25296927;
+ //BA.debugLineNum = 25296927;BA.debugLine="currentList = \"\"";
 parent.mostCurrent._currentlist = "";
- //BA.debugLineNum = 297;BA.debugLine="tasksList.Clear";
+RDebugUtils.currentLine=25296928;
+ //BA.debugLineNum = 25296928;BA.debugLine="tasksList.Clear";
 parent.mostCurrent._taskslist._clear();
- //BA.debugLineNum = 298;BA.debugLine="tasksList.GetBase.Visible = False";
+RDebugUtils.currentLine=25296929;
+ //BA.debugLineNum = 25296929;BA.debugLine="tasksList.GetBase.Visible = False";
 parent.mostCurrent._taskslist._getbase().setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 299;BA.debugLine="addTitleTextArea.Text = \"\"";
+RDebugUtils.currentLine=25296930;
+ //BA.debugLineNum = 25296930;BA.debugLine="addTitleTextArea.Text = \"\"";
 parent.mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 300;BA.debugLine="addTitleTextArea.Visible = False";
+RDebugUtils.currentLine=25296931;
+ //BA.debugLineNum = 25296931;BA.debugLine="addTitleTextArea.Visible = False";
 parent.mostCurrent._addtitletextarea.setVisible(anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -1098,7 +1501,8 @@ case 20:
 //C
 this.state = 21;
 ;
- //BA.debugLineNum = 303;BA.debugLine="ToastMessageShow(\"List deleted\", False)";
+RDebugUtils.currentLine=25296934;
+ //BA.debugLineNum = 25296934;BA.debugLine="ToastMessageShow(\"List deleted\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("List deleted"),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -1106,169 +1510,211 @@ case 21:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 306;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25296937;
+ //BA.debugLineNum = 25296937;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
-public static void  _msgbox_result(int _res) throws Exception{
-}
-public static String  _newaddtaskbtn() throws Exception{
- //BA.debugLineNum = 72;BA.debugLine="Sub newAddTaskBtn";
- //BA.debugLineNum = 74;BA.debugLine="addTaskBtnPNL.Initialize(\"addTaskBtnPNL\")";
-mostCurrent._addtaskbtnpnl.Initialize(mostCurrent.activityBA,"addTaskBtnPNL");
- //BA.debugLineNum = 75;BA.debugLine="addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)";
-mostCurrent._addtaskbtnpnl.SetLayout((int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (235)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)));
- //BA.debugLineNum = 76;BA.debugLine="addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250,";
-mostCurrent._addtaskbtnpnl.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (250),(int) (250),(int) (250)));
- //BA.debugLineNum = 78;BA.debugLine="addTaskBtn.Initialize(\"addTaskBtn\")";
-mostCurrent._addtaskbtn.Initialize(mostCurrent.activityBA,"addTaskBtn");
- //BA.debugLineNum = 79;BA.debugLine="addTaskBtn.Text = \"+ add a task \"";
-mostCurrent._addtaskbtn.setText(BA.ObjectToCharSequence("+ add a task "));
- //BA.debugLineNum = 80;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, addT";
-mostCurrent._addtaskbtnpnl.AddView((android.view.View)(mostCurrent._addtaskbtn.getObject()),(int) (-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))),(int) (0),mostCurrent._addtaskbtnpnl.getWidth(),mostCurrent._addtaskbtnpnl.getHeight());
- //BA.debugLineNum = 82;BA.debugLine="tasksList.Add(addTaskBtnPNL, \"\")";
-mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._addtaskbtnpnl.getObject())),(Object)(""));
- //BA.debugLineNum = 84;BA.debugLine="End Sub";
+public static String  _showrenamelistpanel(int _index,String _oldtitle) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "showrenamelistpanel", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showrenamelistpanel", new Object[] {_index,_oldtitle}));}
+anywheresoftware.b4a.objects.collections.List _ctx = null;
+RDebugUtils.currentLine=25362432;
+ //BA.debugLineNum = 25362432;BA.debugLine="Sub showRenameListPanel(Index As Int, oldTitle As";
+RDebugUtils.currentLine=25362434;
+ //BA.debugLineNum = 25362434;BA.debugLine="addTitleTextArea.Text = oldTitle";
+mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(_oldtitle));
+RDebugUtils.currentLine=25362435;
+ //BA.debugLineNum = 25362435;BA.debugLine="addTitleTextArea.Visible = True";
+mostCurrent._addtitletextarea.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=25362436;
+ //BA.debugLineNum = 25362436;BA.debugLine="addTitleTextArea.Enabled = True";
+mostCurrent._addtitletextarea.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=25362437;
+ //BA.debugLineNum = 25362437;BA.debugLine="addTitleTextArea.RequestFocus";
+mostCurrent._addtitletextarea.RequestFocus();
+RDebugUtils.currentLine=25362439;
+ //BA.debugLineNum = 25362439;BA.debugLine="Dim ctx As List";
+_ctx = new anywheresoftware.b4a.objects.collections.List();
+RDebugUtils.currentLine=25362440;
+ //BA.debugLineNum = 25362440;BA.debugLine="ctx.Initialize";
+_ctx.Initialize();
+RDebugUtils.currentLine=25362441;
+ //BA.debugLineNum = 25362441;BA.debugLine="ctx.Add(Index)";
+_ctx.Add((Object)(_index));
+RDebugUtils.currentLine=25362442;
+ //BA.debugLineNum = 25362442;BA.debugLine="ctx.Add(oldTitle)";
+_ctx.Add((Object)(_oldtitle));
+RDebugUtils.currentLine=25362443;
+ //BA.debugLineNum = 25362443;BA.debugLine="addTitleTextArea.Tag = ctx";
+mostCurrent._addtitletextarea.setTag((Object)(_ctx.getObject()));
+RDebugUtils.currentLine=25362445;
+ //BA.debugLineNum = 25362445;BA.debugLine="End Sub";
 return "";
 }
 public static String  _newlistbtn_click() throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Sub newListBtn_Click";
- //BA.debugLineNum = 88;BA.debugLine="tasksList.Clear";
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "newlistbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "newlistbtn_click", null));}
+RDebugUtils.currentLine=25100288;
+ //BA.debugLineNum = 25100288;BA.debugLine="Sub newListBtn_Click";
+RDebugUtils.currentLine=25100290;
+ //BA.debugLineNum = 25100290;BA.debugLine="tasksList.Clear";
 mostCurrent._taskslist._clear();
- //BA.debugLineNum = 89;BA.debugLine="isAddingList = True";
+RDebugUtils.currentLine=25100291;
+ //BA.debugLineNum = 25100291;BA.debugLine="isAddingList = True";
 _isaddinglist = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 91;BA.debugLine="progressNumber.Text = \"\"";
+RDebugUtils.currentLine=25100293;
+ //BA.debugLineNum = 25100293;BA.debugLine="progressNumber.Text = \"\"";
 mostCurrent._progressnumber.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 92;BA.debugLine="progressPercent.Text = \"\"";
+RDebugUtils.currentLine=25100294;
+ //BA.debugLineNum = 25100294;BA.debugLine="progressPercent.Text = \"\"";
 mostCurrent._progresspercent.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 93;BA.debugLine="progressBar.Progress = 0";
+RDebugUtils.currentLine=25100295;
+ //BA.debugLineNum = 25100295;BA.debugLine="progressBar.Progress = 0";
 mostCurrent._progressbar.setProgress((int) (0));
- //BA.debugLineNum = 95;BA.debugLine="addTitleTextArea.Visible = True";
+RDebugUtils.currentLine=25100297;
+ //BA.debugLineNum = 25100297;BA.debugLine="addTitleTextArea.Visible = True";
 mostCurrent._addtitletextarea.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 96;BA.debugLine="addTitleTextArea.Enabled = True";
+RDebugUtils.currentLine=25100298;
+ //BA.debugLineNum = 25100298;BA.debugLine="addTitleTextArea.Enabled = True";
 mostCurrent._addtitletextarea.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 97;BA.debugLine="addTitleTextArea.Background = Null";
+RDebugUtils.currentLine=25100299;
+ //BA.debugLineNum = 25100299;BA.debugLine="addTitleTextArea.Background = Null";
 mostCurrent._addtitletextarea.setBackground((android.graphics.drawable.Drawable)(anywheresoftware.b4a.keywords.Common.Null));
- //BA.debugLineNum = 98;BA.debugLine="addTitleTextArea.Text = \"\"";
+RDebugUtils.currentLine=25100300;
+ //BA.debugLineNum = 25100300;BA.debugLine="addTitleTextArea.Text = \"\"";
 mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 99;BA.debugLine="addTitleTextArea.Hint = \"+ add a title...\"";
+RDebugUtils.currentLine=25100301;
+ //BA.debugLineNum = 25100301;BA.debugLine="addTitleTextArea.Hint = \"+ add a title...\"";
 mostCurrent._addtitletextarea.setHint("+ add a title...");
- //BA.debugLineNum = 100;BA.debugLine="addTitleTextArea.RequestFocus";
+RDebugUtils.currentLine=25100302;
+ //BA.debugLineNum = 25100302;BA.debugLine="addTitleTextArea.RequestFocus";
 mostCurrent._addtitletextarea.RequestFocus();
- //BA.debugLineNum = 101;BA.debugLine="addTitleTextArea.Tag = Null";
+RDebugUtils.currentLine=25100303;
+ //BA.debugLineNum = 25100303;BA.debugLine="addTitleTextArea.Tag = Null";
 mostCurrent._addtitletextarea.setTag(anywheresoftware.b4a.keywords.Common.Null);
- //BA.debugLineNum = 103;BA.debugLine="newListBtn.Enabled = False";
+RDebugUtils.currentLine=25100305;
+ //BA.debugLineNum = 25100305;BA.debugLine="newListBtn.Enabled = False";
 mostCurrent._newlistbtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 105;BA.debugLine="tasksList.GetBase.Visible = True";
+RDebugUtils.currentLine=25100307;
+ //BA.debugLineNum = 25100307;BA.debugLine="tasksList.GetBase.Visible = True";
 mostCurrent._taskslist._getbase().setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 106;BA.debugLine="addTaskBtn.Visible = True";
+RDebugUtils.currentLine=25100308;
+ //BA.debugLineNum = 25100308;BA.debugLine="addTaskBtn.Visible = True";
 mostCurrent._addtaskbtn.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 108;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 9;BA.debugLine="Private xui As XUI";
-_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
- //BA.debugLineNum = 10;BA.debugLine="Public kvs As KeyValueStore";
-_kvs = new b4a.example3.keyvaluestore();
- //BA.debugLineNum = 11;BA.debugLine="End Sub";
-return "";
-}
-public static String  _showrenamelistpanel(int _index,String _oldtitle) throws Exception{
-anywheresoftware.b4a.objects.collections.List _ctx = null;
- //BA.debugLineNum = 308;BA.debugLine="Sub showRenameListPanel(Index As Int, oldTitle As";
- //BA.debugLineNum = 310;BA.debugLine="addTitleTextArea.Text = oldTitle";
-mostCurrent._addtitletextarea.setText(BA.ObjectToCharSequence(_oldtitle));
- //BA.debugLineNum = 311;BA.debugLine="addTitleTextArea.Visible = True";
-mostCurrent._addtitletextarea.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 312;BA.debugLine="addTitleTextArea.Enabled = True";
-mostCurrent._addtitletextarea.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 313;BA.debugLine="addTitleTextArea.RequestFocus";
-mostCurrent._addtitletextarea.RequestFocus();
- //BA.debugLineNum = 315;BA.debugLine="Dim ctx As List";
-_ctx = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 316;BA.debugLine="ctx.Initialize";
-_ctx.Initialize();
- //BA.debugLineNum = 317;BA.debugLine="ctx.Add(Index)";
-_ctx.Add((Object)(_index));
- //BA.debugLineNum = 318;BA.debugLine="ctx.Add(oldTitle)";
-_ctx.Add((Object)(_oldtitle));
- //BA.debugLineNum = 319;BA.debugLine="addTitleTextArea.Tag = ctx";
-mostCurrent._addtitletextarea.setTag((Object)(_ctx.getObject()));
- //BA.debugLineNum = 321;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25100310;
+ //BA.debugLineNum = 25100310;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showrenametaskpanel(int _index,String _oldtask) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "showrenametaskpanel", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showrenametaskpanel", new Object[] {_index,_oldtask}));}
 anywheresoftware.b4a.objects.collections.List _ctx = null;
- //BA.debugLineNum = 434;BA.debugLine="Sub showRenameTaskPanel(Index As Int, oldTask As S";
- //BA.debugLineNum = 436;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1) ' remove \"";
+RDebugUtils.currentLine=25624576;
+ //BA.debugLineNum = 25624576;BA.debugLine="Sub showRenameTaskPanel(Index As Int, oldTask As S";
+RDebugUtils.currentLine=25624578;
+ //BA.debugLineNum = 25624578;BA.debugLine="tasksList.RemoveAt(tasksList.Size - 1) ' remove \"";
 mostCurrent._taskslist._removeat((int) (mostCurrent._taskslist._getsize()-1));
- //BA.debugLineNum = 438;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
+RDebugUtils.currentLine=25624580;
+ //BA.debugLineNum = 25624580;BA.debugLine="addTaskPanel.Initialize(\"addTaskPanel\")";
 mostCurrent._addtaskpanel.Initialize(mostCurrent.activityBA,"addTaskPanel");
- //BA.debugLineNum = 439;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)";
+RDebugUtils.currentLine=25624581;
+ //BA.debugLineNum = 25624581;BA.debugLine="addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)";
 mostCurrent._addtaskpanel.SetLayout(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (250)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
- //BA.debugLineNum = 440;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
+RDebugUtils.currentLine=25624582;
+ //BA.debugLineNum = 25624582;BA.debugLine="addTaskPanel.Color = Colors.ARGB(255, 247, 247, 2";
 mostCurrent._addtaskpanel.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (247),(int) (247),(int) (247)));
- //BA.debugLineNum = 442;BA.debugLine="addTaskTextArea.Initialize(\"addTodoText\")";
+RDebugUtils.currentLine=25624584;
+ //BA.debugLineNum = 25624584;BA.debugLine="addTaskTextArea.Initialize(\"addTodoText\")";
 mostCurrent._addtasktextarea.Initialize(mostCurrent.activityBA,"addTodoText");
- //BA.debugLineNum = 443;BA.debugLine="addTaskTextArea.Text = oldTask";
+RDebugUtils.currentLine=25624585;
+ //BA.debugLineNum = 25624585;BA.debugLine="addTaskTextArea.Text = oldTask";
 mostCurrent._addtasktextarea.setText(BA.ObjectToCharSequence(_oldtask));
- //BA.debugLineNum = 444;BA.debugLine="Dim ctx As List";
+RDebugUtils.currentLine=25624586;
+ //BA.debugLineNum = 25624586;BA.debugLine="Dim ctx As List";
 _ctx = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 445;BA.debugLine="ctx.Initialize";
+RDebugUtils.currentLine=25624587;
+ //BA.debugLineNum = 25624587;BA.debugLine="ctx.Initialize";
 _ctx.Initialize();
- //BA.debugLineNum = 446;BA.debugLine="ctx.Add(Index)";
+RDebugUtils.currentLine=25624588;
+ //BA.debugLineNum = 25624588;BA.debugLine="ctx.Add(Index)";
 _ctx.Add((Object)(_index));
- //BA.debugLineNum = 447;BA.debugLine="ctx.Add(oldTask)";
+RDebugUtils.currentLine=25624589;
+ //BA.debugLineNum = 25624589;BA.debugLine="ctx.Add(oldTask)";
 _ctx.Add((Object)(_oldtask));
- //BA.debugLineNum = 448;BA.debugLine="addTaskTextArea.Tag = ctx";
+RDebugUtils.currentLine=25624590;
+ //BA.debugLineNum = 25624590;BA.debugLine="addTaskTextArea.Tag = ctx";
 mostCurrent._addtasktextarea.setTag((Object)(_ctx.getObject()));
- //BA.debugLineNum = 450;BA.debugLine="enterTaskBtn.Initialize(\"enterTaskBtn\")";
+RDebugUtils.currentLine=25624592;
+ //BA.debugLineNum = 25624592;BA.debugLine="enterTaskBtn.Initialize(\"enterTaskBtn\")";
 mostCurrent._entertaskbtn.Initialize(mostCurrent.activityBA,"enterTaskBtn");
- //BA.debugLineNum = 451;BA.debugLine="enterTaskBtn.Text = \"Rename task\"";
+RDebugUtils.currentLine=25624593;
+ //BA.debugLineNum = 25624593;BA.debugLine="enterTaskBtn.Text = \"Rename task\"";
 mostCurrent._entertaskbtn.setText(BA.ObjectToCharSequence("Rename task"));
- //BA.debugLineNum = 453;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, addTa";
+RDebugUtils.currentLine=25624595;
+ //BA.debugLineNum = 25624595;BA.debugLine="addTaskPanel.AddView(addTaskTextArea, 0, 0, addTa";
 mostCurrent._addtaskpanel.AddView((android.view.View)(mostCurrent._addtasktextarea.getObject()),(int) (0),(int) (0),mostCurrent._addtaskbtnpnl.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60)));
- //BA.debugLineNum = 454;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addT";
+RDebugUtils.currentLine=25624596;
+ //BA.debugLineNum = 25624596;BA.debugLine="addTaskPanel.AddView(enterTaskBtn, 0, 50dip, addT";
 mostCurrent._addtaskpanel.AddView((android.view.View)(mostCurrent._entertaskbtn.getObject()),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)),mostCurrent._addtaskbtnpnl.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
- //BA.debugLineNum = 456;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
+RDebugUtils.currentLine=25624598;
+ //BA.debugLineNum = 25624598;BA.debugLine="tasksList.Add(addTaskPanel, addTaskPanel)";
 mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._addtaskpanel.getObject())),(Object)(mostCurrent._addtaskpanel.getObject()));
- //BA.debugLineNum = 458;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25624600;
+ //BA.debugLineNum = 25624600;BA.debugLine="End Sub";
 return "";
 }
 public static String  _taskcheckbox_checkedchange(boolean _checked) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "taskcheckbox_checkedchange", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "taskcheckbox_checkedchange", new Object[] {_checked}));}
 anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _taskcheckbox = null;
 anywheresoftware.b4a.objects.LabelWrapper _tasklbl = null;
 String _key = "";
- //BA.debugLineNum = 460;BA.debugLine="Sub taskCheckbox_CheckedChange(Checked As Boolean)";
- //BA.debugLineNum = 462;BA.debugLine="Dim taskCheckbox As CheckBox = Sender";
+RDebugUtils.currentLine=25690112;
+ //BA.debugLineNum = 25690112;BA.debugLine="Sub taskCheckbox_CheckedChange(Checked As Boolean)";
+RDebugUtils.currentLine=25690114;
+ //BA.debugLineNum = 25690114;BA.debugLine="Dim taskCheckbox As CheckBox = Sender";
 _taskcheckbox = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
 _taskcheckbox = (anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper(), (android.widget.CheckBox)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
- //BA.debugLineNum = 463;BA.debugLine="Dim taskLBL As Label = taskCheckbox.Tag";
+RDebugUtils.currentLine=25690115;
+ //BA.debugLineNum = 25690115;BA.debugLine="Dim taskLBL As Label = taskCheckbox.Tag";
 _tasklbl = new anywheresoftware.b4a.objects.LabelWrapper();
 _tasklbl = (anywheresoftware.b4a.objects.LabelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.LabelWrapper(), (android.widget.TextView)(_taskcheckbox.getTag()));
- //BA.debugLineNum = 465;BA.debugLine="If Checked Then";
+RDebugUtils.currentLine=25690117;
+ //BA.debugLineNum = 25690117;BA.debugLine="If Checked Then";
 if (_checked) { 
- //BA.debugLineNum = 466;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
+RDebugUtils.currentLine=25690118;
+ //BA.debugLineNum = 25690118;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
 _tasklbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (0)));
  }else {
- //BA.debugLineNum = 468;BA.debugLine="taskLBL.TextColor = Colors.Black";
+RDebugUtils.currentLine=25690120;
+ //BA.debugLineNum = 25690120;BA.debugLine="taskLBL.TextColor = Colors.Black";
 _tasklbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
  };
- //BA.debugLineNum = 471;BA.debugLine="Dim key As String = \"checked_\" & currentList & \"_";
+RDebugUtils.currentLine=25690123;
+ //BA.debugLineNum = 25690123;BA.debugLine="Dim key As String = \"checked_\" & currentList & \"_";
 _key = "checked_"+mostCurrent._currentlist+"_"+_tasklbl.getText();
- //BA.debugLineNum = 472;BA.debugLine="kvs.Put(key, Checked)";
+RDebugUtils.currentLine=25690124;
+ //BA.debugLineNum = 25690124;BA.debugLine="kvs.Put(key, Checked)";
 _kvs._put(_key,(Object)(_checked));
- //BA.debugLineNum = 474;BA.debugLine="updateProgress";
+RDebugUtils.currentLine=25690126;
+ //BA.debugLineNum = 25690126;BA.debugLine="updateProgress";
 _updateprogress();
- //BA.debugLineNum = 476;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25690128;
+ //BA.debugLineNum = 25690128;BA.debugLine="End Sub";
 return "";
 }
 public static void  _taskslist_itemlongclick(int _index,Object _value) throws Exception{
+RDebugUtils.currentModule="todoactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "taskslist_itemlongclick", false))
+	 {Debug.delegate(mostCurrent.activityBA, "taskslist_itemlongclick", new Object[] {_index,_value}); return;}
 ResumableSub_tasksList_ItemLongClick rsub = new ResumableSub_tasksList_ItemLongClick(null,_index,_value);
 rsub.resume(processBA, null);
 }
@@ -1287,6 +1733,7 @@ anywheresoftware.b4a.objects.collections.List _savedtasks = null;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="todoactivity";
 
     while (true) {
         switch (state) {
@@ -1296,7 +1743,8 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 413;BA.debugLine="If Value = \"\" Then Return";
+RDebugUtils.currentLine=25559042;
+ //BA.debugLineNum = 25559042;BA.debugLine="If Value = \"\" Then Return";
 if (true) break;
 
 case 1:
@@ -1316,10 +1764,12 @@ case 6:
 //C
 this.state = 7;
 ;
- //BA.debugLineNum = 415;BA.debugLine="Msgbox2Async(\"Delete or rename this task?\", Value";
+RDebugUtils.currentLine=25559044;
+ //BA.debugLineNum = 25559044;BA.debugLine="Msgbox2Async(\"Delete or rename this task?\", Value";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Delete or rename this task?"),BA.ObjectToCharSequence(_value),"Rename","","Delete",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 416;BA.debugLine="Wait For Msgbox_Result (res As Int)";
-anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, null);
+RDebugUtils.currentLine=25559045;
+ //BA.debugLineNum = 25559045;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "todoactivity", "taskslist_itemlongclick"), null);
 this.state = 13;
 return;
 case 13:
@@ -1327,7 +1777,8 @@ case 13:
 this.state = 7;
 _res = (Integer) result[0];
 ;
- //BA.debugLineNum = 418;BA.debugLine="If res = DialogResponse.POSITIVE Then ' Rename";
+RDebugUtils.currentLine=25559047;
+ //BA.debugLineNum = 25559047;BA.debugLine="If res = DialogResponse.POSITIVE Then ' Rename";
 if (true) break;
 
 case 7:
@@ -1335,36 +1786,49 @@ case 7:
 this.state = 12;
 if (_res==anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE) { 
 this.state = 9;
-}else if(_res==anywheresoftware.b4a.keywords.Common.DialogResponse.NEGATIVE) { 
+}else 
+{RDebugUtils.currentLine=25559050;
+ //BA.debugLineNum = 25559050;BA.debugLine="Else If res = DialogResponse.NEGATIVE Then ' Dele";
+if (_res==anywheresoftware.b4a.keywords.Common.DialogResponse.NEGATIVE) { 
 this.state = 11;
-}if (true) break;
+}}
+if (true) break;
 
 case 9:
 //C
 this.state = 12;
- //BA.debugLineNum = 419;BA.debugLine="showRenameTaskPanel(Index, Value)";
+RDebugUtils.currentLine=25559048;
+ //BA.debugLineNum = 25559048;BA.debugLine="showRenameTaskPanel(Index, Value)";
 _showrenametaskpanel(_index,BA.ObjectToString(_value));
  if (true) break;
 
 case 11:
 //C
 this.state = 12;
- //BA.debugLineNum = 422;BA.debugLine="Dim key As String = \"list_\" & currentList";
+RDebugUtils.currentLine=25559051;
+ //BA.debugLineNum = 25559051;BA.debugLine="Dim key As String = \"list_\" & currentList";
 _key = "list_"+parent.mostCurrent._currentlist;
- //BA.debugLineNum = 423;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
+RDebugUtils.currentLine=25559052;
+ //BA.debugLineNum = 25559052;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
 _savedtasks = new anywheresoftware.b4a.objects.collections.List();
 _savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(parent._kvs._get(_key)));
- //BA.debugLineNum = 424;BA.debugLine="savedTasks.RemoveAt(Index)";
+RDebugUtils.currentLine=25559053;
+ //BA.debugLineNum = 25559053;BA.debugLine="savedTasks.RemoveAt(Index)";
 _savedtasks.RemoveAt(_index);
- //BA.debugLineNum = 425;BA.debugLine="kvs.Put(key, savedTasks)";
+RDebugUtils.currentLine=25559054;
+ //BA.debugLineNum = 25559054;BA.debugLine="kvs.Put(key, savedTasks)";
 parent._kvs._put(_key,(Object)(_savedtasks.getObject()));
- //BA.debugLineNum = 426;BA.debugLine="kvs.Remove(\"checked_\" & currentList & \"_\" & Valu";
+RDebugUtils.currentLine=25559055;
+ //BA.debugLineNum = 25559055;BA.debugLine="kvs.Remove(\"checked_\" & currentList & \"_\" & Valu";
 parent._kvs._remove("checked_"+parent.mostCurrent._currentlist+"_"+BA.ObjectToString(_value));
- //BA.debugLineNum = 427;BA.debugLine="tasksList.RemoveAt(Index)";
+RDebugUtils.currentLine=25559056;
+ //BA.debugLineNum = 25559056;BA.debugLine="tasksList.RemoveAt(Index)";
 parent.mostCurrent._taskslist._removeat(_index);
- //BA.debugLineNum = 428;BA.debugLine="updateProgress";
+RDebugUtils.currentLine=25559057;
+ //BA.debugLineNum = 25559057;BA.debugLine="updateProgress";
 _updateprogress();
- //BA.debugLineNum = 429;BA.debugLine="ToastMessageShow(\"Task deleted\", False)";
+RDebugUtils.currentLine=25559058;
+ //BA.debugLineNum = 25559058;BA.debugLine="ToastMessageShow(\"Task deleted\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Task deleted"),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -1372,139 +1836,12 @@ case 12:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 432;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25559061;
+ //BA.debugLineNum = 25559061;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
-}
-public static String  _taskslistui(String _newtask) throws Exception{
-anywheresoftware.b4a.objects.PanelWrapper _taskpnl = null;
-anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _taskcheckbox = null;
-anywheresoftware.b4a.objects.LabelWrapper _tasklbl = null;
-anywheresoftware.b4a.objects.PanelWrapper _divider = null;
-String _checkedkey = "";
-boolean _ischecked = false;
- //BA.debugLineNum = 478;BA.debugLine="Sub tasksListUI(newTask As String)";
- //BA.debugLineNum = 480;BA.debugLine="Dim taskPNL As Panel";
-_taskpnl = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 481;BA.debugLine="taskPNL.Initialize(\"taskPNL\")";
-_taskpnl.Initialize(mostCurrent.activityBA,"taskPNL");
- //BA.debugLineNum = 482;BA.debugLine="taskPNL.SetLayout(0, 0, 250dip, 60dip)";
-_taskpnl.SetLayout((int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (250)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60)));
- //BA.debugLineNum = 484;BA.debugLine="Dim taskCheckbox As CheckBox";
-_taskcheckbox = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
- //BA.debugLineNum = 485;BA.debugLine="taskCheckbox.Initialize(\"taskCheckbox\")";
-_taskcheckbox.Initialize(mostCurrent.activityBA,"taskCheckbox");
- //BA.debugLineNum = 486;BA.debugLine="taskPNL.AddView(taskCheckbox, 0dip, 10dip, 40dip,";
-_taskpnl.AddView((android.view.View)(_taskcheckbox.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
- //BA.debugLineNum = 488;BA.debugLine="Dim taskLBL As Label";
-_tasklbl = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 489;BA.debugLine="taskLBL.Initialize(\"taskLBL\")";
-_tasklbl.Initialize(mostCurrent.activityBA,"taskLBL");
- //BA.debugLineNum = 490;BA.debugLine="taskLBL.Text = newTask";
-_tasklbl.setText(BA.ObjectToCharSequence(_newtask));
- //BA.debugLineNum = 491;BA.debugLine="taskLBL.TextColor = Colors.Black";
-_tasklbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 492;BA.debugLine="taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Wi";
-_taskpnl.AddView((android.view.View)(_tasklbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20)),(int) (_taskpnl.getWidth()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (80))),_taskpnl.getHeight());
- //BA.debugLineNum = 494;BA.debugLine="Dim divider As Panel";
-_divider = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 495;BA.debugLine="divider.Initialize(\"line\")";
-_divider.Initialize(mostCurrent.activityBA,"line");
- //BA.debugLineNum = 496;BA.debugLine="divider.Color = Colors.ARGB(255, 60, 60, 60)";
-_divider.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (60),(int) (60),(int) (60)));
- //BA.debugLineNum = 497;BA.debugLine="taskPNL.AddView(divider, 0, 59dip, taskPNL.Width,";
-_taskpnl.AddView((android.view.View)(_divider.getObject()),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (59)),_taskpnl.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1)));
- //BA.debugLineNum = 499;BA.debugLine="taskCheckbox.Tag = taskLBL";
-_taskcheckbox.setTag((Object)(_tasklbl.getObject()));
- //BA.debugLineNum = 502;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentLi";
-_checkedkey = "checked_"+mostCurrent._currentlist+"_"+_newtask;
- //BA.debugLineNum = 503;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
-if (_kvs._containskey(_checkedkey)) { 
- //BA.debugLineNum = 504;BA.debugLine="Dim isChecked As Boolean = kvs.Get(checkedKey)";
-_ischecked = BA.ObjectToBoolean(_kvs._get(_checkedkey));
- //BA.debugLineNum = 505;BA.debugLine="taskCheckbox.Checked = isChecked";
-_taskcheckbox.setChecked(_ischecked);
- //BA.debugLineNum = 506;BA.debugLine="If isChecked Then";
-if (_ischecked) { 
- //BA.debugLineNum = 507;BA.debugLine="taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)";
-_tasklbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (50),(int) (0),(int) (0),(int) (0)));
- };
- };
- //BA.debugLineNum = 511;BA.debugLine="tasksList.Add(taskPNL, newTask)";
-mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_taskpnl.getObject())),(Object)(_newtask));
- //BA.debugLineNum = 513;BA.debugLine="End Sub";
-return "";
-}
-public static String  _updateprogress() throws Exception{
-String _key = "";
-anywheresoftware.b4a.objects.collections.List _savedtasks = null;
-int _totaltasks = 0;
-int _donetasks = 0;
-int _percentagetasks = 0;
-String _task = "";
-String _checkedkey = "";
- //BA.debugLineNum = 515;BA.debugLine="Sub updateProgress";
- //BA.debugLineNum = 517;BA.debugLine="If currentList = \"\" Then";
-if ((mostCurrent._currentlist).equals("")) { 
- //BA.debugLineNum = 518;BA.debugLine="progressNumber.Text = \"\"";
-mostCurrent._progressnumber.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 519;BA.debugLine="Return";
-if (true) return "";
- };
- //BA.debugLineNum = 522;BA.debugLine="Dim key As String = \"list_\" & currentList";
-_key = "list_"+mostCurrent._currentlist;
- //BA.debugLineNum = 523;BA.debugLine="If kvs.ContainsKey(key) = False Then";
-if (_kvs._containskey(_key)==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 524;BA.debugLine="progressNumber.Text = \"0 / 0 tasks done!\"";
-mostCurrent._progressnumber.setText(BA.ObjectToCharSequence("0 / 0 tasks done!"));
- //BA.debugLineNum = 525;BA.debugLine="progressPercent.Text = \"0%\"";
-mostCurrent._progresspercent.setText(BA.ObjectToCharSequence("0%"));
- //BA.debugLineNum = 526;BA.debugLine="progressBar.Progress = 0";
-mostCurrent._progressbar.setProgress((int) (0));
- //BA.debugLineNum = 527;BA.debugLine="Return";
-if (true) return "";
- };
- //BA.debugLineNum = 531;BA.debugLine="Dim savedTasks As List = kvs.Get(key)";
-_savedtasks = new anywheresoftware.b4a.objects.collections.List();
-_savedtasks = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_kvs._get(_key)));
- //BA.debugLineNum = 532;BA.debugLine="Dim totalTasks As Int = savedTasks.Size";
-_totaltasks = _savedtasks.getSize();
- //BA.debugLineNum = 533;BA.debugLine="Dim doneTasks As Int = 0";
-_donetasks = (int) (0);
- //BA.debugLineNum = 534;BA.debugLine="Dim percentageTasks As Int = 0";
-_percentagetasks = (int) (0);
- //BA.debugLineNum = 536;BA.debugLine="For Each task As String In savedTasks";
-{
-final anywheresoftware.b4a.BA.IterableList group16 = _savedtasks;
-final int groupLen16 = group16.getSize()
-;int index16 = 0;
-;
-for (; index16 < groupLen16;index16++){
-_task = BA.ObjectToString(group16.Get(index16));
- //BA.debugLineNum = 537;BA.debugLine="Dim checkedKey As String = \"checked_\" & currentL";
-_checkedkey = "checked_"+mostCurrent._currentlist+"_"+_task;
- //BA.debugLineNum = 538;BA.debugLine="If kvs.ContainsKey(checkedKey) Then";
-if (_kvs._containskey(_checkedkey)) { 
- //BA.debugLineNum = 539;BA.debugLine="If kvs.Get(checkedKey) = True Then";
-if ((_kvs._get(_checkedkey)).equals((Object)(anywheresoftware.b4a.keywords.Common.True))) { 
- //BA.debugLineNum = 540;BA.debugLine="doneTasks = doneTasks + 1";
-_donetasks = (int) (_donetasks+1);
- };
- };
- }
-};
- //BA.debugLineNum = 545;BA.debugLine="percentageTasks = (doneTasks / totalTasks) * 100";
-_percentagetasks = (int) ((_donetasks/(double)_totaltasks)*100);
- //BA.debugLineNum = 547;BA.debugLine="progressNumber.Text = doneTasks & \" / \" & totalTa";
-mostCurrent._progressnumber.setText(BA.ObjectToCharSequence(BA.NumberToString(_donetasks)+" / "+BA.NumberToString(_totaltasks)+" tasks done!"));
- //BA.debugLineNum = 548;BA.debugLine="progressPercent.Text = percentageTasks & \"%\"";
-mostCurrent._progresspercent.setText(BA.ObjectToCharSequence(BA.NumberToString(_percentagetasks)+"%"));
- //BA.debugLineNum = 549;BA.debugLine="progressBar.Progress = percentageTasks";
-mostCurrent._progressbar.setProgress(_percentagetasks);
- //BA.debugLineNum = 551;BA.debugLine="End Sub";
-return "";
 }
 }

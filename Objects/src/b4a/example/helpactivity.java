@@ -34,7 +34,7 @@ public class helpactivity extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.helpactivity");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.helpactivity");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,6 +335,15 @@ public class helpactivity extends Activity implements B4AActivity{
             
     }
 
+
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public static int _helppage = 0;
@@ -357,277 +366,351 @@ public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
-public b4a.example.calendaractivity _calendaractivity = null;
-public b4a.example.flashcardactivity _flashcardactivity = null;
-public b4a.example.todoactivity _todoactivity = null;
-public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.add_events_module _add_events_module = null;
-public b4a.example.schedule_module _schedule_module = null;
-public b4a.example.subdeck_module _subdeck_module = null;
-public b4a.example.card_module _card_module = null;
 public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
+public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.musicactivity _musicactivity = null;
 public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.navactivity _navactivity = null;
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
+public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.subdeck_module _subdeck_module = null;
+public b4a.example.todoactivity _todoactivity = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 28;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentModule="helpactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
+RDebugUtils.currentLine=3145728;
+ //BA.debugLineNum = 3145728;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=3145729;
+ //BA.debugLineNum = 3145729;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 29;BA.debugLine="Activity.LoadLayout(\"helpAct\")";
+RDebugUtils.currentLine=3145730;
+ //BA.debugLineNum = 3145730;BA.debugLine="Activity.LoadLayout(\"helpAct\")";
 mostCurrent._activity.LoadLayout("helpAct",mostCurrent.activityBA);
  }else {
- //BA.debugLineNum = 31;BA.debugLine="Activity.LoadLayout(\"helpActDark\")";
+RDebugUtils.currentLine=3145732;
+ //BA.debugLineNum = 3145732;BA.debugLine="Activity.LoadLayout(\"helpActDark\")";
 mostCurrent._activity.LoadLayout("helpActDark",mostCurrent.activityBA);
  };
- //BA.debugLineNum = 34;BA.debugLine="showHelpPage(0)";
+RDebugUtils.currentLine=3145735;
+ //BA.debugLineNum = 3145735;BA.debugLine="showHelpPage(0)";
 _showhelppage((int) (0));
- //BA.debugLineNum = 35;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 41;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 43;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 37;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 39;BA.debugLine="End Sub";
-return "";
-}
-public static String  _backbtn_click() throws Exception{
- //BA.debugLineNum = 139;BA.debugLine="Sub backBtn_Click";
- //BA.debugLineNum = 140;BA.debugLine="If helpPage > 0 Then";
-if (_helppage>0) { 
- //BA.debugLineNum = 141;BA.debugLine="showHelpPage(helpPage - 1)";
-_showhelppage((int) (_helppage-1));
- };
- //BA.debugLineNum = 143;BA.debugLine="End Sub";
-return "";
-}
-public static String  _closehelp_click() throws Exception{
- //BA.debugLineNum = 145;BA.debugLine="Sub closeHelp_Click";
- //BA.debugLineNum = 146;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 147;BA.debugLine="End Sub";
-return "";
-}
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 13;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 17;BA.debugLine="Private titleLbl As Label";
-mostCurrent._titlelbl = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 18;BA.debugLine="Private descriptionLbl As Label";
-mostCurrent._descriptionlbl = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Private backBtn As Button";
-mostCurrent._backbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 20;BA.debugLine="Private nextBtn As Button";
-mostCurrent._nextbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 21;BA.debugLine="Private helpimage As ImageView";
-mostCurrent._helpimage = new anywheresoftware.b4a.objects.ImageViewWrapper();
- //BA.debugLineNum = 22;BA.debugLine="Private iconButton1 As ImageView";
-mostCurrent._iconbutton1 = new anywheresoftware.b4a.objects.ImageViewWrapper();
- //BA.debugLineNum = 23;BA.debugLine="Private iconButton2 As ImageView";
-mostCurrent._iconbutton2 = new anywheresoftware.b4a.objects.ImageViewWrapper();
- //BA.debugLineNum = 24;BA.debugLine="Private iconButton3 As ImageView";
-mostCurrent._iconbutton3 = new anywheresoftware.b4a.objects.ImageViewWrapper();
- //BA.debugLineNum = 25;BA.debugLine="End Sub";
-return "";
-}
-public static String  _nextbtn_click() throws Exception{
- //BA.debugLineNum = 133;BA.debugLine="Sub nextBtn_Click";
- //BA.debugLineNum = 134;BA.debugLine="If helpPage < 10 Then";
-if (_helppage<10) { 
- //BA.debugLineNum = 135;BA.debugLine="showHelpPage(helpPage + 1)";
-_showhelppage((int) (_helppage+1));
- };
- //BA.debugLineNum = 137;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 9;BA.debugLine="Private xui As XUI";
-_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
- //BA.debugLineNum = 10;BA.debugLine="Dim helpPage As Int = 0";
-_helppage = (int) (0);
- //BA.debugLineNum = 11;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3145736;
+ //BA.debugLineNum = 3145736;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showhelppage(int _page) throws Exception{
- //BA.debugLineNum = 45;BA.debugLine="Sub showHelpPage(page As Int)";
- //BA.debugLineNum = 46;BA.debugLine="helpPage = page";
+RDebugUtils.currentModule="helpactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "showhelppage", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showhelppage", new Object[] {_page}));}
+RDebugUtils.currentLine=3342336;
+ //BA.debugLineNum = 3342336;BA.debugLine="Sub showHelpPage(page As Int)";
+RDebugUtils.currentLine=3342337;
+ //BA.debugLineNum = 3342337;BA.debugLine="helpPage = page";
 _helppage = _page;
- //BA.debugLineNum = 48;BA.debugLine="Select page";
+RDebugUtils.currentLine=3342339;
+ //BA.debugLineNum = 3342339;BA.debugLine="Select page";
 switch (_page) {
 case 0: {
- //BA.debugLineNum = 50;BA.debugLine="titleLbl.Text = \"Welcome\"";
+RDebugUtils.currentLine=3342341;
+ //BA.debugLineNum = 3342341;BA.debugLine="titleLbl.Text = \"Welcome\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Welcome"));
- //BA.debugLineNum = 51;BA.debugLine="descriptionLbl.Text = \"This app is tailor-made";
+RDebugUtils.currentLine=3342342;
+ //BA.debugLineNum = 3342342;BA.debugLine="descriptionLbl.Text = \"This app is tailor-made";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("This app is tailor-made for students—or anyone who wants to learn. It has all the features you'll need in order to learn effectively!"));
- //BA.debugLineNum = 52;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342343;
+ //BA.debugLineNum = 3342343;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 53;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342344;
+ //BA.debugLineNum = 3342344;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 54;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342345;
+ //BA.debugLineNum = 3342345;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 55;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342346;
+ //BA.debugLineNum = 3342346;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 1: {
- //BA.debugLineNum = 57;BA.debugLine="titleLbl.Text = \"Calendar\"";
+RDebugUtils.currentLine=3342348;
+ //BA.debugLineNum = 3342348;BA.debugLine="titleLbl.Text = \"Calendar\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Calendar"));
- //BA.debugLineNum = 58;BA.debugLine="descriptionLbl.Text = \"The calendar comes in th";
+RDebugUtils.currentLine=3342349;
+ //BA.debugLineNum = 3342349;BA.debugLine="descriptionLbl.Text = \"The calendar comes in th";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The calendar comes in three views to match however you like to plan. The Schedule view lets you see all your upcoming days at a glance, with major events and to-do items laid out on a timeline. The Day view shows you the full timeline for a single day, where you can add events, tasks, or birthdays, and color-coded backgrounds make each type of entry easy to tell apart. The Month view presents the classic calendar layout, complete with a month and year spinner to jump around quickly, a sneak peek of events on each day's cell, and neighboring dates filling in the empty cells so the grid always looks complete."));
- //BA.debugLineNum = 59;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342350;
+ //BA.debugLineNum = 3342350;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 60;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342351;
+ //BA.debugLineNum = 3342351;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 61;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342352;
+ //BA.debugLineNum = 3342352;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 62;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342353;
+ //BA.debugLineNum = 3342353;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 2: {
- //BA.debugLineNum = 64;BA.debugLine="titleLbl.Text = \"Clock\"";
+RDebugUtils.currentLine=3342355;
+ //BA.debugLineNum = 3342355;BA.debugLine="titleLbl.Text = \"Clock\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Clock"));
- //BA.debugLineNum = 65;BA.debugLine="descriptionLbl.Text = \"The clock keeps you on t";
+RDebugUtils.currentLine=3342356;
+ //BA.debugLineNum = 3342356;BA.debugLine="descriptionLbl.Text = \"The clock keeps you on t";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The clock keeps you on time and on task all in one place. A format button lets you switch between clock displays to whatever you prefer. It also comes with a built-in Pomodoro timer to help you stay focused and productive, and if the default durations don't work for you, you can freely adjust them to fit your own rhythm."));
- //BA.debugLineNum = 66;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342357;
+ //BA.debugLineNum = 3342357;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 67;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342358;
+ //BA.debugLineNum = 3342358;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 68;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342359;
+ //BA.debugLineNum = 3342359;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 69;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342360;
+ //BA.debugLineNum = 3342360;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"icon.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 3: {
- //BA.debugLineNum = 71;BA.debugLine="titleLbl.Text = \"Corkboard\"";
+RDebugUtils.currentLine=3342362;
+ //BA.debugLineNum = 3342362;BA.debugLine="titleLbl.Text = \"Corkboard\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Corkboard"));
- //BA.debugLineNum = 72;BA.debugLine="descriptionLbl.Text = \"The corkboard gives you";
+RDebugUtils.currentLine=3342363;
+ //BA.debugLineNum = 3342363;BA.debugLine="descriptionLbl.Text = \"The corkboard gives you";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The corkboard gives you a creative space to pin your thoughts and ideas. You can place sticky notes in a variety of colors to keep things visually organized and easy to tell apart. Images from your gallery can be attached right onto the board for extra context or inspiration. And when words and notes aren't enough, you can open up a drawable canvas with a selection of colored pens and sketch, doodle, or diagram anything you have in mind."));
- //BA.debugLineNum = 73;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342364;
+ //BA.debugLineNum = 3342364;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 74;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342365;
+ //BA.debugLineNum = 3342365;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 75;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342366;
+ //BA.debugLineNum = 3342366;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 76;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342367;
+ //BA.debugLineNum = 3342367;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 4: {
- //BA.debugLineNum = 78;BA.debugLine="titleLbl.Text = \"Flashcards\"";
+RDebugUtils.currentLine=3342369;
+ //BA.debugLineNum = 3342369;BA.debugLine="titleLbl.Text = \"Flashcards\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Flashcards"));
- //BA.debugLineNum = 79;BA.debugLine="descriptionLbl.Text = \"The flashcard feature or";
+RDebugUtils.currentLine=3342370;
+ //BA.debugLineNum = 3342370;BA.debugLine="descriptionLbl.Text = \"The flashcard feature or";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The flashcard feature organizes your cards into decks and subdecks, and you have the freedom to add, rename, or delete any of them — with a confirmation before anything gets deleted for good. Cards are automatically shuffled so every session feels fresh. A progress bar and percentage track how far you've made it through a deck, and when you're ready to dive back in, two buttons have you covered — restart the entire deck from scratch, or continue right where you left off."));
- //BA.debugLineNum = 80;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342371;
+ //BA.debugLineNum = 3342371;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 81;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342372;
+ //BA.debugLineNum = 3342372;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 82;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342373;
+ //BA.debugLineNum = 3342373;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 83;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342374;
+ //BA.debugLineNum = 3342374;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 5: {
- //BA.debugLineNum = 85;BA.debugLine="titleLbl.Text = \"Music Player\"";
+RDebugUtils.currentLine=3342376;
+ //BA.debugLineNum = 3342376;BA.debugLine="titleLbl.Text = \"Music Player\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Music Player"));
- //BA.debugLineNum = 86;BA.debugLine="descriptionLbl.Text = \"The music player plays t";
+RDebugUtils.currentLine=3342377;
+ //BA.debugLineNum = 3342377;BA.debugLine="descriptionLbl.Text = \"The music player plays t";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The music player plays the music on startup, meaning the app greets you with songs! Filled with chill, lo-fi tracks, you have the freedom to choose what track you want to play--either through the previous/next song buttons, or through the list of songs below where you can click on whatever chooses your fancy. There's a segment of the song that you want to listen to again or you want to zoom through a certain bit of a song? The seek bar presents itself to you where you can navigate within the music."));
- //BA.debugLineNum = 87;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342378;
+ //BA.debugLineNum = 3342378;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 88;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342379;
+ //BA.debugLineNum = 3342379;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 89;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342380;
+ //BA.debugLineNum = 3342380;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 90;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342381;
+ //BA.debugLineNum = 3342381;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 6: {
- //BA.debugLineNum = 92;BA.debugLine="titleLbl.Text = \"Notepad\"";
+RDebugUtils.currentLine=3342383;
+ //BA.debugLineNum = 3342383;BA.debugLine="titleLbl.Text = \"Notepad\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Notepad"));
- //BA.debugLineNum = 93;BA.debugLine="descriptionLbl.Text = \"The notepad keeps all yo";
+RDebugUtils.currentLine=3342384;
+ //BA.debugLineNum = 3342384;BA.debugLine="descriptionLbl.Text = \"The notepad keeps all yo";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The notepad keeps all your notes in one tidy list that's easy to browse through. A search bar lets you quickly find any note by its title or tags, so nothing ever gets lost in the pile. Adding a new note is simple — just give it a title, attach some tags to keep things organized, and write away to your heart's content."));
- //BA.debugLineNum = 94;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342385;
+ //BA.debugLineNum = 3342385;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 95;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342386;
+ //BA.debugLineNum = 3342386;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 96;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342387;
+ //BA.debugLineNum = 3342387;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 97;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342388;
+ //BA.debugLineNum = 3342388;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 7: {
- //BA.debugLineNum = 99;BA.debugLine="titleLbl.Text = \"To-do List\"";
+RDebugUtils.currentLine=3342390;
+ //BA.debugLineNum = 3342390;BA.debugLine="titleLbl.Text = \"To-do List\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("To-do List"));
- //BA.debugLineNum = 100;BA.debugLine="descriptionLbl.Text = \"The to-do list enables y";
+RDebugUtils.currentLine=3342391;
+ //BA.debugLineNum = 3342391;BA.debugLine="descriptionLbl.Text = \"The to-do list enables y";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The to-do list enables you to create lists with titles and, especially, tasks you want or are obligated to do. You are able to keep a lot of lists that you can easily navigate through the left side of your screen. The task section is a checklist of your tasks that you input, and once achieved, you can tick it off the list. The to-do list will also show you your progress in the list."));
- //BA.debugLineNum = 101;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342392;
+ //BA.debugLineNum = 3342392;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 102;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342393;
+ //BA.debugLineNum = 3342393;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 103;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342394;
+ //BA.debugLineNum = 3342394;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 104;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342395;
+ //BA.debugLineNum = 3342395;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 8: {
- //BA.debugLineNum = 106;BA.debugLine="titleLbl.Text = \"Themes\"";
+RDebugUtils.currentLine=3342397;
+ //BA.debugLineNum = 3342397;BA.debugLine="titleLbl.Text = \"Themes\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Themes"));
- //BA.debugLineNum = 107;BA.debugLine="descriptionLbl.Text = \"Themes let you put your";
+RDebugUtils.currentLine=3342398;
+ //BA.debugLineNum = 3342398;BA.debugLine="descriptionLbl.Text = \"Themes let you put your";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("Themes let you put your own fun twist on the app. Choose from a range of styles and color schemes to dress up your experience, making the space you study and plan in feel a little more like yours."));
- //BA.debugLineNum = 108;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342399;
+ //BA.debugLineNum = 3342399;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 109;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342400;
+ //BA.debugLineNum = 3342400;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 110;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342401;
+ //BA.debugLineNum = 3342401;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 111;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342402;
+ //BA.debugLineNum = 3342402;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 9: {
- //BA.debugLineNum = 113;BA.debugLine="titleLbl.Text = \"Lamp\"";
+RDebugUtils.currentLine=3342404;
+ //BA.debugLineNum = 3342404;BA.debugLine="titleLbl.Text = \"Lamp\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Lamp"));
- //BA.debugLineNum = 114;BA.debugLine="descriptionLbl.Text = \"The lamp gives you contr";
+RDebugUtils.currentLine=3342405;
+ //BA.debugLineNum = 3342405;BA.debugLine="descriptionLbl.Text = \"The lamp gives you contr";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("The lamp gives you control over how the app looks in any lighting. Switch effortlessly between light mode for bright environments and dark mode for low-light settings, so your eyes stay comfortable no matter when or where you're working."));
- //BA.debugLineNum = 115;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342406;
+ //BA.debugLineNum = 3342406;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 116;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342407;
+ //BA.debugLineNum = 3342407;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 117;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342408;
+ //BA.debugLineNum = 3342408;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 118;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342409;
+ //BA.debugLineNum = 3342409;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 10: {
- //BA.debugLineNum = 120;BA.debugLine="titleLbl.Text = \"Navigation\"";
+RDebugUtils.currentLine=3342411;
+ //BA.debugLineNum = 3342411;BA.debugLine="titleLbl.Text = \"Navigation\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Navigation"));
- //BA.debugLineNum = 121;BA.debugLine="descriptionLbl.Text = \"Navigation is your home";
+RDebugUtils.currentLine=3342412;
+ //BA.debugLineNum = 3342412;BA.debugLine="descriptionLbl.Text = \"Navigation is your home";
 mostCurrent._descriptionlbl.setText(BA.ObjectToCharSequence("Navigation is your home base for getting around the app. All of the app's features are laid out in one accessible spot, with clearly labeled and easy-to-read buttons so you can jump to wherever you need to be without any hassle."));
- //BA.debugLineNum = 122;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
+RDebugUtils.currentLine=3342413;
+ //BA.debugLineNum = 3342413;BA.debugLine="helpimage.Bitmap = xui.LoadBitmapResize(File.Di";
 mostCurrent._helpimage.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 123;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342414;
+ //BA.debugLineNum = 3342414;BA.debugLine="iconButton1.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 124;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342415;
+ //BA.debugLineNum = 3342415;BA.debugLine="iconButton2.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
- //BA.debugLineNum = 125;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
+RDebugUtils.currentLine=3342416;
+ //BA.debugLineNum = 3342416;BA.debugLine="iconButton3.Bitmap = xui.LoadBitmapResize(File.";
 mostCurrent._iconbutton3.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._helpimage.getWidth(),mostCurrent._helpimage.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 }
 ;
- //BA.debugLineNum = 129;BA.debugLine="backBtn.Enabled = (page > 0)";
+RDebugUtils.currentLine=3342420;
+ //BA.debugLineNum = 3342420;BA.debugLine="backBtn.Enabled = (page > 0)";
 mostCurrent._backbtn.setEnabled((_page>0));
- //BA.debugLineNum = 130;BA.debugLine="nextBtn.Enabled = (page < 10)";
+RDebugUtils.currentLine=3342421;
+ //BA.debugLineNum = 3342421;BA.debugLine="nextBtn.Enabled = (page < 10)";
 mostCurrent._nextbtn.setEnabled((_page<10));
- //BA.debugLineNum = 131;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3342422;
+ //BA.debugLineNum = 3342422;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+RDebugUtils.currentModule="helpactivity";
+RDebugUtils.currentLine=3276800;
+ //BA.debugLineNum = 3276800;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=3276802;
+ //BA.debugLineNum = 3276802;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+RDebugUtils.currentModule="helpactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
+RDebugUtils.currentLine=3211264;
+ //BA.debugLineNum = 3211264;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=3211266;
+ //BA.debugLineNum = 3211266;BA.debugLine="End Sub";
+return "";
+}
+public static String  _backbtn_click() throws Exception{
+RDebugUtils.currentModule="helpactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "backbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "backbtn_click", null));}
+RDebugUtils.currentLine=3473408;
+ //BA.debugLineNum = 3473408;BA.debugLine="Sub backBtn_Click";
+RDebugUtils.currentLine=3473409;
+ //BA.debugLineNum = 3473409;BA.debugLine="If helpPage > 0 Then";
+if (_helppage>0) { 
+RDebugUtils.currentLine=3473410;
+ //BA.debugLineNum = 3473410;BA.debugLine="showHelpPage(helpPage - 1)";
+_showhelppage((int) (_helppage-1));
+ };
+RDebugUtils.currentLine=3473412;
+ //BA.debugLineNum = 3473412;BA.debugLine="End Sub";
+return "";
+}
+public static String  _closehelp_click() throws Exception{
+RDebugUtils.currentModule="helpactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "closehelp_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "closehelp_click", null));}
+RDebugUtils.currentLine=3538944;
+ //BA.debugLineNum = 3538944;BA.debugLine="Sub closeHelp_Click";
+RDebugUtils.currentLine=3538945;
+ //BA.debugLineNum = 3538945;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+RDebugUtils.currentLine=3538946;
+ //BA.debugLineNum = 3538946;BA.debugLine="End Sub";
+return "";
+}
+public static String  _nextbtn_click() throws Exception{
+RDebugUtils.currentModule="helpactivity";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "nextbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "nextbtn_click", null));}
+RDebugUtils.currentLine=3407872;
+ //BA.debugLineNum = 3407872;BA.debugLine="Sub nextBtn_Click";
+RDebugUtils.currentLine=3407873;
+ //BA.debugLineNum = 3407873;BA.debugLine="If helpPage < 10 Then";
+if (_helppage<10) { 
+RDebugUtils.currentLine=3407874;
+ //BA.debugLineNum = 3407874;BA.debugLine="showHelpPage(helpPage + 1)";
+_showhelppage((int) (_helppage+1));
+ };
+RDebugUtils.currentLine=3407876;
+ //BA.debugLineNum = 3407876;BA.debugLine="End Sub";
 return "";
 }
 }

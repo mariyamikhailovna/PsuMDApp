@@ -23,6 +23,11 @@ Sub Globals
 	Private hsv As HorizontalScrollView
 	Private computerGif As B4XGifView 
 	Private dcomputerGif As B4XGifView
+	Private curtain As B4XGifView
+	Private dCurtain As B4XGifView
+	Private notesOpen As B4XGifView
+	Private noteBook As ImageView
+	Private dnotesOpen As B4XGifView
 	Private clockBtn As Button
 	Private clockLightBtn As Button
 	Private infoPnl As B4XView
@@ -66,6 +71,8 @@ Sub Activity_Create(FirstTime As Boolean)
 			darkModeLayout.LoadLayout("Layout6") 
 			computerGif.SetGif(File.DirAssets, "Comp3.GIF")
 			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
+			curtain.SetGif(File.DirAssets, "Curtain.GIF")
+			dCurtain.SetGif(File.DirAssets, "DCurtain.GIF")
 	End Select
 	
 	If Starter.darkMode Then
@@ -109,6 +116,8 @@ Sub Activity_Resume
 			darkModeLayout.LoadLayout("Layout6")
 			computerGif.SetGif(File.DirAssets, "Comp3.GIF")
 			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
+			curtain.SetGif(File.DirAssets, "Curtain.GIF")
+			dCurtain.SetGif(File.DirAssets, "DCurtain.GIF")
 	End Select
 End Sub
 
@@ -253,6 +262,52 @@ Private Sub calendar_Click
 End Sub
 
 Private Sub noteBook_Click
+	Select Starter.themeNumber
+		Case 0
+			CallSub(Me, "NotesTransition1")
+		Case 1
+			CallSub(Me, "NotesTransition2")
+		Case 2
+			CallSub(Me, "NotesTransition3")
+	End Select
+End Sub
+
+Sub NotesTransition1 As ResumableSub
+	notesOpen.SetGif(File.DirAssets, "Openbook.GIF")
+	notesOpen.mBase.Visible = True
+	dnotesOpen.SetGif(File.DirAssets, "Darkopenbook.GIF")
+	dnotesOpen.mBase.Visible = True
+	noteBook.Enabled = False
+	noteBook.Visible = False 'bat ayaw mawala T-T
+	
+	Sleep(1500)
+    
+	StartActivity(noteActivity)
+End Sub
+
+Sub NotesTransition2 As ResumableSub
+	notesOpen.SetGif(File.DirAssets, "OpenNotes2.GIF")
+	notesOpen.mBase.Visible = True
+	dnotesOpen.SetGif(File.DirAssets, "DOpenNotes2.GIF")
+	dnotesOpen.mBase.Visible = True
+	noteBook.Enabled = False
+	noteBook.Visible = False 'bat ayaw mawala T-T
+	
+	Sleep(1500)
+    
+	StartActivity(noteActivity)
+End Sub
+
+Sub NotesTransition3 As ResumableSub
+	notesOpen.SetGif(File.DirAssets, "OpenNotes3.GIF")
+	notesOpen.mBase.Visible = True
+	dnotesOpen.SetGif(File.DirAssets, "DOpenNotes3.GIF")
+	dnotesOpen.mBase.Visible = True
+	noteBook.Enabled = False
+	noteBook.Visible = False 'bat ayaw mawala T-T
+	
+	Sleep(1500)
+    
 	StartActivity(noteActivity)
 End Sub
 

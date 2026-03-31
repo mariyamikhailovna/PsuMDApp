@@ -34,7 +34,7 @@ public class subdeck_module extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.subdeck_module");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.subdeck_module");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,6 +335,15 @@ public class subdeck_module extends Activity implements B4AActivity{
             
     }
 
+
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static String _selectedsubdeck = "";
 public anywheresoftware.b4a.objects.ButtonWrapper _addbtn = null;
@@ -364,38 +373,37 @@ public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
-public b4a.example.calendaractivity _calendaractivity = null;
-public b4a.example.flashcardactivity _flashcardactivity = null;
-public b4a.example.todoactivity _todoactivity = null;
-public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.add_events_module _add_events_module = null;
-public b4a.example.schedule_module _schedule_module = null;
-public b4a.example.card_module _card_module = null;
 public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
+public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.musicactivity _musicactivity = null;
 public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.navactivity _navactivity = null;
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
+public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.todoactivity _todoactivity = null;
 public static String  _activerecall_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activerecall_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activerecall_click", null));}
 anywheresoftware.b4a.objects.collections.Map _chosendeck = null;
 String _deckname = "";
 anywheresoftware.b4a.objects.collections.List _flashacards = null;
- //BA.debugLineNum = 153;BA.debugLine="Private Sub activerecall_Click";
- //BA.debugLineNum = 156;BA.debugLine="number_of_cards = 0";
+RDebugUtils.currentLine=23855104;
+ //BA.debugLineNum = 23855104;BA.debugLine="Private Sub activerecall_Click";
+RDebugUtils.currentLine=23855107;
+ //BA.debugLineNum = 23855107;BA.debugLine="number_of_cards = 0";
 _number_of_cards = (int) (0);
- //BA.debugLineNum = 158;BA.debugLine="Dim chosendeck As Map = alldecks.Get(selecteddeck";
+RDebugUtils.currentLine=23855109;
+ //BA.debugLineNum = 23855109;BA.debugLine="Dim chosendeck As Map = alldecks.Get(selecteddeck";
 _chosendeck = new anywheresoftware.b4a.objects.collections.Map();
 _chosendeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._alldecks.Get((Object)(mostCurrent._selecteddeck))));
- //BA.debugLineNum = 160;BA.debugLine="For Each deckName As String In chosendeck.keys";
+RDebugUtils.currentLine=23855111;
+ //BA.debugLineNum = 23855111;BA.debugLine="For Each deckName As String In chosendeck.keys";
 {
 final anywheresoftware.b4a.BA.IterableList group3 = _chosendeck.Keys();
 final int groupLen3 = group3.getSize()
@@ -403,357 +411,86 @@ final int groupLen3 = group3.getSize()
 ;
 for (; index3 < groupLen3;index3++){
 _deckname = BA.ObjectToString(group3.Get(index3));
- //BA.debugLineNum = 161;BA.debugLine="Dim flashacards As List = chosendeck.Get(deckNam";
+RDebugUtils.currentLine=23855112;
+ //BA.debugLineNum = 23855112;BA.debugLine="Dim flashacards As List = chosendeck.Get(deckNam";
 _flashacards = new anywheresoftware.b4a.objects.collections.List();
 _flashacards = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_chosendeck.Get((Object)(_deckname))));
- //BA.debugLineNum = 162;BA.debugLine="number_of_cards = number_of_cards + flashacards.";
+RDebugUtils.currentLine=23855113;
+ //BA.debugLineNum = 23855113;BA.debugLine="number_of_cards = number_of_cards + flashacards.";
 _number_of_cards = (int) (_number_of_cards+_flashacards.getSize());
  }
 };
- //BA.debugLineNum = 165;BA.debugLine="AR_confirmationpanel.Visible = True";
+RDebugUtils.currentLine=23855116;
+ //BA.debugLineNum = 23855116;BA.debugLine="AR_confirmationpanel.Visible = True";
 mostCurrent._ar_confirmationpanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 166;BA.debugLine="confirmlabel.Text = \"You got \" & number_of_cards";
+RDebugUtils.currentLine=23855117;
+ //BA.debugLineNum = 23855117;BA.debugLine="confirmlabel.Text = \"You got \" & number_of_cards";
 mostCurrent._confirmlabel.setText(BA.ObjectToCharSequence("You got "+BA.NumberToString(_number_of_cards)+" cards"));
- //BA.debugLineNum = 167;BA.debugLine="End Sub";
+RDebugUtils.currentLine=23855118;
+ //BA.debugLineNum = 23855118;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 int _radius = 0;
 anywheresoftware.b4a.objects.drawable.ColorDrawable _cd = null;
- //BA.debugLineNum = 36;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 37;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentLine=23134208;
+ //BA.debugLineNum = 23134208;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=23134209;
+ //BA.debugLineNum = 23134209;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 38;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayout\")";
+RDebugUtils.currentLine=23134210;
+ //BA.debugLineNum = 23134210;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayout\")";
 mostCurrent._activity.LoadLayout("Subdeck_ModuleLayout",mostCurrent.activityBA);
  }else {
- //BA.debugLineNum = 40;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayoutDark\")";
+RDebugUtils.currentLine=23134212;
+ //BA.debugLineNum = 23134212;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayoutDark\")";
 mostCurrent._activity.LoadLayout("Subdeck_ModuleLayoutDark",mostCurrent.activityBA);
  };
- //BA.debugLineNum = 44;BA.debugLine="Dim radius As Int = Addbtn.Width/2";
+RDebugUtils.currentLine=23134216;
+ //BA.debugLineNum = 23134216;BA.debugLine="Dim radius As Int = Addbtn.Width/2";
 _radius = (int) (mostCurrent._addbtn.getWidth()/(double)2);
- //BA.debugLineNum = 45;BA.debugLine="Dim cd As ColorDrawable";
+RDebugUtils.currentLine=23134217;
+ //BA.debugLineNum = 23134217;BA.debugLine="Dim cd As ColorDrawable";
 _cd = new anywheresoftware.b4a.objects.drawable.ColorDrawable();
- //BA.debugLineNum = 46;BA.debugLine="cd.Initialize(Colors.Gray, radius)";
+RDebugUtils.currentLine=23134218;
+ //BA.debugLineNum = 23134218;BA.debugLine="cd.Initialize(Colors.Gray, radius)";
 _cd.Initialize(anywheresoftware.b4a.keywords.Common.Colors.Gray,_radius);
- //BA.debugLineNum = 47;BA.debugLine="Addbtn.Background = cd";
+RDebugUtils.currentLine=23134219;
+ //BA.debugLineNum = 23134219;BA.debugLine="Addbtn.Background = cd";
 mostCurrent._addbtn.setBackground((android.graphics.drawable.Drawable)(_cd.getObject()));
- //BA.debugLineNum = 50;BA.debugLine="decknamelabel.Text = selecteddeck";
+RDebugUtils.currentLine=23134222;
+ //BA.debugLineNum = 23134222;BA.debugLine="decknamelabel.Text = selecteddeck";
 mostCurrent._decknamelabel.setText(BA.ObjectToCharSequence(mostCurrent._selecteddeck));
- //BA.debugLineNum = 52;BA.debugLine="LVSubdecks.SingleLineLayout.Label.textColor = Col";
+RDebugUtils.currentLine=23134224;
+ //BA.debugLineNum = 23134224;BA.debugLine="LVSubdecks.SingleLineLayout.Label.textColor = Col";
 mostCurrent._lvsubdecks.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- //BA.debugLineNum = 54;BA.debugLine="Refresh";
+RDebugUtils.currentLine=23134226;
+ //BA.debugLineNum = 23134226;BA.debugLine="Refresh";
 _refresh();
- //BA.debugLineNum = 56;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 81;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 83;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 73;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 74;BA.debugLine="If all_active_recall.praise = True Then";
-if (mostCurrent._all_active_recall._praise /*boolean*/ ==anywheresoftware.b4a.keywords.Common.True) { 
- //BA.debugLineNum = 75;BA.debugLine="all_active_recall.praise = False";
-mostCurrent._all_active_recall._praise /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 76;BA.debugLine="MsgboxAsync(\"You Finished Your Deck\", \"Congratul";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("You Finished Your Deck"),BA.ObjectToCharSequence("Congratulations"),processBA);
- };
- //BA.debugLineNum = 78;BA.debugLine="AR_confirmationpanel.Visible = False";
-mostCurrent._ar_confirmationpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 79;BA.debugLine="End Sub";
-return "";
-}
-public static String  _addbtn_click() throws Exception{
- //BA.debugLineNum = 86;BA.debugLine="Private Sub Addbtn_Click";
- //BA.debugLineNum = 88;BA.debugLine="If addpanel2.Visible = False Then";
-if (mostCurrent._addpanel2.getVisible()==anywheresoftware.b4a.keywords.Common.False) { 
- //BA.debugLineNum = 89;BA.debugLine="addpanel2.Visible = True";
-mostCurrent._addpanel2.setVisible(anywheresoftware.b4a.keywords.Common.True);
- }else {
- //BA.debugLineNum = 91;BA.debugLine="addpanel2.Visible = False";
-mostCurrent._addpanel2.setVisible(anywheresoftware.b4a.keywords.Common.False);
- };
- //BA.debugLineNum = 94;BA.debugLine="End Sub";
-return "";
-}
-public static String  _addcard_click() throws Exception{
-anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
- //BA.debugLineNum = 96;BA.debugLine="Private Sub addcard_Click";
- //BA.debugLineNum = 98;BA.debugLine="Dim tappeddeck As Map = FlashcardActivity.deck.Ge";
-_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
-_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._flashcardactivity._selecteddeck /*String*/ ))));
- //BA.debugLineNum = 99;BA.debugLine="If tappeddeck.Size = 0 Then";
-if (_tappeddeck.getSize()==0) { 
- //BA.debugLineNum = 100;BA.debugLine="MsgboxAsync(\"Create A Sub-Deck first\", \"Error\")";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Create A Sub-Deck first"),BA.ObjectToCharSequence("Error"),processBA);
- //BA.debugLineNum = 101;BA.debugLine="Return";
-if (true) return "";
- };
- //BA.debugLineNum = 103;BA.debugLine="StartActivity(Add_card_module)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._add_card_module.getObject()));
- //BA.debugLineNum = 104;BA.debugLine="End Sub";
-return "";
-}
-public static String  _addsub_click() throws Exception{
- //BA.debugLineNum = 106;BA.debugLine="Private Sub addsub_Click";
- //BA.debugLineNum = 108;BA.debugLine="addpanel.Visible = True";
-mostCurrent._addpanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 109;BA.debugLine="End Sub";
-return "";
-}
-public static String  _backbtn_click() throws Exception{
- //BA.debugLineNum = 190;BA.debugLine="Private Sub backbtn_Click";
- //BA.debugLineNum = 191;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 192;BA.debugLine="End Sub";
-return "";
-}
-public static String  _cancel_click() throws Exception{
- //BA.debugLineNum = 111;BA.debugLine="Private Sub cancel_Click";
- //BA.debugLineNum = 113;BA.debugLine="addpanel.Visible = False";
-mostCurrent._addpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 114;BA.debugLine="et1.Text = \"\"";
-mostCurrent._et1.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 115;BA.debugLine="End Sub";
-return "";
-}
-public static String  _cancelalter_click() throws Exception{
- //BA.debugLineNum = 204;BA.debugLine="Private Sub cancelalter_Click";
- //BA.debugLineNum = 205;BA.debugLine="alterpanel.Visible = False";
-mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 206;BA.debugLine="End Sub";
-return "";
-}
-public static String  _cancelconfirmation_click() throws Exception{
- //BA.debugLineNum = 178;BA.debugLine="Private Sub cancelconfirmation_Click";
- //BA.debugLineNum = 180;BA.debugLine="AR_confirmationpanel.Visible = False";
-mostCurrent._ar_confirmationpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 181;BA.debugLine="End Sub";
-return "";
-}
-public static String  _canceldelete_click() throws Exception{
- //BA.debugLineNum = 252;BA.debugLine="Private Sub canceldelete_Click";
- //BA.debugLineNum = 253;BA.debugLine="deleteconfirmation.Visible = False";
-mostCurrent._deleteconfirmation.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 254;BA.debugLine="End Sub";
-return "";
-}
-public static String  _cancelrename_click() throws Exception{
- //BA.debugLineNum = 213;BA.debugLine="Private Sub cancelrename_Click";
- //BA.debugLineNum = 214;BA.debugLine="renamepanel.Visible = False";
-mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 215;BA.debugLine="renameet.Text = \"\"";
-mostCurrent._renameet.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 216;BA.debugLine="End Sub";
-return "";
-}
-public static String  _confirmdelete_click() throws Exception{
-anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
- //BA.debugLineNum = 244;BA.debugLine="Private Sub confirmdelete_Click";
- //BA.debugLineNum = 245;BA.debugLine="Dim tappeddeck As Map = FlashcardActivity.deck.ge";
-_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
-_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._flashcardactivity._selecteddeck /*String*/ ))));
- //BA.debugLineNum = 246;BA.debugLine="tappeddeck.Remove(selectedsubdeck)";
-_tappeddeck.Remove((Object)(_selectedsubdeck));
- //BA.debugLineNum = 247;BA.debugLine="SaveDecks";
-_savedecks();
- //BA.debugLineNum = 248;BA.debugLine="Refresh";
-_refresh();
- //BA.debugLineNum = 249;BA.debugLine="deleteconfirmation.Visible = False";
-mostCurrent._deleteconfirmation.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 250;BA.debugLine="End Sub";
-return "";
-}
-public static String  _confirmrename_click() throws Exception{
-anywheresoftware.b4a.objects.collections.List _getsubdeck = null;
-anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
-String _names = "";
- //BA.debugLineNum = 218;BA.debugLine="Private Sub confirmrename_Click";
- //BA.debugLineNum = 220;BA.debugLine="Dim getsubdeck As List";
-_getsubdeck = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 221;BA.debugLine="Dim tappeddeck As Map = FlashcardActivity.deck.Ge";
-_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
-_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._flashcardactivity._selecteddeck /*String*/ ))));
- //BA.debugLineNum = 222;BA.debugLine="If renameet.Text = \"\" Then";
-if ((mostCurrent._renameet.getText()).equals("")) { 
- //BA.debugLineNum = 223;BA.debugLine="MsgboxAsync(\"New Name must have a name\", \"Error\"";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("New Name must have a name"),BA.ObjectToCharSequence("Error"),processBA);
- //BA.debugLineNum = 224;BA.debugLine="Return";
-if (true) return "";
- };
- //BA.debugLineNum = 226;BA.debugLine="For Each names As String In tappeddeck.keys";
-{
-final anywheresoftware.b4a.BA.IterableList group7 = _tappeddeck.Keys();
-final int groupLen7 = group7.getSize()
-;int index7 = 0;
-;
-for (; index7 < groupLen7;index7++){
-_names = BA.ObjectToString(group7.Get(index7));
- //BA.debugLineNum = 227;BA.debugLine="getsubdeck = tappeddeck.Get(selectedsubdeck)";
-_getsubdeck = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_tappeddeck.Get((Object)(_selectedsubdeck))));
- //BA.debugLineNum = 228;BA.debugLine="If renameet.Text = names Then";
-if ((mostCurrent._renameet.getText()).equals(_names)) { 
- //BA.debugLineNum = 229;BA.debugLine="MsgboxAsync(\"Sub Deck Name Already Exist\", \"Err";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sub Deck Name Already Exist"),BA.ObjectToCharSequence("Error"),processBA);
- //BA.debugLineNum = 230;BA.debugLine="Return";
-if (true) return "";
- };
- }
-};
- //BA.debugLineNum = 233;BA.debugLine="tappeddeck.Remove(selectedsubdeck)";
-_tappeddeck.Remove((Object)(_selectedsubdeck));
- //BA.debugLineNum = 234;BA.debugLine="tappeddeck.Put(renameet.Text, getsubdeck)";
-_tappeddeck.Put((Object)(mostCurrent._renameet.getText()),(Object)(_getsubdeck.getObject()));
- //BA.debugLineNum = 235;BA.debugLine="renameet.text = \"\"";
-mostCurrent._renameet.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 236;BA.debugLine="SaveDecks";
-_savedecks();
- //BA.debugLineNum = 237;BA.debugLine="Refresh";
-_refresh();
- //BA.debugLineNum = 238;BA.debugLine="renamepanel.Visible = False";
-mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 239;BA.debugLine="renamepanel.Visible = False";
-mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 242;BA.debugLine="End Sub";
-return "";
-}
-public static String  _create_click() throws Exception{
-anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
-anywheresoftware.b4a.objects.collections.List _flashcards = null;
-Object _name = null;
- //BA.debugLineNum = 117;BA.debugLine="Private Sub create_Click";
- //BA.debugLineNum = 120;BA.debugLine="Dim tappeddeck As Map = alldecks.Get(selecteddeck";
-_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
-_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._alldecks.Get((Object)(mostCurrent._selecteddeck))));
- //BA.debugLineNum = 121;BA.debugLine="Dim flashcards As List";
-_flashcards = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 123;BA.debugLine="flashcards.initialize";
-_flashcards.Initialize();
- //BA.debugLineNum = 126;BA.debugLine="For Each name In tappeddeck.Keys";
-{
-final anywheresoftware.b4a.BA.IterableList group4 = _tappeddeck.Keys();
-final int groupLen4 = group4.getSize()
-;int index4 = 0;
-;
-for (; index4 < groupLen4;index4++){
-_name = group4.Get(index4);
- //BA.debugLineNum = 127;BA.debugLine="If et1.Text = name Then";
-if ((mostCurrent._et1.getText()).equals(BA.ObjectToString(_name))) { 
- //BA.debugLineNum = 128;BA.debugLine="MsgboxAsync(\"Sub-Deck Already Exist\", \"Error\")";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sub-Deck Already Exist"),BA.ObjectToCharSequence("Error"),processBA);
- //BA.debugLineNum = 129;BA.debugLine="Return";
-if (true) return "";
- };
- }
-};
- //BA.debugLineNum = 134;BA.debugLine="If et1.Text = \"\" Then";
-if ((mostCurrent._et1.getText()).equals("")) { 
- //BA.debugLineNum = 135;BA.debugLine="MsgboxAsync(\"Sub-Deck must have a name\", \"Error\"";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sub-Deck must have a name"),BA.ObjectToCharSequence("Error"),processBA);
- }else {
- //BA.debugLineNum = 138;BA.debugLine="addpanel.Visible = False";
-mostCurrent._addpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 139;BA.debugLine="LVSubdecks.AddSingleLine(et1.Text)";
-mostCurrent._lvsubdecks.AddSingleLine(BA.ObjectToCharSequence(mostCurrent._et1.getText()));
- //BA.debugLineNum = 140;BA.debugLine="tappeddeck.Put(et1.Text, flashcards)";
-_tappeddeck.Put((Object)(mostCurrent._et1.getText()),(Object)(_flashcards.getObject()));
- //BA.debugLineNum = 141;BA.debugLine="SaveDecks";
-_savedecks();
- //BA.debugLineNum = 143;BA.debugLine="et1.Text = \"\"";
-mostCurrent._et1.setText(BA.ObjectToCharSequence(""));
- };
- //BA.debugLineNum = 146;BA.debugLine="End Sub";
-return "";
-}
-public static String  _deletesubdeck_click() throws Exception{
- //BA.debugLineNum = 194;BA.debugLine="Private Sub deletesubdeck_Click";
- //BA.debugLineNum = 195;BA.debugLine="alterpanel.Visible = False";
-mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 196;BA.debugLine="deleteconfirmation.Visible = True";
-mostCurrent._deleteconfirmation.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 197;BA.debugLine="End Sub";
-return "";
-}
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 14;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 19;BA.debugLine="Private Addbtn As Button";
-mostCurrent._addbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 20;BA.debugLine="Private addpanel2 As Panel";
-mostCurrent._addpanel2 = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 21;BA.debugLine="Dim alldecks As Map = FlashcardActivity.deck 'tak";
-mostCurrent._alldecks = new anywheresoftware.b4a.objects.collections.Map();
-mostCurrent._alldecks = mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ ;
- //BA.debugLineNum = 22;BA.debugLine="Dim selecteddeck As String = FlashcardActivity.se";
-mostCurrent._selecteddeck = mostCurrent._flashcardactivity._selecteddeck /*String*/ ;
- //BA.debugLineNum = 23;BA.debugLine="Private LVSubdecks As ListView";
-mostCurrent._lvsubdecks = new anywheresoftware.b4a.objects.ListViewWrapper();
- //BA.debugLineNum = 24;BA.debugLine="Private decknamelabel As Label";
-mostCurrent._decknamelabel = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 25;BA.debugLine="Private addpanel As Panel";
-mostCurrent._addpanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 26;BA.debugLine="Private et1 As EditText";
-mostCurrent._et1 = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 27;BA.debugLine="Private AR_confirmationpanel As Panel";
-mostCurrent._ar_confirmationpanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 28;BA.debugLine="Private confirmlabel As Label";
-mostCurrent._confirmlabel = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 29;BA.debugLine="Dim number_of_cards As Int = 0 'to count the numb";
-_number_of_cards = (int) (0);
- //BA.debugLineNum = 30;BA.debugLine="Private alterpanel As Panel";
-mostCurrent._alterpanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 31;BA.debugLine="Private renamepanel As Panel";
-mostCurrent._renamepanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 32;BA.debugLine="Private renameet As EditText";
-mostCurrent._renameet = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 33;BA.debugLine="Private deleteconfirmation As Panel";
-mostCurrent._deleteconfirmation = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 34;BA.debugLine="End Sub";
-return "";
-}
-public static String  _goback_click() throws Exception{
- //BA.debugLineNum = 148;BA.debugLine="Private Sub goback_Click";
- //BA.debugLineNum = 150;BA.debugLine="Activity.Finish";
-mostCurrent._activity.Finish();
- //BA.debugLineNum = 151;BA.debugLine="End Sub";
-return "";
-}
-public static String  _lvsubdecks_itemclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 183;BA.debugLine="Private Sub LVSubdecks_ItemClick (Position As Int,";
- //BA.debugLineNum = 185;BA.debugLine="selectedsubdeck = Value 'gives the chsoen subdeck";
-_selectedsubdeck = BA.ObjectToString(_value);
- //BA.debugLineNum = 187;BA.debugLine="StartActivity(Card_Module)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._card_module.getObject()));
- //BA.debugLineNum = 188;BA.debugLine="End Sub";
-return "";
-}
-public static String  _lvsubdecks_itemlongclick(int _position,Object _value) throws Exception{
- //BA.debugLineNum = 208;BA.debugLine="Private Sub LVSubdecks_ItemLongClick (Position As";
- //BA.debugLineNum = 209;BA.debugLine="alterpanel.Visible = True";
-mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 210;BA.debugLine="selectedsubdeck = Value";
-_selectedsubdeck = BA.ObjectToString(_value);
- //BA.debugLineNum = 211;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 11;BA.debugLine="Dim selectedsubdeck As String 'chosen subdeck";
-_selectedsubdeck = "";
- //BA.debugLineNum = 12;BA.debugLine="End Sub";
+RDebugUtils.currentLine=23134228;
+ //BA.debugLineNum = 23134228;BA.debugLine="End Sub";
 return "";
 }
 public static String  _refresh() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "refresh", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "refresh", null));}
 anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
 String _deckname = "";
- //BA.debugLineNum = 62;BA.debugLine="Sub Refresh";
- //BA.debugLineNum = 63;BA.debugLine="LVSubdecks.clear";
+RDebugUtils.currentLine=23265280;
+ //BA.debugLineNum = 23265280;BA.debugLine="Sub Refresh";
+RDebugUtils.currentLine=23265281;
+ //BA.debugLineNum = 23265281;BA.debugLine="LVSubdecks.clear";
 mostCurrent._lvsubdecks.Clear();
- //BA.debugLineNum = 65;BA.debugLine="Dim tappeddeck As Map = alldecks.Get(selecteddeck";
+RDebugUtils.currentLine=23265283;
+ //BA.debugLineNum = 23265283;BA.debugLine="Dim tappeddeck As Map = alldecks.Get(selecteddeck";
 _tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
 _tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._alldecks.Get((Object)(mostCurrent._selecteddeck))));
- //BA.debugLineNum = 68;BA.debugLine="For Each deckName As String In tappeddeck.keys";
+RDebugUtils.currentLine=23265286;
+ //BA.debugLineNum = 23265286;BA.debugLine="For Each deckName As String In tappeddeck.keys";
 {
 final anywheresoftware.b4a.BA.IterableList group3 = _tappeddeck.Keys();
 final int groupLen3 = group3.getSize()
@@ -761,41 +498,472 @@ final int groupLen3 = group3.getSize()
 ;
 for (; index3 < groupLen3;index3++){
 _deckname = BA.ObjectToString(group3.Get(index3));
- //BA.debugLineNum = 69;BA.debugLine="LVSubdecks.AddSingleLine(deckName)";
+RDebugUtils.currentLine=23265287;
+ //BA.debugLineNum = 23265287;BA.debugLine="LVSubdecks.AddSingleLine(deckName)";
 mostCurrent._lvsubdecks.AddSingleLine(BA.ObjectToCharSequence(_deckname));
  }
 };
- //BA.debugLineNum = 71;BA.debugLine="End Sub";
+RDebugUtils.currentLine=23265289;
+ //BA.debugLineNum = 23265289;BA.debugLine="End Sub";
 return "";
 }
-public static String  _renamesubdeck_click() throws Exception{
- //BA.debugLineNum = 199;BA.debugLine="Private Sub renamesubdeck_Click";
- //BA.debugLineNum = 200;BA.debugLine="alterpanel.Visible = False";
+public static String  _activity_pause(boolean _userclosed) throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+RDebugUtils.currentLine=23396352;
+ //BA.debugLineNum = 23396352;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=23396354;
+ //BA.debugLineNum = 23396354;BA.debugLine="End Sub";
+return "";
+}
+public static String  _activity_resume() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
+RDebugUtils.currentLine=23330816;
+ //BA.debugLineNum = 23330816;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=23330817;
+ //BA.debugLineNum = 23330817;BA.debugLine="If all_active_recall.praise = True Then";
+if (mostCurrent._all_active_recall._praise /*boolean*/ ==anywheresoftware.b4a.keywords.Common.True) { 
+RDebugUtils.currentLine=23330818;
+ //BA.debugLineNum = 23330818;BA.debugLine="all_active_recall.praise = False";
+mostCurrent._all_active_recall._praise /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
+RDebugUtils.currentLine=23330819;
+ //BA.debugLineNum = 23330819;BA.debugLine="MsgboxAsync(\"You Finished Your Deck\", \"Congratul";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("You Finished Your Deck"),BA.ObjectToCharSequence("Congratulations"),processBA);
+ };
+RDebugUtils.currentLine=23330821;
+ //BA.debugLineNum = 23330821;BA.debugLine="AR_confirmationpanel.Visible = False";
+mostCurrent._ar_confirmationpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=23330822;
+ //BA.debugLineNum = 23330822;BA.debugLine="End Sub";
+return "";
+}
+public static String  _addbtn_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "addbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addbtn_click", null));}
+RDebugUtils.currentLine=23461888;
+ //BA.debugLineNum = 23461888;BA.debugLine="Private Sub Addbtn_Click";
+RDebugUtils.currentLine=23461890;
+ //BA.debugLineNum = 23461890;BA.debugLine="If addpanel2.Visible = False Then";
+if (mostCurrent._addpanel2.getVisible()==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=23461891;
+ //BA.debugLineNum = 23461891;BA.debugLine="addpanel2.Visible = True";
+mostCurrent._addpanel2.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else {
+RDebugUtils.currentLine=23461893;
+ //BA.debugLineNum = 23461893;BA.debugLine="addpanel2.Visible = False";
+mostCurrent._addpanel2.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ };
+RDebugUtils.currentLine=23461896;
+ //BA.debugLineNum = 23461896;BA.debugLine="End Sub";
+return "";
+}
+public static String  _addcard_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "addcard_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addcard_click", null));}
+anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
+RDebugUtils.currentLine=23527424;
+ //BA.debugLineNum = 23527424;BA.debugLine="Private Sub addcard_Click";
+RDebugUtils.currentLine=23527426;
+ //BA.debugLineNum = 23527426;BA.debugLine="Dim tappeddeck As Map = FlashcardActivity.deck.Ge";
+_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
+_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._flashcardactivity._selecteddeck /*String*/ ))));
+RDebugUtils.currentLine=23527427;
+ //BA.debugLineNum = 23527427;BA.debugLine="If tappeddeck.Size = 0 Then";
+if (_tappeddeck.getSize()==0) { 
+RDebugUtils.currentLine=23527428;
+ //BA.debugLineNum = 23527428;BA.debugLine="MsgboxAsync(\"Create A Sub-Deck first\", \"Error\")";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Create A Sub-Deck first"),BA.ObjectToCharSequence("Error"),processBA);
+RDebugUtils.currentLine=23527429;
+ //BA.debugLineNum = 23527429;BA.debugLine="Return";
+if (true) return "";
+ };
+RDebugUtils.currentLine=23527431;
+ //BA.debugLineNum = 23527431;BA.debugLine="StartActivity(Add_card_module)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._add_card_module.getObject()));
+RDebugUtils.currentLine=23527432;
+ //BA.debugLineNum = 23527432;BA.debugLine="End Sub";
+return "";
+}
+public static String  _addsub_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "addsub_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addsub_click", null));}
+RDebugUtils.currentLine=23592960;
+ //BA.debugLineNum = 23592960;BA.debugLine="Private Sub addsub_Click";
+RDebugUtils.currentLine=23592962;
+ //BA.debugLineNum = 23592962;BA.debugLine="addpanel.Visible = True";
+mostCurrent._addpanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=23592963;
+ //BA.debugLineNum = 23592963;BA.debugLine="End Sub";
+return "";
+}
+public static String  _backbtn_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "backbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "backbtn_click", null));}
+RDebugUtils.currentLine=24117248;
+ //BA.debugLineNum = 24117248;BA.debugLine="Private Sub backbtn_Click";
+RDebugUtils.currentLine=24117249;
+ //BA.debugLineNum = 24117249;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+RDebugUtils.currentLine=24117250;
+ //BA.debugLineNum = 24117250;BA.debugLine="End Sub";
+return "";
+}
+public static String  _cancel_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "cancel_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "cancel_click", null));}
+RDebugUtils.currentLine=23658496;
+ //BA.debugLineNum = 23658496;BA.debugLine="Private Sub cancel_Click";
+RDebugUtils.currentLine=23658498;
+ //BA.debugLineNum = 23658498;BA.debugLine="addpanel.Visible = False";
+mostCurrent._addpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=23658499;
+ //BA.debugLineNum = 23658499;BA.debugLine="et1.Text = \"\"";
+mostCurrent._et1.setText(BA.ObjectToCharSequence(""));
+RDebugUtils.currentLine=23658500;
+ //BA.debugLineNum = 23658500;BA.debugLine="End Sub";
+return "";
+}
+public static String  _cancelalter_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "cancelalter_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "cancelalter_click", null));}
+RDebugUtils.currentLine=24313856;
+ //BA.debugLineNum = 24313856;BA.debugLine="Private Sub cancelalter_Click";
+RDebugUtils.currentLine=24313857;
+ //BA.debugLineNum = 24313857;BA.debugLine="alterpanel.Visible = False";
 mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 201;BA.debugLine="renamepanel.visible = True";
-mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 202;BA.debugLine="End Sub";
+RDebugUtils.currentLine=24313858;
+ //BA.debugLineNum = 24313858;BA.debugLine="End Sub";
+return "";
+}
+public static String  _cancelconfirmation_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "cancelconfirmation_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "cancelconfirmation_click", null));}
+RDebugUtils.currentLine=23986176;
+ //BA.debugLineNum = 23986176;BA.debugLine="Private Sub cancelconfirmation_Click";
+RDebugUtils.currentLine=23986178;
+ //BA.debugLineNum = 23986178;BA.debugLine="AR_confirmationpanel.Visible = False";
+mostCurrent._ar_confirmationpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=23986179;
+ //BA.debugLineNum = 23986179;BA.debugLine="End Sub";
+return "";
+}
+public static String  _canceldelete_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "canceldelete_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "canceldelete_click", null));}
+RDebugUtils.currentLine=24641536;
+ //BA.debugLineNum = 24641536;BA.debugLine="Private Sub canceldelete_Click";
+RDebugUtils.currentLine=24641537;
+ //BA.debugLineNum = 24641537;BA.debugLine="deleteconfirmation.Visible = False";
+mostCurrent._deleteconfirmation.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24641538;
+ //BA.debugLineNum = 24641538;BA.debugLine="End Sub";
+return "";
+}
+public static String  _cancelrename_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "cancelrename_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "cancelrename_click", null));}
+RDebugUtils.currentLine=24444928;
+ //BA.debugLineNum = 24444928;BA.debugLine="Private Sub cancelrename_Click";
+RDebugUtils.currentLine=24444929;
+ //BA.debugLineNum = 24444929;BA.debugLine="renamepanel.Visible = False";
+mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24444930;
+ //BA.debugLineNum = 24444930;BA.debugLine="renameet.Text = \"\"";
+mostCurrent._renameet.setText(BA.ObjectToCharSequence(""));
+RDebugUtils.currentLine=24444931;
+ //BA.debugLineNum = 24444931;BA.debugLine="End Sub";
+return "";
+}
+public static String  _confirmdelete_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "confirmdelete_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "confirmdelete_click", null));}
+anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
+RDebugUtils.currentLine=24576000;
+ //BA.debugLineNum = 24576000;BA.debugLine="Private Sub confirmdelete_Click";
+RDebugUtils.currentLine=24576001;
+ //BA.debugLineNum = 24576001;BA.debugLine="Dim tappeddeck As Map = FlashcardActivity.deck.ge";
+_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
+_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._flashcardactivity._selecteddeck /*String*/ ))));
+RDebugUtils.currentLine=24576002;
+ //BA.debugLineNum = 24576002;BA.debugLine="tappeddeck.Remove(selectedsubdeck)";
+_tappeddeck.Remove((Object)(_selectedsubdeck));
+RDebugUtils.currentLine=24576003;
+ //BA.debugLineNum = 24576003;BA.debugLine="SaveDecks";
+_savedecks();
+RDebugUtils.currentLine=24576004;
+ //BA.debugLineNum = 24576004;BA.debugLine="Refresh";
+_refresh();
+RDebugUtils.currentLine=24576005;
+ //BA.debugLineNum = 24576005;BA.debugLine="deleteconfirmation.Visible = False";
+mostCurrent._deleteconfirmation.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24576006;
+ //BA.debugLineNum = 24576006;BA.debugLine="End Sub";
 return "";
 }
 public static String  _savedecks() throws Exception{
- //BA.debugLineNum = 58;BA.debugLine="Sub SaveDecks";
- //BA.debugLineNum = 59;BA.debugLine="FlashcardActivity.kvs.Put(\"deck_data\", FlashcardA";
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "savedecks", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "savedecks", null));}
+RDebugUtils.currentLine=23199744;
+ //BA.debugLineNum = 23199744;BA.debugLine="Sub SaveDecks";
+RDebugUtils.currentLine=23199745;
+ //BA.debugLineNum = 23199745;BA.debugLine="FlashcardActivity.kvs.Put(\"deck_data\", FlashcardA";
 mostCurrent._flashcardactivity._kvs /*b4a.example3.keyvaluestore*/ ._put("deck_data",(Object)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .getObject()));
- //BA.debugLineNum = 60;BA.debugLine="End Sub";
+RDebugUtils.currentLine=23199746;
+ //BA.debugLineNum = 23199746;BA.debugLine="End Sub";
+return "";
+}
+public static String  _confirmrename_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "confirmrename_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "confirmrename_click", null));}
+anywheresoftware.b4a.objects.collections.List _getsubdeck = null;
+anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
+String _names = "";
+RDebugUtils.currentLine=24510464;
+ //BA.debugLineNum = 24510464;BA.debugLine="Private Sub confirmrename_Click";
+RDebugUtils.currentLine=24510466;
+ //BA.debugLineNum = 24510466;BA.debugLine="Dim getsubdeck As List";
+_getsubdeck = new anywheresoftware.b4a.objects.collections.List();
+RDebugUtils.currentLine=24510467;
+ //BA.debugLineNum = 24510467;BA.debugLine="Dim tappeddeck As Map = FlashcardActivity.deck.Ge";
+_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
+_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._flashcardactivity._deck /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._flashcardactivity._selecteddeck /*String*/ ))));
+RDebugUtils.currentLine=24510468;
+ //BA.debugLineNum = 24510468;BA.debugLine="If renameet.Text = \"\" Then";
+if ((mostCurrent._renameet.getText()).equals("")) { 
+RDebugUtils.currentLine=24510469;
+ //BA.debugLineNum = 24510469;BA.debugLine="MsgboxAsync(\"New Name must have a name\", \"Error\"";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("New Name must have a name"),BA.ObjectToCharSequence("Error"),processBA);
+RDebugUtils.currentLine=24510470;
+ //BA.debugLineNum = 24510470;BA.debugLine="Return";
+if (true) return "";
+ };
+RDebugUtils.currentLine=24510472;
+ //BA.debugLineNum = 24510472;BA.debugLine="For Each names As String In tappeddeck.keys";
+{
+final anywheresoftware.b4a.BA.IterableList group7 = _tappeddeck.Keys();
+final int groupLen7 = group7.getSize()
+;int index7 = 0;
+;
+for (; index7 < groupLen7;index7++){
+_names = BA.ObjectToString(group7.Get(index7));
+RDebugUtils.currentLine=24510473;
+ //BA.debugLineNum = 24510473;BA.debugLine="getsubdeck = tappeddeck.Get(selectedsubdeck)";
+_getsubdeck = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_tappeddeck.Get((Object)(_selectedsubdeck))));
+RDebugUtils.currentLine=24510474;
+ //BA.debugLineNum = 24510474;BA.debugLine="If renameet.Text = names Then";
+if ((mostCurrent._renameet.getText()).equals(_names)) { 
+RDebugUtils.currentLine=24510475;
+ //BA.debugLineNum = 24510475;BA.debugLine="MsgboxAsync(\"Sub Deck Name Already Exist\", \"Err";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sub Deck Name Already Exist"),BA.ObjectToCharSequence("Error"),processBA);
+RDebugUtils.currentLine=24510476;
+ //BA.debugLineNum = 24510476;BA.debugLine="Return";
+if (true) return "";
+ };
+ }
+};
+RDebugUtils.currentLine=24510479;
+ //BA.debugLineNum = 24510479;BA.debugLine="tappeddeck.Remove(selectedsubdeck)";
+_tappeddeck.Remove((Object)(_selectedsubdeck));
+RDebugUtils.currentLine=24510480;
+ //BA.debugLineNum = 24510480;BA.debugLine="tappeddeck.Put(renameet.Text, getsubdeck)";
+_tappeddeck.Put((Object)(mostCurrent._renameet.getText()),(Object)(_getsubdeck.getObject()));
+RDebugUtils.currentLine=24510481;
+ //BA.debugLineNum = 24510481;BA.debugLine="renameet.text = \"\"";
+mostCurrent._renameet.setText(BA.ObjectToCharSequence(""));
+RDebugUtils.currentLine=24510482;
+ //BA.debugLineNum = 24510482;BA.debugLine="SaveDecks";
+_savedecks();
+RDebugUtils.currentLine=24510483;
+ //BA.debugLineNum = 24510483;BA.debugLine="Refresh";
+_refresh();
+RDebugUtils.currentLine=24510484;
+ //BA.debugLineNum = 24510484;BA.debugLine="renamepanel.Visible = False";
+mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24510485;
+ //BA.debugLineNum = 24510485;BA.debugLine="renamepanel.Visible = False";
+mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24510488;
+ //BA.debugLineNum = 24510488;BA.debugLine="End Sub";
+return "";
+}
+public static String  _create_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "create_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "create_click", null));}
+anywheresoftware.b4a.objects.collections.Map _tappeddeck = null;
+anywheresoftware.b4a.objects.collections.List _flashcards = null;
+Object _name = null;
+RDebugUtils.currentLine=23724032;
+ //BA.debugLineNum = 23724032;BA.debugLine="Private Sub create_Click";
+RDebugUtils.currentLine=23724035;
+ //BA.debugLineNum = 23724035;BA.debugLine="Dim tappeddeck As Map = alldecks.Get(selecteddeck";
+_tappeddeck = new anywheresoftware.b4a.objects.collections.Map();
+_tappeddeck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._alldecks.Get((Object)(mostCurrent._selecteddeck))));
+RDebugUtils.currentLine=23724036;
+ //BA.debugLineNum = 23724036;BA.debugLine="Dim flashcards As List";
+_flashcards = new anywheresoftware.b4a.objects.collections.List();
+RDebugUtils.currentLine=23724038;
+ //BA.debugLineNum = 23724038;BA.debugLine="flashcards.initialize";
+_flashcards.Initialize();
+RDebugUtils.currentLine=23724041;
+ //BA.debugLineNum = 23724041;BA.debugLine="For Each name In tappeddeck.Keys";
+{
+final anywheresoftware.b4a.BA.IterableList group4 = _tappeddeck.Keys();
+final int groupLen4 = group4.getSize()
+;int index4 = 0;
+;
+for (; index4 < groupLen4;index4++){
+_name = group4.Get(index4);
+RDebugUtils.currentLine=23724042;
+ //BA.debugLineNum = 23724042;BA.debugLine="If et1.Text = name Then";
+if ((mostCurrent._et1.getText()).equals(BA.ObjectToString(_name))) { 
+RDebugUtils.currentLine=23724043;
+ //BA.debugLineNum = 23724043;BA.debugLine="MsgboxAsync(\"Sub-Deck Already Exist\", \"Error\")";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sub-Deck Already Exist"),BA.ObjectToCharSequence("Error"),processBA);
+RDebugUtils.currentLine=23724044;
+ //BA.debugLineNum = 23724044;BA.debugLine="Return";
+if (true) return "";
+ };
+ }
+};
+RDebugUtils.currentLine=23724049;
+ //BA.debugLineNum = 23724049;BA.debugLine="If et1.Text = \"\" Then";
+if ((mostCurrent._et1.getText()).equals("")) { 
+RDebugUtils.currentLine=23724050;
+ //BA.debugLineNum = 23724050;BA.debugLine="MsgboxAsync(\"Sub-Deck must have a name\", \"Error\"";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sub-Deck must have a name"),BA.ObjectToCharSequence("Error"),processBA);
+ }else {
+RDebugUtils.currentLine=23724053;
+ //BA.debugLineNum = 23724053;BA.debugLine="addpanel.Visible = False";
+mostCurrent._addpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=23724054;
+ //BA.debugLineNum = 23724054;BA.debugLine="LVSubdecks.AddSingleLine(et1.Text)";
+mostCurrent._lvsubdecks.AddSingleLine(BA.ObjectToCharSequence(mostCurrent._et1.getText()));
+RDebugUtils.currentLine=23724055;
+ //BA.debugLineNum = 23724055;BA.debugLine="tappeddeck.Put(et1.Text, flashcards)";
+_tappeddeck.Put((Object)(mostCurrent._et1.getText()),(Object)(_flashcards.getObject()));
+RDebugUtils.currentLine=23724056;
+ //BA.debugLineNum = 23724056;BA.debugLine="SaveDecks";
+_savedecks();
+RDebugUtils.currentLine=23724058;
+ //BA.debugLineNum = 23724058;BA.debugLine="et1.Text = \"\"";
+mostCurrent._et1.setText(BA.ObjectToCharSequence(""));
+ };
+RDebugUtils.currentLine=23724061;
+ //BA.debugLineNum = 23724061;BA.debugLine="End Sub";
+return "";
+}
+public static String  _deletesubdeck_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "deletesubdeck_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "deletesubdeck_click", null));}
+RDebugUtils.currentLine=24182784;
+ //BA.debugLineNum = 24182784;BA.debugLine="Private Sub deletesubdeck_Click";
+RDebugUtils.currentLine=24182785;
+ //BA.debugLineNum = 24182785;BA.debugLine="alterpanel.Visible = False";
+mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24182786;
+ //BA.debugLineNum = 24182786;BA.debugLine="deleteconfirmation.Visible = True";
+mostCurrent._deleteconfirmation.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=24182787;
+ //BA.debugLineNum = 24182787;BA.debugLine="End Sub";
+return "";
+}
+public static String  _goback_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "goback_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "goback_click", null));}
+RDebugUtils.currentLine=23789568;
+ //BA.debugLineNum = 23789568;BA.debugLine="Private Sub goback_Click";
+RDebugUtils.currentLine=23789570;
+ //BA.debugLineNum = 23789570;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+RDebugUtils.currentLine=23789571;
+ //BA.debugLineNum = 23789571;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lvsubdecks_itemclick(int _position,Object _value) throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "lvsubdecks_itemclick", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lvsubdecks_itemclick", new Object[] {_position,_value}));}
+RDebugUtils.currentLine=24051712;
+ //BA.debugLineNum = 24051712;BA.debugLine="Private Sub LVSubdecks_ItemClick (Position As Int,";
+RDebugUtils.currentLine=24051714;
+ //BA.debugLineNum = 24051714;BA.debugLine="selectedsubdeck = Value 'gives the chsoen subdeck";
+_selectedsubdeck = BA.ObjectToString(_value);
+RDebugUtils.currentLine=24051716;
+ //BA.debugLineNum = 24051716;BA.debugLine="StartActivity(Card_Module)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._card_module.getObject()));
+RDebugUtils.currentLine=24051717;
+ //BA.debugLineNum = 24051717;BA.debugLine="End Sub";
+return "";
+}
+public static String  _lvsubdecks_itemlongclick(int _position,Object _value) throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "lvsubdecks_itemlongclick", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lvsubdecks_itemlongclick", new Object[] {_position,_value}));}
+RDebugUtils.currentLine=24379392;
+ //BA.debugLineNum = 24379392;BA.debugLine="Private Sub LVSubdecks_ItemLongClick (Position As";
+RDebugUtils.currentLine=24379393;
+ //BA.debugLineNum = 24379393;BA.debugLine="alterpanel.Visible = True";
+mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=24379394;
+ //BA.debugLineNum = 24379394;BA.debugLine="selectedsubdeck = Value";
+_selectedsubdeck = BA.ObjectToString(_value);
+RDebugUtils.currentLine=24379395;
+ //BA.debugLineNum = 24379395;BA.debugLine="End Sub";
+return "";
+}
+public static String  _renamesubdeck_click() throws Exception{
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "renamesubdeck_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "renamesubdeck_click", null));}
+RDebugUtils.currentLine=24248320;
+ //BA.debugLineNum = 24248320;BA.debugLine="Private Sub renamesubdeck_Click";
+RDebugUtils.currentLine=24248321;
+ //BA.debugLineNum = 24248321;BA.debugLine="alterpanel.Visible = False";
+mostCurrent._alterpanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24248322;
+ //BA.debugLineNum = 24248322;BA.debugLine="renamepanel.visible = True";
+mostCurrent._renamepanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=24248323;
+ //BA.debugLineNum = 24248323;BA.debugLine="End Sub";
 return "";
 }
 public static String  _startarbtn_click() throws Exception{
- //BA.debugLineNum = 169;BA.debugLine="Private Sub startArbtn_Click";
- //BA.debugLineNum = 171;BA.debugLine="If number_of_cards = 0 Then";
+RDebugUtils.currentModule="subdeck_module";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "startarbtn_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "startarbtn_click", null));}
+RDebugUtils.currentLine=23920640;
+ //BA.debugLineNum = 23920640;BA.debugLine="Private Sub startArbtn_Click";
+RDebugUtils.currentLine=23920642;
+ //BA.debugLineNum = 23920642;BA.debugLine="If number_of_cards = 0 Then";
 if (_number_of_cards==0) { 
- //BA.debugLineNum = 172;BA.debugLine="MsgboxAsync(\"No cards available\", \"Error\")";
+RDebugUtils.currentLine=23920643;
+ //BA.debugLineNum = 23920643;BA.debugLine="MsgboxAsync(\"No cards available\", \"Error\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("No cards available"),BA.ObjectToCharSequence("Error"),processBA);
- //BA.debugLineNum = 173;BA.debugLine="Return";
+RDebugUtils.currentLine=23920644;
+ //BA.debugLineNum = 23920644;BA.debugLine="Return";
 if (true) return "";
  };
- //BA.debugLineNum = 175;BA.debugLine="StartActivity(all_active_recall)";
+RDebugUtils.currentLine=23920646;
+ //BA.debugLineNum = 23920646;BA.debugLine="StartActivity(all_active_recall)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._all_active_recall.getObject()));
- //BA.debugLineNum = 176;BA.debugLine="End Sub";
+RDebugUtils.currentLine=23920647;
+ //BA.debugLineNum = 23920647;BA.debugLine="End Sub";
 return "";
 }
 }

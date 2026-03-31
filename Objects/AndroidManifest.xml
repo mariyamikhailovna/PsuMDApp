@@ -11,6 +11,7 @@
 	    android:normalScreens="true" 
 	    android:smallScreens="true" 
 	    android:anyDensity="true"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
 	<application
@@ -123,6 +124,30 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".add_card_module2"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".add_events_module"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".all_active_recall"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".calendaractivity"
 			android:label="Athena"
 			android:screenOrientation="portrait"
@@ -131,23 +156,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".flashcardactivity"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".todoactivity"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".musicactivity"
+			android:name=".card_module"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
@@ -163,7 +172,31 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".add_events_module"
+			android:name=".deck_all_cards"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".flashcardactivity"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".musicactivity"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".navactivity"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
@@ -187,39 +220,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".card_module"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".add_card_module2"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".all_active_recall"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".deck_all_cards"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".navactivity"
+			android:name=".todoactivity"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">

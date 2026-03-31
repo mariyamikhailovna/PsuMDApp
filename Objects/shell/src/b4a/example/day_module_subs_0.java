@@ -1,0 +1,1807 @@
+package b4a.example;
+
+import anywheresoftware.b4a.BA;
+import anywheresoftware.b4a.pc.*;
+
+public class day_module_subs_0 {
+
+
+public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
+try {
+		Debug.PushSubsStack("Activity_Create (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,52);
+if (RapidSub.canDelegate("activity_create")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","activity_create", _firsttime);}
+Debug.locals.put("FirstTime", _firsttime);
+ BA.debugLineNum = 52;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+Debug.ShouldStop(524288);
+ BA.debugLineNum = 53;BA.debugLine="If Starter.darkMode = False Then";
+Debug.ShouldStop(1048576);
+if (RemoteObject.solveBoolean("=",day_module.mostCurrent._starter._darkmode /*RemoteObject*/ ,day_module.mostCurrent.__c.getField(true,"False"))) { 
+ BA.debugLineNum = 54;BA.debugLine="Activity.LoadLayout(\"Day_ModuleLayout\")";
+Debug.ShouldStop(2097152);
+day_module.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Day_ModuleLayout")),day_module.mostCurrent.activityBA);
+ }else {
+ BA.debugLineNum = 56;BA.debugLine="Activity.LoadLayout(\"Day_ModuleLayoutDark\")";
+Debug.ShouldStop(8388608);
+day_module.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Day_ModuleLayoutDark")),day_module.mostCurrent.activityBA);
+ };
+ BA.debugLineNum = 59;BA.debugLine="Day_btn.Color = Colors.blue";
+Debug.ShouldStop(67108864);
+day_module.mostCurrent._day_btn.runVoidMethod ("setColor",day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Blue"));
+ BA.debugLineNum = 60;BA.debugLine="date_todaylbl.Text = SetDate(currentDate)";
+Debug.ShouldStop(134217728);
+day_module.mostCurrent._date_todaylbl.runMethod(true,"setText",BA.ObjectToCharSequence(_setdate(day_module._currentdate)));
+ BA.debugLineNum = 61;BA.debugLine="add_events_module.currentDate = SetDate(currentDa";
+Debug.ShouldStop(268435456);
+day_module.mostCurrent._add_events_module._currentdate /*RemoteObject*/  = _setdate(day_module._currentdate);
+ BA.debugLineNum = 62;BA.debugLine="SetUpSpinners";
+Debug.ShouldStop(536870912);
+_setupspinners();
+ BA.debugLineNum = 64;BA.debugLine="Log(currentDate)";
+Debug.ShouldStop(-2147483648);
+day_module.mostCurrent.__c.runVoidMethod ("LogImpl","215532044",day_module._currentdate,0);
+ BA.debugLineNum = 66;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
+try {
+		Debug.PushSubsStack("Activity_Pause (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,392);
+if (RapidSub.canDelegate("activity_pause")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","activity_pause", _userclosed);}
+Debug.locals.put("UserClosed", _userclosed);
+ BA.debugLineNum = 392;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(128);
+ BA.debugLineNum = 394;BA.debugLine="End Sub";
+Debug.ShouldStop(512);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _activity_resume() throws Exception{
+try {
+		Debug.PushSubsStack("Activity_Resume (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,384);
+if (RapidSub.canDelegate("activity_resume")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","activity_resume");}
+ BA.debugLineNum = 384;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 385;BA.debugLine="UpdateTimeLine";
+Debug.ShouldStop(1);
+_updatetimeline();
+ BA.debugLineNum = 386;BA.debugLine="If addeventsfeedback = True Then";
+Debug.ShouldStop(2);
+if (RemoteObject.solveBoolean("=",day_module._addeventsfeedback,day_module.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 387;BA.debugLine="addeventsfeedback = False";
+Debug.ShouldStop(4);
+day_module._addeventsfeedback = day_module.mostCurrent.__c.getField(true,"False");
+ BA.debugLineNum = 388;BA.debugLine="MsgboxAsync(\"Event Saved\", \"Saved\")";
+Debug.ShouldStop(8);
+day_module.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Event Saved")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Saved"))),day_module.processBA);
+ };
+ BA.debugLineNum = 390;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _addevent_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("Addevent_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,415);
+if (RapidSub.canDelegate("addevent_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","addevent_btn_click");}
+ BA.debugLineNum = 415;BA.debugLine="Private Sub Addevent_btn_Click";
+Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 416;BA.debugLine="addpanel.Visible = False";
+Debug.ShouldStop(-2147483648);
+day_module.mostCurrent._addpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 417;BA.debugLine="add_events_module.eventtype = \"Event\"";
+Debug.ShouldStop(1);
+day_module.mostCurrent._add_events_module._eventtype /*RemoteObject*/  = BA.ObjectToString("Event");
+ BA.debugLineNum = 418;BA.debugLine="StartActivity(add_events_module)";
+Debug.ShouldStop(2);
+day_module.mostCurrent.__c.runVoidMethod ("StartActivity",day_module.processBA,(Object)((day_module.mostCurrent._add_events_module.getObject())));
+ BA.debugLineNum = 419;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _addnew_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("addnew_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,421);
+if (RapidSub.canDelegate("addnew_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","addnew_btn_click");}
+ BA.debugLineNum = 421;BA.debugLine="Private Sub addnew_btn_Click";
+Debug.ShouldStop(16);
+ BA.debugLineNum = 423;BA.debugLine="If addpanel.Visible =True Then";
+Debug.ShouldStop(64);
+if (RemoteObject.solveBoolean("=",day_module.mostCurrent._addpanel.runMethod(true,"getVisible"),day_module.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 424;BA.debugLine="addpanel.Visible = False";
+Debug.ShouldStop(128);
+day_module.mostCurrent._addpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 425;BA.debugLine="Return";
+Debug.ShouldStop(256);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 427;BA.debugLine="addpanel.Visible = True";
+Debug.ShouldStop(1024);
+day_module.mostCurrent._addpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 430;BA.debugLine="End Sub";
+Debug.ShouldStop(8192);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _addtask_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("Addtask_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,432);
+if (RapidSub.canDelegate("addtask_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","addtask_btn_click");}
+ BA.debugLineNum = 432;BA.debugLine="Private Sub Addtask_btn_Click";
+Debug.ShouldStop(32768);
+ BA.debugLineNum = 433;BA.debugLine="addpanel.Visible = False";
+Debug.ShouldStop(65536);
+day_module.mostCurrent._addpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 434;BA.debugLine="add_events_module.eventtype = \"Task\"";
+Debug.ShouldStop(131072);
+day_module.mostCurrent._add_events_module._eventtype /*RemoteObject*/  = BA.ObjectToString("Task");
+ BA.debugLineNum = 435;BA.debugLine="StartActivity(add_events_module)";
+Debug.ShouldStop(262144);
+day_module.mostCurrent.__c.runVoidMethod ("StartActivity",day_module.processBA,(Object)((day_module.mostCurrent._add_events_module.getObject())));
+ BA.debugLineNum = 436;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _birthday_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("birthday_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,438);
+if (RapidSub.canDelegate("birthday_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","birthday_btn_click");}
+ BA.debugLineNum = 438;BA.debugLine="Private Sub birthday_btn_Click";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 439;BA.debugLine="addpanel.Visible = False";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._addpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 440;BA.debugLine="add_events_module.eventtype = \"Birthday\"";
+Debug.ShouldStop(8388608);
+day_module.mostCurrent._add_events_module._eventtype /*RemoteObject*/  = BA.ObjectToString("Birthday");
+ BA.debugLineNum = 441;BA.debugLine="StartActivity(add_events_module)";
+Debug.ShouldStop(16777216);
+day_module.mostCurrent.__c.runVoidMethod ("StartActivity",day_module.processBA,(Object)((day_module.mostCurrent._add_events_module.getObject())));
+ BA.debugLineNum = 442;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _birthdayrb_checkedchange(RemoteObject _checked) throws Exception{
+try {
+		Debug.PushSubsStack("birthdayrb_CheckedChange (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,538);
+if (RapidSub.canDelegate("birthdayrb_checkedchange")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","birthdayrb_checkedchange", _checked);}
+Debug.locals.put("Checked", _checked);
+ BA.debugLineNum = 538;BA.debugLine="Private Sub birthdayrb_CheckedChange(Checked As Bo";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 539;BA.debugLine="eventtype = \"Birthday\"";
+Debug.ShouldStop(67108864);
+day_module.mostCurrent._eventtype = BA.ObjectToString("Birthday");
+ BA.debugLineNum = 540;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _canceldelete_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("cancelDelete_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,487);
+if (RapidSub.canDelegate("canceldelete_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","canceldelete_btn_click");}
+ BA.debugLineNum = 487;BA.debugLine="Private Sub cancelDelete_btn_Click";
+Debug.ShouldStop(64);
+ BA.debugLineNum = 488;BA.debugLine="deletepanel.Visible = False";
+Debug.ShouldStop(128);
+day_module.mostCurrent._deletepanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 489;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _canceledit_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("cancelEdit_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,465);
+if (RapidSub.canDelegate("canceledit_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","canceledit_btn_click");}
+ BA.debugLineNum = 465;BA.debugLine="Private Sub cancelEdit_btn_Click";
+Debug.ShouldStop(65536);
+ BA.debugLineNum = 466;BA.debugLine="EditInfoPanel.Visible = False";
+Debug.ShouldStop(131072);
+day_module.mostCurrent._editinfopanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 467;BA.debugLine="End Sub";
+Debug.ShouldStop(262144);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _canceltldelete_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("cancelTLdelete_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,510);
+if (RapidSub.canDelegate("canceltldelete_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","canceltldelete_btn_click");}
+ BA.debugLineNum = 510;BA.debugLine="Private Sub cancelTLdelete_btn_Click";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 511;BA.debugLine="deleteTLevent_confirmationpanel.Visible = False";
+Debug.ShouldStop(1073741824);
+day_module.mostCurrent._deletetlevent_confirmationpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 512;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _confirmdelete_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("confirmdelete_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,491);
+if (RapidSub.canDelegate("confirmdelete_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","confirmdelete_btn_click");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _allevents = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+ BA.debugLineNum = 491;BA.debugLine="Private Sub confirmdelete_btn_Click";
+Debug.ShouldStop(1024);
+ BA.debugLineNum = 492;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarMa";
+Debug.ShouldStop(2048);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 493;BA.debugLine="Dim allevents As List = eventmap.Get(\"AllEvents\")";
+Debug.ShouldStop(4096);
+_allevents = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
+_allevents = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("AllEvents")))));Debug.locals.put("allevents", _allevents);Debug.locals.put("allevents", _allevents);
+ BA.debugLineNum = 494;BA.debugLine="allevents.RemoveAt(currentIndex)";
+Debug.ShouldStop(8192);
+_allevents.runVoidMethod ("RemoveAt",(Object)(day_module._currentindex));
+ BA.debugLineNum = 495;BA.debugLine="deletepanel.Visible = False";
+Debug.ShouldStop(16384);
+day_module.mostCurrent._deletepanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 496;BA.debugLine="eventInfo_panel.Visible = False";
+Debug.ShouldStop(32768);
+day_module.mostCurrent._eventinfo_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 497;BA.debugLine="SaveCalendar";
+Debug.ShouldStop(65536);
+_savecalendar();
+ BA.debugLineNum = 498;BA.debugLine="DrawMainEvents";
+Debug.ShouldStop(131072);
+_drawmainevents();
+ BA.debugLineNum = 499;BA.debugLine="End Sub";
+Debug.ShouldStop(262144);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _day_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("Day_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,406);
+if (RapidSub.canDelegate("day_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","day_btn_click");}
+ BA.debugLineNum = 406;BA.debugLine="Private Sub Day_btn_Click";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 407;BA.debugLine="menupanel.Visible = False";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._menupanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 408;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _deleteevent_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("DeleteEvent_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,461);
+if (RapidSub.canDelegate("deleteevent_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","deleteevent_btn_click");}
+ BA.debugLineNum = 461;BA.debugLine="Private Sub DeleteEvent_btn_Click";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 462;BA.debugLine="deletepanel.Visible = True";
+Debug.ShouldStop(8192);
+day_module.mostCurrent._deletepanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 463;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _deletetlconfirm_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("deleteTLconfirm_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,514);
+if (RapidSub.canDelegate("deletetlconfirm_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","deletetlconfirm_btn_click");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _timeline = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+int _i = 0;
+RemoteObject _ev = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+ BA.debugLineNum = 514;BA.debugLine="Private Sub deleteTLconfirm_btn_Click";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 515;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarMa";
+Debug.ShouldStop(4);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 516;BA.debugLine="Dim timeline As List = eventmap.Get(\"Timeline\")";
+Debug.ShouldStop(8);
+_timeline = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
+_timeline = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Timeline")))));Debug.locals.put("timeline", _timeline);Debug.locals.put("timeline", _timeline);
+ BA.debugLineNum = 518;BA.debugLine="For i = timeline.Size -1 To 0 Step -1";
+Debug.ShouldStop(32);
+{
+final int step3 = -1;
+final int limit3 = 0;
+_i = RemoteObject.solve(new RemoteObject[] {_timeline.runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue() ;
+for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+Debug.locals.put("i", _i);
+ BA.debugLineNum = 519;BA.debugLine="Dim ev As Map = timeline.Get(i)";
+Debug.ShouldStop(64);
+_ev = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_ev = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _timeline.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));Debug.locals.put("ev", _ev);Debug.locals.put("ev", _ev);
+ BA.debugLineNum = 520;BA.debugLine="If ev.Get(\"Start\") = timeIndex Then";
+Debug.ShouldStop(128);
+if (RemoteObject.solveBoolean("=",_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Start")))),(day_module._timeindex))) { 
+ BA.debugLineNum = 521;BA.debugLine="timeline.RemoveAt(i)";
+Debug.ShouldStop(256);
+_timeline.runVoidMethod ("RemoveAt",(Object)(BA.numberCast(int.class, _i)));
+ BA.debugLineNum = 522;BA.debugLine="Exit";
+Debug.ShouldStop(512);
+if (true) break;
+ };
+ }
+}Debug.locals.put("i", _i);
+;
+ BA.debugLineNum = 526;BA.debugLine="addTL_et.Text = \"\"";
+Debug.ShouldStop(8192);
+day_module.mostCurrent._addtl_et.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 527;BA.debugLine="deleteTLevent_confirmationpanel.Visible = False";
+Debug.ShouldStop(16384);
+day_module.mostCurrent._deletetlevent_confirmationpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 528;BA.debugLine="addEventTL_panel.Visible = False";
+Debug.ShouldStop(32768);
+day_module.mostCurrent._addeventtl_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 529;BA.debugLine="SaveCalendar";
+Debug.ShouldStop(65536);
+_savecalendar();
+ BA.debugLineNum = 530;BA.debugLine="UpdateTimeLine";
+Debug.ShouldStop(131072);
+_updatetimeline();
+ BA.debugLineNum = 531;BA.debugLine="End Sub";
+Debug.ShouldStop(262144);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _deletetlevent_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("deleteTLevent_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,506);
+if (RapidSub.canDelegate("deletetlevent_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","deletetlevent_btn_click");}
+ BA.debugLineNum = 506;BA.debugLine="Private Sub deleteTLevent_btn_Click";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 507;BA.debugLine="deleteTLevent_confirmationpanel.Visible = True";
+Debug.ShouldStop(67108864);
+day_module.mostCurrent._deletetlevent_confirmationpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 508;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _drawhourlabels() throws Exception{
+try {
+		Debug.PushSubsStack("DrawHourLabels (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,146);
+if (RapidSub.canDelegate("drawhourlabels")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","drawhourlabels");}
+RemoteObject _rowh = RemoteObject.createImmutable(0);
+int _h = 0;
+RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
+RemoteObject _lbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+ BA.debugLineNum = 146;BA.debugLine="Sub DrawHourLabels";
+Debug.ShouldStop(131072);
+ BA.debugLineNum = 148;BA.debugLine="Svtimeline.Panel.RemoveAllViews";
+Debug.ShouldStop(524288);
+day_module.mostCurrent._svtimeline.runMethod(false,"getPanel").runVoidMethod ("RemoveAllViews");
+ BA.debugLineNum = 150;BA.debugLine="Dim rowh As Int = 60dip";
+Debug.ShouldStop(2097152);
+_rowh = day_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)));Debug.locals.put("rowh", _rowh);Debug.locals.put("rowh", _rowh);
+ BA.debugLineNum = 151;BA.debugLine="Svtimeline.Panel.Height = 24 * rowh";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._svtimeline.runMethod(false,"getPanel").runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(24),_rowh}, "*",0, 1));
+ BA.debugLineNum = 154;BA.debugLine="For h = 0 To 23";
+Debug.ShouldStop(33554432);
+{
+final int step4 = 1;
+final int limit4 = 23;
+_h = 0 ;
+for (;(step4 > 0 && _h <= limit4) || (step4 < 0 && _h >= limit4) ;_h = ((int)(0 + _h + step4))  ) {
+Debug.locals.put("h", _h);
+ BA.debugLineNum = 155;BA.debugLine="Dim p As Panel";
+Debug.ShouldStop(67108864);
+_p = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("p", _p);
+ BA.debugLineNum = 156;BA.debugLine="p.Initialize(\"hour\")";
+Debug.ShouldStop(134217728);
+_p.runVoidMethod ("Initialize",day_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("hour")));
+ BA.debugLineNum = 157;BA.debugLine="p.Tag = h";
+Debug.ShouldStop(268435456);
+_p.runMethod(false,"setTag",RemoteObject.createImmutable((_h)));
+ BA.debugLineNum = 158;BA.debugLine="Svtimeline.Panel.AddView(p, 0, h*rowh, Svtimelin";
+Debug.ShouldStop(536870912);
+day_module.mostCurrent._svtimeline.runMethod(false,"getPanel").runVoidMethod ("AddView",(Object)((_p.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(_h),_rowh}, "*",0, 1)),(Object)(day_module.mostCurrent._svtimeline.runMethod(true,"getWidth")),(Object)(_rowh));
+ BA.debugLineNum = 160;BA.debugLine="Dim lbl As Label";
+Debug.ShouldStop(-2147483648);
+_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lbl", _lbl);
+ BA.debugLineNum = 161;BA.debugLine="lbl.Initialize(\"\")";
+Debug.ShouldStop(1);
+_lbl.runVoidMethod ("Initialize",day_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 162;BA.debugLine="lbl.Text = GetTimeString(h)";
+Debug.ShouldStop(2);
+_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(_gettimestring(BA.numberCast(int.class, _h))));
+ BA.debugLineNum = 163;BA.debugLine="lbl.Gravity = Gravity.left";
+Debug.ShouldStop(4);
+_lbl.runMethod(true,"setGravity",day_module.mostCurrent.__c.getField(false,"Gravity").getField(true,"LEFT"));
+ BA.debugLineNum = 164;BA.debugLine="p.AddView(lbl, 0, 0, 60dip, rowh)";
+Debug.ShouldStop(8);
+_p.runVoidMethod ("AddView",(Object)((_lbl.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(day_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)))),(Object)(_rowh));
+ }
+}Debug.locals.put("h", _h);
+;
+ BA.debugLineNum = 166;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _drawmainevents() throws Exception{
+try {
+		Debug.PushSubsStack("DrawMainEvents (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,82);
+if (RapidSub.canDelegate("drawmainevents")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","drawmainevents");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _allevents = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+RemoteObject _y = RemoteObject.createImmutable(0);
+RemoteObject _rowheight = RemoteObject.createImmutable(0);
+int _i = 0;
+RemoteObject _lbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+RemoteObject _ev = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+ BA.debugLineNum = 82;BA.debugLine="Sub DrawMainEvents";
+Debug.ShouldStop(131072);
+ BA.debugLineNum = 83;BA.debugLine="svEvents.Panel.RemoveAllViews";
+Debug.ShouldStop(262144);
+day_module.mostCurrent._svevents.runMethod(false,"getPanel").runVoidMethod ("RemoveAllViews");
+ BA.debugLineNum = 84;BA.debugLine="If Not(CalendarActivity.CalendarMap.ContainsKey(c";
+Debug.ShouldStop(524288);
+if (day_module.mostCurrent.__c.runMethod(true,"Not",(Object)(day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(true,"ContainsKey",(Object)((day_module._currentdate))))).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 85;BA.debugLine="Return";
+Debug.ShouldStop(1048576);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 88;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarMa";
+Debug.ShouldStop(8388608);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 89;BA.debugLine="Dim allevents As List = eventmap.Get(\"AllEvents\")";
+Debug.ShouldStop(16777216);
+_allevents = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
+_allevents = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("AllEvents")))));Debug.locals.put("allevents", _allevents);Debug.locals.put("allevents", _allevents);
+ BA.debugLineNum = 91;BA.debugLine="Dim y As Int = 0";
+Debug.ShouldStop(67108864);
+_y = BA.numberCast(int.class, 0);Debug.locals.put("y", _y);Debug.locals.put("y", _y);
+ BA.debugLineNum = 92;BA.debugLine="Dim rowHeight As Int = 50dip";
+Debug.ShouldStop(134217728);
+_rowheight = day_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)));Debug.locals.put("rowHeight", _rowheight);Debug.locals.put("rowHeight", _rowheight);
+ BA.debugLineNum = 93;BA.debugLine="For i = 0 To allevents.Size -1";
+Debug.ShouldStop(268435456);
+{
+final int step9 = 1;
+final int limit9 = RemoteObject.solve(new RemoteObject[] {_allevents.runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
+_i = 0 ;
+for (;(step9 > 0 && _i <= limit9) || (step9 < 0 && _i >= limit9) ;_i = ((int)(0 + _i + step9))  ) {
+Debug.locals.put("i", _i);
+ BA.debugLineNum = 94;BA.debugLine="Dim lbl As Label";
+Debug.ShouldStop(536870912);
+_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lbl", _lbl);
+ BA.debugLineNum = 95;BA.debugLine="Dim ev As Map = allevents.Get(i)";
+Debug.ShouldStop(1073741824);
+_ev = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_ev = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _allevents.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));Debug.locals.put("ev", _ev);Debug.locals.put("ev", _ev);
+ BA.debugLineNum = 96;BA.debugLine="lbl.Initialize(\"mainEvent\")";
+Debug.ShouldStop(-2147483648);
+_lbl.runVoidMethod ("Initialize",day_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("mainEvent")));
+ BA.debugLineNum = 97;BA.debugLine="lbl.Tag = i";
+Debug.ShouldStop(1);
+_lbl.runMethod(false,"setTag",RemoteObject.createImmutable((_i)));
+ BA.debugLineNum = 98;BA.debugLine="lbl.Text = ev.Get(\"Title\")";
+Debug.ShouldStop(2);
+_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Title"))))));
+ BA.debugLineNum = 99;BA.debugLine="lbl.Gravity = Gravity.CENTER_vertical";
+Debug.ShouldStop(4);
+_lbl.runMethod(true,"setGravity",day_module.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_VERTICAL"));
+ BA.debugLineNum = 100;BA.debugLine="lbl.TextColor = Colors.Black";
+Debug.ShouldStop(8);
+_lbl.runMethod(true,"setTextColor",day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ BA.debugLineNum = 101;BA.debugLine="lbl.Color = IdentifyColor(ev.Get(\"Tags\"))";
+Debug.ShouldStop(16);
+_lbl.runVoidMethod ("setColor",_identifycolor(BA.ObjectToString(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Tags")))))));
+ BA.debugLineNum = 103;BA.debugLine="svEvents.Panel.AddView(lbl, 0, y, svEvents.Width";
+Debug.ShouldStop(64);
+day_module.mostCurrent._svevents.runMethod(false,"getPanel").runVoidMethod ("AddView",(Object)((_lbl.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(_y),(Object)(day_module.mostCurrent._svevents.runMethod(true,"getWidth")),(Object)(_rowheight));
+ BA.debugLineNum = 104;BA.debugLine="y = y+rowHeight";
+Debug.ShouldStop(128);
+_y = RemoteObject.solve(new RemoteObject[] {_y,_rowheight}, "+",1, 1);Debug.locals.put("y", _y);
+ }
+}Debug.locals.put("i", _i);
+;
+ BA.debugLineNum = 107;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _drawtimelineevents() throws Exception{
+try {
+		Debug.PushSubsStack("DrawTimelineEvents (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,193);
+if (RapidSub.canDelegate("drawtimelineevents")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","drawtimelineevents");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _timeline = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+RemoteObject _rowh = RemoteObject.createImmutable(0);
+int _h = 0;
+RemoteObject _hourpanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
+RemoteObject _ev = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _starth = RemoteObject.createImmutable(0);
+RemoteObject _endh = RemoteObject.createImmutable(0);
+RemoteObject _title = RemoteObject.createImmutable("");
+RemoteObject _color = RemoteObject.createImmutable(0);
+RemoteObject _lbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+ BA.debugLineNum = 193;BA.debugLine="Sub DrawTimelineEvents";
+Debug.ShouldStop(1);
+ BA.debugLineNum = 194;BA.debugLine="If Not(CalendarActivity.CalendarMap.ContainsKey(c";
+Debug.ShouldStop(2);
+if (day_module.mostCurrent.__c.runMethod(true,"Not",(Object)(day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(true,"ContainsKey",(Object)((day_module._currentdate))))).<Boolean>get().booleanValue()) { 
+if (true) return RemoteObject.createImmutable("");};
+ BA.debugLineNum = 196;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarMa";
+Debug.ShouldStop(8);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 197;BA.debugLine="Dim timeline As List = eventmap.Get(\"Timeline\")";
+Debug.ShouldStop(16);
+_timeline = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
+_timeline = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Timeline")))));Debug.locals.put("timeline", _timeline);Debug.locals.put("timeline", _timeline);
+ BA.debugLineNum = 199;BA.debugLine="Dim rowh As Int = 60dip";
+Debug.ShouldStop(64);
+_rowh = day_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 60)));Debug.locals.put("rowh", _rowh);Debug.locals.put("rowh", _rowh);
+ BA.debugLineNum = 201;BA.debugLine="For h = 0 To 23";
+Debug.ShouldStop(256);
+{
+final int step5 = 1;
+final int limit5 = 23;
+_h = 0 ;
+for (;(step5 > 0 && _h <= limit5) || (step5 < 0 && _h >= limit5) ;_h = ((int)(0 + _h + step5))  ) {
+Debug.locals.put("h", _h);
+ BA.debugLineNum = 202;BA.debugLine="Dim hourPanel As Panel = Svtimeline.Panel.GetVie";
+Debug.ShouldStop(512);
+_hourpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+_hourpanel = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), day_module.mostCurrent._svtimeline.runMethod(false,"getPanel").runMethod(false,"GetView",(Object)(BA.numberCast(int.class, _h))).getObject());Debug.locals.put("hourPanel", _hourpanel);Debug.locals.put("hourPanel", _hourpanel);
+ BA.debugLineNum = 204;BA.debugLine="If hourPanel.NumberOfViews > 1 Then";
+Debug.ShouldStop(2048);
+if (RemoteObject.solveBoolean(">",_hourpanel.runMethod(true,"getNumberOfViews"),BA.numberCast(double.class, 1))) { 
+ BA.debugLineNum = 205;BA.debugLine="hourPanel.RemoveViewAt(1)";
+Debug.ShouldStop(4096);
+_hourpanel.runVoidMethod ("RemoveViewAt",(Object)(BA.numberCast(int.class, 1)));
+ };
+ }
+}Debug.locals.put("h", _h);
+;
+ BA.debugLineNum = 209;BA.debugLine="For Each ev  As Map In timeline";
+Debug.ShouldStop(65536);
+_ev = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+{
+final RemoteObject group11 = _timeline;
+final int groupLen11 = group11.runMethod(true,"getSize").<Integer>get()
+;int index11 = 0;
+;
+for (; index11 < groupLen11;index11++){
+_ev = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), group11.runMethod(false,"Get",index11));Debug.locals.put("ev", _ev);
+Debug.locals.put("ev", _ev);
+ BA.debugLineNum = 210;BA.debugLine="Dim starth As Int = ev.Get(\"Start\")";
+Debug.ShouldStop(131072);
+_starth = BA.numberCast(int.class, _ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Start")))));Debug.locals.put("starth", _starth);Debug.locals.put("starth", _starth);
+ BA.debugLineNum = 211;BA.debugLine="Dim endh As Int = ev.Get(\"End\")";
+Debug.ShouldStop(262144);
+_endh = BA.numberCast(int.class, _ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("End")))));Debug.locals.put("endh", _endh);Debug.locals.put("endh", _endh);
+ BA.debugLineNum = 212;BA.debugLine="Dim title As String = ev.Get(\"Title\")";
+Debug.ShouldStop(524288);
+_title = BA.ObjectToString(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Title")))));Debug.locals.put("title", _title);Debug.locals.put("title", _title);
+ BA.debugLineNum = 213;BA.debugLine="Dim color As Int = IdentifyColor(ev.Get(\"Tags\"))";
+Debug.ShouldStop(1048576);
+_color = _identifycolor(BA.ObjectToString(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Tags"))))));Debug.locals.put("color", _color);Debug.locals.put("color", _color);
+ BA.debugLineNum = 214;BA.debugLine="For h = starth To endh - 1";
+Debug.ShouldStop(2097152);
+{
+final int step16 = 1;
+final int limit16 = RemoteObject.solve(new RemoteObject[] {_endh,RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
+_h = _starth.<Integer>get().intValue() ;
+for (;(step16 > 0 && _h <= limit16) || (step16 < 0 && _h >= limit16) ;_h = ((int)(0 + _h + step16))  ) {
+Debug.locals.put("h", _h);
+ BA.debugLineNum = 215;BA.debugLine="If h >= 0 And h <= 23 Then";
+Debug.ShouldStop(4194304);
+if (RemoteObject.solveBoolean("g",RemoteObject.createImmutable(_h),BA.numberCast(double.class, 0)) && RemoteObject.solveBoolean("k",RemoteObject.createImmutable(_h),BA.numberCast(double.class, 23))) { 
+ BA.debugLineNum = 216;BA.debugLine="Dim hourPanel As Panel = Svtimeline.Panel.GetV";
+Debug.ShouldStop(8388608);
+_hourpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+_hourpanel = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), day_module.mostCurrent._svtimeline.runMethod(false,"getPanel").runMethod(false,"GetView",(Object)(BA.numberCast(int.class, _h))).getObject());Debug.locals.put("hourPanel", _hourpanel);Debug.locals.put("hourPanel", _hourpanel);
+ BA.debugLineNum = 217;BA.debugLine="Dim lbl As Label";
+Debug.ShouldStop(16777216);
+_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lbl", _lbl);
+ BA.debugLineNum = 218;BA.debugLine="lbl.initialize(\"TimelineEvent\")";
+Debug.ShouldStop(33554432);
+_lbl.runVoidMethod ("Initialize",day_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("TimelineEvent")));
+ BA.debugLineNum = 219;BA.debugLine="lbl.Tag = ev";
+Debug.ShouldStop(67108864);
+_lbl.runMethod(false,"setTag",(_ev.getObject()));
+ BA.debugLineNum = 220;BA.debugLine="lbl.Text = title";
+Debug.ShouldStop(134217728);
+_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(_title));
+ BA.debugLineNum = 221;BA.debugLine="lbl.TextColor = Colors.Black";
+Debug.ShouldStop(268435456);
+_lbl.runMethod(true,"setTextColor",day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ BA.debugLineNum = 222;BA.debugLine="lbl.Gravity = Gravity.CENTER_VERTICAL";
+Debug.ShouldStop(536870912);
+_lbl.runMethod(true,"setGravity",day_module.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_VERTICAL"));
+ BA.debugLineNum = 223;BA.debugLine="lbl.Color = color";
+Debug.ShouldStop(1073741824);
+_lbl.runVoidMethod ("setColor",_color);
+ BA.debugLineNum = 224;BA.debugLine="hourPanel.AddView(lbl, 65dip, 0, hourPanel.Wid";
+Debug.ShouldStop(-2147483648);
+_hourpanel.runVoidMethod ("AddView",(Object)((_lbl.getObject())),(Object)(day_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 65)))),(Object)(BA.numberCast(int.class, 0)),(Object)(RemoteObject.solve(new RemoteObject[] {_hourpanel.runMethod(true,"getWidth"),day_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))}, "-",1, 1)),(Object)(_rowh));
+ };
+ }
+}Debug.locals.put("h", _h);
+;
+ }
+}Debug.locals.put("ev", _ev);
+;
+ BA.debugLineNum = 229;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _editeventinfo_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("editeventinfo_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,450);
+if (RapidSub.canDelegate("editeventinfo_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","editeventinfo_btn_click");}
+ BA.debugLineNum = 450;BA.debugLine="Private Sub editeventinfo_btn_Click";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 451;BA.debugLine="EditInfoPanel.Visible = True";
+Debug.ShouldStop(4);
+day_module.mostCurrent._editinfopanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 452;BA.debugLine="editTitle_et.text = currenttaggedEvent.Get(\"Title";
+Debug.ShouldStop(8);
+day_module.mostCurrent._edittitle_et.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(day_module.mostCurrent._currenttaggedevent.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Title"))))));
+ BA.debugLineNum = 453;BA.debugLine="editDescription_et.Text = currenttaggedEvent.Get(";
+Debug.ShouldStop(16);
+day_module.mostCurrent._editdescription_et.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(day_module.mostCurrent._currenttaggedevent.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Description"))))));
+ BA.debugLineNum = 454;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _eventrb_checkedchange(RemoteObject _checked) throws Exception{
+try {
+		Debug.PushSubsStack("eventrb_CheckedChange (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,542);
+if (RapidSub.canDelegate("eventrb_checkedchange")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","eventrb_checkedchange", _checked);}
+Debug.locals.put("Checked", _checked);
+ BA.debugLineNum = 542;BA.debugLine="Private Sub eventrb_CheckedChange(Checked As Boole";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 543;BA.debugLine="eventtype = \"Event\"";
+Debug.ShouldStop(1073741824);
+day_module.mostCurrent._eventtype = BA.ObjectToString("Event");
+ BA.debugLineNum = 544;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _gettimestring(RemoteObject _h) throws Exception{
+try {
+		Debug.PushSubsStack("GetTimeString (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,168);
+if (RapidSub.canDelegate("gettimestring")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","gettimestring", _h);}
+RemoteObject _num = RemoteObject.createImmutable(0);
+RemoteObject _ampm = RemoteObject.createImmutable("");
+Debug.locals.put("h", _h);
+ BA.debugLineNum = 168;BA.debugLine="Sub GetTimeString (h As Int) As String";
+Debug.ShouldStop(128);
+ BA.debugLineNum = 169;BA.debugLine="Dim num As Int";
+Debug.ShouldStop(256);
+_num = RemoteObject.createImmutable(0);Debug.locals.put("num", _num);
+ BA.debugLineNum = 170;BA.debugLine="Dim ampm As String";
+Debug.ShouldStop(512);
+_ampm = RemoteObject.createImmutable("");Debug.locals.put("ampm", _ampm);
+ BA.debugLineNum = 171;BA.debugLine="If h = 0 Then";
+Debug.ShouldStop(1024);
+if (RemoteObject.solveBoolean("=",_h,BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 172;BA.debugLine="num = 12";
+Debug.ShouldStop(2048);
+_num = BA.numberCast(int.class, 12);Debug.locals.put("num", _num);
+ BA.debugLineNum = 173;BA.debugLine="ampm = \"am\"";
+Debug.ShouldStop(4096);
+_ampm = BA.ObjectToString("am");Debug.locals.put("ampm", _ampm);
+ }else 
+{ BA.debugLineNum = 174;BA.debugLine="Else if h = 12 Then";
+Debug.ShouldStop(8192);
+if (RemoteObject.solveBoolean("=",_h,BA.numberCast(double.class, 12))) { 
+ BA.debugLineNum = 175;BA.debugLine="num = h";
+Debug.ShouldStop(16384);
+_num = _h;Debug.locals.put("num", _num);
+ BA.debugLineNum = 176;BA.debugLine="ampm = \"pm\"";
+Debug.ShouldStop(32768);
+_ampm = BA.ObjectToString("pm");Debug.locals.put("ampm", _ampm);
+ }else 
+{ BA.debugLineNum = 177;BA.debugLine="Else if h > 12 Then";
+Debug.ShouldStop(65536);
+if (RemoteObject.solveBoolean(">",_h,BA.numberCast(double.class, 12))) { 
+ BA.debugLineNum = 178;BA.debugLine="num = h - 12";
+Debug.ShouldStop(131072);
+_num = RemoteObject.solve(new RemoteObject[] {_h,RemoteObject.createImmutable(12)}, "-",1, 1);Debug.locals.put("num", _num);
+ BA.debugLineNum = 179;BA.debugLine="If num = 12 Then";
+Debug.ShouldStop(262144);
+if (RemoteObject.solveBoolean("=",_num,BA.numberCast(double.class, 12))) { 
+ BA.debugLineNum = 180;BA.debugLine="ampm = \"am\"";
+Debug.ShouldStop(524288);
+_ampm = BA.ObjectToString("am");Debug.locals.put("ampm", _ampm);
+ }else {
+ BA.debugLineNum = 182;BA.debugLine="ampm = \"pm\"";
+Debug.ShouldStop(2097152);
+_ampm = BA.ObjectToString("pm");Debug.locals.put("ampm", _ampm);
+ };
+ }else {
+ BA.debugLineNum = 186;BA.debugLine="num = h";
+Debug.ShouldStop(33554432);
+_num = _h;Debug.locals.put("num", _num);
+ BA.debugLineNum = 187;BA.debugLine="ampm = \"am\"";
+Debug.ShouldStop(67108864);
+_ampm = BA.ObjectToString("am");Debug.locals.put("ampm", _ampm);
+ }}}
+;
+ BA.debugLineNum = 190;BA.debugLine="Return num & \":00\" & ampm";
+Debug.ShouldStop(536870912);
+if (true) return RemoteObject.concat(_num,RemoteObject.createImmutable(":00"),_ampm);
+ BA.debugLineNum = 191;BA.debugLine="End Sub";
+Debug.ShouldStop(1073741824);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _globals() throws Exception{
+ //BA.debugLineNum = 15;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 19;BA.debugLine="Private Day_btn As Button";
+day_module.mostCurrent._day_btn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
+ //BA.debugLineNum = 20;BA.debugLine="Private menupanel As Panel";
+day_module.mostCurrent._menupanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 21;BA.debugLine="Private Svtimeline As ScrollView";
+day_module.mostCurrent._svtimeline = RemoteObject.createNew ("anywheresoftware.b4a.objects.ScrollViewWrapper");
+ //BA.debugLineNum = 22;BA.debugLine="Private date_todaylbl As Label";
+day_module.mostCurrent._date_todaylbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+ //BA.debugLineNum = 23;BA.debugLine="Private addpanel As Panel";
+day_module.mostCurrent._addpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 24;BA.debugLine="Private Addtask_btn As Button";
+day_module.mostCurrent._addtask_btn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
+ //BA.debugLineNum = 25;BA.debugLine="Private svEvents As ScrollView";
+day_module.mostCurrent._svevents = RemoteObject.createNew ("anywheresoftware.b4a.objects.ScrollViewWrapper");
+ //BA.debugLineNum = 26;BA.debugLine="Private eventdescription_lbl As Label";
+day_module.mostCurrent._eventdescription_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+ //BA.debugLineNum = 27;BA.debugLine="Private eventTitle_lbl As Label";
+day_module.mostCurrent._eventtitle_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+ //BA.debugLineNum = 28;BA.debugLine="Private tags_lbl As Label";
+day_module.mostCurrent._tags_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+ //BA.debugLineNum = 29;BA.debugLine="Private dateToday_lbl As Label";
+day_module.mostCurrent._datetoday_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+ //BA.debugLineNum = 30;BA.debugLine="Private eventInfo_panel As Panel";
+day_module.mostCurrent._eventinfo_panel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 31;BA.debugLine="Private EditInfoPanel As Panel";
+day_module.mostCurrent._editinfopanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 33;BA.debugLine="Dim currenttaggedEvent As Map";
+day_module.mostCurrent._currenttaggedevent = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+ //BA.debugLineNum = 34;BA.debugLine="Dim timeIndex As Int";
+day_module._timeindex = RemoteObject.createImmutable(0);
+ //BA.debugLineNum = 35;BA.debugLine="Dim eventtype As String";
+day_module.mostCurrent._eventtype = RemoteObject.createImmutable("");
+ //BA.debugLineNum = 37;BA.debugLine="Private editTitle_et As EditText";
+day_module.mostCurrent._edittitle_et = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
+ //BA.debugLineNum = 38;BA.debugLine="Private editDescription_et As EditText";
+day_module.mostCurrent._editdescription_et = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
+ //BA.debugLineNum = 39;BA.debugLine="Private deletepanel As Panel";
+day_module.mostCurrent._deletepanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 40;BA.debugLine="Private addTL_et As EditText";
+day_module.mostCurrent._addtl_et = RemoteObject.createNew ("anywheresoftware.b4a.objects.EditTextWrapper");
+ //BA.debugLineNum = 41;BA.debugLine="Private addEventTL_panel As Panel";
+day_module.mostCurrent._addeventtl_panel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 42;BA.debugLine="Private timelabel As Label";
+day_module.mostCurrent._timelabel = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+ //BA.debugLineNum = 43;BA.debugLine="Private deleteTLevent_confirmationpanel As Panel";
+day_module.mostCurrent._deletetlevent_confirmationpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 44;BA.debugLine="Private starttimelineSP As Spinner";
+day_module.mostCurrent._starttimelinesp = RemoteObject.createNew ("anywheresoftware.b4a.objects.SpinnerWrapper");
+ //BA.debugLineNum = 45;BA.debugLine="Private endtimelineSP As Spinner";
+day_module.mostCurrent._endtimelinesp = RemoteObject.createNew ("anywheresoftware.b4a.objects.SpinnerWrapper");
+ //BA.debugLineNum = 46;BA.debugLine="Private taskrb As RadioButton";
+day_module.mostCurrent._taskrb = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper");
+ //BA.debugLineNum = 47;BA.debugLine="Private eventrb As RadioButton";
+day_module.mostCurrent._eventrb = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper");
+ //BA.debugLineNum = 48;BA.debugLine="Private birthdayrb As RadioButton";
+day_module.mostCurrent._birthdayrb = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper");
+ //BA.debugLineNum = 49;BA.debugLine="Private ooorb As RadioButton";
+day_module.mostCurrent._ooorb = RemoteObject.createNew ("anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper");
+ //BA.debugLineNum = 50;BA.debugLine="End Sub";
+return RemoteObject.createImmutable("");
+}
+public static RemoteObject  _hour_click() throws Exception{
+try {
+		Debug.PushSubsStack("hour_click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,253);
+if (RapidSub.canDelegate("hour_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","hour_click");}
+RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
+RemoteObject _tappedindex = RemoteObject.createImmutable("");
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _timeline = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+ BA.debugLineNum = 253;BA.debugLine="Sub hour_click";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 254;BA.debugLine="Dim p As Panel =  Sender";
+Debug.ShouldStop(536870912);
+_p = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+_p = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), day_module.mostCurrent.__c.runMethod(false,"Sender",day_module.mostCurrent.activityBA));Debug.locals.put("p", _p);Debug.locals.put("p", _p);
+ BA.debugLineNum = 255;BA.debugLine="Dim tappedIndex = p.tag";
+Debug.ShouldStop(1073741824);
+_tappedindex = BA.ObjectToString(_p.runMethod(false,"getTag"));Debug.locals.put("tappedIndex", _tappedindex);Debug.locals.put("tappedIndex", _tappedindex);
+ BA.debugLineNum = 256;BA.debugLine="timeIndex = p.tag";
+Debug.ShouldStop(-2147483648);
+day_module._timeindex = BA.numberCast(int.class, _p.runMethod(false,"getTag"));
+ BA.debugLineNum = 258;BA.debugLine="addEventTL_panel.Visible  =True";
+Debug.ShouldStop(2);
+day_module.mostCurrent._addeventtl_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 260;BA.debugLine="Dim eventmap As Map";
+Debug.ShouldStop(8);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 261;BA.debugLine="If CalendarActivity.CalendarMap.ContainsKey(curre";
+Debug.ShouldStop(16);
+if (day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(true,"ContainsKey",(Object)((day_module._currentdate))).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 262;BA.debugLine="eventmap = CalendarActivity.CalendarMap.Get(curr";
+Debug.ShouldStop(32);
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);
+ }else {
+ BA.debugLineNum = 264;BA.debugLine="eventmap = MapInitializer";
+Debug.ShouldStop(128);
+_eventmap = _mapinitializer();Debug.locals.put("eventmap", _eventmap);
+ };
+ BA.debugLineNum = 266;BA.debugLine="Dim timeline As List";
+Debug.ShouldStop(512);
+_timeline = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("timeline", _timeline);
+ BA.debugLineNum = 267;BA.debugLine="If eventmap.containskey(\"Timeline\") Then";
+Debug.ShouldStop(1024);
+if (_eventmap.runMethod(true,"ContainsKey",(Object)((RemoteObject.createImmutable("Timeline")))).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 268;BA.debugLine="timeline = eventmap.Get(\"Timeline\")";
+Debug.ShouldStop(2048);
+_timeline = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Timeline")))));Debug.locals.put("timeline", _timeline);
+ }else {
+ BA.debugLineNum = 270;BA.debugLine="timeline.Initialize";
+Debug.ShouldStop(8192);
+_timeline.runVoidMethod ("Initialize");
+ BA.debugLineNum = 271;BA.debugLine="eventmap.Put(\"Timeline\", timeline)";
+Debug.ShouldStop(16384);
+_eventmap.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Timeline"))),(Object)((_timeline.getObject())));
+ };
+ BA.debugLineNum = 274;BA.debugLine="starttimelineSP.SelectedIndex = timeIndex";
+Debug.ShouldStop(131072);
+day_module.mostCurrent._starttimelinesp.runMethod(true,"setSelectedIndex",day_module._timeindex);
+ BA.debugLineNum = 275;BA.debugLine="endtimelineSP.SelectedIndex = Min(timeIndex +1, 2";
+Debug.ShouldStop(262144);
+day_module.mostCurrent._endtimelinesp.runMethod(true,"setSelectedIndex",BA.numberCast(int.class, day_module.mostCurrent.__c.runMethod(true,"Min",(Object)(BA.numberCast(double.class, RemoteObject.solve(new RemoteObject[] {day_module._timeindex,RemoteObject.createImmutable(1)}, "+",1, 1))),(Object)(BA.numberCast(double.class, 24)))));
+ BA.debugLineNum = 276;BA.debugLine="eventrb.Checked = True";
+Debug.ShouldStop(524288);
+day_module.mostCurrent._eventrb.runMethodAndSync(true,"setChecked",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 280;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _identifycolor(RemoteObject _typeofevent) throws Exception{
+try {
+		Debug.PushSubsStack("IdentifyColor (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,125);
+if (RapidSub.canDelegate("identifycolor")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","identifycolor", _typeofevent);}
+RemoteObject _mycolor = RemoteObject.createImmutable(0);
+Debug.locals.put("typeofevent", _typeofevent);
+ BA.debugLineNum = 125;BA.debugLine="Sub IdentifyColor (typeofevent As String) As Int";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 126;BA.debugLine="Dim mycolor As Int";
+Debug.ShouldStop(536870912);
+_mycolor = RemoteObject.createImmutable(0);Debug.locals.put("mycolor", _mycolor);
+ BA.debugLineNum = 127;BA.debugLine="If typeofevent = \"Task\" Then";
+Debug.ShouldStop(1073741824);
+if (RemoteObject.solveBoolean("=",_typeofevent,BA.ObjectToString("Task"))) { 
+ BA.debugLineNum = 128;BA.debugLine="mycolor = Colors.Blue";
+Debug.ShouldStop(-2147483648);
+_mycolor = day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Blue");Debug.locals.put("mycolor", _mycolor);
+ }else 
+{ BA.debugLineNum = 129;BA.debugLine="Else if typeofevent = \"Event\" Then";
+Debug.ShouldStop(1);
+if (RemoteObject.solveBoolean("=",_typeofevent,BA.ObjectToString("Event"))) { 
+ BA.debugLineNum = 130;BA.debugLine="mycolor = Colors.Green";
+Debug.ShouldStop(2);
+_mycolor = day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Green");Debug.locals.put("mycolor", _mycolor);
+ }else 
+{ BA.debugLineNum = 131;BA.debugLine="Else if typeofevent = \"Birthday\" Then";
+Debug.ShouldStop(4);
+if (RemoteObject.solveBoolean("=",_typeofevent,BA.ObjectToString("Birthday"))) { 
+ BA.debugLineNum = 132;BA.debugLine="mycolor = Colors.Magenta";
+Debug.ShouldStop(8);
+_mycolor = day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Magenta");Debug.locals.put("mycolor", _mycolor);
+ }else 
+{ BA.debugLineNum = 133;BA.debugLine="Else if typeofevent = \"OOO\" Then";
+Debug.ShouldStop(16);
+if (RemoteObject.solveBoolean("=",_typeofevent,BA.ObjectToString("OOO"))) { 
+ BA.debugLineNum = 134;BA.debugLine="mycolor = Colors.Yellow";
+Debug.ShouldStop(32);
+_mycolor = day_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Yellow");Debug.locals.put("mycolor", _mycolor);
+ }}}}
+;
+ BA.debugLineNum = 137;BA.debugLine="Return mycolor";
+Debug.ShouldStop(256);
+if (true) return _mycolor;
+ BA.debugLineNum = 138;BA.debugLine="End Sub";
+Debug.ShouldStop(512);
+return RemoteObject.createImmutable(0);
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _mainevent_click() throws Exception{
+try {
+		Debug.PushSubsStack("mainEvent_click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,109);
+if (RapidSub.canDelegate("mainevent_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","mainevent_click");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _allevents = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+RemoteObject _lbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+RemoteObject _ev = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+ BA.debugLineNum = 109;BA.debugLine="Sub mainEvent_click";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 110;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarMa";
+Debug.ShouldStop(8192);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)(((day_module._currentdate)))));Debug.locals.put("eventmap", _eventmap);Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 111;BA.debugLine="Dim allevents As List = eventmap.Get(\"AllEvents\")";
+Debug.ShouldStop(16384);
+_allevents = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
+_allevents = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("AllEvents")))));Debug.locals.put("allevents", _allevents);Debug.locals.put("allevents", _allevents);
+ BA.debugLineNum = 112;BA.debugLine="Dim lbl As Label = Sender";
+Debug.ShouldStop(32768);
+_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+_lbl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.LabelWrapper"), day_module.mostCurrent.__c.runMethod(false,"Sender",day_module.mostCurrent.activityBA));Debug.locals.put("lbl", _lbl);Debug.locals.put("lbl", _lbl);
+ BA.debugLineNum = 113;BA.debugLine="Dim ev As Map = allevents.get(lbl.Tag)";
+Debug.ShouldStop(65536);
+_ev = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_ev = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _allevents.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _lbl.runMethod(false,"getTag")))));Debug.locals.put("ev", _ev);Debug.locals.put("ev", _ev);
+ BA.debugLineNum = 114;BA.debugLine="currenttaggedEvent = ev";
+Debug.ShouldStop(131072);
+day_module.mostCurrent._currenttaggedevent = _ev;
+ BA.debugLineNum = 115;BA.debugLine="currentIndex = lbl.tag";
+Debug.ShouldStop(262144);
+day_module._currentindex = BA.numberCast(int.class, _lbl.runMethod(false,"getTag"));
+ BA.debugLineNum = 117;BA.debugLine="eventInfo_panel.Visible = True";
+Debug.ShouldStop(1048576);
+day_module.mostCurrent._eventinfo_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 118;BA.debugLine="dateToday_lbl.Text = currentDate";
+Debug.ShouldStop(2097152);
+day_module.mostCurrent._datetoday_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(day_module._currentdate));
+ BA.debugLineNum = 119;BA.debugLine="eventTitle_lbl.Text = ev.get(\"Title\")";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._eventtitle_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Title"))))));
+ BA.debugLineNum = 120;BA.debugLine="eventdescription_lbl.Text = ev.Get(\"Description\")";
+Debug.ShouldStop(8388608);
+day_module.mostCurrent._eventdescription_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Description"))))));
+ BA.debugLineNum = 121;BA.debugLine="tags_lbl.text = ev.Get(\"Tags\")";
+Debug.ShouldStop(16777216);
+day_module.mostCurrent._tags_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Tags"))))));
+ BA.debugLineNum = 123;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _mapinitializer() throws Exception{
+try {
+		Debug.PushSubsStack("MapInitializer (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,284);
+if (RapidSub.canDelegate("mapinitializer")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","mapinitializer");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _allevents = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+RemoteObject _timeline = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+ BA.debugLineNum = 284;BA.debugLine="Sub MapInitializer As Map";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 285;BA.debugLine="Dim eventmap As Map";
+Debug.ShouldStop(268435456);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 287;BA.debugLine="eventmap.Initialize";
+Debug.ShouldStop(1073741824);
+_eventmap.runVoidMethod ("Initialize");
+ BA.debugLineNum = 288;BA.debugLine="Dim allevents As List";
+Debug.ShouldStop(-2147483648);
+_allevents = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("allevents", _allevents);
+ BA.debugLineNum = 289;BA.debugLine="allevents.initialize";
+Debug.ShouldStop(1);
+_allevents.runVoidMethod ("Initialize");
+ BA.debugLineNum = 291;BA.debugLine="Dim timeline As List";
+Debug.ShouldStop(4);
+_timeline = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("timeline", _timeline);
+ BA.debugLineNum = 292;BA.debugLine="timeline.initialize";
+Debug.ShouldStop(8);
+_timeline.runVoidMethod ("Initialize");
+ BA.debugLineNum = 294;BA.debugLine="eventmap.Put(\"AllEvents\", allevents)";
+Debug.ShouldStop(32);
+_eventmap.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("AllEvents"))),(Object)((_allevents.getObject())));
+ BA.debugLineNum = 295;BA.debugLine="eventmap.Put(\"Timeline\", timeline)";
+Debug.ShouldStop(64);
+_eventmap.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Timeline"))),(Object)((_timeline.getObject())));
+ BA.debugLineNum = 297;BA.debugLine="CalendarActivity.CalendarMap.Put(currentDate, eve";
+Debug.ShouldStop(256);
+day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runVoidMethod ("Put",(Object)((day_module._currentdate)),(Object)((_eventmap.getObject())));
+ BA.debugLineNum = 299;BA.debugLine="Return eventmap";
+Debug.ShouldStop(1024);
+if (true) return _eventmap;
+ BA.debugLineNum = 300;BA.debugLine="End Sub";
+Debug.ShouldStop(2048);
+return RemoteObject.createImmutable(null);
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _menu_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("menu_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,397);
+if (RapidSub.canDelegate("menu_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","menu_btn_click");}
+ BA.debugLineNum = 397;BA.debugLine="Private Sub menu_btn_Click";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 398;BA.debugLine="menupanel.Visible =True";
+Debug.ShouldStop(8192);
+day_module.mostCurrent._menupanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 399;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _month_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("Month_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,410);
+if (RapidSub.canDelegate("month_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","month_btn_click");}
+ BA.debugLineNum = 410;BA.debugLine="Private Sub Month_btn_Click";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 411;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(67108864);
+day_module.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 412;BA.debugLine="StartActivity(CalendarActivity)";
+Debug.ShouldStop(134217728);
+day_module.mostCurrent.__c.runVoidMethod ("StartActivity",day_module.processBA,(Object)((day_module.mostCurrent._calendaractivity.getObject())));
+ BA.debugLineNum = 413;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _ooo_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("ooo_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,444);
+if (RapidSub.canDelegate("ooo_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","ooo_btn_click");}
+ BA.debugLineNum = 444;BA.debugLine="Private Sub ooo_btn_Click";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 445;BA.debugLine="addpanel.Visible = False";
+Debug.ShouldStop(268435456);
+day_module.mostCurrent._addpanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 446;BA.debugLine="add_events_module.eventtype = \"OOO\"";
+Debug.ShouldStop(536870912);
+day_module.mostCurrent._add_events_module._eventtype /*RemoteObject*/  = BA.ObjectToString("OOO");
+ BA.debugLineNum = 447;BA.debugLine="StartActivity(add_events_module)";
+Debug.ShouldStop(1073741824);
+day_module.mostCurrent.__c.runVoidMethod ("StartActivity",day_module.processBA,(Object)((day_module.mostCurrent._add_events_module.getObject())));
+ BA.debugLineNum = 448;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _ooorb_checkedchange(RemoteObject _checked) throws Exception{
+try {
+		Debug.PushSubsStack("ooorb_CheckedChange (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,534);
+if (RapidSub.canDelegate("ooorb_checkedchange")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","ooorb_checkedchange", _checked);}
+Debug.locals.put("Checked", _checked);
+ BA.debugLineNum = 534;BA.debugLine="Private Sub ooorb_CheckedChange(Checked As Boolean";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 535;BA.debugLine="eventtype = \"OOO\"";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._eventtype = BA.ObjectToString("OOO");
+ BA.debugLineNum = 536;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Dim currentDate As String";
+day_module._currentdate = RemoteObject.createImmutable("");
+ //BA.debugLineNum = 10;BA.debugLine="Dim addeventsfeedback As Boolean";
+day_module._addeventsfeedback = RemoteObject.createImmutable(false);
+ //BA.debugLineNum = 11;BA.debugLine="Dim currentIndex As Int";
+day_module._currentindex = RemoteObject.createImmutable(0);
+ //BA.debugLineNum = 12;BA.debugLine="Dim schedules As Map";
+day_module._schedules = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+ //BA.debugLineNum = 13;BA.debugLine="End Sub";
+return RemoteObject.createImmutable("");
+}
+public static RemoteObject  _savecalendar() throws Exception{
+try {
+		Debug.PushSubsStack("SaveCalendar (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,78);
+if (RapidSub.canDelegate("savecalendar")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","savecalendar");}
+ BA.debugLineNum = 78;BA.debugLine="Sub SaveCalendar";
+Debug.ShouldStop(8192);
+ BA.debugLineNum = 79;BA.debugLine="CalendarActivity.kvs.put(\"CalendarKVS\", CalendarA";
+Debug.ShouldStop(16384);
+day_module.mostCurrent._calendaractivity._kvs /*RemoteObject*/ .runVoidMethod ("_put",(Object)(BA.ObjectToString("CalendarKVS")),(Object)((day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .getObject())));
+ BA.debugLineNum = 80;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _saveedit_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("saveEdit_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,469);
+if (RapidSub.canDelegate("saveedit_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","saveedit_btn_click");}
+ BA.debugLineNum = 469;BA.debugLine="Private Sub saveEdit_btn_Click";
+Debug.ShouldStop(1048576);
+ BA.debugLineNum = 470;BA.debugLine="If editTitle_et.text = \"\" Then";
+Debug.ShouldStop(2097152);
+if (RemoteObject.solveBoolean("=",day_module.mostCurrent._edittitle_et.runMethod(true,"getText"),BA.ObjectToString(""))) { 
+ BA.debugLineNum = 471;BA.debugLine="MsgboxAsync(\"Event must have name\", \"Error\")";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Event must have name")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Error"))),day_module.processBA);
+ BA.debugLineNum = 472;BA.debugLine="Return";
+Debug.ShouldStop(8388608);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 474;BA.debugLine="currenttaggedEvent.Put(\"Title\", editTitle_et.Text";
+Debug.ShouldStop(33554432);
+day_module.mostCurrent._currenttaggedevent.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Title"))),(Object)((day_module.mostCurrent._edittitle_et.runMethod(true,"getText"))));
+ BA.debugLineNum = 475;BA.debugLine="currenttaggedEvent.Put(\"Description\", editDescrip";
+Debug.ShouldStop(67108864);
+day_module.mostCurrent._currenttaggedevent.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Description"))),(Object)((day_module.mostCurrent._editdescription_et.runMethod(true,"getText"))));
+ BA.debugLineNum = 477;BA.debugLine="x_EventInfo_btn_Click";
+Debug.ShouldStop(268435456);
+_x_eventinfo_btn_click();
+ BA.debugLineNum = 478;BA.debugLine="eventTitle_lbl.text = editTitle_et.Text";
+Debug.ShouldStop(536870912);
+day_module.mostCurrent._eventtitle_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(day_module.mostCurrent._edittitle_et.runMethod(true,"getText")));
+ BA.debugLineNum = 479;BA.debugLine="eventdescription_lbl.Text = editDescription_et.te";
+Debug.ShouldStop(1073741824);
+day_module.mostCurrent._eventdescription_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(day_module.mostCurrent._editdescription_et.runMethod(true,"getText")));
+ BA.debugLineNum = 480;BA.debugLine="eventInfo_panel.Visible = True";
+Debug.ShouldStop(-2147483648);
+day_module.mostCurrent._eventinfo_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 481;BA.debugLine="SaveCalendar";
+Debug.ShouldStop(1);
+_savecalendar();
+ BA.debugLineNum = 482;BA.debugLine="DrawMainEvents";
+Debug.ShouldStop(2);
+_drawmainevents();
+ BA.debugLineNum = 485;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _savetl_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("saveTL_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,302);
+if (RapidSub.canDelegate("savetl_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","savetl_btn_click");}
+RemoteObject _eventmap = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _timeline = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+RemoteObject _ev = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+int _i = 0;
+RemoteObject _existing = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+RemoteObject _st = RemoteObject.createImmutable(0);
+RemoteObject _en = RemoteObject.createImmutable(0);
+ BA.debugLineNum = 302;BA.debugLine="Private Sub saveTL_btn_Click";
+Debug.ShouldStop(8192);
+ BA.debugLineNum = 303;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarMa";
+Debug.ShouldStop(16384);
+_eventmap = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);Debug.locals.put("eventmap", _eventmap);
+ BA.debugLineNum = 304;BA.debugLine="If addTL_et.text = \"\" Then";
+Debug.ShouldStop(32768);
+if (RemoteObject.solveBoolean("=",day_module.mostCurrent._addtl_et.runMethod(true,"getText"),BA.ObjectToString(""))) { 
+ BA.debugLineNum = 305;BA.debugLine="MsgboxAsync(\"Event must have a name\", \"Error\")";
+Debug.ShouldStop(65536);
+day_module.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Event must have a name")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Error"))),day_module.processBA);
+ BA.debugLineNum = 306;BA.debugLine="Return";
+Debug.ShouldStop(131072);
+if (true) return RemoteObject.createImmutable("");
+ };
+ BA.debugLineNum = 309;BA.debugLine="If CalendarActivity.CalendarMap.ContainsKey(curre";
+Debug.ShouldStop(1048576);
+if (day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(true,"ContainsKey",(Object)((day_module._currentdate))).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 310;BA.debugLine="eventmap = CalendarActivity.CalendarMap.Get(curr";
+Debug.ShouldStop(2097152);
+_eventmap = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), day_module.mostCurrent._calendaractivity._calendarmap /*RemoteObject*/ .runMethod(false,"Get",(Object)((day_module._currentdate))));Debug.locals.put("eventmap", _eventmap);
+ }else {
+ BA.debugLineNum = 312;BA.debugLine="eventmap = MapInitializer";
+Debug.ShouldStop(8388608);
+_eventmap = _mapinitializer();Debug.locals.put("eventmap", _eventmap);
+ };
+ BA.debugLineNum = 314;BA.debugLine="Dim timeline As List = eventmap.Get(\"Timeline\")";
+Debug.ShouldStop(33554432);
+_timeline = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
+_timeline = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _eventmap.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Timeline")))));Debug.locals.put("timeline", _timeline);Debug.locals.put("timeline", _timeline);
+ BA.debugLineNum = 315;BA.debugLine="Dim ev As Map";
+Debug.ShouldStop(67108864);
+_ev = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("ev", _ev);
+ BA.debugLineNum = 316;BA.debugLine="ev.Initialize";
+Debug.ShouldStop(134217728);
+_ev.runVoidMethod ("Initialize");
+ BA.debugLineNum = 318;BA.debugLine="ev.Put(\"Title\", addTL_et.Text)";
+Debug.ShouldStop(536870912);
+_ev.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Title"))),(Object)((day_module.mostCurrent._addtl_et.runMethod(true,"getText"))));
+ BA.debugLineNum = 319;BA.debugLine="ev.Put(\"Start\", starttimelineSP.SelectedIndex)";
+Debug.ShouldStop(1073741824);
+_ev.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Start"))),(Object)((day_module.mostCurrent._starttimelinesp.runMethod(true,"getSelectedIndex"))));
+ BA.debugLineNum = 320;BA.debugLine="ev.Put(\"End\", endtimelineSP.SelectedIndex)";
+Debug.ShouldStop(-2147483648);
+_ev.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("End"))),(Object)((day_module.mostCurrent._endtimelinesp.runMethod(true,"getSelectedIndex"))));
+ BA.debugLineNum = 321;BA.debugLine="ev.Put(\"Tags\", eventtype)";
+Debug.ShouldStop(1);
+_ev.runVoidMethod ("Put",(Object)(RemoteObject.createImmutable(("Tags"))),(Object)((day_module.mostCurrent._eventtype)));
+ BA.debugLineNum = 324;BA.debugLine="For i = timeline.Size - 1 To 0 Step -1";
+Debug.ShouldStop(8);
+{
+final int step18 = -1;
+final int limit18 = 0;
+_i = RemoteObject.solve(new RemoteObject[] {_timeline.runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue() ;
+for (;(step18 > 0 && _i <= limit18) || (step18 < 0 && _i >= limit18) ;_i = ((int)(0 + _i + step18))  ) {
+Debug.locals.put("i", _i);
+ BA.debugLineNum = 325;BA.debugLine="Dim existing As Map = timeline.Get(i)";
+Debug.ShouldStop(16);
+_existing = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_existing = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _timeline.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));Debug.locals.put("existing", _existing);Debug.locals.put("existing", _existing);
+ BA.debugLineNum = 326;BA.debugLine="Dim st As Int = existing.Get(\"Start\")";
+Debug.ShouldStop(32);
+_st = BA.numberCast(int.class, _existing.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Start")))));Debug.locals.put("st", _st);Debug.locals.put("st", _st);
+ BA.debugLineNum = 327;BA.debugLine="Dim en As Int = existing.Get(\"End\")";
+Debug.ShouldStop(64);
+_en = BA.numberCast(int.class, _existing.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("End")))));Debug.locals.put("en", _en);Debug.locals.put("en", _en);
+ BA.debugLineNum = 330;BA.debugLine="If (starttimelineSP.SelectedIndex < en) And (end";
+Debug.ShouldStop(512);
+if (RemoteObject.solveBoolean(".",BA.ObjectToBoolean((RemoteObject.solveBoolean("<",day_module.mostCurrent._starttimelinesp.runMethod(true,"getSelectedIndex"),BA.numberCast(double.class, _en))))) && RemoteObject.solveBoolean(".",BA.ObjectToBoolean((RemoteObject.solveBoolean(">",day_module.mostCurrent._endtimelinesp.runMethod(true,"getSelectedIndex"),BA.numberCast(double.class, _st)))))) { 
+ BA.debugLineNum = 331;BA.debugLine="timeline.RemoveAt(i)";
+Debug.ShouldStop(1024);
+_timeline.runVoidMethod ("RemoveAt",(Object)(BA.numberCast(int.class, _i)));
+ BA.debugLineNum = 332;BA.debugLine="Exit";
+Debug.ShouldStop(2048);
+if (true) break;
+ };
+ }
+}Debug.locals.put("i", _i);
+;
+ BA.debugLineNum = 336;BA.debugLine="timeline.add(ev)";
+Debug.ShouldStop(32768);
+_timeline.runVoidMethod ("Add",(Object)((_ev.getObject())));
+ BA.debugLineNum = 338;BA.debugLine="SaveCalendar";
+Debug.ShouldStop(131072);
+_savecalendar();
+ BA.debugLineNum = 339;BA.debugLine="UpdateTimeLine";
+Debug.ShouldStop(262144);
+_updatetimeline();
+ BA.debugLineNum = 340;BA.debugLine="addEventTL_panel.Visible  = False";
+Debug.ShouldStop(524288);
+day_module.mostCurrent._addeventtl_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 342;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _sched_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("sched_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,401);
+if (RapidSub.canDelegate("sched_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","sched_btn_click");}
+ BA.debugLineNum = 401;BA.debugLine="Private Sub sched_btn_Click";
+Debug.ShouldStop(65536);
+ BA.debugLineNum = 402;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(131072);
+day_module.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 403;BA.debugLine="StartActivity(Schedule_module)";
+Debug.ShouldStop(262144);
+day_module.mostCurrent.__c.runVoidMethod ("StartActivity",day_module.processBA,(Object)((day_module.mostCurrent._schedule_module.getObject())));
+ BA.debugLineNum = 404;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _setdate(RemoteObject _tagdate) throws Exception{
+try {
+		Debug.PushSubsStack("SetDate (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,345);
+if (RapidSub.canDelegate("setdate")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","setdate", _tagdate);}
+RemoteObject _parts = null;
+RemoteObject _year = RemoteObject.createImmutable("");
+RemoteObject _monthnum = RemoteObject.createImmutable(0);
+RemoteObject _day = RemoteObject.createImmutable("");
+RemoteObject _monthname = RemoteObject.createImmutable("");
+RemoteObject _ts = RemoteObject.createImmutable(0L);
+RemoteObject _weekdaynum = RemoteObject.createImmutable(0);
+RemoteObject _week = RemoteObject.createImmutable("");
+Debug.locals.put("Tagdate", _tagdate);
+ BA.debugLineNum = 345;BA.debugLine="Sub SetDate(Tagdate As String) As String";
+Debug.ShouldStop(16777216);
+ BA.debugLineNum = 347;BA.debugLine="Dim parts() As String = Regex.Split(\"-\", Tagdate)";
+Debug.ShouldStop(67108864);
+_parts = day_module.mostCurrent.__c.getField(false,"Regex").runMethod(false,"Split",(Object)(BA.ObjectToString("-")),(Object)(_tagdate));Debug.locals.put("parts", _parts);Debug.locals.put("parts", _parts);
+ BA.debugLineNum = 348;BA.debugLine="Dim year As String = parts(0)";
+Debug.ShouldStop(134217728);
+_year = _parts.getArrayElement(true,BA.numberCast(int.class, 0));Debug.locals.put("year", _year);Debug.locals.put("year", _year);
+ BA.debugLineNum = 349;BA.debugLine="Dim monthNum As Int = parts(1)";
+Debug.ShouldStop(268435456);
+_monthnum = BA.numberCast(int.class, _parts.getArrayElement(true,BA.numberCast(int.class, 1)));Debug.locals.put("monthNum", _monthnum);Debug.locals.put("monthNum", _monthnum);
+ BA.debugLineNum = 350;BA.debugLine="Dim day As String = parts(2)";
+Debug.ShouldStop(536870912);
+_day = _parts.getArrayElement(true,BA.numberCast(int.class, 2));Debug.locals.put("day", _day);Debug.locals.put("day", _day);
+ BA.debugLineNum = 352;BA.debugLine="Dim monthName As String";
+Debug.ShouldStop(-2147483648);
+_monthname = RemoteObject.createImmutable("");Debug.locals.put("monthName", _monthname);
+ BA.debugLineNum = 353;BA.debugLine="Select monthNum";
+Debug.ShouldStop(1);
+switch (BA.switchObjectToInt(_monthnum,BA.numberCast(int.class, 1),BA.numberCast(int.class, 2),BA.numberCast(int.class, 3),BA.numberCast(int.class, 4),BA.numberCast(int.class, 5),BA.numberCast(int.class, 6),BA.numberCast(int.class, 7),BA.numberCast(int.class, 8),BA.numberCast(int.class, 9),BA.numberCast(int.class, 10),BA.numberCast(int.class, 11),BA.numberCast(int.class, 12))) {
+case 0: {
+ BA.debugLineNum = 354;BA.debugLine="Case 1: monthName = \"January\"";
+Debug.ShouldStop(2);
+_monthname = BA.ObjectToString("January");Debug.locals.put("monthName", _monthname);
+ break; }
+case 1: {
+ BA.debugLineNum = 355;BA.debugLine="Case 2: monthName = \"February\"";
+Debug.ShouldStop(4);
+_monthname = BA.ObjectToString("February");Debug.locals.put("monthName", _monthname);
+ break; }
+case 2: {
+ BA.debugLineNum = 356;BA.debugLine="Case 3: monthName = \"March\"";
+Debug.ShouldStop(8);
+_monthname = BA.ObjectToString("March");Debug.locals.put("monthName", _monthname);
+ break; }
+case 3: {
+ BA.debugLineNum = 357;BA.debugLine="Case 4: monthName = \"April\"";
+Debug.ShouldStop(16);
+_monthname = BA.ObjectToString("April");Debug.locals.put("monthName", _monthname);
+ break; }
+case 4: {
+ BA.debugLineNum = 358;BA.debugLine="Case 5: monthName = \"May\"";
+Debug.ShouldStop(32);
+_monthname = BA.ObjectToString("May");Debug.locals.put("monthName", _monthname);
+ break; }
+case 5: {
+ BA.debugLineNum = 359;BA.debugLine="Case 6: monthName = \"June\"";
+Debug.ShouldStop(64);
+_monthname = BA.ObjectToString("June");Debug.locals.put("monthName", _monthname);
+ break; }
+case 6: {
+ BA.debugLineNum = 360;BA.debugLine="Case 7: monthName = \"July\"";
+Debug.ShouldStop(128);
+_monthname = BA.ObjectToString("July");Debug.locals.put("monthName", _monthname);
+ break; }
+case 7: {
+ BA.debugLineNum = 361;BA.debugLine="Case 8: monthName = \"August\"";
+Debug.ShouldStop(256);
+_monthname = BA.ObjectToString("August");Debug.locals.put("monthName", _monthname);
+ break; }
+case 8: {
+ BA.debugLineNum = 362;BA.debugLine="Case 9: monthName = \"September\"";
+Debug.ShouldStop(512);
+_monthname = BA.ObjectToString("September");Debug.locals.put("monthName", _monthname);
+ break; }
+case 9: {
+ BA.debugLineNum = 363;BA.debugLine="Case 10: monthName = \"October\"";
+Debug.ShouldStop(1024);
+_monthname = BA.ObjectToString("October");Debug.locals.put("monthName", _monthname);
+ break; }
+case 10: {
+ BA.debugLineNum = 364;BA.debugLine="Case 11: monthName = \"November\"";
+Debug.ShouldStop(2048);
+_monthname = BA.ObjectToString("November");Debug.locals.put("monthName", _monthname);
+ break; }
+case 11: {
+ BA.debugLineNum = 365;BA.debugLine="Case 12: monthName = \"December\"";
+Debug.ShouldStop(4096);
+_monthname = BA.ObjectToString("December");Debug.locals.put("monthName", _monthname);
+ break; }
+}
+;
+ BA.debugLineNum = 368;BA.debugLine="Dim ts As Long = DateTime.DateParse(Tagdate)";
+Debug.ShouldStop(32768);
+_ts = day_module.mostCurrent.__c.getField(false,"DateTime").runMethod(true,"DateParse",(Object)(_tagdate));Debug.locals.put("ts", _ts);Debug.locals.put("ts", _ts);
+ BA.debugLineNum = 369;BA.debugLine="Dim weekdayNum As Int = DateTime.GetDayOfWeek(ts)";
+Debug.ShouldStop(65536);
+_weekdaynum = day_module.mostCurrent.__c.getField(false,"DateTime").runMethod(true,"GetDayOfWeek",(Object)(_ts));Debug.locals.put("weekdayNum", _weekdaynum);Debug.locals.put("weekdayNum", _weekdaynum);
+ BA.debugLineNum = 370;BA.debugLine="Dim week As String";
+Debug.ShouldStop(131072);
+_week = RemoteObject.createImmutable("");Debug.locals.put("week", _week);
+ BA.debugLineNum = 371;BA.debugLine="Select weekdayNum";
+Debug.ShouldStop(262144);
+switch (BA.switchObjectToInt(_weekdaynum,BA.numberCast(int.class, 1),BA.numberCast(int.class, 2),BA.numberCast(int.class, 3),BA.numberCast(int.class, 4),BA.numberCast(int.class, 5),BA.numberCast(int.class, 6),BA.numberCast(int.class, 7))) {
+case 0: {
+ BA.debugLineNum = 372;BA.debugLine="Case 1: week = \"Sunday\"";
+Debug.ShouldStop(524288);
+_week = BA.ObjectToString("Sunday");Debug.locals.put("week", _week);
+ break; }
+case 1: {
+ BA.debugLineNum = 373;BA.debugLine="Case 2: week = \"Monday\"";
+Debug.ShouldStop(1048576);
+_week = BA.ObjectToString("Monday");Debug.locals.put("week", _week);
+ break; }
+case 2: {
+ BA.debugLineNum = 374;BA.debugLine="Case 3: week = \"Tuesday\"";
+Debug.ShouldStop(2097152);
+_week = BA.ObjectToString("Tuesday");Debug.locals.put("week", _week);
+ break; }
+case 3: {
+ BA.debugLineNum = 375;BA.debugLine="Case 4: week = \"Wednesday\"";
+Debug.ShouldStop(4194304);
+_week = BA.ObjectToString("Wednesday");Debug.locals.put("week", _week);
+ break; }
+case 4: {
+ BA.debugLineNum = 376;BA.debugLine="Case 5: week = \"Thursday\"";
+Debug.ShouldStop(8388608);
+_week = BA.ObjectToString("Thursday");Debug.locals.put("week", _week);
+ break; }
+case 5: {
+ BA.debugLineNum = 377;BA.debugLine="Case 6: week = \"Friday\"";
+Debug.ShouldStop(16777216);
+_week = BA.ObjectToString("Friday");Debug.locals.put("week", _week);
+ break; }
+case 6: {
+ BA.debugLineNum = 378;BA.debugLine="Case 7: week = \"Saturday\"";
+Debug.ShouldStop(33554432);
+_week = BA.ObjectToString("Saturday");Debug.locals.put("week", _week);
+ break; }
+}
+;
+ BA.debugLineNum = 381;BA.debugLine="Return week & \", \" & monthName & \" \" & day & \", \"";
+Debug.ShouldStop(268435456);
+if (true) return RemoteObject.concat(_week,RemoteObject.createImmutable(", "),_monthname,RemoteObject.createImmutable(" "),_day,RemoteObject.createImmutable(", "),_year);
+ BA.debugLineNum = 382;BA.debugLine="End Sub";
+Debug.ShouldStop(536870912);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _setupspinners() throws Exception{
+try {
+		Debug.PushSubsStack("SetUpSpinners (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,68);
+if (RapidSub.canDelegate("setupspinners")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","setupspinners");}
+RemoteObject _hours = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+int _i = 0;
+ BA.debugLineNum = 68;BA.debugLine="Sub SetUpSpinners";
+Debug.ShouldStop(8);
+ BA.debugLineNum = 69;BA.debugLine="Dim hours As List";
+Debug.ShouldStop(16);
+_hours = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("hours", _hours);
+ BA.debugLineNum = 70;BA.debugLine="hours.Initialize";
+Debug.ShouldStop(32);
+_hours.runVoidMethod ("Initialize");
+ BA.debugLineNum = 71;BA.debugLine="For i = 0 To 24";
+Debug.ShouldStop(64);
+{
+final int step3 = 1;
+final int limit3 = 24;
+_i = 0 ;
+for (;(step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3) ;_i = ((int)(0 + _i + step3))  ) {
+Debug.locals.put("i", _i);
+ BA.debugLineNum = 72;BA.debugLine="hours.Add(GetTimeString(i))";
+Debug.ShouldStop(128);
+_hours.runVoidMethod ("Add",(Object)((_gettimestring(BA.numberCast(int.class, _i)))));
+ }
+}Debug.locals.put("i", _i);
+;
+ BA.debugLineNum = 74;BA.debugLine="starttimelineSP.AddAll(hours)";
+Debug.ShouldStop(512);
+day_module.mostCurrent._starttimelinesp.runVoidMethod ("AddAll",(Object)(_hours));
+ BA.debugLineNum = 75;BA.debugLine="endtimelineSP.AddAll(hours)";
+Debug.ShouldStop(1024);
+day_module.mostCurrent._endtimelinesp.runVoidMethod ("AddAll",(Object)(_hours));
+ BA.debugLineNum = 76;BA.debugLine="End Sub";
+Debug.ShouldStop(2048);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _taskrb_checkedchange(RemoteObject _checked) throws Exception{
+try {
+		Debug.PushSubsStack("taskrb_CheckedChange (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,546);
+if (RapidSub.canDelegate("taskrb_checkedchange")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","taskrb_checkedchange", _checked);}
+Debug.locals.put("Checked", _checked);
+ BA.debugLineNum = 546;BA.debugLine="Private Sub taskrb_CheckedChange(Checked As Boolea";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 547;BA.debugLine="eventtype = \"Task\"";
+Debug.ShouldStop(4);
+day_module.mostCurrent._eventtype = BA.ObjectToString("Task");
+ BA.debugLineNum = 548;BA.debugLine="End Sub";
+Debug.ShouldStop(8);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _timelineevent_click() throws Exception{
+try {
+		Debug.PushSubsStack("timelineEvent_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,231);
+if (RapidSub.canDelegate("timelineevent_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","timelineevent_click");}
+RemoteObject _lbl = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+RemoteObject _ev = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
+ BA.debugLineNum = 231;BA.debugLine="Sub timelineEvent_Click";
+Debug.ShouldStop(64);
+ BA.debugLineNum = 232;BA.debugLine="Dim lbl As Label = Sender";
+Debug.ShouldStop(128);
+_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");
+_lbl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.LabelWrapper"), day_module.mostCurrent.__c.runMethod(false,"Sender",day_module.mostCurrent.activityBA));Debug.locals.put("lbl", _lbl);Debug.locals.put("lbl", _lbl);
+ BA.debugLineNum = 233;BA.debugLine="Dim ev As Map = lbl.Tag";
+Debug.ShouldStop(256);
+_ev = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
+_ev = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), _lbl.runMethod(false,"getTag"));Debug.locals.put("ev", _ev);Debug.locals.put("ev", _ev);
+ BA.debugLineNum = 234;BA.debugLine="currenttaggedEvent = ev";
+Debug.ShouldStop(512);
+day_module.mostCurrent._currenttaggedevent = _ev;
+ BA.debugLineNum = 237;BA.debugLine="addEventTL_panel.Visible = True";
+Debug.ShouldStop(4096);
+day_module.mostCurrent._addeventtl_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 240;BA.debugLine="addTL_et.Text = ev.Get(\"Title\")";
+Debug.ShouldStop(32768);
+day_module.mostCurrent._addtl_et.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Title"))))));
+ BA.debugLineNum = 241;BA.debugLine="starttimelineSP.SelectedIndex = ev.Get(\"Start\")";
+Debug.ShouldStop(65536);
+day_module.mostCurrent._starttimelinesp.runMethod(true,"setSelectedIndex",BA.numberCast(int.class, _ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Start"))))));
+ BA.debugLineNum = 242;BA.debugLine="endtimelineSP.SelectedIndex = ev.Get(\"End\")";
+Debug.ShouldStop(131072);
+day_module.mostCurrent._endtimelinesp.runMethod(true,"setSelectedIndex",BA.numberCast(int.class, _ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("End"))))));
+ BA.debugLineNum = 245;BA.debugLine="Select Case ev.Get(\"Tags\")";
+Debug.ShouldStop(1048576);
+switch (BA.switchObjectToInt(_ev.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Tags")))),RemoteObject.createImmutable(("Task")),RemoteObject.createImmutable(("Event")),RemoteObject.createImmutable(("Birthday")),RemoteObject.createImmutable(("OOO")))) {
+case 0: {
+ BA.debugLineNum = 246;BA.debugLine="Case \"Task\": taskrb.Checked = True";
+Debug.ShouldStop(2097152);
+day_module.mostCurrent._taskrb.runMethodAndSync(true,"setChecked",day_module.mostCurrent.__c.getField(true,"True"));
+ break; }
+case 1: {
+ BA.debugLineNum = 247;BA.debugLine="Case \"Event\": eventrb.Checked = True";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._eventrb.runMethodAndSync(true,"setChecked",day_module.mostCurrent.__c.getField(true,"True"));
+ break; }
+case 2: {
+ BA.debugLineNum = 248;BA.debugLine="Case \"Birthday\": birthdayrb.Checked = True";
+Debug.ShouldStop(8388608);
+day_module.mostCurrent._birthdayrb.runMethodAndSync(true,"setChecked",day_module.mostCurrent.__c.getField(true,"True"));
+ break; }
+case 3: {
+ BA.debugLineNum = 249;BA.debugLine="Case \"OOO\": ooorb.Checked = True";
+Debug.ShouldStop(16777216);
+day_module.mostCurrent._ooorb.runMethodAndSync(true,"setChecked",day_module.mostCurrent.__c.getField(true,"True"));
+ break; }
+}
+;
+ BA.debugLineNum = 251;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _updatetimeline() throws Exception{
+try {
+		Debug.PushSubsStack("UpdateTimeLine (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,140);
+if (RapidSub.canDelegate("updatetimeline")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","updatetimeline");}
+ BA.debugLineNum = 140;BA.debugLine="Sub UpdateTimeLine";
+Debug.ShouldStop(2048);
+ BA.debugLineNum = 141;BA.debugLine="DrawMainEvents";
+Debug.ShouldStop(4096);
+_drawmainevents();
+ BA.debugLineNum = 142;BA.debugLine="DrawHourLabels";
+Debug.ShouldStop(8192);
+_drawhourlabels();
+ BA.debugLineNum = 143;BA.debugLine="DrawTimelineEvents";
+Debug.ShouldStop(16384);
+_drawtimelineevents();
+ BA.debugLineNum = 144;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _x_eventinfo_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("x_EventInfo_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,456);
+if (RapidSub.canDelegate("x_eventinfo_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","x_eventinfo_btn_click");}
+ BA.debugLineNum = 456;BA.debugLine="Private Sub x_EventInfo_btn_Click";
+Debug.ShouldStop(128);
+ BA.debugLineNum = 457;BA.debugLine="eventInfo_panel.Visible = False";
+Debug.ShouldStop(256);
+day_module.mostCurrent._eventinfo_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 458;BA.debugLine="EditInfoPanel.visible = False";
+Debug.ShouldStop(512);
+day_module.mostCurrent._editinfopanel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 459;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _x_tlevent_btn_click() throws Exception{
+try {
+		Debug.PushSubsStack("x_TLevent_btn_Click (day_module) ","day_module",17,day_module.mostCurrent.activityBA,day_module.mostCurrent,501);
+if (RapidSub.canDelegate("x_tlevent_btn_click")) { return b4a.example.day_module.remoteMe.runUserSub(false, "day_module","x_tlevent_btn_click");}
+ BA.debugLineNum = 501;BA.debugLine="Private Sub x_TLevent_btn_Click";
+Debug.ShouldStop(1048576);
+ BA.debugLineNum = 502;BA.debugLine="addEventTL_panel.Visible = False";
+Debug.ShouldStop(2097152);
+day_module.mostCurrent._addeventtl_panel.runMethod(true,"setVisible",day_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 503;BA.debugLine="addTL_et.text = \"\"";
+Debug.ShouldStop(4194304);
+day_module.mostCurrent._addtl_et.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 504;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+}
