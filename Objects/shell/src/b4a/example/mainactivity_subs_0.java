@@ -60,12 +60,12 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
- BA.debugLineNum = 32;BA.debugLine="kvs.Initialize(File.DirInternal, \"notes_data\")";
+ BA.debugLineNum = 32;BA.debugLine="kvs = Starter.notesKvs";
 Debug.ShouldStop(-2147483648);
-parent._kvs.runVoidMethod ("_initialize",mainactivity.processBA,(Object)(parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("notes_data")));
- BA.debugLineNum = 33;BA.debugLine="kvsPref.Initialize(File.DirInternal, \"prefData\")";
+parent._kvs = parent.mostCurrent._starter._noteskvs /*RemoteObject*/ ;
+ BA.debugLineNum = 33;BA.debugLine="kvsPref = Starter.prefKvs";
 Debug.ShouldStop(1);
-parent._kvspref.runVoidMethod ("_initialize",mainactivity.processBA,(Object)(parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("prefData")));
+parent._kvspref = parent.mostCurrent._starter._prefkvs /*RemoteObject*/ ;
  BA.debugLineNum = 34;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
 Debug.ShouldStop(2);
 parent._timerclock.runVoidMethod ("Initialize",mainactivity.processBA,(Object)(BA.ObjectToString("timerClock")),(Object)(BA.numberCast(long.class, 1000)));

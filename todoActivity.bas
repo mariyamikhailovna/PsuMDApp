@@ -56,7 +56,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	newAddTaskBtn
 	tasksList.GetBase.Visible = False
 	
-	kvs.Initialize(File.DirInternal, "todoListData")
+	kvs = Starter.taskKvs
 	
 	If kvs.ContainsKey("lists") Then
 		Dim savedLists As List = kvs.Get("lists")

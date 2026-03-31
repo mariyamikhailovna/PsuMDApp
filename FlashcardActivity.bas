@@ -60,12 +60,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	'recoloring label color for each list view (default color is gray - not visible)
 	LVdecks.SingleLineLayout.Label.textcolor = Colors.black
 	
-	kvs.Initialize(File.DirInternal, "mydata")
-	If  kvs.ContainsKey("deck_data") Then
-		deck = kvs.Get("deck_data")
-	Else
-		deck.Initialize
-	End If
+	kvs = Starter.deckKvs
+	deck = Starter.deck
 	
 	'deck.Put("Math", subdeck)
 	

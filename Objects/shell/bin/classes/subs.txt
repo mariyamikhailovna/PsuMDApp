@@ -6,16 +6,16 @@ keyvaluestore
 2
 b4xgifview
 keyvaluestore
-main,activity_create,1,0,26,30
+main,activity_create,1,0,26,31
 ,loadingscreen
 ,loadingscreen
 b4xgifview,setgif,b4xgifview,setgif2,b4xgifview,setbitmap,b4xgifview,resizebasedonimage
-main,activity_resume,0,0,32,34
-
+main,activity_resume,0,0,33,35
+starter,finishedinit
 
 ,startload
-main,startload,0,0,36,41
-
+main,startload,0,1,37,48
+starter,finishedinit
 
 
 main,globals,0,1,22,24
@@ -59,8 +59,8 @@ b4xgifview,setgif2,0,0,55,71
 
 ,setbitmap,,resizebasedonimage
 mainactivity,activity_create,1,0,29,77
-,hsv,,kvs,,kvspref,,timerclock,,size,,reglayout,,xui,,darkmodelayout,starter,themenumber,,clocklightbtn,,computergif,,clockbtn,,dcomputergif,starter,darkmode
-,hsv,,reglayout,,darkmodelayout,,clocklightbtn,,computergif,,clockbtn,,dcomputergif
+,hsv,,kvs,starter,noteskvs,,kvspref,starter,prefkvs,,timerclock,,size,,reglayout,,xui,,darkmodelayout,starter,themenumber,,clocklightbtn,,computergif,,clockbtn,,dcomputergif,starter,darkmode
+,hsv,,kvs,,kvspref,,reglayout,,darkmodelayout,,clocklightbtn,,computergif,,clockbtn,,dcomputergif
 b4xgifview,setgif,b4xgifview,setgif2,b4xgifview,setbitmap,b4xgifview,resizebasedonimage
 mainactivity,activity_pause,0,0,109,111
 
@@ -506,23 +506,19 @@ themeactivity,process_globals,0,1,6,11
 ,themepage
 ,themepage
 
-musicservice,copytracksifneeded,0,0,47,61
-,musicplaylist
-
-
-musicservice,nextsong,0,0,104,110
+musicservice,nextsong,0,0,86,92
 ,currentsong,,musicplaylist,,mediaplayer
 ,currentsong
 ,playsong
-musicservice,playsong,0,0,84,93
+musicservice,playsong,0,0,65,74
 ,mediaplayer,,musicplaylist,,currentsong
 
 
-musicservice,pausetoggle,0,0,71,77
+musicservice,pausetoggle,0,0,52,58
 ,mediaplayer
 
 
-musicservice,prevsong,0,0,112,118
+musicservice,prevsong,0,0,94,100
 ,currentsong,,musicplaylist,,mediaplayer
 ,currentsong
 ,playsong
@@ -530,23 +526,27 @@ musicservice,process_globals,0,1,6,11
 
 
 
-musicservice,service_create,0,0,13,45
+musicservice,service_create,0,0,13,41
 ,mediaplayer,,musicplaylist,,currentsong,,songtimer
 ,currentsong
-,copytracksifneeded,,playsong
-musicservice,service_destroy,0,0,67,69
+
+musicservice,service_destroy,0,0,48,50
 
 
 
-musicservice,service_start,0,0,63,65
+musicservice,service_start,0,0,43,46
+starter,finishedinit,,mediaplayer,,musicplaylist,,currentsong
 
+,waitstarter,,playsong
+musicservice,waitstarter,0,1,102,112
+starter,finishedinit,,mediaplayer,,musicplaylist,,currentsong
 
-
-musicservice,setsong,0,0,79,82
+,playsong
+musicservice,setsong,0,0,60,63
 ,currentsong,,mediaplayer,,musicplaylist
 ,currentsong
 ,playsong
-musicservice,songtimer_tick,0,0,95,103
+musicservice,songtimer_tick,0,0,76,84
 ,mediaplayer,,currentsong,,musicplaylist
 ,currentsong
 ,nextsong,,playsong
@@ -762,43 +762,43 @@ all_active_recall,showanswerbtn_click,0,0,94,106
 ,cards,,currentindex,,showanswerbtn,,answer,,nextbtn
 
 
-calendaractivity,activity_create,1,0,45,104
-starter,darkmode,,calendarpanel,,menupanel,,month_btn,,monthsp,,weekpanel,,yearsp,,kvs,,calendarmap,,months,,day_of_week
-,calendarpanel,,menupanel,,month_btn,,monthsp,,weekpanel,,yearsp,,calendarmap,,day_of_week
+calendaractivity,activity_create,1,0,45,98
+starter,darkmode,,calendarpanel,,menupanel,,month_btn,,monthsp,,weekpanel,,yearsp,,kvs,starter,calkvs,,calendarmap,starter,calendarmap,,months,,day_of_week
+,calendarpanel,,menupanel,,month_btn,,monthsp,,weekpanel,,yearsp,,kvs,,calendarmap,,day_of_week
 ,drawcalendar,,weekday,,daysinamonth,,identifycolor
-calendaractivity,drawcalendar,0,0,111,236
+calendaractivity,drawcalendar,0,0,105,230
 ,calendarpanel,,calendarmap
 
 ,daysinamonth,,identifycolor
-calendaractivity,weekday,0,0,287,303
+calendaractivity,weekday,0,0,281,297
 ,day_of_week
 ,day_of_week
 
-calendaractivity,activity_pause,0,0,309,311
+calendaractivity,activity_pause,0,0,303,305
 
 
 
-calendaractivity,activity_resume,0,0,305,307
+calendaractivity,activity_resume,0,0,299,301
 
 
 
-calendaractivity,cell_click_click,0,0,254,263
+calendaractivity,cell_click_click,0,0,248,257
 day_module,currentdate
 day_module,currentdate
 
-calendaractivity,cleandebugger,0,0,106,109
+calendaractivity,cleandebugger,0,0,100,103
 ,calendarmap,,kvs
 
 
-calendaractivity,day_btn_click,0,0,335,347
+calendaractivity,day_btn_click,0,0,329,341
 day_module,currentdate
 day_module,currentdate
 
-calendaractivity,daysinamonth,0,0,266,285
+calendaractivity,daysinamonth,0,0,260,279
 
 
 
-calendaractivity,identifycolor,0,0,238,251
+calendaractivity,identifycolor,0,0,232,245
 
 
 
@@ -806,15 +806,15 @@ calendaractivity,globals,0,1,16,43
 ,months
 
 
-calendaractivity,menu_btn_click,0,0,326,328
+calendaractivity,menu_btn_click,0,0,320,322
 ,menupanel
 
 
-calendaractivity,month_btn_click,0,0,349,351
+calendaractivity,month_btn_click,0,0,343,345
 ,menupanel
 
 
-calendaractivity,monthsp_itemclick,0,0,314,318
+calendaractivity,monthsp_itemclick,0,0,308,312
 ,calendarpanel,,calendarmap
 
 ,drawcalendar,,daysinamonth,,identifycolor
@@ -822,11 +822,11 @@ calendaractivity,process_globals,0,1,7,14
 
 
 
-calendaractivity,sched_btn_click,0,0,330,333
+calendaractivity,sched_btn_click,0,0,324,327
 
 
 
-calendaractivity,yearsp_itemclick,0,0,320,324
+calendaractivity,yearsp_itemclick,0,0,314,318
 ,monthsp,,calendarpanel,,calendarmap
 
 ,drawcalendar,,daysinamonth,,identifycolor
@@ -1086,79 +1086,79 @@ deck_all_cards,process_globals,0,1,6,10
 
 
 
-flashcardactivity,activity_create,1,0,38,70
-starter,darkmode,,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,,deck
-,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,deck
+flashcardactivity,activity_create,1,0,38,66
+starter,darkmode,,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,starter,deckkvs,,deck,starter,deck
+,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,,deck
 ,refreshbtn_click
-flashcardactivity,refreshbtn_click,0,0,132,138
+flashcardactivity,refreshbtn_click,0,0,128,134
 ,lvdecks,,deck
 
 
-flashcardactivity,activity_pause,0,0,76,78
+flashcardactivity,activity_pause,0,0,72,74
 
 
 
-flashcardactivity,activity_resume,0,0,72,74
+flashcardactivity,activity_resume,0,0,68,70
 
 
 
-flashcardactivity,addbtn_click,0,0,84,90
+flashcardactivity,addbtn_click,0,0,80,86
 ,addpanel
 
 
-flashcardactivity,addcards_click,0,0,155,163
+flashcardactivity,addcards_click,0,0,151,159
 ,deck,,item_longclick,,decksettingpanel
 
 
-flashcardactivity,browse_cards_click,0,0,180,183
+flashcardactivity,browse_cards_click,0,0,176,179
 ,decksettingpanel
 
 
-flashcardactivity,cancel_click,1,0,92,97
+flashcardactivity,cancel_click,1,0,88,93
 ,addpanel,,et1
 
 
-flashcardactivity,cancelbtn_click,0,0,185,187
+flashcardactivity,cancelbtn_click,0,0,181,183
 ,decksettingpanel
 
 
-flashcardactivity,canceldelete_click,0,0,248,250
+flashcardactivity,canceldelete_click,0,0,244,246
 ,deleteconfirmation
 
 
-flashcardactivity,cancelnew_click,1,0,210,213
+flashcardactivity,cancelnew_click,1,0,206,209
 ,newdeckname,,renamepanel
 
 
-flashcardactivity,cancelnewsubdeck_click,1,0,236,239
+flashcardactivity,cancelnewsubdeck_click,1,0,232,235
 ,newsubdecket,,newsubdeckpanel
 
 
-flashcardactivity,confirmdelete_click,0,0,241,246
+flashcardactivity,confirmdelete_click,0,0,237,242
 ,deck,,item_longclick,,decksettingpanel,,deleteconfirmation,,lvdecks
 
 ,refreshbtn_click
-flashcardactivity,confirmnew_click,1,0,189,208
+flashcardactivity,confirmnew_click,1,0,185,204
 ,newdeckname,,deck,,item_longclick,,renamepanel,,kvs,,lvdecks
 
 ,savedecks,,refreshbtn_click
-flashcardactivity,savedecks,0,0,80,82
+flashcardactivity,savedecks,0,0,76,78
 ,kvs,,deck
 
 
-flashcardactivity,create_click,1,0,100,130
+flashcardactivity,create_click,1,0,96,126
 ,deck,,et1,,addpanel,,lvdecks,,kvs
 
 ,savedecks
-flashcardactivity,create_subdeck_click,0,0,175,178
+flashcardactivity,create_subdeck_click,0,0,171,174
 ,newsubdeckpanel,,decksettingpanel
 
 
-flashcardactivity,createnewsubdeck_click,1,0,215,234
+flashcardactivity,createnewsubdeck_click,1,0,211,230
 ,newsubdecket,,deck,,item_longclick,,newsubdeckpanel,,kvs
 
 ,savedecks
-flashcardactivity,delete_deck_click,0,0,170,173
+flashcardactivity,delete_deck_click,0,0,166,169
 ,decksettingpanel,,deleteconfirmation
 
 
@@ -1166,11 +1166,11 @@ flashcardactivity,globals,0,1,19,36
 
 
 
-flashcardactivity,lvdecks_itemclick,0,0,140,144
+flashcardactivity,lvdecks_itemclick,0,0,136,140
 ,selecteddeck
 ,selecteddeck
 
-flashcardactivity,lvdecks_itemlongclick,0,0,146,151
+flashcardactivity,lvdecks_itemlongclick,0,0,142,147
 ,decksettingpanel,,item_longclick,,selecteddeck
 ,item_longclick,,selecteddeck
 
@@ -1178,23 +1178,23 @@ flashcardactivity,process_globals,0,1,6,17
 
 
 
-flashcardactivity,rename_deck_click,0,0,165,168
+flashcardactivity,rename_deck_click,0,0,161,164
 ,decksettingpanel,,renamepanel
 
 
-musicactivity,activity_create,1,0,19,41
-starter,darkmode,,listview1,,pausebtn,,seekbar1,,songruntime,,songtitle,musicservice,musicplaylist,,uitimer
+musicactivity,activity_create,1,1,19,43
+starter,darkmode,,listview1,,pausebtn,,seekbar1,,songruntime,,songtitle,musicservice,mediaplayer,musicservice,musicplaylist,,uitimer
 ,listview1,,pausebtn,,seekbar1,,songruntime,,songtitle
 
-musicactivity,activity_pause,0,0,47,49
+musicactivity,activity_pause,0,0,49,51
 
 
 
-musicactivity,activity_resume,0,0,43,45
+musicactivity,activity_resume,0,0,45,47
 
 
 
-musicactivity,formatsongdur,0,0,51,56
+musicactivity,formatsongdur,0,0,53,58
 
 
 
@@ -1202,19 +1202,19 @@ musicactivity,globals,0,1,11,17
 
 
 
-musicactivity,listview1_itemclick,0,0,97,99
+musicactivity,listview1_itemclick,0,0,99,101
 musicservice,currentsong,musicservice,mediaplayer,musicservice,musicplaylist
 musicservice,currentsong
 musicservice,setsong,musicservice,playsong
-musicactivity,nextbtn_click,0,0,85,87
+musicactivity,nextbtn_click,0,0,87,89
 musicservice,currentsong,musicservice,musicplaylist,musicservice,mediaplayer
 musicservice,currentsong
 musicservice,nextsong,musicservice,playsong
-musicactivity,pausebtn_click,0,0,93,95
+musicactivity,pausebtn_click,0,0,95,97
 musicservice,mediaplayer
 
 musicservice,pausetoggle
-musicactivity,prevbtn_click,0,0,89,91
+musicactivity,prevbtn_click,0,0,91,93
 musicservice,currentsong,musicservice,musicplaylist,musicservice,mediaplayer
 musicservice,currentsong
 musicservice,prevsong,musicservice,playsong
@@ -1222,11 +1222,11 @@ musicactivity,process_globals,0,1,6,9
 
 
 
-musicactivity,seekbar1_valuechanged,0,0,79,83
+musicactivity,seekbar1_valuechanged,0,0,81,85
 musicservice,mediaplayer
 
 
-musicactivity,uitimer_tick,0,0,59,77
+musicactivity,uitimer_tick,0,0,61,79
 musicservice,mediaplayer,musicservice,musicplaylist,musicservice,currentsong,,seekbar1,,songruntime,,songtitle,,pausebtn
 
 ,formatsongdur
@@ -1346,27 +1346,31 @@ schedule_module,sched_btn_click,0,0,194,196
 ,menupanel
 
 
-starter,application_error,0,0,38,40
+starter,application_error,0,0,63,65
 
 
 
-starter,process_globals,0,1,6,11
-,darkmode,,themenumber
-,darkmode,,themenumber
-
-starter,service_create,0,0,13,27
-,darkmode,,themenumber
-,darkmode,,themenumber
-
-starter,service_destroy,0,0,42,44
+starter,copytracksifneeded,0,0,71,104
 
 
 
-starter,service_start,0,0,29,31
+starter,process_globals,0,1,6,19
+,darkmode,,themenumber,,finishedinit
+,darkmode,,themenumber,,finishedinit
+
+starter,service_create,0,0,21,52
+,prefkvs,,darkmode,,themenumber,,calkvs,,calendarmap,,deckkvs,,deck,,taskkvs,,noteskvs,,finishedinit
+,darkmode,,themenumber,,calendarmap,,deck,,finishedinit
+,copytracksifneeded
+starter,service_destroy,0,0,67,69
 
 
 
-starter,service_taskremoved,0,0,33,35
+starter,service_start,0,0,54,56
+
+
+
+starter,service_taskremoved,0,0,58,60
 
 
 
@@ -1475,8 +1479,8 @@ subdeck_module,startarbtn_click,0,0,169,176
 
 
 todoactivity,activity_create,1,0,38,62
-starter,darkmode,,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist,,kvs,,addtaskbtnpnl,,addtaskbtn
-,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist
+starter,darkmode,,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist,,kvs,starter,taskkvs,,addtaskbtnpnl,,addtaskbtn
+,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist,,kvs
 ,newaddtaskbtn
 todoactivity,newaddtaskbtn,0,0,72,84
 ,addtaskbtnpnl,,addtaskbtn,,taskslist

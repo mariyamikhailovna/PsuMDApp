@@ -355,7 +355,8 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("loadingLayout")
 	loadingScreen.SetGif(File.DirAssets, "loading.GIF")
-	StartService(musicService)
+	StartService(Starter)
+	
 End Sub
 
 Sub Activity_Resume
@@ -363,8 +364,14 @@ Sub Activity_Resume
 End Sub
 
 Sub startLoad As ResumableSub
-	Sleep(2000)
+	Sleep(750)
+	
+	Do While Starter.finishedInit = False
+		Sleep(100)
+	Loop
+	StartService(musicService)
 	StartActivity(MainActivity)
+	
 	Activity.Finish
 	Return True
 End Sub

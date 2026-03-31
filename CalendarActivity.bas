@@ -58,14 +58,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	Month_btn.Color = Colors.blue
 	
-	kvs.Initialize(File.DirInternal, "mydata")
-	
-	If kvs.ContainsKey("CalendarKVS") Then
-		CalendarMap = kvs.Get("CalendarKVS")
-	Else
-		CalendarMap.initialize
-	End If
-	
+	kvs = Starter.calKvs
+	CalendarMap = Starter.calendarMap
 	
 	'Year Spinner
 	Dim currentyear As Int = DateTime.GetYear(DateTime.Now)

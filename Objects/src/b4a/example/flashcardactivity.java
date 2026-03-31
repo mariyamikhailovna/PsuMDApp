@@ -421,24 +421,16 @@ RDebugUtils.currentLine=18939921;
  //BA.debugLineNum = 18939921;BA.debugLine="LVdecks.SingleLineLayout.Label.textcolor = Colors";
 mostCurrent._lvdecks.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
 RDebugUtils.currentLine=18939923;
- //BA.debugLineNum = 18939923;BA.debugLine="kvs.Initialize(File.DirInternal, \"mydata\")";
-_kvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"mydata");
+ //BA.debugLineNum = 18939923;BA.debugLine="kvs = Starter.deckKvs";
+_kvs = mostCurrent._starter._deckkvs /*b4a.example3.keyvaluestore*/ ;
 RDebugUtils.currentLine=18939924;
- //BA.debugLineNum = 18939924;BA.debugLine="If  kvs.ContainsKey(\"deck_data\") Then";
-if (_kvs._containskey("deck_data")) { 
-RDebugUtils.currentLine=18939925;
- //BA.debugLineNum = 18939925;BA.debugLine="deck = kvs.Get(\"deck_data\")";
-_deck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(_kvs._get("deck_data")));
- }else {
-RDebugUtils.currentLine=18939927;
- //BA.debugLineNum = 18939927;BA.debugLine="deck.Initialize";
-_deck.Initialize();
- };
-RDebugUtils.currentLine=18939933;
- //BA.debugLineNum = 18939933;BA.debugLine="refreshbtn_Click";
+ //BA.debugLineNum = 18939924;BA.debugLine="deck = Starter.deck";
+_deck = mostCurrent._starter._deck /*anywheresoftware.b4a.objects.collections.Map*/ ;
+RDebugUtils.currentLine=18939929;
+ //BA.debugLineNum = 18939929;BA.debugLine="refreshbtn_Click";
 _refreshbtn_click();
-RDebugUtils.currentLine=18939936;
- //BA.debugLineNum = 18939936;BA.debugLine="End Sub";
+RDebugUtils.currentLine=18939932;
+ //BA.debugLineNum = 18939932;BA.debugLine="End Sub";
 return "";
 }
 public static String  _refreshbtn_click() throws Exception{

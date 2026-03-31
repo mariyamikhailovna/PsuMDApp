@@ -14,22 +14,47 @@ Sub Process_Globals
 	'These variables can be accessed from all modules.
 	Public darkMode As Boolean = False
 	Public themeNumber As Int = 0
+	Public notesKvs As KeyValueStore
+	Public prefKvs As KeyValueStore
+	Public calKvs As KeyValueStore
+	Public calendarMap As Map
+	Public deckKvs As KeyValueStore
+	Public taskKvs As KeyValueStore
+	Public deck As Map
+	Public finishedInit As Boolean = False
 End Sub
 
 Sub Service_Create
-	Dim kvs As KeyValueStore
-	kvs.Initialize(File.DirInternal, "prefData")
+	prefKvs.Initialize(File.DirInternal, "prefData")
 	
-	If kvs.ContainsKey("darkMode") Then
-		darkMode = kvs.Get("darkMode")
+	If prefKvs.ContainsKey("darkMode") Then
+		darkMode = prefKvs.Get("darkMode")
 	End If
 	
-	If kvs.ContainsKey("themeNumber") Then
-		themeNumber = kvs.Get("themeNumber")
+	If prefKvs.ContainsKey("themeNumber") Then
+		themeNumber = prefKvs.Get("themeNumber")
 	End If
-	'This is the program entry point.
-	'This is a good place to load resources that are not specific to a single activity.
-
+	
+	calKvs.Initialize(File.DirInternal, "mydata")
+	If calKvs.ContainsKey("CalendarKVS") Then
+		calendarMap = calKvs.Get("CalendarKVS")
+	Else
+		calendarMap.Initialize
+	End If
+	
+	deckKvs.Initialize(File.DirInternal, "mydata")
+	If deckKvs.ContainsKey("deck_data") Then
+		deck = deckKvs.Get("deck_data")
+	Else
+		deck.Initialize
+	End If
+	
+	taskKvs.Initialize(File.DirInternal, "todoListData")
+	notesKvs.Initialize(File.DirInternal, "notes_data")
+	
+	CopyTracksIfNeeded
+	
+	finishedInit = True
 End Sub
 
 Sub Service_Start (StartingIntent As Intent)
@@ -47,4 +72,39 @@ End Sub
 
 Sub Service_Destroy
 
+End Sub
+
+Sub CopyTracksIfNeeded
+	Dim playlist As List
+	playlist.Initialize
+	playlist.Add("tracks/intro.mp3")
+	playlist.Add("tracks/taiyaki.mp3")
+	playlist.Add("tracks/feel special.mp3")
+	playlist.Add("tracks/union.mp3")
+	playlist.Add("tracks/two in the morning.mp3")
+	playlist.Add("tracks/happily ever after.mp3")
+	playlist.Add("tracks/cookie.mp3")
+	playlist.Add("tracks/comfy vibes.mp3")
+	playlist.Add("tracks/dango.mp3")
+	playlist.Add("tracks/iced caramel macchiato.mp3")
+	playlist.Add("tracks/in dreamland.mp3")
+	playlist.Add("tracks/space aquarium.mp3")
+	playlist.Add("tracks/sunshine & butterflies.mp3")
+	playlist.Add("tracks/soda pop.mp3")
+	playlist.Add("tracks/matcha latte.mp3")
+	playlist.Add("tracks/midnight.mp3")
+	playlist.Add("tracks/rose water.mp3")
+	playlist.Add("tracks/hot.mp3")
+	playlist.Add("tracks/on the top.mp3")
+
+	If File.Exists(File.DirInternal, "tracks") = False Then
+		File.MakeDir(File.DirInternal, "tracks")
+	End If
+	For i = 0 To playlist.Size - 1
+		Dim trackName As String = playlist.Get(i)
+		Dim fileName As String = trackName.SubString(trackName.LastIndexOf("/") + 1)
+		If File.Exists(File.DirInternal & "/tracks", fileName) = False Then
+			File.Copy(File.DirAssets, trackName, File.DirInternal & "/tracks", fileName)
+		End If
+	Next
 End Sub

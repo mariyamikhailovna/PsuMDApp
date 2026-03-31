@@ -38,9 +38,9 @@ _newaddtaskbtn();
  BA.debugLineNum = 51;BA.debugLine="tasksList.GetBase.Visible = False";
 Debug.ShouldStop(262144);
 todoactivity.mostCurrent._taskslist.runMethod(false,"_getbase").runMethod(true,"setVisible",todoactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 53;BA.debugLine="kvs.Initialize(File.DirInternal, \"todoListData\")";
+ BA.debugLineNum = 53;BA.debugLine="kvs = Starter.taskKvs";
 Debug.ShouldStop(1048576);
-todoactivity._kvs.runVoidMethod ("_initialize",todoactivity.processBA,(Object)(todoactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("todoListData")));
+todoactivity._kvs = todoactivity.mostCurrent._starter._taskkvs /*RemoteObject*/ ;
  BA.debugLineNum = 55;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
 Debug.ShouldStop(4194304);
 if (todoactivity._kvs.runMethod(true,"_containskey",(Object)(RemoteObject.createImmutable("lists"))).<Boolean>get().booleanValue()) { 

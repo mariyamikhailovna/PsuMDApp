@@ -5,7 +5,7 @@ Type=Service
 Version=13.4
 @EndOfDesignText@
 #Region  Service Attributes 
-	#StartAtBoot: True
+	#StartAtBoot: False
 	
 #End Region
 
@@ -40,34 +40,15 @@ Sub Service_Create
 	musicPlaylist.Add("tracks/hot.mp3")
 	musicPlaylist.Add("tracks/on the top.mp3")
 
-	' Copy tracks to internal storage if not already done
-	CopyTracksIfNeeded
-
 	currentSong = 0
-	playSong
 
 	songTimer.Initialize("songTimer", 500)
 	songTimer.Enabled = True
 End Sub
 
-Sub CopyTracksIfNeeded
-	' Create the tracks folder in internal storage if it doesn't exist
-	If File.Exists(File.DirInternal, "tracks") = False Then
-		File.MakeDir(File.DirInternal, "tracks")
-	End If
-
-	' Copy each track from assets to internal storage
-	For i = 0 To musicPlaylist.Size - 1
-		Dim trackName As String = musicPlaylist.Get(i)  ' e.g. "tracks/intro.mp3"
-		Dim fileName As String = trackName.SubString(trackName.LastIndexOf("/") + 1)
-		If File.Exists(File.DirInternal & "/tracks", fileName) = False Then
-			File.Copy(File.DirAssets, trackName, File.DirInternal & "/tracks", fileName)
-		End If
-	Next
-End Sub
-
 Sub Service_Start (StartingIntent As Intent)
-	Service.StopAutomaticForeground 'Call this when the background task completes (if there is one)
+	Service.StopAutomaticForeground
+	Wait For (waitStarter) Complete (qiu As Boolean)
 End Sub
 
 Sub Service_Destroy
@@ -107,6 +88,7 @@ Sub songTimer_Tick
 		End If
 	End If
 End Sub
+
 Sub nextSong
 	currentSong = currentSong + 1
 	If currentSong >= musicPlaylist.Size Then
@@ -121,4 +103,16 @@ Sub prevSong
 		currentSong = musicPlaylist.Size - 1
 	End If
 	playSong
+End Sub
+
+Sub waitStarter As ResumableSub
+	Do While Starter.finishedInit = False
+		Sleep(100)
+	Loop
+    
+	If mediaPlayer.IsPlaying = False Then
+		playSong
+	End If
+    
+	Return True
 End Sub

@@ -35,8 +35,8 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layouthsv")
 	If FirstTime Then
-		kvs.Initialize(File.DirInternal, "notes_data")
-		kvsPref.Initialize(File.DirInternal, "prefData")
+		kvs = Starter.notesKvs
+		kvsPref = Starter.prefKvs
 		timerClock.Initialize("timerClock", 1000)
 		timerClock.Enabled = True
 	End If

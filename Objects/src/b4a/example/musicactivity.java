@@ -397,40 +397,44 @@ RDebugUtils.currentLine=20512773;
 mostCurrent._activity.LoadLayout("musicLayoutDark.bal",mostCurrent.activityBA);
  };
 RDebugUtils.currentLine=20512777;
- //BA.debugLineNum = 20512777;BA.debugLine="StartService(musicService)";
+ //BA.debugLineNum = 20512777;BA.debugLine="If musicService.mediaPlayer.IsInitialized = False";
+if (mostCurrent._musicservice._mediaplayer /*anywheresoftware.b4a.objects.MediaPlayerWrapper*/ .IsInitialized()==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=20512778;
+ //BA.debugLineNum = 20512778;BA.debugLine="StartService(musicService)";
 anywheresoftware.b4a.keywords.Common.StartService(processBA,(Object)(mostCurrent._musicservice.getObject()));
-RDebugUtils.currentLine=20512779;
- //BA.debugLineNum = 20512779;BA.debugLine="For i = 0 To musicService.musicPlaylist.Size - 1";
-{
-final int step7 = 1;
-final int limit7 = (int) (mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .getSize()-1);
-_i = (int) (0) ;
-for (;_i <= limit7 ;_i = _i + step7 ) {
-RDebugUtils.currentLine=20512780;
- //BA.debugLineNum = 20512780;BA.debugLine="Dim title As String = musicService.musicPlaylist";
-_title = BA.ObjectToString(mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .Get(_i));
+ };
 RDebugUtils.currentLine=20512781;
- //BA.debugLineNum = 20512781;BA.debugLine="title = title.SubString2(0, title.Length - 4)  '";
-_title = _title.substring((int) (0),(int) (_title.length()-4));
+ //BA.debugLineNum = 20512781;BA.debugLine="For i = 0 To musicService.musicPlaylist.Size - 1";
+{
+final int step9 = 1;
+final int limit9 = (int) (mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .getSize()-1);
+_i = (int) (0) ;
+for (;_i <= limit9 ;_i = _i + step9 ) {
 RDebugUtils.currentLine=20512782;
- //BA.debugLineNum = 20512782;BA.debugLine="title = title.SubString(7)";
-_title = _title.substring((int) (7));
+ //BA.debugLineNum = 20512782;BA.debugLine="Dim title As String = musicService.musicPlaylist";
+_title = BA.ObjectToString(mostCurrent._musicservice._musicplaylist /*anywheresoftware.b4a.objects.collections.List*/ .Get(_i));
 RDebugUtils.currentLine=20512783;
- //BA.debugLineNum = 20512783;BA.debugLine="ListView1.AddSingleLine((i + 1) & \"   \" & title)";
-mostCurrent._listview1.AddSingleLine(BA.ObjectToCharSequence(BA.NumberToString((_i+1))+"   "+_title));
+ //BA.debugLineNum = 20512783;BA.debugLine="title = title.SubString2(0, title.Length - 4)  '";
+_title = _title.substring((int) (0),(int) (_title.length()-4));
 RDebugUtils.currentLine=20512784;
- //BA.debugLineNum = 20512784;BA.debugLine="ListView1.SingleLineLayout.Label.TextColor = Col";
+ //BA.debugLineNum = 20512784;BA.debugLine="title = title.SubString(7)";
+_title = _title.substring((int) (7));
+RDebugUtils.currentLine=20512785;
+ //BA.debugLineNum = 20512785;BA.debugLine="ListView1.AddSingleLine((i + 1) & \"   \" & title)";
+mostCurrent._listview1.AddSingleLine(BA.ObjectToCharSequence(BA.NumberToString((_i+1))+"   "+_title));
+RDebugUtils.currentLine=20512786;
+ //BA.debugLineNum = 20512786;BA.debugLine="ListView1.SingleLineLayout.Label.TextColor = Col";
 mostCurrent._listview1.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
  }
 };
-RDebugUtils.currentLine=20512788;
- //BA.debugLineNum = 20512788;BA.debugLine="uiTimer.Initialize(\"uiTimer\", 500)";
-_uitimer.Initialize(processBA,"uiTimer",(long) (500));
-RDebugUtils.currentLine=20512789;
- //BA.debugLineNum = 20512789;BA.debugLine="uiTimer.Enabled = True";
-_uitimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=20512790;
- //BA.debugLineNum = 20512790;BA.debugLine="End Sub";
+ //BA.debugLineNum = 20512790;BA.debugLine="uiTimer.Initialize(\"uiTimer\", 500)";
+_uitimer.Initialize(processBA,"uiTimer",(long) (500));
+RDebugUtils.currentLine=20512791;
+ //BA.debugLineNum = 20512791;BA.debugLine="uiTimer.Enabled = True";
+_uitimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=20512792;
+ //BA.debugLineNum = 20512792;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{

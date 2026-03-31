@@ -166,48 +166,6 @@ public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.starter _starter = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
-public static String  _copytracksifneeded() throws Exception{
-RDebugUtils.currentModule="musicservice";
-if (Debug.shouldDelegate(processBA, "copytracksifneeded", false))
-	 {return ((String) Debug.delegate(processBA, "copytracksifneeded", null));}
-int _i = 0;
-String _trackname = "";
-String _filename = "";
-RDebugUtils.currentLine=9437184;
- //BA.debugLineNum = 9437184;BA.debugLine="Sub CopyTracksIfNeeded";
-RDebugUtils.currentLine=9437186;
- //BA.debugLineNum = 9437186;BA.debugLine="If File.Exists(File.DirInternal, \"tracks\") = Fals";
-if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"tracks")==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=9437187;
- //BA.debugLineNum = 9437187;BA.debugLine="File.MakeDir(File.DirInternal, \"tracks\")";
-anywheresoftware.b4a.keywords.Common.File.MakeDir(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"tracks");
- };
-RDebugUtils.currentLine=9437191;
- //BA.debugLineNum = 9437191;BA.debugLine="For i = 0 To musicPlaylist.Size - 1";
-{
-final int step4 = 1;
-final int limit4 = (int) (_musicplaylist.getSize()-1);
-_i = (int) (0) ;
-for (;_i <= limit4 ;_i = _i + step4 ) {
-RDebugUtils.currentLine=9437192;
- //BA.debugLineNum = 9437192;BA.debugLine="Dim trackName As String = musicPlaylist.Get(i)";
-_trackname = BA.ObjectToString(_musicplaylist.Get(_i));
-RDebugUtils.currentLine=9437193;
- //BA.debugLineNum = 9437193;BA.debugLine="Dim fileName As String = trackName.SubString(tra";
-_filename = _trackname.substring((int) (_trackname.lastIndexOf("/")+1));
-RDebugUtils.currentLine=9437194;
- //BA.debugLineNum = 9437194;BA.debugLine="If File.Exists(File.DirInternal & \"/tracks\", fil";
-if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal()+"/tracks",_filename)==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=9437195;
- //BA.debugLineNum = 9437195;BA.debugLine="File.Copy(File.DirAssets, trackName, File.DirIn";
-anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),_trackname,anywheresoftware.b4a.keywords.Common.File.getDirInternal()+"/tracks",_filename);
- };
- }
-};
-RDebugUtils.currentLine=9437198;
- //BA.debugLineNum = 9437198;BA.debugLine="End Sub";
-return "";
-}
 public static String  _nextsong() throws Exception{
 RDebugUtils.currentModule="musicservice";
 if (Debug.shouldDelegate(processBA, "nextsong", false))
@@ -375,23 +333,17 @@ _musicplaylist.Add((Object)("tracks/hot.mp3"));
 RDebugUtils.currentLine=9371670;
  //BA.debugLineNum = 9371670;BA.debugLine="musicPlaylist.Add(\"tracks/on the top.mp3\")";
 _musicplaylist.Add((Object)("tracks/on the top.mp3"));
-RDebugUtils.currentLine=9371673;
- //BA.debugLineNum = 9371673;BA.debugLine="CopyTracksIfNeeded";
-_copytracksifneeded();
-RDebugUtils.currentLine=9371675;
- //BA.debugLineNum = 9371675;BA.debugLine="currentSong = 0";
+RDebugUtils.currentLine=9371672;
+ //BA.debugLineNum = 9371672;BA.debugLine="currentSong = 0";
 _currentsong = (int) (0);
-RDebugUtils.currentLine=9371676;
- //BA.debugLineNum = 9371676;BA.debugLine="playSong";
-_playsong();
-RDebugUtils.currentLine=9371678;
- //BA.debugLineNum = 9371678;BA.debugLine="songTimer.Initialize(\"songTimer\", 500)";
+RDebugUtils.currentLine=9371674;
+ //BA.debugLineNum = 9371674;BA.debugLine="songTimer.Initialize(\"songTimer\", 500)";
 _songtimer.Initialize(processBA,"songTimer",(long) (500));
-RDebugUtils.currentLine=9371679;
- //BA.debugLineNum = 9371679;BA.debugLine="songTimer.Enabled = True";
+RDebugUtils.currentLine=9371675;
+ //BA.debugLineNum = 9371675;BA.debugLine="songTimer.Enabled = True";
 _songtimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=9371680;
- //BA.debugLineNum = 9371680;BA.debugLine="End Sub";
+RDebugUtils.currentLine=9371676;
+ //BA.debugLineNum = 9371676;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
@@ -404,18 +356,141 @@ RDebugUtils.currentLine=9568258;
  //BA.debugLineNum = 9568258;BA.debugLine="End Sub";
 return "";
 }
-public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
+public static void  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
 RDebugUtils.currentModule="musicservice";
 if (Debug.shouldDelegate(processBA, "service_start", false))
-	 {return ((String) Debug.delegate(processBA, "service_start", new Object[] {_startingintent}));}
-RDebugUtils.currentLine=9502720;
- //BA.debugLineNum = 9502720;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+	 {Debug.delegate(processBA, "service_start", new Object[] {_startingintent}); return;}
+ResumableSub_Service_Start rsub = new ResumableSub_Service_Start(null,_startingintent);
+rsub.resume(processBA, null);
+}
+public static class ResumableSub_Service_Start extends BA.ResumableSub {
+public ResumableSub_Service_Start(b4a.example.musicservice parent,anywheresoftware.b4a.objects.IntentWrapper _startingintent) {
+this.parent = parent;
+this._startingintent = _startingintent;
+}
+b4a.example.musicservice parent;
+anywheresoftware.b4a.objects.IntentWrapper _startingintent;
+boolean _qiu = false;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="musicservice";
+
+    while (true) {
+        switch (state) {
+            case -1:
+return;
+
+case 0:
+//C
+this.state = -1;
 RDebugUtils.currentLine=9502721;
- //BA.debugLineNum = 9502721;BA.debugLine="Service.StopAutomaticForeground 'Call this when t";
-mostCurrent._service.StopAutomaticForeground();
+ //BA.debugLineNum = 9502721;BA.debugLine="Service.StopAutomaticForeground";
+parent.mostCurrent._service.StopAutomaticForeground();
 RDebugUtils.currentLine=9502722;
- //BA.debugLineNum = 9502722;BA.debugLine="End Sub";
-return "";
+ //BA.debugLineNum = 9502722;BA.debugLine="Wait For (waitStarter) Complete (qiu As Boolean)";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "musicservice", "service_start"), _waitstarter());
+this.state = 1;
+return;
+case 1:
+//C
+this.state = -1;
+_qiu = (Boolean) result[0];
+;
+RDebugUtils.currentLine=9502723;
+ //BA.debugLineNum = 9502723;BA.debugLine="End Sub";
+if (true) break;
+
+            }
+        }
+    }
+}
+public static anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _waitstarter() throws Exception{
+RDebugUtils.currentModule="musicservice";
+if (Debug.shouldDelegate(processBA, "waitstarter", false))
+	 {return ((anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) Debug.delegate(processBA, "waitstarter", null));}
+ResumableSub_waitStarter rsub = new ResumableSub_waitStarter(null);
+rsub.resume(processBA, null);
+return (anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper(), rsub);
+}
+public static class ResumableSub_waitStarter extends BA.ResumableSub {
+public ResumableSub_waitStarter(b4a.example.musicservice parent) {
+this.parent = parent;
+}
+b4a.example.musicservice parent;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="musicservice";
+
+    while (true) {
+        switch (state) {
+            case -1:
+{
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
+case 0:
+//C
+this.state = 1;
+RDebugUtils.currentLine=27197441;
+ //BA.debugLineNum = 27197441;BA.debugLine="Do While Starter.finishedInit = False";
+if (true) break;
+
+case 1:
+//do while
+this.state = 4;
+while (parent.mostCurrent._starter._finishedinit /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) {
+this.state = 3;
+if (true) break;
+}
+if (true) break;
+
+case 3:
+//C
+this.state = 1;
+RDebugUtils.currentLine=27197442;
+ //BA.debugLineNum = 27197442;BA.debugLine="Sleep(100)";
+anywheresoftware.b4a.keywords.Common.Sleep(processBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "musicservice", "waitstarter"),(int) (100));
+this.state = 8;
+return;
+case 8:
+//C
+this.state = 1;
+;
+ if (true) break;
+;
+RDebugUtils.currentLine=27197445;
+ //BA.debugLineNum = 27197445;BA.debugLine="If mediaPlayer.IsPlaying = False Then";
+
+case 4:
+//if
+this.state = 7;
+if (parent._mediaplayer.IsPlaying()==anywheresoftware.b4a.keywords.Common.False) { 
+this.state = 6;
+}if (true) break;
+
+case 6:
+//C
+this.state = 7;
+RDebugUtils.currentLine=27197446;
+ //BA.debugLineNum = 27197446;BA.debugLine="playSong";
+_playsong();
+ if (true) break;
+
+case 7:
+//C
+this.state = -1;
+;
+RDebugUtils.currentLine=27197449;
+ //BA.debugLineNum = 27197449;BA.debugLine="Return True";
+if (true) {
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
+RDebugUtils.currentLine=27197450;
+ //BA.debugLineNum = 27197450;BA.debugLine="End Sub";
+if (true) break;
+
+            }
+        }
+    }
 }
 public static String  _setsong(int _index) throws Exception{
 RDebugUtils.currentModule="musicservice";

@@ -419,8 +419,8 @@ RDebugUtils.currentLine=25296909;
  //BA.debugLineNum = 25296909;BA.debugLine="tasksList.GetBase.Visible = False";
 mostCurrent._taskslist._getbase().setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=25296911;
- //BA.debugLineNum = 25296911;BA.debugLine="kvs.Initialize(File.DirInternal, \"todoListData\")";
-_kvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"todoListData");
+ //BA.debugLineNum = 25296911;BA.debugLine="kvs = Starter.taskKvs";
+_kvs = mostCurrent._starter._taskkvs /*b4a.example3.keyvaluestore*/ ;
 RDebugUtils.currentLine=25296913;
  //BA.debugLineNum = 25296913;BA.debugLine="If kvs.ContainsKey(\"lists\") Then";
 if (_kvs._containskey("lists")) { 

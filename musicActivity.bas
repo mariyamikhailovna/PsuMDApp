@@ -31,7 +31,9 @@ Sub Activity_Create(FirstTime As Boolean)
 	End If
     
 	' Populate ListView from service playlist
-	StartService(musicService)
+	If musicService.mediaPlayer.IsInitialized = False Then
+		StartService(musicService)
+	End If
     
 	For i = 0 To musicService.musicPlaylist.Size - 1
 		Dim title As String = musicService.musicPlaylist.Get(i)

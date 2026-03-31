@@ -433,11 +433,11 @@ case 3:
 //C
 this.state = 4;
 RDebugUtils.currentLine=458755;
- //BA.debugLineNum = 458755;BA.debugLine="kvs.Initialize(File.DirInternal, \"notes_data\")";
-parent._kvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"notes_data");
+ //BA.debugLineNum = 458755;BA.debugLine="kvs = Starter.notesKvs";
+parent._kvs = parent.mostCurrent._starter._noteskvs /*b4a.example3.keyvaluestore*/ ;
 RDebugUtils.currentLine=458756;
- //BA.debugLineNum = 458756;BA.debugLine="kvsPref.Initialize(File.DirInternal, \"prefData\")";
-parent._kvspref._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"prefData");
+ //BA.debugLineNum = 458756;BA.debugLine="kvsPref = Starter.prefKvs";
+parent._kvspref = parent.mostCurrent._starter._prefkvs /*b4a.example3.keyvaluestore*/ ;
 RDebugUtils.currentLine=458757;
  //BA.debugLineNum = 458757;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
 parent._timerclock.Initialize(processBA,"timerClock",(long) (1000));
