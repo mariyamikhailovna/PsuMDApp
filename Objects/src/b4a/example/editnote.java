@@ -34,7 +34,7 @@ public class editnote extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.editnote");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.editnote");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class editnote extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static b4a.example.main._mynote _activenote = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _contenttxt = null;
@@ -351,6 +342,7 @@ public anywheresoftware.b4a.objects.ButtonWrapper _savebtn = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _tagstxt = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _titletxt = null;
 public b4a.example.main _main = null;
+public b4a.example.starter _starter = null;
 public b4a.example.mainactivity _mainactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
@@ -360,140 +352,124 @@ public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
-public b4a.example.add_card_module2 _add_card_module2 = null;
-public b4a.example.add_events_module _add_events_module = null;
-public b4a.example.all_active_recall _all_active_recall = null;
 public b4a.example.calendaractivity _calendaractivity = null;
-public b4a.example.card_module _card_module = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.todoactivity _todoactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
+public b4a.example.day_module _day_module = null;
+public b4a.example.add_events_module _add_events_module = null;
+public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.subdeck_module _subdeck_module = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.navactivity _navactivity = null;
-public b4a.example.schedule_module _schedule_module = null;
-public b4a.example.starter _starter = null;
-public b4a.example.subdeck_module _subdeck_module = null;
-public b4a.example.todoactivity _todoactivity = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="editnote";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=6881280;
- //BA.debugLineNum = 6881280;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=6881282;
- //BA.debugLineNum = 6881282;BA.debugLine="If Starter.darkMode = False Then";
+ //BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 24;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=6881283;
- //BA.debugLineNum = 6881283;BA.debugLine="Activity.LoadLayout(\"editnoteLayout\")";
+ //BA.debugLineNum = 25;BA.debugLine="Activity.LoadLayout(\"editnoteLayout\")";
 mostCurrent._activity.LoadLayout("editnoteLayout",mostCurrent.activityBA);
  }else {
-RDebugUtils.currentLine=6881285;
- //BA.debugLineNum = 6881285;BA.debugLine="Activity.LoadLayout(\"editnoteLayoutDark\")";
+ //BA.debugLineNum = 27;BA.debugLine="Activity.LoadLayout(\"editnoteLayoutDark\")";
 mostCurrent._activity.LoadLayout("editnoteLayoutDark",mostCurrent.activityBA);
  };
-RDebugUtils.currentLine=6881288;
- //BA.debugLineNum = 6881288;BA.debugLine="contentTxt.Background = Null";
+ //BA.debugLineNum = 30;BA.debugLine="contentTxt.Background = Null";
 mostCurrent._contenttxt.setBackground((android.graphics.drawable.Drawable)(anywheresoftware.b4a.keywords.Common.Null));
-RDebugUtils.currentLine=6881289;
- //BA.debugLineNum = 6881289;BA.debugLine="contentTxt.Gravity = Bit.Or(Gravity.TOP, Gravity.";
+ //BA.debugLineNum = 31;BA.debugLine="contentTxt.Gravity = Bit.Or(Gravity.TOP, Gravity.";
 mostCurrent._contenttxt.setGravity(anywheresoftware.b4a.keywords.Common.Bit.Or(anywheresoftware.b4a.keywords.Common.Gravity.TOP,anywheresoftware.b4a.keywords.Common.Gravity.LEFT));
-RDebugUtils.currentLine=6881290;
- //BA.debugLineNum = 6881290;BA.debugLine="If ActiveNote.IsInitialized Then";
+ //BA.debugLineNum = 32;BA.debugLine="If ActiveNote.IsInitialized Then";
 if (_activenote.IsInitialized /*boolean*/ ) { 
-RDebugUtils.currentLine=6881291;
- //BA.debugLineNum = 6881291;BA.debugLine="titleTxt.Text = ActiveNote.Title";
+ //BA.debugLineNum = 33;BA.debugLine="titleTxt.Text = ActiveNote.Title";
 mostCurrent._titletxt.setText(BA.ObjectToCharSequence(_activenote.Title /*String*/ ));
-RDebugUtils.currentLine=6881292;
- //BA.debugLineNum = 6881292;BA.debugLine="tagsTxt.Text = ActiveNote.Tags";
+ //BA.debugLineNum = 34;BA.debugLine="tagsTxt.Text = ActiveNote.Tags";
 mostCurrent._tagstxt.setText(BA.ObjectToCharSequence(_activenote.Tags /*String*/ ));
-RDebugUtils.currentLine=6881293;
- //BA.debugLineNum = 6881293;BA.debugLine="contentTxt.Text = ActiveNote.Content";
+ //BA.debugLineNum = 35;BA.debugLine="contentTxt.Text = ActiveNote.Content";
 mostCurrent._contenttxt.setText(BA.ObjectToCharSequence(_activenote.Content /*String*/ ));
  };
-RDebugUtils.currentLine=6881295;
- //BA.debugLineNum = 6881295;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="editnote";
-RDebugUtils.currentLine=7012352;
- //BA.debugLineNum = 7012352;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=7012353;
- //BA.debugLineNum = 7012353;BA.debugLine="If UserClosed Then ActiveNote.Initialize";
+ //BA.debugLineNum = 43;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 44;BA.debugLine="If UserClosed Then ActiveNote.Initialize";
 if (_userclosed) { 
 _activenote.Initialize();};
-RDebugUtils.currentLine=7012354;
- //BA.debugLineNum = 7012354;BA.debugLine="End Sub";
+ //BA.debugLineNum = 45;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="editnote";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=6946816;
- //BA.debugLineNum = 6946816;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=6946818;
- //BA.debugLineNum = 6946818;BA.debugLine="End Sub";
+ //BA.debugLineNum = 39;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 41;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 16;BA.debugLine="Private contentTxt As EditText";
+mostCurrent._contenttxt = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 17;BA.debugLine="Private saveBtn As Button";
+mostCurrent._savebtn = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="Private tagsTxt As EditText";
+mostCurrent._tagstxt = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="Private titleTxt As EditText";
+mostCurrent._titletxt = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Public ActiveNote As MyNote";
+_activenote = new b4a.example.main._mynote();
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 public static String  _savebtn_click() throws Exception{
-RDebugUtils.currentModule="editnote";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "savebtn_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "savebtn_click", null));}
 b4a.example.main._mynote _n = null;
-RDebugUtils.currentLine=7077888;
- //BA.debugLineNum = 7077888;BA.debugLine="Sub saveBtn_Click";
-RDebugUtils.currentLine=7077889;
- //BA.debugLineNum = 7077889;BA.debugLine="If titleTxt.Text.Trim = \"\" Then";
+ //BA.debugLineNum = 47;BA.debugLine="Sub saveBtn_Click";
+ //BA.debugLineNum = 48;BA.debugLine="If titleTxt.Text.Trim = \"\" Then";
 if ((mostCurrent._titletxt.getText().trim()).equals("")) { 
-RDebugUtils.currentLine=7077890;
- //BA.debugLineNum = 7077890;BA.debugLine="MsgboxAsync(\"Please add a title\", \"\")";
+ //BA.debugLineNum = 49;BA.debugLine="MsgboxAsync(\"Please add a title\", \"\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Please add a title"),BA.ObjectToCharSequence(""),processBA);
-RDebugUtils.currentLine=7077891;
- //BA.debugLineNum = 7077891;BA.debugLine="Return";
+ //BA.debugLineNum = 50;BA.debugLine="Return";
 if (true) return "";
  };
-RDebugUtils.currentLine=7077894;
- //BA.debugLineNum = 7077894;BA.debugLine="Dim n As MyNote";
+ //BA.debugLineNum = 53;BA.debugLine="Dim n As MyNote";
 _n = new b4a.example.main._mynote();
-RDebugUtils.currentLine=7077895;
- //BA.debugLineNum = 7077895;BA.debugLine="n.Initialize";
+ //BA.debugLineNum = 54;BA.debugLine="n.Initialize";
 _n.Initialize();
-RDebugUtils.currentLine=7077897;
- //BA.debugLineNum = 7077897;BA.debugLine="If ActiveNote.IsInitialized And ActiveNote.noteID";
+ //BA.debugLineNum = 56;BA.debugLine="If ActiveNote.IsInitialized And ActiveNote.noteID";
 if (_activenote.IsInitialized /*boolean*/  && _activenote.noteID /*long*/ !=0) { 
-RDebugUtils.currentLine=7077898;
- //BA.debugLineNum = 7077898;BA.debugLine="n.noteID = ActiveNote.noteID";
+ //BA.debugLineNum = 57;BA.debugLine="n.noteID = ActiveNote.noteID";
 _n.noteID /*long*/  = _activenote.noteID /*long*/ ;
  }else {
-RDebugUtils.currentLine=7077900;
- //BA.debugLineNum = 7077900;BA.debugLine="n.noteID = (DateTime.Now * 1000) + Rnd(1, 1000)";
+ //BA.debugLineNum = 59;BA.debugLine="n.noteID = (DateTime.Now * 1000) + Rnd(1, 1000)";
 _n.noteID /*long*/  = (long) ((anywheresoftware.b4a.keywords.Common.DateTime.getNow()*1000)+anywheresoftware.b4a.keywords.Common.Rnd((int) (1),(int) (1000)));
  };
-RDebugUtils.currentLine=7077904;
- //BA.debugLineNum = 7077904;BA.debugLine="n.Title = titleTxt.Text";
+ //BA.debugLineNum = 63;BA.debugLine="n.Title = titleTxt.Text";
 _n.Title /*String*/  = mostCurrent._titletxt.getText();
-RDebugUtils.currentLine=7077905;
- //BA.debugLineNum = 7077905;BA.debugLine="n.Tags = tagsTxt.Text";
+ //BA.debugLineNum = 64;BA.debugLine="n.Tags = tagsTxt.Text";
 _n.Tags /*String*/  = mostCurrent._tagstxt.getText();
-RDebugUtils.currentLine=7077906;
- //BA.debugLineNum = 7077906;BA.debugLine="n.Content = contentTxt.Text";
+ //BA.debugLineNum = 65;BA.debugLine="n.Content = contentTxt.Text";
 _n.Content /*String*/  = mostCurrent._contenttxt.getText();
-RDebugUtils.currentLine=7077907;
- //BA.debugLineNum = 7077907;BA.debugLine="n.DateAdded = DateTime.Now";
+ //BA.debugLineNum = 66;BA.debugLine="n.DateAdded = DateTime.Now";
 _n.DateAdded /*long*/  = anywheresoftware.b4a.keywords.Common.DateTime.getNow();
-RDebugUtils.currentLine=7077909;
- //BA.debugLineNum = 7077909;BA.debugLine="MainActivity.kvs.Put(\"N_\" & n.noteID, n)";
+ //BA.debugLineNum = 68;BA.debugLine="MainActivity.kvs.Put(\"N_\" & n.noteID, n)";
 mostCurrent._mainactivity._kvs /*b4a.example3.keyvaluestore*/ ._put("N_"+BA.NumberToString(_n.noteID /*long*/ ),(Object)(_n));
-RDebugUtils.currentLine=7077911;
- //BA.debugLineNum = 7077911;BA.debugLine="ToastMessageShow(\"Note Saved\", False)";
+ //BA.debugLineNum = 70;BA.debugLine="ToastMessageShow(\"Note Saved\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Note Saved"),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7077912;
- //BA.debugLineNum = 7077912;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 71;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=7077913;
- //BA.debugLineNum = 7077913;BA.debugLine="End Sub";
+ //BA.debugLineNum = 72;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -14,7 +14,7 @@ public class starter extends android.app.Service{
 			android.content.Intent in = new android.content.Intent(context, starter.class);
 			if (intent != null)
 				in.putExtra("b4a_internal_intent", intent);
-            ServiceHelper.StarterHelper.startServiceFromReceiver (context, in, true, anywheresoftware.b4a.ShellBA.class);
+            ServiceHelper.StarterHelper.startServiceFromReceiver (context, in, true, BA.class);
 		}
 
 	}
@@ -29,7 +29,7 @@ public class starter extends android.app.Service{
         super.onCreate();
         mostCurrent = this;
         if (processBA == null) {
-		    processBA = new anywheresoftware.b4a.ShellBA(this, null, null, "b4a.example", "b4a.example.starter");
+		    processBA = new BA(this, null, null, "b4a.example", "b4a.example.starter");
             if (BA.isShellModeRuntimeCheck(processBA)) {
                 processBA.raiseEvent2(null, true, "SHELL", false);
 		    }
@@ -135,8 +135,7 @@ public class starter extends android.app.Service{
 @Override
 	public android.os.IBinder onBind(android.content.Intent intent) {
 		return null;
-	}
-public anywheresoftware.b4a.keywords.Common __c = null;
+	}public anywheresoftware.b4a.keywords.Common __c = null;
 public static boolean _darkmode = false;
 public static int _themenumber = 0;
 public static b4a.example3.keyvaluestore _noteskvs = null;
@@ -158,237 +157,185 @@ public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
-public b4a.example.add_card_module2 _add_card_module2 = null;
-public b4a.example.add_events_module _add_events_module = null;
-public b4a.example.all_active_recall _all_active_recall = null;
 public b4a.example.calendaractivity _calendaractivity = null;
-public b4a.example.card_module _card_module = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.todoactivity _todoactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
-public b4a.example.navactivity _navactivity = null;
+public b4a.example.day_module _day_module = null;
+public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.subdeck_module _subdeck_module = null;
-public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.deck_all_cards _deck_all_cards = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
+public b4a.example.navactivity _navactivity = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
-RDebugUtils.currentModule="starter";
-if (Debug.shouldDelegate(processBA, "application_error", false))
-	 {return ((Boolean) Debug.delegate(processBA, "application_error", new Object[] {_error,_stacktrace}));}
-RDebugUtils.currentLine=23330816;
- //BA.debugLineNum = 23330816;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
-RDebugUtils.currentLine=23330817;
- //BA.debugLineNum = 23330817;BA.debugLine="Return True";
+ //BA.debugLineNum = 63;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
+ //BA.debugLineNum = 64;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=23330818;
- //BA.debugLineNum = 23330818;BA.debugLine="End Sub";
+ //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return false;
 }
 public static String  _copytracksifneeded() throws Exception{
-RDebugUtils.currentModule="starter";
-if (Debug.shouldDelegate(processBA, "copytracksifneeded", false))
-	 {return ((String) Debug.delegate(processBA, "copytracksifneeded", null));}
 anywheresoftware.b4a.objects.collections.List _playlist = null;
 int _i = 0;
 String _trackname = "";
 String _filename = "";
-RDebugUtils.currentLine=26411008;
- //BA.debugLineNum = 26411008;BA.debugLine="Sub CopyTracksIfNeeded";
-RDebugUtils.currentLine=26411009;
- //BA.debugLineNum = 26411009;BA.debugLine="Dim playlist As List";
+ //BA.debugLineNum = 71;BA.debugLine="Sub CopyTracksIfNeeded";
+ //BA.debugLineNum = 72;BA.debugLine="Dim playlist As List";
 _playlist = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=26411010;
- //BA.debugLineNum = 26411010;BA.debugLine="playlist.Initialize";
+ //BA.debugLineNum = 73;BA.debugLine="playlist.Initialize";
 _playlist.Initialize();
-RDebugUtils.currentLine=26411011;
- //BA.debugLineNum = 26411011;BA.debugLine="playlist.Add(\"tracks/intro.mp3\")";
+ //BA.debugLineNum = 74;BA.debugLine="playlist.Add(\"tracks/intro.mp3\")";
 _playlist.Add((Object)("tracks/intro.mp3"));
-RDebugUtils.currentLine=26411012;
- //BA.debugLineNum = 26411012;BA.debugLine="playlist.Add(\"tracks/taiyaki.mp3\")";
+ //BA.debugLineNum = 75;BA.debugLine="playlist.Add(\"tracks/taiyaki.mp3\")";
 _playlist.Add((Object)("tracks/taiyaki.mp3"));
-RDebugUtils.currentLine=26411013;
- //BA.debugLineNum = 26411013;BA.debugLine="playlist.Add(\"tracks/feel special.mp3\")";
+ //BA.debugLineNum = 76;BA.debugLine="playlist.Add(\"tracks/feel special.mp3\")";
 _playlist.Add((Object)("tracks/feel special.mp3"));
-RDebugUtils.currentLine=26411014;
- //BA.debugLineNum = 26411014;BA.debugLine="playlist.Add(\"tracks/union.mp3\")";
+ //BA.debugLineNum = 77;BA.debugLine="playlist.Add(\"tracks/union.mp3\")";
 _playlist.Add((Object)("tracks/union.mp3"));
-RDebugUtils.currentLine=26411015;
- //BA.debugLineNum = 26411015;BA.debugLine="playlist.Add(\"tracks/two in the morning.mp3\")";
+ //BA.debugLineNum = 78;BA.debugLine="playlist.Add(\"tracks/two in the morning.mp3\")";
 _playlist.Add((Object)("tracks/two in the morning.mp3"));
-RDebugUtils.currentLine=26411016;
- //BA.debugLineNum = 26411016;BA.debugLine="playlist.Add(\"tracks/happily ever after.mp3\")";
+ //BA.debugLineNum = 79;BA.debugLine="playlist.Add(\"tracks/happily ever after.mp3\")";
 _playlist.Add((Object)("tracks/happily ever after.mp3"));
-RDebugUtils.currentLine=26411017;
- //BA.debugLineNum = 26411017;BA.debugLine="playlist.Add(\"tracks/cookie.mp3\")";
+ //BA.debugLineNum = 80;BA.debugLine="playlist.Add(\"tracks/cookie.mp3\")";
 _playlist.Add((Object)("tracks/cookie.mp3"));
-RDebugUtils.currentLine=26411018;
- //BA.debugLineNum = 26411018;BA.debugLine="playlist.Add(\"tracks/comfy vibes.mp3\")";
+ //BA.debugLineNum = 81;BA.debugLine="playlist.Add(\"tracks/comfy vibes.mp3\")";
 _playlist.Add((Object)("tracks/comfy vibes.mp3"));
-RDebugUtils.currentLine=26411019;
- //BA.debugLineNum = 26411019;BA.debugLine="playlist.Add(\"tracks/dango.mp3\")";
+ //BA.debugLineNum = 82;BA.debugLine="playlist.Add(\"tracks/dango.mp3\")";
 _playlist.Add((Object)("tracks/dango.mp3"));
-RDebugUtils.currentLine=26411020;
- //BA.debugLineNum = 26411020;BA.debugLine="playlist.Add(\"tracks/iced caramel macchiato.mp3\")";
+ //BA.debugLineNum = 83;BA.debugLine="playlist.Add(\"tracks/iced caramel macchiato.mp3\")";
 _playlist.Add((Object)("tracks/iced caramel macchiato.mp3"));
-RDebugUtils.currentLine=26411021;
- //BA.debugLineNum = 26411021;BA.debugLine="playlist.Add(\"tracks/in dreamland.mp3\")";
+ //BA.debugLineNum = 84;BA.debugLine="playlist.Add(\"tracks/in dreamland.mp3\")";
 _playlist.Add((Object)("tracks/in dreamland.mp3"));
-RDebugUtils.currentLine=26411022;
- //BA.debugLineNum = 26411022;BA.debugLine="playlist.Add(\"tracks/space aquarium.mp3\")";
+ //BA.debugLineNum = 85;BA.debugLine="playlist.Add(\"tracks/space aquarium.mp3\")";
 _playlist.Add((Object)("tracks/space aquarium.mp3"));
-RDebugUtils.currentLine=26411023;
- //BA.debugLineNum = 26411023;BA.debugLine="playlist.Add(\"tracks/sunshine & butterflies.mp3\")";
+ //BA.debugLineNum = 86;BA.debugLine="playlist.Add(\"tracks/sunshine & butterflies.mp3\")";
 _playlist.Add((Object)("tracks/sunshine & butterflies.mp3"));
-RDebugUtils.currentLine=26411024;
- //BA.debugLineNum = 26411024;BA.debugLine="playlist.Add(\"tracks/soda pop.mp3\")";
+ //BA.debugLineNum = 87;BA.debugLine="playlist.Add(\"tracks/soda pop.mp3\")";
 _playlist.Add((Object)("tracks/soda pop.mp3"));
-RDebugUtils.currentLine=26411025;
- //BA.debugLineNum = 26411025;BA.debugLine="playlist.Add(\"tracks/matcha latte.mp3\")";
+ //BA.debugLineNum = 88;BA.debugLine="playlist.Add(\"tracks/matcha latte.mp3\")";
 _playlist.Add((Object)("tracks/matcha latte.mp3"));
-RDebugUtils.currentLine=26411026;
- //BA.debugLineNum = 26411026;BA.debugLine="playlist.Add(\"tracks/midnight.mp3\")";
+ //BA.debugLineNum = 89;BA.debugLine="playlist.Add(\"tracks/midnight.mp3\")";
 _playlist.Add((Object)("tracks/midnight.mp3"));
-RDebugUtils.currentLine=26411027;
- //BA.debugLineNum = 26411027;BA.debugLine="playlist.Add(\"tracks/rose water.mp3\")";
+ //BA.debugLineNum = 90;BA.debugLine="playlist.Add(\"tracks/rose water.mp3\")";
 _playlist.Add((Object)("tracks/rose water.mp3"));
-RDebugUtils.currentLine=26411028;
- //BA.debugLineNum = 26411028;BA.debugLine="playlist.Add(\"tracks/hot.mp3\")";
+ //BA.debugLineNum = 91;BA.debugLine="playlist.Add(\"tracks/hot.mp3\")";
 _playlist.Add((Object)("tracks/hot.mp3"));
-RDebugUtils.currentLine=26411029;
- //BA.debugLineNum = 26411029;BA.debugLine="playlist.Add(\"tracks/on the top.mp3\")";
+ //BA.debugLineNum = 92;BA.debugLine="playlist.Add(\"tracks/on the top.mp3\")";
 _playlist.Add((Object)("tracks/on the top.mp3"));
-RDebugUtils.currentLine=26411031;
- //BA.debugLineNum = 26411031;BA.debugLine="If File.Exists(File.DirInternal, \"tracks\") = Fals";
+ //BA.debugLineNum = 94;BA.debugLine="If File.Exists(File.DirInternal, \"tracks\") = Fals";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"tracks")==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=26411032;
- //BA.debugLineNum = 26411032;BA.debugLine="File.MakeDir(File.DirInternal, \"tracks\")";
+ //BA.debugLineNum = 95;BA.debugLine="File.MakeDir(File.DirInternal, \"tracks\")";
 anywheresoftware.b4a.keywords.Common.File.MakeDir(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"tracks");
  };
-RDebugUtils.currentLine=26411034;
- //BA.debugLineNum = 26411034;BA.debugLine="For i = 0 To playlist.Size - 1";
+ //BA.debugLineNum = 97;BA.debugLine="For i = 0 To playlist.Size - 1";
 {
 final int step25 = 1;
 final int limit25 = (int) (_playlist.getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit25 ;_i = _i + step25 ) {
-RDebugUtils.currentLine=26411035;
- //BA.debugLineNum = 26411035;BA.debugLine="Dim trackName As String = playlist.Get(i)";
+ //BA.debugLineNum = 98;BA.debugLine="Dim trackName As String = playlist.Get(i)";
 _trackname = BA.ObjectToString(_playlist.Get(_i));
-RDebugUtils.currentLine=26411036;
- //BA.debugLineNum = 26411036;BA.debugLine="Dim fileName As String = trackName.SubString(tra";
+ //BA.debugLineNum = 99;BA.debugLine="Dim fileName As String = trackName.SubString(tra";
 _filename = _trackname.substring((int) (_trackname.lastIndexOf("/")+1));
-RDebugUtils.currentLine=26411037;
- //BA.debugLineNum = 26411037;BA.debugLine="If File.Exists(File.DirInternal & \"/tracks\", fil";
+ //BA.debugLineNum = 100;BA.debugLine="If File.Exists(File.DirInternal & \"/tracks\", fil";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal()+"/tracks",_filename)==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=26411038;
- //BA.debugLineNum = 26411038;BA.debugLine="File.Copy(File.DirAssets, trackName, File.DirIn";
+ //BA.debugLineNum = 101;BA.debugLine="File.Copy(File.DirAssets, trackName, File.DirIn";
 anywheresoftware.b4a.keywords.Common.File.Copy(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),_trackname,anywheresoftware.b4a.keywords.Common.File.getDirInternal()+"/tracks",_filename);
  };
  }
 };
-RDebugUtils.currentLine=26411041;
- //BA.debugLineNum = 26411041;BA.debugLine="End Sub";
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Public darkMode As Boolean = False";
+_darkmode = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 10;BA.debugLine="Public themeNumber As Int = 0";
+_themenumber = (int) (0);
+ //BA.debugLineNum = 11;BA.debugLine="Public notesKvs As KeyValueStore";
+_noteskvs = new b4a.example3.keyvaluestore();
+ //BA.debugLineNum = 12;BA.debugLine="Public prefKvs As KeyValueStore";
+_prefkvs = new b4a.example3.keyvaluestore();
+ //BA.debugLineNum = 13;BA.debugLine="Public calKvs As KeyValueStore";
+_calkvs = new b4a.example3.keyvaluestore();
+ //BA.debugLineNum = 14;BA.debugLine="Public calendarMap As Map";
+_calendarmap = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 15;BA.debugLine="Public deckKvs As KeyValueStore";
+_deckkvs = new b4a.example3.keyvaluestore();
+ //BA.debugLineNum = 16;BA.debugLine="Public taskKvs As KeyValueStore";
+_taskkvs = new b4a.example3.keyvaluestore();
+ //BA.debugLineNum = 17;BA.debugLine="Public deck As Map";
+_deck = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 18;BA.debugLine="Public finishedInit As Boolean = False";
+_finishedinit = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_create() throws Exception{
-RDebugUtils.currentModule="starter";
-if (Debug.shouldDelegate(processBA, "service_create", false))
-	 {return ((String) Debug.delegate(processBA, "service_create", null));}
-RDebugUtils.currentLine=23134208;
- //BA.debugLineNum = 23134208;BA.debugLine="Sub Service_Create";
-RDebugUtils.currentLine=23134209;
- //BA.debugLineNum = 23134209;BA.debugLine="prefKvs.Initialize(File.DirInternal, \"prefData\")";
+ //BA.debugLineNum = 21;BA.debugLine="Sub Service_Create";
+ //BA.debugLineNum = 22;BA.debugLine="prefKvs.Initialize(File.DirInternal, \"prefData\")";
 _prefkvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"prefData");
-RDebugUtils.currentLine=23134211;
- //BA.debugLineNum = 23134211;BA.debugLine="If prefKvs.ContainsKey(\"darkMode\") Then";
+ //BA.debugLineNum = 24;BA.debugLine="If prefKvs.ContainsKey(\"darkMode\") Then";
 if (_prefkvs._containskey("darkMode")) { 
-RDebugUtils.currentLine=23134212;
- //BA.debugLineNum = 23134212;BA.debugLine="darkMode = prefKvs.Get(\"darkMode\")";
+ //BA.debugLineNum = 25;BA.debugLine="darkMode = prefKvs.Get(\"darkMode\")";
 _darkmode = BA.ObjectToBoolean(_prefkvs._get("darkMode"));
  };
-RDebugUtils.currentLine=23134215;
- //BA.debugLineNum = 23134215;BA.debugLine="If prefKvs.ContainsKey(\"themeNumber\") Then";
+ //BA.debugLineNum = 28;BA.debugLine="If prefKvs.ContainsKey(\"themeNumber\") Then";
 if (_prefkvs._containskey("themeNumber")) { 
-RDebugUtils.currentLine=23134216;
- //BA.debugLineNum = 23134216;BA.debugLine="themeNumber = prefKvs.Get(\"themeNumber\")";
+ //BA.debugLineNum = 29;BA.debugLine="themeNumber = prefKvs.Get(\"themeNumber\")";
 _themenumber = (int)(BA.ObjectToNumber(_prefkvs._get("themeNumber")));
  };
-RDebugUtils.currentLine=23134219;
- //BA.debugLineNum = 23134219;BA.debugLine="calKvs.Initialize(File.DirInternal, \"mydata\")";
+ //BA.debugLineNum = 32;BA.debugLine="calKvs.Initialize(File.DirInternal, \"mydata\")";
 _calkvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"mydata");
-RDebugUtils.currentLine=23134220;
- //BA.debugLineNum = 23134220;BA.debugLine="If calKvs.ContainsKey(\"CalendarKVS\") Then";
+ //BA.debugLineNum = 33;BA.debugLine="If calKvs.ContainsKey(\"CalendarKVS\") Then";
 if (_calkvs._containskey("CalendarKVS")) { 
-RDebugUtils.currentLine=23134221;
- //BA.debugLineNum = 23134221;BA.debugLine="calendarMap = calKvs.Get(\"CalendarKVS\")";
+ //BA.debugLineNum = 34;BA.debugLine="calendarMap = calKvs.Get(\"CalendarKVS\")";
 _calendarmap = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(_calkvs._get("CalendarKVS")));
  }else {
-RDebugUtils.currentLine=23134223;
- //BA.debugLineNum = 23134223;BA.debugLine="calendarMap.Initialize";
+ //BA.debugLineNum = 36;BA.debugLine="calendarMap.Initialize";
 _calendarmap.Initialize();
  };
-RDebugUtils.currentLine=23134226;
- //BA.debugLineNum = 23134226;BA.debugLine="deckKvs.Initialize(File.DirInternal, \"mydata\")";
+ //BA.debugLineNum = 39;BA.debugLine="deckKvs.Initialize(File.DirInternal, \"mydata\")";
 _deckkvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"mydata");
-RDebugUtils.currentLine=23134227;
- //BA.debugLineNum = 23134227;BA.debugLine="If deckKvs.ContainsKey(\"deck_data\") Then";
+ //BA.debugLineNum = 40;BA.debugLine="If deckKvs.ContainsKey(\"deck_data\") Then";
 if (_deckkvs._containskey("deck_data")) { 
-RDebugUtils.currentLine=23134228;
- //BA.debugLineNum = 23134228;BA.debugLine="deck = deckKvs.Get(\"deck_data\")";
+ //BA.debugLineNum = 41;BA.debugLine="deck = deckKvs.Get(\"deck_data\")";
 _deck = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(_deckkvs._get("deck_data")));
  }else {
-RDebugUtils.currentLine=23134230;
- //BA.debugLineNum = 23134230;BA.debugLine="deck.Initialize";
+ //BA.debugLineNum = 43;BA.debugLine="deck.Initialize";
 _deck.Initialize();
  };
-RDebugUtils.currentLine=23134233;
- //BA.debugLineNum = 23134233;BA.debugLine="taskKvs.Initialize(File.DirInternal, \"todoListDat";
+ //BA.debugLineNum = 46;BA.debugLine="taskKvs.Initialize(File.DirInternal, \"todoListDat";
 _taskkvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"todoListData");
-RDebugUtils.currentLine=23134234;
- //BA.debugLineNum = 23134234;BA.debugLine="notesKvs.Initialize(File.DirInternal, \"notes_data";
+ //BA.debugLineNum = 47;BA.debugLine="notesKvs.Initialize(File.DirInternal, \"notes_data";
 _noteskvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"notes_data");
-RDebugUtils.currentLine=23134236;
- //BA.debugLineNum = 23134236;BA.debugLine="CopyTracksIfNeeded";
+ //BA.debugLineNum = 49;BA.debugLine="CopyTracksIfNeeded";
 _copytracksifneeded();
-RDebugUtils.currentLine=23134238;
- //BA.debugLineNum = 23134238;BA.debugLine="finishedInit = True";
+ //BA.debugLineNum = 51;BA.debugLine="finishedInit = True";
 _finishedinit = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=23134239;
- //BA.debugLineNum = 23134239;BA.debugLine="End Sub";
+ //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
-RDebugUtils.currentModule="starter";
-if (Debug.shouldDelegate(processBA, "service_destroy", false))
-	 {return ((String) Debug.delegate(processBA, "service_destroy", null));}
-RDebugUtils.currentLine=23396352;
- //BA.debugLineNum = 23396352;BA.debugLine="Sub Service_Destroy";
-RDebugUtils.currentLine=23396354;
- //BA.debugLineNum = 23396354;BA.debugLine="End Sub";
+ //BA.debugLineNum = 67;BA.debugLine="Sub Service_Destroy";
+ //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
-RDebugUtils.currentModule="starter";
-if (Debug.shouldDelegate(processBA, "service_start", false))
-	 {return ((String) Debug.delegate(processBA, "service_start", new Object[] {_startingintent}));}
-RDebugUtils.currentLine=23199744;
- //BA.debugLineNum = 23199744;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
-RDebugUtils.currentLine=23199745;
- //BA.debugLineNum = 23199745;BA.debugLine="Service.StopAutomaticForeground 'Starter service";
+ //BA.debugLineNum = 54;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+ //BA.debugLineNum = 55;BA.debugLine="Service.StopAutomaticForeground 'Starter service";
 mostCurrent._service.StopAutomaticForeground();
-RDebugUtils.currentLine=23199746;
- //BA.debugLineNum = 23199746;BA.debugLine="End Sub";
+ //BA.debugLineNum = 56;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_taskremoved() throws Exception{
-RDebugUtils.currentModule="starter";
-if (Debug.shouldDelegate(processBA, "service_taskremoved", false))
-	 {return ((String) Debug.delegate(processBA, "service_taskremoved", null));}
-RDebugUtils.currentLine=23265280;
- //BA.debugLineNum = 23265280;BA.debugLine="Sub Service_TaskRemoved";
-RDebugUtils.currentLine=23265282;
- //BA.debugLineNum = 23265282;BA.debugLine="End Sub";
+ //BA.debugLineNum = 58;BA.debugLine="Sub Service_TaskRemoved";
+ //BA.debugLineNum = 60;BA.debugLine="End Sub";
 return "";
 }
 }

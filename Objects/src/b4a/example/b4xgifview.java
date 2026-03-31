@@ -10,7 +10,7 @@ public class b4xgifview extends B4AClass.ImplB4AClass implements BA.SubDelegator
     private static java.util.HashMap<String, java.lang.reflect.Method> htSubs;
     private void innerInitialize(BA _ba) throws Exception {
         if (ba == null) {
-            ba = new anywheresoftware.b4a.ShellBA(_ba, this, htSubs, "b4a.example.b4xgifview");
+            ba = new BA(_ba, this, htSubs, "b4a.example.b4xgifview");
             if (htSubs == null) {
                 ba.loadHtSubs(this.getClass());
                 htSubs = ba.htSubs;
@@ -23,14 +23,7 @@ public class b4xgifview extends B4AClass.ImplB4AClass implements BA.SubDelegator
             ba.raiseEvent2(null, true, "class_globals", false);
     }
 
- 
-    public void  innerInitializeHelper(anywheresoftware.b4a.BA _ba) throws Exception{
-        innerInitialize(_ba);
-    }
-    public Object callSub(String sub, Object sender, Object[] args) throws Exception {
-        return BA.SubDelegator.SubNotFound;
-    }
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public String _meventname = "";
 public Object _mcallback = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper _mbase = null;
@@ -39,6 +32,7 @@ public Object _tag = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _iv = null;
 public anywheresoftware.b4j.object.JavaObject _gifdrawable = null;
 public b4a.example.main _main = null;
+public b4a.example.starter _starter = null;
 public b4a.example.mainactivity _mainactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
@@ -49,220 +43,143 @@ public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
 public b4a.example.add_card_module _add_card_module = null;
-public b4a.example.add_card_module2 _add_card_module2 = null;
-public b4a.example.add_events_module _add_events_module = null;
-public b4a.example.all_active_recall _all_active_recall = null;
 public b4a.example.calendaractivity _calendaractivity = null;
-public b4a.example.card_module _card_module = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
+public b4a.example.todoactivity _todoactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
+public b4a.example.day_module _day_module = null;
+public b4a.example.add_events_module _add_events_module = null;
+public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.subdeck_module _subdeck_module = null;
+public b4a.example.card_module _card_module = null;
+public b4a.example.add_card_module2 _add_card_module2 = null;
+public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.navactivity _navactivity = null;
-public b4a.example.schedule_module _schedule_module = null;
-public b4a.example.starter _starter = null;
-public b4a.example.subdeck_module _subdeck_module = null;
-public b4a.example.todoactivity _todoactivity = null;
-public String  _setgif(b4a.example.b4xgifview __ref,String _dir,String _filename) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "setgif", true))
-	 {return ((String) Debug.delegate(ba, "setgif", new Object[] {_dir,_filename}));}
-RDebugUtils.currentLine=5308416;
- //BA.debugLineNum = 5308416;BA.debugLine="Public Sub SetGif(Dir As String, FileName As Strin";
-RDebugUtils.currentLine=5308422;
- //BA.debugLineNum = 5308422;BA.debugLine="If Dir = File.DirAssets Then";
-if ((_dir).equals(__c.File.getDirAssets())) { 
-RDebugUtils.currentLine=5308423;
- //BA.debugLineNum = 5308423;BA.debugLine="SetGif2(File.ReadBytes(Dir, FileName))";
-__ref._setgif2 /*String*/ (null,__c.File.ReadBytes(_dir,_filename));
- }else {
-RDebugUtils.currentLine=5308425;
- //BA.debugLineNum = 5308425;BA.debugLine="SetBitmap(File.Combine(Dir, FileName))";
-__ref._setbitmap /*String*/ (null,(Object)(__c.File.Combine(_dir,_filename)));
- };
-RDebugUtils.currentLine=5308428;
- //BA.debugLineNum = 5308428;BA.debugLine="End Sub";
+public String  _base_resize(double _width,double _height) throws Exception{
+ //BA.debugLineNum = 106;BA.debugLine="Public Sub Base_Resize (Width As Double, Height As";
+ //BA.debugLineNum = 108;BA.debugLine="iv.SetLayoutAnimated(0, 0, 0, Width, Height)";
+_iv.SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
+ //BA.debugLineNum = 117;BA.debugLine="End Sub";
 return "";
 }
-public String  _base_resize(b4a.example.b4xgifview __ref,double _width,double _height) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "base_resize", true))
-	 {return ((String) Debug.delegate(ba, "base_resize", new Object[] {_width,_height}));}
-RDebugUtils.currentLine=5570560;
- //BA.debugLineNum = 5570560;BA.debugLine="Public Sub Base_Resize (Width As Double, Height As";
-RDebugUtils.currentLine=5570562;
- //BA.debugLineNum = 5570562;BA.debugLine="iv.SetLayoutAnimated(0, 0, 0, Width, Height)";
-__ref._iv /*anywheresoftware.b4a.objects.ImageViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
-RDebugUtils.currentLine=5570571;
- //BA.debugLineNum = 5570571;BA.debugLine="End Sub";
-return "";
-}
-public String  _class_globals(b4a.example.b4xgifview __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-RDebugUtils.currentLine=5111808;
- //BA.debugLineNum = 5111808;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=5111809;
- //BA.debugLineNum = 5111809;BA.debugLine="Private mEventName As String 'ignore";
+public String  _class_globals() throws Exception{
+ //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Private mEventName As String 'ignore";
 _meventname = "";
-RDebugUtils.currentLine=5111810;
- //BA.debugLineNum = 5111810;BA.debugLine="Private mCallBack As Object 'ignore";
+ //BA.debugLineNum = 3;BA.debugLine="Private mCallBack As Object 'ignore";
 _mcallback = new Object();
-RDebugUtils.currentLine=5111811;
- //BA.debugLineNum = 5111811;BA.debugLine="Public mBase As B4XView";
+ //BA.debugLineNum = 4;BA.debugLine="Public mBase As B4XView";
 _mbase = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=5111812;
- //BA.debugLineNum = 5111812;BA.debugLine="Private xui As XUI 'ignore";
+ //BA.debugLineNum = 5;BA.debugLine="Private xui As XUI 'ignore";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=5111813;
- //BA.debugLineNum = 5111813;BA.debugLine="Public Tag As Object";
+ //BA.debugLineNum = 6;BA.debugLine="Public Tag As Object";
 _tag = new Object();
-RDebugUtils.currentLine=5111817;
- //BA.debugLineNum = 5111817;BA.debugLine="Private iv As ImageView";
+ //BA.debugLineNum = 10;BA.debugLine="Private iv As ImageView";
 _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=5111818;
- //BA.debugLineNum = 5111818;BA.debugLine="Public GifDrawable As JavaObject";
+ //BA.debugLineNum = 11;BA.debugLine="Public GifDrawable As JavaObject";
 _gifdrawable = new anywheresoftware.b4j.object.JavaObject();
-RDebugUtils.currentLine=5111822;
- //BA.debugLineNum = 5111822;BA.debugLine="End Sub";
+ //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }
-public String  _designercreateview(b4a.example.b4xgifview __ref,Object _base,anywheresoftware.b4a.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "designercreateview", true))
-	 {return ((String) Debug.delegate(ba, "designercreateview", new Object[] {_base,_lbl,_props}));}
-RDebugUtils.currentLine=5242880;
- //BA.debugLineNum = 5242880;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
-RDebugUtils.currentLine=5242881;
- //BA.debugLineNum = 5242881;BA.debugLine="mBase = Base";
-__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
-RDebugUtils.currentLine=5242882;
- //BA.debugLineNum = 5242882;BA.debugLine="Tag = mBase.Tag";
-__ref._tag /*Object*/  = __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTag();
-RDebugUtils.currentLine=5242883;
- //BA.debugLineNum = 5242883;BA.debugLine="mBase.Tag = Me";
-__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag(this);
-RDebugUtils.currentLine=5242894;
- //BA.debugLineNum = 5242894;BA.debugLine="iv.Initialize(\"\")";
-__ref._iv /*anywheresoftware.b4a.objects.ImageViewWrapper*/ .Initialize(ba,"");
-RDebugUtils.currentLine=5242895;
- //BA.debugLineNum = 5242895;BA.debugLine="mBase.AddView(iv, 0, 0, mBase.Width, mBase.Height";
-__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._iv /*anywheresoftware.b4a.objects.ImageViewWrapper*/ .getObject()),(int) (0),(int) (0),__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=5242897;
- //BA.debugLineNum = 5242897;BA.debugLine="End Sub";
+public String  _designercreateview(Object _base,anywheresoftware.b4a.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
+ //BA.debugLineNum = 22;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
+ //BA.debugLineNum = 23;BA.debugLine="mBase = Base";
+_mbase = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
+ //BA.debugLineNum = 24;BA.debugLine="Tag = mBase.Tag";
+_tag = _mbase.getTag();
+ //BA.debugLineNum = 25;BA.debugLine="mBase.Tag = Me";
+_mbase.setTag(this);
+ //BA.debugLineNum = 36;BA.debugLine="iv.Initialize(\"\")";
+_iv.Initialize(ba,"");
+ //BA.debugLineNum = 37;BA.debugLine="mBase.AddView(iv, 0, 0, mBase.Width, mBase.Height";
+_mbase.AddView((android.view.View)(_iv.getObject()),(int) (0),(int) (0),_mbase.getWidth(),_mbase.getHeight());
+ //BA.debugLineNum = 39;BA.debugLine="End Sub";
 return "";
 }
-public String  _initialize(b4a.example.b4xgifview __ref,anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
-__ref = this;
+public String  _initialize(anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
 innerInitialize(_ba);
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "initialize", true))
-	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba,_callback,_eventname}));}
-RDebugUtils.currentLine=5177344;
- //BA.debugLineNum = 5177344;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
-RDebugUtils.currentLine=5177345;
- //BA.debugLineNum = 5177345;BA.debugLine="mEventName = EventName";
-__ref._meventname /*String*/  = _eventname;
-RDebugUtils.currentLine=5177346;
- //BA.debugLineNum = 5177346;BA.debugLine="mCallBack = Callback";
-__ref._mcallback /*Object*/  = _callback;
-RDebugUtils.currentLine=5177347;
- //BA.debugLineNum = 5177347;BA.debugLine="End Sub";
+ //BA.debugLineNum = 17;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
+ //BA.debugLineNum = 18;BA.debugLine="mEventName = EventName";
+_meventname = _eventname;
+ //BA.debugLineNum = 19;BA.debugLine="mCallBack = Callback";
+_mcallback = _callback;
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
 return "";
 }
-public String  _resizebasedonimage(b4a.example.b4xgifview __ref,anywheresoftware.b4a.objects.B4XViewWrapper _xiv,float _bmpratio) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "resizebasedonimage", true))
-	 {return ((String) Debug.delegate(ba, "resizebasedonimage", new Object[] {_xiv,_bmpratio}));}
+public String  _resizebasedonimage(anywheresoftware.b4a.objects.B4XViewWrapper _xiv,float _bmpratio) throws Exception{
 float _viewratio = 0f;
 int _height = 0;
 int _width = 0;
-RDebugUtils.currentLine=5505024;
- //BA.debugLineNum = 5505024;BA.debugLine="Private Sub ResizeBasedOnImage(xiv As B4XView, Bmp";
-RDebugUtils.currentLine=5505025;
- //BA.debugLineNum = 5505025;BA.debugLine="Dim viewRatio As Float = mBase.Width / mBase.Heig";
-_viewratio = (float) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()/(double)__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=5505026;
- //BA.debugLineNum = 5505026;BA.debugLine="Dim Height, Width As Int";
+ //BA.debugLineNum = 93;BA.debugLine="Private Sub ResizeBasedOnImage(xiv As B4XView, Bmp";
+ //BA.debugLineNum = 94;BA.debugLine="Dim viewRatio As Float = mBase.Width / mBase.Heig";
+_viewratio = (float) (_mbase.getWidth()/(double)_mbase.getHeight());
+ //BA.debugLineNum = 95;BA.debugLine="Dim Height, Width As Int";
 _height = 0;
 _width = 0;
-RDebugUtils.currentLine=5505027;
- //BA.debugLineNum = 5505027;BA.debugLine="If viewRatio > BmpRatio Then";
+ //BA.debugLineNum = 96;BA.debugLine="If viewRatio > BmpRatio Then";
 if (_viewratio>_bmpratio) { 
-RDebugUtils.currentLine=5505028;
- //BA.debugLineNum = 5505028;BA.debugLine="Height = mBase.Height";
-_height = __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight();
-RDebugUtils.currentLine=5505029;
- //BA.debugLineNum = 5505029;BA.debugLine="Width = mBase.Height * BmpRatio";
-_width = (int) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight()*_bmpratio);
+ //BA.debugLineNum = 97;BA.debugLine="Height = mBase.Height";
+_height = _mbase.getHeight();
+ //BA.debugLineNum = 98;BA.debugLine="Width = mBase.Height * BmpRatio";
+_width = (int) (_mbase.getHeight()*_bmpratio);
  }else {
-RDebugUtils.currentLine=5505031;
- //BA.debugLineNum = 5505031;BA.debugLine="Width = mBase.Width";
-_width = __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth();
-RDebugUtils.currentLine=5505032;
- //BA.debugLineNum = 5505032;BA.debugLine="Height = mBase.Width / BmpRatio";
-_height = (int) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()/(double)_bmpratio);
+ //BA.debugLineNum = 100;BA.debugLine="Width = mBase.Width";
+_width = _mbase.getWidth();
+ //BA.debugLineNum = 101;BA.debugLine="Height = mBase.Width / BmpRatio";
+_height = (int) (_mbase.getWidth()/(double)_bmpratio);
  };
-RDebugUtils.currentLine=5505034;
- //BA.debugLineNum = 5505034;BA.debugLine="xiv.SetLayoutAnimated(0, mBase.Width / 2 - Width";
-_xiv.SetLayoutAnimated((int) (0),(int) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()/(double)2-_width/(double)2),(int) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight()/(double)2-_height/(double)2),_width,_height);
-RDebugUtils.currentLine=5505035;
- //BA.debugLineNum = 5505035;BA.debugLine="End Sub";
+ //BA.debugLineNum = 103;BA.debugLine="xiv.SetLayoutAnimated(0, mBase.Width / 2 - Width";
+_xiv.SetLayoutAnimated((int) (0),(int) (_mbase.getWidth()/(double)2-_width/(double)2),(int) (_mbase.getHeight()/(double)2-_height/(double)2),_width,_height);
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
-public String  _setbitmap(b4a.example.b4xgifview __ref,Object _obj) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "setbitmap", true))
-	 {return ((String) Debug.delegate(ba, "setbitmap", new Object[] {_obj}));}
+public String  _setbitmap(Object _obj) throws Exception{
 anywheresoftware.b4j.object.JavaObject _jo = null;
 int _w = 0;
 int _h = 0;
-RDebugUtils.currentLine=5439488;
- //BA.debugLineNum = 5439488;BA.debugLine="Private Sub SetBitmap(obj As Object)";
-RDebugUtils.currentLine=5439489;
- //BA.debugLineNum = 5439489;BA.debugLine="Dim GifDrawable As JavaObject";
+ //BA.debugLineNum = 81;BA.debugLine="Private Sub SetBitmap(obj As Object)";
+ //BA.debugLineNum = 82;BA.debugLine="Dim GifDrawable As JavaObject";
 _gifdrawable = new anywheresoftware.b4j.object.JavaObject();
-RDebugUtils.currentLine=5439490;
- //BA.debugLineNum = 5439490;BA.debugLine="GifDrawable.InitializeNewInstance(\"pl.droidsonroi";
-__ref._gifdrawable /*anywheresoftware.b4j.object.JavaObject*/ .InitializeNewInstance("pl.droidsonroids.gif.GifDrawable",new Object[]{_obj});
-RDebugUtils.currentLine=5439491;
- //BA.debugLineNum = 5439491;BA.debugLine="iv.Background = GifDrawable";
-__ref._iv /*anywheresoftware.b4a.objects.ImageViewWrapper*/ .setBackground((android.graphics.drawable.Drawable)(__ref._gifdrawable /*anywheresoftware.b4j.object.JavaObject*/ .getObject()));
-RDebugUtils.currentLine=5439492;
- //BA.debugLineNum = 5439492;BA.debugLine="Dim jo As JavaObject = GifDrawable";
+ //BA.debugLineNum = 83;BA.debugLine="GifDrawable.InitializeNewInstance(\"pl.droidsonroi";
+_gifdrawable.InitializeNewInstance("pl.droidsonroids.gif.GifDrawable",new Object[]{_obj});
+ //BA.debugLineNum = 84;BA.debugLine="iv.Background = GifDrawable";
+_iv.setBackground((android.graphics.drawable.Drawable)(_gifdrawable.getObject()));
+ //BA.debugLineNum = 85;BA.debugLine="Dim jo As JavaObject = GifDrawable";
 _jo = new anywheresoftware.b4j.object.JavaObject();
-_jo = __ref._gifdrawable /*anywheresoftware.b4j.object.JavaObject*/ ;
-RDebugUtils.currentLine=5439493;
- //BA.debugLineNum = 5439493;BA.debugLine="Dim w As Int = jo.RunMethod(\"getIntrinsicWidth\",";
+_jo = _gifdrawable;
+ //BA.debugLineNum = 86;BA.debugLine="Dim w As Int = jo.RunMethod(\"getIntrinsicWidth\",";
 _w = (int)(BA.ObjectToNumber(_jo.RunMethod("getIntrinsicWidth",(Object[])(__c.Null))));
-RDebugUtils.currentLine=5439494;
- //BA.debugLineNum = 5439494;BA.debugLine="Dim h As Int = jo.RunMethod(\"getIntrinsicHeight\",";
+ //BA.debugLineNum = 87;BA.debugLine="Dim h As Int = jo.RunMethod(\"getIntrinsicHeight\",";
 _h = (int)(BA.ObjectToNumber(_jo.RunMethod("getIntrinsicHeight",(Object[])(__c.Null))));
-RDebugUtils.currentLine=5439495;
- //BA.debugLineNum = 5439495;BA.debugLine="ResizeBasedOnImage(iv, w / h)";
-__ref._resizebasedonimage /*String*/ (null,(anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__ref._iv /*anywheresoftware.b4a.objects.ImageViewWrapper*/ .getObject())),(float) (_w/(double)_h));
-RDebugUtils.currentLine=5439496;
- //BA.debugLineNum = 5439496;BA.debugLine="End Sub";
+ //BA.debugLineNum = 88;BA.debugLine="ResizeBasedOnImage(iv, w / h)";
+_resizebasedonimage((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_iv.getObject())),(float) (_w/(double)_h));
+ //BA.debugLineNum = 89;BA.debugLine="End Sub";
 return "";
 }
-public String  _setgif2(b4a.example.b4xgifview __ref,byte[] _data) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xgifview";
-if (Debug.shouldDelegate(ba, "setgif2", true))
-	 {return ((String) Debug.delegate(ba, "setgif2", new Object[] {_data}));}
-RDebugUtils.currentLine=5373952;
- //BA.debugLineNum = 5373952;BA.debugLine="Public Sub SetGif2 (Data() As Byte)";
-RDebugUtils.currentLine=5373966;
- //BA.debugLineNum = 5373966;BA.debugLine="SetBitmap(Data)";
-__ref._setbitmap /*String*/ (null,(Object)(_data));
-RDebugUtils.currentLine=5373968;
- //BA.debugLineNum = 5373968;BA.debugLine="End Sub";
+public String  _setgif(String _dir,String _filename) throws Exception{
+ //BA.debugLineNum = 41;BA.debugLine="Public Sub SetGif(Dir As String, FileName As Strin";
+ //BA.debugLineNum = 47;BA.debugLine="If Dir = File.DirAssets Then";
+if ((_dir).equals(__c.File.getDirAssets())) { 
+ //BA.debugLineNum = 48;BA.debugLine="SetGif2(File.ReadBytes(Dir, FileName))";
+_setgif2(__c.File.ReadBytes(_dir,_filename));
+ }else {
+ //BA.debugLineNum = 50;BA.debugLine="SetBitmap(File.Combine(Dir, FileName))";
+_setbitmap((Object)(__c.File.Combine(_dir,_filename)));
+ };
+ //BA.debugLineNum = 53;BA.debugLine="End Sub";
 return "";
+}
+public String  _setgif2(byte[] _data) throws Exception{
+ //BA.debugLineNum = 55;BA.debugLine="Public Sub SetGif2 (Data() As Byte)";
+ //BA.debugLineNum = 69;BA.debugLine="SetBitmap(Data)";
+_setbitmap((Object)(_data));
+ //BA.debugLineNum = 71;BA.debugLine="End Sub";
+return "";
+}
+public Object callSub(String sub, Object sender, Object[] args) throws Exception {
+BA.senderHolder.set(sender);
+return BA.SubDelegator.SubNotFound;
 }
 }
