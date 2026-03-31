@@ -58,7 +58,7 @@ Sub noteClv_ItemLongClick (Index As Int, Value As Object)
 	Msgbox2Async("Are you sure you want to delete '" & n.Title & "'?", "Delete Note", "No", "", "Yes", Null, False)
 	Wait For Msgbox_Result (res As Int)
 	If res = DialogResponse.NEGATIVE Then
-		Main.kvs.Remove("N_" & n.noteID)
+		MainActivity.kvs.Remove("N_" & n.noteID)
 		RefreshList("")
 		ToastMessageShow("Note deleted", False)
 	End If

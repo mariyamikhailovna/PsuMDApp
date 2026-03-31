@@ -12,9 +12,9 @@
 	    android:smallScreens="true" 
 	    android:anyDensity="true"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 	<application
 		android:name="androidx.multidex.MultiDexApplication"
 		android:icon="@drawable/icon"
@@ -38,22 +38,6 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".mainactivity"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<service
-			android:name=".starter"
-			android:exported="true">
-		</service>
-		<receiver
-			android:name=".starter$starter_BR"
-			android:exported="true">
-		</receiver>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".navactivity"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
@@ -208,11 +192,27 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".navactivity"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".schedule_module"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
 		</activity>
+		<service
+			android:name=".starter"
+			android:exported="true">
+		</service>
+		<receiver
+			android:name=".starter$starter_BR"
+			android:exported="true">
+		</receiver>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"

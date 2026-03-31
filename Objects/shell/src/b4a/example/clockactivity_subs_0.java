@@ -8,7 +8,7 @@ public class clockactivity_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,38);
+		Debug.PushSubsStack("Activity_Create (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,38);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 38;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -52,7 +52,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,58);
+		Debug.PushSubsStack("Activity_Pause (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,58);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 58;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -69,7 +69,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,54);
+		Debug.PushSubsStack("Activity_Resume (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,54);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","activity_resume");}
  BA.debugLineNum = 54;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(2097152);
@@ -85,7 +85,7 @@ finally {
 		}}
 public static RemoteObject  _closel_click() throws Exception{
 try {
-		Debug.PushSubsStack("closeL_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,217);
+		Debug.PushSubsStack("closeL_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,217);
 if (RapidSub.canDelegate("closel_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","closel_click");}
  BA.debugLineNum = 217;BA.debugLine="Private Sub closeL_Click";
 Debug.ShouldStop(16777216);
@@ -104,7 +104,7 @@ finally {
 		}}
 public static RemoteObject  _exitbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("exitBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,62);
+		Debug.PushSubsStack("exitBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,62);
 if (RapidSub.canDelegate("exitbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","exitbtn_click");}
  BA.debugLineNum = 62;BA.debugLine="Private Sub exitBtn_Click";
 Debug.ShouldStop(536870912);
@@ -123,7 +123,7 @@ finally {
 		}}
 public static RemoteObject  _formatbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("formatBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,66);
+		Debug.PushSubsStack("formatBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,66);
 if (RapidSub.canDelegate("formatbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","formatbtn_click");}
  BA.debugLineNum = 66;BA.debugLine="Private Sub formatBtn_Click";
 Debug.ShouldStop(2);
@@ -193,7 +193,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _longbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("longBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,205);
+		Debug.PushSubsStack("longBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,205);
 if (RapidSub.canDelegate("longbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","longbtn_click");}
  BA.debugLineNum = 205;BA.debugLine="Private Sub longBtn_Click";
 Debug.ShouldStop(4096);
@@ -221,7 +221,7 @@ finally {
 		}}
 public static RemoteObject  _playbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("playBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,79);
+		Debug.PushSubsStack("playBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,79);
 if (RapidSub.canDelegate("playbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","playbtn_click");}
  BA.debugLineNum = 79;BA.debugLine="Private Sub playBtn_Click";
 Debug.ShouldStop(16384);
@@ -267,7 +267,7 @@ finally {
 		}}
 public static RemoteObject  _pomobtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("pomoBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,191);
+		Debug.PushSubsStack("pomoBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,191);
 if (RapidSub.canDelegate("pomobtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","pomobtn_click");}
  BA.debugLineNum = 191;BA.debugLine="Private Sub pomoBtn_Click";
 Debug.ShouldStop(1073741824);
@@ -306,7 +306,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _savebtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("saveBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,221);
+		Debug.PushSubsStack("saveBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,221);
 if (RapidSub.canDelegate("savebtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","savebtn_click");}
  BA.debugLineNum = 221;BA.debugLine="Private Sub saveBtn_Click";
 Debug.ShouldStop(268435456);
@@ -359,7 +359,7 @@ finally {
 		}}
 public static RemoteObject  _settingsbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("settingsBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,212);
+		Debug.PushSubsStack("settingsBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,212);
 if (RapidSub.canDelegate("settingsbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","settingsbtn_click");}
  BA.debugLineNum = 212;BA.debugLine="Private Sub settingsBtn_Click";
 Debug.ShouldStop(524288);
@@ -381,7 +381,7 @@ finally {
 		}}
 public static RemoteObject  _settingswindow(RemoteObject _pw,RemoteObject _ph) throws Exception{
 try {
-		Debug.PushSubsStack("settingsWindow (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,130);
+		Debug.PushSubsStack("settingsWindow (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,130);
 if (RapidSub.canDelegate("settingswindow")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","settingswindow", _pw, _ph);}
 RemoteObject _lblp = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 RemoteObject _lbls = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
@@ -550,7 +550,7 @@ finally {
 		}}
 public static RemoteObject  _shortbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("shortBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,198);
+		Debug.PushSubsStack("shortBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,198);
 if (RapidSub.canDelegate("shortbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","shortbtn_click");}
  BA.debugLineNum = 198;BA.debugLine="Private Sub shortBtn_Click";
 Debug.ShouldStop(32);
@@ -578,7 +578,7 @@ finally {
 		}}
 public static RemoteObject  _skipbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("skipBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,241);
+		Debug.PushSubsStack("skipBtn_Click (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,241);
 if (RapidSub.canDelegate("skipbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","skipbtn_click");}
  BA.debugLineNum = 241;BA.debugLine="Private Sub skipBtn_Click";
 Debug.ShouldStop(65536);
@@ -638,7 +638,7 @@ finally {
 		}}
 public static RemoteObject  _timerstop() throws Exception{
 try {
-		Debug.PushSubsStack("timerStop (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,263);
+		Debug.PushSubsStack("timerStop (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,263);
 if (RapidSub.canDelegate("timerstop")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","timerstop");}
  BA.debugLineNum = 263;BA.debugLine="Private Sub timerStop";
 Debug.ShouldStop(64);
@@ -663,7 +663,7 @@ finally {
 		}}
 public static RemoteObject  _tmr_tick() throws Exception{
 try {
-		Debug.PushSubsStack("tmr_Tick (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,95);
+		Debug.PushSubsStack("tmr_Tick (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,95);
 if (RapidSub.canDelegate("tmr_tick")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","tmr_tick");}
  BA.debugLineNum = 95;BA.debugLine="Sub tmr_Tick";
 Debug.ShouldStop(1073741824);
@@ -731,7 +731,7 @@ finally {
 		}}
 public static RemoteObject  _updatelbl() throws Exception{
 try {
-		Debug.PushSubsStack("updateLbl (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,123);
+		Debug.PushSubsStack("updateLbl (clockactivity) ","clockactivity",3,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,123);
 if (RapidSub.canDelegate("updatelbl")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","updatelbl");}
 RemoteObject _mins = RemoteObject.createImmutable(0);
 RemoteObject _secs = RemoteObject.createImmutable(0);

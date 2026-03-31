@@ -356,8 +356,6 @@ public anywheresoftware.b4a.objects.EditTextWrapper _title_et = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _description_et = null;
 public b4a.example.main _main = null;
 public b4a.example.mainactivity _mainactivity = null;
-public b4a.example.starter _starter = null;
-public b4a.example.navactivity _navactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
@@ -375,117 +373,119 @@ public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
+public b4a.example.navactivity _navactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.starter _starter = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=13369344;
- //BA.debugLineNum = 13369344;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=13369346;
- //BA.debugLineNum = 13369346;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentLine=10354688;
+ //BA.debugLineNum = 10354688;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=10354690;
+ //BA.debugLineNum = 10354690;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=13369347;
- //BA.debugLineNum = 13369347;BA.debugLine="Activity.LoadLayout(\"AEMLayout\")";
+RDebugUtils.currentLine=10354691;
+ //BA.debugLineNum = 10354691;BA.debugLine="Activity.LoadLayout(\"AEMLayout\")";
 mostCurrent._activity.LoadLayout("AEMLayout",mostCurrent.activityBA);
  }else {
-RDebugUtils.currentLine=13369349;
- //BA.debugLineNum = 13369349;BA.debugLine="Activity.LoadLayout(\"AEMLayoutDark\")";
+RDebugUtils.currentLine=10354693;
+ //BA.debugLineNum = 10354693;BA.debugLine="Activity.LoadLayout(\"AEMLayoutDark\")";
 mostCurrent._activity.LoadLayout("AEMLayoutDark",mostCurrent.activityBA);
  };
-RDebugUtils.currentLine=13369352;
- //BA.debugLineNum = 13369352;BA.debugLine="timelbl.Text = currentDate";
+RDebugUtils.currentLine=10354696;
+ //BA.debugLineNum = 10354696;BA.debugLine="timelbl.Text = currentDate";
 mostCurrent._timelbl.setText(BA.ObjectToCharSequence(_currentdate));
-RDebugUtils.currentLine=13369354;
- //BA.debugLineNum = 13369354;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10354698;
+ //BA.debugLineNum = 10354698;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="add_events_module";
-RDebugUtils.currentLine=13500416;
- //BA.debugLineNum = 13500416;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=13500418;
- //BA.debugLineNum = 13500418;BA.debugLine="eventrb.Checked = False";
+RDebugUtils.currentLine=10485760;
+ //BA.debugLineNum = 10485760;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=10485762;
+ //BA.debugLineNum = 10485762;BA.debugLine="eventrb.Checked = False";
 mostCurrent._eventrb.setChecked(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=13500419;
- //BA.debugLineNum = 13500419;BA.debugLine="taskrb.Checked = False";
+RDebugUtils.currentLine=10485763;
+ //BA.debugLineNum = 10485763;BA.debugLine="taskrb.Checked = False";
 mostCurrent._taskrb.setChecked(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=13500420;
- //BA.debugLineNum = 13500420;BA.debugLine="birthdayrb.Checked = False";
+RDebugUtils.currentLine=10485764;
+ //BA.debugLineNum = 10485764;BA.debugLine="birthdayrb.Checked = False";
 mostCurrent._birthdayrb.setChecked(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=13500421;
- //BA.debugLineNum = 13500421;BA.debugLine="ooorb.Checked = False";
+RDebugUtils.currentLine=10485765;
+ //BA.debugLineNum = 10485765;BA.debugLine="ooorb.Checked = False";
 mostCurrent._ooorb.setChecked(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=13500422;
- //BA.debugLineNum = 13500422;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10485766;
+ //BA.debugLineNum = 10485766;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=13434880;
- //BA.debugLineNum = 13434880;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=13434881;
- //BA.debugLineNum = 13434881;BA.debugLine="If eventtype = \"Event\" Then";
+RDebugUtils.currentLine=10420224;
+ //BA.debugLineNum = 10420224;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=10420225;
+ //BA.debugLineNum = 10420225;BA.debugLine="If eventtype = \"Event\" Then";
 if ((_eventtype).equals("Event")) { 
-RDebugUtils.currentLine=13434882;
- //BA.debugLineNum = 13434882;BA.debugLine="eventrb.Checked = True";
+RDebugUtils.currentLine=10420226;
+ //BA.debugLineNum = 10420226;BA.debugLine="eventrb.Checked = True";
 mostCurrent._eventrb.setChecked(anywheresoftware.b4a.keywords.Common.True);
  }else 
-{RDebugUtils.currentLine=13434883;
- //BA.debugLineNum = 13434883;BA.debugLine="Else if eventtype = \"Task\" Then";
+{RDebugUtils.currentLine=10420227;
+ //BA.debugLineNum = 10420227;BA.debugLine="Else if eventtype = \"Task\" Then";
 if ((_eventtype).equals("Task")) { 
-RDebugUtils.currentLine=13434884;
- //BA.debugLineNum = 13434884;BA.debugLine="taskrb.Checked = True";
+RDebugUtils.currentLine=10420228;
+ //BA.debugLineNum = 10420228;BA.debugLine="taskrb.Checked = True";
 mostCurrent._taskrb.setChecked(anywheresoftware.b4a.keywords.Common.True);
  }else 
-{RDebugUtils.currentLine=13434885;
- //BA.debugLineNum = 13434885;BA.debugLine="Else if eventtype = \"Birthday\" Then";
+{RDebugUtils.currentLine=10420229;
+ //BA.debugLineNum = 10420229;BA.debugLine="Else if eventtype = \"Birthday\" Then";
 if ((_eventtype).equals("Birthday")) { 
-RDebugUtils.currentLine=13434886;
- //BA.debugLineNum = 13434886;BA.debugLine="birthdayrb.Checked = True";
+RDebugUtils.currentLine=10420230;
+ //BA.debugLineNum = 10420230;BA.debugLine="birthdayrb.Checked = True";
 mostCurrent._birthdayrb.setChecked(anywheresoftware.b4a.keywords.Common.True);
  }else 
-{RDebugUtils.currentLine=13434887;
- //BA.debugLineNum = 13434887;BA.debugLine="Else if eventtype = \"OOO\" Then";
+{RDebugUtils.currentLine=10420231;
+ //BA.debugLineNum = 10420231;BA.debugLine="Else if eventtype = \"OOO\" Then";
 if ((_eventtype).equals("OOO")) { 
-RDebugUtils.currentLine=13434888;
- //BA.debugLineNum = 13434888;BA.debugLine="ooorb.Checked = True";
+RDebugUtils.currentLine=10420232;
+ //BA.debugLineNum = 10420232;BA.debugLine="ooorb.Checked = True";
 mostCurrent._ooorb.setChecked(anywheresoftware.b4a.keywords.Common.True);
  }}}}
 ;
-RDebugUtils.currentLine=13434890;
- //BA.debugLineNum = 13434890;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10420234;
+ //BA.debugLineNum = 10420234;BA.debugLine="End Sub";
 return "";
 }
 public static String  _birthdayrb_checkedchange(boolean _checked) throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "birthdayrb_checkedchange", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "birthdayrb_checkedchange", new Object[] {_checked}));}
-RDebugUtils.currentLine=13893632;
- //BA.debugLineNum = 13893632;BA.debugLine="Private Sub birthdayrb_CheckedChange(Checked As Bo";
-RDebugUtils.currentLine=13893633;
- //BA.debugLineNum = 13893633;BA.debugLine="eventtype = \"Birthday\"";
+RDebugUtils.currentLine=10878976;
+ //BA.debugLineNum = 10878976;BA.debugLine="Private Sub birthdayrb_CheckedChange(Checked As Bo";
+RDebugUtils.currentLine=10878977;
+ //BA.debugLineNum = 10878977;BA.debugLine="eventtype = \"Birthday\"";
 _eventtype = "Birthday";
-RDebugUtils.currentLine=13893634;
- //BA.debugLineNum = 13893634;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10878978;
+ //BA.debugLineNum = 10878978;BA.debugLine="End Sub";
 return "";
 }
 public static String  _eventrb_checkedchange(boolean _checked) throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "eventrb_checkedchange", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "eventrb_checkedchange", new Object[] {_checked}));}
-RDebugUtils.currentLine=13959168;
- //BA.debugLineNum = 13959168;BA.debugLine="Private Sub eventrb_CheckedChange(Checked As Boole";
-RDebugUtils.currentLine=13959169;
- //BA.debugLineNum = 13959169;BA.debugLine="eventtype = \"Event\"";
+RDebugUtils.currentLine=10944512;
+ //BA.debugLineNum = 10944512;BA.debugLine="Private Sub eventrb_CheckedChange(Checked As Boole";
+RDebugUtils.currentLine=10944513;
+ //BA.debugLineNum = 10944513;BA.debugLine="eventtype = \"Event\"";
 _eventtype = "Event";
-RDebugUtils.currentLine=13959170;
- //BA.debugLineNum = 13959170;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10944514;
+ //BA.debugLineNum = 10944514;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.objects.collections.Map  _mapinitializer() throws Exception{
@@ -495,53 +495,53 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "mapinitializer", false))
 anywheresoftware.b4a.objects.collections.Map _eventmap = null;
 anywheresoftware.b4a.objects.collections.List _allevents = null;
 anywheresoftware.b4a.objects.collections.List _timeline = null;
-RDebugUtils.currentLine=13697024;
- //BA.debugLineNum = 13697024;BA.debugLine="Sub MapInitializer As Map";
-RDebugUtils.currentLine=13697025;
- //BA.debugLineNum = 13697025;BA.debugLine="Dim eventmap As Map";
+RDebugUtils.currentLine=10682368;
+ //BA.debugLineNum = 10682368;BA.debugLine="Sub MapInitializer As Map";
+RDebugUtils.currentLine=10682369;
+ //BA.debugLineNum = 10682369;BA.debugLine="Dim eventmap As Map";
 _eventmap = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=13697027;
- //BA.debugLineNum = 13697027;BA.debugLine="eventmap.Initialize";
+RDebugUtils.currentLine=10682371;
+ //BA.debugLineNum = 10682371;BA.debugLine="eventmap.Initialize";
 _eventmap.Initialize();
-RDebugUtils.currentLine=13697028;
- //BA.debugLineNum = 13697028;BA.debugLine="Dim allevents As List";
+RDebugUtils.currentLine=10682372;
+ //BA.debugLineNum = 10682372;BA.debugLine="Dim allevents As List";
 _allevents = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=13697029;
- //BA.debugLineNum = 13697029;BA.debugLine="allevents.initialize";
+RDebugUtils.currentLine=10682373;
+ //BA.debugLineNum = 10682373;BA.debugLine="allevents.initialize";
 _allevents.Initialize();
-RDebugUtils.currentLine=13697031;
- //BA.debugLineNum = 13697031;BA.debugLine="Dim timeline As List";
+RDebugUtils.currentLine=10682375;
+ //BA.debugLineNum = 10682375;BA.debugLine="Dim timeline As List";
 _timeline = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=13697032;
- //BA.debugLineNum = 13697032;BA.debugLine="timeline.initialize";
+RDebugUtils.currentLine=10682376;
+ //BA.debugLineNum = 10682376;BA.debugLine="timeline.initialize";
 _timeline.Initialize();
-RDebugUtils.currentLine=13697034;
- //BA.debugLineNum = 13697034;BA.debugLine="eventmap.Put(\"AllEvents\", allevents)";
+RDebugUtils.currentLine=10682378;
+ //BA.debugLineNum = 10682378;BA.debugLine="eventmap.Put(\"AllEvents\", allevents)";
 _eventmap.Put((Object)("AllEvents"),(Object)(_allevents.getObject()));
-RDebugUtils.currentLine=13697035;
- //BA.debugLineNum = 13697035;BA.debugLine="eventmap.Put(\"Timeline\", timeline)";
+RDebugUtils.currentLine=10682379;
+ //BA.debugLineNum = 10682379;BA.debugLine="eventmap.Put(\"Timeline\", timeline)";
 _eventmap.Put((Object)("Timeline"),(Object)(_timeline.getObject()));
-RDebugUtils.currentLine=13697037;
- //BA.debugLineNum = 13697037;BA.debugLine="CalendarActivity.CalendarMap.Put(day_module.curre";
+RDebugUtils.currentLine=10682381;
+ //BA.debugLineNum = 10682381;BA.debugLine="CalendarActivity.CalendarMap.Put(day_module.curre";
 mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .Put((Object)(mostCurrent._day_module._currentdate /*String*/ ),(Object)(_eventmap.getObject()));
-RDebugUtils.currentLine=13697039;
- //BA.debugLineNum = 13697039;BA.debugLine="Return eventmap";
+RDebugUtils.currentLine=10682383;
+ //BA.debugLineNum = 10682383;BA.debugLine="Return eventmap";
 if (true) return _eventmap;
-RDebugUtils.currentLine=13697040;
- //BA.debugLineNum = 13697040;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10682384;
+ //BA.debugLineNum = 10682384;BA.debugLine="End Sub";
 return null;
 }
 public static String  _ooorb_checkedchange(boolean _checked) throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "ooorb_checkedchange", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "ooorb_checkedchange", new Object[] {_checked}));}
-RDebugUtils.currentLine=13828096;
- //BA.debugLineNum = 13828096;BA.debugLine="Private Sub ooorb_CheckedChange(Checked As Boolean";
-RDebugUtils.currentLine=13828097;
- //BA.debugLineNum = 13828097;BA.debugLine="eventtype = \"OOO\"";
+RDebugUtils.currentLine=10813440;
+ //BA.debugLineNum = 10813440;BA.debugLine="Private Sub ooorb_CheckedChange(Checked As Boolean";
+RDebugUtils.currentLine=10813441;
+ //BA.debugLineNum = 10813441;BA.debugLine="eventtype = \"OOO\"";
 _eventtype = "OOO";
-RDebugUtils.currentLine=13828098;
- //BA.debugLineNum = 13828098;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10813442;
+ //BA.debugLineNum = 10813442;BA.debugLine="End Sub";
 return "";
 }
 public static String  _save_btn_click() throws Exception{
@@ -551,104 +551,104 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "save_btn_click", false))
 anywheresoftware.b4a.objects.collections.Map _eventmap = null;
 anywheresoftware.b4a.objects.collections.List _getallevents = null;
 anywheresoftware.b4a.objects.collections.Map _putevent = null;
-RDebugUtils.currentLine=13762560;
- //BA.debugLineNum = 13762560;BA.debugLine="Private Sub save_btn_Click";
-RDebugUtils.currentLine=13762561;
- //BA.debugLineNum = 13762561;BA.debugLine="Dim eventmap As Map";
+RDebugUtils.currentLine=10747904;
+ //BA.debugLineNum = 10747904;BA.debugLine="Private Sub save_btn_Click";
+RDebugUtils.currentLine=10747905;
+ //BA.debugLineNum = 10747905;BA.debugLine="Dim eventmap As Map";
 _eventmap = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=13762562;
- //BA.debugLineNum = 13762562;BA.debugLine="If title_et.text = \"\" Then";
+RDebugUtils.currentLine=10747906;
+ //BA.debugLineNum = 10747906;BA.debugLine="If title_et.text = \"\" Then";
 if ((mostCurrent._title_et.getText()).equals("")) { 
-RDebugUtils.currentLine=13762563;
- //BA.debugLineNum = 13762563;BA.debugLine="MsgboxAsync(\"Enter The Event Title\", \"Error\")";
+RDebugUtils.currentLine=10747907;
+ //BA.debugLineNum = 10747907;BA.debugLine="MsgboxAsync(\"Enter The Event Title\", \"Error\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Enter The Event Title"),BA.ObjectToCharSequence("Error"),processBA);
-RDebugUtils.currentLine=13762564;
- //BA.debugLineNum = 13762564;BA.debugLine="Return";
+RDebugUtils.currentLine=10747908;
+ //BA.debugLineNum = 10747908;BA.debugLine="Return";
 if (true) return "";
  };
-RDebugUtils.currentLine=13762567;
- //BA.debugLineNum = 13762567;BA.debugLine="If CalendarActivity.CalendarMap.ContainsKey(day_m";
+RDebugUtils.currentLine=10747911;
+ //BA.debugLineNum = 10747911;BA.debugLine="If CalendarActivity.CalendarMap.ContainsKey(day_m";
 if (mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .ContainsKey((Object)(mostCurrent._day_module._currentdate /*String*/ ))) { 
-RDebugUtils.currentLine=13762568;
- //BA.debugLineNum = 13762568;BA.debugLine="eventmap = CalendarActivity.CalendarMap.Get(day_";
+RDebugUtils.currentLine=10747912;
+ //BA.debugLineNum = 10747912;BA.debugLine="eventmap = CalendarActivity.CalendarMap.Get(day_";
 _eventmap = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(mostCurrent._day_module._currentdate /*String*/ ))));
  }else {
-RDebugUtils.currentLine=13762570;
- //BA.debugLineNum = 13762570;BA.debugLine="eventmap = MapInitializer";
+RDebugUtils.currentLine=10747914;
+ //BA.debugLineNum = 10747914;BA.debugLine="eventmap = MapInitializer";
 _eventmap = _mapinitializer();
  };
-RDebugUtils.currentLine=13762573;
- //BA.debugLineNum = 13762573;BA.debugLine="Dim getAllevents As List = eventmap.Get(\"AllEvent";
+RDebugUtils.currentLine=10747917;
+ //BA.debugLineNum = 10747917;BA.debugLine="Dim getAllevents As List = eventmap.Get(\"AllEvent";
 _getallevents = new anywheresoftware.b4a.objects.collections.List();
 _getallevents = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_eventmap.Get((Object)("AllEvents"))));
-RDebugUtils.currentLine=13762574;
- //BA.debugLineNum = 13762574;BA.debugLine="Dim putevent As Map";
+RDebugUtils.currentLine=10747918;
+ //BA.debugLineNum = 10747918;BA.debugLine="Dim putevent As Map";
 _putevent = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=13762575;
- //BA.debugLineNum = 13762575;BA.debugLine="putevent.Initialize";
+RDebugUtils.currentLine=10747919;
+ //BA.debugLineNum = 10747919;BA.debugLine="putevent.Initialize";
 _putevent.Initialize();
-RDebugUtils.currentLine=13762576;
- //BA.debugLineNum = 13762576;BA.debugLine="putevent.Put(\"Title\", title_et.Text)";
+RDebugUtils.currentLine=10747920;
+ //BA.debugLineNum = 10747920;BA.debugLine="putevent.Put(\"Title\", title_et.Text)";
 _putevent.Put((Object)("Title"),(Object)(mostCurrent._title_et.getText()));
-RDebugUtils.currentLine=13762577;
- //BA.debugLineNum = 13762577;BA.debugLine="putevent.Put(\"Description\", description_et.Text)";
+RDebugUtils.currentLine=10747921;
+ //BA.debugLineNum = 10747921;BA.debugLine="putevent.Put(\"Description\", description_et.Text)";
 _putevent.Put((Object)("Description"),(Object)(mostCurrent._description_et.getText()));
-RDebugUtils.currentLine=13762578;
- //BA.debugLineNum = 13762578;BA.debugLine="putevent.Put(\"Tags\", eventtype)";
+RDebugUtils.currentLine=10747922;
+ //BA.debugLineNum = 10747922;BA.debugLine="putevent.Put(\"Tags\", eventtype)";
 _putevent.Put((Object)("Tags"),(Object)(_eventtype));
-RDebugUtils.currentLine=13762580;
- //BA.debugLineNum = 13762580;BA.debugLine="getAllevents.Add(putevent)";
+RDebugUtils.currentLine=10747924;
+ //BA.debugLineNum = 10747924;BA.debugLine="getAllevents.Add(putevent)";
 _getallevents.Add((Object)(_putevent.getObject()));
-RDebugUtils.currentLine=13762581;
- //BA.debugLineNum = 13762581;BA.debugLine="SaveCalendar";
+RDebugUtils.currentLine=10747925;
+ //BA.debugLineNum = 10747925;BA.debugLine="SaveCalendar";
 _savecalendar();
-RDebugUtils.currentLine=13762582;
- //BA.debugLineNum = 13762582;BA.debugLine="day_module.addeventsfeedback = True";
+RDebugUtils.currentLine=10747926;
+ //BA.debugLineNum = 10747926;BA.debugLine="day_module.addeventsfeedback = True";
 mostCurrent._day_module._addeventsfeedback /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=13762583;
- //BA.debugLineNum = 13762583;BA.debugLine="Activity.finish";
+RDebugUtils.currentLine=10747927;
+ //BA.debugLineNum = 10747927;BA.debugLine="Activity.finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=13762584;
- //BA.debugLineNum = 13762584;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10747928;
+ //BA.debugLineNum = 10747928;BA.debugLine="End Sub";
 return "";
 }
 public static String  _savecalendar() throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "savecalendar", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "savecalendar", null));}
-RDebugUtils.currentLine=13631488;
- //BA.debugLineNum = 13631488;BA.debugLine="Sub SaveCalendar";
-RDebugUtils.currentLine=13631489;
- //BA.debugLineNum = 13631489;BA.debugLine="CalendarActivity.kvs.put(\"CalendarKVS\", CalendarA";
+RDebugUtils.currentLine=10616832;
+ //BA.debugLineNum = 10616832;BA.debugLine="Sub SaveCalendar";
+RDebugUtils.currentLine=10616833;
+ //BA.debugLineNum = 10616833;BA.debugLine="CalendarActivity.kvs.put(\"CalendarKVS\", CalendarA";
 mostCurrent._calendaractivity._kvs /*b4a.example3.keyvaluestore*/ ._put("CalendarKVS",(Object)(mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .getObject()));
-RDebugUtils.currentLine=13631490;
- //BA.debugLineNum = 13631490;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10616834;
+ //BA.debugLineNum = 10616834;BA.debugLine="End Sub";
 return "";
 }
 public static String  _taskrb_checkedchange(boolean _checked) throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "taskrb_checkedchange", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "taskrb_checkedchange", new Object[] {_checked}));}
-RDebugUtils.currentLine=14024704;
- //BA.debugLineNum = 14024704;BA.debugLine="Private Sub taskrb_CheckedChange(Checked As Boolea";
-RDebugUtils.currentLine=14024705;
- //BA.debugLineNum = 14024705;BA.debugLine="eventtype = \"Task\"";
+RDebugUtils.currentLine=11010048;
+ //BA.debugLineNum = 11010048;BA.debugLine="Private Sub taskrb_CheckedChange(Checked As Boolea";
+RDebugUtils.currentLine=11010049;
+ //BA.debugLineNum = 11010049;BA.debugLine="eventtype = \"Task\"";
 _eventtype = "Task";
-RDebugUtils.currentLine=14024706;
- //BA.debugLineNum = 14024706;BA.debugLine="End Sub";
+RDebugUtils.currentLine=11010050;
+ //BA.debugLineNum = 11010050;BA.debugLine="End Sub";
 return "";
 }
 public static String  _x_btn_click() throws Exception{
 RDebugUtils.currentModule="add_events_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "x_btn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "x_btn_click", null));}
-RDebugUtils.currentLine=13565952;
- //BA.debugLineNum = 13565952;BA.debugLine="Private Sub x_btn_Click";
-RDebugUtils.currentLine=13565953;
- //BA.debugLineNum = 13565953;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=10551296;
+ //BA.debugLineNum = 10551296;BA.debugLine="Private Sub x_btn_Click";
+RDebugUtils.currentLine=10551297;
+ //BA.debugLineNum = 10551297;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=13565954;
- //BA.debugLineNum = 13565954;BA.debugLine="End Sub";
+RDebugUtils.currentLine=10551298;
+ //BA.debugLineNum = 10551298;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -354,8 +354,6 @@ public anywheresoftware.b4a.objects.ImageViewWrapper _theme1 = null;
 public anywheresoftware.b4a.objects.ImageViewWrapper _theme2 = null;
 public b4a.example.main _main = null;
 public b4a.example.mainactivity _mainactivity = null;
-public b4a.example.starter _starter = null;
-public b4a.example.navactivity _navactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
@@ -373,186 +371,188 @@ public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
+public b4a.example.navactivity _navactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.starter _starter = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=8519680;
- //BA.debugLineNum = 8519680;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=8519681;
- //BA.debugLineNum = 8519681;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentLine=7143424;
+ //BA.debugLineNum = 7143424;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=7143425;
+ //BA.debugLineNum = 7143425;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=8519682;
- //BA.debugLineNum = 8519682;BA.debugLine="Activity.LoadLayout(\"themeLayout\")";
+RDebugUtils.currentLine=7143426;
+ //BA.debugLineNum = 7143426;BA.debugLine="Activity.LoadLayout(\"themeLayout\")";
 mostCurrent._activity.LoadLayout("themeLayout",mostCurrent.activityBA);
  }else {
-RDebugUtils.currentLine=8519684;
- //BA.debugLineNum = 8519684;BA.debugLine="Activity.LoadLayout(\"themeLayoutDark\")";
+RDebugUtils.currentLine=7143428;
+ //BA.debugLineNum = 7143428;BA.debugLine="Activity.LoadLayout(\"themeLayoutDark\")";
 mostCurrent._activity.LoadLayout("themeLayoutDark",mostCurrent.activityBA);
  };
-RDebugUtils.currentLine=8519687;
- //BA.debugLineNum = 8519687;BA.debugLine="showThemePage(0)";
+RDebugUtils.currentLine=7143431;
+ //BA.debugLineNum = 7143431;BA.debugLine="showThemePage(0)";
 _showthemepage((int) (0));
-RDebugUtils.currentLine=8519688;
- //BA.debugLineNum = 8519688;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7143432;
+ //BA.debugLineNum = 7143432;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showthemepage(int _page) throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "showthemepage", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "showthemepage", new Object[] {_page}));}
-RDebugUtils.currentLine=8716288;
- //BA.debugLineNum = 8716288;BA.debugLine="Sub showThemePage(page As Int)";
-RDebugUtils.currentLine=8716290;
- //BA.debugLineNum = 8716290;BA.debugLine="themePage = page";
+RDebugUtils.currentLine=7340032;
+ //BA.debugLineNum = 7340032;BA.debugLine="Sub showThemePage(page As Int)";
+RDebugUtils.currentLine=7340034;
+ //BA.debugLineNum = 7340034;BA.debugLine="themePage = page";
 _themepage = _page;
-RDebugUtils.currentLine=8716292;
- //BA.debugLineNum = 8716292;BA.debugLine="Select page";
+RDebugUtils.currentLine=7340036;
+ //BA.debugLineNum = 7340036;BA.debugLine="Select page";
 switch (_page) {
 case 0: {
-RDebugUtils.currentLine=8716294;
- //BA.debugLineNum = 8716294;BA.debugLine="titleLbl.Text = \"Default Theme\"";
+RDebugUtils.currentLine=7340038;
+ //BA.debugLineNum = 7340038;BA.debugLine="titleLbl.Text = \"Default Theme\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Default Theme"));
-RDebugUtils.currentLine=8716295;
- //BA.debugLineNum = 8716295;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
+RDebugUtils.currentLine=7340039;
+ //BA.debugLineNum = 7340039;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
 mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
-RDebugUtils.currentLine=8716296;
- //BA.debugLineNum = 8716296;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
+RDebugUtils.currentLine=7340040;
+ //BA.debugLineNum = 7340040;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
 mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 1: {
-RDebugUtils.currentLine=8716298;
- //BA.debugLineNum = 8716298;BA.debugLine="titleLbl.Text = \"Y2K Aero\"";
+RDebugUtils.currentLine=7340042;
+ //BA.debugLineNum = 7340042;BA.debugLine="titleLbl.Text = \"Y2K Aero\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Y2K Aero"));
-RDebugUtils.currentLine=8716299;
- //BA.debugLineNum = 8716299;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
+RDebugUtils.currentLine=7340043;
+ //BA.debugLineNum = 7340043;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
 mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
-RDebugUtils.currentLine=8716300;
- //BA.debugLineNum = 8716300;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
+RDebugUtils.currentLine=7340044;
+ //BA.debugLineNum = 7340044;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
 mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 2: {
-RDebugUtils.currentLine=8716302;
- //BA.debugLineNum = 8716302;BA.debugLine="titleLbl.Text = \"Pixelated Rustic\"";
+RDebugUtils.currentLine=7340046;
+ //BA.debugLineNum = 7340046;BA.debugLine="titleLbl.Text = \"Pixelated Rustic\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Pixelated Rustic"));
-RDebugUtils.currentLine=8716303;
- //BA.debugLineNum = 8716303;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
+RDebugUtils.currentLine=7340047;
+ //BA.debugLineNum = 7340047;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
 mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
-RDebugUtils.currentLine=8716304;
- //BA.debugLineNum = 8716304;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
+RDebugUtils.currentLine=7340048;
+ //BA.debugLineNum = 7340048;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
 mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 }
 ;
-RDebugUtils.currentLine=8716306;
- //BA.debugLineNum = 8716306;BA.debugLine="backBtn.Enabled = (page > 0)";
+RDebugUtils.currentLine=7340050;
+ //BA.debugLineNum = 7340050;BA.debugLine="backBtn.Enabled = (page > 0)";
 mostCurrent._backbtn.setEnabled((_page>0));
-RDebugUtils.currentLine=8716307;
- //BA.debugLineNum = 8716307;BA.debugLine="nextBtn.Enabled = (page < 2)";
+RDebugUtils.currentLine=7340051;
+ //BA.debugLineNum = 7340051;BA.debugLine="nextBtn.Enabled = (page < 2)";
 mostCurrent._nextbtn.setEnabled((_page<2));
-RDebugUtils.currentLine=8716308;
- //BA.debugLineNum = 8716308;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7340052;
+ //BA.debugLineNum = 7340052;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="themeactivity";
-RDebugUtils.currentLine=8650752;
- //BA.debugLineNum = 8650752;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=8650754;
- //BA.debugLineNum = 8650754;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7274496;
+ //BA.debugLineNum = 7274496;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=7274498;
+ //BA.debugLineNum = 7274498;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=8585216;
- //BA.debugLineNum = 8585216;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=8585218;
- //BA.debugLineNum = 8585218;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7208960;
+ //BA.debugLineNum = 7208960;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=7208962;
+ //BA.debugLineNum = 7208962;BA.debugLine="End Sub";
 return "";
 }
 public static String  _applybtn_click() throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "applybtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "applybtn_click", null));}
-RDebugUtils.currentLine=8978432;
- //BA.debugLineNum = 8978432;BA.debugLine="Sub applyBtn_Click";
-RDebugUtils.currentLine=8978433;
- //BA.debugLineNum = 8978433;BA.debugLine="If themePage = 0 Then";
+RDebugUtils.currentLine=7602176;
+ //BA.debugLineNum = 7602176;BA.debugLine="Sub applyBtn_Click";
+RDebugUtils.currentLine=7602177;
+ //BA.debugLineNum = 7602177;BA.debugLine="If themePage = 0 Then";
 if (_themepage==0) { 
-RDebugUtils.currentLine=8978434;
- //BA.debugLineNum = 8978434;BA.debugLine="Starter.themeNumber = 0";
+RDebugUtils.currentLine=7602178;
+ //BA.debugLineNum = 7602178;BA.debugLine="Starter.themeNumber = 0";
 mostCurrent._starter._themenumber /*int*/  = (int) (0);
  }else 
-{RDebugUtils.currentLine=8978435;
- //BA.debugLineNum = 8978435;BA.debugLine="Else If themePage = 1 Then";
+{RDebugUtils.currentLine=7602179;
+ //BA.debugLineNum = 7602179;BA.debugLine="Else If themePage = 1 Then";
 if (_themepage==1) { 
-RDebugUtils.currentLine=8978436;
- //BA.debugLineNum = 8978436;BA.debugLine="Starter.themeNumber = 1";
+RDebugUtils.currentLine=7602180;
+ //BA.debugLineNum = 7602180;BA.debugLine="Starter.themeNumber = 1";
 mostCurrent._starter._themenumber /*int*/  = (int) (1);
  }else 
-{RDebugUtils.currentLine=8978437;
- //BA.debugLineNum = 8978437;BA.debugLine="Else If themePage = 2 Then";
+{RDebugUtils.currentLine=7602181;
+ //BA.debugLineNum = 7602181;BA.debugLine="Else If themePage = 2 Then";
 if (_themepage==2) { 
-RDebugUtils.currentLine=8978438;
- //BA.debugLineNum = 8978438;BA.debugLine="Starter.themeNumber = 2";
+RDebugUtils.currentLine=7602182;
+ //BA.debugLineNum = 7602182;BA.debugLine="Starter.themeNumber = 2";
 mostCurrent._starter._themenumber /*int*/  = (int) (2);
  }}}
 ;
-RDebugUtils.currentLine=8978440;
- //BA.debugLineNum = 8978440;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7602184;
+ //BA.debugLineNum = 7602184;BA.debugLine="End Sub";
 return "";
 }
 public static String  _backbtn_click() throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "backbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "backbtn_click", null));}
-RDebugUtils.currentLine=8847360;
- //BA.debugLineNum = 8847360;BA.debugLine="Sub backBtn_Click";
-RDebugUtils.currentLine=8847361;
- //BA.debugLineNum = 8847361;BA.debugLine="If themePage > 0 Then";
+RDebugUtils.currentLine=7471104;
+ //BA.debugLineNum = 7471104;BA.debugLine="Sub backBtn_Click";
+RDebugUtils.currentLine=7471105;
+ //BA.debugLineNum = 7471105;BA.debugLine="If themePage > 0 Then";
 if (_themepage>0) { 
-RDebugUtils.currentLine=8847362;
- //BA.debugLineNum = 8847362;BA.debugLine="showThemePage(themePage - 1)";
+RDebugUtils.currentLine=7471106;
+ //BA.debugLineNum = 7471106;BA.debugLine="showThemePage(themePage - 1)";
 _showthemepage((int) (_themepage-1));
  };
-RDebugUtils.currentLine=8847364;
- //BA.debugLineNum = 8847364;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7471108;
+ //BA.debugLineNum = 7471108;BA.debugLine="End Sub";
 return "";
 }
 public static String  _closehelp_click() throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "closehelp_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "closehelp_click", null));}
-RDebugUtils.currentLine=8912896;
- //BA.debugLineNum = 8912896;BA.debugLine="Sub closeHelp_Click";
-RDebugUtils.currentLine=8912897;
- //BA.debugLineNum = 8912897;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=7536640;
+ //BA.debugLineNum = 7536640;BA.debugLine="Sub closeHelp_Click";
+RDebugUtils.currentLine=7536641;
+ //BA.debugLineNum = 7536641;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=8912898;
- //BA.debugLineNum = 8912898;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7536642;
+ //BA.debugLineNum = 7536642;BA.debugLine="End Sub";
 return "";
 }
 public static String  _nextbtn_click() throws Exception{
 RDebugUtils.currentModule="themeactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "nextbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "nextbtn_click", null));}
-RDebugUtils.currentLine=8781824;
- //BA.debugLineNum = 8781824;BA.debugLine="Sub nextBtn_Click";
-RDebugUtils.currentLine=8781825;
- //BA.debugLineNum = 8781825;BA.debugLine="If themePage < 2 Then";
+RDebugUtils.currentLine=7405568;
+ //BA.debugLineNum = 7405568;BA.debugLine="Sub nextBtn_Click";
+RDebugUtils.currentLine=7405569;
+ //BA.debugLineNum = 7405569;BA.debugLine="If themePage < 2 Then";
 if (_themepage<2) { 
-RDebugUtils.currentLine=8781826;
- //BA.debugLineNum = 8781826;BA.debugLine="showThemePage(themePage + 1)";
+RDebugUtils.currentLine=7405570;
+ //BA.debugLineNum = 7405570;BA.debugLine="showThemePage(themePage + 1)";
 _showthemepage((int) (_themepage+1));
  };
-RDebugUtils.currentLine=8781828;
- //BA.debugLineNum = 8781828;BA.debugLine="End Sub";
+RDebugUtils.currentLine=7405572;
+ //BA.debugLineNum = 7405572;BA.debugLine="End Sub";
 return "";
 }
 }

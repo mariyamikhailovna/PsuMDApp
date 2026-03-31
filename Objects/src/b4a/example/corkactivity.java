@@ -389,8 +389,6 @@ public static int _canvascount = 0;
 public static boolean _isloading = false;
 public b4a.example.main _main = null;
 public b4a.example.mainactivity _mainactivity = null;
-public b4a.example.starter _starter = null;
-public b4a.example.navactivity _navactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
@@ -408,10 +406,12 @@ public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
+public b4a.example.navactivity _navactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.starter _starter = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
 public static void  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -459,8 +459,8 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=7012354;
- //BA.debugLineNum = 7012354;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentLine=5636098;
+ //BA.debugLineNum = 5636098;BA.debugLine="If Starter.darkMode = False Then";
 if (true) break;
 
 case 1:
@@ -475,16 +475,16 @@ this.state = 5;
 case 3:
 //C
 this.state = 6;
-RDebugUtils.currentLine=7012355;
- //BA.debugLineNum = 7012355;BA.debugLine="Activity.LoadLayout(\"corkboardLayout\")";
+RDebugUtils.currentLine=5636099;
+ //BA.debugLineNum = 5636099;BA.debugLine="Activity.LoadLayout(\"corkboardLayout\")";
 parent.mostCurrent._activity.LoadLayout("corkboardLayout",mostCurrent.activityBA);
  if (true) break;
 
 case 5:
 //C
 this.state = 6;
-RDebugUtils.currentLine=7012357;
- //BA.debugLineNum = 7012357;BA.debugLine="Activity.LoadLayout(\"corkboardLayoutDark\")";
+RDebugUtils.currentLine=5636101;
+ //BA.debugLineNum = 5636101;BA.debugLine="Activity.LoadLayout(\"corkboardLayoutDark\")";
 parent.mostCurrent._activity.LoadLayout("corkboardLayoutDark",mostCurrent.activityBA);
  if (true) break;
 
@@ -492,11 +492,11 @@ case 6:
 //C
 this.state = 7;
 ;
-RDebugUtils.currentLine=7012360;
- //BA.debugLineNum = 7012360;BA.debugLine="penSpnr.AddAll(Array As String(\"Black\", \"Blue\", \"";
+RDebugUtils.currentLine=5636104;
+ //BA.debugLineNum = 5636104;BA.debugLine="penSpnr.AddAll(Array As String(\"Black\", \"Blue\", \"";
 parent.mostCurrent._penspnr.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{"Black","Blue","Green","Red","Yellow","Eraser"}));
-RDebugUtils.currentLine=7012361;
- //BA.debugLineNum = 7012361;BA.debugLine="If FirstTime Then";
+RDebugUtils.currentLine=5636105;
+ //BA.debugLineNum = 5636105;BA.debugLine="If FirstTime Then";
 if (true) break;
 
 case 7:
@@ -509,8 +509,8 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=7012362;
- //BA.debugLineNum = 7012362;BA.debugLine="imgPicker.Initialize(\"CC\")";
+RDebugUtils.currentLine=5636106;
+ //BA.debugLineNum = 5636106;BA.debugLine="imgPicker.Initialize(\"CC\")";
 parent._imgpicker.Initialize("CC");
  if (true) break;
 
@@ -518,26 +518,26 @@ case 10:
 //C
 this.state = 11;
 ;
-RDebugUtils.currentLine=7012364;
- //BA.debugLineNum = 7012364;BA.debugLine="penSpnr.Visible = False";
+RDebugUtils.currentLine=5636108;
+ //BA.debugLineNum = 5636108;BA.debugLine="penSpnr.Visible = False";
 parent.mostCurrent._penspnr.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7012365;
- //BA.debugLineNum = 7012365;BA.debugLine="Width = 80dip";
+RDebugUtils.currentLine=5636109;
+ //BA.debugLineNum = 5636109;BA.debugLine="Width = 80dip";
 parent._width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (80));
-RDebugUtils.currentLine=7012366;
- //BA.debugLineNum = 7012366;BA.debugLine="Height = 60dip";
+RDebugUtils.currentLine=5636110;
+ //BA.debugLineNum = 5636110;BA.debugLine="Height = 60dip";
 parent._height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60));
-RDebugUtils.currentLine=7012367;
- //BA.debugLineNum = 7012367;BA.debugLine="ddn.Initialize(Me, \"NoteDrag\")";
+RDebugUtils.currentLine=5636111;
+ //BA.debugLineNum = 5636111;BA.debugLine="ddn.Initialize(Me, \"NoteDrag\")";
 parent.mostCurrent._ddn._initialize(processBA,corkactivity.getObject(),"NoteDrag");
-RDebugUtils.currentLine=7012368;
- //BA.debugLineNum = 7012368;BA.debugLine="ddi.Initialize(Me, \"ImgDrag\")";
+RDebugUtils.currentLine=5636112;
+ //BA.debugLineNum = 5636112;BA.debugLine="ddi.Initialize(Me, \"ImgDrag\")";
 parent.mostCurrent._ddi._initialize(processBA,corkactivity.getObject(),"ImgDrag");
-RDebugUtils.currentLine=7012369;
- //BA.debugLineNum = 7012369;BA.debugLine="ddc.Initialize(Me, \"CanvasDrag\")";
+RDebugUtils.currentLine=5636113;
+ //BA.debugLineNum = 5636113;BA.debugLine="ddc.Initialize(Me, \"CanvasDrag\")";
 parent.mostCurrent._ddc._initialize(processBA,corkactivity.getObject(),"CanvasDrag");
-RDebugUtils.currentLine=7012371;
- //BA.debugLineNum = 7012371;BA.debugLine="If Main.kvs.IsInitialized = False Then";
+RDebugUtils.currentLine=5636115;
+ //BA.debugLineNum = 5636115;BA.debugLine="If Main.kvs.IsInitialized = False Then";
 if (true) break;
 
 case 11:
@@ -550,8 +550,8 @@ this.state = 13;
 case 13:
 //C
 this.state = 14;
-RDebugUtils.currentLine=7012372;
- //BA.debugLineNum = 7012372;BA.debugLine="Main.kvs.Initialize(File.DirInternal, \"notes_dat";
+RDebugUtils.currentLine=5636116;
+ //BA.debugLineNum = 5636116;BA.debugLine="Main.kvs.Initialize(File.DirInternal, \"notes_dat";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"notes_data");
  if (true) break;
 
@@ -559,11 +559,11 @@ case 14:
 //C
 this.state = 15;
 ;
-RDebugUtils.currentLine=7012375;
- //BA.debugLineNum = 7012375;BA.debugLine="isLoading = True";
+RDebugUtils.currentLine=5636119;
+ //BA.debugLineNum = 5636119;BA.debugLine="isLoading = True";
 parent._isloading = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=7012377;
- //BA.debugLineNum = 7012377;BA.debugLine="If Main.kvs.ContainsKey(\"note_count\") Then noteCo";
+RDebugUtils.currentLine=5636121;
+ //BA.debugLineNum = 5636121;BA.debugLine="If Main.kvs.ContainsKey(\"note_count\") Then noteCo";
 if (true) break;
 
 case 15:
@@ -592,11 +592,11 @@ case 22:
 //C
 this.state = 23;
 ;
-RDebugUtils.currentLine=7012378;
- //BA.debugLineNum = 7012378;BA.debugLine="Dim loadedNoteCount As Int = noteCount";
+RDebugUtils.currentLine=5636122;
+ //BA.debugLineNum = 5636122;BA.debugLine="Dim loadedNoteCount As Int = noteCount";
 _loadednotecount = parent._notecount;
-RDebugUtils.currentLine=7012379;
- //BA.debugLineNum = 7012379;BA.debugLine="For i = 0 To loadedNoteCount - 1";
+RDebugUtils.currentLine=5636123;
+ //BA.debugLineNum = 5636123;BA.debugLine="For i = 0 To loadedNoteCount - 1";
 if (true) break;
 
 case 23:
@@ -623,11 +623,11 @@ if (true) break;
 case 25:
 //C
 this.state = 26;
-RDebugUtils.currentLine=7012380;
- //BA.debugLineNum = 7012380;BA.debugLine="Dim nkey As String = \"note_\" & i";
+RDebugUtils.currentLine=5636124;
+ //BA.debugLineNum = 5636124;BA.debugLine="Dim nkey As String = \"note_\" & i";
 _nkey = "note_"+BA.NumberToString(_i);
-RDebugUtils.currentLine=7012381;
- //BA.debugLineNum = 7012381;BA.debugLine="If Main.kvs.ContainsKey(nkey & \"_text\") Then";
+RDebugUtils.currentLine=5636125;
+ //BA.debugLineNum = 5636125;BA.debugLine="If Main.kvs.ContainsKey(nkey & \"_text\") Then";
 if (true) break;
 
 case 26:
@@ -640,23 +640,23 @@ this.state = 28;
 case 28:
 //C
 this.state = 29;
-RDebugUtils.currentLine=7012382;
- //BA.debugLineNum = 7012382;BA.debugLine="Dim savedColor As Int = Main.kvs.Get(nkey & \"_c";
+RDebugUtils.currentLine=5636126;
+ //BA.debugLineNum = 5636126;BA.debugLine="Dim savedColor As Int = Main.kvs.Get(nkey & \"_c";
 _savedcolor = (int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_nkey+"_color")));
-RDebugUtils.currentLine=7012383;
- //BA.debugLineNum = 7012383;BA.debugLine="R = Bit.And(Bit.ShiftRight(savedColor, 16), 0xF";
+RDebugUtils.currentLine=5636127;
+ //BA.debugLineNum = 5636127;BA.debugLine="R = Bit.And(Bit.ShiftRight(savedColor, 16), 0xF";
 parent._r = anywheresoftware.b4a.keywords.Common.Bit.And(anywheresoftware.b4a.keywords.Common.Bit.ShiftRight(_savedcolor,(int) (16)),((int)0xff));
-RDebugUtils.currentLine=7012384;
- //BA.debugLineNum = 7012384;BA.debugLine="G = Bit.And(Bit.ShiftRight(savedColor, 8), 0xFF";
+RDebugUtils.currentLine=5636128;
+ //BA.debugLineNum = 5636128;BA.debugLine="G = Bit.And(Bit.ShiftRight(savedColor, 8), 0xFF";
 parent._g = anywheresoftware.b4a.keywords.Common.Bit.And(anywheresoftware.b4a.keywords.Common.Bit.ShiftRight(_savedcolor,(int) (8)),((int)0xff));
-RDebugUtils.currentLine=7012385;
- //BA.debugLineNum = 7012385;BA.debugLine="B = Bit.And(savedColor, 0xFF)";
+RDebugUtils.currentLine=5636129;
+ //BA.debugLineNum = 5636129;BA.debugLine="B = Bit.And(savedColor, 0xFF)";
 parent._b = anywheresoftware.b4a.keywords.Common.Bit.And(_savedcolor,((int)0xff));
-RDebugUtils.currentLine=7012386;
- //BA.debugLineNum = 7012386;BA.debugLine="noteCount = i + 1";
+RDebugUtils.currentLine=5636130;
+ //BA.debugLineNum = 5636130;BA.debugLine="noteCount = i + 1";
 parent._notecount = (int) (_i+1);
-RDebugUtils.currentLine=7012387;
- //BA.debugLineNum = 7012387;BA.debugLine="AddStickyNote(Main.kvs.Get(nkey & \"_text\"), Mai";
+RDebugUtils.currentLine=5636131;
+ //BA.debugLineNum = 5636131;BA.debugLine="AddStickyNote(Main.kvs.Get(nkey & \"_text\"), Mai";
 _addstickynote(BA.ObjectToString(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_nkey+"_text")),(int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_nkey+"_x"))),(int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_nkey+"_y"))));
  if (true) break;
 
@@ -667,8 +667,8 @@ this.state = 66;
  if (true) break;
 if (true) break;
 ;
-RDebugUtils.currentLine=7012391;
- //BA.debugLineNum = 7012391;BA.debugLine="If Main.kvs.ContainsKey(\"img_count\") Then imgCoun";
+RDebugUtils.currentLine=5636135;
+ //BA.debugLineNum = 5636135;BA.debugLine="If Main.kvs.ContainsKey(\"img_count\") Then imgCoun";
 
 case 30:
 //if
@@ -696,11 +696,11 @@ case 37:
 //C
 this.state = 38;
 ;
-RDebugUtils.currentLine=7012392;
- //BA.debugLineNum = 7012392;BA.debugLine="Dim loadedImgCount As Int = imgCount";
+RDebugUtils.currentLine=5636136;
+ //BA.debugLineNum = 5636136;BA.debugLine="Dim loadedImgCount As Int = imgCount";
 _loadedimgcount = parent._imgcount;
-RDebugUtils.currentLine=7012393;
- //BA.debugLineNum = 7012393;BA.debugLine="For i = 0 To loadedImgCount - 1";
+RDebugUtils.currentLine=5636137;
+ //BA.debugLineNum = 5636137;BA.debugLine="For i = 0 To loadedImgCount - 1";
 if (true) break;
 
 case 38:
@@ -727,11 +727,11 @@ if (true) break;
 case 40:
 //C
 this.state = 41;
-RDebugUtils.currentLine=7012394;
- //BA.debugLineNum = 7012394;BA.debugLine="Dim ikey As String = \"img_\" & i";
+RDebugUtils.currentLine=5636138;
+ //BA.debugLineNum = 5636138;BA.debugLine="Dim ikey As String = \"img_\" & i";
 _ikey = "img_"+BA.NumberToString(_i);
-RDebugUtils.currentLine=7012395;
- //BA.debugLineNum = 7012395;BA.debugLine="If Main.kvs.ContainsKey(ikey & \"_file\") Then";
+RDebugUtils.currentLine=5636139;
+ //BA.debugLineNum = 5636139;BA.debugLine="If Main.kvs.ContainsKey(ikey & \"_file\") Then";
 if (true) break;
 
 case 41:
@@ -744,26 +744,26 @@ this.state = 43;
 case 43:
 //C
 this.state = 44;
-RDebugUtils.currentLine=7012396;
- //BA.debugLineNum = 7012396;BA.debugLine="Dim iv As ImageView";
+RDebugUtils.currentLine=5636140;
+ //BA.debugLineNum = 5636140;BA.debugLine="Dim iv As ImageView";
 _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=7012397;
- //BA.debugLineNum = 7012397;BA.debugLine="iv.Initialize(\"ImgView\")";
+RDebugUtils.currentLine=5636141;
+ //BA.debugLineNum = 5636141;BA.debugLine="iv.Initialize(\"ImgView\")";
 _iv.Initialize(mostCurrent.activityBA,"ImgView");
-RDebugUtils.currentLine=7012398;
- //BA.debugLineNum = 7012398;BA.debugLine="boardPnl.AddView(iv, Main.kvs.Get(ikey & \"_x\"),";
+RDebugUtils.currentLine=5636142;
+ //BA.debugLineNum = 5636142;BA.debugLine="boardPnl.AddView(iv, Main.kvs.Get(ikey & \"_x\"),";
 parent.mostCurrent._boardpnl.AddView((android.view.View)(_iv.getObject()),(int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ikey+"_x"))),(int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ikey+"_y"))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
-RDebugUtils.currentLine=7012399;
- //BA.debugLineNum = 7012399;BA.debugLine="iv.Bitmap = LoadBitmapResize(File.DirInternal,";
+RDebugUtils.currentLine=5636143;
+ //BA.debugLineNum = 5636143;BA.debugLine="iv.Bitmap = LoadBitmapResize(File.DirInternal,";
 _iv.setBitmap((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),BA.ObjectToString(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ikey+"_file")),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.True).getObject()));
-RDebugUtils.currentLine=7012400;
- //BA.debugLineNum = 7012400;BA.debugLine="iv.Tag = ikey";
+RDebugUtils.currentLine=5636144;
+ //BA.debugLineNum = 5636144;BA.debugLine="iv.Tag = ikey";
 _iv.setTag((Object)(_ikey));
-RDebugUtils.currentLine=7012401;
- //BA.debugLineNum = 7012401;BA.debugLine="ddi.AddDragView(iv, False)";
+RDebugUtils.currentLine=5636145;
+ //BA.debugLineNum = 5636145;BA.debugLine="ddi.AddDragView(iv, False)";
 parent.mostCurrent._ddi._adddragview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_iv.getObject())),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7012402;
- //BA.debugLineNum = 7012402;BA.debugLine="ddi.AddPlaceView(place1).AddPlaceView(place2).A";
+RDebugUtils.currentLine=5636146;
+ //BA.debugLineNum = 5636146;BA.debugLine="ddi.AddPlaceView(place1).AddPlaceView(place2).A";
 parent.mostCurrent._ddi._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place1.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place2.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place3.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place4.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place5.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place6.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place7.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place8.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place9.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place10.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place11.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place12.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._deletelbl.getObject())));
  if (true) break;
 
@@ -774,8 +774,8 @@ this.state = 68;
  if (true) break;
 if (true) break;
 ;
-RDebugUtils.currentLine=7012406;
- //BA.debugLineNum = 7012406;BA.debugLine="If Main.kvs.ContainsKey(\"cvs_count\") Then canvasC";
+RDebugUtils.currentLine=5636150;
+ //BA.debugLineNum = 5636150;BA.debugLine="If Main.kvs.ContainsKey(\"cvs_count\") Then canvasC";
 
 case 45:
 //if
@@ -803,11 +803,11 @@ case 52:
 //C
 this.state = 53;
 ;
-RDebugUtils.currentLine=7012407;
- //BA.debugLineNum = 7012407;BA.debugLine="Dim loadedCanvasCount As Int = canvasCount";
+RDebugUtils.currentLine=5636151;
+ //BA.debugLineNum = 5636151;BA.debugLine="Dim loadedCanvasCount As Int = canvasCount";
 _loadedcanvascount = parent._canvascount;
-RDebugUtils.currentLine=7012408;
- //BA.debugLineNum = 7012408;BA.debugLine="For i = 0 To loadedCanvasCount - 1";
+RDebugUtils.currentLine=5636152;
+ //BA.debugLineNum = 5636152;BA.debugLine="For i = 0 To loadedCanvasCount - 1";
 if (true) break;
 
 case 53:
@@ -834,11 +834,11 @@ if (true) break;
 case 55:
 //C
 this.state = 56;
-RDebugUtils.currentLine=7012409;
- //BA.debugLineNum = 7012409;BA.debugLine="Dim ckey As String = \"cvs_\" & i";
+RDebugUtils.currentLine=5636153;
+ //BA.debugLineNum = 5636153;BA.debugLine="Dim ckey As String = \"cvs_\" & i";
 _ckey = "cvs_"+BA.NumberToString(_i);
-RDebugUtils.currentLine=7012410;
- //BA.debugLineNum = 7012410;BA.debugLine="If Main.kvs.ContainsKey(ckey & \"_x\") Then";
+RDebugUtils.currentLine=5636154;
+ //BA.debugLineNum = 5636154;BA.debugLine="If Main.kvs.ContainsKey(ckey & \"_x\") Then";
 if (true) break;
 
 case 56:
@@ -851,38 +851,38 @@ this.state = 58;
 case 58:
 //C
 this.state = 59;
-RDebugUtils.currentLine=7012411;
- //BA.debugLineNum = 7012411;BA.debugLine="Width = Main.kvs.Get(ckey & \"_w\")";
+RDebugUtils.currentLine=5636155;
+ //BA.debugLineNum = 5636155;BA.debugLine="Width = Main.kvs.Get(ckey & \"_w\")";
 parent._width = (int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ckey+"_w")));
-RDebugUtils.currentLine=7012412;
- //BA.debugLineNum = 7012412;BA.debugLine="Height = Main.kvs.Get(ckey & \"_h\")";
+RDebugUtils.currentLine=5636156;
+ //BA.debugLineNum = 5636156;BA.debugLine="Height = Main.kvs.Get(ckey & \"_h\")";
 parent._height = (int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ckey+"_h")));
-RDebugUtils.currentLine=7012414;
- //BA.debugLineNum = 7012414;BA.debugLine="Dim f As Panel";
+RDebugUtils.currentLine=5636158;
+ //BA.debugLineNum = 5636158;BA.debugLine="Dim f As Panel";
 _f = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=7012415;
- //BA.debugLineNum = 7012415;BA.debugLine="f.Initialize(\"CanvasFrame\")";
+RDebugUtils.currentLine=5636159;
+ //BA.debugLineNum = 5636159;BA.debugLine="f.Initialize(\"CanvasFrame\")";
 _f.Initialize(mostCurrent.activityBA,"CanvasFrame");
-RDebugUtils.currentLine=7012416;
- //BA.debugLineNum = 7012416;BA.debugLine="f.Color = Colors.Black";
+RDebugUtils.currentLine=5636160;
+ //BA.debugLineNum = 5636160;BA.debugLine="f.Color = Colors.Black";
 _f.setColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=7012417;
- //BA.debugLineNum = 7012417;BA.debugLine="boardPnl.AddView(f, Main.kvs.Get(ckey & \"_x\"),";
+RDebugUtils.currentLine=5636161;
+ //BA.debugLineNum = 5636161;BA.debugLine="boardPnl.AddView(f, Main.kvs.Get(ckey & \"_x\"),";
 parent.mostCurrent._boardpnl.AddView((android.view.View)(_f.getObject()),(int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ckey+"_x"))),(int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get(_ckey+"_y"))),(int) (parent._width+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20))),(int) (parent._height+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40))));
-RDebugUtils.currentLine=7012418;
- //BA.debugLineNum = 7012418;BA.debugLine="Dim p As Panel";
+RDebugUtils.currentLine=5636162;
+ //BA.debugLineNum = 5636162;BA.debugLine="Dim p As Panel";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=7012419;
- //BA.debugLineNum = 7012419;BA.debugLine="p.Initialize(\"CanvasPanel\")";
+RDebugUtils.currentLine=5636163;
+ //BA.debugLineNum = 5636163;BA.debugLine="p.Initialize(\"CanvasPanel\")";
 _p.Initialize(mostCurrent.activityBA,"CanvasPanel");
-RDebugUtils.currentLine=7012420;
- //BA.debugLineNum = 7012420;BA.debugLine="p.Color = Colors.White";
+RDebugUtils.currentLine=5636164;
+ //BA.debugLineNum = 5636164;BA.debugLine="p.Color = Colors.White";
 _p.setColor(anywheresoftware.b4a.keywords.Common.Colors.White);
-RDebugUtils.currentLine=7012421;
- //BA.debugLineNum = 7012421;BA.debugLine="f.AddView(p, 10dip, 20dip, Width, Height)";
+RDebugUtils.currentLine=5636165;
+ //BA.debugLineNum = 5636165;BA.debugLine="f.AddView(p, 10dip, 20dip, Width, Height)";
 _f.AddView((android.view.View)(_p.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20)),parent._width,parent._height);
-RDebugUtils.currentLine=7012422;
- //BA.debugLineNum = 7012422;BA.debugLine="Sleep(0)";
+RDebugUtils.currentLine=5636166;
+ //BA.debugLineNum = 5636166;BA.debugLine="Sleep(0)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "corkactivity", "activity_create"),(int) (0));
 this.state = 71;
 return;
@@ -890,32 +890,32 @@ case 71:
 //C
 this.state = 59;
 ;
-RDebugUtils.currentLine=7012423;
- //BA.debugLineNum = 7012423;BA.debugLine="Dim cvs As B4XCanvas";
+RDebugUtils.currentLine=5636167;
+ //BA.debugLineNum = 5636167;BA.debugLine="Dim cvs As B4XCanvas";
 _cvs = new anywheresoftware.b4a.objects.B4XCanvas();
-RDebugUtils.currentLine=7012424;
- //BA.debugLineNum = 7012424;BA.debugLine="cvs.Initialize(p)";
+RDebugUtils.currentLine=5636168;
+ //BA.debugLineNum = 5636168;BA.debugLine="cvs.Initialize(p)";
 _cvs.Initialize((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_p.getObject())));
-RDebugUtils.currentLine=7012425;
- //BA.debugLineNum = 7012425;BA.debugLine="cvs.DrawRect(cvs.TargetRect, Colors.LightGray,";
+RDebugUtils.currentLine=5636169;
+ //BA.debugLineNum = 5636169;BA.debugLine="cvs.DrawRect(cvs.TargetRect, Colors.LightGray,";
 _cvs.DrawRect(_cvs.getTargetRect(),anywheresoftware.b4a.keywords.Common.Colors.LightGray,anywheresoftware.b4a.keywords.Common.False,(float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1))));
-RDebugUtils.currentLine=7012426;
- //BA.debugLineNum = 7012426;BA.debugLine="cvs.Invalidate";
+RDebugUtils.currentLine=5636170;
+ //BA.debugLineNum = 5636170;BA.debugLine="cvs.Invalidate";
 _cvs.Invalidate();
-RDebugUtils.currentLine=7012427;
- //BA.debugLineNum = 7012427;BA.debugLine="p.Tag = cvs";
+RDebugUtils.currentLine=5636171;
+ //BA.debugLineNum = 5636171;BA.debugLine="p.Tag = cvs";
 _p.setTag((Object)(_cvs));
-RDebugUtils.currentLine=7012428;
- //BA.debugLineNum = 7012428;BA.debugLine="ddc.AddDragView(f, False)";
+RDebugUtils.currentLine=5636172;
+ //BA.debugLineNum = 5636172;BA.debugLine="ddc.AddDragView(f, False)";
 parent.mostCurrent._ddc._adddragview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_f.getObject())),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7012429;
- //BA.debugLineNum = 7012429;BA.debugLine="ddc.AddPlaceView(place1).AddPlaceView(place2).A";
+RDebugUtils.currentLine=5636173;
+ //BA.debugLineNum = 5636173;BA.debugLine="ddc.AddPlaceView(place1).AddPlaceView(place2).A";
 parent.mostCurrent._ddc._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place1.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place2.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place3.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place4.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place5.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place6.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place7.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place8.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place9.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place10.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place11.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place12.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._deletelbl.getObject())));
-RDebugUtils.currentLine=7012430;
- //BA.debugLineNum = 7012430;BA.debugLine="f.Tag = ckey";
+RDebugUtils.currentLine=5636174;
+ //BA.debugLineNum = 5636174;BA.debugLine="f.Tag = ckey";
 _f.setTag((Object)(_ckey));
-RDebugUtils.currentLine=7012432;
- //BA.debugLineNum = 7012432;BA.debugLine="If File.Exists(File.DirInternal, ckey & \".png\")";
+RDebugUtils.currentLine=5636176;
+ //BA.debugLineNum = 5636176;BA.debugLine="If File.Exists(File.DirInternal, ckey & \".png\")";
 if (true) break;
 
 case 59:
@@ -928,8 +928,8 @@ this.state = 61;
 case 61:
 //C
 this.state = 62;
-RDebugUtils.currentLine=7012433;
- //BA.debugLineNum = 7012433;BA.debugLine="Sleep(0)";
+RDebugUtils.currentLine=5636177;
+ //BA.debugLineNum = 5636177;BA.debugLine="Sleep(0)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "corkactivity", "activity_create"),(int) (0));
 this.state = 72;
 return;
@@ -937,18 +937,18 @@ case 72:
 //C
 this.state = 62;
 ;
-RDebugUtils.currentLine=7012434;
- //BA.debugLineNum = 7012434;BA.debugLine="Dim bmp As Bitmap = LoadBitmap(File.DirInterna";
+RDebugUtils.currentLine=5636178;
+ //BA.debugLineNum = 5636178;BA.debugLine="Dim bmp As Bitmap = LoadBitmap(File.DirInterna";
 _bmp = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper();
 _bmp = anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_ckey+".png");
-RDebugUtils.currentLine=7012435;
- //BA.debugLineNum = 7012435;BA.debugLine="Dim canvasRect As B4XRect = cvs.TargetRect";
+RDebugUtils.currentLine=5636179;
+ //BA.debugLineNum = 5636179;BA.debugLine="Dim canvasRect As B4XRect = cvs.TargetRect";
 _canvasrect = _cvs.getTargetRect();
-RDebugUtils.currentLine=7012436;
- //BA.debugLineNum = 7012436;BA.debugLine="cvs.DrawBitmap(bmp, canvasRect)";
+RDebugUtils.currentLine=5636180;
+ //BA.debugLineNum = 5636180;BA.debugLine="cvs.DrawBitmap(bmp, canvasRect)";
 _cvs.DrawBitmap((android.graphics.Bitmap)(_bmp.getObject()),_canvasrect);
-RDebugUtils.currentLine=7012437;
- //BA.debugLineNum = 7012437;BA.debugLine="cvs.Invalidate";
+RDebugUtils.currentLine=5636181;
+ //BA.debugLineNum = 5636181;BA.debugLine="cvs.Invalidate";
 _cvs.Invalidate();
  if (true) break;
 
@@ -969,20 +969,20 @@ case 64:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=7012441;
- //BA.debugLineNum = 7012441;BA.debugLine="canvasCount = loadedCanvasCount";
+RDebugUtils.currentLine=5636185;
+ //BA.debugLineNum = 5636185;BA.debugLine="canvasCount = loadedCanvasCount";
 parent._canvascount = _loadedcanvascount;
-RDebugUtils.currentLine=7012442;
- //BA.debugLineNum = 7012442;BA.debugLine="Width = 80dip";
+RDebugUtils.currentLine=5636186;
+ //BA.debugLineNum = 5636186;BA.debugLine="Width = 80dip";
 parent._width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (80));
-RDebugUtils.currentLine=7012443;
- //BA.debugLineNum = 7012443;BA.debugLine="Height = 60dip";
+RDebugUtils.currentLine=5636187;
+ //BA.debugLineNum = 5636187;BA.debugLine="Height = 60dip";
 parent._height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60));
-RDebugUtils.currentLine=7012444;
- //BA.debugLineNum = 7012444;BA.debugLine="isLoading = False";
+RDebugUtils.currentLine=5636188;
+ //BA.debugLineNum = 5636188;BA.debugLine="isLoading = False";
 parent._isloading = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=7012445;
- //BA.debugLineNum = 7012445;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5636189;
+ //BA.debugLineNum = 5636189;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -996,115 +996,115 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "addstickynote", false))
 anywheresoftware.b4a.objects.PanelWrapper _p = null;
 anywheresoftware.b4a.objects.EditTextWrapper _txt = null;
 String _key = "";
-RDebugUtils.currentLine=7208960;
- //BA.debugLineNum = 7208960;BA.debugLine="Sub AddStickyNote(Text As String, x As Int, y As I";
-RDebugUtils.currentLine=7208961;
- //BA.debugLineNum = 7208961;BA.debugLine="Dim p As Panel";
+RDebugUtils.currentLine=5832704;
+ //BA.debugLineNum = 5832704;BA.debugLine="Sub AddStickyNote(Text As String, x As Int, y As I";
+RDebugUtils.currentLine=5832705;
+ //BA.debugLineNum = 5832705;BA.debugLine="Dim p As Panel";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=7208962;
- //BA.debugLineNum = 7208962;BA.debugLine="p.Initialize(\"NotePanel\")";
+RDebugUtils.currentLine=5832706;
+ //BA.debugLineNum = 5832706;BA.debugLine="p.Initialize(\"NotePanel\")";
 _p.Initialize(mostCurrent.activityBA,"NotePanel");
-RDebugUtils.currentLine=7208963;
- //BA.debugLineNum = 7208963;BA.debugLine="p.Color = Colors.RGB(R, G, B)";
+RDebugUtils.currentLine=5832707;
+ //BA.debugLineNum = 5832707;BA.debugLine="p.Color = Colors.RGB(R, G, B)";
 _p.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB(_r,_g,_b));
-RDebugUtils.currentLine=7208965;
- //BA.debugLineNum = 7208965;BA.debugLine="Dim txt As EditText";
+RDebugUtils.currentLine=5832709;
+ //BA.debugLineNum = 5832709;BA.debugLine="Dim txt As EditText";
 _txt = new anywheresoftware.b4a.objects.EditTextWrapper();
-RDebugUtils.currentLine=7208966;
- //BA.debugLineNum = 7208966;BA.debugLine="txt.Initialize(\"NoteText\")";
+RDebugUtils.currentLine=5832710;
+ //BA.debugLineNum = 5832710;BA.debugLine="txt.Initialize(\"NoteText\")";
 _txt.Initialize(mostCurrent.activityBA,"NoteText");
-RDebugUtils.currentLine=7208967;
- //BA.debugLineNum = 7208967;BA.debugLine="txt.Tag = p";
+RDebugUtils.currentLine=5832711;
+ //BA.debugLineNum = 5832711;BA.debugLine="txt.Tag = p";
 _txt.setTag((Object)(_p.getObject()));
-RDebugUtils.currentLine=7208968;
- //BA.debugLineNum = 7208968;BA.debugLine="txt.Text = Text";
+RDebugUtils.currentLine=5832712;
+ //BA.debugLineNum = 5832712;BA.debugLine="txt.Text = Text";
 _txt.setText(BA.ObjectToCharSequence(_text));
-RDebugUtils.currentLine=7208969;
- //BA.debugLineNum = 7208969;BA.debugLine="txt.TextSize = 12";
+RDebugUtils.currentLine=5832713;
+ //BA.debugLineNum = 5832713;BA.debugLine="txt.TextSize = 12";
 _txt.setTextSize((float) (12));
-RDebugUtils.currentLine=7208970;
- //BA.debugLineNum = 7208970;BA.debugLine="txt.Background = Null";
+RDebugUtils.currentLine=5832714;
+ //BA.debugLineNum = 5832714;BA.debugLine="txt.Background = Null";
 _txt.setBackground((android.graphics.drawable.Drawable)(anywheresoftware.b4a.keywords.Common.Null));
-RDebugUtils.currentLine=7208971;
- //BA.debugLineNum = 7208971;BA.debugLine="txt.TextColor = Colors.Black";
+RDebugUtils.currentLine=5832715;
+ //BA.debugLineNum = 5832715;BA.debugLine="txt.TextColor = Colors.Black";
 _txt.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=7208972;
- //BA.debugLineNum = 7208972;BA.debugLine="txt.Gravity = Gravity.TOP";
+RDebugUtils.currentLine=5832716;
+ //BA.debugLineNum = 5832716;BA.debugLine="txt.Gravity = Gravity.TOP";
 _txt.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.TOP);
-RDebugUtils.currentLine=7208974;
- //BA.debugLineNum = 7208974;BA.debugLine="p.AddView(txt, 5dip, 15dip, 90dip, 70dip)";
+RDebugUtils.currentLine=5832718;
+ //BA.debugLineNum = 5832718;BA.debugLine="p.AddView(txt, 5dip, 15dip, 90dip, 70dip)";
 _p.AddView((android.view.View)(_txt.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (15)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (90)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (70)));
-RDebugUtils.currentLine=7208976;
- //BA.debugLineNum = 7208976;BA.debugLine="boardPnl.AddView(p, x, y, 100dip, 100dip)";
+RDebugUtils.currentLine=5832720;
+ //BA.debugLineNum = 5832720;BA.debugLine="boardPnl.AddView(p, x, y, 100dip, 100dip)";
 mostCurrent._boardpnl.AddView((android.view.View)(_p.getObject()),_x,_y,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
-RDebugUtils.currentLine=7208978;
- //BA.debugLineNum = 7208978;BA.debugLine="ddn.AddDragView(p, False)";
+RDebugUtils.currentLine=5832722;
+ //BA.debugLineNum = 5832722;BA.debugLine="ddn.AddDragView(p, False)";
 mostCurrent._ddn._adddragview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_p.getObject())),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7208979;
- //BA.debugLineNum = 7208979;BA.debugLine="ddn.AddPlaceView(place1).AddPlaceView(place2).Add";
+RDebugUtils.currentLine=5832723;
+ //BA.debugLineNum = 5832723;BA.debugLine="ddn.AddPlaceView(place1).AddPlaceView(place2).Add";
 mostCurrent._ddn._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place1.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place2.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place3.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place4.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place5.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place6.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place7.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place8.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place9.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place10.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place11.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place12.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._deletelbl.getObject())));
-RDebugUtils.currentLine=7208981;
- //BA.debugLineNum = 7208981;BA.debugLine="If isLoading = False Then";
+RDebugUtils.currentLine=5832725;
+ //BA.debugLineNum = 5832725;BA.debugLine="If isLoading = False Then";
 if (_isloading==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=7208982;
- //BA.debugLineNum = 7208982;BA.debugLine="Dim key As String = \"note_\" & noteCount";
+RDebugUtils.currentLine=5832726;
+ //BA.debugLineNum = 5832726;BA.debugLine="Dim key As String = \"note_\" & noteCount";
 _key = "note_"+BA.NumberToString(_notecount);
-RDebugUtils.currentLine=7208983;
- //BA.debugLineNum = 7208983;BA.debugLine="Main.kvs.Put(key & \"_text\", Text)";
+RDebugUtils.currentLine=5832727;
+ //BA.debugLineNum = 5832727;BA.debugLine="Main.kvs.Put(key & \"_text\", Text)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_text",(Object)(_text));
-RDebugUtils.currentLine=7208984;
- //BA.debugLineNum = 7208984;BA.debugLine="Main.kvs.Put(key & \"_color\", Colors.RGB(R, G, B)";
+RDebugUtils.currentLine=5832728;
+ //BA.debugLineNum = 5832728;BA.debugLine="Main.kvs.Put(key & \"_color\", Colors.RGB(R, G, B)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_color",(Object)(anywheresoftware.b4a.keywords.Common.Colors.RGB(_r,_g,_b)));
-RDebugUtils.currentLine=7208985;
- //BA.debugLineNum = 7208985;BA.debugLine="Main.kvs.Put(key & \"_x\", x)";
+RDebugUtils.currentLine=5832729;
+ //BA.debugLineNum = 5832729;BA.debugLine="Main.kvs.Put(key & \"_x\", x)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_x",(Object)(_x));
-RDebugUtils.currentLine=7208986;
- //BA.debugLineNum = 7208986;BA.debugLine="Main.kvs.Put(key & \"_y\", y)";
+RDebugUtils.currentLine=5832730;
+ //BA.debugLineNum = 5832730;BA.debugLine="Main.kvs.Put(key & \"_y\", y)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_y",(Object)(_y));
-RDebugUtils.currentLine=7208987;
- //BA.debugLineNum = 7208987;BA.debugLine="Main.kvs.Put(\"note_count\", noteCount + 1)";
+RDebugUtils.currentLine=5832731;
+ //BA.debugLineNum = 5832731;BA.debugLine="Main.kvs.Put(\"note_count\", noteCount + 1)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put("note_count",(Object)(_notecount+1));
-RDebugUtils.currentLine=7208988;
- //BA.debugLineNum = 7208988;BA.debugLine="p.Tag = key";
+RDebugUtils.currentLine=5832732;
+ //BA.debugLineNum = 5832732;BA.debugLine="p.Tag = key";
 _p.setTag((Object)(_key));
-RDebugUtils.currentLine=7208989;
- //BA.debugLineNum = 7208989;BA.debugLine="noteCount = noteCount + 1";
+RDebugUtils.currentLine=5832733;
+ //BA.debugLineNum = 5832733;BA.debugLine="noteCount = noteCount + 1";
 _notecount = (int) (_notecount+1);
  }else {
-RDebugUtils.currentLine=7208991;
- //BA.debugLineNum = 7208991;BA.debugLine="p.Tag = \"note_\" & (noteCount - 1)";
+RDebugUtils.currentLine=5832735;
+ //BA.debugLineNum = 5832735;BA.debugLine="p.Tag = \"note_\" & (noteCount - 1)";
 _p.setTag((Object)("note_"+BA.NumberToString((_notecount-1))));
  };
-RDebugUtils.currentLine=7208993;
- //BA.debugLineNum = 7208993;BA.debugLine="Log(\"deleteLbl initialized: \" & (deleteLbl.IsInit";
-anywheresoftware.b4a.keywords.Common.LogImpl("47208993","deleteLbl initialized: "+BA.ObjectToString((mostCurrent._deletelbl.IsInitialized())),0);
-RDebugUtils.currentLine=7208994;
- //BA.debugLineNum = 7208994;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5832737;
+ //BA.debugLineNum = 5832737;BA.debugLine="Log(\"deleteLbl initialized: \" & (deleteLbl.IsInit";
+anywheresoftware.b4a.keywords.Common.LogImpl("65832737","deleteLbl initialized: "+BA.ObjectToString((mostCurrent._deletelbl.IsInitialized())),0);
+RDebugUtils.currentLine=5832738;
+ //BA.debugLineNum = 5832738;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="corkactivity";
-RDebugUtils.currentLine=7143424;
- //BA.debugLineNum = 7143424;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=7143426;
- //BA.debugLineNum = 7143426;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5767168;
+ //BA.debugLineNum = 5767168;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=5767170;
+ //BA.debugLineNum = 5767170;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=7077888;
- //BA.debugLineNum = 7077888;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=7077889;
- //BA.debugLineNum = 7077889;BA.debugLine="If canvasCount > 0 Then";
+RDebugUtils.currentLine=5701632;
+ //BA.debugLineNum = 5701632;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=5701633;
+ //BA.debugLineNum = 5701633;BA.debugLine="If canvasCount > 0 Then";
 if (_canvascount>0) { 
-RDebugUtils.currentLine=7077890;
- //BA.debugLineNum = 7077890;BA.debugLine="penSpnr.Visible = True";
+RDebugUtils.currentLine=5701634;
+ //BA.debugLineNum = 5701634;BA.debugLine="penSpnr.Visible = True";
 mostCurrent._penspnr.setVisible(anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=7077892;
- //BA.debugLineNum = 7077892;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5701636;
+ //BA.debugLineNum = 5701636;BA.debugLine="End Sub";
 return "";
 }
 public static void  _addcanvas(int _x,int _y) throws Exception{
@@ -1140,32 +1140,32 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=7405569;
- //BA.debugLineNum = 7405569;BA.debugLine="Dim f As Panel";
+RDebugUtils.currentLine=6029313;
+ //BA.debugLineNum = 6029313;BA.debugLine="Dim f As Panel";
 _f = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=7405570;
- //BA.debugLineNum = 7405570;BA.debugLine="f.Initialize(\"CanvasFrame\")";
+RDebugUtils.currentLine=6029314;
+ //BA.debugLineNum = 6029314;BA.debugLine="f.Initialize(\"CanvasFrame\")";
 _f.Initialize(mostCurrent.activityBA,"CanvasFrame");
-RDebugUtils.currentLine=7405571;
- //BA.debugLineNum = 7405571;BA.debugLine="f.Color = Colors.Black";
+RDebugUtils.currentLine=6029315;
+ //BA.debugLineNum = 6029315;BA.debugLine="f.Color = Colors.Black";
 _f.setColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=7405572;
- //BA.debugLineNum = 7405572;BA.debugLine="boardPnl.AddView(f, x, y, Width + 20dip, Height +";
+RDebugUtils.currentLine=6029316;
+ //BA.debugLineNum = 6029316;BA.debugLine="boardPnl.AddView(f, x, y, Width + 20dip, Height +";
 parent.mostCurrent._boardpnl.AddView((android.view.View)(_f.getObject()),_x,_y,(int) (parent._width+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20))),(int) (parent._height+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40))));
-RDebugUtils.currentLine=7405574;
- //BA.debugLineNum = 7405574;BA.debugLine="Dim p As Panel";
+RDebugUtils.currentLine=6029318;
+ //BA.debugLineNum = 6029318;BA.debugLine="Dim p As Panel";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=7405575;
- //BA.debugLineNum = 7405575;BA.debugLine="p.Initialize(\"CanvasPanel\")";
+RDebugUtils.currentLine=6029319;
+ //BA.debugLineNum = 6029319;BA.debugLine="p.Initialize(\"CanvasPanel\")";
 _p.Initialize(mostCurrent.activityBA,"CanvasPanel");
-RDebugUtils.currentLine=7405576;
- //BA.debugLineNum = 7405576;BA.debugLine="p.Color = Colors.White";
+RDebugUtils.currentLine=6029320;
+ //BA.debugLineNum = 6029320;BA.debugLine="p.Color = Colors.White";
 _p.setColor(anywheresoftware.b4a.keywords.Common.Colors.White);
-RDebugUtils.currentLine=7405577;
- //BA.debugLineNum = 7405577;BA.debugLine="f.AddView(p, 10dip, 20dip, Width, Height)";
+RDebugUtils.currentLine=6029321;
+ //BA.debugLineNum = 6029321;BA.debugLine="f.AddView(p, 10dip, 20dip, Width, Height)";
 _f.AddView((android.view.View)(_p.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20)),parent._width,parent._height);
-RDebugUtils.currentLine=7405579;
- //BA.debugLineNum = 7405579;BA.debugLine="Sleep(0)";
+RDebugUtils.currentLine=6029323;
+ //BA.debugLineNum = 6029323;BA.debugLine="Sleep(0)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "corkactivity", "addcanvas"),(int) (0));
 this.state = 7;
 return;
@@ -1173,29 +1173,29 @@ case 7:
 //C
 this.state = 1;
 ;
-RDebugUtils.currentLine=7405581;
- //BA.debugLineNum = 7405581;BA.debugLine="Dim cvs As B4XCanvas";
+RDebugUtils.currentLine=6029325;
+ //BA.debugLineNum = 6029325;BA.debugLine="Dim cvs As B4XCanvas";
 _cvs = new anywheresoftware.b4a.objects.B4XCanvas();
-RDebugUtils.currentLine=7405582;
- //BA.debugLineNum = 7405582;BA.debugLine="cvs.Initialize(p)";
+RDebugUtils.currentLine=6029326;
+ //BA.debugLineNum = 6029326;BA.debugLine="cvs.Initialize(p)";
 _cvs.Initialize((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_p.getObject())));
-RDebugUtils.currentLine=7405583;
- //BA.debugLineNum = 7405583;BA.debugLine="cvs.DrawRect(cvs.TargetRect, Colors.LightGray, Fa";
+RDebugUtils.currentLine=6029327;
+ //BA.debugLineNum = 6029327;BA.debugLine="cvs.DrawRect(cvs.TargetRect, Colors.LightGray, Fa";
 _cvs.DrawRect(_cvs.getTargetRect(),anywheresoftware.b4a.keywords.Common.Colors.LightGray,anywheresoftware.b4a.keywords.Common.False,(float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1))));
-RDebugUtils.currentLine=7405584;
- //BA.debugLineNum = 7405584;BA.debugLine="cvs.Invalidate";
+RDebugUtils.currentLine=6029328;
+ //BA.debugLineNum = 6029328;BA.debugLine="cvs.Invalidate";
 _cvs.Invalidate();
-RDebugUtils.currentLine=7405585;
- //BA.debugLineNum = 7405585;BA.debugLine="p.Tag = cvs";
+RDebugUtils.currentLine=6029329;
+ //BA.debugLineNum = 6029329;BA.debugLine="p.Tag = cvs";
 _p.setTag((Object)(_cvs));
-RDebugUtils.currentLine=7405587;
- //BA.debugLineNum = 7405587;BA.debugLine="ddc.AddDragView(f, False)";
+RDebugUtils.currentLine=6029331;
+ //BA.debugLineNum = 6029331;BA.debugLine="ddc.AddDragView(f, False)";
 parent.mostCurrent._ddc._adddragview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_f.getObject())),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7405588;
- //BA.debugLineNum = 7405588;BA.debugLine="ddc.AddPlaceView(place1).AddPlaceView(place2).Add";
+RDebugUtils.currentLine=6029332;
+ //BA.debugLineNum = 6029332;BA.debugLine="ddc.AddPlaceView(place1).AddPlaceView(place2).Add";
 parent.mostCurrent._ddc._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place1.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place2.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place3.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place4.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place5.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place6.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place7.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place8.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place9.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place10.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place11.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._place12.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(parent.mostCurrent._deletelbl.getObject())));
-RDebugUtils.currentLine=7405589;
- //BA.debugLineNum = 7405589;BA.debugLine="If isLoading = False Then";
+RDebugUtils.currentLine=6029333;
+ //BA.debugLineNum = 6029333;BA.debugLine="If isLoading = False Then";
 if (true) break;
 
 case 1:
@@ -1210,37 +1210,37 @@ this.state = 5;
 case 3:
 //C
 this.state = 6;
-RDebugUtils.currentLine=7405590;
- //BA.debugLineNum = 7405590;BA.debugLine="Dim key As String = \"cvs_\" & canvasCount";
+RDebugUtils.currentLine=6029334;
+ //BA.debugLineNum = 6029334;BA.debugLine="Dim key As String = \"cvs_\" & canvasCount";
 _key = "cvs_"+BA.NumberToString(parent._canvascount);
-RDebugUtils.currentLine=7405591;
- //BA.debugLineNum = 7405591;BA.debugLine="Main.kvs.Put(key & \"_x\", x)";
+RDebugUtils.currentLine=6029335;
+ //BA.debugLineNum = 6029335;BA.debugLine="Main.kvs.Put(key & \"_x\", x)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_x",(Object)(_x));
-RDebugUtils.currentLine=7405592;
- //BA.debugLineNum = 7405592;BA.debugLine="Main.kvs.Put(key & \"_y\", y)";
+RDebugUtils.currentLine=6029336;
+ //BA.debugLineNum = 6029336;BA.debugLine="Main.kvs.Put(key & \"_y\", y)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_y",(Object)(_y));
-RDebugUtils.currentLine=7405593;
- //BA.debugLineNum = 7405593;BA.debugLine="Main.kvs.Put(key & \"_w\", Width)";
+RDebugUtils.currentLine=6029337;
+ //BA.debugLineNum = 6029337;BA.debugLine="Main.kvs.Put(key & \"_w\", Width)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_w",(Object)(parent._width));
-RDebugUtils.currentLine=7405594;
- //BA.debugLineNum = 7405594;BA.debugLine="Main.kvs.Put(key & \"_h\", Height)";
+RDebugUtils.currentLine=6029338;
+ //BA.debugLineNum = 6029338;BA.debugLine="Main.kvs.Put(key & \"_h\", Height)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_h",(Object)(parent._height));
-RDebugUtils.currentLine=7405595;
- //BA.debugLineNum = 7405595;BA.debugLine="Main.kvs.Put(\"cvs_count\", canvasCount + 1)";
+RDebugUtils.currentLine=6029339;
+ //BA.debugLineNum = 6029339;BA.debugLine="Main.kvs.Put(\"cvs_count\", canvasCount + 1)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put("cvs_count",(Object)(parent._canvascount+1));
-RDebugUtils.currentLine=7405596;
- //BA.debugLineNum = 7405596;BA.debugLine="f.Tag = key";
+RDebugUtils.currentLine=6029340;
+ //BA.debugLineNum = 6029340;BA.debugLine="f.Tag = key";
 _f.setTag((Object)(_key));
-RDebugUtils.currentLine=7405597;
- //BA.debugLineNum = 7405597;BA.debugLine="canvasCount = canvasCount + 1";
+RDebugUtils.currentLine=6029341;
+ //BA.debugLineNum = 6029341;BA.debugLine="canvasCount = canvasCount + 1";
 parent._canvascount = (int) (parent._canvascount+1);
  if (true) break;
 
 case 5:
 //C
 this.state = 6;
-RDebugUtils.currentLine=7405599;
- //BA.debugLineNum = 7405599;BA.debugLine="f.Tag = \"cvs_\" & (canvasCount - 1)";
+RDebugUtils.currentLine=6029343;
+ //BA.debugLineNum = 6029343;BA.debugLine="f.Tag = \"cvs_\" & (canvasCount - 1)";
 _f.setTag((Object)("cvs_"+BA.NumberToString((parent._canvascount-1))));
  if (true) break;
 
@@ -1248,8 +1248,8 @@ case 6:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=7405601;
- //BA.debugLineNum = 7405601;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6029345;
+ //BA.debugLineNum = 6029345;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1260,87 +1260,87 @@ public static String  _addcbtn_click() throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "addcbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addcbtn_click", null));}
-RDebugUtils.currentLine=7733248;
- //BA.debugLineNum = 7733248;BA.debugLine="Private Sub addcBtn_Click";
-RDebugUtils.currentLine=7733249;
- //BA.debugLineNum = 7733249;BA.debugLine="AddCanvas(150dip, 500dip)";
+RDebugUtils.currentLine=6356992;
+ //BA.debugLineNum = 6356992;BA.debugLine="Private Sub addcBtn_Click";
+RDebugUtils.currentLine=6356993;
+ //BA.debugLineNum = 6356993;BA.debugLine="AddCanvas(150dip, 500dip)";
 _addcanvas(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (150)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (500)));
-RDebugUtils.currentLine=7733250;
- //BA.debugLineNum = 7733250;BA.debugLine="canvasPnl.Visible = False";
+RDebugUtils.currentLine=6356994;
+ //BA.debugLineNum = 6356994;BA.debugLine="canvasPnl.Visible = False";
 mostCurrent._canvaspnl.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7733251;
- //BA.debugLineNum = 7733251;BA.debugLine="canvaBtn.Enabled = True";
+RDebugUtils.currentLine=6356995;
+ //BA.debugLineNum = 6356995;BA.debugLine="canvaBtn.Enabled = True";
 mostCurrent._canvabtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7733252;
- //BA.debugLineNum = 7733252;BA.debugLine="stickyBtn.Enabled = True";
+RDebugUtils.currentLine=6356996;
+ //BA.debugLineNum = 6356996;BA.debugLine="stickyBtn.Enabled = True";
 mostCurrent._stickybtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7733253;
- //BA.debugLineNum = 7733253;BA.debugLine="imgBtn.Enabled = True";
+RDebugUtils.currentLine=6356997;
+ //BA.debugLineNum = 6356997;BA.debugLine="imgBtn.Enabled = True";
 mostCurrent._imgbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7733254;
- //BA.debugLineNum = 7733254;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6356998;
+ //BA.debugLineNum = 6356998;BA.debugLine="End Sub";
 return "";
 }
 public static String  _addnbtn_click() throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "addnbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addnbtn_click", null));}
-RDebugUtils.currentLine=7667712;
- //BA.debugLineNum = 7667712;BA.debugLine="Private Sub addnBtn_Click";
-RDebugUtils.currentLine=7667713;
- //BA.debugLineNum = 7667713;BA.debugLine="AddStickyNote(\"\", 150dip, 500dip)";
+RDebugUtils.currentLine=6291456;
+ //BA.debugLineNum = 6291456;BA.debugLine="Private Sub addnBtn_Click";
+RDebugUtils.currentLine=6291457;
+ //BA.debugLineNum = 6291457;BA.debugLine="AddStickyNote(\"\", 150dip, 500dip)";
 _addstickynote("",anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (150)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (500)));
-RDebugUtils.currentLine=7667714;
- //BA.debugLineNum = 7667714;BA.debugLine="notePnl.Visible = False";
+RDebugUtils.currentLine=6291458;
+ //BA.debugLineNum = 6291458;BA.debugLine="notePnl.Visible = False";
 mostCurrent._notepnl.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7667715;
- //BA.debugLineNum = 7667715;BA.debugLine="R = 255";
+RDebugUtils.currentLine=6291459;
+ //BA.debugLineNum = 6291459;BA.debugLine="R = 255";
 _r = (int) (255);
-RDebugUtils.currentLine=7667716;
- //BA.debugLineNum = 7667716;BA.debugLine="G = 105";
+RDebugUtils.currentLine=6291460;
+ //BA.debugLineNum = 6291460;BA.debugLine="G = 105";
 _g = (int) (105);
-RDebugUtils.currentLine=7667717;
- //BA.debugLineNum = 7667717;BA.debugLine="B = 97";
+RDebugUtils.currentLine=6291461;
+ //BA.debugLineNum = 6291461;BA.debugLine="B = 97";
 _b = (int) (97);
-RDebugUtils.currentLine=7667718;
- //BA.debugLineNum = 7667718;BA.debugLine="stickyBtn.Enabled = True";
+RDebugUtils.currentLine=6291462;
+ //BA.debugLineNum = 6291462;BA.debugLine="stickyBtn.Enabled = True";
 mostCurrent._stickybtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7667719;
- //BA.debugLineNum = 7667719;BA.debugLine="canvaBtn.Enabled = True";
+RDebugUtils.currentLine=6291463;
+ //BA.debugLineNum = 6291463;BA.debugLine="canvaBtn.Enabled = True";
 mostCurrent._canvabtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7667720;
- //BA.debugLineNum = 7667720;BA.debugLine="imgBtn.Enabled = True";
+RDebugUtils.currentLine=6291464;
+ //BA.debugLineNum = 6291464;BA.debugLine="imgBtn.Enabled = True";
 mostCurrent._imgbtn.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7667721;
- //BA.debugLineNum = 7667721;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6291465;
+ //BA.debugLineNum = 6291465;BA.debugLine="End Sub";
 return "";
 }
 public static String  _canvabtn_click() throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "canvabtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "canvabtn_click", null));}
-RDebugUtils.currentLine=7929856;
- //BA.debugLineNum = 7929856;BA.debugLine="Private Sub canvaBtn_Click";
-RDebugUtils.currentLine=7929857;
- //BA.debugLineNum = 7929857;BA.debugLine="canvasWindow(250dip, 180dip)";
+RDebugUtils.currentLine=6553600;
+ //BA.debugLineNum = 6553600;BA.debugLine="Private Sub canvaBtn_Click";
+RDebugUtils.currentLine=6553601;
+ //BA.debugLineNum = 6553601;BA.debugLine="canvasWindow(250dip, 180dip)";
 _canvaswindow(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (250)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (180)));
-RDebugUtils.currentLine=7929858;
- //BA.debugLineNum = 7929858;BA.debugLine="canvasPnl.Visible = True";
+RDebugUtils.currentLine=6553602;
+ //BA.debugLineNum = 6553602;BA.debugLine="canvasPnl.Visible = True";
 mostCurrent._canvaspnl.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7929859;
- //BA.debugLineNum = 7929859;BA.debugLine="penSpnr.Visible = True";
+RDebugUtils.currentLine=6553603;
+ //BA.debugLineNum = 6553603;BA.debugLine="penSpnr.Visible = True";
 mostCurrent._penspnr.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7929860;
- //BA.debugLineNum = 7929860;BA.debugLine="stickyBtn.Enabled = False";
+RDebugUtils.currentLine=6553604;
+ //BA.debugLineNum = 6553604;BA.debugLine="stickyBtn.Enabled = False";
 mostCurrent._stickybtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7929861;
- //BA.debugLineNum = 7929861;BA.debugLine="canvaBtn.Enabled = False";
+RDebugUtils.currentLine=6553605;
+ //BA.debugLineNum = 6553605;BA.debugLine="canvaBtn.Enabled = False";
 mostCurrent._canvabtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7929862;
- //BA.debugLineNum = 7929862;BA.debugLine="imgBtn.Enabled = False";
+RDebugUtils.currentLine=6553606;
+ //BA.debugLineNum = 6553606;BA.debugLine="imgBtn.Enabled = False";
 mostCurrent._imgbtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7929863;
- //BA.debugLineNum = 7929863;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6553607;
+ //BA.debugLineNum = 6553607;BA.debugLine="End Sub";
 return "";
 }
 public static String  _canvaswindow(int _pw,int _ph) throws Exception{
@@ -1348,49 +1348,49 @@ RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "canvaswindow", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "canvaswindow", new Object[] {_pw,_ph}));}
 anywheresoftware.b4a.objects.ButtonWrapper _addcbtn = null;
-RDebugUtils.currentLine=7602176;
- //BA.debugLineNum = 7602176;BA.debugLine="Private Sub canvasWindow(pW As Int, pH As Int)";
-RDebugUtils.currentLine=7602177;
- //BA.debugLineNum = 7602177;BA.debugLine="canvasPnl = xui.CreatePanel(\"canvasPanel\")";
+RDebugUtils.currentLine=6225920;
+ //BA.debugLineNum = 6225920;BA.debugLine="Private Sub canvasWindow(pW As Int, pH As Int)";
+RDebugUtils.currentLine=6225921;
+ //BA.debugLineNum = 6225921;BA.debugLine="canvasPnl = xui.CreatePanel(\"canvasPanel\")";
 mostCurrent._canvaspnl = _xui.CreatePanel(processBA,"canvasPanel");
-RDebugUtils.currentLine=7602178;
- //BA.debugLineNum = 7602178;BA.debugLine="Activity.AddView(canvasPnl, 100dip, 225dip, pW, p";
+RDebugUtils.currentLine=6225922;
+ //BA.debugLineNum = 6225922;BA.debugLine="Activity.AddView(canvasPnl, 100dip, 225dip, pW, p";
 mostCurrent._activity.AddView((android.view.View)(mostCurrent._canvaspnl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (225)),_pw,_ph);
-RDebugUtils.currentLine=7602179;
- //BA.debugLineNum = 7602179;BA.debugLine="canvasPnl.Color = xui.Color_RGB(50, 50, 50)";
+RDebugUtils.currentLine=6225923;
+ //BA.debugLineNum = 6225923;BA.debugLine="canvasPnl.Color = xui.Color_RGB(50, 50, 50)";
 mostCurrent._canvaspnl.setColor(_xui.Color_RGB((int) (50),(int) (50),(int) (50)));
-RDebugUtils.currentLine=7602180;
- //BA.debugLineNum = 7602180;BA.debugLine="canvasPnl.SetColorAndBorder(xui.Color_White, 2dip";
+RDebugUtils.currentLine=6225924;
+ //BA.debugLineNum = 6225924;BA.debugLine="canvasPnl.SetColorAndBorder(xui.Color_White, 2dip";
 mostCurrent._canvaspnl.SetColorAndBorder(_xui.Color_White,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)),_xui.Color_Black,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (3)));
-RDebugUtils.currentLine=7602183;
- //BA.debugLineNum = 7602183;BA.debugLine="sizeSpnr.Initialize(\"sizeSpnr\")";
+RDebugUtils.currentLine=6225927;
+ //BA.debugLineNum = 6225927;BA.debugLine="sizeSpnr.Initialize(\"sizeSpnr\")";
 mostCurrent._sizespnr.Initialize(mostCurrent.activityBA,"sizeSpnr");
-RDebugUtils.currentLine=7602184;
- //BA.debugLineNum = 7602184;BA.debugLine="sizeSpnr.AddAll(Array As String(\"1x1\", \"2x1\", \"1x";
+RDebugUtils.currentLine=6225928;
+ //BA.debugLineNum = 6225928;BA.debugLine="sizeSpnr.AddAll(Array As String(\"1x1\", \"2x1\", \"1x";
 mostCurrent._sizespnr.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{"1x1","2x1","1x2","2x2","3x2","2x3"}));
-RDebugUtils.currentLine=7602185;
- //BA.debugLineNum = 7602185;BA.debugLine="canvasPnl.AddView(sizeSpnr, 10dip, 10dip, pW - 20";
+RDebugUtils.currentLine=6225929;
+ //BA.debugLineNum = 6225929;BA.debugLine="canvasPnl.AddView(sizeSpnr, 10dip, 10dip, pW - 20";
 mostCurrent._canvaspnl.AddView((android.view.View)(mostCurrent._sizespnr.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (_pw-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=7602187;
- //BA.debugLineNum = 7602187;BA.debugLine="Dim addcBtn As Button";
+RDebugUtils.currentLine=6225931;
+ //BA.debugLineNum = 6225931;BA.debugLine="Dim addcBtn As Button";
 _addcbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
-RDebugUtils.currentLine=7602188;
- //BA.debugLineNum = 7602188;BA.debugLine="addcBtn.Initialize(\"addcBtn\")";
+RDebugUtils.currentLine=6225932;
+ //BA.debugLineNum = 6225932;BA.debugLine="addcBtn.Initialize(\"addcBtn\")";
 _addcbtn.Initialize(mostCurrent.activityBA,"addcBtn");
-RDebugUtils.currentLine=7602189;
- //BA.debugLineNum = 7602189;BA.debugLine="addcBtn.Text = \"Add Canvas\"";
+RDebugUtils.currentLine=6225933;
+ //BA.debugLineNum = 6225933;BA.debugLine="addcBtn.Text = \"Add Canvas\"";
 _addcbtn.setText(BA.ObjectToCharSequence("Add Canvas"));
-RDebugUtils.currentLine=7602190;
- //BA.debugLineNum = 7602190;BA.debugLine="canvasPnl.AddView(addcBtn, 10dip, 60dip, (pW / 2)";
+RDebugUtils.currentLine=6225934;
+ //BA.debugLineNum = 6225934;BA.debugLine="canvasPnl.AddView(addcBtn, 10dip, 60dip, (pW / 2)";
 mostCurrent._canvaspnl.AddView((android.view.View)(_addcbtn.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60)),(int) ((_pw/(double)2)-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (15))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)));
-RDebugUtils.currentLine=7602192;
- //BA.debugLineNum = 7602192;BA.debugLine="canvasPnl.Enabled = False";
+RDebugUtils.currentLine=6225936;
+ //BA.debugLineNum = 6225936;BA.debugLine="canvasPnl.Enabled = False";
 mostCurrent._canvaspnl.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7602193;
- //BA.debugLineNum = 7602193;BA.debugLine="canvasPnl.Visible = False";
+RDebugUtils.currentLine=6225937;
+ //BA.debugLineNum = 6225937;BA.debugLine="canvasPnl.Visible = False";
 mostCurrent._canvaspnl.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7602194;
- //BA.debugLineNum = 7602194;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6225938;
+ //BA.debugLineNum = 6225938;BA.debugLine="End Sub";
 return "";
 }
 public static void  _canvasdrag_placedview(anywheresoftware.b4a.objects.ConcreteViewWrapper _cdragview,anywheresoftware.b4a.objects.ConcreteViewWrapper _cplaceview) throws Exception{
@@ -1426,8 +1426,8 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=8323073;
- //BA.debugLineNum = 8323073;BA.debugLine="If cPlaceView.Tag = \"delete\" Then";
+RDebugUtils.currentLine=6946817;
+ //BA.debugLineNum = 6946817;BA.debugLine="If cPlaceView.Tag = \"delete\" Then";
 if (true) break;
 
 case 1:
@@ -1442,11 +1442,11 @@ this.state = 13;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=8323074;
- //BA.debugLineNum = 8323074;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete ca";
+RDebugUtils.currentLine=6946818;
+ //BA.debugLineNum = 6946818;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete ca";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Are you sure you want to delete canvas?"),BA.ObjectToCharSequence("Delete Canvas"),"No","","Yes",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8323075;
- //BA.debugLineNum = 8323075;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+RDebugUtils.currentLine=6946819;
+ //BA.debugLineNum = 6946819;BA.debugLine="Wait For Msgbox_Result (res As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "corkactivity", "canvasdrag_placedview"), null);
 this.state = 15;
 return;
@@ -1455,8 +1455,8 @@ case 15:
 this.state = 4;
 _res = (Integer) result[0];
 ;
-RDebugUtils.currentLine=8323076;
- //BA.debugLineNum = 8323076;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
+RDebugUtils.currentLine=6946820;
+ //BA.debugLineNum = 6946820;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
 if (true) break;
 
 case 4:
@@ -1469,45 +1469,45 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=8323077;
- //BA.debugLineNum = 8323077;BA.debugLine="Dim f As Panel = cDragView";
+RDebugUtils.currentLine=6946821;
+ //BA.debugLineNum = 6946821;BA.debugLine="Dim f As Panel = cDragView";
 _f = new anywheresoftware.b4a.objects.PanelWrapper();
 _f = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_cdragview.getObject()));
-RDebugUtils.currentLine=8323078;
- //BA.debugLineNum = 8323078;BA.debugLine="Dim key As String = f.Tag";
+RDebugUtils.currentLine=6946822;
+ //BA.debugLineNum = 6946822;BA.debugLine="Dim key As String = f.Tag";
 _key = BA.ObjectToString(_f.getTag());
-RDebugUtils.currentLine=8323079;
- //BA.debugLineNum = 8323079;BA.debugLine="File.Delete(File.DirInternal, key & \".png\")";
+RDebugUtils.currentLine=6946823;
+ //BA.debugLineNum = 6946823;BA.debugLine="File.Delete(File.DirInternal, key & \".png\")";
 anywheresoftware.b4a.keywords.Common.File.Delete(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_key+".png");
-RDebugUtils.currentLine=8323080;
- //BA.debugLineNum = 8323080;BA.debugLine="Main.kvs.Remove(key & \"_x\")";
+RDebugUtils.currentLine=6946824;
+ //BA.debugLineNum = 6946824;BA.debugLine="Main.kvs.Remove(key & \"_x\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_x");
-RDebugUtils.currentLine=8323081;
- //BA.debugLineNum = 8323081;BA.debugLine="Main.kvs.Remove(key & \"_y\")";
+RDebugUtils.currentLine=6946825;
+ //BA.debugLineNum = 6946825;BA.debugLine="Main.kvs.Remove(key & \"_y\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_y");
-RDebugUtils.currentLine=8323082;
- //BA.debugLineNum = 8323082;BA.debugLine="Main.kvs.Remove(key & \"_w\")";
+RDebugUtils.currentLine=6946826;
+ //BA.debugLineNum = 6946826;BA.debugLine="Main.kvs.Remove(key & \"_w\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_w");
-RDebugUtils.currentLine=8323083;
- //BA.debugLineNum = 8323083;BA.debugLine="Main.kvs.Remove(key & \"_h\")";
+RDebugUtils.currentLine=6946827;
+ //BA.debugLineNum = 6946827;BA.debugLine="Main.kvs.Remove(key & \"_h\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_h");
-RDebugUtils.currentLine=8323084;
- //BA.debugLineNum = 8323084;BA.debugLine="Dim newCount As Int = Main.kvs.Get(\"cvs_count\")";
+RDebugUtils.currentLine=6946828;
+ //BA.debugLineNum = 6946828;BA.debugLine="Dim newCount As Int = Main.kvs.Get(\"cvs_count\")";
 _newcount = (int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get("cvs_count")));
-RDebugUtils.currentLine=8323085;
- //BA.debugLineNum = 8323085;BA.debugLine="Main.kvs.Put(\"cvs_count\", newCount - 1)";
+RDebugUtils.currentLine=6946829;
+ //BA.debugLineNum = 6946829;BA.debugLine="Main.kvs.Put(\"cvs_count\", newCount - 1)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put("cvs_count",(Object)(_newcount-1));
-RDebugUtils.currentLine=8323086;
- //BA.debugLineNum = 8323086;BA.debugLine="canvasCount = canvasCount - 1";
+RDebugUtils.currentLine=6946830;
+ //BA.debugLineNum = 6946830;BA.debugLine="canvasCount = canvasCount - 1";
 parent._canvascount = (int) (parent._canvascount-1);
-RDebugUtils.currentLine=8323087;
- //BA.debugLineNum = 8323087;BA.debugLine="f.Visible = False";
+RDebugUtils.currentLine=6946831;
+ //BA.debugLineNum = 6946831;BA.debugLine="f.Visible = False";
 _f.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8323088;
- //BA.debugLineNum = 8323088;BA.debugLine="ToastMessageShow(\"Canvas Deleted\", False)";
+RDebugUtils.currentLine=6946832;
+ //BA.debugLineNum = 6946832;BA.debugLine="ToastMessageShow(\"Canvas Deleted\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Canvas Deleted"),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8323089;
- //BA.debugLineNum = 8323089;BA.debugLine="If canvasCount = 0 Then";
+RDebugUtils.currentLine=6946833;
+ //BA.debugLineNum = 6946833;BA.debugLine="If canvasCount = 0 Then";
 if (true) break;
 
 case 7:
@@ -1520,8 +1520,8 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=8323090;
- //BA.debugLineNum = 8323090;BA.debugLine="penSpnr.Visible = False";
+RDebugUtils.currentLine=6946834;
+ //BA.debugLineNum = 6946834;BA.debugLine="penSpnr.Visible = False";
 parent.mostCurrent._penspnr.setVisible(anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -1540,18 +1540,18 @@ this.state = 14;
 case 13:
 //C
 this.state = 14;
-RDebugUtils.currentLine=8323094;
- //BA.debugLineNum = 8323094;BA.debugLine="Dim f As Panel = cDragView";
+RDebugUtils.currentLine=6946838;
+ //BA.debugLineNum = 6946838;BA.debugLine="Dim f As Panel = cDragView";
 _f = new anywheresoftware.b4a.objects.PanelWrapper();
 _f = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_cdragview.getObject()));
-RDebugUtils.currentLine=8323095;
- //BA.debugLineNum = 8323095;BA.debugLine="Dim key As String = f.Tag";
+RDebugUtils.currentLine=6946839;
+ //BA.debugLineNum = 6946839;BA.debugLine="Dim key As String = f.Tag";
 _key = BA.ObjectToString(_f.getTag());
-RDebugUtils.currentLine=8323096;
- //BA.debugLineNum = 8323096;BA.debugLine="Main.kvs.Put(key & \"_x\", f.Left)";
+RDebugUtils.currentLine=6946840;
+ //BA.debugLineNum = 6946840;BA.debugLine="Main.kvs.Put(key & \"_x\", f.Left)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_x",(Object)(_f.getLeft()));
-RDebugUtils.currentLine=8323097;
- //BA.debugLineNum = 8323097;BA.debugLine="Main.kvs.Put(key & \"_y\", f.Top)";
+RDebugUtils.currentLine=6946841;
+ //BA.debugLineNum = 6946841;BA.debugLine="Main.kvs.Put(key & \"_y\", f.Top)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_y",(Object)(_f.getTop()));
  if (true) break;
 
@@ -1559,8 +1559,8 @@ case 14:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=8323099;
- //BA.debugLineNum = 8323099;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6946843;
+ //BA.debugLineNum = 6946843;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1576,63 +1576,63 @@ anywheresoftware.b4a.objects.B4XCanvas _cvs = null;
 anywheresoftware.b4a.objects.PanelWrapper _f = null;
 String _key = "";
 anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;
-RDebugUtils.currentLine=7471104;
- //BA.debugLineNum = 7471104;BA.debugLine="Sub CanvasPanel_Touch (Action As Int, X As Float,";
-RDebugUtils.currentLine=7471105;
- //BA.debugLineNum = 7471105;BA.debugLine="Dim p As Panel = Sender";
+RDebugUtils.currentLine=6094848;
+ //BA.debugLineNum = 6094848;BA.debugLine="Sub CanvasPanel_Touch (Action As Int, X As Float,";
+RDebugUtils.currentLine=6094849;
+ //BA.debugLineNum = 6094849;BA.debugLine="Dim p As Panel = Sender";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
 _p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=7471106;
- //BA.debugLineNum = 7471106;BA.debugLine="Dim cvs As B4XCanvas = p.Tag";
+RDebugUtils.currentLine=6094850;
+ //BA.debugLineNum = 6094850;BA.debugLine="Dim cvs As B4XCanvas = p.Tag";
 _cvs = (anywheresoftware.b4a.objects.B4XCanvas)(_p.getTag());
-RDebugUtils.currentLine=7471107;
- //BA.debugLineNum = 7471107;BA.debugLine="Select Action";
+RDebugUtils.currentLine=6094851;
+ //BA.debugLineNum = 6094851;BA.debugLine="Select Action";
 switch (BA.switchObjectToInt(_action,mostCurrent._activity.ACTION_DOWN,mostCurrent._activity.ACTION_MOVE)) {
 case 0: {
-RDebugUtils.currentLine=7471109;
- //BA.debugLineNum = 7471109;BA.debugLine="LastX = X";
+RDebugUtils.currentLine=6094853;
+ //BA.debugLineNum = 6094853;BA.debugLine="LastX = X";
 _lastx = _x;
-RDebugUtils.currentLine=7471110;
- //BA.debugLineNum = 7471110;BA.debugLine="LastY = Y";
+RDebugUtils.currentLine=6094854;
+ //BA.debugLineNum = 6094854;BA.debugLine="LastY = Y";
 _lasty = _y;
  break; }
 case 1: {
-RDebugUtils.currentLine=7471112;
- //BA.debugLineNum = 7471112;BA.debugLine="cvs.DrawLine(LastX, LastY, X, Y, Colors.RGB(R2,";
+RDebugUtils.currentLine=6094856;
+ //BA.debugLineNum = 6094856;BA.debugLine="cvs.DrawLine(LastX, LastY, X, Y, Colors.RGB(R2,";
 _cvs.DrawLine(_lastx,_lasty,_x,_y,anywheresoftware.b4a.keywords.Common.Colors.RGB(_r2,_g2,_b2),(float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (3))));
-RDebugUtils.currentLine=7471113;
- //BA.debugLineNum = 7471113;BA.debugLine="cvs.Invalidate";
+RDebugUtils.currentLine=6094857;
+ //BA.debugLineNum = 6094857;BA.debugLine="cvs.Invalidate";
 _cvs.Invalidate();
-RDebugUtils.currentLine=7471114;
- //BA.debugLineNum = 7471114;BA.debugLine="LastX = X";
+RDebugUtils.currentLine=6094858;
+ //BA.debugLineNum = 6094858;BA.debugLine="LastX = X";
 _lastx = _x;
-RDebugUtils.currentLine=7471115;
- //BA.debugLineNum = 7471115;BA.debugLine="LastY = Y";
+RDebugUtils.currentLine=6094859;
+ //BA.debugLineNum = 6094859;BA.debugLine="LastY = Y";
 _lasty = _y;
-RDebugUtils.currentLine=7471116;
- //BA.debugLineNum = 7471116;BA.debugLine="Dim f As Panel = p.Parent";
+RDebugUtils.currentLine=6094860;
+ //BA.debugLineNum = 6094860;BA.debugLine="Dim f As Panel = p.Parent";
 _f = new anywheresoftware.b4a.objects.PanelWrapper();
 _f = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_p.getParent()));
-RDebugUtils.currentLine=7471117;
- //BA.debugLineNum = 7471117;BA.debugLine="Dim key As String = f.Tag";
+RDebugUtils.currentLine=6094861;
+ //BA.debugLineNum = 6094861;BA.debugLine="Dim key As String = f.Tag";
 _key = BA.ObjectToString(_f.getTag());
-RDebugUtils.currentLine=7471118;
- //BA.debugLineNum = 7471118;BA.debugLine="Dim out As OutputStream";
+RDebugUtils.currentLine=6094862;
+ //BA.debugLineNum = 6094862;BA.debugLine="Dim out As OutputStream";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
-RDebugUtils.currentLine=7471119;
- //BA.debugLineNum = 7471119;BA.debugLine="out = File.OpenOutput(File.DirInternal, key & \"";
+RDebugUtils.currentLine=6094863;
+ //BA.debugLineNum = 6094863;BA.debugLine="out = File.OpenOutput(File.DirInternal, key & \"";
 _out = anywheresoftware.b4a.keywords.Common.File.OpenOutput(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_key+".png",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7471120;
- //BA.debugLineNum = 7471120;BA.debugLine="cvs.CreateBitmap.WriteToStream(out, 100, \"PNG\")";
+RDebugUtils.currentLine=6094864;
+ //BA.debugLineNum = 6094864;BA.debugLine="cvs.CreateBitmap.WriteToStream(out, 100, \"PNG\")";
 _cvs.CreateBitmap().WriteToStream((java.io.OutputStream)(_out.getObject()),(int) (100),BA.getEnumFromString(android.graphics.Bitmap.CompressFormat.class,"PNG"));
-RDebugUtils.currentLine=7471121;
- //BA.debugLineNum = 7471121;BA.debugLine="out.Close";
+RDebugUtils.currentLine=6094865;
+ //BA.debugLineNum = 6094865;BA.debugLine="out.Close";
 _out.Close();
  break; }
 }
 ;
-RDebugUtils.currentLine=7471123;
- //BA.debugLineNum = 7471123;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6094867;
+ //BA.debugLineNum = 6094867;BA.debugLine="End Sub";
 return "";
 }
 public static String  _cc_result(boolean _success,String _dir,String _filename) throws Exception{
@@ -1642,133 +1642,133 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "cc_result", false))
 anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper _bmp = null;
 String _key = "";
 anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper _out = null;
-RDebugUtils.currentLine=7340032;
- //BA.debugLineNum = 7340032;BA.debugLine="Sub CC_Result (Success As Boolean, Dir As String,";
-RDebugUtils.currentLine=7340033;
- //BA.debugLineNum = 7340033;BA.debugLine="If Success Then";
+RDebugUtils.currentLine=5963776;
+ //BA.debugLineNum = 5963776;BA.debugLine="Sub CC_Result (Success As Boolean, Dir As String,";
+RDebugUtils.currentLine=5963777;
+ //BA.debugLineNum = 5963777;BA.debugLine="If Success Then";
 if (_success) { 
-RDebugUtils.currentLine=7340034;
- //BA.debugLineNum = 7340034;BA.debugLine="imgView.Initialize(\"ImgView\")";
+RDebugUtils.currentLine=5963778;
+ //BA.debugLineNum = 5963778;BA.debugLine="imgView.Initialize(\"ImgView\")";
 mostCurrent._imgview.Initialize(mostCurrent.activityBA,"ImgView");
-RDebugUtils.currentLine=7340035;
- //BA.debugLineNum = 7340035;BA.debugLine="Dim bmp As Bitmap";
+RDebugUtils.currentLine=5963779;
+ //BA.debugLineNum = 5963779;BA.debugLine="Dim bmp As Bitmap";
 _bmp = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper();
-RDebugUtils.currentLine=7340036;
- //BA.debugLineNum = 7340036;BA.debugLine="bmp = LoadBitmapResize(Dir, FileName, 100dip, 10";
+RDebugUtils.currentLine=5963780;
+ //BA.debugLineNum = 5963780;BA.debugLine="bmp = LoadBitmapResize(Dir, FileName, 100dip, 10";
 _bmp = anywheresoftware.b4a.keywords.Common.LoadBitmapResize(_dir,_filename,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7340037;
- //BA.debugLineNum = 7340037;BA.debugLine="imgView.Bitmap = bmp";
+RDebugUtils.currentLine=5963781;
+ //BA.debugLineNum = 5963781;BA.debugLine="imgView.Bitmap = bmp";
 mostCurrent._imgview.setBitmap((android.graphics.Bitmap)(_bmp.getObject()));
-RDebugUtils.currentLine=7340038;
- //BA.debugLineNum = 7340038;BA.debugLine="boardPnl.AddView(imgView, 150dip, 500dip, 100dip";
+RDebugUtils.currentLine=5963782;
+ //BA.debugLineNum = 5963782;BA.debugLine="boardPnl.AddView(imgView, 150dip, 500dip, 100dip";
 mostCurrent._boardpnl.AddView((android.view.View)(mostCurrent._imgview.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (150)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (500)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)));
-RDebugUtils.currentLine=7340039;
- //BA.debugLineNum = 7340039;BA.debugLine="ddi.AddDragView(imgView, False)";
+RDebugUtils.currentLine=5963783;
+ //BA.debugLineNum = 5963783;BA.debugLine="ddi.AddDragView(imgView, False)";
 mostCurrent._ddi._adddragview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._imgview.getObject())),anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7340040;
- //BA.debugLineNum = 7340040;BA.debugLine="ddi.AddPlaceView(place1).AddPlaceView(place2).Ad";
+RDebugUtils.currentLine=5963784;
+ //BA.debugLineNum = 5963784;BA.debugLine="ddi.AddPlaceView(place1).AddPlaceView(place2).Ad";
 mostCurrent._ddi._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place1.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place2.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place3.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place4.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place5.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place6.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place7.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place8.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place9.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place10.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place11.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._place12.getObject())))._addplaceview((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._deletelbl.getObject())));
-RDebugUtils.currentLine=7340041;
- //BA.debugLineNum = 7340041;BA.debugLine="Dim key As String = \"img_\" & imgCount";
+RDebugUtils.currentLine=5963785;
+ //BA.debugLineNum = 5963785;BA.debugLine="Dim key As String = \"img_\" & imgCount";
 _key = "img_"+BA.NumberToString(_imgcount);
-RDebugUtils.currentLine=7340042;
- //BA.debugLineNum = 7340042;BA.debugLine="Dim out As OutputStream";
+RDebugUtils.currentLine=5963786;
+ //BA.debugLineNum = 5963786;BA.debugLine="Dim out As OutputStream";
 _out = new anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper();
-RDebugUtils.currentLine=7340043;
- //BA.debugLineNum = 7340043;BA.debugLine="out = File.OpenOutput(File.DirInternal, key & \".";
+RDebugUtils.currentLine=5963787;
+ //BA.debugLineNum = 5963787;BA.debugLine="out = File.OpenOutput(File.DirInternal, key & \".";
 _out = anywheresoftware.b4a.keywords.Common.File.OpenOutput(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_key+".png",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7340044;
- //BA.debugLineNum = 7340044;BA.debugLine="bmp.WriteToStream(out, 100, \"PNG\")";
+RDebugUtils.currentLine=5963788;
+ //BA.debugLineNum = 5963788;BA.debugLine="bmp.WriteToStream(out, 100, \"PNG\")";
 _bmp.WriteToStream((java.io.OutputStream)(_out.getObject()),(int) (100),BA.getEnumFromString(android.graphics.Bitmap.CompressFormat.class,"PNG"));
-RDebugUtils.currentLine=7340045;
- //BA.debugLineNum = 7340045;BA.debugLine="out.Close";
+RDebugUtils.currentLine=5963789;
+ //BA.debugLineNum = 5963789;BA.debugLine="out.Close";
 _out.Close();
-RDebugUtils.currentLine=7340046;
- //BA.debugLineNum = 7340046;BA.debugLine="Main.kvs.Put(key & \"_file\", key & \".png\")";
+RDebugUtils.currentLine=5963790;
+ //BA.debugLineNum = 5963790;BA.debugLine="Main.kvs.Put(key & \"_file\", key & \".png\")";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_file",(Object)(_key+".png"));
-RDebugUtils.currentLine=7340047;
- //BA.debugLineNum = 7340047;BA.debugLine="Main.kvs.Put(key & \"_x\", 150dip)";
+RDebugUtils.currentLine=5963791;
+ //BA.debugLineNum = 5963791;BA.debugLine="Main.kvs.Put(key & \"_x\", 150dip)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_x",(Object)(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (150))));
-RDebugUtils.currentLine=7340048;
- //BA.debugLineNum = 7340048;BA.debugLine="Main.kvs.Put(key & \"_y\", 500dip)";
+RDebugUtils.currentLine=5963792;
+ //BA.debugLineNum = 5963792;BA.debugLine="Main.kvs.Put(key & \"_y\", 500dip)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_y",(Object)(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (500))));
-RDebugUtils.currentLine=7340049;
- //BA.debugLineNum = 7340049;BA.debugLine="Main.kvs.Put(\"img_count\", imgCount + 1)";
+RDebugUtils.currentLine=5963793;
+ //BA.debugLineNum = 5963793;BA.debugLine="Main.kvs.Put(\"img_count\", imgCount + 1)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put("img_count",(Object)(_imgcount+1));
-RDebugUtils.currentLine=7340050;
- //BA.debugLineNum = 7340050;BA.debugLine="imgView.Tag = key";
+RDebugUtils.currentLine=5963794;
+ //BA.debugLineNum = 5963794;BA.debugLine="imgView.Tag = key";
 mostCurrent._imgview.setTag((Object)(_key));
-RDebugUtils.currentLine=7340051;
- //BA.debugLineNum = 7340051;BA.debugLine="imgCount = imgCount + 1";
+RDebugUtils.currentLine=5963795;
+ //BA.debugLineNum = 5963795;BA.debugLine="imgCount = imgCount + 1";
 _imgcount = (int) (_imgcount+1);
  }else {
-RDebugUtils.currentLine=7340053;
- //BA.debugLineNum = 7340053;BA.debugLine="ToastMessageShow(\"No image selected\", False)";
+RDebugUtils.currentLine=5963797;
+ //BA.debugLineNum = 5963797;BA.debugLine="ToastMessageShow(\"No image selected\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("No image selected"),anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=7340055;
- //BA.debugLineNum = 7340055;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5963799;
+ //BA.debugLineNum = 5963799;BA.debugLine="End Sub";
 return "";
 }
 public static String  _colorsspnr_itemclick(int _position,Object _value) throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "colorsspnr_itemclick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "colorsspnr_itemclick", new Object[] {_position,_value}));}
-RDebugUtils.currentLine=8060928;
- //BA.debugLineNum = 8060928;BA.debugLine="Private Sub colorsSpnr_ItemClick (Position As Int,";
-RDebugUtils.currentLine=8060929;
- //BA.debugLineNum = 8060929;BA.debugLine="Select Position";
+RDebugUtils.currentLine=6684672;
+ //BA.debugLineNum = 6684672;BA.debugLine="Private Sub colorsSpnr_ItemClick (Position As Int,";
+RDebugUtils.currentLine=6684673;
+ //BA.debugLineNum = 6684673;BA.debugLine="Select Position";
 switch (_position) {
 case 0: {
-RDebugUtils.currentLine=8060931;
- //BA.debugLineNum = 8060931;BA.debugLine="R = 255";
+RDebugUtils.currentLine=6684675;
+ //BA.debugLineNum = 6684675;BA.debugLine="R = 255";
 _r = (int) (255);
-RDebugUtils.currentLine=8060932;
- //BA.debugLineNum = 8060932;BA.debugLine="G = 105";
+RDebugUtils.currentLine=6684676;
+ //BA.debugLineNum = 6684676;BA.debugLine="G = 105";
 _g = (int) (105);
-RDebugUtils.currentLine=8060933;
- //BA.debugLineNum = 8060933;BA.debugLine="B = 97";
+RDebugUtils.currentLine=6684677;
+ //BA.debugLineNum = 6684677;BA.debugLine="B = 97";
 _b = (int) (97);
  break; }
 case 1: {
-RDebugUtils.currentLine=8060935;
- //BA.debugLineNum = 8060935;BA.debugLine="R = 155";
+RDebugUtils.currentLine=6684679;
+ //BA.debugLineNum = 6684679;BA.debugLine="R = 155";
 _r = (int) (155);
-RDebugUtils.currentLine=8060936;
- //BA.debugLineNum = 8060936;BA.debugLine="G = 190";
+RDebugUtils.currentLine=6684680;
+ //BA.debugLineNum = 6684680;BA.debugLine="G = 190";
 _g = (int) (190);
-RDebugUtils.currentLine=8060937;
- //BA.debugLineNum = 8060937;BA.debugLine="B = 237";
+RDebugUtils.currentLine=6684681;
+ //BA.debugLineNum = 6684681;BA.debugLine="B = 237";
 _b = (int) (237);
  break; }
 case 2: {
-RDebugUtils.currentLine=8060939;
- //BA.debugLineNum = 8060939;BA.debugLine="R = 248";
+RDebugUtils.currentLine=6684683;
+ //BA.debugLineNum = 6684683;BA.debugLine="R = 248";
 _r = (int) (248);
-RDebugUtils.currentLine=8060940;
- //BA.debugLineNum = 8060940;BA.debugLine="G = 241";
+RDebugUtils.currentLine=6684684;
+ //BA.debugLineNum = 6684684;BA.debugLine="G = 241";
 _g = (int) (241);
-RDebugUtils.currentLine=8060941;
- //BA.debugLineNum = 8060941;BA.debugLine="B = 174";
+RDebugUtils.currentLine=6684685;
+ //BA.debugLineNum = 6684685;BA.debugLine="B = 174";
 _b = (int) (174);
  break; }
 }
 ;
-RDebugUtils.currentLine=8060943;
- //BA.debugLineNum = 8060943;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6684687;
+ //BA.debugLineNum = 6684687;BA.debugLine="End Sub";
 return "";
 }
 public static String  _imgbtn_click() throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "imgbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "imgbtn_click", null));}
-RDebugUtils.currentLine=7864320;
- //BA.debugLineNum = 7864320;BA.debugLine="Private Sub imgBtn_Click";
-RDebugUtils.currentLine=7864321;
- //BA.debugLineNum = 7864321;BA.debugLine="imgPicker.Show(\"image/*\", \"Select a Photo\")";
+RDebugUtils.currentLine=6488064;
+ //BA.debugLineNum = 6488064;BA.debugLine="Private Sub imgBtn_Click";
+RDebugUtils.currentLine=6488065;
+ //BA.debugLineNum = 6488065;BA.debugLine="imgPicker.Show(\"image/*\", \"Select a Photo\")";
 _imgpicker.Show(processBA,"image/*","Select a Photo");
-RDebugUtils.currentLine=7864322;
- //BA.debugLineNum = 7864322;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6488066;
+ //BA.debugLineNum = 6488066;BA.debugLine="End Sub";
 return "";
 }
 public static void  _imgdrag_placedview(anywheresoftware.b4a.objects.ConcreteViewWrapper _idragview,anywheresoftware.b4a.objects.ConcreteViewWrapper _iplaceview) throws Exception{
@@ -1804,8 +1804,8 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=8257537;
- //BA.debugLineNum = 8257537;BA.debugLine="If iPlaceView.Tag = \"delete\" Then";
+RDebugUtils.currentLine=6881281;
+ //BA.debugLineNum = 6881281;BA.debugLine="If iPlaceView.Tag = \"delete\" Then";
 if (true) break;
 
 case 1:
@@ -1820,11 +1820,11 @@ this.state = 9;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=8257538;
- //BA.debugLineNum = 8257538;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete im";
+RDebugUtils.currentLine=6881282;
+ //BA.debugLineNum = 6881282;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete im";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Are you sure you want to delete image?"),BA.ObjectToCharSequence("Delete Image"),"No","","Yes",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8257539;
- //BA.debugLineNum = 8257539;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+RDebugUtils.currentLine=6881283;
+ //BA.debugLineNum = 6881283;BA.debugLine="Wait For Msgbox_Result (res As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "corkactivity", "imgdrag_placedview"), null);
 this.state = 11;
 return;
@@ -1833,8 +1833,8 @@ case 11:
 this.state = 4;
 _res = (Integer) result[0];
 ;
-RDebugUtils.currentLine=8257540;
- //BA.debugLineNum = 8257540;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
+RDebugUtils.currentLine=6881284;
+ //BA.debugLineNum = 6881284;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
 if (true) break;
 
 case 4:
@@ -1847,36 +1847,36 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=8257541;
- //BA.debugLineNum = 8257541;BA.debugLine="Dim iv As ImageView = iDragView";
+RDebugUtils.currentLine=6881285;
+ //BA.debugLineNum = 6881285;BA.debugLine="Dim iv As ImageView = iDragView";
 _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
 _iv = (anywheresoftware.b4a.objects.ImageViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ImageViewWrapper(), (android.widget.ImageView)(_idragview.getObject()));
-RDebugUtils.currentLine=8257542;
- //BA.debugLineNum = 8257542;BA.debugLine="Dim key As String = iv.Tag";
+RDebugUtils.currentLine=6881286;
+ //BA.debugLineNum = 6881286;BA.debugLine="Dim key As String = iv.Tag";
 _key = BA.ObjectToString(_iv.getTag());
-RDebugUtils.currentLine=8257543;
- //BA.debugLineNum = 8257543;BA.debugLine="File.Delete(File.DirInternal, key & \".png\")";
+RDebugUtils.currentLine=6881287;
+ //BA.debugLineNum = 6881287;BA.debugLine="File.Delete(File.DirInternal, key & \".png\")";
 anywheresoftware.b4a.keywords.Common.File.Delete(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),_key+".png");
-RDebugUtils.currentLine=8257544;
- //BA.debugLineNum = 8257544;BA.debugLine="Main.kvs.Remove(key & \"_file\")";
+RDebugUtils.currentLine=6881288;
+ //BA.debugLineNum = 6881288;BA.debugLine="Main.kvs.Remove(key & \"_file\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_file");
-RDebugUtils.currentLine=8257545;
- //BA.debugLineNum = 8257545;BA.debugLine="Main.kvs.Remove(key & \"_x\")";
+RDebugUtils.currentLine=6881289;
+ //BA.debugLineNum = 6881289;BA.debugLine="Main.kvs.Remove(key & \"_x\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_x");
-RDebugUtils.currentLine=8257546;
- //BA.debugLineNum = 8257546;BA.debugLine="Main.kvs.Remove(key & \"_y\")";
+RDebugUtils.currentLine=6881290;
+ //BA.debugLineNum = 6881290;BA.debugLine="Main.kvs.Remove(key & \"_y\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_y");
-RDebugUtils.currentLine=8257547;
- //BA.debugLineNum = 8257547;BA.debugLine="Dim newCount As Int = Main.kvs.Get(\"img_count\")";
+RDebugUtils.currentLine=6881291;
+ //BA.debugLineNum = 6881291;BA.debugLine="Dim newCount As Int = Main.kvs.Get(\"img_count\")";
 _newcount = (int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get("img_count")));
-RDebugUtils.currentLine=8257548;
- //BA.debugLineNum = 8257548;BA.debugLine="Main.kvs.Put(\"img_count\", newCount - 1)";
+RDebugUtils.currentLine=6881292;
+ //BA.debugLineNum = 6881292;BA.debugLine="Main.kvs.Put(\"img_count\", newCount - 1)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put("img_count",(Object)(_newcount-1));
-RDebugUtils.currentLine=8257549;
- //BA.debugLineNum = 8257549;BA.debugLine="iv.Visible = False";
+RDebugUtils.currentLine=6881293;
+ //BA.debugLineNum = 6881293;BA.debugLine="iv.Visible = False";
 _iv.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8257550;
- //BA.debugLineNum = 8257550;BA.debugLine="ToastMessageShow(\"Image Deleted\", False)";
+RDebugUtils.currentLine=6881294;
+ //BA.debugLineNum = 6881294;BA.debugLine="ToastMessageShow(\"Image Deleted\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Image Deleted"),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -1889,18 +1889,18 @@ this.state = 10;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=8257553;
- //BA.debugLineNum = 8257553;BA.debugLine="Dim iv As ImageView = iDragView";
+RDebugUtils.currentLine=6881297;
+ //BA.debugLineNum = 6881297;BA.debugLine="Dim iv As ImageView = iDragView";
 _iv = new anywheresoftware.b4a.objects.ImageViewWrapper();
 _iv = (anywheresoftware.b4a.objects.ImageViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ImageViewWrapper(), (android.widget.ImageView)(_idragview.getObject()));
-RDebugUtils.currentLine=8257554;
- //BA.debugLineNum = 8257554;BA.debugLine="Dim key As String = iv.Tag";
+RDebugUtils.currentLine=6881298;
+ //BA.debugLineNum = 6881298;BA.debugLine="Dim key As String = iv.Tag";
 _key = BA.ObjectToString(_iv.getTag());
-RDebugUtils.currentLine=8257555;
- //BA.debugLineNum = 8257555;BA.debugLine="Main.kvs.Put(key & \"_x\", iv.Left)";
+RDebugUtils.currentLine=6881299;
+ //BA.debugLineNum = 6881299;BA.debugLine="Main.kvs.Put(key & \"_x\", iv.Left)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_x",(Object)(_iv.getLeft()));
-RDebugUtils.currentLine=8257556;
- //BA.debugLineNum = 8257556;BA.debugLine="Main.kvs.Put(key & \"_y\", iv.Top)";
+RDebugUtils.currentLine=6881300;
+ //BA.debugLineNum = 6881300;BA.debugLine="Main.kvs.Put(key & \"_y\", iv.Top)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_y",(Object)(_iv.getTop()));
  if (true) break;
 
@@ -1908,8 +1908,8 @@ case 10:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=8257558;
- //BA.debugLineNum = 8257558;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6881302;
+ //BA.debugLineNum = 6881302;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1949,8 +1949,8 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=8192001;
- //BA.debugLineNum = 8192001;BA.debugLine="If nPlaceView.Tag = \"delete\" Then";
+RDebugUtils.currentLine=6815745;
+ //BA.debugLineNum = 6815745;BA.debugLine="If nPlaceView.Tag = \"delete\" Then";
 if (true) break;
 
 case 1:
@@ -1965,11 +1965,11 @@ this.state = 9;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=8192002;
- //BA.debugLineNum = 8192002;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete no";
+RDebugUtils.currentLine=6815746;
+ //BA.debugLineNum = 6815746;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete no";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Are you sure you want to delete note?"),BA.ObjectToCharSequence("Delete Note"),"No","","Yes",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8192003;
- //BA.debugLineNum = 8192003;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+RDebugUtils.currentLine=6815747;
+ //BA.debugLineNum = 6815747;BA.debugLine="Wait For Msgbox_Result (res As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "corkactivity", "notedrag_placedview"), null);
 this.state = 11;
 return;
@@ -1978,8 +1978,8 @@ case 11:
 this.state = 4;
 _res = (Integer) result[0];
 ;
-RDebugUtils.currentLine=8192004;
- //BA.debugLineNum = 8192004;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
+RDebugUtils.currentLine=6815748;
+ //BA.debugLineNum = 6815748;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
 if (true) break;
 
 case 4:
@@ -1992,36 +1992,36 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=8192005;
- //BA.debugLineNum = 8192005;BA.debugLine="Dim p As Panel = nDragView";
+RDebugUtils.currentLine=6815749;
+ //BA.debugLineNum = 6815749;BA.debugLine="Dim p As Panel = nDragView";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
 _p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_ndragview.getObject()));
-RDebugUtils.currentLine=8192006;
- //BA.debugLineNum = 8192006;BA.debugLine="Dim key As String = p.Tag";
+RDebugUtils.currentLine=6815750;
+ //BA.debugLineNum = 6815750;BA.debugLine="Dim key As String = p.Tag";
 _key = BA.ObjectToString(_p.getTag());
-RDebugUtils.currentLine=8192007;
- //BA.debugLineNum = 8192007;BA.debugLine="Main.kvs.Remove(key & \"_text\")";
+RDebugUtils.currentLine=6815751;
+ //BA.debugLineNum = 6815751;BA.debugLine="Main.kvs.Remove(key & \"_text\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_text");
-RDebugUtils.currentLine=8192008;
- //BA.debugLineNum = 8192008;BA.debugLine="Main.kvs.Remove(key & \"_color\")";
+RDebugUtils.currentLine=6815752;
+ //BA.debugLineNum = 6815752;BA.debugLine="Main.kvs.Remove(key & \"_color\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_color");
-RDebugUtils.currentLine=8192009;
- //BA.debugLineNum = 8192009;BA.debugLine="Main.kvs.Remove(key & \"_x\")";
+RDebugUtils.currentLine=6815753;
+ //BA.debugLineNum = 6815753;BA.debugLine="Main.kvs.Remove(key & \"_x\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_x");
-RDebugUtils.currentLine=8192010;
- //BA.debugLineNum = 8192010;BA.debugLine="Main.kvs.Remove(key & \"_y\")";
+RDebugUtils.currentLine=6815754;
+ //BA.debugLineNum = 6815754;BA.debugLine="Main.kvs.Remove(key & \"_y\")";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._remove(_key+"_y");
-RDebugUtils.currentLine=8192011;
- //BA.debugLineNum = 8192011;BA.debugLine="Dim newCount As Int = Main.kvs.Get(\"note_count\"";
+RDebugUtils.currentLine=6815755;
+ //BA.debugLineNum = 6815755;BA.debugLine="Dim newCount As Int = Main.kvs.Get(\"note_count\"";
 _newcount = (int)(BA.ObjectToNumber(parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._get("note_count")));
-RDebugUtils.currentLine=8192012;
- //BA.debugLineNum = 8192012;BA.debugLine="Main.kvs.Put(\"note_count\", newCount - 1)";
+RDebugUtils.currentLine=6815756;
+ //BA.debugLineNum = 6815756;BA.debugLine="Main.kvs.Put(\"note_count\", newCount - 1)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put("note_count",(Object)(_newcount-1));
-RDebugUtils.currentLine=8192013;
- //BA.debugLineNum = 8192013;BA.debugLine="p.Visible = False";
+RDebugUtils.currentLine=6815757;
+ //BA.debugLineNum = 6815757;BA.debugLine="p.Visible = False";
 _p.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=8192014;
- //BA.debugLineNum = 8192014;BA.debugLine="ToastMessageShow(\"Note Deleted\", False)";
+RDebugUtils.currentLine=6815758;
+ //BA.debugLineNum = 6815758;BA.debugLine="ToastMessageShow(\"Note Deleted\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Note Deleted"),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -2034,18 +2034,18 @@ this.state = 10;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=8192017;
- //BA.debugLineNum = 8192017;BA.debugLine="Dim p As Panel = nDragView";
+RDebugUtils.currentLine=6815761;
+ //BA.debugLineNum = 6815761;BA.debugLine="Dim p As Panel = nDragView";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
 _p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_ndragview.getObject()));
-RDebugUtils.currentLine=8192018;
- //BA.debugLineNum = 8192018;BA.debugLine="Dim key As String = p.Tag";
+RDebugUtils.currentLine=6815762;
+ //BA.debugLineNum = 6815762;BA.debugLine="Dim key As String = p.Tag";
 _key = BA.ObjectToString(_p.getTag());
-RDebugUtils.currentLine=8192019;
- //BA.debugLineNum = 8192019;BA.debugLine="Main.kvs.Put(key & \"_x\", p.Left)";
+RDebugUtils.currentLine=6815763;
+ //BA.debugLineNum = 6815763;BA.debugLine="Main.kvs.Put(key & \"_x\", p.Left)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_x",(Object)(_p.getLeft()));
-RDebugUtils.currentLine=8192020;
- //BA.debugLineNum = 8192020;BA.debugLine="Main.kvs.Put(key & \"_y\", p.Top)";
+RDebugUtils.currentLine=6815764;
+ //BA.debugLineNum = 6815764;BA.debugLine="Main.kvs.Put(key & \"_y\", p.Top)";
 parent.mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_y",(Object)(_p.getTop()));
  if (true) break;
 
@@ -2053,8 +2053,8 @@ case 10:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=8192022;
- //BA.debugLineNum = 8192022;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6815766;
+ //BA.debugLineNum = 6815766;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -2068,24 +2068,24 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "notetext_textchanged", false))
 anywheresoftware.b4a.objects.EditTextWrapper _txt = null;
 anywheresoftware.b4a.objects.PanelWrapper _p = null;
 String _key = "";
-RDebugUtils.currentLine=7274496;
- //BA.debugLineNum = 7274496;BA.debugLine="Sub NoteText_TextChanged(Old As String, New As Str";
-RDebugUtils.currentLine=7274497;
- //BA.debugLineNum = 7274497;BA.debugLine="Dim txt As EditText = Sender";
+RDebugUtils.currentLine=5898240;
+ //BA.debugLineNum = 5898240;BA.debugLine="Sub NoteText_TextChanged(Old As String, New As Str";
+RDebugUtils.currentLine=5898241;
+ //BA.debugLineNum = 5898241;BA.debugLine="Dim txt As EditText = Sender";
 _txt = new anywheresoftware.b4a.objects.EditTextWrapper();
 _txt = (anywheresoftware.b4a.objects.EditTextWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.EditTextWrapper(), (android.widget.EditText)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
-RDebugUtils.currentLine=7274498;
- //BA.debugLineNum = 7274498;BA.debugLine="Dim p As Panel = txt.Tag";
+RDebugUtils.currentLine=5898242;
+ //BA.debugLineNum = 5898242;BA.debugLine="Dim p As Panel = txt.Tag";
 _p = new anywheresoftware.b4a.objects.PanelWrapper();
 _p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(_txt.getTag()));
-RDebugUtils.currentLine=7274499;
- //BA.debugLineNum = 7274499;BA.debugLine="Dim key As String = p.Tag";
+RDebugUtils.currentLine=5898243;
+ //BA.debugLineNum = 5898243;BA.debugLine="Dim key As String = p.Tag";
 _key = BA.ObjectToString(_p.getTag());
-RDebugUtils.currentLine=7274500;
- //BA.debugLineNum = 7274500;BA.debugLine="Main.kvs.Put(key & \"_text\", New)";
+RDebugUtils.currentLine=5898244;
+ //BA.debugLineNum = 5898244;BA.debugLine="Main.kvs.Put(key & \"_text\", New)";
 mostCurrent._main._kvs /*b4a.example3.keyvaluestore*/ ._put(_key+"_text",(Object)(_new));
-RDebugUtils.currentLine=7274501;
- //BA.debugLineNum = 7274501;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5898245;
+ //BA.debugLineNum = 5898245;BA.debugLine="End Sub";
 return "";
 }
 public static String  _notewindow(int _pw,int _ph) throws Exception{
@@ -2094,221 +2094,221 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "notewindow", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "notewindow", new Object[] {_pw,_ph}));}
 anywheresoftware.b4a.objects.SpinnerWrapper _colorsspnr = null;
 anywheresoftware.b4a.objects.ButtonWrapper _addnbtn = null;
-RDebugUtils.currentLine=7536640;
- //BA.debugLineNum = 7536640;BA.debugLine="Private Sub noteWindow(pW As Int, pH As Int)";
-RDebugUtils.currentLine=7536641;
- //BA.debugLineNum = 7536641;BA.debugLine="notePnl = xui.CreatePanel(\"notePnl\")";
+RDebugUtils.currentLine=6160384;
+ //BA.debugLineNum = 6160384;BA.debugLine="Private Sub noteWindow(pW As Int, pH As Int)";
+RDebugUtils.currentLine=6160385;
+ //BA.debugLineNum = 6160385;BA.debugLine="notePnl = xui.CreatePanel(\"notePnl\")";
 mostCurrent._notepnl = _xui.CreatePanel(processBA,"notePnl");
-RDebugUtils.currentLine=7536642;
- //BA.debugLineNum = 7536642;BA.debugLine="Activity.AddView(notePnl, 100dip, 225dip, pW, pH)";
+RDebugUtils.currentLine=6160386;
+ //BA.debugLineNum = 6160386;BA.debugLine="Activity.AddView(notePnl, 100dip, 225dip, pW, pH)";
 mostCurrent._activity.AddView((android.view.View)(mostCurrent._notepnl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (225)),_pw,_ph);
-RDebugUtils.currentLine=7536643;
- //BA.debugLineNum = 7536643;BA.debugLine="notePnl.Color = xui.Color_RGB(50, 50, 50)";
+RDebugUtils.currentLine=6160387;
+ //BA.debugLineNum = 6160387;BA.debugLine="notePnl.Color = xui.Color_RGB(50, 50, 50)";
 mostCurrent._notepnl.setColor(_xui.Color_RGB((int) (50),(int) (50),(int) (50)));
-RDebugUtils.currentLine=7536644;
- //BA.debugLineNum = 7536644;BA.debugLine="notePnl.SetColorAndBorder(xui.Color_White, 2dip,";
+RDebugUtils.currentLine=6160388;
+ //BA.debugLineNum = 6160388;BA.debugLine="notePnl.SetColorAndBorder(xui.Color_White, 2dip,";
 mostCurrent._notepnl.SetColorAndBorder(_xui.Color_White,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)),_xui.Color_Black,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (3)));
-RDebugUtils.currentLine=7536646;
- //BA.debugLineNum = 7536646;BA.debugLine="Dim colorsSpnr As Spinner";
+RDebugUtils.currentLine=6160390;
+ //BA.debugLineNum = 6160390;BA.debugLine="Dim colorsSpnr As Spinner";
 _colorsspnr = new anywheresoftware.b4a.objects.SpinnerWrapper();
-RDebugUtils.currentLine=7536647;
- //BA.debugLineNum = 7536647;BA.debugLine="colorsSpnr.Initialize(\"colorsSpnr\")";
+RDebugUtils.currentLine=6160391;
+ //BA.debugLineNum = 6160391;BA.debugLine="colorsSpnr.Initialize(\"colorsSpnr\")";
 _colorsspnr.Initialize(mostCurrent.activityBA,"colorsSpnr");
-RDebugUtils.currentLine=7536648;
- //BA.debugLineNum = 7536648;BA.debugLine="colorsSpnr.AddAll(Array As String(\"Red\", \"Blue\",";
+RDebugUtils.currentLine=6160392;
+ //BA.debugLineNum = 6160392;BA.debugLine="colorsSpnr.AddAll(Array As String(\"Red\", \"Blue\",";
 _colorsspnr.AddAll(anywheresoftware.b4a.keywords.Common.ArrayToList(new String[]{"Red","Blue","Yellow"}));
-RDebugUtils.currentLine=7536649;
- //BA.debugLineNum = 7536649;BA.debugLine="notePnl.AddView(colorsSpnr, 10dip, 10dip, pW - 20";
+RDebugUtils.currentLine=6160393;
+ //BA.debugLineNum = 6160393;BA.debugLine="notePnl.AddView(colorsSpnr, 10dip, 10dip, pW - 20";
 mostCurrent._notepnl.AddView((android.view.View)(_colorsspnr.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (_pw-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=7536651;
- //BA.debugLineNum = 7536651;BA.debugLine="Dim addnBtn As Button";
+RDebugUtils.currentLine=6160395;
+ //BA.debugLineNum = 6160395;BA.debugLine="Dim addnBtn As Button";
 _addnbtn = new anywheresoftware.b4a.objects.ButtonWrapper();
-RDebugUtils.currentLine=7536652;
- //BA.debugLineNum = 7536652;BA.debugLine="addnBtn.Initialize(\"addnBtn\")";
+RDebugUtils.currentLine=6160396;
+ //BA.debugLineNum = 6160396;BA.debugLine="addnBtn.Initialize(\"addnBtn\")";
 _addnbtn.Initialize(mostCurrent.activityBA,"addnBtn");
-RDebugUtils.currentLine=7536653;
- //BA.debugLineNum = 7536653;BA.debugLine="addnBtn.Text = \"Add Note\"";
+RDebugUtils.currentLine=6160397;
+ //BA.debugLineNum = 6160397;BA.debugLine="addnBtn.Text = \"Add Note\"";
 _addnbtn.setText(BA.ObjectToCharSequence("Add Note"));
-RDebugUtils.currentLine=7536654;
- //BA.debugLineNum = 7536654;BA.debugLine="notePnl.AddView(addnBtn, 10dip, 60dip, (pW / 2) -";
+RDebugUtils.currentLine=6160398;
+ //BA.debugLineNum = 6160398;BA.debugLine="notePnl.AddView(addnBtn, 10dip, 60dip, (pW / 2) -";
 mostCurrent._notepnl.AddView((android.view.View)(_addnbtn.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60)),(int) ((_pw/(double)2)-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (15))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)));
-RDebugUtils.currentLine=7536656;
- //BA.debugLineNum = 7536656;BA.debugLine="notePnl.Enabled = False";
+RDebugUtils.currentLine=6160400;
+ //BA.debugLineNum = 6160400;BA.debugLine="notePnl.Enabled = False";
 mostCurrent._notepnl.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7536657;
- //BA.debugLineNum = 7536657;BA.debugLine="notePnl.Visible = False";
+RDebugUtils.currentLine=6160401;
+ //BA.debugLineNum = 6160401;BA.debugLine="notePnl.Visible = False";
 mostCurrent._notepnl.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7536658;
- //BA.debugLineNum = 7536658;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6160402;
+ //BA.debugLineNum = 6160402;BA.debugLine="End Sub";
 return "";
 }
 public static String  _penspnr_itemclick(int _position,Object _value) throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "penspnr_itemclick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "penspnr_itemclick", new Object[] {_position,_value}));}
-RDebugUtils.currentLine=8126464;
- //BA.debugLineNum = 8126464;BA.debugLine="Private Sub penSpnr_ItemClick (Position As Int, Va";
-RDebugUtils.currentLine=8126465;
- //BA.debugLineNum = 8126465;BA.debugLine="Select Position";
+RDebugUtils.currentLine=6750208;
+ //BA.debugLineNum = 6750208;BA.debugLine="Private Sub penSpnr_ItemClick (Position As Int, Va";
+RDebugUtils.currentLine=6750209;
+ //BA.debugLineNum = 6750209;BA.debugLine="Select Position";
 switch (_position) {
 case 0: {
-RDebugUtils.currentLine=8126467;
- //BA.debugLineNum = 8126467;BA.debugLine="R2 = 0";
+RDebugUtils.currentLine=6750211;
+ //BA.debugLineNum = 6750211;BA.debugLine="R2 = 0";
 _r2 = (int) (0);
-RDebugUtils.currentLine=8126468;
- //BA.debugLineNum = 8126468;BA.debugLine="G2 = 0";
+RDebugUtils.currentLine=6750212;
+ //BA.debugLineNum = 6750212;BA.debugLine="G2 = 0";
 _g2 = (int) (0);
-RDebugUtils.currentLine=8126469;
- //BA.debugLineNum = 8126469;BA.debugLine="B2 = 0";
+RDebugUtils.currentLine=6750213;
+ //BA.debugLineNum = 6750213;BA.debugLine="B2 = 0";
 _b2 = (int) (0);
  break; }
 case 1: {
-RDebugUtils.currentLine=8126471;
- //BA.debugLineNum = 8126471;BA.debugLine="R2 = 0";
+RDebugUtils.currentLine=6750215;
+ //BA.debugLineNum = 6750215;BA.debugLine="R2 = 0";
 _r2 = (int) (0);
-RDebugUtils.currentLine=8126472;
- //BA.debugLineNum = 8126472;BA.debugLine="G2 = 0";
+RDebugUtils.currentLine=6750216;
+ //BA.debugLineNum = 6750216;BA.debugLine="G2 = 0";
 _g2 = (int) (0);
-RDebugUtils.currentLine=8126473;
- //BA.debugLineNum = 8126473;BA.debugLine="B2 = 255";
+RDebugUtils.currentLine=6750217;
+ //BA.debugLineNum = 6750217;BA.debugLine="B2 = 255";
 _b2 = (int) (255);
  break; }
 case 2: {
-RDebugUtils.currentLine=8126475;
- //BA.debugLineNum = 8126475;BA.debugLine="R2 = 0";
+RDebugUtils.currentLine=6750219;
+ //BA.debugLineNum = 6750219;BA.debugLine="R2 = 0";
 _r2 = (int) (0);
-RDebugUtils.currentLine=8126476;
- //BA.debugLineNum = 8126476;BA.debugLine="G2 = 255";
+RDebugUtils.currentLine=6750220;
+ //BA.debugLineNum = 6750220;BA.debugLine="G2 = 255";
 _g2 = (int) (255);
-RDebugUtils.currentLine=8126477;
- //BA.debugLineNum = 8126477;BA.debugLine="B2 = 0";
+RDebugUtils.currentLine=6750221;
+ //BA.debugLineNum = 6750221;BA.debugLine="B2 = 0";
 _b2 = (int) (0);
  break; }
 case 3: {
-RDebugUtils.currentLine=8126479;
- //BA.debugLineNum = 8126479;BA.debugLine="R2 = 255";
+RDebugUtils.currentLine=6750223;
+ //BA.debugLineNum = 6750223;BA.debugLine="R2 = 255";
 _r2 = (int) (255);
-RDebugUtils.currentLine=8126480;
- //BA.debugLineNum = 8126480;BA.debugLine="G2 = 0";
+RDebugUtils.currentLine=6750224;
+ //BA.debugLineNum = 6750224;BA.debugLine="G2 = 0";
 _g2 = (int) (0);
-RDebugUtils.currentLine=8126481;
- //BA.debugLineNum = 8126481;BA.debugLine="B2 = 0";
+RDebugUtils.currentLine=6750225;
+ //BA.debugLineNum = 6750225;BA.debugLine="B2 = 0";
 _b2 = (int) (0);
  break; }
 case 4: {
-RDebugUtils.currentLine=8126483;
- //BA.debugLineNum = 8126483;BA.debugLine="R2 = 255";
+RDebugUtils.currentLine=6750227;
+ //BA.debugLineNum = 6750227;BA.debugLine="R2 = 255";
 _r2 = (int) (255);
-RDebugUtils.currentLine=8126484;
- //BA.debugLineNum = 8126484;BA.debugLine="G2 = 255";
+RDebugUtils.currentLine=6750228;
+ //BA.debugLineNum = 6750228;BA.debugLine="G2 = 255";
 _g2 = (int) (255);
-RDebugUtils.currentLine=8126485;
- //BA.debugLineNum = 8126485;BA.debugLine="B2 = 0";
+RDebugUtils.currentLine=6750229;
+ //BA.debugLineNum = 6750229;BA.debugLine="B2 = 0";
 _b2 = (int) (0);
  break; }
 case 5: {
-RDebugUtils.currentLine=8126487;
- //BA.debugLineNum = 8126487;BA.debugLine="R2 = 255";
+RDebugUtils.currentLine=6750231;
+ //BA.debugLineNum = 6750231;BA.debugLine="R2 = 255";
 _r2 = (int) (255);
-RDebugUtils.currentLine=8126488;
- //BA.debugLineNum = 8126488;BA.debugLine="G2 = 255";
+RDebugUtils.currentLine=6750232;
+ //BA.debugLineNum = 6750232;BA.debugLine="G2 = 255";
 _g2 = (int) (255);
-RDebugUtils.currentLine=8126489;
- //BA.debugLineNum = 8126489;BA.debugLine="B2 = 255";
+RDebugUtils.currentLine=6750233;
+ //BA.debugLineNum = 6750233;BA.debugLine="B2 = 255";
 _b2 = (int) (255);
  break; }
 }
 ;
-RDebugUtils.currentLine=8126491;
- //BA.debugLineNum = 8126491;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6750235;
+ //BA.debugLineNum = 6750235;BA.debugLine="End Sub";
 return "";
 }
 public static String  _sizespnr_itemclick(int _position,Object _value) throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "sizespnr_itemclick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "sizespnr_itemclick", new Object[] {_position,_value}));}
-RDebugUtils.currentLine=7995392;
- //BA.debugLineNum = 7995392;BA.debugLine="Private Sub sizeSpnr_ItemClick (Position As Int, V";
-RDebugUtils.currentLine=7995393;
- //BA.debugLineNum = 7995393;BA.debugLine="Select Position";
+RDebugUtils.currentLine=6619136;
+ //BA.debugLineNum = 6619136;BA.debugLine="Private Sub sizeSpnr_ItemClick (Position As Int, V";
+RDebugUtils.currentLine=6619137;
+ //BA.debugLineNum = 6619137;BA.debugLine="Select Position";
 switch (_position) {
 case 0: {
-RDebugUtils.currentLine=7995395;
- //BA.debugLineNum = 7995395;BA.debugLine="Width = 80dip";
+RDebugUtils.currentLine=6619139;
+ //BA.debugLineNum = 6619139;BA.debugLine="Width = 80dip";
 _width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (80));
-RDebugUtils.currentLine=7995396;
- //BA.debugLineNum = 7995396;BA.debugLine="Height = 60dip";
+RDebugUtils.currentLine=6619140;
+ //BA.debugLineNum = 6619140;BA.debugLine="Height = 60dip";
 _height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60));
  break; }
 case 1: {
-RDebugUtils.currentLine=7995398;
- //BA.debugLineNum = 7995398;BA.debugLine="Width = 205dip";
+RDebugUtils.currentLine=6619142;
+ //BA.debugLineNum = 6619142;BA.debugLine="Width = 205dip";
 _width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (205));
-RDebugUtils.currentLine=7995399;
- //BA.debugLineNum = 7995399;BA.debugLine="Height = 60dip";
+RDebugUtils.currentLine=6619143;
+ //BA.debugLineNum = 6619143;BA.debugLine="Height = 60dip";
 _height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (60));
  break; }
 case 2: {
-RDebugUtils.currentLine=7995401;
- //BA.debugLineNum = 7995401;BA.debugLine="Width = 80dip";
+RDebugUtils.currentLine=6619145;
+ //BA.debugLineNum = 6619145;BA.debugLine="Width = 80dip";
 _width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (80));
-RDebugUtils.currentLine=7995402;
- //BA.debugLineNum = 7995402;BA.debugLine="Height = 185dip";
+RDebugUtils.currentLine=6619146;
+ //BA.debugLineNum = 6619146;BA.debugLine="Height = 185dip";
 _height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (185));
  break; }
 case 3: {
-RDebugUtils.currentLine=7995404;
- //BA.debugLineNum = 7995404;BA.debugLine="Width = 205dip";
+RDebugUtils.currentLine=6619148;
+ //BA.debugLineNum = 6619148;BA.debugLine="Width = 205dip";
 _width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (205));
-RDebugUtils.currentLine=7995405;
- //BA.debugLineNum = 7995405;BA.debugLine="Height = 185dip";
+RDebugUtils.currentLine=6619149;
+ //BA.debugLineNum = 6619149;BA.debugLine="Height = 185dip";
 _height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (185));
  break; }
 case 4: {
-RDebugUtils.currentLine=7995407;
- //BA.debugLineNum = 7995407;BA.debugLine="Width = 330dip";
+RDebugUtils.currentLine=6619151;
+ //BA.debugLineNum = 6619151;BA.debugLine="Width = 330dip";
 _width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (330));
-RDebugUtils.currentLine=7995408;
- //BA.debugLineNum = 7995408;BA.debugLine="Height = 185dip";
+RDebugUtils.currentLine=6619152;
+ //BA.debugLineNum = 6619152;BA.debugLine="Height = 185dip";
 _height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (185));
  break; }
 case 5: {
-RDebugUtils.currentLine=7995410;
- //BA.debugLineNum = 7995410;BA.debugLine="Width = 205dip";
+RDebugUtils.currentLine=6619154;
+ //BA.debugLineNum = 6619154;BA.debugLine="Width = 205dip";
 _width = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (205));
-RDebugUtils.currentLine=7995411;
- //BA.debugLineNum = 7995411;BA.debugLine="Height = 310dip";
+RDebugUtils.currentLine=6619155;
+ //BA.debugLineNum = 6619155;BA.debugLine="Height = 310dip";
 _height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (310));
  break; }
 }
 ;
-RDebugUtils.currentLine=7995413;
- //BA.debugLineNum = 7995413;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6619157;
+ //BA.debugLineNum = 6619157;BA.debugLine="End Sub";
 return "";
 }
 public static String  _stickybtn_click() throws Exception{
 RDebugUtils.currentModule="corkactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "stickybtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "stickybtn_click", null));}
-RDebugUtils.currentLine=7798784;
- //BA.debugLineNum = 7798784;BA.debugLine="Private Sub stickyBtn_Click";
-RDebugUtils.currentLine=7798785;
- //BA.debugLineNum = 7798785;BA.debugLine="noteWindow(250dip, 180dip)";
+RDebugUtils.currentLine=6422528;
+ //BA.debugLineNum = 6422528;BA.debugLine="Private Sub stickyBtn_Click";
+RDebugUtils.currentLine=6422529;
+ //BA.debugLineNum = 6422529;BA.debugLine="noteWindow(250dip, 180dip)";
 _notewindow(anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (250)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (180)));
-RDebugUtils.currentLine=7798786;
- //BA.debugLineNum = 7798786;BA.debugLine="notePnl.Visible = True";
+RDebugUtils.currentLine=6422530;
+ //BA.debugLineNum = 6422530;BA.debugLine="notePnl.Visible = True";
 mostCurrent._notepnl.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=7798787;
- //BA.debugLineNum = 7798787;BA.debugLine="stickyBtn.Enabled = False";
+RDebugUtils.currentLine=6422531;
+ //BA.debugLineNum = 6422531;BA.debugLine="stickyBtn.Enabled = False";
 mostCurrent._stickybtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7798788;
- //BA.debugLineNum = 7798788;BA.debugLine="canvaBtn.Enabled = False";
+RDebugUtils.currentLine=6422532;
+ //BA.debugLineNum = 6422532;BA.debugLine="canvaBtn.Enabled = False";
 mostCurrent._canvabtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7798789;
- //BA.debugLineNum = 7798789;BA.debugLine="imgBtn.Enabled = False";
+RDebugUtils.currentLine=6422533;
+ //BA.debugLineNum = 6422533;BA.debugLine="imgBtn.Enabled = False";
 mostCurrent._imgbtn.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=7798790;
- //BA.debugLineNum = 7798790;BA.debugLine="End Sub";
+RDebugUtils.currentLine=6422534;
+ //BA.debugLineNum = 6422534;BA.debugLine="End Sub";
 return "";
 }
 }

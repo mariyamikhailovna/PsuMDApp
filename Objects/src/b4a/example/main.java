@@ -352,7 +352,6 @@ public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
 vis = vis | (mainactivity.mostCurrent != null);
-vis = vis | (navactivity.mostCurrent != null);
 vis = vis | (helpactivity.mostCurrent != null);
 vis = vis | (clockactivity.mostCurrent != null);
 vis = vis | (noteactivity.mostCurrent != null);
@@ -370,6 +369,7 @@ vis = vis | (day_module.mostCurrent != null);
 vis = vis | (deck_all_cards.mostCurrent != null);
 vis = vis | (flashcardactivity.mostCurrent != null);
 vis = vis | (musicactivity.mostCurrent != null);
+vis = vis | (navactivity.mostCurrent != null);
 vis = vis | (schedule_module.mostCurrent != null);
 vis = vis | (subdeck_module.mostCurrent != null);
 vis = vis | (todoactivity.mostCurrent != null);
@@ -403,19 +403,6 @@ public static void killProgram() {
 			}
             else {
                 BA ba = killProgramHelper(mainactivity.mostCurrent == null ? null : mainactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
- {
-            Activity __a = null;
-            if (navactivity.previousOne != null) {
-				__a = navactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(navactivity.mostCurrent == null ? null : navactivity.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -628,6 +615,18 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
+            if (navactivity.previousOne != null) {
+				__a = navactivity.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(navactivity.mostCurrent == null ? null : navactivity.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
             if (schedule_module.previousOne != null) {
 				__a = schedule_module.previousOne.get();
 			}
@@ -638,6 +637,7 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
             if (__a != null)
 				__a.finish();}
 
+BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
  {
             Activity __a = null;
             if (subdeck_module.previousOne != null) {
@@ -688,8 +688,6 @@ public static boolean _format24h = false;
 public static b4a.example3.keyvaluestore _kvs = null;
 public b4a.example.b4xgifview _loadingscreen = null;
 public b4a.example.mainactivity _mainactivity = null;
-public b4a.example.starter _starter = null;
-public b4a.example.navactivity _navactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
@@ -708,10 +706,12 @@ public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
+public b4a.example.navactivity _navactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
+public b4a.example.starter _starter = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -801,8 +801,8 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = -1;
-RDebugUtils.currentLine=10878977;
- //BA.debugLineNum = 10878977;BA.debugLine="Sleep(2000)";
+RDebugUtils.currentLine=262145;
+ //BA.debugLineNum = 262145;BA.debugLine="Sleep(2000)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "startload"),(int) (2000));
 this.state = 1;
 return;
@@ -810,18 +810,18 @@ case 1:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=10878978;
- //BA.debugLineNum = 10878978;BA.debugLine="StartActivity(MainActivity)";
+RDebugUtils.currentLine=262146;
+ //BA.debugLineNum = 262146;BA.debugLine="StartActivity(MainActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._mainactivity.getObject()));
-RDebugUtils.currentLine=10878979;
- //BA.debugLineNum = 10878979;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=262147;
+ //BA.debugLineNum = 262147;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
-RDebugUtils.currentLine=10878980;
- //BA.debugLineNum = 10878980;BA.debugLine="Return True";
+RDebugUtils.currentLine=262148;
+ //BA.debugLineNum = 262148;BA.debugLine="Return True";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
-RDebugUtils.currentLine=10878981;
- //BA.debugLineNum = 10878981;BA.debugLine="End Sub";
+RDebugUtils.currentLine=262149;
+ //BA.debugLineNum = 262149;BA.debugLine="End Sub";
 if (true) break;
 
             }

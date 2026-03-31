@@ -8,7 +8,7 @@ public class musicservice_subs_0 {
 
 public static RemoteObject  _copytracksifneeded() throws Exception{
 try {
-		Debug.PushSubsStack("CopyTracksIfNeeded (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,47);
+		Debug.PushSubsStack("CopyTracksIfNeeded (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,47);
 if (RapidSub.canDelegate("copytracksifneeded")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","copytracksifneeded");}
 int _i = 0;
 RemoteObject _trackname = RemoteObject.createImmutable("");
@@ -58,7 +58,7 @@ finally {
 		}}
 public static RemoteObject  _nextsong() throws Exception{
 try {
-		Debug.PushSubsStack("nextSong (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,104);
+		Debug.PushSubsStack("nextSong (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,104);
 if (RapidSub.canDelegate("nextsong")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","nextsong");}
  BA.debugLineNum = 104;BA.debugLine="Sub nextSong";
 Debug.ShouldStop(128);
@@ -87,7 +87,7 @@ finally {
 		}}
 public static RemoteObject  _pausetoggle() throws Exception{
 try {
-		Debug.PushSubsStack("pauseToggle (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,71);
+		Debug.PushSubsStack("pauseToggle (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,71);
 if (RapidSub.canDelegate("pausetoggle")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","pausetoggle");}
  BA.debugLineNum = 71;BA.debugLine="Sub pauseToggle";
 Debug.ShouldStop(64);
@@ -114,7 +114,7 @@ finally {
 		}}
 public static RemoteObject  _playsong() throws Exception{
 try {
-		Debug.PushSubsStack("playSong (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,84);
+		Debug.PushSubsStack("playSong (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,84);
 if (RapidSub.canDelegate("playsong")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","playsong");}
 RemoteObject _trackname = RemoteObject.createImmutable("");
 RemoteObject _filename = RemoteObject.createImmutable("");
@@ -151,7 +151,7 @@ finally {
 		}}
 public static RemoteObject  _prevsong() throws Exception{
 try {
-		Debug.PushSubsStack("prevSong (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,112);
+		Debug.PushSubsStack("prevSong (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,112);
 if (RapidSub.canDelegate("prevsong")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","prevsong");}
  BA.debugLineNum = 112;BA.debugLine="Sub prevSong";
 Debug.ShouldStop(32768);
@@ -193,7 +193,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _service_create() throws Exception{
 try {
-		Debug.PushSubsStack("Service_Create (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,13);
+		Debug.PushSubsStack("Service_Create (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,13);
 if (RapidSub.canDelegate("service_create")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","service_create");}
  BA.debugLineNum = 13;BA.debugLine="Sub Service_Create";
 Debug.ShouldStop(4096);
@@ -287,7 +287,7 @@ finally {
 		}}
 public static RemoteObject  _service_destroy() throws Exception{
 try {
-		Debug.PushSubsStack("Service_Destroy (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,67);
+		Debug.PushSubsStack("Service_Destroy (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,67);
 if (RapidSub.canDelegate("service_destroy")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","service_destroy");}
  BA.debugLineNum = 67;BA.debugLine="Sub Service_Destroy";
 Debug.ShouldStop(4);
@@ -303,7 +303,7 @@ finally {
 		}}
 public static RemoteObject  _service_start(RemoteObject _startingintent) throws Exception{
 try {
-		Debug.PushSubsStack("Service_Start (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,63);
+		Debug.PushSubsStack("Service_Start (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,63);
 if (RapidSub.canDelegate("service_start")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","service_start", _startingintent);}
 Debug.locals.put("StartingIntent", _startingintent);
  BA.debugLineNum = 63;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
@@ -323,7 +323,7 @@ finally {
 		}}
 public static RemoteObject  _setsong(RemoteObject _index) throws Exception{
 try {
-		Debug.PushSubsStack("setSong (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,79);
+		Debug.PushSubsStack("setSong (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,79);
 if (RapidSub.canDelegate("setsong")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","setsong", _index);}
 Debug.locals.put("index", _index);
  BA.debugLineNum = 79;BA.debugLine="Sub setSong(index As Int)";
@@ -346,7 +346,7 @@ finally {
 		}}
 public static RemoteObject  _songtimer_tick() throws Exception{
 try {
-		Debug.PushSubsStack("songTimer_Tick (musicservice) ","musicservice",10,musicservice.processBA,musicservice.mostCurrent,95);
+		Debug.PushSubsStack("songTimer_Tick (musicservice) ","musicservice",8,musicservice.processBA,musicservice.mostCurrent,95);
 if (RapidSub.canDelegate("songtimer_tick")) { return b4a.example.musicservice.remoteMe.runUserSub(false, "musicservice","songtimer_tick");}
  BA.debugLineNum = 95;BA.debugLine="Sub songTimer_Tick";
 Debug.ShouldStop(1073741824);

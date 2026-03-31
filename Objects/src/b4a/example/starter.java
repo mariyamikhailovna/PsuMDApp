@@ -141,7 +141,6 @@ public static boolean _darkmode = false;
 public static int _themenumber = 0;
 public b4a.example.main _main = null;
 public b4a.example.mainactivity _mainactivity = null;
-public b4a.example.navactivity _navactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
 public b4a.example.clockactivity _clockactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
@@ -160,64 +159,65 @@ public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
+public b4a.example.navactivity _navactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "application_error", false))
 	 {return ((Boolean) Debug.delegate(processBA, "application_error", new Object[] {_error,_stacktrace}));}
-RDebugUtils.currentLine=2818048;
- //BA.debugLineNum = 2818048;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
-RDebugUtils.currentLine=2818049;
- //BA.debugLineNum = 2818049;BA.debugLine="Return True";
+RDebugUtils.currentLine=21626880;
+ //BA.debugLineNum = 21626880;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
+RDebugUtils.currentLine=21626881;
+ //BA.debugLineNum = 21626881;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=2818050;
- //BA.debugLineNum = 2818050;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21626882;
+ //BA.debugLineNum = 21626882;BA.debugLine="End Sub";
 return false;
 }
 public static String  _service_create() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_create", false))
 	 {return ((String) Debug.delegate(processBA, "service_create", null));}
-RDebugUtils.currentLine=2621440;
- //BA.debugLineNum = 2621440;BA.debugLine="Sub Service_Create";
-RDebugUtils.currentLine=2621444;
- //BA.debugLineNum = 2621444;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21430272;
+ //BA.debugLineNum = 21430272;BA.debugLine="Sub Service_Create";
+RDebugUtils.currentLine=21430276;
+ //BA.debugLineNum = 21430276;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_destroy", false))
 	 {return ((String) Debug.delegate(processBA, "service_destroy", null));}
-RDebugUtils.currentLine=2883584;
- //BA.debugLineNum = 2883584;BA.debugLine="Sub Service_Destroy";
-RDebugUtils.currentLine=2883586;
- //BA.debugLineNum = 2883586;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21692416;
+ //BA.debugLineNum = 21692416;BA.debugLine="Sub Service_Destroy";
+RDebugUtils.currentLine=21692418;
+ //BA.debugLineNum = 21692418;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_start", false))
 	 {return ((String) Debug.delegate(processBA, "service_start", new Object[] {_startingintent}));}
-RDebugUtils.currentLine=2686976;
- //BA.debugLineNum = 2686976;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
-RDebugUtils.currentLine=2686977;
- //BA.debugLineNum = 2686977;BA.debugLine="Service.StopAutomaticForeground 'Starter service";
+RDebugUtils.currentLine=21495808;
+ //BA.debugLineNum = 21495808;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+RDebugUtils.currentLine=21495809;
+ //BA.debugLineNum = 21495809;BA.debugLine="Service.StopAutomaticForeground 'Starter service";
 mostCurrent._service.StopAutomaticForeground();
-RDebugUtils.currentLine=2686978;
- //BA.debugLineNum = 2686978;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21495810;
+ //BA.debugLineNum = 21495810;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_taskremoved() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_taskremoved", false))
 	 {return ((String) Debug.delegate(processBA, "service_taskremoved", null));}
-RDebugUtils.currentLine=2752512;
- //BA.debugLineNum = 2752512;BA.debugLine="Sub Service_TaskRemoved";
-RDebugUtils.currentLine=2752514;
- //BA.debugLineNum = 2752514;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21561344;
+ //BA.debugLineNum = 21561344;BA.debugLine="Sub Service_TaskRemoved";
+RDebugUtils.currentLine=21561346;
+ //BA.debugLineNum = 21561346;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -47,8 +47,6 @@ public boolean isSingleton() {
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static b4a.example.main _main = null;
 public static b4a.example.mainactivity _mainactivity = null;
-public static b4a.example.starter _starter = null;
-public static b4a.example.navactivity _navactivity = null;
 public static b4a.example.helpactivity _helpactivity = null;
 public static b4a.example.clockactivity _clockactivity = null;
 public static b4a.example.noteactivity _noteactivity = null;
@@ -67,7 +65,9 @@ public static b4a.example.day_module _day_module = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
 public static b4a.example.flashcardactivity _flashcardactivity = null;
 public static b4a.example.musicactivity _musicactivity = null;
+public static b4a.example.navactivity _navactivity = null;
 public static b4a.example.schedule_module _schedule_module = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
 public static b4a.example.todoactivity _todoactivity = null;
   public Object[] GetGlobals() {
