@@ -33,12 +33,12 @@ public static b4a.example.day_module _day_module = null;
 public static b4a.example.deck_all_cards _deck_all_cards = null;
 public static b4a.example.flashcardactivity _flashcardactivity = null;
 public static b4a.example.musicactivity _musicactivity = null;
+public static b4a.example.musiccodemodule _musiccodemodule = null;
 public static b4a.example.navactivity _navactivity = null;
 public static b4a.example.schedule_module _schedule_module = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.subdeck_module _subdeck_module = null;
 public static b4a.example.todoactivity _todoactivity = null;
-public static b4a.example.musiccodemodule _musiccodemodule = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"ser",_ref.getField(false, "_ser"),"sql1",_ref.getField(false, "_sql1")};
 }

@@ -17,6 +17,16 @@ Sub Process_Globals
 End Sub
 
 Sub Service_Create
+	Dim kvs As KeyValueStore
+	kvs.Initialize(File.DirInternal, "prefData")
+	
+	If kvs.ContainsKey("darkMode") Then
+		darkMode = kvs.Get("darkMode")
+	End If
+	
+	If kvs.ContainsKey("themeNumber") Then
+		themeNumber = kvs.Get("themeNumber")
+	End If
 	'This is the program entry point.
 	'This is a good place to load resources that are not specific to a single activity.
 

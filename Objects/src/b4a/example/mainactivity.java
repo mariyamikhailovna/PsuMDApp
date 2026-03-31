@@ -348,6 +348,7 @@ public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public static anywheresoftware.b4a.objects.Timer _timerclock = null;
 public static b4a.example3.keyvaluestore _kvs = null;
+public static b4a.example3.keyvaluestore _kvspref = null;
 public static boolean _format24h = false;
 public anywheresoftware.b4a.objects.B4XViewWrapper _reglayout = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper _darkmodelayout = null;
@@ -381,12 +382,12 @@ public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
+public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.navactivity _navactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.starter _starter = null;
 public b4a.example.subdeck_module _subdeck_module = null;
 public b4a.example.todoactivity _todoactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
 public static void  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="mainactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
@@ -435,10 +436,13 @@ RDebugUtils.currentLine=458755;
  //BA.debugLineNum = 458755;BA.debugLine="kvs.Initialize(File.DirInternal, \"notes_data\")";
 parent._kvs._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"notes_data");
 RDebugUtils.currentLine=458756;
- //BA.debugLineNum = 458756;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
-parent._timerclock.Initialize(processBA,"timerClock",(long) (1000));
+ //BA.debugLineNum = 458756;BA.debugLine="kvsPref.Initialize(File.DirInternal, \"prefData\")";
+parent._kvspref._initialize(processBA,anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"prefData");
 RDebugUtils.currentLine=458757;
- //BA.debugLineNum = 458757;BA.debugLine="timerClock.Enabled = True";
+ //BA.debugLineNum = 458757;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
+parent._timerclock.Initialize(processBA,"timerClock",(long) (1000));
+RDebugUtils.currentLine=458758;
+ //BA.debugLineNum = 458758;BA.debugLine="timerClock.Enabled = True";
 parent._timerclock.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -446,29 +450,26 @@ case 4:
 //C
 this.state = 5;
 ;
-RDebugUtils.currentLine=458760;
- //BA.debugLineNum = 458760;BA.debugLine="hsv.Panel.Width = size";
-parent.mostCurrent._hsv.getPanel().setWidth(parent._size);
 RDebugUtils.currentLine=458761;
- //BA.debugLineNum = 458761;BA.debugLine="hsv.Panel.Height = size";
+ //BA.debugLineNum = 458761;BA.debugLine="hsv.Panel.Width = size";
+parent.mostCurrent._hsv.getPanel().setWidth(parent._size);
+RDebugUtils.currentLine=458762;
+ //BA.debugLineNum = 458762;BA.debugLine="hsv.Panel.Height = size";
 parent.mostCurrent._hsv.getPanel().setHeight(parent._size);
-RDebugUtils.currentLine=458763;
- //BA.debugLineNum = 458763;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
-parent.mostCurrent._reglayout = parent._xui.CreatePanel(processBA,"");
 RDebugUtils.currentLine=458764;
- //BA.debugLineNum = 458764;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
+ //BA.debugLineNum = 458764;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
+parent.mostCurrent._reglayout = parent._xui.CreatePanel(processBA,"");
+RDebugUtils.currentLine=458765;
+ //BA.debugLineNum = 458765;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
 parent.mostCurrent._darkmodelayout = parent._xui.CreatePanel(processBA,"");
-RDebugUtils.currentLine=458766;
- //BA.debugLineNum = 458766;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
-parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._reglayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
 RDebugUtils.currentLine=458767;
- //BA.debugLineNum = 458767;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
+ //BA.debugLineNum = 458767;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
+parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._reglayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
+RDebugUtils.currentLine=458768;
+ //BA.debugLineNum = 458768;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
 parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._darkmodelayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
-RDebugUtils.currentLine=458769;
- //BA.debugLineNum = 458769;BA.debugLine="regLayout.BringToFront";
-parent.mostCurrent._reglayout.BringToFront();
-RDebugUtils.currentLine=458771;
- //BA.debugLineNum = 458771;BA.debugLine="Select Starter.themeNumber";
+RDebugUtils.currentLine=458770;
+ //BA.debugLineNum = 458770;BA.debugLine="Select Starter.themeNumber";
 if (true) break;
 
 case 5:
@@ -493,75 +494,109 @@ if (true) break;
 case 7:
 //C
 this.state = 12;
-RDebugUtils.currentLine=458773;
- //BA.debugLineNum = 458773;BA.debugLine="regLayout.LoadLayout(\"Layout\")";
+RDebugUtils.currentLine=458772;
+ //BA.debugLineNum = 458772;BA.debugLine="regLayout.LoadLayout(\"Layout\")";
 parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=458774;
- //BA.debugLineNum = 458774;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\")";
+RDebugUtils.currentLine=458773;
+ //BA.debugLineNum = 458773;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\")";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
-RDebugUtils.currentLine=458775;
- //BA.debugLineNum = 458775;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer";
+RDebugUtils.currentLine=458774;
+ //BA.debugLineNum = 458774;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer";
 parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
-RDebugUtils.currentLine=458776;
- //BA.debugLineNum = 458776;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"darkbtncom";
+RDebugUtils.currentLine=458775;
+ //BA.debugLineNum = 458775;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"darkbtncom";
 parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"darkbtncomputer.GIF");
  if (true) break;
 
 case 9:
 //C
 this.state = 12;
-RDebugUtils.currentLine=458778;
- //BA.debugLineNum = 458778;BA.debugLine="regLayout.LoadLayout(\"Layout3\")";
+RDebugUtils.currentLine=458777;
+ //BA.debugLineNum = 458777;BA.debugLine="regLayout.LoadLayout(\"Layout3\")";
 parent.mostCurrent._reglayout.LoadLayout("Layout3",mostCurrent.activityBA);
-RDebugUtils.currentLine=458779;
- //BA.debugLineNum = 458779;BA.debugLine="darkModeLayout.LoadLayout(\"Layout4\")";
+RDebugUtils.currentLine=458778;
+ //BA.debugLineNum = 458778;BA.debugLine="darkModeLayout.LoadLayout(\"Layout4\")";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout4",mostCurrent.activityBA);
-RDebugUtils.currentLine=458780;
- //BA.debugLineNum = 458780;BA.debugLine="computerGif.SetGif(File.DirAssets, \"mikucomp2.G";
+RDebugUtils.currentLine=458779;
+ //BA.debugLineNum = 458779;BA.debugLine="computerGif.SetGif(File.DirAssets, \"mikucomp2.G";
 parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"mikucomp2.GIF");
-RDebugUtils.currentLine=458781;
- //BA.debugLineNum = 458781;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp2.GIF";
+RDebugUtils.currentLine=458780;
+ //BA.debugLineNum = 458780;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp2.GIF";
 parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DComp2.GIF");
  if (true) break;
 
 case 11:
 //C
 this.state = 12;
-RDebugUtils.currentLine=458783;
- //BA.debugLineNum = 458783;BA.debugLine="regLayout.LoadLayout(\"Layout5\")";
+RDebugUtils.currentLine=458782;
+ //BA.debugLineNum = 458782;BA.debugLine="regLayout.LoadLayout(\"Layout5\")";
 parent.mostCurrent._reglayout.LoadLayout("Layout5",mostCurrent.activityBA);
-RDebugUtils.currentLine=458784;
- //BA.debugLineNum = 458784;BA.debugLine="darkModeLayout.LoadLayout(\"Layout6\")";
+RDebugUtils.currentLine=458783;
+ //BA.debugLineNum = 458783;BA.debugLine="darkModeLayout.LoadLayout(\"Layout6\")";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout6",mostCurrent.activityBA);
-RDebugUtils.currentLine=458785;
- //BA.debugLineNum = 458785;BA.debugLine="computerGif.SetGif(File.DirAssets, \"Comp3.GIF\")";
+RDebugUtils.currentLine=458784;
+ //BA.debugLineNum = 458784;BA.debugLine="computerGif.SetGif(File.DirAssets, \"Comp3.GIF\")";
 parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Comp3.GIF");
-RDebugUtils.currentLine=458786;
- //BA.debugLineNum = 458786;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp3.GIF";
+RDebugUtils.currentLine=458785;
+ //BA.debugLineNum = 458785;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp3.GIF";
 parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DComp3.GIF");
  if (true) break;
+;
+RDebugUtils.currentLine=458788;
+ //BA.debugLineNum = 458788;BA.debugLine="If Starter.darkMode Then";
 
 case 12:
+//if
+this.state = 17;
+if (parent.mostCurrent._starter._darkmode /*boolean*/ ) { 
+this.state = 14;
+}else {
+this.state = 16;
+}if (true) break;
+
+case 14:
 //C
-this.state = -1;
-;
+this.state = 17;
 RDebugUtils.currentLine=458789;
- //BA.debugLineNum = 458789;BA.debugLine="darkModeLayout.Visible = False";
-parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ //BA.debugLineNum = 458789;BA.debugLine="darkModeLayout.Visible = True";
+parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=458790;
+ //BA.debugLineNum = 458790;BA.debugLine="darkModeLayout.BringToFront";
+parent.mostCurrent._darkmodelayout.BringToFront();
 RDebugUtils.currentLine=458791;
- //BA.debugLineNum = 458791;BA.debugLine="Sleep(50)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "activity_create"),(int) (50));
-this.state = 13;
-return;
-case 13:
+ //BA.debugLineNum = 458791;BA.debugLine="regLayout.Visible = False";
+parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ if (true) break;
+
+case 16:
+//C
+this.state = 17;
+RDebugUtils.currentLine=458793;
+ //BA.debugLineNum = 458793;BA.debugLine="darkModeLayout.Visible = False";
+parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=458794;
+ //BA.debugLineNum = 458794;BA.debugLine="regLayout.BringToFront";
+parent.mostCurrent._reglayout.BringToFront();
+ if (true) break;
+
+case 17:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=458792;
- //BA.debugLineNum = 458792;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
+RDebugUtils.currentLine=458797;
+ //BA.debugLineNum = 458797;BA.debugLine="Sleep(50)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "activity_create"),(int) (50));
+this.state = 18;
+return;
+case 18:
+//C
+this.state = -1;
+;
+RDebugUtils.currentLine=458798;
+ //BA.debugLineNum = 458798;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
 parent.mostCurrent._hsv.setScrollPosition((int) (anywheresoftware.b4a.keywords.Common.Max(0,(parent.mostCurrent._hsv.getPanel().getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA))/(double)2)));
-RDebugUtils.currentLine=458794;
- //BA.debugLineNum = 458794;BA.debugLine="End Sub";
+RDebugUtils.currentLine=458800;
+ //BA.debugLineNum = 458800;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1064,22 +1099,25 @@ RDebugUtils.currentLine=720897;
  //BA.debugLineNum = 720897;BA.debugLine="Starter.darkMode = False";
 parent.mostCurrent._starter._darkmode /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
 RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="regLayout.Visible = True";
-parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 720898;BA.debugLine="kvsPref.Put(\"darkMode\", False)";
+parent._kvspref._put("darkMode",(Object)(anywheresoftware.b4a.keywords.Common.False));
 RDebugUtils.currentLine=720899;
- //BA.debugLineNum = 720899;BA.debugLine="regLayout.BringToFront";
-parent.mostCurrent._reglayout.BringToFront();
+ //BA.debugLineNum = 720899;BA.debugLine="regLayout.Visible = True";
+parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=720900;
- //BA.debugLineNum = 720900;BA.debugLine="regLayout.Alpha = 0";
-parent.mostCurrent._reglayout.setAlpha((float) (0));
+ //BA.debugLineNum = 720900;BA.debugLine="regLayout.BringToFront";
+parent.mostCurrent._reglayout.BringToFront();
 RDebugUtils.currentLine=720901;
- //BA.debugLineNum = 720901;BA.debugLine="regLayout.SetAlphaAnimated(250, 1)";
-parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (1));
+ //BA.debugLineNum = 720901;BA.debugLine="regLayout.Alpha = 0";
+parent.mostCurrent._reglayout.setAlpha((float) (0));
 RDebugUtils.currentLine=720902;
- //BA.debugLineNum = 720902;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 0)";
-parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (0));
+ //BA.debugLineNum = 720902;BA.debugLine="regLayout.SetAlphaAnimated(250, 1)";
+parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (1));
 RDebugUtils.currentLine=720903;
- //BA.debugLineNum = 720903;BA.debugLine="Sleep(250)";
+ //BA.debugLineNum = 720903;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 0)";
+parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (0));
+RDebugUtils.currentLine=720904;
+ //BA.debugLineNum = 720904;BA.debugLine="Sleep(250)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "dlamp_click"),(int) (250));
 this.state = 1;
 return;
@@ -1087,11 +1125,11 @@ case 1:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=720904;
- //BA.debugLineNum = 720904;BA.debugLine="darkModeLayout.Visible = False";
-parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=720905;
- //BA.debugLineNum = 720905;BA.debugLine="End Sub";
+ //BA.debugLineNum = 720905;BA.debugLine="darkModeLayout.Visible = False";
+parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=720906;
+ //BA.debugLineNum = 720906;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -1182,22 +1220,25 @@ RDebugUtils.currentLine=655361;
  //BA.debugLineNum = 655361;BA.debugLine="Starter.darkMode = True";
 parent.mostCurrent._starter._darkmode /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
 RDebugUtils.currentLine=655362;
- //BA.debugLineNum = 655362;BA.debugLine="darkModeLayout.Visible = True";
-parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 655362;BA.debugLine="kvsPref.Put(\"darkMode\", True)";
+parent._kvspref._put("darkMode",(Object)(anywheresoftware.b4a.keywords.Common.True));
 RDebugUtils.currentLine=655363;
- //BA.debugLineNum = 655363;BA.debugLine="darkModeLayout.BringToFront";
-parent.mostCurrent._darkmodelayout.BringToFront();
+ //BA.debugLineNum = 655363;BA.debugLine="darkModeLayout.Visible = True";
+parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=655364;
- //BA.debugLineNum = 655364;BA.debugLine="darkModeLayout.Alpha = 0";
-parent.mostCurrent._darkmodelayout.setAlpha((float) (0));
+ //BA.debugLineNum = 655364;BA.debugLine="darkModeLayout.BringToFront";
+parent.mostCurrent._darkmodelayout.BringToFront();
 RDebugUtils.currentLine=655365;
- //BA.debugLineNum = 655365;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 1)";
-parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (1));
+ //BA.debugLineNum = 655365;BA.debugLine="darkModeLayout.Alpha = 0";
+parent.mostCurrent._darkmodelayout.setAlpha((float) (0));
 RDebugUtils.currentLine=655366;
- //BA.debugLineNum = 655366;BA.debugLine="regLayout.SetAlphaAnimated(250, 0)";
-parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (0));
+ //BA.debugLineNum = 655366;BA.debugLine="darkModeLayout.SetAlphaAnimated(250, 1)";
+parent.mostCurrent._darkmodelayout.SetAlphaAnimated((int) (250),(float) (1));
 RDebugUtils.currentLine=655367;
- //BA.debugLineNum = 655367;BA.debugLine="Sleep(250)";
+ //BA.debugLineNum = 655367;BA.debugLine="regLayout.SetAlphaAnimated(250, 0)";
+parent.mostCurrent._reglayout.SetAlphaAnimated((int) (250),(float) (0));
+RDebugUtils.currentLine=655368;
+ //BA.debugLineNum = 655368;BA.debugLine="Sleep(250)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "lamp_click"),(int) (250));
 this.state = 1;
 return;
@@ -1205,11 +1246,11 @@ case 1:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=655368;
- //BA.debugLineNum = 655368;BA.debugLine="regLayout.Visible = False";
-parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=655369;
- //BA.debugLineNum = 655369;BA.debugLine="End Sub";
+ //BA.debugLineNum = 655369;BA.debugLine="regLayout.Visible = False";
+parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=655370;
+ //BA.debugLineNum = 655370;BA.debugLine="End Sub";
 if (true) break;
 
             }

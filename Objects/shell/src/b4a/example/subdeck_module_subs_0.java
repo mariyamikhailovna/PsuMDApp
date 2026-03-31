@@ -8,7 +8,7 @@ public class subdeck_module_subs_0 {
 
 public static RemoteObject  _activerecall_click() throws Exception{
 try {
-		Debug.PushSubsStack("activerecall_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,153);
+		Debug.PushSubsStack("activerecall_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,153);
 if (RapidSub.canDelegate("activerecall_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","activerecall_click");}
 RemoteObject _chosendeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _deckname = RemoteObject.createImmutable("");
@@ -60,7 +60,7 @@ finally {
 		}}
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,36);
+		Debug.PushSubsStack("Activity_Create (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,36);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","activity_create", _firsttime);}
 RemoteObject _radius = RemoteObject.createImmutable(0);
 RemoteObject _cd = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.ColorDrawable");
@@ -111,7 +111,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,81);
+		Debug.PushSubsStack("Activity_Pause (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,81);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 81;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -128,7 +128,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,73);
+		Debug.PushSubsStack("Activity_Resume (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,73);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","activity_resume");}
  BA.debugLineNum = 73;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(256);
@@ -157,7 +157,7 @@ finally {
 		}}
 public static RemoteObject  _addbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("Addbtn_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,86);
+		Debug.PushSubsStack("Addbtn_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,86);
 if (RapidSub.canDelegate("addbtn_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","addbtn_click");}
  BA.debugLineNum = 86;BA.debugLine="Private Sub Addbtn_Click";
 Debug.ShouldStop(2097152);
@@ -184,7 +184,7 @@ finally {
 		}}
 public static RemoteObject  _addcard_click() throws Exception{
 try {
-		Debug.PushSubsStack("addcard_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,96);
+		Debug.PushSubsStack("addcard_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,96);
 if (RapidSub.canDelegate("addcard_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","addcard_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
  BA.debugLineNum = 96;BA.debugLine="Private Sub addcard_Click";
@@ -218,7 +218,7 @@ finally {
 		}}
 public static RemoteObject  _addsub_click() throws Exception{
 try {
-		Debug.PushSubsStack("addsub_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,106);
+		Debug.PushSubsStack("addsub_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,106);
 if (RapidSub.canDelegate("addsub_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","addsub_click");}
  BA.debugLineNum = 106;BA.debugLine="Private Sub addsub_Click";
 Debug.ShouldStop(512);
@@ -237,7 +237,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backbtn_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,190);
+		Debug.PushSubsStack("backbtn_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,190);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","backbtn_click");}
  BA.debugLineNum = 190;BA.debugLine="Private Sub backbtn_Click";
 Debug.ShouldStop(536870912);
@@ -256,7 +256,7 @@ finally {
 		}}
 public static RemoteObject  _cancel_click() throws Exception{
 try {
-		Debug.PushSubsStack("cancel_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,111);
+		Debug.PushSubsStack("cancel_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,111);
 if (RapidSub.canDelegate("cancel_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","cancel_click");}
  BA.debugLineNum = 111;BA.debugLine="Private Sub cancel_Click";
 Debug.ShouldStop(16384);
@@ -278,7 +278,7 @@ finally {
 		}}
 public static RemoteObject  _cancelalter_click() throws Exception{
 try {
-		Debug.PushSubsStack("cancelalter_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,204);
+		Debug.PushSubsStack("cancelalter_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,204);
 if (RapidSub.canDelegate("cancelalter_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","cancelalter_click");}
  BA.debugLineNum = 204;BA.debugLine="Private Sub cancelalter_Click";
 Debug.ShouldStop(2048);
@@ -297,7 +297,7 @@ finally {
 		}}
 public static RemoteObject  _cancelconfirmation_click() throws Exception{
 try {
-		Debug.PushSubsStack("cancelconfirmation_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,178);
+		Debug.PushSubsStack("cancelconfirmation_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,178);
 if (RapidSub.canDelegate("cancelconfirmation_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","cancelconfirmation_click");}
  BA.debugLineNum = 178;BA.debugLine="Private Sub cancelconfirmation_Click";
 Debug.ShouldStop(131072);
@@ -316,7 +316,7 @@ finally {
 		}}
 public static RemoteObject  _canceldelete_click() throws Exception{
 try {
-		Debug.PushSubsStack("canceldelete_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,252);
+		Debug.PushSubsStack("canceldelete_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,252);
 if (RapidSub.canDelegate("canceldelete_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","canceldelete_click");}
  BA.debugLineNum = 252;BA.debugLine="Private Sub canceldelete_Click";
 Debug.ShouldStop(134217728);
@@ -335,7 +335,7 @@ finally {
 		}}
 public static RemoteObject  _cancelrename_click() throws Exception{
 try {
-		Debug.PushSubsStack("cancelrename_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,213);
+		Debug.PushSubsStack("cancelrename_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,213);
 if (RapidSub.canDelegate("cancelrename_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","cancelrename_click");}
  BA.debugLineNum = 213;BA.debugLine="Private Sub cancelrename_Click";
 Debug.ShouldStop(1048576);
@@ -357,7 +357,7 @@ finally {
 		}}
 public static RemoteObject  _confirmdelete_click() throws Exception{
 try {
-		Debug.PushSubsStack("confirmdelete_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,244);
+		Debug.PushSubsStack("confirmdelete_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,244);
 if (RapidSub.canDelegate("confirmdelete_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","confirmdelete_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
  BA.debugLineNum = 244;BA.debugLine="Private Sub confirmdelete_Click";
@@ -390,7 +390,7 @@ finally {
 		}}
 public static RemoteObject  _confirmrename_click() throws Exception{
 try {
-		Debug.PushSubsStack("confirmrename_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,218);
+		Debug.PushSubsStack("confirmrename_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,218);
 if (RapidSub.canDelegate("confirmrename_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","confirmrename_click");}
 RemoteObject _getsubdeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
@@ -473,7 +473,7 @@ finally {
 		}}
 public static RemoteObject  _create_click() throws Exception{
 try {
-		Debug.PushSubsStack("create_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,117);
+		Debug.PushSubsStack("create_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,117);
 if (RapidSub.canDelegate("create_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","create_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _flashcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -548,7 +548,7 @@ finally {
 		}}
 public static RemoteObject  _deletesubdeck_click() throws Exception{
 try {
-		Debug.PushSubsStack("deletesubdeck_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,194);
+		Debug.PushSubsStack("deletesubdeck_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,194);
 if (RapidSub.canDelegate("deletesubdeck_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","deletesubdeck_click");}
  BA.debugLineNum = 194;BA.debugLine="Private Sub deletesubdeck_Click";
 Debug.ShouldStop(2);
@@ -606,7 +606,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _goback_click() throws Exception{
 try {
-		Debug.PushSubsStack("goback_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,148);
+		Debug.PushSubsStack("goback_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,148);
 if (RapidSub.canDelegate("goback_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","goback_click");}
  BA.debugLineNum = 148;BA.debugLine="Private Sub goback_Click";
 Debug.ShouldStop(524288);
@@ -625,7 +625,7 @@ finally {
 		}}
 public static RemoteObject  _lvsubdecks_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("LVSubdecks_ItemClick (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,183);
+		Debug.PushSubsStack("LVSubdecks_ItemClick (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,183);
 if (RapidSub.canDelegate("lvsubdecks_itemclick")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","lvsubdecks_itemclick", _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
@@ -649,7 +649,7 @@ finally {
 		}}
 public static RemoteObject  _lvsubdecks_itemlongclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("LVSubdecks_ItemLongClick (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,208);
+		Debug.PushSubsStack("LVSubdecks_ItemLongClick (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,208);
 if (RapidSub.canDelegate("lvsubdecks_itemlongclick")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","lvsubdecks_itemlongclick", _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
@@ -680,7 +680,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _refresh() throws Exception{
 try {
-		Debug.PushSubsStack("Refresh (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,62);
+		Debug.PushSubsStack("Refresh (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,62);
 if (RapidSub.canDelegate("refresh")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","refresh");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _deckname = RemoteObject.createImmutable("");
@@ -721,7 +721,7 @@ finally {
 		}}
 public static RemoteObject  _renamesubdeck_click() throws Exception{
 try {
-		Debug.PushSubsStack("renamesubdeck_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,199);
+		Debug.PushSubsStack("renamesubdeck_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,199);
 if (RapidSub.canDelegate("renamesubdeck_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","renamesubdeck_click");}
  BA.debugLineNum = 199;BA.debugLine="Private Sub renamesubdeck_Click";
 Debug.ShouldStop(64);
@@ -743,7 +743,7 @@ finally {
 		}}
 public static RemoteObject  _savedecks() throws Exception{
 try {
-		Debug.PushSubsStack("SaveDecks (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,58);
+		Debug.PushSubsStack("SaveDecks (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,58);
 if (RapidSub.canDelegate("savedecks")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","savedecks");}
  BA.debugLineNum = 58;BA.debugLine="Sub SaveDecks";
 Debug.ShouldStop(33554432);
@@ -762,7 +762,7 @@ finally {
 		}}
 public static RemoteObject  _startarbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("startArbtn_Click (subdeck_module) ","subdeck_module",23,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,169);
+		Debug.PushSubsStack("startArbtn_Click (subdeck_module) ","subdeck_module",24,subdeck_module.mostCurrent.activityBA,subdeck_module.mostCurrent,169);
 if (RapidSub.canDelegate("startarbtn_click")) { return b4a.example.subdeck_module.remoteMe.runUserSub(false, "subdeck_module","startarbtn_click");}
  BA.debugLineNum = 169;BA.debugLine="Private Sub startArbtn_Click";
 Debug.ShouldStop(256);

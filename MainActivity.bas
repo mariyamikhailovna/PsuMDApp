@@ -13,6 +13,7 @@ Sub Process_Globals
 	Dim xui As XUI
 	Private timerClock As Timer
 	Public kvs As KeyValueStore
+	Public kvsPref As KeyValueStore
 	Public format24h As Boolean = False
 End Sub
 
@@ -24,7 +25,6 @@ Sub Globals
 	Private dcomputerGif As B4XGifView
 	Private clockBtn As Button
 	Private clockLightBtn As Button
-	Public kvs As KeyValueStore
 	Private infoPnl As B4XView
 	Private infoTitleLbl As Label
 	Private infoDescLbl As Label
@@ -36,6 +36,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	Activity.LoadLayout("Layouthsv")
 	If FirstTime Then
 		kvs.Initialize(File.DirInternal, "notes_data")
+		kvsPref.Initialize(File.DirInternal, "prefData")
 		timerClock.Initialize("timerClock", 1000)
 		timerClock.Enabled = True
 	End If
@@ -48,8 +49,6 @@ Sub Activity_Create(FirstTime As Boolean)
 
 	hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Width, hsv.Panel.Height)
 	hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel.Width, hsv.Panel.Height)
-	
-	regLayout.BringToFront
 	
 	Select Starter.themeNumber
 		Case 0
@@ -69,7 +68,14 @@ Sub Activity_Create(FirstTime As Boolean)
 			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
 	End Select
 	
-	darkModeLayout.Visible = False
+	If Starter.darkMode Then
+		darkModeLayout.Visible = True
+		darkModeLayout.BringToFront
+		regLayout.Visible = False
+	Else
+		darkModeLayout.Visible = False
+		regLayout.BringToFront
+	End If
 	
 	Sleep(50)
 	hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 100%x) / 2)
@@ -112,6 +118,7 @@ End Sub
 
 Private Sub lamp_Click
 	Starter.darkMode = True
+	kvsPref.Put("darkMode", True)
 	darkModeLayout.Visible = True
 	darkModeLayout.BringToFront
 	darkModeLayout.Alpha = 0
@@ -123,6 +130,7 @@ End Sub
 
 Private Sub dlamp_Click
 	Starter.darkMode = False
+	kvsPref.Put("darkMode", False)
 	regLayout.Visible = True
 	regLayout.BringToFront
 	regLayout.Alpha = 0

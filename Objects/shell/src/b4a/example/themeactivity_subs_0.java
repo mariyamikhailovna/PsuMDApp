@@ -98,8 +98,11 @@ Debug.ShouldStop(1048576);
 themeactivity.mostCurrent._starter._themenumber /*RemoteObject*/  = BA.numberCast(int.class, 2);
  }}}
 ;
- BA.debugLineNum = 87;BA.debugLine="End Sub";
+ BA.debugLineNum = 87;BA.debugLine="MainActivity.kvsPref.Put(\"themeNumber\", Starter.t";
 Debug.ShouldStop(4194304);
+themeactivity.mostCurrent._mainactivity._kvspref /*RemoteObject*/ .runVoidMethod ("_put",(Object)(BA.ObjectToString("themeNumber")),(Object)((themeactivity.mostCurrent._starter._themenumber /*RemoteObject*/ )));
+ BA.debugLineNum = 88;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

@@ -58,139 +58,139 @@ b4xgifview,setgif2,0,0,55,71
 
 
 ,setbitmap,,resizebasedonimage
-mainactivity,activity_create,1,0,29,71
-,hsv,,kvs,,timerclock,,size,,reglayout,,xui,,darkmodelayout,starter,themenumber,,clocklightbtn,,computergif,,clockbtn,,dcomputergif
+mainactivity,activity_create,1,0,29,77
+,hsv,,kvs,,kvspref,,timerclock,,size,,reglayout,,xui,,darkmodelayout,starter,themenumber,,clocklightbtn,,computergif,,clockbtn,,dcomputergif,starter,darkmode
 ,hsv,,reglayout,,darkmodelayout,,clocklightbtn,,computergif,,clockbtn,,dcomputergif
 b4xgifview,setgif,b4xgifview,setgif2,b4xgifview,setbitmap,b4xgifview,resizebasedonimage
-mainactivity,activity_pause,0,0,103,105
+mainactivity,activity_pause,0,0,109,111
 
 
 
-mainactivity,activity_resume,1,0,73,101
+mainactivity,activity_resume,1,0,79,107
 ,format24h,,reglayout,,darkmodelayout,starter,themenumber,,clocklightbtn,,computergif,,clockbtn,,dcomputergif
 ,clocklightbtn,,computergif,,clockbtn,,dcomputergif
 b4xgifview,setgif,b4xgifview,setgif2,b4xgifview,setbitmap,b4xgifview,resizebasedonimage
-mainactivity,bookie_click,0,0,233,235
+mainactivity,bookie_click,0,0,241,243
 
 
 
-mainactivity,bookie_longclick,0,0,294,302
+mainactivity,bookie_longclick,0,0,302,310
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,showinfopopup,0,0,135,165
+mainactivity,showinfopopup,0,0,143,173
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopage
-mainactivity,showinfopage,0,0,167,203
+mainactivity,showinfopage,0,0,175,211
 ,infopage,,infotitlelbl,,infodesclbl
 ,infopage
 
-mainactivity,calendar_click,0,0,237,239
+mainactivity,calendar_click,0,0,245,247
 
 
 
-mainactivity,calendar_longclick,0,0,254,262
+mainactivity,calendar_longclick,0,0,262,270
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,clockbtn_click,0,0,205,207
+mainactivity,clockbtn_click,0,0,213,215
 
 
 
-mainactivity,clockbtn_longclick,0,0,264,272
+mainactivity,clockbtn_longclick,0,0,272,280
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,clocklightbtn_click,0,0,209,211
+mainactivity,clocklightbtn_click,0,0,217,219
 
 
 
-mainactivity,clocklightbtn_longclick,0,0,274,282
+mainactivity,clocklightbtn_longclick,0,0,282,290
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,corkie_click,0,0,245,247
+mainactivity,corkie_click,0,0,253,255
 
 
 
-mainactivity,corkie_longclick,0,0,284,292
+mainactivity,corkie_longclick,0,0,292,300
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,dlamp_click,0,0,118,127
-starter,darkmode,,reglayout,,darkmodelayout
+mainactivity,dlamp_click,0,0,125,135
+starter,darkmode,,kvspref,,reglayout,,darkmodelayout
 starter,darkmode
 
-mainactivity,dlamp_longclick,0,0,354,362
+mainactivity,dlamp_longclick,0,0,362,370
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,globals,0,1,13,27
+mainactivity,globals,0,1,14,27
 ,size,,infopage
 ,size,,infopage
 
-mainactivity,helpbtn_click,0,0,217,219
+mainactivity,helpbtn_click,0,0,225,227
 
 
 
-mainactivity,infopnlclose_click,0,0,221,223
+mainactivity,infopnlclose_click,0,0,229,231
 ,infopnl
 
 
-mainactivity,lamp_click,0,0,107,116
-starter,darkmode,,darkmodelayout,,reglayout
+mainactivity,lamp_click,0,0,113,123
+starter,darkmode,,kvspref,,darkmodelayout,,reglayout
 starter,darkmode
 
-mainactivity,lamp_longclick,0,0,344,352
+mainactivity,lamp_longclick,0,0,352,360
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,mp_click,0,0,229,231
+mainactivity,mp_click,0,0,237,239
 
 
 
-mainactivity,mp_longclick,0,0,304,312
+mainactivity,mp_longclick,0,0,312,320
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,navbtn_click,0,0,213,215
+mainactivity,navbtn_click,0,0,221,223
 
 
 
-mainactivity,navbtn_longclick,0,0,364,372
+mainactivity,navbtn_longclick,0,0,372,380
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,notebook_click,0,0,241,243
+mainactivity,notebook_click,0,0,249,251
 
 
 
-mainactivity,notebook_longclick,0,0,314,322
+mainactivity,notebook_longclick,0,0,322,330
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,plant_click,0,0,249,251
+mainactivity,plant_click,0,0,257,259
 
 
 
-mainactivity,plant_longclick,0,0,334,342
+mainactivity,plant_longclick,0,0,342,350
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,process_globals,0,1,6,11
+mainactivity,process_globals,0,1,6,12
 ,format24h
 ,format24h
 
-mainactivity,timerclock_tick,0,0,129,132
+mainactivity,timerclock_tick,0,0,137,140
 ,clockbtn,,clocklightbtn
 
 
-mainactivity,todolistbtn_click,0,0,225,227
+mainactivity,todolistbtn_click,0,0,233,235
 
 
 
-mainactivity,todolistbtn_longclick,0,0,324,332
+mainactivity,todolistbtn_longclick,0,0,332,340
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
@@ -482,8 +482,8 @@ themeactivity,activity_resume,0,0,33,35
 
 
 
-themeactivity,applybtn_click,0,0,79,87
-,themepage,starter,themenumber
+themeactivity,applybtn_click,0,0,79,88
+,themepage,starter,themenumber,mainactivity,kvspref
 starter,themenumber
 
 themeactivity,backbtn_click,0,0,69,73
@@ -1230,6 +1230,10 @@ musicactivity,uitimer_tick,0,0,59,77
 musicservice,mediaplayer,musicservice,musicplaylist,musicservice,currentsong,,seekbar1,,songruntime,,songtitle,,pausebtn
 
 ,formatsongdur
+musiccodemodule,process_globals,0,1,3,7
+
+
+
 navactivity,activity_create,1,0,18,26
 starter,darkmode
 
@@ -1342,7 +1346,7 @@ schedule_module,sched_btn_click,0,0,194,196
 ,menupanel
 
 
-starter,application_error,0,0,28,30
+starter,application_error,0,0,38,40
 
 
 
@@ -1350,19 +1354,19 @@ starter,process_globals,0,1,6,11
 ,darkmode,,themenumber
 ,darkmode,,themenumber
 
-starter,service_create,0,0,13,17
+starter,service_create,0,0,13,27
+,darkmode,,themenumber
+,darkmode,,themenumber
+
+starter,service_destroy,0,0,42,44
 
 
 
-starter,service_destroy,0,0,32,34
+starter,service_start,0,0,29,31
 
 
 
-starter,service_start,0,0,19,21
-
-
-
-starter,service_taskremoved,0,0,23,25
+starter,service_taskremoved,0,0,33,35
 
 
 
@@ -1542,10 +1546,6 @@ todoactivity,taskslist_itemlongclick,1,0,411,432
 ,currentlist,,kvs,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl,,progressnumber,,progresspercent,,progressbar
 
 ,showrenametaskpanel,,updateprogress
-musiccodemodule,process_globals,0,1,3,7
-
-
-
 keyvaluestore,class_globals,0,0,1,4
 
 

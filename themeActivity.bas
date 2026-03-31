@@ -90,4 +90,5 @@ Sub applyBtn_Click
 	Else If themePage = 2 Then
 		Starter.themeNumber = 2
 	End If
+	MainActivity.kvsPref.Put("themeNumber", Starter.themeNumber)
 End Sub
