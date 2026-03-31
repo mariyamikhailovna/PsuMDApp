@@ -198,7 +198,7 @@ helpactivity,activity_create,1,0,29,37
 starter,darkmode,,backbtn,,descriptionlbl,,helpimage,,iconbutton1,,iconbutton2,,iconbutton3,,nextbtn,,titlelbl,,helppage,,xui
 ,backbtn,,descriptionlbl,,helpimage,,iconbutton1,,iconbutton2,,iconbutton3,,nextbtn,,titlelbl,,helppage
 ,showhelppage
-helpactivity,showhelppage,0,0,47,133
+helpactivity,showhelppage,0,1,47,133
 ,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
 ,helppage
 

@@ -58,9 +58,9 @@ Sub showHelpPage(page As Int)
 			titleLbl.Text = "Welcome"
 			descriptionLbl.Text = "This app is tailor-made for students—or anyone who wants to learn. It has all the features you'll need in order to learn effectively!"
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
-			iconButton1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
+			iconButton1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "icon.png", helpimage.Width, helpimage.Height, True)
 			iconButton2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "icon.png", helpimage.Width, helpimage.Height, True)
-			iconButton3.Bitmap = xui.LoadBitmapResize(File.DirAssets, "dumbass.png", helpimage.Width, helpimage.Height, True)
+			iconButton3.Bitmap = xui.LoadBitmapResize(File.DirAssets, "icon.png", helpimage.Width, helpimage.Height, True)
 		Case 1
 			titleLbl.Text = "Calendar"
 			descriptionLbl.Text = "The calendar comes in three views to match however you like to plan. The Schedule view lets you see all your upcoming days at a glance, with major events and to-do items laid out on a timeline. The Day view shows you the full timeline for a single day, where you can add events, tasks, or birthdays, and color-coded backgrounds make each type of entry easy to tell apart. The Month view presents the classic calendar layout, complete with a month and year spinner to jump around quickly, a sneak peek of events on each day's cell, and neighboring dates filling in the empty cells so the grid always looks complete."
@@ -72,9 +72,9 @@ Sub showHelpPage(page As Int)
 			titleLbl.Text = "Clock"
 			descriptionLbl.Text = "The clock keeps you on time and on task all in one place. A format button lets you switch between clock displays to whatever you prefer. It also comes with a built-in Pomodoro timer to help you stay focused and productive, and if the default durations don't work for you, you can freely adjust them to fit your own rhythm."
 			helpimage.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
-			iconButton1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "clock.png", helpimage.Width, helpimage.Height, True)
-			iconButton2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "clock2.png", helpimage.Width, helpimage.Height, True)
-			iconButton3.Bitmap = xui.LoadBitmapResize(File.DirAssets, "clock3.png", helpimage.Width, helpimage.Height, True)
+			iconButton1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
+			iconButton2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
+			iconButton3.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", helpimage.Width, helpimage.Height, True)
 		Case 3
 			titleLbl.Text = "Corkboard"
 			descriptionLbl.Text = "The corkboard gives you a creative space to pin your thoughts and ideas. You can place sticky notes in a variety of colors to keep things visually organized and easy to tell apart. Images from your gallery can be attached right onto the board for extra context or inspiration. And when words and notes aren't enough, you can open up a drawable canvas with a selection of colored pens and sketch, doodle, or diagram anything you have in mind."

@@ -76,6 +76,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=musicService,songTimer_Tick,84,0,musicService,Service_Destroy,50,0,musicService,playSong,70,0,musicService,Service_Create,21,0,musicService,Service_Start,44,4,musicService,waitStarter,108,1,musicActivity,Activity_Create,27,0,MainActivity,Activity_Create,36,0,Starter,Process_Globals,15,6,Main,startLoad,44,2
+NavigationStack=musicService,playSong,70,0,musicService,Service_Create,21,0,musicService,Service_Start,44,4,musicService,waitStarter,108,1,musicActivity,Activity_Create,27,0,MainActivity,Activity_Create,36,0,Starter,Process_Globals,15,6,Main,startLoad,44,2,helpActivity,Activity_Resume,38,0,helpActivity,showHelpPage,56,1
 SelectedBuild=0
 VisibleModules=22,15,14,8,20,12,9,24,18,1,2,6,13,25,16
