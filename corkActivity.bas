@@ -59,7 +59,13 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("corkboardLayout")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("corkboardLayout")
+	Else
+		Activity.LoadLayout("corkboardLayoutDark")
+	End If
+	
 	penSpnr.AddAll(Array As String("Black", "Blue", "Green", "Red", "Yellow", "Eraser"))
 	If FirstTime Then
 		imgPicker.Initialize("CC")

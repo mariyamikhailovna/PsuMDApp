@@ -40,11 +40,11 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	'Do not forget to load the layout file created with the visual designer. For example:
-	'Activity.LoadLayout("Layout1")
-	'to display all subdecks and choose which one to use
-	'layout
-	Activity.LoadLayout("Subdeck_ModuleLayout")
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("Subdeck_ModuleLayout")
+	Else
+		Activity.LoadLayout("Subdeck_ModuleLayoutDark")
+	End If
 	
 	'design for add button
 	Dim radius As Int = Addbtn.Width/2

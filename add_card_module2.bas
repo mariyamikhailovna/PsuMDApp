@@ -26,9 +26,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	'Do not forget to load the layout file created with the visual designer. For example:
-	'Activity.LoadLayout("Layout1")
-	Activity.LoadLayout("ACM2Layout")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("ACM2Layout")
+	Else
+		Activity.LoadLayout("ACM2LayoutDark")
+	End If
 	
 	'label for subdeck for cards to be added
 	Dim tappeddeck As Map = FlashcardActivity.deck.Get(FlashcardActivity.selecteddeck)

@@ -27,8 +27,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	'Do not forget to load the layout file created with the visual designer. For example:
-	Activity.LoadLayout("themeLayout")
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("themeLayout")
+	Else
+		Activity.LoadLayout("themeLayoutDark")
+	End If
+
 	showThemePage(0)
 End Sub
 

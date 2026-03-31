@@ -25,7 +25,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("notepadLayout")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("notepadLayout")
+	Else
+		Activity.LoadLayout("notepadLayoutDark")
+	End If
 
 End Sub
 

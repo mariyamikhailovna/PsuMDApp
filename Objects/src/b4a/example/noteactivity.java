@@ -380,11 +380,19 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 RDebugUtils.currentLine=5898240;
  //BA.debugLineNum = 5898240;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=5898241;
- //BA.debugLineNum = 5898241;BA.debugLine="Activity.LoadLayout(\"notepadLayout\")";
-mostCurrent._activity.LoadLayout("notepadLayout",mostCurrent.activityBA);
+RDebugUtils.currentLine=5898242;
+ //BA.debugLineNum = 5898242;BA.debugLine="If Starter.darkMode = False Then";
+if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
 RDebugUtils.currentLine=5898243;
- //BA.debugLineNum = 5898243;BA.debugLine="End Sub";
+ //BA.debugLineNum = 5898243;BA.debugLine="Activity.LoadLayout(\"notepadLayout\")";
+mostCurrent._activity.LoadLayout("notepadLayout",mostCurrent.activityBA);
+ }else {
+RDebugUtils.currentLine=5898245;
+ //BA.debugLineNum = 5898245;BA.debugLine="Activity.LoadLayout(\"notepadLayoutDark\")";
+mostCurrent._activity.LoadLayout("notepadLayoutDark",mostCurrent.activityBA);
+ };
+RDebugUtils.currentLine=5898248;
+ //BA.debugLineNum = 5898248;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{

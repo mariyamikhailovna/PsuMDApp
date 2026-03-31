@@ -58,7 +58,11 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
-	Activity.LoadLayout("Day_ModuleLayout")
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("Day_ModuleLayout")
+	Else
+		Activity.LoadLayout("Day_ModuleLayoutDark")
+	End If
 	
 	Day_btn.Color = Colors.blue
 	date_todaylbl.Text = SetDate(currentDate)

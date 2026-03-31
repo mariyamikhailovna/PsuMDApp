@@ -47,6 +47,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	Else
 		Activity.LoadLayout("clocklayoutDark")
 	End If
+	
 	If FirstTime Then
 		timerCount.Initialize("tmr", 1000)
 	End If

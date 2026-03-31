@@ -44,7 +44,12 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	'Main Activity - active when running the whole program
 	'Load Layout - for designer layout
-	Activity.LoadLayout("FlashCardLayout")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("FlashCardLayout")
+	Else
+		Activity.LoadLayout("FlashCardLayoutDark")
+	End If
 	
 	'Resizing Add button (dont mind)
 	Dim radius As Int = Addbtn.Width/2

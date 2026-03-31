@@ -23,8 +23,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("musicLayout.bal")
-	Log(GetDeviceLayoutValues)
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("musicLayout.bal")
+	Else
+		Activity.LoadLayout("musicLayoutDark.bal")
+	End If
     
 	' Populate ListView from service playlist
 	StartService(musicService)

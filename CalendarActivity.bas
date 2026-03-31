@@ -49,8 +49,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("CalendarActivityLayout")
 	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("CalendarActivityLayout")
+	Else
+		Activity.LoadLayout("CalendarActivityLayoutDark")
+	End If
 	
 	Month_btn.Color = Colors.blue
 	

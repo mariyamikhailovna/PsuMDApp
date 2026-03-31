@@ -22,8 +22,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	'Do not forget to load the layout file created with the visual designer. For example:
-	Activity.LoadLayout("navAct")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("navAct")
+	Else
+		Activity.LoadLayout("navActDark")
+	End If
 
 End Sub
 

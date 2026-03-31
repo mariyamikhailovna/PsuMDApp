@@ -67,9 +67,17 @@ RemoteObject _cd = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawab
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 36;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
 Debug.ShouldStop(8);
- BA.debugLineNum = 41;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayout\")";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 37;BA.debugLine="If Starter.darkMode = False Then";
+Debug.ShouldStop(16);
+if (RemoteObject.solveBoolean("=",subdeck_module.mostCurrent._starter._darkmode /*RemoteObject*/ ,subdeck_module.mostCurrent.__c.getField(true,"False"))) { 
+ BA.debugLineNum = 38;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayout\")";
+Debug.ShouldStop(32);
 subdeck_module.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Subdeck_ModuleLayout")),subdeck_module.mostCurrent.activityBA);
+ }else {
+ BA.debugLineNum = 40;BA.debugLine="Activity.LoadLayout(\"Subdeck_ModuleLayoutDark\")";
+Debug.ShouldStop(128);
+subdeck_module.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("Subdeck_ModuleLayoutDark")),subdeck_module.mostCurrent.activityBA);
+ };
  BA.debugLineNum = 44;BA.debugLine="Dim radius As Int = Addbtn.Width/2";
 Debug.ShouldStop(2048);
 _radius = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {subdeck_module.mostCurrent._addbtn.runMethod(true,"getWidth"),RemoteObject.createImmutable(2)}, "/",0, 0));Debug.locals.put("radius", _radius);Debug.locals.put("radius", _radius);

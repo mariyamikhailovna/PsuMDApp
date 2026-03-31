@@ -383,14 +383,22 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 RDebugUtils.currentLine=8519680;
  //BA.debugLineNum = 8519680;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=8519681;
+ //BA.debugLineNum = 8519681;BA.debugLine="If Starter.darkMode = False Then";
+if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
 RDebugUtils.currentLine=8519682;
  //BA.debugLineNum = 8519682;BA.debugLine="Activity.LoadLayout(\"themeLayout\")";
 mostCurrent._activity.LoadLayout("themeLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=8519683;
- //BA.debugLineNum = 8519683;BA.debugLine="showThemePage(0)";
-_showthemepage((int) (0));
+ }else {
 RDebugUtils.currentLine=8519684;
- //BA.debugLineNum = 8519684;BA.debugLine="End Sub";
+ //BA.debugLineNum = 8519684;BA.debugLine="Activity.LoadLayout(\"themeLayoutDark\")";
+mostCurrent._activity.LoadLayout("themeLayoutDark",mostCurrent.activityBA);
+ };
+RDebugUtils.currentLine=8519687;
+ //BA.debugLineNum = 8519687;BA.debugLine="showThemePage(0)";
+_showthemepage((int) (0));
+RDebugUtils.currentLine=8519688;
+ //BA.debugLineNum = 8519688;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showthemepage(int _page) throws Exception{

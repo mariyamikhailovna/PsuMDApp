@@ -35,7 +35,13 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
-	Activity.LoadLayout("AARLAyout")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("AARLayout")
+	Else
+		Activity.LoadLayout("AARLayoutDark")
+	End If
+	
 	
 	'take the selected deck from main
 	Dim tappeddeck As Map = FlashcardActivity.deck.Get(FlashcardActivity.selecteddeck)

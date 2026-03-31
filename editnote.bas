@@ -26,7 +26,13 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("editnoteLayout")
+	
+	If Starter.darkMode = False Then
+		Activity.LoadLayout("editnoteLayout")
+	Else
+		Activity.LoadLayout("editnoteLayoutDark")
+	End If
+	
 	contentTxt.Background = Null
 	contentTxt.Gravity = Bit.Or(Gravity.TOP, Gravity.LEFT)
 	If ActiveNote.IsInitialized Then

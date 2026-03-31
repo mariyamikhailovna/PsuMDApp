@@ -406,24 +406,24 @@ RDebugUtils.currentLine=4653060;
  //BA.debugLineNum = 4653060;BA.debugLine="Activity.LoadLayout(\"clocklayoutDark\")";
 mostCurrent._activity.LoadLayout("clocklayoutDark",mostCurrent.activityBA);
  };
-RDebugUtils.currentLine=4653062;
- //BA.debugLineNum = 4653062;BA.debugLine="If FirstTime Then";
-if (_firsttime) { 
 RDebugUtils.currentLine=4653063;
- //BA.debugLineNum = 4653063;BA.debugLine="timerCount.Initialize(\"tmr\", 1000)";
+ //BA.debugLineNum = 4653063;BA.debugLine="If FirstTime Then";
+if (_firsttime) { 
+RDebugUtils.currentLine=4653064;
+ //BA.debugLineNum = 4653064;BA.debugLine="timerCount.Initialize(\"tmr\", 1000)";
 _timercount.Initialize(processBA,"tmr",(long) (1000));
  };
-RDebugUtils.currentLine=4653066;
- //BA.debugLineNum = 4653066;BA.debugLine="timerCount.Enabled = False";
-_timercount.setEnabled(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=4653067;
- //BA.debugLineNum = 4653067;BA.debugLine="updateLbl";
-_updatelbl();
+ //BA.debugLineNum = 4653067;BA.debugLine="timerCount.Enabled = False";
+_timercount.setEnabled(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=4653068;
- //BA.debugLineNum = 4653068;BA.debugLine="pomoCounter.Text = counter";
-mostCurrent._pomocounter.setText(BA.ObjectToCharSequence(_counter));
+ //BA.debugLineNum = 4653068;BA.debugLine="updateLbl";
+_updatelbl();
 RDebugUtils.currentLine=4653069;
- //BA.debugLineNum = 4653069;BA.debugLine="End Sub";
+ //BA.debugLineNum = 4653069;BA.debugLine="pomoCounter.Text = counter";
+mostCurrent._pomocounter.setText(BA.ObjectToCharSequence(_counter));
+RDebugUtils.currentLine=4653070;
+ //BA.debugLineNum = 4653070;BA.debugLine="End Sub";
 return "";
 }
 public static String  _updatelbl() throws Exception{

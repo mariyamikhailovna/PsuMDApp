@@ -24,24 +24,24 @@ clockactivity.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)
 Debug.ShouldStop(512);
 clockactivity.mostCurrent._activity.runMethodAndSync(false,"LoadLayout",(Object)(RemoteObject.createImmutable("clocklayoutDark")),clockactivity.mostCurrent.activityBA);
  };
- BA.debugLineNum = 44;BA.debugLine="If FirstTime Then";
-Debug.ShouldStop(2048);
-if (_firsttime.<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 45;BA.debugLine="timerCount.Initialize(\"tmr\", 1000)";
+ BA.debugLineNum = 45;BA.debugLine="If FirstTime Then";
 Debug.ShouldStop(4096);
+if (_firsttime.<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 46;BA.debugLine="timerCount.Initialize(\"tmr\", 1000)";
+Debug.ShouldStop(8192);
 clockactivity._timercount.runVoidMethod ("Initialize",clockactivity.processBA,(Object)(BA.ObjectToString("tmr")),(Object)(BA.numberCast(long.class, 1000)));
  };
- BA.debugLineNum = 48;BA.debugLine="timerCount.Enabled = False";
-Debug.ShouldStop(32768);
-clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 49;BA.debugLine="updateLbl";
+ BA.debugLineNum = 49;BA.debugLine="timerCount.Enabled = False";
 Debug.ShouldStop(65536);
-_updatelbl();
- BA.debugLineNum = 50;BA.debugLine="pomoCounter.Text = counter";
+clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 50;BA.debugLine="updateLbl";
 Debug.ShouldStop(131072);
-clockactivity.mostCurrent._pomocounter.runMethod(true,"setText",BA.ObjectToCharSequence(clockactivity._counter));
- BA.debugLineNum = 51;BA.debugLine="End Sub";
+_updatelbl();
+ BA.debugLineNum = 51;BA.debugLine="pomoCounter.Text = counter";
 Debug.ShouldStop(262144);
+clockactivity.mostCurrent._pomocounter.runMethod(true,"setText",BA.ObjectToCharSequence(clockactivity._counter));
+ BA.debugLineNum = 52;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -52,13 +52,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,57);
+		Debug.PushSubsStack("Activity_Pause (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,58);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 57;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 59;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 58;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 60;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -69,12 +69,12 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,53);
+		Debug.PushSubsStack("Activity_Resume (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,54);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","activity_resume");}
- BA.debugLineNum = 53;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(1048576);
- BA.debugLineNum = 55;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 54;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 56;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -85,15 +85,15 @@ finally {
 		}}
 public static RemoteObject  _closel_click() throws Exception{
 try {
-		Debug.PushSubsStack("closeL_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,216);
+		Debug.PushSubsStack("closeL_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,217);
 if (RapidSub.canDelegate("closel_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","closel_click");}
- BA.debugLineNum = 216;BA.debugLine="Private Sub closeL_Click";
-Debug.ShouldStop(8388608);
- BA.debugLineNum = 217;BA.debugLine="settingsPnl.Visible = False";
+ BA.debugLineNum = 217;BA.debugLine="Private Sub closeL_Click";
 Debug.ShouldStop(16777216);
-clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 218;BA.debugLine="End Sub";
+ BA.debugLineNum = 218;BA.debugLine="settingsPnl.Visible = False";
 Debug.ShouldStop(33554432);
+clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 219;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -104,15 +104,15 @@ finally {
 		}}
 public static RemoteObject  _exitbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("exitBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,61);
+		Debug.PushSubsStack("exitBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,62);
 if (RapidSub.canDelegate("exitbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","exitbtn_click");}
- BA.debugLineNum = 61;BA.debugLine="Private Sub exitBtn_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 62;BA.debugLine="Activity.Finish";
+ BA.debugLineNum = 62;BA.debugLine="Private Sub exitBtn_Click";
 Debug.ShouldStop(536870912);
-clockactivity.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 63;BA.debugLine="End Sub";
+ BA.debugLineNum = 63;BA.debugLine="Activity.Finish";
 Debug.ShouldStop(1073741824);
+clockactivity.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 64;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -123,29 +123,29 @@ finally {
 		}}
 public static RemoteObject  _formatbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("formatBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,65);
+		Debug.PushSubsStack("formatBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,66);
 if (RapidSub.canDelegate("formatbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","formatbtn_click");}
- BA.debugLineNum = 65;BA.debugLine="Private Sub formatBtn_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 67;BA.debugLine="MainActivity.format24h = Not(MainActivity.format2";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 66;BA.debugLine="Private Sub formatBtn_Click";
+Debug.ShouldStop(2);
+ BA.debugLineNum = 68;BA.debugLine="MainActivity.format24h = Not(MainActivity.format2";
+Debug.ShouldStop(8);
 clockactivity.mostCurrent._mainactivity._format24h /*RemoteObject*/  = clockactivity.mostCurrent.__c.runMethod(true,"Not",(Object)(clockactivity.mostCurrent._mainactivity._format24h /*RemoteObject*/ ));
- BA.debugLineNum = 69;BA.debugLine="If MainActivity.format24h Then";
-Debug.ShouldStop(16);
-if (clockactivity.mostCurrent._mainactivity._format24h /*RemoteObject*/ .<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 70;BA.debugLine="DateTime.TimeFormat = \"HH:mm\"";
+ BA.debugLineNum = 70;BA.debugLine="If MainActivity.format24h Then";
 Debug.ShouldStop(32);
+if (clockactivity.mostCurrent._mainactivity._format24h /*RemoteObject*/ .<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 71;BA.debugLine="DateTime.TimeFormat = \"HH:mm\"";
+Debug.ShouldStop(64);
 clockactivity.mostCurrent.__c.getField(false,"DateTime").runMethod(true,"setTimeFormat",BA.ObjectToString("HH:mm"));
  }else {
- BA.debugLineNum = 72;BA.debugLine="DateTime.TimeFormat = \"hh:mm a\"";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 73;BA.debugLine="DateTime.TimeFormat = \"hh:mm a\"";
+Debug.ShouldStop(256);
 clockactivity.mostCurrent.__c.getField(false,"DateTime").runMethod(true,"setTimeFormat",BA.ObjectToString("hh:mm a"));
  };
- BA.debugLineNum = 74;BA.debugLine="CallSub(MainActivity, \"timerClock_Tick\")";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 75;BA.debugLine="CallSub(MainActivity, \"timerClock_Tick\")";
+Debug.ShouldStop(1024);
 clockactivity.mostCurrent.__c.runMethodAndSync(false,"CallSubNew",clockactivity.processBA,(Object)((clockactivity.mostCurrent._mainactivity.getObject())),(Object)(RemoteObject.createImmutable("timerClock_Tick")));
- BA.debugLineNum = 76;BA.debugLine="End Sub";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 77;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -193,24 +193,24 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _longbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("longBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,204);
+		Debug.PushSubsStack("longBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,205);
 if (RapidSub.canDelegate("longbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","longbtn_click");}
- BA.debugLineNum = 204;BA.debugLine="Private Sub longBtn_Click";
-Debug.ShouldStop(2048);
- BA.debugLineNum = 205;BA.debugLine="timerStop";
+ BA.debugLineNum = 205;BA.debugLine="Private Sub longBtn_Click";
 Debug.ShouldStop(4096);
-_timerstop();
- BA.debugLineNum = 206;BA.debugLine="secondsRemain = longDef";
+ BA.debugLineNum = 206;BA.debugLine="timerStop";
 Debug.ShouldStop(8192);
-clockactivity._secondsremain = clockactivity._longdef;
- BA.debugLineNum = 207;BA.debugLine="timerState = 1";
+_timerstop();
+ BA.debugLineNum = 207;BA.debugLine="secondsRemain = longDef";
 Debug.ShouldStop(16384);
-clockactivity._timerstate = BA.numberCast(int.class, 1);
- BA.debugLineNum = 208;BA.debugLine="updateLbl";
+clockactivity._secondsremain = clockactivity._longdef;
+ BA.debugLineNum = 208;BA.debugLine="timerState = 1";
 Debug.ShouldStop(32768);
-_updatelbl();
- BA.debugLineNum = 209;BA.debugLine="End Sub";
+clockactivity._timerstate = BA.numberCast(int.class, 1);
+ BA.debugLineNum = 209;BA.debugLine="updateLbl";
 Debug.ShouldStop(65536);
+_updatelbl();
+ BA.debugLineNum = 210;BA.debugLine="End Sub";
+Debug.ShouldStop(131072);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -221,42 +221,42 @@ finally {
 		}}
 public static RemoteObject  _playbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("playBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,78);
+		Debug.PushSubsStack("playBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,79);
 if (RapidSub.canDelegate("playbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","playbtn_click");}
- BA.debugLineNum = 78;BA.debugLine="Private Sub playBtn_Click";
-Debug.ShouldStop(8192);
- BA.debugLineNum = 79;BA.debugLine="If secondsRemain > 0 Then";
+ BA.debugLineNum = 79;BA.debugLine="Private Sub playBtn_Click";
 Debug.ShouldStop(16384);
-if (RemoteObject.solveBoolean(">",clockactivity._secondsremain,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 80;BA.debugLine="timerCount.Enabled = True";
+ BA.debugLineNum = 80;BA.debugLine="If secondsRemain > 0 Then";
 Debug.ShouldStop(32768);
+if (RemoteObject.solveBoolean(">",clockactivity._secondsremain,BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 81;BA.debugLine="timerCount.Enabled = True";
+Debug.ShouldStop(65536);
 clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"True"));
  };
- BA.debugLineNum = 82;BA.debugLine="If playing = True Then";
-Debug.ShouldStop(131072);
-if (RemoteObject.solveBoolean("=",clockactivity._playing,clockactivity.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 83;BA.debugLine="timerCount.Enabled = False";
+ BA.debugLineNum = 83;BA.debugLine="If playing = True Then";
 Debug.ShouldStop(262144);
-clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 84;BA.debugLine="playing = False";
+if (RemoteObject.solveBoolean("=",clockactivity._playing,clockactivity.mostCurrent.__c.getField(true,"True"))) { 
+ BA.debugLineNum = 84;BA.debugLine="timerCount.Enabled = False";
 Debug.ShouldStop(524288);
-clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"False");
- BA.debugLineNum = 85;BA.debugLine="playBtn.Text = \"Start\"";
+clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 85;BA.debugLine="playing = False";
 Debug.ShouldStop(1048576);
+clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"False");
+ BA.debugLineNum = 86;BA.debugLine="playBtn.Text = \"Start\"";
+Debug.ShouldStop(2097152);
 clockactivity.mostCurrent._playbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Start"));
  }else {
- BA.debugLineNum = 87;BA.debugLine="timerCount.Enabled = True";
-Debug.ShouldStop(4194304);
-clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 88;BA.debugLine="playing = True";
+ BA.debugLineNum = 88;BA.debugLine="timerCount.Enabled = True";
 Debug.ShouldStop(8388608);
-clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"True");
- BA.debugLineNum = 89;BA.debugLine="playBtn.Text = \"Pause\"";
+clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 89;BA.debugLine="playing = True";
 Debug.ShouldStop(16777216);
+clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"True");
+ BA.debugLineNum = 90;BA.debugLine="playBtn.Text = \"Pause\"";
+Debug.ShouldStop(33554432);
 clockactivity.mostCurrent._playbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Pause"));
  };
- BA.debugLineNum = 92;BA.debugLine="End Sub";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 93;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -267,24 +267,24 @@ finally {
 		}}
 public static RemoteObject  _pomobtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("pomoBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,190);
+		Debug.PushSubsStack("pomoBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,191);
 if (RapidSub.canDelegate("pomobtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","pomobtn_click");}
- BA.debugLineNum = 190;BA.debugLine="Private Sub pomoBtn_Click";
-Debug.ShouldStop(536870912);
- BA.debugLineNum = 191;BA.debugLine="timerStop";
+ BA.debugLineNum = 191;BA.debugLine="Private Sub pomoBtn_Click";
 Debug.ShouldStop(1073741824);
-_timerstop();
- BA.debugLineNum = 192;BA.debugLine="secondsRemain = pomoDef";
+ BA.debugLineNum = 192;BA.debugLine="timerStop";
 Debug.ShouldStop(-2147483648);
-clockactivity._secondsremain = clockactivity._pomodef;
- BA.debugLineNum = 193;BA.debugLine="timerState = 0";
+_timerstop();
+ BA.debugLineNum = 193;BA.debugLine="secondsRemain = pomoDef";
 Debug.ShouldStop(1);
-clockactivity._timerstate = BA.numberCast(int.class, 0);
- BA.debugLineNum = 194;BA.debugLine="updateLbl";
+clockactivity._secondsremain = clockactivity._pomodef;
+ BA.debugLineNum = 194;BA.debugLine="timerState = 0";
 Debug.ShouldStop(2);
-_updatelbl();
- BA.debugLineNum = 195;BA.debugLine="End Sub";
+clockactivity._timerstate = BA.numberCast(int.class, 0);
+ BA.debugLineNum = 195;BA.debugLine="updateLbl";
 Debug.ShouldStop(4);
+_updatelbl();
+ BA.debugLineNum = 196;BA.debugLine="End Sub";
+Debug.ShouldStop(8);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -306,49 +306,49 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _savebtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("saveBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,220);
+		Debug.PushSubsStack("saveBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,221);
 if (RapidSub.canDelegate("savebtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","savebtn_click");}
- BA.debugLineNum = 220;BA.debugLine="Private Sub saveBtn_Click";
-Debug.ShouldStop(134217728);
- BA.debugLineNum = 222;BA.debugLine="If IsNumber(pomoTxt.Text) Then pomoDef = pomoTxt.";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 221;BA.debugLine="Private Sub saveBtn_Click";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 223;BA.debugLine="If IsNumber(pomoTxt.Text) Then pomoDef = pomoTxt.";
+Debug.ShouldStop(1073741824);
 if (clockactivity.mostCurrent.__c.runMethod(true,"IsNumber",(Object)(clockactivity.mostCurrent._pomotxt.runMethod(true,"getText"))).<Boolean>get().booleanValue()) { 
 clockactivity._pomodef = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, clockactivity.mostCurrent._pomotxt.runMethod(true,"getText")),RemoteObject.createImmutable(60)}, "*",0, 0));};
- BA.debugLineNum = 223;BA.debugLine="If IsNumber(shortTxt.Text) Then shortDef = shortT";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 224;BA.debugLine="If IsNumber(shortTxt.Text) Then shortDef = shortT";
+Debug.ShouldStop(-2147483648);
 if (clockactivity.mostCurrent.__c.runMethod(true,"IsNumber",(Object)(clockactivity.mostCurrent._shorttxt.runMethod(true,"getText"))).<Boolean>get().booleanValue()) { 
 clockactivity._shortdef = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, clockactivity.mostCurrent._shorttxt.runMethod(true,"getText")),RemoteObject.createImmutable(60)}, "*",0, 0));};
- BA.debugLineNum = 224;BA.debugLine="If IsNumber(longTxt.Text) Then longDef = longTxt.";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 225;BA.debugLine="If IsNumber(longTxt.Text) Then longDef = longTxt.";
+Debug.ShouldStop(1);
 if (clockactivity.mostCurrent.__c.runMethod(true,"IsNumber",(Object)(clockactivity.mostCurrent._longtxt.runMethod(true,"getText"))).<Boolean>get().booleanValue()) { 
 clockactivity._longdef = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, clockactivity.mostCurrent._longtxt.runMethod(true,"getText")),RemoteObject.createImmutable(60)}, "*",0, 0));};
- BA.debugLineNum = 226;BA.debugLine="If timerState = 0 Then";
-Debug.ShouldStop(2);
-if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 227;BA.debugLine="secondsRemain = pomoDef";
+ BA.debugLineNum = 227;BA.debugLine="If timerState = 0 Then";
 Debug.ShouldStop(4);
+if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 228;BA.debugLine="secondsRemain = pomoDef";
+Debug.ShouldStop(8);
 clockactivity._secondsremain = clockactivity._pomodef;
  }else {
- BA.debugLineNum = 230;BA.debugLine="If counter Mod 4 = 0 Then";
-Debug.ShouldStop(32);
-if (RemoteObject.solveBoolean("=",RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(4)}, "%",0, 1),BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 231;BA.debugLine="secondsRemain = longDef";
+ BA.debugLineNum = 231;BA.debugLine="If counter Mod 4 = 0 Then";
 Debug.ShouldStop(64);
+if (RemoteObject.solveBoolean("=",RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(4)}, "%",0, 1),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 232;BA.debugLine="secondsRemain = longDef";
+Debug.ShouldStop(128);
 clockactivity._secondsremain = clockactivity._longdef;
  }else {
- BA.debugLineNum = 233;BA.debugLine="secondsRemain = shortDef";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 234;BA.debugLine="secondsRemain = shortDef";
+Debug.ShouldStop(512);
 clockactivity._secondsremain = clockactivity._shortdef;
  };
  };
- BA.debugLineNum = 236;BA.debugLine="updateLbl";
-Debug.ShouldStop(2048);
-_updatelbl();
- BA.debugLineNum = 237;BA.debugLine="settingsPnl.Visible = False";
+ BA.debugLineNum = 237;BA.debugLine="updateLbl";
 Debug.ShouldStop(4096);
-clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 238;BA.debugLine="End Sub";
+_updatelbl();
+ BA.debugLineNum = 238;BA.debugLine="settingsPnl.Visible = False";
 Debug.ShouldStop(8192);
+clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 239;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -359,18 +359,18 @@ finally {
 		}}
 public static RemoteObject  _settingsbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("settingsBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,211);
+		Debug.PushSubsStack("settingsBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,212);
 if (RapidSub.canDelegate("settingsbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","settingsbtn_click");}
- BA.debugLineNum = 211;BA.debugLine="Private Sub settingsBtn_Click";
-Debug.ShouldStop(262144);
- BA.debugLineNum = 212;BA.debugLine="settingsWindow(250dip, 180dip)";
+ BA.debugLineNum = 212;BA.debugLine="Private Sub settingsBtn_Click";
 Debug.ShouldStop(524288);
-_settingswindow(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 250))),clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 180))));
- BA.debugLineNum = 213;BA.debugLine="settingsPnl.Visible = True";
+ BA.debugLineNum = 213;BA.debugLine="settingsWindow(250dip, 180dip)";
 Debug.ShouldStop(1048576);
-clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 214;BA.debugLine="End Sub";
+_settingswindow(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 250))),clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 180))));
+ BA.debugLineNum = 214;BA.debugLine="settingsPnl.Visible = True";
 Debug.ShouldStop(2097152);
+clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 215;BA.debugLine="End Sub";
+Debug.ShouldStop(4194304);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -381,7 +381,7 @@ finally {
 		}}
 public static RemoteObject  _settingswindow(RemoteObject _pw,RemoteObject _ph) throws Exception{
 try {
-		Debug.PushSubsStack("settingsWindow (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,129);
+		Debug.PushSubsStack("settingsWindow (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,130);
 if (RapidSub.canDelegate("settingswindow")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","settingswindow", _pw, _ph);}
 RemoteObject _lblp = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 RemoteObject _lbls = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
@@ -390,156 +390,156 @@ RemoteObject _closel = RemoteObject.declareNull("anywheresoftware.b4a.objects.La
 RemoteObject _savebtn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 Debug.locals.put("pW", _pw);
 Debug.locals.put("pH", _ph);
- BA.debugLineNum = 129;BA.debugLine="Private Sub settingsWindow(pW As Int, pH As Int)";
-Debug.ShouldStop(1);
- BA.debugLineNum = 130;BA.debugLine="settingsPnl = xui.CreatePanel(\"settingsPnl\")";
+ BA.debugLineNum = 130;BA.debugLine="Private Sub settingsWindow(pW As Int, pH As Int)";
 Debug.ShouldStop(2);
-clockactivity.mostCurrent._settingspnl = clockactivity._xui.runMethod(false,"CreatePanel",clockactivity.processBA,(Object)(RemoteObject.createImmutable("settingsPnl")));
- BA.debugLineNum = 131;BA.debugLine="Activity.AddView(settingsPnl, centerLeft, centerT";
+ BA.debugLineNum = 131;BA.debugLine="settingsPnl = xui.CreatePanel(\"settingsPnl\")";
 Debug.ShouldStop(4);
-clockactivity.mostCurrent._activity.runVoidMethod ("AddView",(Object)((clockactivity.mostCurrent._settingspnl.getObject())),(Object)(clockactivity._centerleft),(Object)(clockactivity._centertop),(Object)(_pw),(Object)(_ph));
- BA.debugLineNum = 132;BA.debugLine="settingsPnl.Color = xui.Color_RGB(50, 50, 50)";
+clockactivity.mostCurrent._settingspnl = clockactivity._xui.runMethod(false,"CreatePanel",clockactivity.processBA,(Object)(RemoteObject.createImmutable("settingsPnl")));
+ BA.debugLineNum = 132;BA.debugLine="Activity.AddView(settingsPnl, centerLeft, centerT";
 Debug.ShouldStop(8);
-clockactivity.mostCurrent._settingspnl.runMethod(true,"setColor",clockactivity._xui.runMethod(true,"Color_RGB",(Object)(BA.numberCast(int.class, 50)),(Object)(BA.numberCast(int.class, 50)),(Object)(BA.numberCast(int.class, 50))));
- BA.debugLineNum = 133;BA.debugLine="settingsPnl.SetColorAndBorder(xui.Color_White, 2d";
+clockactivity.mostCurrent._activity.runVoidMethod ("AddView",(Object)((clockactivity.mostCurrent._settingspnl.getObject())),(Object)(clockactivity._centerleft),(Object)(clockactivity._centertop),(Object)(_pw),(Object)(_ph));
+ BA.debugLineNum = 133;BA.debugLine="settingsPnl.Color = xui.Color_RGB(50, 50, 50)";
 Debug.ShouldStop(16);
-clockactivity.mostCurrent._settingspnl.runVoidMethod ("SetColorAndBorder",(Object)(clockactivity._xui.getField(true,"Color_White")),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 2)))),(Object)(clockactivity._xui.getField(true,"Color_Black")),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 3)))));
- BA.debugLineNum = 134;BA.debugLine="settingsPnl.Enabled = False";
+clockactivity.mostCurrent._settingspnl.runMethod(true,"setColor",clockactivity._xui.runMethod(true,"Color_RGB",(Object)(BA.numberCast(int.class, 50)),(Object)(BA.numberCast(int.class, 50)),(Object)(BA.numberCast(int.class, 50))));
+ BA.debugLineNum = 134;BA.debugLine="settingsPnl.SetColorAndBorder(xui.Color_White, 2d";
 Debug.ShouldStop(32);
-clockactivity.mostCurrent._settingspnl.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 135;BA.debugLine="settingsPnl.Visible = False";
+clockactivity.mostCurrent._settingspnl.runVoidMethod ("SetColorAndBorder",(Object)(clockactivity._xui.getField(true,"Color_White")),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 2)))),(Object)(clockactivity._xui.getField(true,"Color_Black")),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 3)))));
+ BA.debugLineNum = 135;BA.debugLine="settingsPnl.Enabled = False";
 Debug.ShouldStop(64);
+clockactivity.mostCurrent._settingspnl.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 136;BA.debugLine="settingsPnl.Visible = False";
+Debug.ShouldStop(128);
 clockactivity.mostCurrent._settingspnl.runMethod(true,"setVisible",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 137;BA.debugLine="pomoTxt.Initialize(\"pomoTxt\")";
-Debug.ShouldStop(256);
-clockactivity.mostCurrent._pomotxt.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("pomoTxt")));
- BA.debugLineNum = 138;BA.debugLine="pomoTxt.Hint = \"Pomo\"";
+ BA.debugLineNum = 138;BA.debugLine="pomoTxt.Initialize(\"pomoTxt\")";
 Debug.ShouldStop(512);
-clockactivity.mostCurrent._pomotxt.runMethod(true,"setHint",BA.ObjectToString("Pomo"));
- BA.debugLineNum = 139;BA.debugLine="pomoTxt.InputType = pomoTxt.INPUT_TYPE_NUMBERS";
+clockactivity.mostCurrent._pomotxt.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("pomoTxt")));
+ BA.debugLineNum = 139;BA.debugLine="pomoTxt.Hint = \"Pomo\"";
 Debug.ShouldStop(1024);
-clockactivity.mostCurrent._pomotxt.runMethod(true,"setInputType",clockactivity.mostCurrent._pomotxt.getField(true,"INPUT_TYPE_NUMBERS"));
- BA.debugLineNum = 140;BA.debugLine="pomoTxt.Text = pomoDef / 60";
+clockactivity.mostCurrent._pomotxt.runMethod(true,"setHint",BA.ObjectToString("Pomo"));
+ BA.debugLineNum = 140;BA.debugLine="pomoTxt.InputType = pomoTxt.INPUT_TYPE_NUMBERS";
 Debug.ShouldStop(2048);
-clockactivity.mostCurrent._pomotxt.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {clockactivity._pomodef,RemoteObject.createImmutable(60)}, "/",0, 0)));
- BA.debugLineNum = 141;BA.debugLine="pomoTxt.Gravity = Gravity.CENTER_HORIZONTAL";
+clockactivity.mostCurrent._pomotxt.runMethod(true,"setInputType",clockactivity.mostCurrent._pomotxt.getField(true,"INPUT_TYPE_NUMBERS"));
+ BA.debugLineNum = 141;BA.debugLine="pomoTxt.Text = pomoDef / 60";
 Debug.ShouldStop(4096);
-clockactivity.mostCurrent._pomotxt.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
- BA.debugLineNum = 142;BA.debugLine="settingsPnl.AddView(pomoTxt, 10dip, 40dip, 70dip,";
+clockactivity.mostCurrent._pomotxt.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {clockactivity._pomodef,RemoteObject.createImmutable(60)}, "/",0, 0)));
+ BA.debugLineNum = 142;BA.debugLine="pomoTxt.Gravity = Gravity.CENTER_HORIZONTAL";
 Debug.ShouldStop(8192);
+clockactivity.mostCurrent._pomotxt.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
+ BA.debugLineNum = 143;BA.debugLine="settingsPnl.AddView(pomoTxt, 10dip, 40dip, 70dip,";
+Debug.ShouldStop(16384);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((clockactivity.mostCurrent._pomotxt.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 144;BA.debugLine="shortTxt.Initialize(\"shortTxt\")";
-Debug.ShouldStop(32768);
-clockactivity.mostCurrent._shorttxt.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("shortTxt")));
- BA.debugLineNum = 145;BA.debugLine="shortTxt.Hint = \"Short\"";
+ BA.debugLineNum = 145;BA.debugLine="shortTxt.Initialize(\"shortTxt\")";
 Debug.ShouldStop(65536);
-clockactivity.mostCurrent._shorttxt.runMethod(true,"setHint",BA.ObjectToString("Short"));
- BA.debugLineNum = 146;BA.debugLine="shortTxt.InputType = shortTxt.INPUT_TYPE_NUMBERS";
+clockactivity.mostCurrent._shorttxt.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("shortTxt")));
+ BA.debugLineNum = 146;BA.debugLine="shortTxt.Hint = \"Short\"";
 Debug.ShouldStop(131072);
-clockactivity.mostCurrent._shorttxt.runMethod(true,"setInputType",clockactivity.mostCurrent._shorttxt.getField(true,"INPUT_TYPE_NUMBERS"));
- BA.debugLineNum = 147;BA.debugLine="shortTxt.Text = shortDef / 60";
+clockactivity.mostCurrent._shorttxt.runMethod(true,"setHint",BA.ObjectToString("Short"));
+ BA.debugLineNum = 147;BA.debugLine="shortTxt.InputType = shortTxt.INPUT_TYPE_NUMBERS";
 Debug.ShouldStop(262144);
-clockactivity.mostCurrent._shorttxt.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {clockactivity._shortdef,RemoteObject.createImmutable(60)}, "/",0, 0)));
- BA.debugLineNum = 148;BA.debugLine="shortTxt.Gravity = Gravity.CENTER_HORIZONTAL";
+clockactivity.mostCurrent._shorttxt.runMethod(true,"setInputType",clockactivity.mostCurrent._shorttxt.getField(true,"INPUT_TYPE_NUMBERS"));
+ BA.debugLineNum = 148;BA.debugLine="shortTxt.Text = shortDef / 60";
 Debug.ShouldStop(524288);
-clockactivity.mostCurrent._shorttxt.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
- BA.debugLineNum = 149;BA.debugLine="settingsPnl.AddView(shortTxt, 90dip, 40dip, 70dip";
+clockactivity.mostCurrent._shorttxt.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {clockactivity._shortdef,RemoteObject.createImmutable(60)}, "/",0, 0)));
+ BA.debugLineNum = 149;BA.debugLine="shortTxt.Gravity = Gravity.CENTER_HORIZONTAL";
 Debug.ShouldStop(1048576);
+clockactivity.mostCurrent._shorttxt.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
+ BA.debugLineNum = 150;BA.debugLine="settingsPnl.AddView(shortTxt, 90dip, 40dip, 70dip";
+Debug.ShouldStop(2097152);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((clockactivity.mostCurrent._shorttxt.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 90)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 151;BA.debugLine="longTxt.Initialize(\"longTxt\")";
-Debug.ShouldStop(4194304);
-clockactivity.mostCurrent._longtxt.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("longTxt")));
- BA.debugLineNum = 152;BA.debugLine="longTxt.Hint = \"Long\"";
+ BA.debugLineNum = 152;BA.debugLine="longTxt.Initialize(\"longTxt\")";
 Debug.ShouldStop(8388608);
-clockactivity.mostCurrent._longtxt.runMethod(true,"setHint",BA.ObjectToString("Long"));
- BA.debugLineNum = 153;BA.debugLine="longTxt.InputType = longTxt.INPUT_TYPE_NUMBERS";
+clockactivity.mostCurrent._longtxt.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("longTxt")));
+ BA.debugLineNum = 153;BA.debugLine="longTxt.Hint = \"Long\"";
 Debug.ShouldStop(16777216);
-clockactivity.mostCurrent._longtxt.runMethod(true,"setInputType",clockactivity.mostCurrent._longtxt.getField(true,"INPUT_TYPE_NUMBERS"));
- BA.debugLineNum = 154;BA.debugLine="longTxt.Text = longDef / 60";
+clockactivity.mostCurrent._longtxt.runMethod(true,"setHint",BA.ObjectToString("Long"));
+ BA.debugLineNum = 154;BA.debugLine="longTxt.InputType = longTxt.INPUT_TYPE_NUMBERS";
 Debug.ShouldStop(33554432);
-clockactivity.mostCurrent._longtxt.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {clockactivity._longdef,RemoteObject.createImmutable(60)}, "/",0, 0)));
- BA.debugLineNum = 155;BA.debugLine="longTxt.Gravity = Gravity.CENTER_HORIZONTAL";
+clockactivity.mostCurrent._longtxt.runMethod(true,"setInputType",clockactivity.mostCurrent._longtxt.getField(true,"INPUT_TYPE_NUMBERS"));
+ BA.debugLineNum = 155;BA.debugLine="longTxt.Text = longDef / 60";
 Debug.ShouldStop(67108864);
-clockactivity.mostCurrent._longtxt.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
- BA.debugLineNum = 156;BA.debugLine="settingsPnl.AddView(longTxt, 170dip, 40dip, 70dip";
+clockactivity.mostCurrent._longtxt.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {clockactivity._longdef,RemoteObject.createImmutable(60)}, "/",0, 0)));
+ BA.debugLineNum = 156;BA.debugLine="longTxt.Gravity = Gravity.CENTER_HORIZONTAL";
 Debug.ShouldStop(134217728);
+clockactivity.mostCurrent._longtxt.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
+ BA.debugLineNum = 157;BA.debugLine="settingsPnl.AddView(longTxt, 170dip, 40dip, 70dip";
+Debug.ShouldStop(268435456);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((clockactivity.mostCurrent._longtxt.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 170)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 158;BA.debugLine="Dim lblP, lblS, lblL As Label";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 159;BA.debugLine="Dim lblP, lblS, lblL As Label";
+Debug.ShouldStop(1073741824);
 _lblp = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lblP", _lblp);
 _lbls = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lblS", _lbls);
 _lbll = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lblL", _lbll);
- BA.debugLineNum = 160;BA.debugLine="lblP.Initialize(\"\")";
-Debug.ShouldStop(-2147483648);
-_lblp.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 161;BA.debugLine="lblP.Text = \"Pomo\"";
+ BA.debugLineNum = 161;BA.debugLine="lblP.Initialize(\"\")";
 Debug.ShouldStop(1);
-_lblp.runMethod(true,"setText",BA.ObjectToCharSequence("Pomo"));
- BA.debugLineNum = 162;BA.debugLine="lblP.TextSize = 12";
+_lblp.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 162;BA.debugLine="lblP.Text = \"Pomo\"";
 Debug.ShouldStop(2);
-_lblp.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
- BA.debugLineNum = 163;BA.debugLine="lblP.Gravity = Gravity.CENTER_HORIZONTAL";
+_lblp.runMethod(true,"setText",BA.ObjectToCharSequence("Pomo"));
+ BA.debugLineNum = 163;BA.debugLine="lblP.TextSize = 12";
 Debug.ShouldStop(4);
-_lblp.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
- BA.debugLineNum = 164;BA.debugLine="settingsPnl.AddView(lblP, 10dip, 80dip, 70dip, 20";
+_lblp.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
+ BA.debugLineNum = 164;BA.debugLine="lblP.Gravity = Gravity.CENTER_HORIZONTAL";
 Debug.ShouldStop(8);
+_lblp.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
+ BA.debugLineNum = 165;BA.debugLine="settingsPnl.AddView(lblP, 10dip, 80dip, 70dip, 20";
+Debug.ShouldStop(16);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((_lblp.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 80)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
- BA.debugLineNum = 166;BA.debugLine="lblS.Initialize(\"\")";
-Debug.ShouldStop(32);
-_lbls.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 167;BA.debugLine="lblS.Text = \"Short\"";
+ BA.debugLineNum = 167;BA.debugLine="lblS.Initialize(\"\")";
 Debug.ShouldStop(64);
-_lbls.runMethod(true,"setText",BA.ObjectToCharSequence("Short"));
- BA.debugLineNum = 168;BA.debugLine="lblS.TextSize = 12";
+_lbls.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 168;BA.debugLine="lblS.Text = \"Short\"";
 Debug.ShouldStop(128);
-_lbls.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
- BA.debugLineNum = 169;BA.debugLine="lblS.Gravity = Gravity.CENTER_HORIZONTAL";
+_lbls.runMethod(true,"setText",BA.ObjectToCharSequence("Short"));
+ BA.debugLineNum = 169;BA.debugLine="lblS.TextSize = 12";
 Debug.ShouldStop(256);
-_lbls.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
- BA.debugLineNum = 170;BA.debugLine="settingsPnl.AddView(lblS, 90dip, 80dip, 70dip, 20";
+_lbls.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
+ BA.debugLineNum = 170;BA.debugLine="lblS.Gravity = Gravity.CENTER_HORIZONTAL";
 Debug.ShouldStop(512);
+_lbls.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
+ BA.debugLineNum = 171;BA.debugLine="settingsPnl.AddView(lblS, 90dip, 80dip, 70dip, 20";
+Debug.ShouldStop(1024);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((_lbls.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 90)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 80)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
- BA.debugLineNum = 172;BA.debugLine="lblL.Initialize(\"\")";
-Debug.ShouldStop(2048);
-_lbll.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 173;BA.debugLine="lblL.Text = \"Long\"";
+ BA.debugLineNum = 173;BA.debugLine="lblL.Initialize(\"\")";
 Debug.ShouldStop(4096);
-_lbll.runMethod(true,"setText",BA.ObjectToCharSequence("Long"));
- BA.debugLineNum = 174;BA.debugLine="lblL.TextSize = 12";
+_lbll.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 174;BA.debugLine="lblL.Text = \"Long\"";
 Debug.ShouldStop(8192);
-_lbll.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
- BA.debugLineNum = 175;BA.debugLine="lblL.Gravity = Gravity.CENTER_HORIZONTAL";
+_lbll.runMethod(true,"setText",BA.ObjectToCharSequence("Long"));
+ BA.debugLineNum = 175;BA.debugLine="lblL.TextSize = 12";
 Debug.ShouldStop(16384);
-_lbll.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
- BA.debugLineNum = 176;BA.debugLine="settingsPnl.AddView(lblL, 170dip, 80dip, 70dip, 2";
+_lbll.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
+ BA.debugLineNum = 176;BA.debugLine="lblL.Gravity = Gravity.CENTER_HORIZONTAL";
 Debug.ShouldStop(32768);
+_lbll.runMethod(true,"setGravity",clockactivity.mostCurrent.__c.getField(false,"Gravity").getField(true,"CENTER_HORIZONTAL"));
+ BA.debugLineNum = 177;BA.debugLine="settingsPnl.AddView(lblL, 170dip, 80dip, 70dip, 2";
+Debug.ShouldStop(65536);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((_lbll.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 170)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 80)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 70)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
- BA.debugLineNum = 178;BA.debugLine="Dim closeL As Label";
-Debug.ShouldStop(131072);
-_closel = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("closeL", _closel);
- BA.debugLineNum = 179;BA.debugLine="closeL.Initialize(\"closeL\")";
+ BA.debugLineNum = 179;BA.debugLine="Dim closeL As Label";
 Debug.ShouldStop(262144);
-_closel.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("closeL")));
- BA.debugLineNum = 180;BA.debugLine="settingsPnl.AddView(closeL, 10dip, 10dip, 20dip,";
+_closel = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("closeL", _closel);
+ BA.debugLineNum = 180;BA.debugLine="closeL.Initialize(\"closeL\")";
 Debug.ShouldStop(524288);
-clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((_closel.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
- BA.debugLineNum = 181;BA.debugLine="closeL.Text = \"X\"";
+_closel.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("closeL")));
+ BA.debugLineNum = 181;BA.debugLine="settingsPnl.AddView(closeL, 10dip, 10dip, 20dip,";
 Debug.ShouldStop(1048576);
+clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((_closel.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
+ BA.debugLineNum = 182;BA.debugLine="closeL.Text = \"X\"";
+Debug.ShouldStop(2097152);
 _closel.runMethod(true,"setText",BA.ObjectToCharSequence("X"));
- BA.debugLineNum = 183;BA.debugLine="Dim saveBtn As Button";
-Debug.ShouldStop(4194304);
-_savebtn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("saveBtn", _savebtn);
- BA.debugLineNum = 184;BA.debugLine="saveBtn.Initialize(\"saveBtn\")";
+ BA.debugLineNum = 184;BA.debugLine="Dim saveBtn As Button";
 Debug.ShouldStop(8388608);
-_savebtn.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("saveBtn")));
- BA.debugLineNum = 185;BA.debugLine="saveBtn.Text = \"Save Settings\"";
+_savebtn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("saveBtn", _savebtn);
+ BA.debugLineNum = 185;BA.debugLine="saveBtn.Initialize(\"saveBtn\")";
 Debug.ShouldStop(16777216);
-_savebtn.runMethod(true,"setText",BA.ObjectToCharSequence("Save Settings"));
- BA.debugLineNum = 186;BA.debugLine="settingsPnl.AddView(saveBtn, 10dip, 130dip, 230di";
+_savebtn.runVoidMethod ("Initialize",clockactivity.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("saveBtn")));
+ BA.debugLineNum = 186;BA.debugLine="saveBtn.Text = \"Save Settings\"";
 Debug.ShouldStop(33554432);
+_savebtn.runMethod(true,"setText",BA.ObjectToCharSequence("Save Settings"));
+ BA.debugLineNum = 187;BA.debugLine="settingsPnl.AddView(saveBtn, 10dip, 130dip, 230di";
+Debug.ShouldStop(67108864);
 clockactivity.mostCurrent._settingspnl.runVoidMethod ("AddView",(Object)((_savebtn.getObject())),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 130)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 230)))),(Object)(clockactivity.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 188;BA.debugLine="End Sub";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 189;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -550,24 +550,24 @@ finally {
 		}}
 public static RemoteObject  _shortbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("shortBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,197);
+		Debug.PushSubsStack("shortBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,198);
 if (RapidSub.canDelegate("shortbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","shortbtn_click");}
- BA.debugLineNum = 197;BA.debugLine="Private Sub shortBtn_Click";
-Debug.ShouldStop(16);
- BA.debugLineNum = 198;BA.debugLine="timerStop";
+ BA.debugLineNum = 198;BA.debugLine="Private Sub shortBtn_Click";
 Debug.ShouldStop(32);
-_timerstop();
- BA.debugLineNum = 199;BA.debugLine="secondsRemain = shortDef";
+ BA.debugLineNum = 199;BA.debugLine="timerStop";
 Debug.ShouldStop(64);
-clockactivity._secondsremain = clockactivity._shortdef;
- BA.debugLineNum = 200;BA.debugLine="timerState = 1";
+_timerstop();
+ BA.debugLineNum = 200;BA.debugLine="secondsRemain = shortDef";
 Debug.ShouldStop(128);
-clockactivity._timerstate = BA.numberCast(int.class, 1);
- BA.debugLineNum = 201;BA.debugLine="updateLbl";
+clockactivity._secondsremain = clockactivity._shortdef;
+ BA.debugLineNum = 201;BA.debugLine="timerState = 1";
 Debug.ShouldStop(256);
-_updatelbl();
- BA.debugLineNum = 202;BA.debugLine="End Sub";
+clockactivity._timerstate = BA.numberCast(int.class, 1);
+ BA.debugLineNum = 202;BA.debugLine="updateLbl";
 Debug.ShouldStop(512);
+_updatelbl();
+ BA.debugLineNum = 203;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -578,56 +578,56 @@ finally {
 		}}
 public static RemoteObject  _skipbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("skipBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,240);
+		Debug.PushSubsStack("skipBtn_Click (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,241);
 if (RapidSub.canDelegate("skipbtn_click")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","skipbtn_click");}
- BA.debugLineNum = 240;BA.debugLine="Private Sub skipBtn_Click";
-Debug.ShouldStop(32768);
- BA.debugLineNum = 241;BA.debugLine="If timerState = 0 Then";
+ BA.debugLineNum = 241;BA.debugLine="Private Sub skipBtn_Click";
 Debug.ShouldStop(65536);
-if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 242;BA.debugLine="counter = counter + 1";
+ BA.debugLineNum = 242;BA.debugLine="If timerState = 0 Then";
 Debug.ShouldStop(131072);
+if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 243;BA.debugLine="counter = counter + 1";
+Debug.ShouldStop(262144);
 clockactivity._counter = RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(1)}, "+",1, 1);
- BA.debugLineNum = 244;BA.debugLine="If counter Mod 4 = 0 Then";
-Debug.ShouldStop(524288);
-if (RemoteObject.solveBoolean("=",RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(4)}, "%",0, 1),BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 245;BA.debugLine="secondsRemain = longDef";
+ BA.debugLineNum = 245;BA.debugLine="If counter Mod 4 = 0 Then";
 Debug.ShouldStop(1048576);
+if (RemoteObject.solveBoolean("=",RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(4)}, "%",0, 1),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 246;BA.debugLine="secondsRemain = longDef";
+Debug.ShouldStop(2097152);
 clockactivity._secondsremain = clockactivity._longdef;
  }else {
- BA.debugLineNum = 247;BA.debugLine="secondsRemain = shortDef";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 248;BA.debugLine="secondsRemain = shortDef";
+Debug.ShouldStop(8388608);
 clockactivity._secondsremain = clockactivity._shortdef;
  };
- BA.debugLineNum = 249;BA.debugLine="timerState = 1";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 250;BA.debugLine="timerState = 1";
+Debug.ShouldStop(33554432);
 clockactivity._timerstate = BA.numberCast(int.class, 1);
  }else 
-{ BA.debugLineNum = 251;BA.debugLine="Else If timerState = 1 Then";
-Debug.ShouldStop(67108864);
-if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 1))) { 
- BA.debugLineNum = 252;BA.debugLine="secondsRemain = pomoDef";
+{ BA.debugLineNum = 252;BA.debugLine="Else If timerState = 1 Then";
 Debug.ShouldStop(134217728);
-clockactivity._secondsremain = clockactivity._pomodef;
- BA.debugLineNum = 253;BA.debugLine="timerState = 0";
+if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 1))) { 
+ BA.debugLineNum = 253;BA.debugLine="secondsRemain = pomoDef";
 Debug.ShouldStop(268435456);
+clockactivity._secondsremain = clockactivity._pomodef;
+ BA.debugLineNum = 254;BA.debugLine="timerState = 0";
+Debug.ShouldStop(536870912);
 clockactivity._timerstate = BA.numberCast(int.class, 0);
  }}
 ;
- BA.debugLineNum = 256;BA.debugLine="updateLbl";
-Debug.ShouldStop(-2147483648);
-_updatelbl();
- BA.debugLineNum = 257;BA.debugLine="timerCount.Enabled = False";
+ BA.debugLineNum = 257;BA.debugLine="updateLbl";
 Debug.ShouldStop(1);
-clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 258;BA.debugLine="playing = False";
+_updatelbl();
+ BA.debugLineNum = 258;BA.debugLine="timerCount.Enabled = False";
 Debug.ShouldStop(2);
-clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"False");
- BA.debugLineNum = 259;BA.debugLine="playBtn.Text = \"Start\"";
+clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 259;BA.debugLine="playing = False";
 Debug.ShouldStop(4);
-clockactivity.mostCurrent._playbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Start"));
- BA.debugLineNum = 260;BA.debugLine="End Sub";
+clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"False");
+ BA.debugLineNum = 260;BA.debugLine="playBtn.Text = \"Start\"";
 Debug.ShouldStop(8);
+clockactivity.mostCurrent._playbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Start"));
+ BA.debugLineNum = 261;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -638,21 +638,21 @@ finally {
 		}}
 public static RemoteObject  _timerstop() throws Exception{
 try {
-		Debug.PushSubsStack("timerStop (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,262);
+		Debug.PushSubsStack("timerStop (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,263);
 if (RapidSub.canDelegate("timerstop")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","timerstop");}
- BA.debugLineNum = 262;BA.debugLine="Private Sub timerStop";
-Debug.ShouldStop(32);
- BA.debugLineNum = 263;BA.debugLine="timerCount.Enabled = False";
+ BA.debugLineNum = 263;BA.debugLine="Private Sub timerStop";
 Debug.ShouldStop(64);
-clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 264;BA.debugLine="playing = False";
+ BA.debugLineNum = 264;BA.debugLine="timerCount.Enabled = False";
 Debug.ShouldStop(128);
-clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"False");
- BA.debugLineNum = 265;BA.debugLine="playBtn.Text = \"Start\"";
+clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 265;BA.debugLine="playing = False";
 Debug.ShouldStop(256);
-clockactivity.mostCurrent._playbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Start"));
- BA.debugLineNum = 266;BA.debugLine="End Sub";
+clockactivity._playing = clockactivity.mostCurrent.__c.getField(true,"False");
+ BA.debugLineNum = 266;BA.debugLine="playBtn.Text = \"Start\"";
 Debug.ShouldStop(512);
+clockactivity.mostCurrent._playbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Start"));
+ BA.debugLineNum = 267;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -663,64 +663,64 @@ finally {
 		}}
 public static RemoteObject  _tmr_tick() throws Exception{
 try {
-		Debug.PushSubsStack("tmr_Tick (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,94);
+		Debug.PushSubsStack("tmr_Tick (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,95);
 if (RapidSub.canDelegate("tmr_tick")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","tmr_tick");}
- BA.debugLineNum = 94;BA.debugLine="Sub tmr_Tick";
-Debug.ShouldStop(536870912);
- BA.debugLineNum = 95;BA.debugLine="If secondsRemain > 0 Then";
+ BA.debugLineNum = 95;BA.debugLine="Sub tmr_Tick";
 Debug.ShouldStop(1073741824);
-if (RemoteObject.solveBoolean(">",clockactivity._secondsremain,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 96;BA.debugLine="secondsRemain = secondsRemain - 1";
+ BA.debugLineNum = 96;BA.debugLine="If secondsRemain > 0 Then";
 Debug.ShouldStop(-2147483648);
-clockactivity._secondsremain = RemoteObject.solve(new RemoteObject[] {clockactivity._secondsremain,RemoteObject.createImmutable(1)}, "-",1, 1);
- BA.debugLineNum = 97;BA.debugLine="updateLbl";
+if (RemoteObject.solveBoolean(">",clockactivity._secondsremain,BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 97;BA.debugLine="secondsRemain = secondsRemain - 1";
 Debug.ShouldStop(1);
+clockactivity._secondsremain = RemoteObject.solve(new RemoteObject[] {clockactivity._secondsremain,RemoteObject.createImmutable(1)}, "-",1, 1);
+ BA.debugLineNum = 98;BA.debugLine="updateLbl";
+Debug.ShouldStop(2);
 _updatelbl();
  }else {
- BA.debugLineNum = 99;BA.debugLine="timerCount.Enabled = False";
-Debug.ShouldStop(4);
-clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 100;BA.debugLine="playBtn.Enabled = True";
+ BA.debugLineNum = 100;BA.debugLine="timerCount.Enabled = False";
 Debug.ShouldStop(8);
+clockactivity._timercount.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 101;BA.debugLine="playBtn.Enabled = True";
+Debug.ShouldStop(16);
 clockactivity.mostCurrent._playbtn.runMethod(true,"setEnabled",clockactivity.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 103;BA.debugLine="If timerState = 0 Then";
-Debug.ShouldStop(64);
-if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 104;BA.debugLine="counter = counter + 1";
+ BA.debugLineNum = 104;BA.debugLine="If timerState = 0 Then";
 Debug.ShouldStop(128);
+if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 105;BA.debugLine="counter = counter + 1";
+Debug.ShouldStop(256);
 clockactivity._counter = RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(1)}, "+",1, 1);
- BA.debugLineNum = 106;BA.debugLine="If counter Mod 4 = 0 Then";
-Debug.ShouldStop(512);
-if (RemoteObject.solveBoolean("=",RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(4)}, "%",0, 1),BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 107;BA.debugLine="secondsRemain = longDef";
+ BA.debugLineNum = 107;BA.debugLine="If counter Mod 4 = 0 Then";
 Debug.ShouldStop(1024);
+if (RemoteObject.solveBoolean("=",RemoteObject.solve(new RemoteObject[] {clockactivity._counter,RemoteObject.createImmutable(4)}, "%",0, 1),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 108;BA.debugLine="secondsRemain = longDef";
+Debug.ShouldStop(2048);
 clockactivity._secondsremain = clockactivity._longdef;
  }else {
- BA.debugLineNum = 109;BA.debugLine="secondsRemain = shortDef";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 110;BA.debugLine="secondsRemain = shortDef";
+Debug.ShouldStop(8192);
 clockactivity._secondsremain = clockactivity._shortdef;
  };
- BA.debugLineNum = 111;BA.debugLine="timerState = 1";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 112;BA.debugLine="timerState = 1";
+Debug.ShouldStop(32768);
 clockactivity._timerstate = BA.numberCast(int.class, 1);
  }else 
-{ BA.debugLineNum = 113;BA.debugLine="Else If timerState = 1 Then";
-Debug.ShouldStop(65536);
-if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 1))) { 
- BA.debugLineNum = 114;BA.debugLine="secondsRemain = pomoDef";
+{ BA.debugLineNum = 114;BA.debugLine="Else If timerState = 1 Then";
 Debug.ShouldStop(131072);
-clockactivity._secondsremain = clockactivity._pomodef;
- BA.debugLineNum = 115;BA.debugLine="timerState = 0";
+if (RemoteObject.solveBoolean("=",clockactivity._timerstate,BA.numberCast(double.class, 1))) { 
+ BA.debugLineNum = 115;BA.debugLine="secondsRemain = pomoDef";
 Debug.ShouldStop(262144);
+clockactivity._secondsremain = clockactivity._pomodef;
+ BA.debugLineNum = 116;BA.debugLine="timerState = 0";
+Debug.ShouldStop(524288);
 clockactivity._timerstate = BA.numberCast(int.class, 0);
  }}
 ;
- BA.debugLineNum = 118;BA.debugLine="updateLbl";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 119;BA.debugLine="updateLbl";
+Debug.ShouldStop(4194304);
 _updatelbl();
  };
- BA.debugLineNum = 120;BA.debugLine="End Sub";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 121;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -731,26 +731,26 @@ finally {
 		}}
 public static RemoteObject  _updatelbl() throws Exception{
 try {
-		Debug.PushSubsStack("updateLbl (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,122);
+		Debug.PushSubsStack("updateLbl (clockactivity) ","clockactivity",5,clockactivity.mostCurrent.activityBA,clockactivity.mostCurrent,123);
 if (RapidSub.canDelegate("updatelbl")) { return b4a.example.clockactivity.remoteMe.runUserSub(false, "clockactivity","updatelbl");}
 RemoteObject _mins = RemoteObject.createImmutable(0);
 RemoteObject _secs = RemoteObject.createImmutable(0);
- BA.debugLineNum = 122;BA.debugLine="Sub updateLbl";
-Debug.ShouldStop(33554432);
- BA.debugLineNum = 123;BA.debugLine="Dim mins As Int = secondsRemain / 60";
+ BA.debugLineNum = 123;BA.debugLine="Sub updateLbl";
 Debug.ShouldStop(67108864);
-_mins = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {clockactivity._secondsremain,RemoteObject.createImmutable(60)}, "/",0, 0));Debug.locals.put("mins", _mins);Debug.locals.put("mins", _mins);
- BA.debugLineNum = 124;BA.debugLine="Dim secs As Int = secondsRemain Mod 60";
+ BA.debugLineNum = 124;BA.debugLine="Dim mins As Int = secondsRemain / 60";
 Debug.ShouldStop(134217728);
-_secs = RemoteObject.solve(new RemoteObject[] {clockactivity._secondsremain,RemoteObject.createImmutable(60)}, "%",0, 1);Debug.locals.put("secs", _secs);Debug.locals.put("secs", _secs);
- BA.debugLineNum = 125;BA.debugLine="pomotimerLbl.Text = $\"$02.0{mins}:$02.0{secs}\"$";
+_mins = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {clockactivity._secondsremain,RemoteObject.createImmutable(60)}, "/",0, 0));Debug.locals.put("mins", _mins);Debug.locals.put("mins", _mins);
+ BA.debugLineNum = 125;BA.debugLine="Dim secs As Int = secondsRemain Mod 60";
 Debug.ShouldStop(268435456);
-clockactivity.mostCurrent._pomotimerlbl.runMethod(true,"setText",BA.ObjectToCharSequence((RemoteObject.concat(RemoteObject.createImmutable(""),clockactivity.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("02.0")),(Object)((_mins))),RemoteObject.createImmutable(":"),clockactivity.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("02.0")),(Object)((_secs))),RemoteObject.createImmutable("")))));
- BA.debugLineNum = 126;BA.debugLine="pomoCounter.Text = counter";
+_secs = RemoteObject.solve(new RemoteObject[] {clockactivity._secondsremain,RemoteObject.createImmutable(60)}, "%",0, 1);Debug.locals.put("secs", _secs);Debug.locals.put("secs", _secs);
+ BA.debugLineNum = 126;BA.debugLine="pomotimerLbl.Text = $\"$02.0{mins}:$02.0{secs}\"$";
 Debug.ShouldStop(536870912);
-clockactivity.mostCurrent._pomocounter.runMethod(true,"setText",BA.ObjectToCharSequence(clockactivity._counter));
- BA.debugLineNum = 127;BA.debugLine="End Sub";
+clockactivity.mostCurrent._pomotimerlbl.runMethod(true,"setText",BA.ObjectToCharSequence((RemoteObject.concat(RemoteObject.createImmutable(""),clockactivity.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("02.0")),(Object)((_mins))),RemoteObject.createImmutable(":"),clockactivity.mostCurrent.__c.runMethod(true,"SmartStringFormatter",(Object)(BA.ObjectToString("02.0")),(Object)((_secs))),RemoteObject.createImmutable("")))));
+ BA.debugLineNum = 127;BA.debugLine="pomoCounter.Text = counter";
 Debug.ShouldStop(1073741824);
+clockactivity.mostCurrent._pomocounter.runMethod(true,"setText",BA.ObjectToCharSequence(clockactivity._counter));
+ BA.debugLineNum = 128;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

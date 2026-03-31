@@ -377,10 +377,18 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 RDebugUtils.currentLine=3080192;
  //BA.debugLineNum = 3080192;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
 RDebugUtils.currentLine=3080194;
- //BA.debugLineNum = 3080194;BA.debugLine="Activity.LoadLayout(\"navAct\")";
+ //BA.debugLineNum = 3080194;BA.debugLine="If Starter.darkMode = False Then";
+if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=3080195;
+ //BA.debugLineNum = 3080195;BA.debugLine="Activity.LoadLayout(\"navAct\")";
 mostCurrent._activity.LoadLayout("navAct",mostCurrent.activityBA);
-RDebugUtils.currentLine=3080196;
- //BA.debugLineNum = 3080196;BA.debugLine="End Sub";
+ }else {
+RDebugUtils.currentLine=3080197;
+ //BA.debugLineNum = 3080197;BA.debugLine="Activity.LoadLayout(\"navActDark\")";
+mostCurrent._activity.LoadLayout("navActDark",mostCurrent.activityBA);
+ };
+RDebugUtils.currentLine=3080200;
+ //BA.debugLineNum = 3080200;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
