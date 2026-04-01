@@ -33,7 +33,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		Activity.LoadLayout("Schedule_ModuleLayoutDark")
 	End If
 	
-	sched_btn.Color = Colors.blue
+	sched_btn.Color = Colors.LightGray
 	DrawSchedule
 
 End Sub
@@ -133,13 +133,13 @@ End Sub
 Sub IdentifyColor (typeofevent As String) As Int
 	Dim mycolor As Int
 	If typeofevent = "Task" Then
-		mycolor = Colors.Blue
+		mycolor = Colors.ARGB(255, 0, 191, 255)
 	Else if typeofevent = "Event" Then
-		mycolor = Colors.Green
+		mycolor = Colors.ARGB(255, 152, 255, 152)
 	Else if typeofevent = "Birthday" Then
-		mycolor = Colors.Magenta
+		mycolor = Colors.ARGB(255, 255, 182, 193)
 	Else if typeofevent = "OOO" Then
-		mycolor = Colors.Yellow
+		mycolor = Colors.ARGB(255, 255, 215, 0)
 		
 	End If
 	Return mycolor

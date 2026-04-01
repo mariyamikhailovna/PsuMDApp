@@ -62,7 +62,7 @@ Sub Activity_Create(FirstTime As Boolean)
 		Activity.LoadLayout("Day_ModuleLayoutDark")
 	End If
 	
-	Day_btn.Color = Colors.blue
+	Day_btn.Color = Colors.LightGray
 	date_todaylbl.Text = SetDate(currentDate)
 	add_events_module.currentDate = SetDate(currentDate)
 	SetUpSpinners
@@ -131,14 +131,13 @@ End Sub
 Sub IdentifyColor (typeofevent As String) As Int
 	Dim mycolor As Int
 	If typeofevent = "Task" Then
-		mycolor = Colors.Blue
+		mycolor = Colors.ARGB(255, 0, 191, 255)
 	Else if typeofevent = "Event" Then
-		mycolor = Colors.Green
+		mycolor = Colors.ARGB(255, 152, 255, 152)
 	Else if typeofevent = "Birthday" Then
-		mycolor = Colors.Magenta
+		mycolor = Colors.ARGB(255, 255, 182, 193)
 	Else if typeofevent = "OOO" Then
-		mycolor = Colors.Yellow
-		
+		mycolor = Colors.ARGB(255, 255, 215, 0)
 	End If
 	Return mycolor
 End Sub
@@ -151,24 +150,44 @@ End Sub
 
 Sub DrawHourLabels
 	
+	
 	Svtimeline.Panel.RemoveAllViews
 	
 	Dim rowh As Int = 60dip
 	Svtimeline.Panel.Height = 24 * rowh
 	
 	
-	For h = 0 To 23
+	If Starter.darkMode = False Then
+		For h = 0 To 23
 		Dim p As Panel
 		p.Initialize("hour")
 		p.Tag = h
 		Svtimeline.Panel.AddView(p, 0, h*rowh, Svtimeline.width, rowh)
-		
+			
 		Dim lbl As Label
 		lbl.Initialize("")
 		lbl.Text = GetTimeString(h)
-		lbl.Gravity = Gravity.left
-		p.AddView(lbl, 0, 0, 60dip, rowh)
-	Next
+			lbl.TextColor = Colors.DarkGray
+			lbl.Gravity = Gravity.left
+			p.AddView(lbl, 0, 0, 60dip, rowh)
+		Next
+	Else
+		For h = 0 To 23
+			Dim p As Panel
+			p.Initialize("hour")
+			p.Tag = h
+			Svtimeline.Panel.AddView(p, 0, h*rowh, Svtimeline.width, rowh)
+			
+			Dim lbl As Label
+			lbl.Initialize("")
+			lbl.Text = GetTimeString(h)
+			lbl.TextColor = Colors.White
+			lbl.Gravity = Gravity.left
+			p.AddView(lbl, 0, 0, 60dip, rowh)
+		Next
+	End If
+		
+		
 End Sub
 
 Sub GetTimeString (h As Int) As String

@@ -54,41 +54,42 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub ShowALLCards(CardsList As List)
-	'custom scrollview
-	ScrollView1.Panel.RemoveAllViews
-	'initializing card sizes for the scroll view
-	Dim topPos As Int = 0
-	Dim cardHeight As Int = 150dip 'height
+		'custom scrollview
+		ScrollView1.Panel.RemoveAllViews
+		'initializing card sizes for the scroll view
+		Dim topPos As Int = 0
+		Dim cardHeight As Int = 150dip 'height
 	
-	For i = 0 To CardsList.Size -1
-		Dim card As Map = CardsList.Get(i)
-		Dim p As Panel
-		p.Initialize("")
-		p.Color = Colors.White
-		ScrollView1.Panel.AddView(p, 10dip, topPos, ScrollView1.Width - 20dip, cardHeight)
+		For i = 0 To CardsList.Size -1
+			Dim card As Map = CardsList.Get(i)
+			Dim p As Panel
+			p.Initialize("")
+			p.Color = Colors.White
+			ScrollView1.Panel.AddView(p, 10dip, topPos, ScrollView1.Width - 20dip, cardHeight)
 		
-		Dim lbl2 As Label
-		lbl2.Initialize("")
-		lbl2.Text = card.Get("subdeck")
-		lbl2.TextColor = Colors.Black
-		lbl2.TextSize = 14
-		lbl2.SingleLine = False
-		lbl2.Typeface = Typeface.DEFAULT_BOLD
-		p.AddView(lbl2, 10dip, 10dip, ScrollView1.Width - 20dip, 30dip)
+			Dim lbl2 As Label
+			lbl2.Initialize("")
+			lbl2.Text = card.Get("subdeck")
+			lbl2.TextColor = Colors.Black
+			lbl2.TextSize = 14
+			lbl2.SingleLine = False
+			lbl2.Typeface = Typeface.DEFAULT_BOLD
+			p.AddView(lbl2, 10dip, 10dip, ScrollView1.Width - 20dip, 30dip)
 		
-		Dim lbl As Label
-		lbl.Initialize("")
-		lbl.Text = "Q: " & card.Get("Q") & CRLF & "A: " & card.Get("A")
-		lbl.TextColor = Colors.black
-		lbl.TextSize = 12
-		lbl.SingleLine = False
+			Dim lbl As Label
+			lbl.Initialize("")
+			lbl.Text = "Q: " & card.Get("Q") & CRLF & "A: " & card.Get("A")
+			lbl.TextColor = Colors.black
+			lbl.TextSize = 12
+			lbl.SingleLine = False
 		
-		p.AddView(lbl, 10dip, 30dip, ScrollView1.Width - 20dip, 30dip)
-		topPos = topPos + lbl.height + 10dip
+			p.AddView(lbl, 10dip, 30dip, ScrollView1.Width - 20dip, 30dip)
+			topPos = topPos + lbl.height + 10dip
 		
-		topPos = topPos + cardHeight + 10dip
-	Next
-	ScrollView1.Panel.Height = topPos + 10dip
+			topPos = topPos + cardHeight + 10dip
+		Next
+		ScrollView1.Panel.Height = topPos + 10dip
+	
 End Sub
 
 Sub Activity_Resume
