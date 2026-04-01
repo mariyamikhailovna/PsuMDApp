@@ -503,10 +503,18 @@ Sub tasksListUI(newTask As String)
 	taskPNL.AddView(taskCheckbox, 0dip, 10dip, 40dip, 40dip)
 	
 	Dim taskLBL As Label
-	taskLBL.Initialize("taskLBL")
-	taskLBL.Text = newTask
-	taskLBL.TextColor = Colors.Black
-	taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Width - 80dip, taskPNL.Height)
+	If Starter.darkMode Then
+		taskLBL.Initialize("taskLBL")
+		taskLBL.Text = newTask
+		taskLBL.TextColor = Colors.White
+		taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Width - 80dip, taskPNL.Height)
+	Else
+		taskLBL.Initialize("taskLBL")
+		taskLBL.Text = newTask
+		taskLBL.TextColor = Colors.Black
+		taskPNL.AddView(taskLBL, 40dip, 20dip, taskPNL.Width - 80dip, taskPNL.Height)
+	End If
+	
 	
 	Dim divider As Panel
 	divider.Initialize("line")
