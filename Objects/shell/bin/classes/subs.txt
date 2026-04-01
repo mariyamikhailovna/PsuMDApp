@@ -1506,23 +1506,23 @@ todoactivity,activity_resume,0,0,64,66
 
 
 
-todoactivity,addtaskbtn_click,0,0,334,355
-,addtaskbtn,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl
+todoactivity,addtaskbtn_click,0,1,334,365
+,addtaskbtn,,taskslist,,addtaskpanel,starter,darkmode,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl
 
 
 todoactivity,addtitletextarea_enterpressed,1,0,121,246
 ,addtitletextarea,,currentlist,,kvs,,listslist,,newlistbtn,,isaddinglist,,untitledno,,taskslist,,progressnumber,,progresspercent,,progressbar,starter,darkmode,,addtaskbtnpnl,,addtaskbtn
 ,currentlist,,isaddinglist,,untitledno
 ,newaddtaskbtn
-todoactivity,entertaskbtn_click,1,0,357,420
+todoactivity,entertaskbtn_click,1,0,367,430
 ,addtasktextarea,,currentlist,,kvs,,taskslist,,addtaskbtn,starter,darkmode,,addtaskbtnpnl,,progressnumber,,progresspercent,,progressbar
 
 ,taskslistui,,newaddtaskbtn,,updateprogress
-todoactivity,taskslistui,1,0,489,532
+todoactivity,taskslistui,1,0,499,542
 starter,darkmode,,currentlist,,kvs,,taskslist
 
 
-todoactivity,updateprogress,0,0,534,570
+todoactivity,updateprogress,0,0,544,580
 ,currentlist,,progressnumber,,kvs,,progresspercent,,progressbar
 
 
@@ -1550,15 +1550,15 @@ todoactivity,process_globals,0,1,6,11
 
 
 
-todoactivity,showrenametaskpanel,1,0,445,469
+todoactivity,showrenametaskpanel,1,0,455,479
 ,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl
 
 
-todoactivity,taskcheckbox_checkedchange,0,0,471,487
+todoactivity,taskcheckbox_checkedchange,0,0,481,497
 ,currentlist,,kvs,,progressnumber,,progresspercent,,progressbar
 
 ,updateprogress
-todoactivity,taskslist_itemlongclick,1,0,422,443
+todoactivity,taskslist_itemlongclick,1,0,432,453
 ,currentlist,,kvs,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl,,progressnumber,,progresspercent,,progressbar
 
 ,showrenametaskpanel,,updateprogress

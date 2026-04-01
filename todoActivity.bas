@@ -344,10 +344,20 @@ Sub addTaskBtn_Click
 	
 	addTaskPanel.Initialize("addTaskPanel")
 	addTaskPanel.SetLayout(10dip, 0, 250dip, 100dip)
-	addTaskPanel.Color = Colors.ARGB(255, 247, 247, 247)
+	If Starter.darkMode Then
+		addTaskPanel.Color = Colors.ARGB(255, 17, 17, 17)
+	Else
+		addTaskPanel.Color = Colors.ARGB(255, 247, 247, 247)
+	End If
+	
 	
 	addTaskTextArea.Initialize("addTodoText")
 	addTaskTextArea.Hint = "Add a task..."
+	If Starter.darkMode Then
+		addTaskTextArea.HintColor = Colors.ARGB(255, 247, 247, 247)
+	Else
+		addTaskPanel.Color = Colors.ARGB(255, 17, 17, 17)
+	End If
 	addTaskTextArea.Tag = Null
 	
 	enterTaskBtn.Initialize("enterTaskBtn")
