@@ -76,17 +76,28 @@ Sub Activity_Pause (UserClosed As Boolean)
 End Sub
 
 Sub newAddTaskBtn
+	If Starter.darkMode Then
+		addTaskBtnPNL.Initialize("addTaskBtnPNL")
+		addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)
+		addTaskBtnPNL.Color = Colors.ARGB(255, 17, 17, 17)
 	
+		addTaskBtn.Initialize("addTaskBtn")
+		addTaskBtn.Text = "+ add a task "
+		addTaskBtn.TextColor = Colors.DarkGray
+		addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0dip, addTaskBtnPNL.Width, addTaskBtnPNL.Height)
+	
+		tasksList.Add(addTaskBtnPNL, "")
+	Else
 	addTaskBtnPNL.Initialize("addTaskBtnPNL")
 	addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)
 	addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250, 250)
 	
 	addTaskBtn.Initialize("addTaskBtn")
 	addTaskBtn.Text = "+ add a task "
-	addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, addTaskBtnPNL.Width, addTaskBtnPNL.Height)
+	addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0dip, addTaskBtnPNL.Width, addTaskBtnPNL.Height)
 	
 	tasksList.Add(addTaskBtnPNL, "")
-	
+	End If
 End Sub
 
 Sub newListBtn_Click

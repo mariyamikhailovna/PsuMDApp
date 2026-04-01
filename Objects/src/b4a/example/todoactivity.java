@@ -453,6 +453,9 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "newaddtaskbtn", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "newaddtaskbtn", null));}
 RDebugUtils.currentLine=24117248;
  //BA.debugLineNum = 24117248;BA.debugLine="Sub newAddTaskBtn";
+RDebugUtils.currentLine=24117249;
+ //BA.debugLineNum = 24117249;BA.debugLine="If Starter.darkMode Then";
+if (mostCurrent._starter._darkmode /*boolean*/ ) { 
 RDebugUtils.currentLine=24117250;
  //BA.debugLineNum = 24117250;BA.debugLine="addTaskBtnPNL.Initialize(\"addTaskBtnPNL\")";
 mostCurrent._addtaskbtnpnl.Initialize(mostCurrent.activityBA,"addTaskBtnPNL");
@@ -460,8 +463,8 @@ RDebugUtils.currentLine=24117251;
  //BA.debugLineNum = 24117251;BA.debugLine="addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)";
 mostCurrent._addtaskbtnpnl.SetLayout((int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (235)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)));
 RDebugUtils.currentLine=24117252;
- //BA.debugLineNum = 24117252;BA.debugLine="addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250,";
-mostCurrent._addtaskbtnpnl.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (250),(int) (250),(int) (250)));
+ //BA.debugLineNum = 24117252;BA.debugLine="addTaskBtnPNL.Color = Colors.ARGB(255, 17, 17, 1";
+mostCurrent._addtaskbtnpnl.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (17),(int) (17),(int) (17)));
 RDebugUtils.currentLine=24117254;
  //BA.debugLineNum = 24117254;BA.debugLine="addTaskBtn.Initialize(\"addTaskBtn\")";
 mostCurrent._addtaskbtn.Initialize(mostCurrent.activityBA,"addTaskBtn");
@@ -469,13 +472,39 @@ RDebugUtils.currentLine=24117255;
  //BA.debugLineNum = 24117255;BA.debugLine="addTaskBtn.Text = \"+ add a task \"";
 mostCurrent._addtaskbtn.setText(BA.ObjectToCharSequence("+ add a task "));
 RDebugUtils.currentLine=24117256;
- //BA.debugLineNum = 24117256;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0, addT";
-mostCurrent._addtaskbtnpnl.AddView((android.view.View)(mostCurrent._addtaskbtn.getObject()),(int) (-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))),(int) (0),mostCurrent._addtaskbtnpnl.getWidth(),mostCurrent._addtaskbtnpnl.getHeight());
-RDebugUtils.currentLine=24117258;
- //BA.debugLineNum = 24117258;BA.debugLine="tasksList.Add(addTaskBtnPNL, \"\")";
+ //BA.debugLineNum = 24117256;BA.debugLine="addTaskBtn.TextColor = Colors.DarkGray";
+mostCurrent._addtaskbtn.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.DarkGray);
+RDebugUtils.currentLine=24117257;
+ //BA.debugLineNum = 24117257;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0dip,";
+mostCurrent._addtaskbtnpnl.AddView((android.view.View)(mostCurrent._addtaskbtn.getObject()),(int) (-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),mostCurrent._addtaskbtnpnl.getWidth(),mostCurrent._addtaskbtnpnl.getHeight());
+RDebugUtils.currentLine=24117259;
+ //BA.debugLineNum = 24117259;BA.debugLine="tasksList.Add(addTaskBtnPNL, \"\")";
 mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._addtaskbtnpnl.getObject())),(Object)(""));
-RDebugUtils.currentLine=24117260;
- //BA.debugLineNum = 24117260;BA.debugLine="End Sub";
+ }else {
+RDebugUtils.currentLine=24117261;
+ //BA.debugLineNum = 24117261;BA.debugLine="addTaskBtnPNL.Initialize(\"addTaskBtnPNL\")";
+mostCurrent._addtaskbtnpnl.Initialize(mostCurrent.activityBA,"addTaskBtnPNL");
+RDebugUtils.currentLine=24117262;
+ //BA.debugLineNum = 24117262;BA.debugLine="addTaskBtnPNL.SetLayout(0, 0, 235dip, 50dip)";
+mostCurrent._addtaskbtnpnl.SetLayout((int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (235)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50)));
+RDebugUtils.currentLine=24117263;
+ //BA.debugLineNum = 24117263;BA.debugLine="addTaskBtnPNL.Color = Colors.ARGB(255, 250, 250,";
+mostCurrent._addtaskbtnpnl.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (250),(int) (250),(int) (250)));
+RDebugUtils.currentLine=24117265;
+ //BA.debugLineNum = 24117265;BA.debugLine="addTaskBtn.Initialize(\"addTaskBtn\")";
+mostCurrent._addtaskbtn.Initialize(mostCurrent.activityBA,"addTaskBtn");
+RDebugUtils.currentLine=24117266;
+ //BA.debugLineNum = 24117266;BA.debugLine="addTaskBtn.Text = \"+ add a task \"";
+mostCurrent._addtaskbtn.setText(BA.ObjectToCharSequence("+ add a task "));
+RDebugUtils.currentLine=24117267;
+ //BA.debugLineNum = 24117267;BA.debugLine="addTaskBtnPNL.AddView(addTaskBtn, -10dip, 0dip, a";
+mostCurrent._addtaskbtnpnl.AddView((android.view.View)(mostCurrent._addtaskbtn.getObject()),(int) (-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),mostCurrent._addtaskbtnpnl.getWidth(),mostCurrent._addtaskbtnpnl.getHeight());
+RDebugUtils.currentLine=24117269;
+ //BA.debugLineNum = 24117269;BA.debugLine="tasksList.Add(addTaskBtnPNL, \"\")";
+mostCurrent._taskslist._add((anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(mostCurrent._addtaskbtnpnl.getObject())),(Object)(""));
+ };
+RDebugUtils.currentLine=24117271;
+ //BA.debugLineNum = 24117271;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
