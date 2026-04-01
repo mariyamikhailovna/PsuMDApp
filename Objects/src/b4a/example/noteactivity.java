@@ -359,13 +359,13 @@ public b4a.example.corkactivity _corkactivity = null;
 public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
+public b4a.example.day_module _day_module = null;
+public b4a.example.calendaractivity _calendaractivity = null;
+public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.add_card_module _add_card_module = null;
 public b4a.example.add_card_module2 _add_card_module2 = null;
-public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.all_active_recall _all_active_recall = null;
-public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.card_module _card_module = null;
-public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;
@@ -378,42 +378,42 @@ public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="noteactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=6291456;
- //BA.debugLineNum = 6291456;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=6291458;
- //BA.debugLineNum = 6291458;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentLine=5177344;
+ //BA.debugLineNum = 5177344;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=5177346;
+ //BA.debugLineNum = 5177346;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=6291459;
- //BA.debugLineNum = 6291459;BA.debugLine="Activity.LoadLayout(\"notepadLayout\")";
+RDebugUtils.currentLine=5177347;
+ //BA.debugLineNum = 5177347;BA.debugLine="Activity.LoadLayout(\"notepadLayout\")";
 mostCurrent._activity.LoadLayout("notepadLayout",mostCurrent.activityBA);
  }else {
-RDebugUtils.currentLine=6291461;
- //BA.debugLineNum = 6291461;BA.debugLine="Activity.LoadLayout(\"notepadLayoutDark\")";
+RDebugUtils.currentLine=5177349;
+ //BA.debugLineNum = 5177349;BA.debugLine="Activity.LoadLayout(\"notepadLayoutDark\")";
 mostCurrent._activity.LoadLayout("notepadLayoutDark",mostCurrent.activityBA);
  };
-RDebugUtils.currentLine=6291464;
- //BA.debugLineNum = 6291464;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5177352;
+ //BA.debugLineNum = 5177352;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="noteactivity";
-RDebugUtils.currentLine=6422528;
- //BA.debugLineNum = 6422528;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=6422530;
- //BA.debugLineNum = 6422530;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5308416;
+ //BA.debugLineNum = 5308416;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=5308418;
+ //BA.debugLineNum = 5308418;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="noteactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=6356992;
- //BA.debugLineNum = 6356992;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=6356993;
- //BA.debugLineNum = 6356993;BA.debugLine="RefreshList(\"\")";
+RDebugUtils.currentLine=5242880;
+ //BA.debugLineNum = 5242880;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=5242881;
+ //BA.debugLineNum = 5242881;BA.debugLine="RefreshList(\"\")";
 _refreshlist("");
-RDebugUtils.currentLine=6356994;
- //BA.debugLineNum = 6356994;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5242882;
+ //BA.debugLineNum = 5242882;BA.debugLine="End Sub";
 return "";
 }
 public static String  _refreshlist(String _searchquery) throws Exception{
@@ -425,23 +425,23 @@ anywheresoftware.b4a.objects.collections.List _keys = null;
 String _k = "";
 b4a.example.main._mynote _n = null;
 String _query = "";
-RDebugUtils.currentLine=6619136;
- //BA.debugLineNum = 6619136;BA.debugLine="Sub RefreshList(SearchQuery As String)";
-RDebugUtils.currentLine=6619137;
- //BA.debugLineNum = 6619137;BA.debugLine="noteClv.Clear";
+RDebugUtils.currentLine=5505024;
+ //BA.debugLineNum = 5505024;BA.debugLine="Sub RefreshList(SearchQuery As String)";
+RDebugUtils.currentLine=5505025;
+ //BA.debugLineNum = 5505025;BA.debugLine="noteClv.Clear";
 mostCurrent._noteclv._clear();
-RDebugUtils.currentLine=6619138;
- //BA.debugLineNum = 6619138;BA.debugLine="Dim AllNotes As List";
+RDebugUtils.currentLine=5505026;
+ //BA.debugLineNum = 5505026;BA.debugLine="Dim AllNotes As List";
 _allnotes = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=6619139;
- //BA.debugLineNum = 6619139;BA.debugLine="AllNotes.Initialize";
+RDebugUtils.currentLine=5505027;
+ //BA.debugLineNum = 5505027;BA.debugLine="AllNotes.Initialize";
 _allnotes.Initialize();
-RDebugUtils.currentLine=6619141;
- //BA.debugLineNum = 6619141;BA.debugLine="Dim keys As List = MainActivity.kvs.ListKeys";
+RDebugUtils.currentLine=5505029;
+ //BA.debugLineNum = 5505029;BA.debugLine="Dim keys As List = MainActivity.kvs.ListKeys";
 _keys = new anywheresoftware.b4a.objects.collections.List();
 _keys = mostCurrent._mainactivity._kvs /*b4a.example3.keyvaluestore*/ ._listkeys();
-RDebugUtils.currentLine=6619143;
- //BA.debugLineNum = 6619143;BA.debugLine="For Each k As String In keys";
+RDebugUtils.currentLine=5505031;
+ //BA.debugLineNum = 5505031;BA.debugLine="For Each k As String In keys";
 {
 final anywheresoftware.b4a.BA.IterableList group5 = _keys;
 final int groupLen5 = group5.getSize()
@@ -449,38 +449,38 @@ final int groupLen5 = group5.getSize()
 ;
 for (; index5 < groupLen5;index5++){
 _k = BA.ObjectToString(group5.Get(index5));
-RDebugUtils.currentLine=6619144;
- //BA.debugLineNum = 6619144;BA.debugLine="If k.StartsWith(\"N_\") Then";
+RDebugUtils.currentLine=5505032;
+ //BA.debugLineNum = 5505032;BA.debugLine="If k.StartsWith(\"N_\") Then";
 if (_k.startsWith("N_")) { 
-RDebugUtils.currentLine=6619145;
- //BA.debugLineNum = 6619145;BA.debugLine="Dim N As MyNote = MainActivity.kvs.Get(k)";
+RDebugUtils.currentLine=5505033;
+ //BA.debugLineNum = 5505033;BA.debugLine="Dim N As MyNote = MainActivity.kvs.Get(k)";
 _n = (b4a.example.main._mynote)(mostCurrent._mainactivity._kvs /*b4a.example3.keyvaluestore*/ ._get(_k));
-RDebugUtils.currentLine=6619146;
- //BA.debugLineNum = 6619146;BA.debugLine="Dim query As String = SearchQuery.ToLowerCase";
+RDebugUtils.currentLine=5505034;
+ //BA.debugLineNum = 5505034;BA.debugLine="Dim query As String = SearchQuery.ToLowerCase";
 _query = _searchquery.toLowerCase();
-RDebugUtils.currentLine=6619147;
- //BA.debugLineNum = 6619147;BA.debugLine="If query = \"\" Then";
+RDebugUtils.currentLine=5505035;
+ //BA.debugLineNum = 5505035;BA.debugLine="If query = \"\" Then";
 if ((_query).equals("")) { 
-RDebugUtils.currentLine=6619148;
- //BA.debugLineNum = 6619148;BA.debugLine="AllNotes.Add(N)";
+RDebugUtils.currentLine=5505036;
+ //BA.debugLineNum = 5505036;BA.debugLine="AllNotes.Add(N)";
 _allnotes.Add((Object)(_n));
  }else {
-RDebugUtils.currentLine=6619150;
- //BA.debugLineNum = 6619150;BA.debugLine="If N.Tags.ToLowerCase.Contains(query) Or N.Tit";
+RDebugUtils.currentLine=5505038;
+ //BA.debugLineNum = 5505038;BA.debugLine="If N.Tags.ToLowerCase.Contains(query) Or N.Tit";
 if (_n.Tags /*String*/ .toLowerCase().contains(_query) || _n.Title /*String*/ .toLowerCase().contains(_query)) { 
-RDebugUtils.currentLine=6619151;
- //BA.debugLineNum = 6619151;BA.debugLine="AllNotes.Add(N)";
+RDebugUtils.currentLine=5505039;
+ //BA.debugLineNum = 5505039;BA.debugLine="AllNotes.Add(N)";
 _allnotes.Add((Object)(_n));
  };
  };
  };
  }
 };
-RDebugUtils.currentLine=6619157;
- //BA.debugLineNum = 6619157;BA.debugLine="AllNotes.SortType(\"Title\", True)";
+RDebugUtils.currentLine=5505045;
+ //BA.debugLineNum = 5505045;BA.debugLine="AllNotes.SortType(\"Title\", True)";
 _allnotes.SortType("Title",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=6619159;
- //BA.debugLineNum = 6619159;BA.debugLine="For Each n As MyNote In AllNotes";
+RDebugUtils.currentLine=5505047;
+ //BA.debugLineNum = 5505047;BA.debugLine="For Each n As MyNote In AllNotes";
 {
 final anywheresoftware.b4a.BA.IterableList group19 = _allnotes;
 final int groupLen19 = group19.getSize()
@@ -488,26 +488,26 @@ final int groupLen19 = group19.getSize()
 ;
 for (; index19 < groupLen19;index19++){
 _n = (b4a.example.main._mynote)(group19.Get(index19));
-RDebugUtils.currentLine=6619160;
- //BA.debugLineNum = 6619160;BA.debugLine="noteClv.AddTextItem(n.Title & CRLF & n.Tags, n)";
+RDebugUtils.currentLine=5505048;
+ //BA.debugLineNum = 5505048;BA.debugLine="noteClv.AddTextItem(n.Title & CRLF & n.Tags, n)";
 mostCurrent._noteclv._addtextitem((Object)(_n.Title /*String*/ +anywheresoftware.b4a.keywords.Common.CRLF+_n.Tags /*String*/ ),(Object)(_n));
  }
 };
-RDebugUtils.currentLine=6619163;
- //BA.debugLineNum = 6619163;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5505051;
+ //BA.debugLineNum = 5505051;BA.debugLine="End Sub";
 return "";
 }
 public static String  _addbtn_click() throws Exception{
 RDebugUtils.currentModule="noteactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "addbtn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "addbtn_click", null));}
-RDebugUtils.currentLine=6750208;
- //BA.debugLineNum = 6750208;BA.debugLine="Sub addBtn_Click";
-RDebugUtils.currentLine=6750209;
- //BA.debugLineNum = 6750209;BA.debugLine="StartActivity(editnote)";
+RDebugUtils.currentLine=5636096;
+ //BA.debugLineNum = 5636096;BA.debugLine="Sub addBtn_Click";
+RDebugUtils.currentLine=5636097;
+ //BA.debugLineNum = 5636097;BA.debugLine="StartActivity(editnote)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._editnote.getObject()));
-RDebugUtils.currentLine=6750210;
- //BA.debugLineNum = 6750210;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5636098;
+ //BA.debugLineNum = 5636098;BA.debugLine="End Sub";
 return "";
 }
 public static String  _noteclv_itemclick(int _index,Object _value) throws Exception{
@@ -515,19 +515,19 @@ RDebugUtils.currentModule="noteactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "noteclv_itemclick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "noteclv_itemclick", new Object[] {_index,_value}));}
 b4a.example.main._mynote _selectednote = null;
-RDebugUtils.currentLine=6488064;
- //BA.debugLineNum = 6488064;BA.debugLine="Sub noteClv_ItemClick (Index As Int, Value As Obje";
-RDebugUtils.currentLine=6488066;
- //BA.debugLineNum = 6488066;BA.debugLine="Dim selectedNote As MyNote = Value";
+RDebugUtils.currentLine=5373952;
+ //BA.debugLineNum = 5373952;BA.debugLine="Sub noteClv_ItemClick (Index As Int, Value As Obje";
+RDebugUtils.currentLine=5373954;
+ //BA.debugLineNum = 5373954;BA.debugLine="Dim selectedNote As MyNote = Value";
 _selectednote = (b4a.example.main._mynote)(_value);
-RDebugUtils.currentLine=6488069;
- //BA.debugLineNum = 6488069;BA.debugLine="editnote.ActiveNote = selectedNote";
+RDebugUtils.currentLine=5373957;
+ //BA.debugLineNum = 5373957;BA.debugLine="editnote.ActiveNote = selectedNote";
 mostCurrent._editnote._activenote /*b4a.example.main._mynote*/  = _selectednote;
-RDebugUtils.currentLine=6488071;
- //BA.debugLineNum = 6488071;BA.debugLine="StartActivity(editnote)";
+RDebugUtils.currentLine=5373959;
+ //BA.debugLineNum = 5373959;BA.debugLine="StartActivity(editnote)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._editnote.getObject()));
-RDebugUtils.currentLine=6488072;
- //BA.debugLineNum = 6488072;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5373960;
+ //BA.debugLineNum = 5373960;BA.debugLine="End Sub";
 return "";
 }
 public static void  _noteclv_itemlongclick(int _index,Object _value) throws Exception{
@@ -561,14 +561,14 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=6553601;
- //BA.debugLineNum = 6553601;BA.debugLine="Dim n As MyNote = Value";
+RDebugUtils.currentLine=5439489;
+ //BA.debugLineNum = 5439489;BA.debugLine="Dim n As MyNote = Value";
 _n = (b4a.example.main._mynote)(_value);
-RDebugUtils.currentLine=6553603;
- //BA.debugLineNum = 6553603;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete '\"";
+RDebugUtils.currentLine=5439491;
+ //BA.debugLineNum = 5439491;BA.debugLine="Msgbox2Async(\"Are you sure you want to delete '\"";
 anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence("Are you sure you want to delete '"+_n.Title /*String*/ +"'?"),BA.ObjectToCharSequence("Delete Note"),"No","","Yes",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)),processBA,anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=6553604;
- //BA.debugLineNum = 6553604;BA.debugLine="Wait For Msgbox_Result (res As Int)";
+RDebugUtils.currentLine=5439492;
+ //BA.debugLineNum = 5439492;BA.debugLine="Wait For Msgbox_Result (res As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "noteactivity", "noteclv_itemlongclick"), null);
 this.state = 5;
 return;
@@ -577,8 +577,8 @@ case 5:
 this.state = 1;
 _res = (Integer) result[0];
 ;
-RDebugUtils.currentLine=6553605;
- //BA.debugLineNum = 6553605;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
+RDebugUtils.currentLine=5439493;
+ //BA.debugLineNum = 5439493;BA.debugLine="If res = DialogResponse.NEGATIVE Then";
 if (true) break;
 
 case 1:
@@ -591,14 +591,14 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=6553606;
- //BA.debugLineNum = 6553606;BA.debugLine="MainActivity.kvs.Remove(\"N_\" & n.noteID)";
+RDebugUtils.currentLine=5439494;
+ //BA.debugLineNum = 5439494;BA.debugLine="MainActivity.kvs.Remove(\"N_\" & n.noteID)";
 parent.mostCurrent._mainactivity._kvs /*b4a.example3.keyvaluestore*/ ._remove("N_"+BA.NumberToString(_n.noteID /*long*/ ));
-RDebugUtils.currentLine=6553607;
- //BA.debugLineNum = 6553607;BA.debugLine="RefreshList(\"\")";
+RDebugUtils.currentLine=5439495;
+ //BA.debugLineNum = 5439495;BA.debugLine="RefreshList(\"\")";
 _refreshlist("");
-RDebugUtils.currentLine=6553608;
- //BA.debugLineNum = 6553608;BA.debugLine="ToastMessageShow(\"Note deleted\", False)";
+RDebugUtils.currentLine=5439496;
+ //BA.debugLineNum = 5439496;BA.debugLine="ToastMessageShow(\"Note deleted\", False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Note deleted"),anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
@@ -606,8 +606,8 @@ case 4:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=6553610;
- //BA.debugLineNum = 6553610;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5439498;
+ //BA.debugLineNum = 5439498;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -618,23 +618,23 @@ public static String  _notecvl_itemclick(int _index,Object _value) throws Except
 RDebugUtils.currentModule="noteactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "notecvl_itemclick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "notecvl_itemclick", new Object[] {_index,_value}));}
-RDebugUtils.currentLine=6815744;
- //BA.debugLineNum = 6815744;BA.debugLine="Sub noteCvl_ItemClick (Index As Int, Value As Obje";
-RDebugUtils.currentLine=6815745;
- //BA.debugLineNum = 6815745;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5701632;
+ //BA.debugLineNum = 5701632;BA.debugLine="Sub noteCvl_ItemClick (Index As Int, Value As Obje";
+RDebugUtils.currentLine=5701633;
+ //BA.debugLineNum = 5701633;BA.debugLine="End Sub";
 return "";
 }
 public static String  _searchtxt_textchanged(String _old,String _new) throws Exception{
 RDebugUtils.currentModule="noteactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "searchtxt_textchanged", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "searchtxt_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=6684672;
- //BA.debugLineNum = 6684672;BA.debugLine="Sub searchTxt_TextChanged (Old As String, New As S";
-RDebugUtils.currentLine=6684673;
- //BA.debugLineNum = 6684673;BA.debugLine="RefreshList(New)";
+RDebugUtils.currentLine=5570560;
+ //BA.debugLineNum = 5570560;BA.debugLine="Sub searchTxt_TextChanged (Old As String, New As S";
+RDebugUtils.currentLine=5570561;
+ //BA.debugLineNum = 5570561;BA.debugLine="RefreshList(New)";
 _refreshlist(_new);
-RDebugUtils.currentLine=6684674;
- //BA.debugLineNum = 6684674;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5570562;
+ //BA.debugLineNum = 5570562;BA.debugLine="End Sub";
 return "";
 }
 }
