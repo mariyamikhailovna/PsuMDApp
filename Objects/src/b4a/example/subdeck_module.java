@@ -24,7 +24,7 @@ public class subdeck_module extends Activity implements B4AActivity{
 	BA activityBA;
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
-	public static final boolean fullScreen = true;
+	public static final boolean fullScreen = false;
 	public static final boolean includeTitle = false;
     public static WeakReference<Activity> previousOne;
     public static boolean dontPause;

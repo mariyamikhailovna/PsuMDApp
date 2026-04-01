@@ -219,32 +219,32 @@ Debug.ShouldStop(16384);
 themeactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Default Theme"));
  BA.debugLineNum = 48;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
 Debug.ShouldStop(32768);
-themeactivity.mostCurrent._theme1.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
- BA.debugLineNum = 49;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
+themeactivity.mostCurrent._theme1.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("Theme1.PNG")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+ BA.debugLineNum = 49;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAs";
 Debug.ShouldStop(65536);
-themeactivity.mostCurrent._theme2.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+themeactivity.mostCurrent._theme2.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("Dtheme1.PNG")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 case 1: {
  BA.debugLineNum = 51;BA.debugLine="titleLbl.Text = \"Y2K Aero\"";
 Debug.ShouldStop(262144);
 themeactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Y2K Aero"));
- BA.debugLineNum = 52;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
+ BA.debugLineNum = 52;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAs";
 Debug.ShouldStop(524288);
-themeactivity.mostCurrent._theme1.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
- BA.debugLineNum = 53;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
+themeactivity.mostCurrent._theme1.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("Theme2.PNG")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+ BA.debugLineNum = 53;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAs";
 Debug.ShouldStop(1048576);
-themeactivity.mostCurrent._theme2.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+themeactivity.mostCurrent._theme2.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("Dtheme2.PNG")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 case 2: {
  BA.debugLineNum = 55;BA.debugLine="titleLbl.Text = \"Pixelated Rustic\"";
 Debug.ShouldStop(4194304);
 themeactivity.mostCurrent._titlelbl.runMethod(true,"setText",BA.ObjectToCharSequence("Pixelated Rustic"));
- BA.debugLineNum = 56;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
+ BA.debugLineNum = 56;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAs";
 Debug.ShouldStop(8388608);
-themeactivity.mostCurrent._theme1.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
- BA.debugLineNum = 57;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
+themeactivity.mostCurrent._theme1.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("Theme3.PNG")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme1.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+ BA.debugLineNum = 57;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAs";
 Debug.ShouldStop(16777216);
-themeactivity.mostCurrent._theme2.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("bob.png")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
+themeactivity.mostCurrent._theme2.runMethod(false,"setBitmap",(themeactivity._xui.runMethod(false,"LoadBitmapResize",(Object)(themeactivity.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(BA.ObjectToString("Dtheme3.PNG")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getWidth")),(Object)(themeactivity.mostCurrent._theme2.runMethod(true,"getHeight")),(Object)(themeactivity.mostCurrent.__c.getField(true,"True"))).getObject()));
  break; }
 }
 ;

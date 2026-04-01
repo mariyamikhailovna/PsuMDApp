@@ -419,32 +419,32 @@ RDebugUtils.currentLine=7995398;
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Default Theme"));
 RDebugUtils.currentLine=7995399;
  //BA.debugLineNum = 7995399;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
-mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Theme1.PNG",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
 RDebugUtils.currentLine=7995400;
- //BA.debugLineNum = 7995400;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
-mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ //BA.debugLineNum = 7995400;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAs";
+mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dtheme1.PNG",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 1: {
 RDebugUtils.currentLine=7995402;
  //BA.debugLineNum = 7995402;BA.debugLine="titleLbl.Text = \"Y2K Aero\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Y2K Aero"));
 RDebugUtils.currentLine=7995403;
- //BA.debugLineNum = 7995403;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
-mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ //BA.debugLineNum = 7995403;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAs";
+mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Theme2.PNG",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
 RDebugUtils.currentLine=7995404;
- //BA.debugLineNum = 7995404;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
-mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ //BA.debugLineNum = 7995404;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAs";
+mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dtheme2.PNG",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 case 2: {
 RDebugUtils.currentLine=7995406;
  //BA.debugLineNum = 7995406;BA.debugLine="titleLbl.Text = \"Pixelated Rustic\"";
 mostCurrent._titlelbl.setText(BA.ObjectToCharSequence("Pixelated Rustic"));
 RDebugUtils.currentLine=7995407;
- //BA.debugLineNum = 7995407;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAss";
-mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ //BA.debugLineNum = 7995407;BA.debugLine="theme1.Bitmap = xui.LoadBitmapResize(File.DirAs";
+mostCurrent._theme1.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Theme3.PNG",mostCurrent._theme1.getWidth(),mostCurrent._theme1.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
 RDebugUtils.currentLine=7995408;
- //BA.debugLineNum = 7995408;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAss";
-mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"bob.png",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
+ //BA.debugLineNum = 7995408;BA.debugLine="theme2.Bitmap = xui.LoadBitmapResize(File.DirAs";
+mostCurrent._theme2.setBitmap((android.graphics.Bitmap)(_xui.LoadBitmapResize(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Dtheme3.PNG",mostCurrent._theme2.getWidth(),mostCurrent._theme2.getHeight(),anywheresoftware.b4a.keywords.Common.True).getObject()));
  break; }
 }
 ;

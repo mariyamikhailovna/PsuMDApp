@@ -51,16 +51,16 @@ themePage = page
 Select page
 	Case 0
 		titleLbl.Text = "Default Theme"
-		theme1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", theme1.Width, theme1.Height, True)
-		theme2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", theme2.Width, theme2.Height, True)
+		theme1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "Theme1.PNG", theme1.Width, theme1.Height, True)
+			theme2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "Dtheme1.PNG", theme2.Width, theme2.Height, True)
 	Case 1
 		titleLbl.Text = "Y2K Aero"
-		theme1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", theme1.Width, theme1.Height, True)
-		theme2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", theme2.Width, theme2.Height, True)
+			theme1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "Theme2.PNG", theme1.Width, theme1.Height, True)
+			theme2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "Dtheme2.PNG", theme2.Width, theme2.Height, True)
 	Case 2
 		titleLbl.Text = "Pixelated Rustic"
-		theme1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", theme1.Width, theme1.Height, True)
-		theme2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "bob.png", theme2.Width, theme2.Height, True)
+			theme1.Bitmap = xui.LoadBitmapResize(File.DirAssets, "Theme3.PNG", theme1.Width, theme1.Height, True)
+			theme2.Bitmap = xui.LoadBitmapResize(File.DirAssets, "Dtheme3.PNG", theme2.Width, theme2.Height, True)
 	End Select
 	backBtn.Enabled = (page > 0)
 	nextBtn.Enabled = (page < 2)

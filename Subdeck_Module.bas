@@ -5,7 +5,7 @@ Type=Activity
 Version=13.4
 @EndOfDesignText@
 #Region  Activity Attributes 
-	#FullScreen: True
+	#FullScreen: False
 	#IncludeTitle: False
 #End Region
 
