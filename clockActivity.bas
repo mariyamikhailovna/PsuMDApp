@@ -14,7 +14,7 @@ Sub Process_Globals
 	'These variables can be accessed from all modules.
 	Private timerCount As Timer
 	Private xui As XUI
-	Private secondsRemain As Int = 5
+	Private secondsRemain As Int = 1500
 
 End Sub
 'stopwatch
@@ -24,6 +24,7 @@ Sub Globals
 	'These variables can only be accessed from this module.
 	Private pomotimerLbl As Label
 	Private playBtn As Button
+	Private sessionLbl As Label
 	Private pomoCounter As Label
 	Private settingsBtn As Button
 	Private settingsPnl As B4XView
@@ -32,12 +33,13 @@ Sub Globals
 	Private longTxt As EditText
 	Dim timerState As Int = 0
 	Dim counter As Int = 0
-	Dim pomoDef As Int = 300
-	Dim shortDef As Int = 180
-	Dim longDef As Int = 600
+	Dim pomoDef As Int = 1500
+	Dim shortDef As Int = 300
+	Dim longDef As Int = 900
 	Dim centerLeft As Int = 100dip
 	Dim centerTop As Int = 225dip
 	Dim playing As Boolean = False
+	Dim break As Int = 0
 
 End Sub
 
@@ -87,9 +89,7 @@ Private Sub playBtn_Click
 		timerCount.Enabled = True
 	End If
 	If playing = True Then
-		timerCount.Enabled = False
-		playing = False
-		playBtn.Text = "Start"
+		timerStop
 	Else
 		timerCount.Enabled = True
 		playing = True
@@ -103,17 +103,17 @@ Sub tmr_Tick
 		secondsRemain = secondsRemain - 1
 		updateLbl
 	Else
-		timerCount.Enabled = False
-		playBtn.Enabled = True
-		
+		timerStop
 		
 		If timerState = 0 Then
 			counter = counter + 1
 			
 			If counter Mod 4 = 0 Then
 				secondsRemain = longDef
+				break = 1
 			Else
 				secondsRemain = shortDef
+				break = 0
 			End If
 			timerState = 1
         
@@ -131,6 +131,16 @@ Sub updateLbl
 	Dim secs As Int = secondsRemain Mod 60
 	pomotimerLbl.Text = $"$02.0{mins}:$02.0{secs}"$
 	pomoCounter.Text = counter
+	
+	If timerState = 0 Then
+		sessionLbl.Text = "Pomodoro"
+	Else
+		If break = 1 Then
+			sessionLbl.Text = "Long Break"
+		Else
+			sessionLbl.Text = "Short Break"
+		End If
+	End If
 End Sub
 
 Private Sub settingsWindow(pW As Int, pH As Int)
@@ -205,6 +215,7 @@ Private Sub shortBtn_Click
 	timerStop
 	secondsRemain = shortDef
 	timerState = 1
+	break = 0
 	updateLbl
 End Sub
 
@@ -212,6 +223,7 @@ Private Sub longBtn_Click
 	timerStop
 	secondsRemain = longDef
 	timerState = 1
+	break = 1
 	updateLbl
 End Sub
 
@@ -234,7 +246,7 @@ Private Sub saveBtn_Click
 		secondsRemain = pomoDef
 	Else
 
-		If counter Mod 4 = 0 Then
+		If break = 1 Then
 			secondsRemain = longDef
 		Else
 			secondsRemain = shortDef
@@ -250,8 +262,10 @@ Private Sub skipBtn_Click
 			
 		If counter Mod 4 = 0 Then
 			secondsRemain = longDef
+			break = 1
 		Else
 			secondsRemain = shortDef
+			break = 0
 		End If
 		timerState = 1
         
@@ -261,9 +275,7 @@ Private Sub skipBtn_Click
 	End If
     
 	updateLbl
-	timerCount.Enabled = False
-	playing = False
-	playBtn.Text = "Start"
+	timerStop
 End Sub
 
 Private Sub timerStop

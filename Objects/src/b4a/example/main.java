@@ -801,8 +801,8 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=8519681;
- //BA.debugLineNum = 8519681;BA.debugLine="Sleep(750)";
+RDebugUtils.currentLine=4259841;
+ //BA.debugLineNum = 4259841;BA.debugLine="Sleep(750)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "startload"),(int) (750));
 this.state = 5;
 return;
@@ -810,8 +810,8 @@ case 5:
 //C
 this.state = 1;
 ;
-RDebugUtils.currentLine=8519683;
- //BA.debugLineNum = 8519683;BA.debugLine="Do While Starter.finishedInit = False";
+RDebugUtils.currentLine=4259843;
+ //BA.debugLineNum = 4259843;BA.debugLine="Do While Starter.finishedInit = False";
 if (true) break;
 
 case 1:
@@ -826,8 +826,8 @@ if (true) break;
 case 3:
 //C
 this.state = 1;
-RDebugUtils.currentLine=8519684;
- //BA.debugLineNum = 8519684;BA.debugLine="Sleep(100)";
+RDebugUtils.currentLine=4259844;
+ //BA.debugLineNum = 4259844;BA.debugLine="Sleep(100)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "startload"),(int) (100));
 this.state = 6;
 return;
@@ -841,21 +841,21 @@ case 4:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=8519686;
- //BA.debugLineNum = 8519686;BA.debugLine="StartService(musicService)";
+RDebugUtils.currentLine=4259846;
+ //BA.debugLineNum = 4259846;BA.debugLine="StartService(musicService)";
 anywheresoftware.b4a.keywords.Common.StartService(processBA,(Object)(parent.mostCurrent._musicservice.getObject()));
-RDebugUtils.currentLine=8519687;
- //BA.debugLineNum = 8519687;BA.debugLine="StartActivity(MainActivity)";
+RDebugUtils.currentLine=4259847;
+ //BA.debugLineNum = 4259847;BA.debugLine="StartActivity(MainActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._mainactivity.getObject()));
-RDebugUtils.currentLine=8519689;
- //BA.debugLineNum = 8519689;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4259849;
+ //BA.debugLineNum = 4259849;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
-RDebugUtils.currentLine=8519690;
- //BA.debugLineNum = 8519690;BA.debugLine="Return True";
+RDebugUtils.currentLine=4259850;
+ //BA.debugLineNum = 4259850;BA.debugLine="Return True";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
-RDebugUtils.currentLine=8519691;
- //BA.debugLineNum = 8519691;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4259851;
+ //BA.debugLineNum = 4259851;BA.debugLine="End Sub";
 if (true) break;
 
             }

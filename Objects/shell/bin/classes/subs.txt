@@ -270,82 +270,82 @@ helpactivity,process_globals,0,1,6,11
 ,helppage
 ,helppage
 
-clockactivity,activity_create,1,0,38,52
-starter,darkmode,,playbtn,,pomocounter,,pomotimerlbl,,settingsbtn,,timercount,,counter,,secondsremain
-,playbtn,,pomocounter,,pomotimerlbl,,settingsbtn
+clockactivity,activity_create,1,0,40,54
+starter,darkmode,,playbtn,,pomocounter,,pomotimerlbl,,sessionlbl,,settingsbtn,,timercount,,counter,,secondsremain,,timerstate,,break
+,playbtn,,pomocounter,,pomotimerlbl,,sessionlbl,,settingsbtn
 ,updatelbl
-clockactivity,updatelbl,0,0,123,128
-,secondsremain,,pomotimerlbl,,pomocounter,,counter
+clockactivity,updatelbl,0,1,123,138
+,secondsremain,,pomotimerlbl,,pomocounter,,counter,,timerstate,,sessionlbl,,break
 
 
-clockactivity,activity_pause,0,0,58,60
-
-
-
-clockactivity,activity_resume,0,0,54,56
+clockactivity,activity_pause,0,0,60,62
 
 
 
-clockactivity,closel_click,0,0,217,219
+clockactivity,activity_resume,0,0,56,58
+
+
+
+clockactivity,closel_click,0,0,229,231
 ,settingspnl
 
 
-clockactivity,exitbtn_click,0,0,62,64
+clockactivity,exitbtn_click,0,0,64,66
 
 
 
-clockactivity,formatbtn_click,0,0,66,77
+clockactivity,formatbtn_click,0,0,68,79
 mainactivity,format24h,mainactivity,clockbtn,mainactivity,clocklightbtn
 mainactivity,format24h
 mainactivity,timerclock_tick
-clockactivity,globals,0,1,16,36
-,timerstate,,counter,,pomodef,,shortdef,,longdef,,centerleft,,centertop,,playing
-,timerstate,,counter,,pomodef,,shortdef,,longdef,,centerleft,,centertop,,playing
+clockactivity,globals,0,1,16,38
+,timerstate,,counter,,pomodef,,shortdef,,longdef,,centerleft,,centertop,,playing,,break
+,timerstate,,counter,,pomodef,,shortdef,,longdef,,centerleft,,centertop,,playing,,break
 
-clockactivity,longbtn_click,0,0,205,210
-,secondsremain,,longdef,,timerstate,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter,,counter
-,secondsremain,,timerstate,,playing
+clockactivity,longbtn_click,0,0,216,222
+,secondsremain,,longdef,,timerstate,,break,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter,,counter,,sessionlbl
+,secondsremain,,timerstate,,break,,playing
 ,timerstop,,updatelbl
-clockactivity,timerstop,0,0,263,267
+clockactivity,timerstop,0,0,275,279
 ,timercount,,playing,,playbtn
 ,playing
 
-clockactivity,playbtn_click,0,0,79,93
+clockactivity,playbtn_click,0,0,81,93
 ,secondsremain,,timercount,,playing,,playbtn
 ,playing
-
-clockactivity,pomobtn_click,0,0,191,196
-,secondsremain,,pomodef,,timerstate,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter,,counter
+,timerstop
+clockactivity,pomobtn_click,0,0,201,206
+,secondsremain,,pomodef,,timerstate,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter,,counter,,sessionlbl,,break
 ,secondsremain,,timerstate,,playing
 ,timerstop,,updatelbl
 clockactivity,process_globals,0,1,6,13
 ,secondsremain
 ,secondsremain
 
-clockactivity,savebtn_click,0,0,221,239
-,pomotxt,,pomodef,,shorttxt,,shortdef,,longtxt,,longdef,,timerstate,,secondsremain,,counter,,settingspnl,,pomotimerlbl,,pomocounter
+clockactivity,savebtn_click,0,1,233,251
+,pomotxt,,pomodef,,shorttxt,,shortdef,,longtxt,,longdef,,timerstate,,secondsremain,,break,,settingspnl,,pomotimerlbl,,pomocounter,,counter,,sessionlbl
 ,pomodef,,shortdef,,longdef,,secondsremain
 ,updatelbl
-clockactivity,settingsbtn_click,1,0,212,215
+clockactivity,settingsbtn_click,1,0,224,227
 ,settingspnl,,xui,,centerleft,,centertop,,pomotxt,,pomodef,,shorttxt,,shortdef,,longtxt,,longdef
 ,settingspnl
 ,settingswindow
-clockactivity,settingswindow,1,0,130,189
+clockactivity,settingswindow,1,0,140,199
 ,settingspnl,,xui,,centerleft,,centertop,,pomotxt,,pomodef,,shorttxt,,shortdef,,longtxt,,longdef
 ,settingspnl
 
-clockactivity,shortbtn_click,0,0,198,203
-,secondsremain,,shortdef,,timerstate,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter,,counter
-,secondsremain,,timerstate,,playing
+clockactivity,shortbtn_click,0,0,208,214
+,secondsremain,,shortdef,,timerstate,,break,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter,,counter,,sessionlbl
+,secondsremain,,timerstate,,break,,playing
 ,timerstop,,updatelbl
-clockactivity,skipbtn_click,0,0,241,261
-,timerstate,,counter,,secondsremain,,longdef,,shortdef,,pomodef,,timercount,,playing,,playbtn,,pomotimerlbl,,pomocounter
-,counter,,secondsremain,,timerstate,,playing
-,updatelbl
-clockactivity,tmr_tick,0,0,95,121
-,secondsremain,,timercount,,playbtn,,timerstate,,counter,,longdef,,shortdef,,pomodef,,pomotimerlbl,,pomocounter
-,secondsremain,,counter,,timerstate
-,updatelbl
+clockactivity,skipbtn_click,0,0,253,273
+,timerstate,,counter,,secondsremain,,longdef,,break,,shortdef,,pomodef,,pomotimerlbl,,pomocounter,,sessionlbl,,timercount,,playing,,playbtn
+,counter,,secondsremain,,break,,timerstate,,playing
+,updatelbl,,timerstop
+clockactivity,tmr_tick,0,1,95,121
+,secondsremain,,timerstate,,counter,,longdef,,break,,shortdef,,pomodef,,pomotimerlbl,,pomocounter,,sessionlbl,,timercount,,playing,,playbtn
+,secondsremain,,counter,,break,,timerstate,,playing
+,updatelbl,,timerstop
 noteactivity,activity_create,1,0,21,29
 starter,darkmode,,addbtn,,noteclv
 ,addbtn,,noteclv
