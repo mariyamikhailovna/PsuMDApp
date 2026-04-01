@@ -8,7 +8,7 @@ public class add_card_module2_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (add_card_module2) ","add_card_module2",15,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,22);
+		Debug.PushSubsStack("Activity_Create (add_card_module2) ","add_card_module2",13,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,22);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.add_card_module2.remoteMe.runUserSub(false, "add_card_module2","activity_create", _firsttime);}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _flashcard = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -64,7 +64,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (add_card_module2) ","add_card_module2",15,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,52);
+		Debug.PushSubsStack("Activity_Pause (add_card_module2) ","add_card_module2",13,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,52);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.add_card_module2.remoteMe.runUserSub(false, "add_card_module2","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 52;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -90,7 +90,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (add_card_module2) ","add_card_module2",15,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,48);
+		Debug.PushSubsStack("Activity_Resume (add_card_module2) ","add_card_module2",13,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,48);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.add_card_module2.remoteMe.runUserSub(false, "add_card_module2","activity_resume");}
  BA.debugLineNum = 48;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(32768);
@@ -106,7 +106,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backbtn_Click (add_card_module2) ","add_card_module2",15,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,59);
+		Debug.PushSubsStack("backbtn_Click (add_card_module2) ","add_card_module2",13,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,59);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.add_card_module2.remoteMe.runUserSub(false, "add_card_module2","backbtn_click");}
  BA.debugLineNum = 59;BA.debugLine="Private Sub backbtn_Click";
 Debug.ShouldStop(67108864);
@@ -141,7 +141,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _savecard_click() throws Exception{
 try {
-		Debug.PushSubsStack("SaveCard_Click (add_card_module2) ","add_card_module2",15,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,64);
+		Debug.PushSubsStack("SaveCard_Click (add_card_module2) ","add_card_module2",13,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,64);
 if (RapidSub.canDelegate("savecard_click")) { return b4a.example.add_card_module2.remoteMe.runUserSub(false, "add_card_module2","savecard_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _editcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -259,7 +259,7 @@ finally {
 		}}
 public static RemoteObject  _savedecks() throws Exception{
 try {
-		Debug.PushSubsStack("SaveDecks (add_card_module2) ","add_card_module2",15,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,44);
+		Debug.PushSubsStack("SaveDecks (add_card_module2) ","add_card_module2",13,add_card_module2.mostCurrent.activityBA,add_card_module2.mostCurrent,44);
 if (RapidSub.canDelegate("savedecks")) { return b4a.example.add_card_module2.remoteMe.runUserSub(false, "add_card_module2","savedecks");}
  BA.debugLineNum = 44;BA.debugLine="Sub SaveDecks";
 Debug.ShouldStop(2048);

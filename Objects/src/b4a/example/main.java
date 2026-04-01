@@ -359,13 +359,13 @@ vis = vis | (editnote.mostCurrent != null);
 vis = vis | (corkactivity.mostCurrent != null);
 vis = vis | (themeactivity.mostCurrent != null);
 vis = vis | (active_recall.mostCurrent != null);
-vis = vis | (day_module.mostCurrent != null);
-vis = vis | (calendaractivity.mostCurrent != null);
 vis = vis | (add_events_module.mostCurrent != null);
 vis = vis | (add_card_module.mostCurrent != null);
 vis = vis | (add_card_module2.mostCurrent != null);
 vis = vis | (all_active_recall.mostCurrent != null);
+vis = vis | (calendaractivity.mostCurrent != null);
 vis = vis | (card_module.mostCurrent != null);
+vis = vis | (day_module.mostCurrent != null);
 vis = vis | (deck_all_cards.mostCurrent != null);
 vis = vis | (flashcardactivity.mostCurrent != null);
 vis = vis | (musicactivity.mostCurrent != null);
@@ -496,30 +496,6 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (day_module.previousOne != null) {
-				__a = day_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(day_module.mostCurrent == null ? null : day_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (calendaractivity.previousOne != null) {
-				__a = calendaractivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(calendaractivity.mostCurrent == null ? null : calendaractivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
             if (add_events_module.previousOne != null) {
 				__a = add_events_module.previousOne.get();
 			}
@@ -568,11 +544,35 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
+            if (calendaractivity.previousOne != null) {
+				__a = calendaractivity.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(calendaractivity.mostCurrent == null ? null : calendaractivity.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
             if (card_module.previousOne != null) {
 				__a = card_module.previousOne.get();
 			}
             else {
                 BA ba = killProgramHelper(card_module.mostCurrent == null ? null : card_module.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (day_module.previousOne != null) {
+				__a = day_module.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(day_module.mostCurrent == null ? null : day_module.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -697,13 +697,13 @@ public b4a.example.corkactivity _corkactivity = null;
 public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.musicservice _musicservice = null;
 public b4a.example.active_recall _active_recall = null;
-public b4a.example.day_module _day_module = null;
-public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.add_events_module _add_events_module = null;
 public b4a.example.add_card_module _add_card_module = null;
 public b4a.example.add_card_module2 _add_card_module2 = null;
 public b4a.example.all_active_recall _all_active_recall = null;
+public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.card_module _card_module = null;
+public b4a.example.day_module _day_module = null;
 public b4a.example.deck_all_cards _deck_all_cards = null;
 public b4a.example.flashcardactivity _flashcardactivity = null;
 public b4a.example.musicactivity _musicactivity = null;

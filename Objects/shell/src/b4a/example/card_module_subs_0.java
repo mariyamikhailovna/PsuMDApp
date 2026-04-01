@@ -8,7 +8,7 @@ public class card_module_subs_0 {
 
 public static RemoteObject  _activerecall_click() throws Exception{
 try {
-		Debug.PushSubsStack("activerecall_Click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,129);
+		Debug.PushSubsStack("activerecall_Click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,129);
 if (RapidSub.canDelegate("activerecall_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activerecall_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -51,7 +51,7 @@ finally {
 		}}
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,24);
+		Debug.PushSubsStack("Activity_Create (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,24);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activity_create", _firsttime);}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -95,7 +95,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,118);
+		Debug.PushSubsStack("Activity_Pause (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,118);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 118;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -112,7 +112,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,106);
+		Debug.PushSubsStack("Activity_Resume (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,106);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activity_resume");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -151,7 +151,7 @@ finally {
 		}}
 public static RemoteObject  _addbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("addbtn_Click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,142);
+		Debug.PushSubsStack("addbtn_Click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,142);
 if (RapidSub.canDelegate("addbtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","addbtn_click");}
  BA.debugLineNum = 142;BA.debugLine="Private Sub addbtn_Click";
 Debug.ShouldStop(8192);
@@ -173,7 +173,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backbtn_Click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,124);
+		Debug.PushSubsStack("backbtn_Click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,124);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","backbtn_click");}
  BA.debugLineNum = 124;BA.debugLine="Private Sub backbtn_Click";
 Debug.ShouldStop(134217728);
@@ -192,7 +192,7 @@ finally {
 		}}
 public static RemoteObject  _canceldelete_click() throws Exception{
 try {
-		Debug.PushSubsStack("canceldelete_Click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,157);
+		Debug.PushSubsStack("canceldelete_Click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,157);
 if (RapidSub.canDelegate("canceldelete_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","canceldelete_click");}
  BA.debugLineNum = 157;BA.debugLine="Private Sub canceldelete_Click";
 Debug.ShouldStop(268435456);
@@ -211,7 +211,7 @@ finally {
 		}}
 public static RemoteObject  _confirmdelete_click() throws Exception{
 try {
-		Debug.PushSubsStack("confirmdelete_Click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,148);
+		Debug.PushSubsStack("confirmdelete_Click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,148);
 if (RapidSub.canDelegate("confirmdelete_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","confirmdelete_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _cards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -246,7 +246,7 @@ finally {
 		}}
 public static RemoteObject  _deletebtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("deletebtn_click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,97);
+		Debug.PushSubsStack("deletebtn_click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,97);
 if (RapidSub.canDelegate("deletebtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","deletebtn_click");}
 RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _index = RemoteObject.createImmutable(0);
@@ -277,7 +277,7 @@ finally {
 		}}
 public static RemoteObject  _editbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("editbtn_Click (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,85);
+		Debug.PushSubsStack("editbtn_Click (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,85);
 if (RapidSub.canDelegate("editbtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","editbtn_click");}
 RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _index = RemoteObject.createImmutable(0);
@@ -338,7 +338,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showsubdeckcards(RemoteObject _cardslist) throws Exception{
 try {
-		Debug.PushSubsStack("ShowSubdeckCards (card_module) ","card_module",17,card_module.mostCurrent.activityBA,card_module.mostCurrent,42);
+		Debug.PushSubsStack("ShowSubdeckCards (card_module) ","card_module",16,card_module.mostCurrent.activityBA,card_module.mostCurrent,42);
 if (RapidSub.canDelegate("showsubdeckcards")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","showsubdeckcards", _cardslist);}
 RemoteObject _toppos = RemoteObject.createImmutable(0);
 RemoteObject _cardheight = RemoteObject.createImmutable(0);
