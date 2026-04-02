@@ -8,7 +8,7 @@ public class deck_all_cards_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (deck_all_cards) ","deck_all_cards",14,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,20);
+		Debug.PushSubsStack("Activity_Create (deck_all_cards) ","deck_all_cards",19,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,20);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.deck_all_cards.remoteMe.runUserSub(false, "deck_all_cards","activity_create", _firsttime);}
 RemoteObject _chosendeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _subdeckname = RemoteObject.createImmutable("");
@@ -103,7 +103,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (deck_all_cards) ","deck_all_cards",14,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,93);
+		Debug.PushSubsStack("Activity_Pause (deck_all_cards) ","deck_all_cards",19,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,93);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.deck_all_cards.remoteMe.runUserSub(false, "deck_all_cards","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 93;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -120,7 +120,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (deck_all_cards) ","deck_all_cards",14,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,89);
+		Debug.PushSubsStack("Activity_Resume (deck_all_cards) ","deck_all_cards",19,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,89);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.deck_all_cards.remoteMe.runUserSub(false, "deck_all_cards","activity_resume");}
  BA.debugLineNum = 89;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(16777216);
@@ -139,7 +139,7 @@ finally {
 		}}
 public static RemoteObject  _addbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("addbtn_Click (deck_all_cards) ","deck_all_cards",14,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,98);
+		Debug.PushSubsStack("addbtn_Click (deck_all_cards) ","deck_all_cards",19,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,98);
 if (RapidSub.canDelegate("addbtn_click")) { return b4a.example.deck_all_cards.remoteMe.runUserSub(false, "deck_all_cards","addbtn_click");}
  BA.debugLineNum = 98;BA.debugLine="Private Sub addbtn_Click";
 Debug.ShouldStop(2);
@@ -158,7 +158,7 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backbtn_Click (deck_all_cards) ","deck_all_cards",14,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,102);
+		Debug.PushSubsStack("backbtn_Click (deck_all_cards) ","deck_all_cards",19,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,102);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.deck_all_cards.remoteMe.runUserSub(false, "deck_all_cards","backbtn_click");}
  BA.debugLineNum = 102;BA.debugLine="Private Sub backbtn_Click";
 Debug.ShouldStop(32);
@@ -193,7 +193,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showallcards(RemoteObject _cardslist) throws Exception{
 try {
-		Debug.PushSubsStack("ShowALLCards (deck_all_cards) ","deck_all_cards",14,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,50);
+		Debug.PushSubsStack("ShowALLCards (deck_all_cards) ","deck_all_cards",19,deck_all_cards.mostCurrent.activityBA,deck_all_cards.mostCurrent,50);
 if (RapidSub.canDelegate("showallcards")) { return b4a.example.deck_all_cards.remoteMe.runUserSub(false, "deck_all_cards","showallcards", _cardslist);}
 RemoteObject _toppos = RemoteObject.createImmutable(0);
 RemoteObject _cardheight = RemoteObject.createImmutable(0);

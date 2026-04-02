@@ -62,8 +62,11 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	If Starter.darkMode = False Then
 		Activity.LoadLayout("corkboardLayout")
+		penSpnr.DropdownBackgroundColor = Colors.DarkGray
+		penSpnr.DropdownTextColor = Colors.White
 	Else
 		Activity.LoadLayout("corkboardLayoutDark")
+		penSpnr.DropdownTextColor = Colors.Black
 	End If
 	
 	penSpnr.AddAll(Array As String("Black", "Blue", "Green", "Red", "Yellow", "Eraser"))

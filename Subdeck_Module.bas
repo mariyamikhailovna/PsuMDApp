@@ -42,8 +42,11 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	If Starter.darkMode = False Then
 		Activity.LoadLayout("Subdeck_ModuleLayout")
+		'to change the color of label etxt for each lit view for visibility
+		LVSubdecks.SingleLineLayout.Label.textColor = Colors.black
 	Else
 		Activity.LoadLayout("Subdeck_ModuleLayoutDark")
+		LVSubdecks.SingleLineLayout.Label.textColor = Colors.White
 	End If
 	
 	'design for add button
@@ -54,8 +57,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	'to label the deck chosen erlier
 	decknamelabel.Text = selecteddeck
-	'to change the color of label etxt for each lit view for visibility
-	LVSubdecks.SingleLineLayout.Label.textColor = Colors.black
+	
 	
 	Refresh
 	

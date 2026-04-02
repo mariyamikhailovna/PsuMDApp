@@ -238,8 +238,8 @@ helpactivity,activity_create,1,0,27,35
 starter,darkmode,,backbtn,,descriptionlbl,,helpimage,,iconbutton1,,iconbutton2,,iconbutton3,,nextbtn,,titlelbl,,helppage,,xui
 ,backbtn,,descriptionlbl,,helpimage,,iconbutton1,,iconbutton2,,iconbutton3,,nextbtn,,titlelbl,,helppage
 ,showhelppage
-helpactivity,showhelppage,0,0,45,131
-,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
+helpactivity,showhelppage,0,1,45,208
+,helppage,,titlelbl,,descriptionlbl,starter,darkmode,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
 ,helppage
 
 helpactivity,activity_pause,0,0,41,43
@@ -250,11 +250,11 @@ helpactivity,activity_resume,0,0,37,39
 
 
 
-helpactivity,backbtn_click,0,0,139,143
-,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
+helpactivity,backbtn_click,0,0,216,220
+,helppage,,titlelbl,,descriptionlbl,starter,darkmode,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
 ,helppage
 ,showhelppage
-helpactivity,closehelp_click,0,0,145,147
+helpactivity,closehelp_click,0,0,222,224
 
 
 
@@ -262,8 +262,8 @@ helpactivity,globals,0,1,13,25
 
 
 
-helpactivity,nextbtn_click,0,0,133,137
-,helppage,,titlelbl,,descriptionlbl,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
+helpactivity,nextbtn_click,0,0,210,214
+,helppage,,titlelbl,,descriptionlbl,starter,darkmode,,helpimage,,xui,,iconbutton1,,iconbutton2,,iconbutton3,,backbtn,,nextbtn
 ,helppage
 ,showhelppage
 helpactivity,process_globals,0,1,6,11
@@ -510,79 +510,79 @@ card_module,process_globals,0,1,6,12
 
 
 
-subdeck_module,activerecall_click,0,0,153,167
+subdeck_module,activerecall_click,0,0,155,169
 ,number_of_cards,,alldecks,,selecteddeck,,ar_confirmationpanel,,confirmlabel
 ,number_of_cards
 
-subdeck_module,activity_create,1,0,36,56
+subdeck_module,activity_create,1,1,36,58
 starter,darkmode,,addbtn,,addpanel,,addpanel2,,alterpanel,,ar_confirmationpanel,,confirmlabel,,decknamelabel,,deleteconfirmation,,et1,,lvsubdecks,,renameet,,renamepanel,,selecteddeck,,alldecks
 ,addbtn,,addpanel,,addpanel2,,alterpanel,,ar_confirmationpanel,,confirmlabel,,decknamelabel,,deleteconfirmation,,et1,,lvsubdecks,,renameet,,renamepanel
 ,refresh
-subdeck_module,refresh,0,0,62,71
+subdeck_module,refresh,0,0,64,73
 ,lvsubdecks,,alldecks,,selecteddeck
 
 
-subdeck_module,activity_pause,0,0,81,83
+subdeck_module,activity_pause,0,0,83,85
 
 
 
-subdeck_module,activity_resume,0,0,73,79
+subdeck_module,activity_resume,0,0,75,81
 all_active_recall,praise,,ar_confirmationpanel
 all_active_recall,praise
 
-subdeck_module,addbtn_click,0,0,86,94
+subdeck_module,addbtn_click,0,0,88,96
 ,addpanel2
 
 
-subdeck_module,addcard_click,0,0,96,104
+subdeck_module,addcard_click,0,0,98,106
 flashcardactivity,deck,flashcardactivity,selecteddeck
 
 
-subdeck_module,addsub_click,0,0,106,109
+subdeck_module,addsub_click,0,0,108,111
 ,addpanel
 
 
-subdeck_module,backbtn_click,0,0,190,192
+subdeck_module,backbtn_click,0,0,192,194
 
 
 
-subdeck_module,cancel_click,1,0,111,115
+subdeck_module,cancel_click,1,0,113,117
 ,addpanel,,et1
 
 
-subdeck_module,cancelalter_click,0,0,204,206
+subdeck_module,cancelalter_click,0,0,206,208
 ,alterpanel
 
 
-subdeck_module,cancelconfirmation_click,0,0,178,181
+subdeck_module,cancelconfirmation_click,0,0,180,183
 ,ar_confirmationpanel
 
 
-subdeck_module,canceldelete_click,0,0,252,254
+subdeck_module,canceldelete_click,0,0,254,256
 ,deleteconfirmation
 
 
-subdeck_module,cancelrename_click,1,0,213,216
+subdeck_module,cancelrename_click,1,0,215,218
 ,renamepanel,,renameet
 
 
-subdeck_module,confirmdelete_click,0,0,244,250
+subdeck_module,confirmdelete_click,0,0,246,252
 flashcardactivity,deck,flashcardactivity,selecteddeck,,selectedsubdeck,,deleteconfirmation,flashcardactivity,kvs,,lvsubdecks,,alldecks,,selecteddeck
 
 ,savedecks,,refresh
-subdeck_module,savedecks,0,0,58,60
+subdeck_module,savedecks,0,0,60,62
 flashcardactivity,kvs,flashcardactivity,deck
 
 
-subdeck_module,confirmrename_click,1,0,218,242
+subdeck_module,confirmrename_click,1,0,220,244
 flashcardactivity,deck,flashcardactivity,selecteddeck,,renameet,,selectedsubdeck,,renamepanel,flashcardactivity,kvs,,lvsubdecks,,alldecks,,selecteddeck
 
 ,savedecks,,refresh
-subdeck_module,create_click,1,0,117,146
+subdeck_module,create_click,1,0,119,148
 ,alldecks,,selecteddeck,,et1,,addpanel,,lvsubdecks,flashcardactivity,kvs,flashcardactivity,deck
 
 ,savedecks
-subdeck_module,deletesubdeck_click,0,0,194,197
+subdeck_module,deletesubdeck_click,0,0,196,199
 ,alterpanel,,deleteconfirmation
 
 
@@ -590,15 +590,15 @@ subdeck_module,globals,0,1,14,34
 ,alldecks,flashcardactivity,deck,,selecteddeck,flashcardactivity,selecteddeck,,number_of_cards
 ,alldecks,,selecteddeck,,number_of_cards
 
-subdeck_module,goback_click,0,0,148,151
+subdeck_module,goback_click,0,0,150,153
 
 
 
-subdeck_module,lvsubdecks_itemclick,0,0,183,188
+subdeck_module,lvsubdecks_itemclick,0,0,185,190
 ,selectedsubdeck
 ,selectedsubdeck
 
-subdeck_module,lvsubdecks_itemlongclick,0,0,208,211
+subdeck_module,lvsubdecks_itemlongclick,0,0,210,213
 ,alterpanel,,selectedsubdeck
 ,selectedsubdeck
 
@@ -606,11 +606,11 @@ subdeck_module,process_globals,0,1,6,12
 
 
 
-subdeck_module,renamesubdeck_click,0,0,199,202
+subdeck_module,renamesubdeck_click,0,0,201,204
 ,alterpanel,,renamepanel
 
 
-subdeck_module,startarbtn_click,0,0,169,176
+subdeck_module,startarbtn_click,0,0,171,178
 ,number_of_cards
 
 
@@ -786,56 +786,100 @@ day_module,x_tlevent_btn_click,1,0,520,523
 ,addeventtl_panel,,addtl_et
 
 
-schedule_module,activity_create,1,0,22,33
-starter,darkmode,,menupanel,,noschedlabel,,sched_btn,,schedulesv,calendaractivity,calendarmap
-,menupanel,,noschedlabel,,sched_btn,,schedulesv
-,drawschedule,,setdate,,identifycolor,,gettimestring
-schedule_module,drawschedule,0,0,35,98
-,schedulesv,calendaractivity,calendarmap,,noschedlabel
-
-,setdate,,identifycolor,,gettimestring
-schedule_module,activity_pause,0,0,185,187
+flashcardactivity,activity_create,1,1,38,71
+starter,darkmode,,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,starter,deckkvs,,deck,starter,deck
+,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,,deck
+,refreshbtn_click
+flashcardactivity,refreshbtn_click,0,0,133,139
+,lvdecks,,deck
 
 
-
-schedule_module,activity_resume,0,0,181,183
+flashcardactivity,activity_pause,0,0,77,79
 
 
 
-schedule_module,day_btn_click,0,0,198,205
-day_module,currentdate
-day_module,currentdate
-
-schedule_module,setdate,0,0,142,179
+flashcardactivity,activity_resume,0,0,73,75
 
 
 
-schedule_module,identifycolor,0,0,127,140
+flashcardactivity,addbtn_click,0,0,85,91
+,addpanel
+
+
+flashcardactivity,addcards_click,0,0,156,164
+,deck,,item_longclick,,decksettingpanel
+
+
+flashcardactivity,browse_cards_click,0,0,181,184
+,decksettingpanel
+
+
+flashcardactivity,cancel_click,1,0,93,98
+,addpanel,,et1
+
+
+flashcardactivity,cancelbtn_click,0,0,186,188
+,decksettingpanel
+
+
+flashcardactivity,canceldelete_click,0,0,249,251
+,deleteconfirmation
+
+
+flashcardactivity,cancelnew_click,1,0,211,214
+,newdeckname,,renamepanel
+
+
+flashcardactivity,cancelnewsubdeck_click,1,0,237,240
+,newsubdecket,,newsubdeckpanel
+
+
+flashcardactivity,confirmdelete_click,0,0,242,247
+,deck,,item_longclick,,decksettingpanel,,deleteconfirmation,,lvdecks
+
+,refreshbtn_click
+flashcardactivity,confirmnew_click,1,0,190,209
+,newdeckname,,deck,,item_longclick,,renamepanel,,kvs,,lvdecks
+
+,savedecks,,refreshbtn_click
+flashcardactivity,savedecks,0,0,81,83
+,kvs,,deck
+
+
+flashcardactivity,create_click,1,0,101,131
+,deck,,et1,,addpanel,,lvdecks,,kvs
+
+,savedecks
+flashcardactivity,create_subdeck_click,0,0,176,179
+,newsubdeckpanel,,decksettingpanel
+
+
+flashcardactivity,createnewsubdeck_click,1,0,216,235
+,newsubdecket,,deck,,item_longclick,,newsubdeckpanel,,kvs
+
+,savedecks
+flashcardactivity,delete_deck_click,0,0,171,174
+,decksettingpanel,,deleteconfirmation
+
+
+flashcardactivity,globals,0,1,19,36
 
 
 
-schedule_module,gettimestring,0,0,101,124
+flashcardactivity,lvdecks_itemclick,0,0,141,145
+,selecteddeck
+,selecteddeck
+
+flashcardactivity,lvdecks_itemlongclick,0,0,147,152
+,decksettingpanel,,item_longclick,,selecteddeck
+,item_longclick,,selecteddeck
+
+flashcardactivity,process_globals,0,1,6,17
 
 
 
-schedule_module,globals,0,1,12,20
-
-
-
-schedule_module,menu_btn_click,0,0,189,191
-,menupanel
-
-
-schedule_module,month_btn_click,0,0,207,210
-
-
-
-schedule_module,process_globals,0,1,6,10
-
-
-
-schedule_module,sched_btn_click,0,0,194,196
-,menupanel
+flashcardactivity,rename_deck_click,0,0,166,169
+,decksettingpanel,,renamepanel
 
 
 add_card_module,activity_create,1,0,22,40
@@ -870,132 +914,36 @@ add_card_module,savedecks,0,0,49,51
 flashcardactivity,kvs,flashcardactivity,deck
 
 
-flashcardactivity,activity_create,1,0,38,66
-starter,darkmode,,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,starter,deckkvs,,deck,starter,deck
-,addbtn,,addpanel,,decknamelabel,,decksettingpanel,,deleteconfirmation,,et1,,lvdecks,,newdeckname,,newsubdecket,,newsubdeckpanel,,renamepanel,,kvs,,deck
-,refreshbtn_click
-flashcardactivity,refreshbtn_click,0,0,128,134
-,lvdecks,,deck
+add_card_module2,activity_create,1,0,22,42
+starter,darkmode,,answeret,,questionet,,subdeckname,flashcardactivity,deck,flashcardactivity,selecteddeck,card_module,subdeck,card_module,isedit,card_module,editindex
+,answeret,,questionet,,subdeckname
 
+add_card_module2,activity_pause,1,0,52,56
+card_module,isedit,,questionet,,answeret
+card_module,isedit
 
-flashcardactivity,activity_pause,0,0,72,74
-
-
-
-flashcardactivity,activity_resume,0,0,68,70
+add_card_module2,activity_resume,0,0,48,50
 
 
 
-flashcardactivity,addbtn_click,0,0,80,86
-,addpanel
+add_card_module2,backbtn_click,0,0,59,62
 
 
-flashcardactivity,addcards_click,0,0,151,159
-,deck,,item_longclick,,decksettingpanel
+
+add_card_module2,globals,0,1,12,20
 
 
-flashcardactivity,browse_cards_click,0,0,176,179
-,decksettingpanel
+
+add_card_module2,process_globals,0,1,6,10
 
 
-flashcardactivity,cancel_click,1,0,88,93
-,addpanel,,et1
 
-
-flashcardactivity,cancelbtn_click,0,0,181,183
-,decksettingpanel
-
-
-flashcardactivity,canceldelete_click,0,0,244,246
-,deleteconfirmation
-
-
-flashcardactivity,cancelnew_click,1,0,206,209
-,newdeckname,,renamepanel
-
-
-flashcardactivity,cancelnewsubdeck_click,1,0,232,235
-,newsubdecket,,newsubdeckpanel
-
-
-flashcardactivity,confirmdelete_click,0,0,237,242
-,deck,,item_longclick,,decksettingpanel,,deleteconfirmation,,lvdecks
-
-,refreshbtn_click
-flashcardactivity,confirmnew_click,1,0,185,204
-,newdeckname,,deck,,item_longclick,,renamepanel,,kvs,,lvdecks
-
-,savedecks,,refreshbtn_click
-flashcardactivity,savedecks,0,0,76,78
-,kvs,,deck
-
-
-flashcardactivity,create_click,1,0,96,126
-,deck,,et1,,addpanel,,lvdecks,,kvs
-
+add_card_module2,savecard_click,1,0,64,118
+flashcardactivity,deck,flashcardactivity,selecteddeck,card_module,isedit,,questionet,,answeret,card_module,subdeck,card_module,editindex,flashcardactivity,kvs
+card_module,isedit
 ,savedecks
-flashcardactivity,create_subdeck_click,0,0,171,174
-,newsubdeckpanel,,decksettingpanel
-
-
-flashcardactivity,createnewsubdeck_click,1,0,211,230
-,newsubdecket,,deck,,item_longclick,,newsubdeckpanel,,kvs
-
-,savedecks
-flashcardactivity,delete_deck_click,0,0,166,169
-,decksettingpanel,,deleteconfirmation
-
-
-flashcardactivity,globals,0,1,19,36
-
-
-
-flashcardactivity,lvdecks_itemclick,0,0,136,140
-,selecteddeck
-,selecteddeck
-
-flashcardactivity,lvdecks_itemlongclick,0,0,142,147
-,decksettingpanel,,item_longclick,,selecteddeck
-,item_longclick,,selecteddeck
-
-flashcardactivity,process_globals,0,1,6,17
-
-
-
-flashcardactivity,rename_deck_click,0,0,161,164
-,decksettingpanel,,renamepanel
-
-
-deck_all_cards,activity_create,1,0,20,48
-starter,darkmode,,deckname,,scrollview1,flashcardactivity,item_longclick,,cards,flashcardactivity,deck,flashcardactivity,selecteddeck
-,deckname,,scrollview1
-,showallcards
-deck_all_cards,showallcards,0,0,50,87
-,scrollview1
-
-
-deck_all_cards,activity_pause,0,0,93,95
-
-
-
-deck_all_cards,activity_resume,0,0,89,91
-,cards,,scrollview1
-
-,showallcards
-deck_all_cards,addbtn_click,0,0,98,100
-
-
-
-deck_all_cards,backbtn_click,0,0,102,104
-
-
-
-deck_all_cards,globals,0,1,12,18
-
-
-
-deck_all_cards,process_globals,0,1,6,10
-
+add_card_module2,savedecks,0,0,44,46
+flashcardactivity,kvs,flashcardactivity,deck
 
 
 active_recall,activity_create,1,0,29,53
@@ -1044,38 +992,6 @@ active_recall,process_globals,0,1,6,10
 
 active_recall,showanswerbtn_click,0,0,93,110
 ,cards,,currentindex,,showanswerbtn,,answer,,nextbtn
-
-
-add_card_module2,activity_create,1,0,22,42
-starter,darkmode,,answeret,,questionet,,subdeckname,flashcardactivity,deck,flashcardactivity,selecteddeck,card_module,subdeck,card_module,isedit,card_module,editindex
-,answeret,,questionet,,subdeckname
-
-add_card_module2,activity_pause,1,0,52,56
-card_module,isedit,,questionet,,answeret
-card_module,isedit
-
-add_card_module2,activity_resume,0,0,48,50
-
-
-
-add_card_module2,backbtn_click,0,0,59,62
-
-
-
-add_card_module2,globals,0,1,12,20
-
-
-
-add_card_module2,process_globals,0,1,6,10
-
-
-
-add_card_module2,savecard_click,1,0,64,118
-flashcardactivity,deck,flashcardactivity,selecteddeck,card_module,isedit,,questionet,,answeret,card_module,subdeck,card_module,editindex,flashcardactivity,kvs
-card_module,isedit
-,savedecks
-add_card_module2,savedecks,0,0,44,46
-flashcardactivity,kvs,flashcardactivity,deck
 
 
 add_events_module,activity_create,1,0,26,36
@@ -1254,55 +1170,55 @@ clockactivity,tmr_tick,0,0,95,121
 ,secondsremain,,timerstate,,counter,,longdef,,break,,shortdef,,pomodef,,pomotimerlbl,,pomocounter,,sessionlbl,,timercount,,playing,,playbtn
 ,secondsremain,,counter,,break,,timerstate,,playing
 ,updatelbl,,timerstop
-corkactivity,activity_create,1,0,55,148
+corkactivity,activity_create,1,1,55,151
 starter,darkmode,,addpnl,,boardpnl,,canvabtn,,deletelbl,,imgbtn,,penspnr,,place1,,place10,,place11,,place12,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,stickybtn,,imgpicker,,width,,height,,ddn,,ddi,,ddc,main,kvs,,isloading,,notecount,,r,,g,,b,,imgcount,,canvascount
 ,addpnl,,boardpnl,,canvabtn,,deletelbl,,imgbtn,,penspnr,,place1,,place10,,place11,,place12,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,stickybtn,,width,,height,,isloading,,notecount,,r,,g,,b,,imgcount,,canvascount
 ,addstickynote
-corkactivity,addstickynote,1,0,162,196
+corkactivity,addstickynote,1,0,165,199
 ,r,,g,,b,,boardpnl,,ddn,,place1,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,place10,,place11,,place12,,deletelbl,,isloading,,notecount,main,kvs
 ,notecount
 
-corkactivity,activity_pause,0,0,156,158
+corkactivity,activity_pause,0,0,159,161
 
 
 
-corkactivity,activity_resume,0,0,150,154
+corkactivity,activity_resume,0,0,153,157
 ,canvascount,,penspnr
 
 
-corkactivity,addcanvas,0,0,230,263
+corkactivity,addcanvas,0,0,233,266
 ,boardpnl,,width,,height,,ddc,,place1,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,place10,,place11,,place12,,deletelbl,,isloading,,canvascount,main,kvs
 ,canvascount
 
-corkactivity,addcbtn_click,0,0,339,345
+corkactivity,addcbtn_click,0,0,342,348
 ,canvaspnl,,canvabtn,,stickybtn,,imgbtn,,boardpnl,,width,,height,,ddc,,place1,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,place10,,place11,,place12,,deletelbl,,isloading,,canvascount,main,kvs
 ,canvascount
 ,addcanvas
-corkactivity,addnbtn_click,1,0,328,337
+corkactivity,addnbtn_click,1,0,331,340
 ,notepnl,,r,,g,,b,,stickybtn,,canvabtn,,imgbtn,,boardpnl,,ddn,,place1,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,place10,,place11,,place12,,deletelbl,,isloading,,notecount,main,kvs
 ,r,,g,,b,,notecount
 ,addstickynote
-corkactivity,canvabtn_click,0,0,361,368
+corkactivity,canvabtn_click,0,0,364,371
 ,canvaspnl,,penspnr,,stickybtn,,canvabtn,,imgbtn,,xui,,sizespnr
 ,canvaspnl
 ,canvaswindow
-corkactivity,canvaswindow,0,0,308,326
+corkactivity,canvaswindow,0,0,311,329
 ,canvaspnl,,xui,,sizespnr
 ,canvaspnl
 
-corkactivity,canvasdrag_placedview,0,0,491,518
+corkactivity,canvasdrag_placedview,0,0,494,521
 main,kvs,,canvascount,,penspnr
 ,canvascount
 
-corkactivity,canvaspanel_touch,0,0,265,284
+corkactivity,canvaspanel_touch,0,0,268,287
 ,lastx,,lasty,,r2,,g2,,b2
 ,lastx,,lasty
 
-corkactivity,cc_result,0,0,205,228
+corkactivity,cc_result,0,0,208,231
 ,imgview,,boardpnl,,ddi,,place1,,place2,,place3,,place4,,place5,,place6,,place7,,place8,,place9,,place10,,place11,,place12,,deletelbl,,imgcount,main,kvs
 ,imgcount
 
-corkactivity,colorsspnr_itemclick,0,0,395,410
+corkactivity,colorsspnr_itemclick,0,0,398,413
 ,r,,g,,b
 ,r,,g,,b
 
@@ -1310,27 +1226,27 @@ corkactivity,globals,0,1,13,53
 ,r,,g,,b,,notecount,,imgcount,,canvascount,,isloading
 ,r,,g,,b,,notecount,,imgcount,,canvascount,,isloading
 
-corkactivity,imgbtn_click,0,0,357,359
+corkactivity,imgbtn_click,0,0,360,362
 ,imgpicker
 
 
-corkactivity,imgdrag_placedview,0,0,467,489
+corkactivity,imgdrag_placedview,0,0,470,492
 main,kvs
 
 
-corkactivity,notedrag_placedview,0,0,443,465
+corkactivity,notedrag_placedview,0,0,446,468
 main,kvs
 
 
-corkactivity,notetext_textchanged,0,0,198,203
+corkactivity,notetext_textchanged,0,0,201,206
 main,kvs
 
 
-corkactivity,notewindow,0,0,288,306
+corkactivity,notewindow,0,0,291,309
 ,notepnl,,xui
 ,notepnl
 
-corkactivity,penspnr_itemclick,0,0,412,439
+corkactivity,penspnr_itemclick,0,0,415,442
 ,r2,,g2,,b2
 ,r2,,g2,,b2
 
@@ -1338,14 +1254,46 @@ corkactivity,process_globals,0,1,6,11
 
 
 
-corkactivity,sizespnr_itemclick,0,0,372,393
+corkactivity,sizespnr_itemclick,0,0,375,396
 ,width,,height
 ,width,,height
 
-corkactivity,stickybtn_click,0,0,349,355
+corkactivity,stickybtn_click,0,0,352,358
 ,notepnl,,stickybtn,,canvabtn,,imgbtn,,xui
 ,notepnl
 ,notewindow
+deck_all_cards,activity_create,1,0,20,48
+starter,darkmode,,deckname,,scrollview1,flashcardactivity,item_longclick,,cards,flashcardactivity,deck,flashcardactivity,selecteddeck
+,deckname,,scrollview1
+,showallcards
+deck_all_cards,showallcards,0,0,50,87
+,scrollview1
+
+
+deck_all_cards,activity_pause,0,0,93,95
+
+
+
+deck_all_cards,activity_resume,0,0,89,91
+,cards,,scrollview1
+
+,showallcards
+deck_all_cards,addbtn_click,0,0,98,100
+
+
+
+deck_all_cards,backbtn_click,0,0,102,104
+
+
+
+deck_all_cards,globals,0,1,12,18
+
+
+
+deck_all_cards,process_globals,0,1,6,10
+
+
+
 editnote,activity_create,1,0,22,37
 starter,darkmode,,contenttxt,,savebtn,,tagstxt,,titletxt,,activenote
 ,contenttxt,,savebtn,,tagstxt,,titletxt
@@ -1522,6 +1470,58 @@ noteactivity,searchtxt_textchanged,0,0,90,92
 ,noteclv,mainactivity,kvs
 
 ,refreshlist
+schedule_module,activity_create,1,0,22,33
+starter,darkmode,,menupanel,,noschedlabel,,sched_btn,,schedulesv,calendaractivity,calendarmap
+,menupanel,,noschedlabel,,sched_btn,,schedulesv
+,drawschedule,,setdate,,identifycolor,,gettimestring
+schedule_module,drawschedule,0,0,35,98
+,schedulesv,calendaractivity,calendarmap,,noschedlabel
+
+,setdate,,identifycolor,,gettimestring
+schedule_module,activity_pause,0,0,185,187
+
+
+
+schedule_module,activity_resume,0,0,181,183
+
+
+
+schedule_module,day_btn_click,0,0,198,205
+day_module,currentdate
+day_module,currentdate
+
+schedule_module,setdate,0,0,142,179
+
+
+
+schedule_module,identifycolor,0,0,127,140
+
+
+
+schedule_module,gettimestring,0,0,101,124
+
+
+
+schedule_module,globals,0,1,12,20
+
+
+
+schedule_module,menu_btn_click,0,0,189,191
+,menupanel
+
+
+schedule_module,month_btn_click,0,0,207,210
+
+
+
+schedule_module,process_globals,0,1,6,10
+
+
+
+schedule_module,sched_btn_click,0,0,194,196
+,menupanel
+
+
 themeactivity,activity_create,1,0,23,31
 starter,darkmode,,backbtn,,nextbtn,,theme1,,theme2,,titlelbl,,themepage,,xui
 ,backbtn,,nextbtn,,theme1,,theme2,,titlelbl,,themepage

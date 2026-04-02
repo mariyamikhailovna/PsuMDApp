@@ -58,7 +58,12 @@ Sub Activity_Create(FirstTime As Boolean)
 	Addbtn.Background = cd
 	
 	'recoloring label color for each list view (default color is gray - not visible)
-	LVdecks.SingleLineLayout.Label.textcolor = Colors.black
+	If Starter.darkMode = False Then
+		LVdecks.SingleLineLayout.Label.textcolor = Colors.black
+	Else
+		LVdecks.SingleLineLayout.Label.textcolor = Colors.White
+	End If
+	
 	
 	kvs = Starter.deckKvs
 	deck = Starter.deck
