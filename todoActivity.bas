@@ -356,7 +356,7 @@ Sub addTaskBtn_Click
 	If Starter.darkMode Then
 		addTaskTextArea.HintColor = Colors.ARGB(255, 247, 247, 247)
 	Else
-		addTaskPanel.Color = Colors.ARGB(255, 17, 17, 17)
+		addTaskTextArea.HintColor = Colors.ARGB(255, 17, 17, 17)
 	End If
 	addTaskTextArea.Tag = Null
 	
@@ -488,12 +488,20 @@ Sub taskCheckbox_CheckedChange(Checked As Boolean)
 	
 	Dim taskCheckbox As CheckBox = Sender
 	Dim taskLBL As Label = taskCheckbox.Tag
-
-	If Checked Then
-		taskLBL.TextColor = Colors.ARGB(50, 0, 0, 0)
+	If Starter.darkMode Then
+		If Checked Then
+			taskLBL.TextColor = Colors.ARGB(255, 128, 128, 128)
+		Else
+			taskLBL.TextColor = Colors.White
+		End If
 	Else
-		taskLBL.TextColor = Colors.Black
+		If Checked Then
+			taskLBL.TextColor = Colors.ARGB(255, 128, 128, 128)
+		Else
+			taskLBL.TextColor = Colors.Black
+		End If
 	End If
+	
 
 	Dim key As String = "checked_" & currentList & "_" & taskLBL.Text
 	kvs.Put(key, Checked)

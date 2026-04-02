@@ -34,7 +34,7 @@ public class main extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,353 +335,6 @@ public class main extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-vis = vis | (mainactivity.mostCurrent != null);
-vis = vis | (helpactivity.mostCurrent != null);
-vis = vis | (todoactivity.mostCurrent != null);
-vis = vis | (calendaractivity.mostCurrent != null);
-vis = vis | (card_module.mostCurrent != null);
-vis = vis | (subdeck_module.mostCurrent != null);
-vis = vis | (day_module.mostCurrent != null);
-vis = vis | (add_card_module.mostCurrent != null);
-vis = vis | (flashcardactivity.mostCurrent != null);
-vis = vis | (add_card_module2.mostCurrent != null);
-vis = vis | (corkactivity.mostCurrent != null);
-vis = vis | (active_recall.mostCurrent != null);
-vis = vis | (add_events_module.mostCurrent != null);
-vis = vis | (all_active_recall.mostCurrent != null);
-vis = vis | (clockactivity.mostCurrent != null);
-vis = vis | (deck_all_cards.mostCurrent != null);
-vis = vis | (editnote.mostCurrent != null);
-vis = vis | (musicactivity.mostCurrent != null);
-vis = vis | (navactivity.mostCurrent != null);
-vis = vis | (noteactivity.mostCurrent != null);
-vis = vis | (schedule_module.mostCurrent != null);
-vis = vis | (themeactivity.mostCurrent != null);
-return vis;}
-
-private static BA killProgramHelper(BA ba) {
-    if (ba == null)
-        return null;
-    anywheresoftware.b4a.BA.SharedProcessBA sharedProcessBA = ba.sharedProcessBA;
-    if (sharedProcessBA == null || sharedProcessBA.activityBA == null)
-        return null;
-    return sharedProcessBA.activityBA.get();
-}
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(main.mostCurrent == null ? null : main.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
- {
-            Activity __a = null;
-            if (mainactivity.previousOne != null) {
-				__a = mainactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(mainactivity.mostCurrent == null ? null : mainactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (helpactivity.previousOne != null) {
-				__a = helpactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(helpactivity.mostCurrent == null ? null : helpactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, musicservice.class));
- {
-            Activity __a = null;
-            if (todoactivity.previousOne != null) {
-				__a = todoactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(todoactivity.mostCurrent == null ? null : todoactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (calendaractivity.previousOne != null) {
-				__a = calendaractivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(calendaractivity.mostCurrent == null ? null : calendaractivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (card_module.previousOne != null) {
-				__a = card_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(card_module.mostCurrent == null ? null : card_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (subdeck_module.previousOne != null) {
-				__a = subdeck_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(subdeck_module.mostCurrent == null ? null : subdeck_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (day_module.previousOne != null) {
-				__a = day_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(day_module.mostCurrent == null ? null : day_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (add_card_module.previousOne != null) {
-				__a = add_card_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(add_card_module.mostCurrent == null ? null : add_card_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (flashcardactivity.previousOne != null) {
-				__a = flashcardactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(flashcardactivity.mostCurrent == null ? null : flashcardactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (add_card_module2.previousOne != null) {
-				__a = add_card_module2.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(add_card_module2.mostCurrent == null ? null : add_card_module2.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (corkactivity.previousOne != null) {
-				__a = corkactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(corkactivity.mostCurrent == null ? null : corkactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (active_recall.previousOne != null) {
-				__a = active_recall.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(active_recall.mostCurrent == null ? null : active_recall.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (add_events_module.previousOne != null) {
-				__a = add_events_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(add_events_module.mostCurrent == null ? null : add_events_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (all_active_recall.previousOne != null) {
-				__a = all_active_recall.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(all_active_recall.mostCurrent == null ? null : all_active_recall.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (clockactivity.previousOne != null) {
-				__a = clockactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(clockactivity.mostCurrent == null ? null : clockactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (deck_all_cards.previousOne != null) {
-				__a = deck_all_cards.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(deck_all_cards.mostCurrent == null ? null : deck_all_cards.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (editnote.previousOne != null) {
-				__a = editnote.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(editnote.mostCurrent == null ? null : editnote.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (musicactivity.previousOne != null) {
-				__a = musicactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(musicactivity.mostCurrent == null ? null : musicactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (navactivity.previousOne != null) {
-				__a = navactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(navactivity.mostCurrent == null ? null : navactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (noteactivity.previousOne != null) {
-				__a = noteactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(noteactivity.mostCurrent == null ? null : noteactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (schedule_module.previousOne != null) {
-				__a = schedule_module.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(schedule_module.mostCurrent == null ? null : schedule_module.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (themeactivity.previousOne != null) {
-				__a = themeactivity.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(themeactivity.mostCurrent == null ? null : themeactivity.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-}
-public static class _mynote{
-public boolean IsInitialized;
-public String Title;
-public String Tags;
-public String Content;
-public long DateAdded;
-public long noteID;
-public void Initialize() {
-IsInitialized = true;
-Title = "";
-Tags = "";
-Content = "";
-DateAdded = 0L;
-noteID = 0L;
-}
-@Override
-		public String toString() {
-			return BA.TypeToString(this, false);
-		}}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public static boolean _format24h = false;
@@ -712,29 +365,64 @@ public b4a.example.navactivity _navactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.themeactivity _themeactivity = null;
+
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+vis = vis | (mainactivity.mostCurrent != null);
+vis = vis | (helpactivity.mostCurrent != null);
+vis = vis | (todoactivity.mostCurrent != null);
+vis = vis | (calendaractivity.mostCurrent != null);
+vis = vis | (card_module.mostCurrent != null);
+vis = vis | (subdeck_module.mostCurrent != null);
+vis = vis | (day_module.mostCurrent != null);
+vis = vis | (add_card_module.mostCurrent != null);
+vis = vis | (flashcardactivity.mostCurrent != null);
+vis = vis | (add_card_module2.mostCurrent != null);
+vis = vis | (corkactivity.mostCurrent != null);
+vis = vis | (active_recall.mostCurrent != null);
+vis = vis | (add_events_module.mostCurrent != null);
+vis = vis | (all_active_recall.mostCurrent != null);
+vis = vis | (clockactivity.mostCurrent != null);
+vis = vis | (deck_all_cards.mostCurrent != null);
+vis = vis | (editnote.mostCurrent != null);
+vis = vis | (musicactivity.mostCurrent != null);
+vis = vis | (navactivity.mostCurrent != null);
+vis = vis | (noteactivity.mostCurrent != null);
+vis = vis | (schedule_module.mostCurrent != null);
+vis = vis | (themeactivity.mostCurrent != null);
+return vis;}
+public static class _mynote{
+public boolean IsInitialized;
+public String Title;
+public String Tags;
+public String Content;
+public long DateAdded;
+public long noteID;
+public void Initialize() {
+IsInitialized = true;
+Title = "";
+Tags = "";
+Content = "";
+DateAdded = 0L;
+noteID = 0L;
+}
+@Override
+		public String toString() {
+			return BA.TypeToString(this, false);
+		}}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
+ //BA.debugLineNum = 26;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 27;BA.debugLine="Activity.LoadLayout(\"loadingLayout\")";
 mostCurrent._activity.LoadLayout("loadingLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="loadingScreen.SetGif(File.DirAssets, \"loading.GIF";
-mostCurrent._loadingscreen._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"loading.GIF");
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="StartService(Starter)";
+ //BA.debugLineNum = 28;BA.debugLine="loadingScreen.SetGif(File.DirAssets, \"loading.GIF";
+mostCurrent._loadingscreen._setgif /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"loading.GIF");
+ //BA.debugLineNum = 29;BA.debugLine="StartService(Starter)";
 anywheresoftware.b4a.keywords.Common.StartService(processBA,(Object)(mostCurrent._starter.getObject()));
-RDebugUtils.currentLine=131077;
- //BA.debugLineNum = 131077;BA.debugLine="End Sub";
+ //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return "";
 }
 public static void  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {Debug.delegate(mostCurrent.activityBA, "activity_resume", null); return;}
 ResumableSub_Activity_Resume rsub = new ResumableSub_Activity_Resume(null);
 rsub.resume(processBA, null);
 }
@@ -747,7 +435,6 @@ boolean _result = false;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="main";
 
     while (true) {
         switch (state) {
@@ -757,9 +444,8 @@ return;
 case 0:
 //C
 this.state = -1;
-RDebugUtils.currentLine=196609;
- //BA.debugLineNum = 196609;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
-anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "activity_resume"), _startload());
+ //BA.debugLineNum = 34;BA.debugLine="Wait For (startLoad) Complete (Result As Boolean)";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, _startload());
 this.state = 1;
 return;
 case 1:
@@ -767,18 +453,73 @@ case 1:
 this.state = -1;
 _result = (Boolean) result[0];
 ;
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 35;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
 }
+public static void  _complete(boolean _result) throws Exception{
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 22;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 23;BA.debugLine="Private loadingScreen As B4XGifView";
+mostCurrent._loadingscreen = new b4a.example.b4xgifview();
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+starter._process_globals();
+mainactivity._process_globals();
+helpactivity._process_globals();
+musiccodemodule._process_globals();
+musicservice._process_globals();
+todoactivity._process_globals();
+calendaractivity._process_globals();
+card_module._process_globals();
+subdeck_module._process_globals();
+day_module._process_globals();
+add_card_module._process_globals();
+flashcardactivity._process_globals();
+add_card_module2._process_globals();
+corkactivity._process_globals();
+active_recall._process_globals();
+add_events_module._process_globals();
+all_active_recall._process_globals();
+clockactivity._process_globals();
+deck_all_cards._process_globals();
+editnote._process_globals();
+musicactivity._process_globals();
+navactivity._process_globals();
+noteactivity._process_globals();
+schedule_module._process_globals();
+themeactivity._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 14;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 15;BA.debugLine="Dim xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 16;BA.debugLine="Public format24h As Boolean = False";
+_format24h = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 17;BA.debugLine="Type MyNote (Title As String, Tags As String, Con";
+;
+ //BA.debugLineNum = 18;BA.debugLine="Public kvs As KeyValueStore";
+_kvs = new b4a.example3.keyvaluestore();
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
+return "";
+}
 public static anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _startload() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "startload", false))
-	 {return ((anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) Debug.delegate(mostCurrent.activityBA, "startload", null));}
 ResumableSub_startLoad rsub = new ResumableSub_startLoad(null);
 rsub.resume(processBA, null);
 return (anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper(), rsub);
@@ -791,7 +532,6 @@ b4a.example.main parent;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="main";
 
     while (true) {
         switch (state) {
@@ -801,17 +541,15 @@ anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=23330817;
- //BA.debugLineNum = 23330817;BA.debugLine="Sleep(750)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "startload"),(int) (750));
+ //BA.debugLineNum = 38;BA.debugLine="Sleep(750)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (750));
 this.state = 5;
 return;
 case 5:
 //C
 this.state = 1;
 ;
-RDebugUtils.currentLine=23330819;
- //BA.debugLineNum = 23330819;BA.debugLine="Do While Starter.finishedInit = False";
+ //BA.debugLineNum = 40;BA.debugLine="Do While Starter.finishedInit = False";
 if (true) break;
 
 case 1:
@@ -826,9 +564,8 @@ if (true) break;
 case 3:
 //C
 this.state = 1;
-RDebugUtils.currentLine=23330820;
- //BA.debugLineNum = 23330820;BA.debugLine="Sleep(100)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "startload"),(int) (100));
+ //BA.debugLineNum = 41;BA.debugLine="Sleep(100)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (100));
 this.state = 6;
 return;
 case 6:
@@ -841,21 +578,16 @@ case 4:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=23330822;
- //BA.debugLineNum = 23330822;BA.debugLine="StartService(musicService)";
+ //BA.debugLineNum = 43;BA.debugLine="StartService(musicService)";
 anywheresoftware.b4a.keywords.Common.StartService(processBA,(Object)(parent.mostCurrent._musicservice.getObject()));
-RDebugUtils.currentLine=23330823;
- //BA.debugLineNum = 23330823;BA.debugLine="StartActivity(MainActivity)";
+ //BA.debugLineNum = 44;BA.debugLine="StartActivity(MainActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._mainactivity.getObject()));
-RDebugUtils.currentLine=23330825;
- //BA.debugLineNum = 23330825;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 46;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
-RDebugUtils.currentLine=23330826;
- //BA.debugLineNum = 23330826;BA.debugLine="Return True";
+ //BA.debugLineNum = 47;BA.debugLine="Return True";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
-RDebugUtils.currentLine=23330827;
- //BA.debugLineNum = 23330827;BA.debugLine="End Sub";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
 if (true) break;
 
             }

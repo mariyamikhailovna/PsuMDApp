@@ -10,8 +10,7 @@ private static musiccodemodule mostCurrent = new musiccodemodule();
 public static Object getObject() {
     throw new RuntimeException("Code module does not support this method.");
 }
- 
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
 public b4a.example.mainactivity _mainactivity = null;
@@ -37,4 +36,9 @@ public b4a.example.navactivity _navactivity = null;
 public b4a.example.noteactivity _noteactivity = null;
 public b4a.example.schedule_module _schedule_module = null;
 public b4a.example.themeactivity _themeactivity = null;
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 3;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 7;BA.debugLine="End Sub";
+return "";
+}
 }
