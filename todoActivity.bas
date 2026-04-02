@@ -359,7 +359,7 @@ Sub addTaskBtn_Click
 		addTaskTextArea.HintColor = Colors.ARGB(255, 17, 17, 17)
 	End If
 	addTaskTextArea.Tag = Null
-	
+		
 	enterTaskBtn.Initialize("enterTaskBtn")
 	enterTaskBtn.Text = "Enter task"
 	
@@ -377,14 +377,21 @@ Sub enterTaskBtn_Click
 		MsgboxAsync("Please enter a task.", "No task entered")
 		Return
 	End If
+	
+	Dim key As String = "list_" & currentList
+	Dim savedTasks As List = kvs.Get(key)
+	For Each existingTask As String In savedTasks
+		If existingTask = newTask Then
+			MsgboxAsync("A task with that name already exists.", "Duplicate task")
+			Return
+		End If
+	Next
 
 	' Check if renaming
 	If addTaskTextArea.Tag <> Null Then
 		Dim ctx As List = addTaskTextArea.Tag
 		Dim oldTask As String = ctx.Get(1)
 
-		Dim key As String = "list_" & currentList
-		Dim savedTasks As List = kvs.Get(key)
 		Dim taskIndex As Int = savedTasks.IndexOf(oldTask)
 		If taskIndex >= 0 Then
 			savedTasks.Set(taskIndex, newTask)
