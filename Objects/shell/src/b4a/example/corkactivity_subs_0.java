@@ -8,7 +8,7 @@ public class corkactivity_subs_0 {
 
 public static void  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,55);
+		Debug.PushSubsStack("Activity_Create (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,55);
 if (RapidSub.canDelegate("activity_create")) { b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","activity_create", _firsttime); return;}
 ResumableSub_Activity_Create rsub = new ResumableSub_Activity_Create(null,_firsttime);
 rsub.resume(null, null);
@@ -51,7 +51,7 @@ int limit49;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,55);
+		Debug.PushSubsStack("Activity_Create (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,55);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -610,7 +610,7 @@ finally {
 }
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,156);
+		Debug.PushSubsStack("Activity_Pause (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,156);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 156;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -627,7 +627,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,150);
+		Debug.PushSubsStack("Activity_Resume (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,150);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","activity_resume");}
  BA.debugLineNum = 150;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(2097152);
@@ -650,7 +650,7 @@ finally {
 		}}
 public static void  _addcanvas(RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("AddCanvas (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,230);
+		Debug.PushSubsStack("AddCanvas (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,230);
 if (RapidSub.canDelegate("addcanvas")) { b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","addcanvas", _x, _y); return;}
 ResumableSub_AddCanvas rsub = new ResumableSub_AddCanvas(null,_x,_y);
 rsub.resume(null, null);
@@ -679,7 +679,7 @@ RemoteObject _key = RemoteObject.createImmutable("");
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("AddCanvas (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,230);
+		Debug.PushSubsStack("AddCanvas (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,230);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -816,7 +816,7 @@ finally {
 }
 public static RemoteObject  _addcbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("addcBtn_Click (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,339);
+		Debug.PushSubsStack("addcBtn_Click (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,339);
 if (RapidSub.canDelegate("addcbtn_click")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","addcbtn_click");}
  BA.debugLineNum = 339;BA.debugLine="Private Sub addcBtn_Click";
 Debug.ShouldStop(262144);
@@ -847,7 +847,7 @@ finally {
 		}}
 public static RemoteObject  _addnbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("addnBtn_Click (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,328);
+		Debug.PushSubsStack("addnBtn_Click (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,328);
 if (RapidSub.canDelegate("addnbtn_click")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","addnbtn_click");}
  BA.debugLineNum = 328;BA.debugLine="Private Sub addnBtn_Click";
 Debug.ShouldStop(128);
@@ -887,7 +887,7 @@ finally {
 		}}
 public static RemoteObject  _addstickynote(RemoteObject _text,RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("AddStickyNote (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,162);
+		Debug.PushSubsStack("AddStickyNote (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,162);
 if (RapidSub.canDelegate("addstickynote")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","addstickynote", _text, _x, _y);}
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _txt = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
@@ -976,7 +976,7 @@ _p.runMethod(false,"setTag",(RemoteObject.concat(RemoteObject.createImmutable("n
  };
  BA.debugLineNum = 195;BA.debugLine="Log(\"deleteLbl initialized: \" & (deleteLbl.IsInit";
 Debug.ShouldStop(4);
-corkactivity.mostCurrent.__c.runVoidMethod ("LogImpl","519791905",RemoteObject.concat(RemoteObject.createImmutable("deleteLbl initialized: "),(corkactivity.mostCurrent._deletelbl.runMethod(true,"IsInitialized"))),0);
+corkactivity.mostCurrent.__c.runVoidMethod ("LogImpl","321889057",RemoteObject.concat(RemoteObject.createImmutable("deleteLbl initialized: "),(corkactivity.mostCurrent._deletelbl.runMethod(true,"IsInitialized"))),0);
  BA.debugLineNum = 196;BA.debugLine="End Sub";
 Debug.ShouldStop(8);
 return RemoteObject.createImmutable("");
@@ -989,7 +989,7 @@ finally {
 		}}
 public static RemoteObject  _canvabtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("canvaBtn_Click (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,361);
+		Debug.PushSubsStack("canvaBtn_Click (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,361);
 if (RapidSub.canDelegate("canvabtn_click")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","canvabtn_click");}
  BA.debugLineNum = 361;BA.debugLine="Private Sub canvaBtn_Click";
 Debug.ShouldStop(256);
@@ -1023,7 +1023,7 @@ finally {
 		}}
 public static void  _canvasdrag_placedview(RemoteObject _cdragview,RemoteObject _cplaceview) throws Exception{
 try {
-		Debug.PushSubsStack("CanvasDrag_PlacedView (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,491);
+		Debug.PushSubsStack("CanvasDrag_PlacedView (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,491);
 if (RapidSub.canDelegate("canvasdrag_placedview")) { b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","canvasdrag_placedview", _cdragview, _cplaceview); return;}
 ResumableSub_CanvasDrag_PlacedView rsub = new ResumableSub_CanvasDrag_PlacedView(null,_cdragview,_cplaceview);
 rsub.resume(null, null);
@@ -1052,7 +1052,7 @@ RemoteObject _newcount = RemoteObject.createImmutable(0);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("CanvasDrag_PlacedView (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,491);
+		Debug.PushSubsStack("CanvasDrag_PlacedView (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,491);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1216,7 +1216,7 @@ public static void  _msgbox_result(RemoteObject _res) throws Exception{
 }
 public static RemoteObject  _canvaspanel_touch(RemoteObject _action,RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("CanvasPanel_Touch (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,265);
+		Debug.PushSubsStack("CanvasPanel_Touch (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,265);
 if (RapidSub.canDelegate("canvaspanel_touch")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","canvaspanel_touch", _action, _x, _y);}
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _cvs = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XCanvas");
@@ -1293,7 +1293,7 @@ finally {
 		}}
 public static RemoteObject  _canvaswindow(RemoteObject _pw,RemoteObject _ph) throws Exception{
 try {
-		Debug.PushSubsStack("canvasWindow (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,308);
+		Debug.PushSubsStack("canvasWindow (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,308);
 if (RapidSub.canDelegate("canvaswindow")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","canvaswindow", _pw, _ph);}
 RemoteObject _addcbtn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 Debug.locals.put("pW", _pw);
@@ -1351,7 +1351,7 @@ finally {
 		}}
 public static RemoteObject  _cc_result(RemoteObject _success,RemoteObject _dir,RemoteObject _filename) throws Exception{
 try {
-		Debug.PushSubsStack("CC_Result (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,205);
+		Debug.PushSubsStack("CC_Result (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,205);
 if (RapidSub.canDelegate("cc_result")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","cc_result", _success, _dir, _filename);}
 RemoteObject _bmp = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper");
 RemoteObject _key = RemoteObject.createImmutable("");
@@ -1435,7 +1435,7 @@ finally {
 		}}
 public static RemoteObject  _colorsspnr_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("colorsSpnr_ItemClick (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,395);
+		Debug.PushSubsStack("colorsSpnr_ItemClick (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,395);
 if (RapidSub.canDelegate("colorsspnr_itemclick")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","colorsspnr_itemclick", _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
@@ -1571,7 +1571,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _imgbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("imgBtn_Click (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,357);
+		Debug.PushSubsStack("imgBtn_Click (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,357);
 if (RapidSub.canDelegate("imgbtn_click")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","imgbtn_click");}
  BA.debugLineNum = 357;BA.debugLine="Private Sub imgBtn_Click";
 Debug.ShouldStop(16);
@@ -1590,7 +1590,7 @@ finally {
 		}}
 public static void  _imgdrag_placedview(RemoteObject _idragview,RemoteObject _iplaceview) throws Exception{
 try {
-		Debug.PushSubsStack("ImgDrag_PlacedView (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,467);
+		Debug.PushSubsStack("ImgDrag_PlacedView (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,467);
 if (RapidSub.canDelegate("imgdrag_placedview")) { b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","imgdrag_placedview", _idragview, _iplaceview); return;}
 ResumableSub_ImgDrag_PlacedView rsub = new ResumableSub_ImgDrag_PlacedView(null,_idragview,_iplaceview);
 rsub.resume(null, null);
@@ -1619,7 +1619,7 @@ RemoteObject _newcount = RemoteObject.createImmutable(0);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("ImgDrag_PlacedView (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,467);
+		Debug.PushSubsStack("ImgDrag_PlacedView (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,467);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1752,7 +1752,7 @@ finally {
 }
 public static void  _notedrag_placedview(RemoteObject _ndragview,RemoteObject _nplaceview) throws Exception{
 try {
-		Debug.PushSubsStack("NoteDrag_PlacedView (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,443);
+		Debug.PushSubsStack("NoteDrag_PlacedView (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,443);
 if (RapidSub.canDelegate("notedrag_placedview")) { b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","notedrag_placedview", _ndragview, _nplaceview); return;}
 ResumableSub_NoteDrag_PlacedView rsub = new ResumableSub_NoteDrag_PlacedView(null,_ndragview,_nplaceview);
 rsub.resume(null, null);
@@ -1781,7 +1781,7 @@ RemoteObject _newcount = RemoteObject.createImmutable(0);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("NoteDrag_PlacedView (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,443);
+		Debug.PushSubsStack("NoteDrag_PlacedView (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,443);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1914,7 +1914,7 @@ finally {
 }
 public static RemoteObject  _notetext_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("NoteText_TextChanged (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,198);
+		Debug.PushSubsStack("NoteText_TextChanged (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,198);
 if (RapidSub.canDelegate("notetext_textchanged")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","notetext_textchanged", _old, _new);}
 RemoteObject _txt = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
@@ -1949,7 +1949,7 @@ finally {
 		}}
 public static RemoteObject  _notewindow(RemoteObject _pw,RemoteObject _ph) throws Exception{
 try {
-		Debug.PushSubsStack("noteWindow (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,288);
+		Debug.PushSubsStack("noteWindow (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,288);
 if (RapidSub.canDelegate("notewindow")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","notewindow", _pw, _ph);}
 RemoteObject _colorsspnr = RemoteObject.declareNull("anywheresoftware.b4a.objects.SpinnerWrapper");
 RemoteObject _addnbtn = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
@@ -2011,7 +2011,7 @@ finally {
 		}}
 public static RemoteObject  _penspnr_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("penSpnr_ItemClick (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,412);
+		Debug.PushSubsStack("penSpnr_ItemClick (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,412);
 if (RapidSub.canDelegate("penspnr_itemclick")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","penspnr_itemclick", _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
@@ -2109,7 +2109,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _sizespnr_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("sizeSpnr_ItemClick (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,372);
+		Debug.PushSubsStack("sizeSpnr_ItemClick (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,372);
 if (RapidSub.canDelegate("sizespnr_itemclick")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","sizespnr_itemclick", _position, _value);}
 Debug.locals.put("Position", _position);
 Debug.locals.put("Value", _value);
@@ -2180,7 +2180,7 @@ finally {
 		}}
 public static RemoteObject  _stickybtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("stickyBtn_Click (corkactivity) ","corkactivity",18,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,349);
+		Debug.PushSubsStack("stickyBtn_Click (corkactivity) ","corkactivity",20,corkactivity.mostCurrent.activityBA,corkactivity.mostCurrent,349);
 if (RapidSub.canDelegate("stickybtn_click")) { return b4a.example.corkactivity.remoteMe.runUserSub(false, "corkactivity","stickybtn_click");}
  BA.debugLineNum = 349;BA.debugLine="Private Sub stickyBtn_Click";
 Debug.ShouldStop(268435456);
