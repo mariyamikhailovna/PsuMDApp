@@ -61,6 +61,18 @@ Sub Activity_Create(FirstTime As Boolean)
 	kvs = Starter.calKvs
 	CalendarMap = Starter.calendarMap
 	
+	For Each datekey As String In CalendarMap.Keys
+		Dim dates As Map = CalendarMap.Get(datekey)
+		Dim timeline As List = dates.Get("Timeline")
+		For i = 0 To timeline.Size -1
+			Dim ev As Map = timeline.Get(i)
+			If ev.ContainsKey("ID") = False Then
+				ev.Put("ID", DateTime.Now + Rnd(0,1000))
+			End If
+		Next
+	Next
+	kvs.Put("CalendarKVS", CalendarMap)
+	
 	'Year Spinner
 	Dim currentyear As Int = DateTime.GetYear(DateTime.Now)
 	Dim years As List

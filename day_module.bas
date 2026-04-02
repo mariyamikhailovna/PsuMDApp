@@ -39,6 +39,7 @@ Sub Globals
 	Dim currenttaggedEvent As Map
 	Dim timeIndex As Int
 	Dim eventtype As String
+	Dim currentevId As Long
 	
 	Private editTitle_et As EditText
 	Private editDescription_et As EditText
@@ -265,6 +266,7 @@ Sub timelineEvent_Click
 	Dim lbl As Label = Sender
 	Dim ev As Map = lbl.Tag
 	currenttaggedEvent = ev
+	currentevId = ev.Get("ID")
     
 	' Show the add/edit panel
 	addEventTL_panel.Visible = True
@@ -333,6 +335,10 @@ Sub MapInitializer As Map
 End Sub
 
 Private Sub saveTL_btn_Click
+	If starttimelineSP.SelectedIndex = endtimelineSP.SelectedIndex  Or starttimelineSP.SelectedIndex > endtimelineSP.selectedindex Then
+		MsgboxAsync("Invalid Timeline", "Error")
+		Return
+	End If
 	Dim eventmap As Map = CalendarActivity.CalendarMap.Get(currentDate)
 	If addTL_et.text = "" Then
 		MsgboxAsync("Event must have a name", "Error")
@@ -348,6 +354,7 @@ Private Sub saveTL_btn_Click
 	Dim ev As Map
 	ev.Initialize
 	
+	ev.Put("ID", DateTime.Now)
 	ev.Put("Title", addTL_et.Text)
 	ev.Put("Start", starttimelineSP.SelectedIndex)
 	ev.Put("End", endtimelineSP.SelectedIndex)
@@ -500,6 +507,11 @@ Private Sub cancelEdit_btn_Click
 End Sub
 
 Private Sub saveEdit_btn_Click
+	If starttimelineSP.SelectedIndex = endtimelineSP.SelectedIndex  Or starttimelineSP.SelectedIndex > endtimelineSP.selectedindex Then
+		MsgboxAsync("Invalid Timeline", "Error")
+		Return
+	End If
+	
 	If editTitle_et.text = "" Then
 		MsgboxAsync("Event must have name", "Error")
 		Return
@@ -550,7 +562,7 @@ Private Sub deleteTLconfirm_btn_Click
 	
 	For i = timeline.Size -1 To 0 Step -1
 		Dim ev As Map = timeline.Get(i)
-		If ev.Get("Start") = timeIndex Then
+		If ev.Get("ID") = currentevId Then
 			timeline.RemoveAt(i)
 			Exit
 		End If

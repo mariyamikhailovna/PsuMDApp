@@ -56,14 +56,6 @@
 			android:screenOrientation="portrait"
 			android:exported="true">
 		</activity>
-		<service
-			android:name=".musicservice"
-			android:exported="true">
-		</service>
-		<receiver
-			android:name=".musicservice$musicservice_BR"
-			android:exported="true">
-		</receiver>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
@@ -107,31 +99,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".add_card_module"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".flashcardactivity"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".add_card_module2"
-			android:label="Athena"
-			android:screenOrientation="portrait"
-			android:exported="true">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".corkactivity"
+			android:name=".add_events_module"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
@@ -147,7 +115,15 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".add_events_module"
+			android:name=".add_card_module"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".add_card_module2"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
@@ -171,6 +147,14 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".corkactivity"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".deck_all_cards"
 			android:label="Athena"
 			android:screenOrientation="portrait"
@@ -187,11 +171,27 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".flashcardactivity"
+			android:label="Athena"
+			android:screenOrientation="portrait"
+			android:exported="true">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".musicactivity"
 			android:label="Athena"
 			android:screenOrientation="portrait"
 			android:exported="true">
 		</activity>
+		<service
+			android:name=".musicservice"
+			android:exported="true">
+		</service>
+		<receiver
+			android:name=".musicservice$musicservice_BR"
+			android:exported="true">
+		</receiver>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"

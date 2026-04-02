@@ -202,7 +202,7 @@ Private Sub confirmnew_Click
 	For Each names As String In deck.keys
 		getsubdeck = deck.Get(item_longclick)
 		If newdeckname.Text = names Then
-			MsgboxAsync("Deck Name Already Exist", "Error")
+			MsgboxAsync("Sub-Deck Name Already Exist", "Error")
 			Return
 		End If
 	Next
