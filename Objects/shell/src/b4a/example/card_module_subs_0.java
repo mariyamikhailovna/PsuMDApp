@@ -8,39 +8,39 @@ public class card_module_subs_0 {
 
 public static RemoteObject  _activerecall_click() throws Exception{
 try {
-		Debug.PushSubsStack("activerecall_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,129);
+		Debug.PushSubsStack("activerecall_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,137);
 if (RapidSub.canDelegate("activerecall_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activerecall_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _number_of_cards = RemoteObject.createImmutable(0);
- BA.debugLineNum = 129;BA.debugLine="Private Sub activerecall_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 131;BA.debugLine="Dim tappedDeck As Map = FlashcardActivity.deck.Ge";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 137;BA.debugLine="Private Sub activerecall_Click";
+Debug.ShouldStop(256);
+ BA.debugLineNum = 139;BA.debugLine="Dim tappedDeck As Map = FlashcardActivity.deck.Ge";
+Debug.ShouldStop(1024);
 _tappeddeck = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
 _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), card_module.mostCurrent._flashcardactivity._deck /*RemoteObject*/ .runMethod(false,"Get",(Object)((card_module.mostCurrent._flashcardactivity._selecteddeck /*RemoteObject*/ ))));Debug.locals.put("tappedDeck", _tappeddeck);Debug.locals.put("tappedDeck", _tappeddeck);
- BA.debugLineNum = 132;BA.debugLine="Dim subdeckcards As List = tappedDeck.Get(Subdeck";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 140;BA.debugLine="Dim subdeckcards As List = tappedDeck.Get(Subdeck";
+Debug.ShouldStop(2048);
 _subdeckcards = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
 _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _tappeddeck.runMethod(false,"Get",(Object)((card_module.mostCurrent._subdeck_module._selectedsubdeck /*RemoteObject*/ ))));Debug.locals.put("subdeckcards", _subdeckcards);Debug.locals.put("subdeckcards", _subdeckcards);
- BA.debugLineNum = 133;BA.debugLine="Dim number_of_cards As Int = subdeckcards.size";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 141;BA.debugLine="Dim number_of_cards As Int = subdeckcards.size";
+Debug.ShouldStop(4096);
 _number_of_cards = _subdeckcards.runMethod(true,"getSize");Debug.locals.put("number_of_cards", _number_of_cards);Debug.locals.put("number_of_cards", _number_of_cards);
- BA.debugLineNum = 135;BA.debugLine="If number_of_cards = 0 Then";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 143;BA.debugLine="If number_of_cards = 0 Then";
+Debug.ShouldStop(16384);
 if (RemoteObject.solveBoolean("=",_number_of_cards,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 136;BA.debugLine="MsgboxAsync(\"No cards available\", \"Error\")";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 144;BA.debugLine="MsgboxAsync(\"No cards available\", \"Error\")";
+Debug.ShouldStop(32768);
 card_module.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("No cards available")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Error"))),card_module.processBA);
- BA.debugLineNum = 137;BA.debugLine="Return";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 145;BA.debugLine="Return";
+Debug.ShouldStop(65536);
 if (true) return RemoteObject.createImmutable("");
  };
- BA.debugLineNum = 139;BA.debugLine="StartActivity(active_recall)";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 147;BA.debugLine="StartActivity(active_recall)";
+Debug.ShouldStop(262144);
 card_module.mostCurrent.__c.runVoidMethod ("StartActivity",card_module.processBA,(Object)((card_module.mostCurrent._active_recall.getObject())));
- BA.debugLineNum = 140;BA.debugLine="End Sub";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 148;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -95,13 +95,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,118);
+		Debug.PushSubsStack("Activity_Pause (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,126);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 118;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(2097152);
- BA.debugLineNum = 120;BA.debugLine="End Sub";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 126;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 128;BA.debugLine="End Sub";
+Debug.ShouldStop(-2147483648);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -112,35 +112,35 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,106);
+		Debug.PushSubsStack("Activity_Resume (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,114);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","activity_resume");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
- BA.debugLineNum = 106;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(512);
- BA.debugLineNum = 108;BA.debugLine="If active_recall.praise = True Then";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 114;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(131072);
+ BA.debugLineNum = 116;BA.debugLine="If active_recall.praise = True Then";
+Debug.ShouldStop(524288);
 if (RemoteObject.solveBoolean("=",card_module.mostCurrent._active_recall._praise /*RemoteObject*/ ,card_module.mostCurrent.__c.getField(true,"True"))) { 
- BA.debugLineNum = 109;BA.debugLine="active_recall.praise = False";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 117;BA.debugLine="active_recall.praise = False";
+Debug.ShouldStop(1048576);
 card_module.mostCurrent._active_recall._praise /*RemoteObject*/  = card_module.mostCurrent.__c.getField(true,"False");
- BA.debugLineNum = 110;BA.debugLine="MsgboxAsync(\"You Finished Your Sub-Deck\", \"Congr";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 118;BA.debugLine="MsgboxAsync(\"You Finished Your Sub-Deck\", \"Congr";
+Debug.ShouldStop(2097152);
 card_module.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("You Finished Your Sub-Deck")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Congratulations"))),card_module.processBA);
  };
- BA.debugLineNum = 113;BA.debugLine="Dim tappedDeck As Map = FlashcardActivity.deck.Ge";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 121;BA.debugLine="Dim tappedDeck As Map = FlashcardActivity.deck.Ge";
+Debug.ShouldStop(16777216);
 _tappeddeck = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
 _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), card_module.mostCurrent._flashcardactivity._deck /*RemoteObject*/ .runMethod(false,"Get",(Object)((card_module.mostCurrent._flashcardactivity._selecteddeck /*RemoteObject*/ ))));Debug.locals.put("tappedDeck", _tappeddeck);Debug.locals.put("tappedDeck", _tappeddeck);
- BA.debugLineNum = 114;BA.debugLine="Dim subdeckcards As List = tappedDeck.Get(Subdeck";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 122;BA.debugLine="Dim subdeckcards As List = tappedDeck.Get(Subdeck";
+Debug.ShouldStop(33554432);
 _subdeckcards = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
 _subdeckcards = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _tappeddeck.runMethod(false,"Get",(Object)((card_module.mostCurrent._subdeck_module._selectedsubdeck /*RemoteObject*/ ))));Debug.locals.put("subdeckcards", _subdeckcards);Debug.locals.put("subdeckcards", _subdeckcards);
- BA.debugLineNum = 115;BA.debugLine="ShowSubdeckCards(subdeckcards)";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 123;BA.debugLine="ShowSubdeckCards(subdeckcards)";
+Debug.ShouldStop(67108864);
 _showsubdeckcards(_subdeckcards);
- BA.debugLineNum = 116;BA.debugLine="End Sub";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 124;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -151,18 +151,18 @@ finally {
 		}}
 public static RemoteObject  _addbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("addbtn_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,142);
+		Debug.PushSubsStack("addbtn_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,150);
 if (RapidSub.canDelegate("addbtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","addbtn_click");}
- BA.debugLineNum = 142;BA.debugLine="Private Sub addbtn_Click";
-Debug.ShouldStop(8192);
- BA.debugLineNum = 144;BA.debugLine="subdeck = Subdeck_Module.selectedsubdeck";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 150;BA.debugLine="Private Sub addbtn_Click";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 152;BA.debugLine="subdeck = Subdeck_Module.selectedsubdeck";
+Debug.ShouldStop(8388608);
 card_module._subdeck = card_module.mostCurrent._subdeck_module._selectedsubdeck /*RemoteObject*/ ;
- BA.debugLineNum = 145;BA.debugLine="StartActivity(add_card_module2)";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 153;BA.debugLine="StartActivity(add_card_module2)";
+Debug.ShouldStop(16777216);
 card_module.mostCurrent.__c.runVoidMethod ("StartActivity",card_module.processBA,(Object)((card_module.mostCurrent._add_card_module2.getObject())));
- BA.debugLineNum = 146;BA.debugLine="End Sub";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 154;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -173,15 +173,15 @@ finally {
 		}}
 public static RemoteObject  _backbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("backbtn_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,124);
+		Debug.PushSubsStack("backbtn_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,132);
 if (RapidSub.canDelegate("backbtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","backbtn_click");}
- BA.debugLineNum = 124;BA.debugLine="Private Sub backbtn_Click";
-Debug.ShouldStop(134217728);
- BA.debugLineNum = 126;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 132;BA.debugLine="Private Sub backbtn_Click";
+Debug.ShouldStop(8);
+ BA.debugLineNum = 134;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(32);
 card_module.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 127;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 135;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -192,15 +192,15 @@ finally {
 		}}
 public static RemoteObject  _canceldelete_click() throws Exception{
 try {
-		Debug.PushSubsStack("canceldelete_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,157);
+		Debug.PushSubsStack("canceldelete_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,165);
 if (RapidSub.canDelegate("canceldelete_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","canceldelete_click");}
- BA.debugLineNum = 157;BA.debugLine="Private Sub canceldelete_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 158;BA.debugLine="deleteconfirmation.Visible = False";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 165;BA.debugLine="Private Sub canceldelete_Click";
+Debug.ShouldStop(16);
+ BA.debugLineNum = 166;BA.debugLine="deleteconfirmation.Visible = False";
+Debug.ShouldStop(32);
 card_module.mostCurrent._deleteconfirmation.runMethod(true,"setVisible",card_module.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 159;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 167;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -211,31 +211,31 @@ finally {
 		}}
 public static RemoteObject  _confirmdelete_click() throws Exception{
 try {
-		Debug.PushSubsStack("confirmdelete_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,148);
+		Debug.PushSubsStack("confirmdelete_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,156);
 if (RapidSub.canDelegate("confirmdelete_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","confirmdelete_click");}
 RemoteObject _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _cards = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
- BA.debugLineNum = 148;BA.debugLine="Private Sub confirmdelete_Click";
-Debug.ShouldStop(524288);
- BA.debugLineNum = 149;BA.debugLine="Dim tappedDeck As Map = FlashcardActivity.deck.Ge";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 156;BA.debugLine="Private Sub confirmdelete_Click";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 157;BA.debugLine="Dim tappedDeck As Map = FlashcardActivity.deck.Ge";
+Debug.ShouldStop(268435456);
 _tappeddeck = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");
 _tappeddeck = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.Map"), card_module.mostCurrent._flashcardactivity._deck /*RemoteObject*/ .runMethod(false,"Get",(Object)((card_module.mostCurrent._flashcardactivity._selecteddeck /*RemoteObject*/ ))));Debug.locals.put("tappedDeck", _tappeddeck);Debug.locals.put("tappedDeck", _tappeddeck);
- BA.debugLineNum = 150;BA.debugLine="Dim cards As List = tappedDeck.Get(Subdeck_Module";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 158;BA.debugLine="Dim cards As List = tappedDeck.Get(Subdeck_Module";
+Debug.ShouldStop(536870912);
 _cards = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
 _cards = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _tappeddeck.runMethod(false,"Get",(Object)((card_module.mostCurrent._subdeck_module._selectedsubdeck /*RemoteObject*/ ))));Debug.locals.put("cards", _cards);Debug.locals.put("cards", _cards);
- BA.debugLineNum = 152;BA.debugLine="cards.RemoveAt(numtag)";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 160;BA.debugLine="cards.RemoveAt(numtag)";
+Debug.ShouldStop(-2147483648);
 _cards.runVoidMethod ("RemoveAt",(Object)(card_module._numtag));
- BA.debugLineNum = 153;BA.debugLine="ShowSubdeckCards(cards)";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 161;BA.debugLine="ShowSubdeckCards(cards)";
+Debug.ShouldStop(1);
 _showsubdeckcards(_cards);
- BA.debugLineNum = 154;BA.debugLine="deleteconfirmation.Visible = False";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 162;BA.debugLine="deleteconfirmation.Visible = False";
+Debug.ShouldStop(2);
 card_module.mostCurrent._deleteconfirmation.runMethod(true,"setVisible",card_module.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 155;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 163;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -246,27 +246,27 @@ finally {
 		}}
 public static RemoteObject  _deletebtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("deletebtn_click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,97);
+		Debug.PushSubsStack("deletebtn_click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,105);
 if (RapidSub.canDelegate("deletebtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","deletebtn_click");}
 RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _index = RemoteObject.createImmutable(0);
- BA.debugLineNum = 97;BA.debugLine="Sub deletebtn_click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 99;BA.debugLine="Dim b As Button = Sender";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 105;BA.debugLine="Sub deletebtn_click";
+Debug.ShouldStop(256);
+ BA.debugLineNum = 107;BA.debugLine="Dim b As Button = Sender";
+Debug.ShouldStop(1024);
 _b = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
 _b = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ButtonWrapper"), card_module.mostCurrent.__c.runMethod(false,"Sender",card_module.mostCurrent.activityBA));Debug.locals.put("b", _b);Debug.locals.put("b", _b);
- BA.debugLineNum = 100;BA.debugLine="Dim index As Int = b.Tag";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 108;BA.debugLine="Dim index As Int = b.Tag";
+Debug.ShouldStop(2048);
 _index = BA.numberCast(int.class, _b.runMethod(false,"getTag"));Debug.locals.put("index", _index);Debug.locals.put("index", _index);
- BA.debugLineNum = 101;BA.debugLine="numtag = index";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 109;BA.debugLine="numtag = index";
+Debug.ShouldStop(4096);
 card_module._numtag = _index;
- BA.debugLineNum = 102;BA.debugLine="deleteconfirmation.Visible = True";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 110;BA.debugLine="deleteconfirmation.Visible = True";
+Debug.ShouldStop(8192);
 card_module.mostCurrent._deleteconfirmation.runMethod(true,"setVisible",card_module.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 104;BA.debugLine="End Sub";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 112;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -277,33 +277,33 @@ finally {
 		}}
 public static RemoteObject  _editbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("editbtn_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,85);
+		Debug.PushSubsStack("editbtn_Click (card_module) ","card_module",8,card_module.mostCurrent.activityBA,card_module.mostCurrent,93);
 if (RapidSub.canDelegate("editbtn_click")) { return b4a.example.card_module.remoteMe.runUserSub(false, "card_module","editbtn_click");}
 RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _index = RemoteObject.createImmutable(0);
- BA.debugLineNum = 85;BA.debugLine="Sub editbtn_Click";
-Debug.ShouldStop(1048576);
- BA.debugLineNum = 87;BA.debugLine="subdeck = Subdeck_Module.selectedsubdeck";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 93;BA.debugLine="Sub editbtn_Click";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 95;BA.debugLine="subdeck = Subdeck_Module.selectedsubdeck";
+Debug.ShouldStop(1073741824);
 card_module._subdeck = card_module.mostCurrent._subdeck_module._selectedsubdeck /*RemoteObject*/ ;
- BA.debugLineNum = 88;BA.debugLine="Dim b As Button = Sender";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 96;BA.debugLine="Dim b As Button = Sender";
+Debug.ShouldStop(-2147483648);
 _b = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
 _b = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ButtonWrapper"), card_module.mostCurrent.__c.runMethod(false,"Sender",card_module.mostCurrent.activityBA));Debug.locals.put("b", _b);Debug.locals.put("b", _b);
- BA.debugLineNum = 89;BA.debugLine="Dim index As Int = b.Tag";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 97;BA.debugLine="Dim index As Int = b.Tag";
+Debug.ShouldStop(1);
 _index = BA.numberCast(int.class, _b.runMethod(false,"getTag"));Debug.locals.put("index", _index);Debug.locals.put("index", _index);
- BA.debugLineNum = 90;BA.debugLine="editindex = index";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 98;BA.debugLine="editindex = index";
+Debug.ShouldStop(2);
 card_module._editindex = _index;
- BA.debugLineNum = 91;BA.debugLine="isEdit = True";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 99;BA.debugLine="isEdit = True";
+Debug.ShouldStop(4);
 card_module._isedit = card_module.mostCurrent.__c.getField(true,"True");
- BA.debugLineNum = 93;BA.debugLine="StartActivity(add_card_module2)";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 101;BA.debugLine="StartActivity(add_card_module2)";
+Debug.ShouldStop(16);
 card_module.mostCurrent.__c.runVoidMethod ("StartActivity",card_module.processBA,(Object)((card_module.mostCurrent._add_card_module2.getObject())));
- BA.debugLineNum = 95;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 103;BA.debugLine="End Sub";
+Debug.ShouldStop(64);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -379,80 +379,96 @@ _p = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.
  BA.debugLineNum = 52;BA.debugLine="p.Initialize(\"\")";
 Debug.ShouldStop(524288);
 _p.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 53;BA.debugLine="p.Color = Colors.White";
+ BA.debugLineNum = 53;BA.debugLine="If Starter.darkMode = False Then";
 Debug.ShouldStop(1048576);
-_p.runVoidMethod ("setColor",card_module.mostCurrent.__c.getField(false,"Colors").getField(true,"White"));
- BA.debugLineNum = 54;BA.debugLine="ScrollView1.Panel.AddView(p, 10dip, topPos, Scro";
+if (RemoteObject.solveBoolean("=",card_module.mostCurrent._starter._darkmode /*RemoteObject*/ ,card_module.mostCurrent.__c.getField(true,"False"))) { 
+ BA.debugLineNum = 54;BA.debugLine="p.Color = Colors.White";
 Debug.ShouldStop(2097152);
-card_module.mostCurrent._scrollview1.runMethod(false,"getPanel").runVoidMethod ("AddView",(Object)((_p.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(_toppos),(Object)(RemoteObject.solve(new RemoteObject[] {card_module.mostCurrent._scrollview1.runMethod(true,"getWidth"),card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))}, "-",1, 1)),(Object)(_cardheight));
- BA.debugLineNum = 56;BA.debugLine="Dim lbl As Label";
+_p.runVoidMethod ("setColor",card_module.mostCurrent.__c.getField(false,"Colors").getField(true,"White"));
+ }else {
+ BA.debugLineNum = 56;BA.debugLine="p.Color = Colors.Black";
 Debug.ShouldStop(8388608);
-_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lbl", _lbl);
- BA.debugLineNum = 57;BA.debugLine="lbl.Initialize(\"\")";
-Debug.ShouldStop(16777216);
-_lbl.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 58;BA.debugLine="lbl.Text = \"Q: \" & card.Get(\"Q\") & CRLF & \"A: \"";
+_p.runVoidMethod ("setColor",card_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ };
+ BA.debugLineNum = 58;BA.debugLine="ScrollView1.Panel.AddView(p, 10dip, topPos, Scro";
 Debug.ShouldStop(33554432);
-_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Q: "),_card.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Q")))),card_module.mostCurrent.__c.getField(true,"CRLF"),RemoteObject.createImmutable("A: "),_card.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("A")))))));
- BA.debugLineNum = 59;BA.debugLine="lbl.TextColor = Colors.black";
-Debug.ShouldStop(67108864);
-_lbl.runMethod(true,"setTextColor",card_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 60;BA.debugLine="lbl.TextSize = 12";
+card_module.mostCurrent._scrollview1.runMethod(false,"getPanel").runVoidMethod ("AddView",(Object)((_p.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(_toppos),(Object)(RemoteObject.solve(new RemoteObject[] {card_module.mostCurrent._scrollview1.runMethod(true,"getWidth"),card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))}, "-",1, 1)),(Object)(_cardheight));
+ BA.debugLineNum = 60;BA.debugLine="Dim lbl As Label";
 Debug.ShouldStop(134217728);
-_lbl.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
- BA.debugLineNum = 61;BA.debugLine="lbl.SingleLine = False";
+_lbl = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("lbl", _lbl);
+ BA.debugLineNum = 61;BA.debugLine="lbl.Initialize(\"\")";
 Debug.ShouldStop(268435456);
-_lbl.runVoidMethod ("setSingleLine",card_module.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 63;BA.debugLine="p.AddView(lbl, 10dip, 10dip, ScrollView1.Width -";
+_lbl.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 62;BA.debugLine="lbl.Text = \"Q: \" & card.Get(\"Q\") & CRLF & \"A: \"";
+Debug.ShouldStop(536870912);
+_lbl.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Q: "),_card.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("Q")))),card_module.mostCurrent.__c.getField(true,"CRLF"),RemoteObject.createImmutable("A: "),_card.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("A")))))));
+ BA.debugLineNum = 63;BA.debugLine="If Starter.darkMode = False Then";
 Debug.ShouldStop(1073741824);
-_p.runVoidMethod ("AddView",(Object)((_lbl.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(RemoteObject.solve(new RemoteObject[] {card_module.mostCurrent._scrollview1.runMethod(true,"getWidth"),card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))}, "-",1, 1)),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))));
- BA.debugLineNum = 64;BA.debugLine="topPos = topPos + lbl.height + 10dip";
+if (RemoteObject.solveBoolean("=",card_module.mostCurrent._starter._darkmode /*RemoteObject*/ ,card_module.mostCurrent.__c.getField(true,"False"))) { 
+ BA.debugLineNum = 64;BA.debugLine="lbl.TextColor = Colors.black";
 Debug.ShouldStop(-2147483648);
-_toppos = RemoteObject.solve(new RemoteObject[] {_toppos,_lbl.runMethod(true,"getHeight"),card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))}, "++",2, 1);Debug.locals.put("topPos", _toppos);
- BA.debugLineNum = 66;BA.debugLine="Dim btnwidth As Int = 100dip";
+_lbl.runMethod(true,"setTextColor",card_module.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
+ }else {
+ BA.debugLineNum = 66;BA.debugLine="lbl.TextColor = Colors.White";
 Debug.ShouldStop(2);
-_btnwidth = card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)));Debug.locals.put("btnwidth", _btnwidth);Debug.locals.put("btnwidth", _btnwidth);
- BA.debugLineNum = 68;BA.debugLine="Dim editbtn As Button";
+_lbl.runMethod(true,"setTextColor",card_module.mostCurrent.__c.getField(false,"Colors").getField(true,"White"));
+ };
+ BA.debugLineNum = 68;BA.debugLine="lbl.TextSize = 12";
 Debug.ShouldStop(8);
-_editbtn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("editbtn", _editbtn);
- BA.debugLineNum = 69;BA.debugLine="editbtn.Initialize(\"Editbtn\") 'btn name";
+_lbl.runMethod(true,"setTextSize",BA.numberCast(float.class, 12));
+ BA.debugLineNum = 69;BA.debugLine="lbl.SingleLine = False";
 Debug.ShouldStop(16);
-_editbtn.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("Editbtn")));
- BA.debugLineNum = 70;BA.debugLine="editbtn.Tag = i 'tag/index";
-Debug.ShouldStop(32);
-_editbtn.runMethod(false,"setTag",RemoteObject.createImmutable((_i)));
- BA.debugLineNum = 71;BA.debugLine="editbtn.Text = \"Edit\" 'button text display";
+_lbl.runVoidMethod ("setSingleLine",card_module.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 71;BA.debugLine="p.AddView(lbl, 10dip, 10dip, ScrollView1.Width -";
 Debug.ShouldStop(64);
-_editbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Edit"));
- BA.debugLineNum = 72;BA.debugLine="p.AddView(editbtn, 10dip, 115dip, btnwidth, 40di";
+_p.runVoidMethod ("AddView",(Object)((_lbl.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(RemoteObject.solve(new RemoteObject[] {card_module.mostCurrent._scrollview1.runMethod(true,"getWidth"),card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))}, "-",1, 1)),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))));
+ BA.debugLineNum = 72;BA.debugLine="topPos = topPos + lbl.height + 10dip";
 Debug.ShouldStop(128);
-_p.runVoidMethod ("AddView",(Object)((_editbtn.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 115)))),(Object)(_btnwidth),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 74;BA.debugLine="Dim deletebtn As Button";
+_toppos = RemoteObject.solve(new RemoteObject[] {_toppos,_lbl.runMethod(true,"getHeight"),card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))}, "++",2, 1);Debug.locals.put("topPos", _toppos);
+ BA.debugLineNum = 74;BA.debugLine="Dim btnwidth As Int = 100dip";
 Debug.ShouldStop(512);
-_deletebtn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("deletebtn", _deletebtn);
- BA.debugLineNum = 75;BA.debugLine="deletebtn.Initialize(\"Deletebtn\")";
-Debug.ShouldStop(1024);
-_deletebtn.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("Deletebtn")));
- BA.debugLineNum = 76;BA.debugLine="deletebtn.Tag = i";
+_btnwidth = card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)));Debug.locals.put("btnwidth", _btnwidth);Debug.locals.put("btnwidth", _btnwidth);
+ BA.debugLineNum = 76;BA.debugLine="Dim editbtn As Button";
 Debug.ShouldStop(2048);
-_deletebtn.runMethod(false,"setTag",RemoteObject.createImmutable((_i)));
- BA.debugLineNum = 77;BA.debugLine="deletebtn.Text = \"Delete\"";
+_editbtn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("editbtn", _editbtn);
+ BA.debugLineNum = 77;BA.debugLine="editbtn.Initialize(\"Editbtn\") 'btn name";
 Debug.ShouldStop(4096);
-_deletebtn.runMethod(true,"setText",BA.ObjectToCharSequence("Delete"));
- BA.debugLineNum = 78;BA.debugLine="p.AddView(deletebtn, 200dip, 115dip, btnwidth, 4";
+_editbtn.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("Editbtn")));
+ BA.debugLineNum = 78;BA.debugLine="editbtn.Tag = i 'tag/index";
 Debug.ShouldStop(8192);
-_p.runVoidMethod ("AddView",(Object)((_deletebtn.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 115)))),(Object)(_btnwidth),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
- BA.debugLineNum = 79;BA.debugLine="topPos = topPos + cardHeight + 10dip";
+_editbtn.runMethod(false,"setTag",RemoteObject.createImmutable((_i)));
+ BA.debugLineNum = 79;BA.debugLine="editbtn.Text = \"Edit\" 'button text display";
 Debug.ShouldStop(16384);
+_editbtn.runMethod(true,"setText",BA.ObjectToCharSequence("Edit"));
+ BA.debugLineNum = 80;BA.debugLine="p.AddView(editbtn, 30dip, 100dip, btnwidth, 40di";
+Debug.ShouldStop(32768);
+_p.runVoidMethod ("AddView",(Object)((_editbtn.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))),(Object)(_btnwidth),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
+ BA.debugLineNum = 82;BA.debugLine="Dim deletebtn As Button";
+Debug.ShouldStop(131072);
+_deletebtn = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("deletebtn", _deletebtn);
+ BA.debugLineNum = 83;BA.debugLine="deletebtn.Initialize(\"Deletebtn\")";
+Debug.ShouldStop(262144);
+_deletebtn.runVoidMethod ("Initialize",card_module.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("Deletebtn")));
+ BA.debugLineNum = 84;BA.debugLine="deletebtn.Tag = i";
+Debug.ShouldStop(524288);
+_deletebtn.runMethod(false,"setTag",RemoteObject.createImmutable((_i)));
+ BA.debugLineNum = 85;BA.debugLine="deletebtn.Text = \"Delete\"";
+Debug.ShouldStop(1048576);
+_deletebtn.runMethod(true,"setText",BA.ObjectToCharSequence("Delete"));
+ BA.debugLineNum = 86;BA.debugLine="p.AddView(deletebtn, 200dip, 100dip, btnwidth, 4";
+Debug.ShouldStop(2097152);
+_p.runVoidMethod ("AddView",(Object)((_deletebtn.getObject())),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))),(Object)(_btnwidth),(Object)(card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)))));
+ BA.debugLineNum = 87;BA.debugLine="topPos = topPos + cardHeight + 10dip";
+Debug.ShouldStop(4194304);
 _toppos = RemoteObject.solve(new RemoteObject[] {_toppos,_cardheight,card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))}, "++",2, 1);Debug.locals.put("topPos", _toppos);
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 81;BA.debugLine="ScrollView1.Panel.Height = topPos + 10dip";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 89;BA.debugLine="ScrollView1.Panel.Height = topPos + 10dip";
+Debug.ShouldStop(16777216);
 card_module.mostCurrent._scrollview1.runMethod(false,"getPanel").runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_toppos,card_module.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))}, "+",1, 1));
- BA.debugLineNum = 82;BA.debugLine="End Sub";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 90;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

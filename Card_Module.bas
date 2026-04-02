@@ -56,13 +56,21 @@ Sub ShowSubdeckCards(cardsList As List)
 		Dim card As Map = cardsList.Get(i)
 		Dim p As Panel
 		p.Initialize("")
-		p.Color = Colors.White
+		If Starter.darkMode = False Then
+			p.Color = Colors.White
+		Else
+			p.Color = Colors.Black
+		End If
 		ScrollView1.Panel.AddView(p, 10dip, topPos, ScrollView1.Width - 20dip, cardHeight)
 	
 		Dim lbl As Label
 		lbl.Initialize("")
 		lbl.Text = "Q: " & card.Get("Q") & CRLF & "A: " & card.Get("A")
-		lbl.TextColor = Colors.black
+		If Starter.darkMode = False Then
+			lbl.TextColor = Colors.black
+		Else
+			lbl.TextColor = Colors.White
+		End If
 		lbl.TextSize = 12
 		lbl.SingleLine = False
 		
@@ -75,13 +83,13 @@ Sub ShowSubdeckCards(cardsList As List)
 		editbtn.Initialize("Editbtn") 'btn name
 		editbtn.Tag = i 'tag/index
 		editbtn.Text = "Edit" 'button text display
-		p.AddView(editbtn, 10dip, 115dip, btnwidth, 40dip) '(horizontal position, vertical position, width, height)
+		p.AddView(editbtn, 30dip, 100dip, btnwidth, 40dip) '(horizontal position, vertical position, width, height)
 		
 		Dim deletebtn As Button
 		deletebtn.Initialize("Deletebtn")
 		deletebtn.Tag = i
 		deletebtn.Text = "Delete"
-		p.AddView(deletebtn, 200dip, 115dip, btnwidth, 40dip)
+		p.AddView(deletebtn, 200dip, 100dip, btnwidth, 40dip)
 		topPos = topPos + cardHeight + 10dip
 	Next
 	ScrollView1.Panel.Height = topPos + 10dip
