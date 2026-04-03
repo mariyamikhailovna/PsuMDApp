@@ -97,28 +97,31 @@ Sub Activity_Resume
 		DateTime.TimeFormat = "hh:mm a" ' AM/PM Format
 	End If
 	
-	regLayout.RemoveAllViews
-	darkModeLayout.RemoveAllViews
-	
-	Select Starter.themeNumber
-		Case 0
-			regLayout.LoadLayout("Layout")
-			darkModeLayout.LoadLayout("Layout2")
-			computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
-			dcomputerGif.SetGif(File.DirAssets, "darkbtnComputer.GIF")
-		Case 1
-			regLayout.LoadLayout("Layout3")
-			darkModeLayout.LoadLayout("Layout4")
-			computerGif.SetGif(File.DirAssets, "mikucomp2.GIF") 'miku
-			dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF") 'miku
-		Case 2
-			regLayout.LoadLayout("Layout5")
-			darkModeLayout.LoadLayout("Layout6")
-			computerGif.SetGif(File.DirAssets, "Comp3.GIF")
-			dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
-			curtain.SetGif(File.DirAssets, "Curtain.GIF")
-			dCurtain.SetGif(File.DirAssets, "DCurtain.GIF")
-	End Select
+	If Starter.themeChanged Then
+		regLayout.RemoveAllViews
+		darkModeLayout.RemoveAllViews
+		
+		Select Starter.themeNumber
+			Case 0
+				regLayout.LoadLayout("Layout")
+				darkModeLayout.LoadLayout("Layout2")
+				computerGif.SetGif(File.DirAssets, "BtnComputer.GIF")
+				dcomputerGif.SetGif(File.DirAssets, "darkbtnComputer.GIF")
+			Case 1
+				regLayout.LoadLayout("Layout3")
+				darkModeLayout.LoadLayout("Layout4")
+				computerGif.SetGif(File.DirAssets, "mikucomp2.GIF") 'miku
+				dcomputerGif.SetGif(File.DirAssets, "DComp2.GIF") 'miku
+			Case 2
+				regLayout.LoadLayout("Layout5")
+				darkModeLayout.LoadLayout("Layout6")
+				computerGif.SetGif(File.DirAssets, "Comp3.GIF")
+				dcomputerGif.SetGif(File.DirAssets, "DComp3.GIF")
+				curtain.SetGif(File.DirAssets, "Curtain.GIF")
+				dCurtain.SetGif(File.DirAssets, "DCurtain.GIF")
+		End Select
+		Starter.themeChanged = False
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)

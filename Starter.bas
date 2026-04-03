@@ -22,6 +22,7 @@ Sub Process_Globals
 	Public taskKvs As KeyValueStore
 	Public deck As Map
 	Public finishedInit As Boolean = False
+	Public themeChanged As Boolean = False
 End Sub
 
 Sub Service_Create

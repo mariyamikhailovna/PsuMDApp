@@ -85,10 +85,14 @@ End Sub
 Sub applyBtn_Click
 	If themePage = 0 Then
 		Starter.themeNumber = 0
+		Starter.themeChanged = True
 	Else If themePage = 1 Then
 		Starter.themeNumber = 1
+		Starter.themeChanged = True
 	Else If themePage = 2 Then
 		Starter.themeNumber = 2
+		Starter.themeChanged = True
 	End If
+	ToastMessageShow("Theme changed!", False)
 	MainActivity.kvsPref.Put("themeNumber", Starter.themeNumber)
 End Sub
