@@ -296,6 +296,7 @@ Sub listsList_ItemLongClick(Index As Int, Value As Object)
 			savedLists.RemoveAt(Index)
 			kvs.Put("lists", savedLists)
 			listsList.RemoveAt(Index)
+			ToastMessageShow("List deleted", False)
 		End If
 
 		' Clear tasks and checkbox keys for deleted list
@@ -316,8 +317,6 @@ Sub listsList_ItemLongClick(Index As Int, Value As Object)
 			addTitleTextArea.Text = ""
 			addTitleTextArea.Visible = False
 		End If
-
-		ToastMessageShow("List deleted", False)
 	End If
 	
 End Sub
@@ -379,7 +378,13 @@ Sub enterTaskBtn_Click
 	End If
 	
 	Dim key As String = "list_" & currentList
-	Dim savedTasks As List = kvs.Get(key)
+	Dim savedTasks As List
+	savedTasks.Initialize
+	
+	If kvs.ContainsKey(key) Then
+		savedTasks = kvs.Get(key)
+	End If
+	
 	For Each existingTask As String In savedTasks
 		If existingTask = newTask Then
 			MsgboxAsync("A task with that name already exists.", "Duplicate task")

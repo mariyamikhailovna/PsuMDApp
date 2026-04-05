@@ -102,7 +102,7 @@ themeactivity,activity_resume,0,0,33,35
 
 
 
-themeactivity,applybtn_click,0,1,79,92
+themeactivity,applybtn_click,0,0,79,92
 ,themepage,starter,themenumber,starter,themechanged,mainactivity,kvspref
 starter,themenumber,starter,themechanged
 
@@ -146,7 +146,7 @@ mainactivity,bookie_longclick,0,0,360,368
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,showinfopopup,0,0,155,185
+mainactivity,showinfopopup,0,1,155,185
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopage
@@ -330,7 +330,7 @@ todoactivity,activity_resume,0,0,64,66
 
 
 
-todoactivity,addtaskbtn_click,0,0,334,365
+todoactivity,addtaskbtn_click,0,0,333,364
 ,addtaskbtn,,taskslist,,addtaskpanel,starter,darkmode,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl
 
 
@@ -338,15 +338,15 @@ todoactivity,addtitletextarea_enterpressed,1,0,121,246
 ,addtitletextarea,,currentlist,,kvs,,listslist,,newlistbtn,,isaddinglist,,untitledno,,taskslist,,progressnumber,,progresspercent,,progressbar,starter,darkmode,,addtaskbtnpnl,,addtaskbtn
 ,currentlist,,isaddinglist,,untitledno
 ,newaddtaskbtn
-todoactivity,entertaskbtn_click,1,0,367,437
+todoactivity,entertaskbtn_click,1,0,366,442
 ,addtasktextarea,,currentlist,,kvs,,taskslist,,addtaskbtn,starter,darkmode,,addtaskbtnpnl,,progressnumber,,progresspercent,,progressbar
 
 ,taskslistui,,newaddtaskbtn,,updateprogress
-todoactivity,taskslistui,1,0,514,557
+todoactivity,taskslistui,1,0,519,562
 starter,darkmode,,currentlist,,kvs,,taskslist
 
 
-todoactivity,updateprogress,0,0,559,595
+todoactivity,updateprogress,0,0,564,600
 ,currentlist,,progressnumber,,kvs,,progresspercent,,progressbar
 
 
@@ -358,11 +358,11 @@ todoactivity,listslist_itemclick,1,0,248,274
 ,isaddinglist,,listslist,,currentlist,,addtitletextarea,,taskslist,,kvs,starter,darkmode,,addtaskbtnpnl,,addtaskbtn,,progressnumber,,progresspercent,,progressbar
 ,currentlist
 ,taskslistui,,newaddtaskbtn,,updateprogress
-todoactivity,listslist_itemlongclick,1,0,276,317
+todoactivity,listslist_itemlongclick,1,0,276,316
 ,kvs,,listslist,,currentlist,,taskslist,,addtitletextarea
 ,currentlist
 ,showrenamelistpanel
-todoactivity,showrenamelistpanel,1,0,319,332
+todoactivity,showrenamelistpanel,1,0,318,331
 ,addtitletextarea
 
 
@@ -374,15 +374,15 @@ todoactivity,process_globals,0,1,6,11
 
 
 
-todoactivity,showrenametaskpanel,1,0,462,486
+todoactivity,showrenametaskpanel,1,0,467,491
 ,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl
 
 
-todoactivity,taskcheckbox_checkedchange,0,0,488,512
+todoactivity,taskcheckbox_checkedchange,0,0,493,517
 starter,darkmode,,currentlist,,kvs,,progressnumber,,progresspercent,,progressbar
 
 ,updateprogress
-todoactivity,taskslist_itemlongclick,1,0,439,460
+todoactivity,taskslist_itemlongclick,1,0,444,465
 ,currentlist,,kvs,,taskslist,,addtaskpanel,,addtasktextarea,,entertaskbtn,,addtaskbtnpnl,,progressnumber,,progresspercent,,progressbar
 
 ,showrenametaskpanel,,updateprogress

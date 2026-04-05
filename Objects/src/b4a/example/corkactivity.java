@@ -1086,7 +1086,7 @@ _p.setTag((Object)("note_"+BA.NumberToString((_notecount-1))));
  };
 RDebugUtils.currentLine=18874401;
  //BA.debugLineNum = 18874401;BA.debugLine="Log(\"deleteLbl initialized: \" & (deleteLbl.IsInit";
-anywheresoftware.b4a.keywords.Common.LogImpl("318874401","deleteLbl initialized: "+BA.ObjectToString((mostCurrent._deletelbl.IsInitialized())),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("418874401","deleteLbl initialized: "+BA.ObjectToString((mostCurrent._deletelbl.IsInitialized())),0);
 RDebugUtils.currentLine=18874402;
  //BA.debugLineNum = 18874402;BA.debugLine="End Sub";
 return "";

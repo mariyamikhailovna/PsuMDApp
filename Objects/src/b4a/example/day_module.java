@@ -459,7 +459,7 @@ RDebugUtils.currentLine=11141138;
 _setupspinners();
 RDebugUtils.currentLine=11141140;
  //BA.debugLineNum = 11141140;BA.debugLine="Log(currentDate)";
-anywheresoftware.b4a.keywords.Common.LogImpl("311141140",_currentdate,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("411141140",_currentdate,0);
 RDebugUtils.currentLine=11141142;
  //BA.debugLineNum = 11141142;BA.debugLine="End Sub";
 return "";

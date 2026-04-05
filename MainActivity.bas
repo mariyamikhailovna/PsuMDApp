@@ -176,14 +176,14 @@ Private Sub showInfoPopup
 	infoPnl.AddView(infoTitleLbl, 12dip, 12dip, 248dip, 30dip)
 
 	infoDescLbl.Initialize("")
-	infoDescLbl.TextSize = 11
+	infoDescLbl.TextSize = 10
 	infoDescLbl.Gravity = Gravity.TOP
 	infoDescLbl.SingleLine = False
-	infoPnl.AddView(infoDescLbl, 12dip, 52dip, 276dip, 120dip)
+	infoPnl.AddView(infoDescLbl, 12dip, 52dip, 276dip, 140dip)
 
 	infoPageLbl.Initialize("")
 	infoPageLbl.Gravity = Gravity.CENTER_HORIZONTAL
-	infoPageLbl.TextSize = 11
+	infoPageLbl.TextSize = 10
 	infoPnl.AddView(infoPageLbl, 95dip, 184dip, 110dip, 22dip)
 
 
