@@ -372,7 +372,6 @@ public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
 public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.todoactivity _todoactivity = null;
 public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.card_module _card_module = null;
@@ -420,11 +419,11 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=3211265;
- //BA.debugLineNum = 3211265;BA.debugLine="Activity.LoadLayout(\"Layouthsv\")";
+RDebugUtils.currentLine=1572865;
+ //BA.debugLineNum = 1572865;BA.debugLine="Activity.LoadLayout(\"Layouthsv\")";
 parent.mostCurrent._activity.LoadLayout("Layouthsv",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211266;
- //BA.debugLineNum = 3211266;BA.debugLine="If FirstTime Then";
+RDebugUtils.currentLine=1572866;
+ //BA.debugLineNum = 1572866;BA.debugLine="If FirstTime Then";
 if (true) break;
 
 case 1:
@@ -437,17 +436,17 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=3211267;
- //BA.debugLineNum = 3211267;BA.debugLine="kvs = Starter.notesKvs";
+RDebugUtils.currentLine=1572867;
+ //BA.debugLineNum = 1572867;BA.debugLine="kvs = Starter.notesKvs";
 parent._kvs = parent.mostCurrent._starter._noteskvs /*b4a.example3.keyvaluestore*/ ;
-RDebugUtils.currentLine=3211268;
- //BA.debugLineNum = 3211268;BA.debugLine="kvsPref = Starter.prefKvs";
+RDebugUtils.currentLine=1572868;
+ //BA.debugLineNum = 1572868;BA.debugLine="kvsPref = Starter.prefKvs";
 parent._kvspref = parent.mostCurrent._starter._prefkvs /*b4a.example3.keyvaluestore*/ ;
-RDebugUtils.currentLine=3211269;
- //BA.debugLineNum = 3211269;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
+RDebugUtils.currentLine=1572869;
+ //BA.debugLineNum = 1572869;BA.debugLine="timerClock.Initialize(\"timerClock\", 1000)";
 parent._timerclock.Initialize(processBA,"timerClock",(long) (1000));
-RDebugUtils.currentLine=3211270;
- //BA.debugLineNum = 3211270;BA.debugLine="timerClock.Enabled = True";
+RDebugUtils.currentLine=1572870;
+ //BA.debugLineNum = 1572870;BA.debugLine="timerClock.Enabled = True";
 parent._timerclock.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
@@ -455,26 +454,26 @@ case 4:
 //C
 this.state = 5;
 ;
-RDebugUtils.currentLine=3211273;
- //BA.debugLineNum = 3211273;BA.debugLine="hsv.Panel.Width = size";
+RDebugUtils.currentLine=1572873;
+ //BA.debugLineNum = 1572873;BA.debugLine="hsv.Panel.Width = size";
 parent.mostCurrent._hsv.getPanel().setWidth(parent._size);
-RDebugUtils.currentLine=3211274;
- //BA.debugLineNum = 3211274;BA.debugLine="hsv.Panel.Height = size";
+RDebugUtils.currentLine=1572874;
+ //BA.debugLineNum = 1572874;BA.debugLine="hsv.Panel.Height = size";
 parent.mostCurrent._hsv.getPanel().setHeight(parent._size);
-RDebugUtils.currentLine=3211276;
- //BA.debugLineNum = 3211276;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
+RDebugUtils.currentLine=1572876;
+ //BA.debugLineNum = 1572876;BA.debugLine="regLayout = xui.CreatePanel(\"\")";
 parent.mostCurrent._reglayout = parent._xui.CreatePanel(processBA,"");
-RDebugUtils.currentLine=3211277;
- //BA.debugLineNum = 3211277;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
+RDebugUtils.currentLine=1572877;
+ //BA.debugLineNum = 1572877;BA.debugLine="darkModeLayout = xui.CreatePanel(\"\")";
 parent.mostCurrent._darkmodelayout = parent._xui.CreatePanel(processBA,"");
-RDebugUtils.currentLine=3211279;
- //BA.debugLineNum = 3211279;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
+RDebugUtils.currentLine=1572879;
+ //BA.debugLineNum = 1572879;BA.debugLine="hsv.Panel.AddView(regLayout, 0, 0, hsv.Panel.Widt";
 parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._reglayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
-RDebugUtils.currentLine=3211280;
- //BA.debugLineNum = 3211280;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
+RDebugUtils.currentLine=1572880;
+ //BA.debugLineNum = 1572880;BA.debugLine="hsv.Panel.AddView(darkModeLayout, 0, 0, hsv.Panel";
 parent.mostCurrent._hsv.getPanel().AddView((android.view.View)(parent.mostCurrent._darkmodelayout.getObject()),(int) (0),(int) (0),parent.mostCurrent._hsv.getPanel().getWidth(),parent.mostCurrent._hsv.getPanel().getHeight());
-RDebugUtils.currentLine=3211282;
- //BA.debugLineNum = 3211282;BA.debugLine="Select Starter.themeNumber";
+RDebugUtils.currentLine=1572882;
+ //BA.debugLineNum = 1572882;BA.debugLine="Select Starter.themeNumber";
 if (true) break;
 
 case 5:
@@ -499,62 +498,62 @@ if (true) break;
 case 7:
 //C
 this.state = 12;
-RDebugUtils.currentLine=3211284;
- //BA.debugLineNum = 3211284;BA.debugLine="regLayout.LoadLayout(\"Layout\")";
+RDebugUtils.currentLine=1572884;
+ //BA.debugLineNum = 1572884;BA.debugLine="regLayout.LoadLayout(\"Layout\")";
 parent.mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211285;
- //BA.debugLineNum = 3211285;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\")";
+RDebugUtils.currentLine=1572885;
+ //BA.debugLineNum = 1572885;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\")";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211286;
- //BA.debugLineNum = 3211286;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer";
+RDebugUtils.currentLine=1572886;
+ //BA.debugLineNum = 1572886;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnComputer";
 parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
-RDebugUtils.currentLine=3211287;
- //BA.debugLineNum = 3211287;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"darkbtncom";
+RDebugUtils.currentLine=1572887;
+ //BA.debugLineNum = 1572887;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"darkbtncom";
 parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"darkbtncomputer.GIF");
  if (true) break;
 
 case 9:
 //C
 this.state = 12;
-RDebugUtils.currentLine=3211289;
- //BA.debugLineNum = 3211289;BA.debugLine="regLayout.LoadLayout(\"Layout3\")";
+RDebugUtils.currentLine=1572889;
+ //BA.debugLineNum = 1572889;BA.debugLine="regLayout.LoadLayout(\"Layout3\")";
 parent.mostCurrent._reglayout.LoadLayout("Layout3",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211290;
- //BA.debugLineNum = 3211290;BA.debugLine="darkModeLayout.LoadLayout(\"Layout4\")";
+RDebugUtils.currentLine=1572890;
+ //BA.debugLineNum = 1572890;BA.debugLine="darkModeLayout.LoadLayout(\"Layout4\")";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout4",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211291;
- //BA.debugLineNum = 3211291;BA.debugLine="computerGif.SetGif(File.DirAssets, \"mikucomp2.G";
+RDebugUtils.currentLine=1572891;
+ //BA.debugLineNum = 1572891;BA.debugLine="computerGif.SetGif(File.DirAssets, \"mikucomp2.G";
 parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"mikucomp2.GIF");
-RDebugUtils.currentLine=3211292;
- //BA.debugLineNum = 3211292;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp2.GIF";
+RDebugUtils.currentLine=1572892;
+ //BA.debugLineNum = 1572892;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp2.GIF";
 parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DComp2.GIF");
  if (true) break;
 
 case 11:
 //C
 this.state = 12;
-RDebugUtils.currentLine=3211294;
- //BA.debugLineNum = 3211294;BA.debugLine="regLayout.LoadLayout(\"Layout5\")";
+RDebugUtils.currentLine=1572894;
+ //BA.debugLineNum = 1572894;BA.debugLine="regLayout.LoadLayout(\"Layout5\")";
 parent.mostCurrent._reglayout.LoadLayout("Layout5",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211295;
- //BA.debugLineNum = 3211295;BA.debugLine="darkModeLayout.LoadLayout(\"Layout6\")";
+RDebugUtils.currentLine=1572895;
+ //BA.debugLineNum = 1572895;BA.debugLine="darkModeLayout.LoadLayout(\"Layout6\")";
 parent.mostCurrent._darkmodelayout.LoadLayout("Layout6",mostCurrent.activityBA);
-RDebugUtils.currentLine=3211296;
- //BA.debugLineNum = 3211296;BA.debugLine="computerGif.SetGif(File.DirAssets, \"Comp3.GIF\")";
+RDebugUtils.currentLine=1572896;
+ //BA.debugLineNum = 1572896;BA.debugLine="computerGif.SetGif(File.DirAssets, \"Comp3.GIF\")";
 parent.mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Comp3.GIF");
-RDebugUtils.currentLine=3211297;
- //BA.debugLineNum = 3211297;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp3.GIF";
+RDebugUtils.currentLine=1572897;
+ //BA.debugLineNum = 1572897;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp3.GIF";
 parent.mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DComp3.GIF");
-RDebugUtils.currentLine=3211298;
- //BA.debugLineNum = 3211298;BA.debugLine="curtain.SetGif(File.DirAssets, \"Curtain.GIF\")";
+RDebugUtils.currentLine=1572898;
+ //BA.debugLineNum = 1572898;BA.debugLine="curtain.SetGif(File.DirAssets, \"Curtain.GIF\")";
 parent.mostCurrent._curtain._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Curtain.GIF");
-RDebugUtils.currentLine=3211299;
- //BA.debugLineNum = 3211299;BA.debugLine="dCurtain.SetGif(File.DirAssets, \"DCurtain.GIF\")";
+RDebugUtils.currentLine=1572899;
+ //BA.debugLineNum = 1572899;BA.debugLine="dCurtain.SetGif(File.DirAssets, \"DCurtain.GIF\")";
 parent.mostCurrent._dcurtain._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DCurtain.GIF");
  if (true) break;
 ;
-RDebugUtils.currentLine=3211302;
- //BA.debugLineNum = 3211302;BA.debugLine="If Starter.darkMode Then";
+RDebugUtils.currentLine=1572902;
+ //BA.debugLineNum = 1572902;BA.debugLine="If Starter.darkMode Then";
 
 case 12:
 //if
@@ -568,25 +567,25 @@ this.state = 16;
 case 14:
 //C
 this.state = 17;
-RDebugUtils.currentLine=3211303;
- //BA.debugLineNum = 3211303;BA.debugLine="darkModeLayout.Visible = True";
+RDebugUtils.currentLine=1572903;
+ //BA.debugLineNum = 1572903;BA.debugLine="darkModeLayout.Visible = True";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3211304;
- //BA.debugLineNum = 3211304;BA.debugLine="darkModeLayout.BringToFront";
+RDebugUtils.currentLine=1572904;
+ //BA.debugLineNum = 1572904;BA.debugLine="darkModeLayout.BringToFront";
 parent.mostCurrent._darkmodelayout.BringToFront();
-RDebugUtils.currentLine=3211305;
- //BA.debugLineNum = 3211305;BA.debugLine="regLayout.Visible = False";
+RDebugUtils.currentLine=1572905;
+ //BA.debugLineNum = 1572905;BA.debugLine="regLayout.Visible = False";
 parent.mostCurrent._reglayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
  if (true) break;
 
 case 16:
 //C
 this.state = 17;
-RDebugUtils.currentLine=3211307;
- //BA.debugLineNum = 3211307;BA.debugLine="darkModeLayout.Visible = False";
+RDebugUtils.currentLine=1572907;
+ //BA.debugLineNum = 1572907;BA.debugLine="darkModeLayout.Visible = False";
 parent.mostCurrent._darkmodelayout.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=3211308;
- //BA.debugLineNum = 3211308;BA.debugLine="regLayout.BringToFront";
+RDebugUtils.currentLine=1572908;
+ //BA.debugLineNum = 1572908;BA.debugLine="regLayout.BringToFront";
 parent.mostCurrent._reglayout.BringToFront();
  if (true) break;
 
@@ -594,8 +593,8 @@ case 17:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=3211311;
- //BA.debugLineNum = 3211311;BA.debugLine="Sleep(50)";
+RDebugUtils.currentLine=1572911;
+ //BA.debugLineNum = 1572911;BA.debugLine="Sleep(50)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "mainactivity", "activity_create"),(int) (50));
 this.state = 18;
 return;
@@ -603,11 +602,11 @@ case 18:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=3211312;
- //BA.debugLineNum = 3211312;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
+RDebugUtils.currentLine=1572912;
+ //BA.debugLineNum = 1572912;BA.debugLine="hsv.ScrollPosition = Max(0, (hsv.Panel.Width - 10";
 parent.mostCurrent._hsv.setScrollPosition((int) (anywheresoftware.b4a.keywords.Common.Max(0,(parent.mostCurrent._hsv.getPanel().getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA))/(double)2)));
-RDebugUtils.currentLine=3211314;
- //BA.debugLineNum = 3211314;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1572914;
+ //BA.debugLineNum = 1572914;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -616,97 +615,97 @@ if (true) break;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="mainactivity";
-RDebugUtils.currentLine=3342336;
- //BA.debugLineNum = 3342336;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=3342338;
- //BA.debugLineNum = 3342338;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1703936;
+ //BA.debugLineNum = 1703936;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=1703938;
+ //BA.debugLineNum = 1703938;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="mainactivity";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=3276800;
- //BA.debugLineNum = 3276800;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=3276802;
- //BA.debugLineNum = 3276802;BA.debugLine="If format24h Then";
+RDebugUtils.currentLine=1638400;
+ //BA.debugLineNum = 1638400;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=1638402;
+ //BA.debugLineNum = 1638402;BA.debugLine="If format24h Then";
 if (_format24h) { 
-RDebugUtils.currentLine=3276803;
- //BA.debugLineNum = 3276803;BA.debugLine="DateTime.TimeFormat = \"HH:mm\" ' 24-Hour Format";
+RDebugUtils.currentLine=1638403;
+ //BA.debugLineNum = 1638403;BA.debugLine="DateTime.TimeFormat = \"HH:mm\" ' 24-Hour Format";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("HH:mm");
  }else {
-RDebugUtils.currentLine=3276805;
- //BA.debugLineNum = 3276805;BA.debugLine="DateTime.TimeFormat = \"hh:mm a\" ' AM/PM Format";
+RDebugUtils.currentLine=1638405;
+ //BA.debugLineNum = 1638405;BA.debugLine="DateTime.TimeFormat = \"hh:mm a\" ' AM/PM Format";
 anywheresoftware.b4a.keywords.Common.DateTime.setTimeFormat("hh:mm a");
  };
-RDebugUtils.currentLine=3276808;
- //BA.debugLineNum = 3276808;BA.debugLine="If Starter.themeChanged Then";
+RDebugUtils.currentLine=1638408;
+ //BA.debugLineNum = 1638408;BA.debugLine="If Starter.themeChanged Then";
 if (mostCurrent._starter._themechanged /*boolean*/ ) { 
-RDebugUtils.currentLine=3276809;
- //BA.debugLineNum = 3276809;BA.debugLine="regLayout.RemoveAllViews";
+RDebugUtils.currentLine=1638409;
+ //BA.debugLineNum = 1638409;BA.debugLine="regLayout.RemoveAllViews";
 mostCurrent._reglayout.RemoveAllViews();
-RDebugUtils.currentLine=3276810;
- //BA.debugLineNum = 3276810;BA.debugLine="darkModeLayout.RemoveAllViews";
+RDebugUtils.currentLine=1638410;
+ //BA.debugLineNum = 1638410;BA.debugLine="darkModeLayout.RemoveAllViews";
 mostCurrent._darkmodelayout.RemoveAllViews();
-RDebugUtils.currentLine=3276812;
- //BA.debugLineNum = 3276812;BA.debugLine="Select Starter.themeNumber";
+RDebugUtils.currentLine=1638412;
+ //BA.debugLineNum = 1638412;BA.debugLine="Select Starter.themeNumber";
 switch (BA.switchObjectToInt(mostCurrent._starter._themenumber /*int*/ ,(int) (0),(int) (1),(int) (2))) {
 case 0: {
-RDebugUtils.currentLine=3276814;
- //BA.debugLineNum = 3276814;BA.debugLine="regLayout.LoadLayout(\"Layout\")";
+RDebugUtils.currentLine=1638414;
+ //BA.debugLineNum = 1638414;BA.debugLine="regLayout.LoadLayout(\"Layout\")";
 mostCurrent._reglayout.LoadLayout("Layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=3276815;
- //BA.debugLineNum = 3276815;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\")";
+RDebugUtils.currentLine=1638415;
+ //BA.debugLineNum = 1638415;BA.debugLine="darkModeLayout.LoadLayout(\"Layout2\")";
 mostCurrent._darkmodelayout.LoadLayout("Layout2",mostCurrent.activityBA);
-RDebugUtils.currentLine=3276816;
- //BA.debugLineNum = 3276816;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnCompute";
+RDebugUtils.currentLine=1638416;
+ //BA.debugLineNum = 1638416;BA.debugLine="computerGif.SetGif(File.DirAssets, \"BtnCompute";
 mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"BtnComputer.GIF");
-RDebugUtils.currentLine=3276817;
- //BA.debugLineNum = 3276817;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"darkbtnCo";
+RDebugUtils.currentLine=1638417;
+ //BA.debugLineNum = 1638417;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"darkbtnCo";
 mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"darkbtnComputer.GIF");
  break; }
 case 1: {
-RDebugUtils.currentLine=3276819;
- //BA.debugLineNum = 3276819;BA.debugLine="regLayout.LoadLayout(\"Layout3\")";
+RDebugUtils.currentLine=1638419;
+ //BA.debugLineNum = 1638419;BA.debugLine="regLayout.LoadLayout(\"Layout3\")";
 mostCurrent._reglayout.LoadLayout("Layout3",mostCurrent.activityBA);
-RDebugUtils.currentLine=3276820;
- //BA.debugLineNum = 3276820;BA.debugLine="darkModeLayout.LoadLayout(\"Layout4\")";
+RDebugUtils.currentLine=1638420;
+ //BA.debugLineNum = 1638420;BA.debugLine="darkModeLayout.LoadLayout(\"Layout4\")";
 mostCurrent._darkmodelayout.LoadLayout("Layout4",mostCurrent.activityBA);
-RDebugUtils.currentLine=3276821;
- //BA.debugLineNum = 3276821;BA.debugLine="computerGif.SetGif(File.DirAssets, \"mikucomp2.";
+RDebugUtils.currentLine=1638421;
+ //BA.debugLineNum = 1638421;BA.debugLine="computerGif.SetGif(File.DirAssets, \"mikucomp2.";
 mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"mikucomp2.GIF");
-RDebugUtils.currentLine=3276822;
- //BA.debugLineNum = 3276822;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp2.GI";
+RDebugUtils.currentLine=1638422;
+ //BA.debugLineNum = 1638422;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp2.GI";
 mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DComp2.GIF");
  break; }
 case 2: {
-RDebugUtils.currentLine=3276824;
- //BA.debugLineNum = 3276824;BA.debugLine="regLayout.LoadLayout(\"Layout5\")";
+RDebugUtils.currentLine=1638424;
+ //BA.debugLineNum = 1638424;BA.debugLine="regLayout.LoadLayout(\"Layout5\")";
 mostCurrent._reglayout.LoadLayout("Layout5",mostCurrent.activityBA);
-RDebugUtils.currentLine=3276825;
- //BA.debugLineNum = 3276825;BA.debugLine="darkModeLayout.LoadLayout(\"Layout6\")";
+RDebugUtils.currentLine=1638425;
+ //BA.debugLineNum = 1638425;BA.debugLine="darkModeLayout.LoadLayout(\"Layout6\")";
 mostCurrent._darkmodelayout.LoadLayout("Layout6",mostCurrent.activityBA);
-RDebugUtils.currentLine=3276826;
- //BA.debugLineNum = 3276826;BA.debugLine="computerGif.SetGif(File.DirAssets, \"Comp3.GIF\"";
+RDebugUtils.currentLine=1638426;
+ //BA.debugLineNum = 1638426;BA.debugLine="computerGif.SetGif(File.DirAssets, \"Comp3.GIF\"";
 mostCurrent._computergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Comp3.GIF");
-RDebugUtils.currentLine=3276827;
- //BA.debugLineNum = 3276827;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp3.GI";
+RDebugUtils.currentLine=1638427;
+ //BA.debugLineNum = 1638427;BA.debugLine="dcomputerGif.SetGif(File.DirAssets, \"DComp3.GI";
 mostCurrent._dcomputergif._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DComp3.GIF");
-RDebugUtils.currentLine=3276828;
- //BA.debugLineNum = 3276828;BA.debugLine="curtain.SetGif(File.DirAssets, \"Curtain.GIF\")";
+RDebugUtils.currentLine=1638428;
+ //BA.debugLineNum = 1638428;BA.debugLine="curtain.SetGif(File.DirAssets, \"Curtain.GIF\")";
 mostCurrent._curtain._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"Curtain.GIF");
-RDebugUtils.currentLine=3276829;
- //BA.debugLineNum = 3276829;BA.debugLine="dCurtain.SetGif(File.DirAssets, \"DCurtain.GIF\"";
+RDebugUtils.currentLine=1638429;
+ //BA.debugLineNum = 1638429;BA.debugLine="dCurtain.SetGif(File.DirAssets, \"DCurtain.GIF\"";
 mostCurrent._dcurtain._setgif /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"DCurtain.GIF");
  break; }
 }
 ;
-RDebugUtils.currentLine=3276831;
- //BA.debugLineNum = 3276831;BA.debugLine="Starter.themeChanged = False";
+RDebugUtils.currentLine=1638431;
+ //BA.debugLineNum = 1638431;BA.debugLine="Starter.themeChanged = False";
 mostCurrent._starter._themechanged /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=3276833;
- //BA.debugLineNum = 3276833;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1638433;
+ //BA.debugLineNum = 1638433;BA.debugLine="End Sub";
 return "";
 }
 public static String  _bookie_click() throws Exception{

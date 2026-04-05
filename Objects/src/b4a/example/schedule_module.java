@@ -354,7 +354,6 @@ public b4a.example.starter _starter = null;
 public b4a.example.themeactivity _themeactivity = null;
 public b4a.example.mainactivity _mainactivity = null;
 public b4a.example.helpactivity _helpactivity = null;
-public b4a.example.musiccodemodule _musiccodemodule = null;
 public b4a.example.todoactivity _todoactivity = null;
 public b4a.example.calendaractivity _calendaractivity = null;
 public b4a.example.card_module _card_module = null;
@@ -378,27 +377,27 @@ public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="schedule_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=25886720;
- //BA.debugLineNum = 25886720;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=25886722;
- //BA.debugLineNum = 25886722;BA.debugLine="If Starter.darkMode = False Then";
+RDebugUtils.currentLine=25821184;
+ //BA.debugLineNum = 25821184;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=25821186;
+ //BA.debugLineNum = 25821186;BA.debugLine="If Starter.darkMode = False Then";
 if (mostCurrent._starter._darkmode /*boolean*/ ==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=25886723;
- //BA.debugLineNum = 25886723;BA.debugLine="Activity.LoadLayout(\"Schedule_ModuleLayout\")";
+RDebugUtils.currentLine=25821187;
+ //BA.debugLineNum = 25821187;BA.debugLine="Activity.LoadLayout(\"Schedule_ModuleLayout\")";
 mostCurrent._activity.LoadLayout("Schedule_ModuleLayout",mostCurrent.activityBA);
  }else {
-RDebugUtils.currentLine=25886725;
- //BA.debugLineNum = 25886725;BA.debugLine="Activity.LoadLayout(\"Schedule_ModuleLayoutDark\")";
+RDebugUtils.currentLine=25821189;
+ //BA.debugLineNum = 25821189;BA.debugLine="Activity.LoadLayout(\"Schedule_ModuleLayoutDark\")";
 mostCurrent._activity.LoadLayout("Schedule_ModuleLayoutDark",mostCurrent.activityBA);
  };
-RDebugUtils.currentLine=25886728;
- //BA.debugLineNum = 25886728;BA.debugLine="sched_btn.Color = Colors.LightGray";
+RDebugUtils.currentLine=25821192;
+ //BA.debugLineNum = 25821192;BA.debugLine="sched_btn.Color = Colors.LightGray";
 mostCurrent._sched_btn.setColor(anywheresoftware.b4a.keywords.Common.Colors.LightGray);
-RDebugUtils.currentLine=25886729;
- //BA.debugLineNum = 25886729;BA.debugLine="DrawSchedule";
+RDebugUtils.currentLine=25821193;
+ //BA.debugLineNum = 25821193;BA.debugLine="DrawSchedule";
 _drawschedule();
-RDebugUtils.currentLine=25886731;
- //BA.debugLineNum = 25886731;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25821195;
+ //BA.debugLineNum = 25821195;BA.debugLine="End Sub";
 return "";
 }
 public static String  _drawschedule() throws Exception{
@@ -417,29 +416,29 @@ anywheresoftware.b4a.objects.collections.Map _ev = null;
 anywheresoftware.b4a.objects.LabelWrapper _lbl = null;
 int _st = 0;
 int _en = 0;
-RDebugUtils.currentLine=25952256;
- //BA.debugLineNum = 25952256;BA.debugLine="Sub DrawSchedule";
-RDebugUtils.currentLine=25952257;
- //BA.debugLineNum = 25952257;BA.debugLine="scheduleSV.Panel.RemoveAllViews";
+RDebugUtils.currentLine=25886720;
+ //BA.debugLineNum = 25886720;BA.debugLine="Sub DrawSchedule";
+RDebugUtils.currentLine=25886721;
+ //BA.debugLineNum = 25886721;BA.debugLine="scheduleSV.Panel.RemoveAllViews";
 mostCurrent._schedulesv.getPanel().RemoveAllViews();
-RDebugUtils.currentLine=25952259;
- //BA.debugLineNum = 25952259;BA.debugLine="Dim y As Int = 0";
+RDebugUtils.currentLine=25886723;
+ //BA.debugLineNum = 25886723;BA.debugLine="Dim y As Int = 0";
 _y = (int) (0);
-RDebugUtils.currentLine=25952260;
- //BA.debugLineNum = 25952260;BA.debugLine="Dim sortedDates As List";
+RDebugUtils.currentLine=25886724;
+ //BA.debugLineNum = 25886724;BA.debugLine="Dim sortedDates As List";
 _sorteddates = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=25952261;
- //BA.debugLineNum = 25952261;BA.debugLine="sortedDates.Initialize";
+RDebugUtils.currentLine=25886725;
+ //BA.debugLineNum = 25886725;BA.debugLine="sortedDates.Initialize";
 _sorteddates.Initialize();
-RDebugUtils.currentLine=25952263;
- //BA.debugLineNum = 25952263;BA.debugLine="If CalendarActivity.CalendarMap.Size = 0 Then";
+RDebugUtils.currentLine=25886727;
+ //BA.debugLineNum = 25886727;BA.debugLine="If CalendarActivity.CalendarMap.Size = 0 Then";
 if (mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .getSize()==0) { 
-RDebugUtils.currentLine=25952264;
- //BA.debugLineNum = 25952264;BA.debugLine="noschedlabel.Text = \"No Schedule\"";
+RDebugUtils.currentLine=25886728;
+ //BA.debugLineNum = 25886728;BA.debugLine="noschedlabel.Text = \"No Schedule\"";
 mostCurrent._noschedlabel.setText(BA.ObjectToCharSequence("No Schedule"));
  };
-RDebugUtils.currentLine=25952267;
- //BA.debugLineNum = 25952267;BA.debugLine="For Each keys As String In CalendarActivity.Calen";
+RDebugUtils.currentLine=25886731;
+ //BA.debugLineNum = 25886731;BA.debugLine="For Each keys As String In CalendarActivity.Calen";
 {
 final anywheresoftware.b4a.BA.IterableList group8 = mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .Keys();
 final int groupLen8 = group8.getSize()
@@ -447,19 +446,19 @@ final int groupLen8 = group8.getSize()
 ;
 for (; index8 < groupLen8;index8++){
 _keys = BA.ObjectToString(group8.Get(index8));
-RDebugUtils.currentLine=25952268;
- //BA.debugLineNum = 25952268;BA.debugLine="sortedDates.Add(keys)";
+RDebugUtils.currentLine=25886732;
+ //BA.debugLineNum = 25886732;BA.debugLine="sortedDates.Add(keys)";
 _sorteddates.Add((Object)(_keys));
-RDebugUtils.currentLine=25952269;
- //BA.debugLineNum = 25952269;BA.debugLine="Log(keys)";
-anywheresoftware.b4a.keywords.Common.LogImpl("425952269",_keys,0);
+RDebugUtils.currentLine=25886733;
+ //BA.debugLineNum = 25886733;BA.debugLine="Log(keys)";
+anywheresoftware.b4a.keywords.Common.LogImpl("425886733",_keys,0);
  }
 };
-RDebugUtils.currentLine=25952272;
- //BA.debugLineNum = 25952272;BA.debugLine="sortedDates.Sort(True)";
+RDebugUtils.currentLine=25886736;
+ //BA.debugLineNum = 25886736;BA.debugLine="sortedDates.Sort(True)";
 _sorteddates.Sort(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=25952274;
- //BA.debugLineNum = 25952274;BA.debugLine="For Each date As String In sortedDates";
+RDebugUtils.currentLine=25886738;
+ //BA.debugLineNum = 25886738;BA.debugLine="For Each date As String In sortedDates";
 {
 final anywheresoftware.b4a.BA.IterableList group13 = _sorteddates;
 final int groupLen13 = group13.getSize()
@@ -467,51 +466,51 @@ final int groupLen13 = group13.getSize()
 ;
 for (; index13 < groupLen13;index13++){
 _date = BA.ObjectToString(group13.Get(index13));
-RDebugUtils.currentLine=25952275;
- //BA.debugLineNum = 25952275;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarM";
+RDebugUtils.currentLine=25886739;
+ //BA.debugLineNum = 25886739;BA.debugLine="Dim eventmap As Map = CalendarActivity.CalendarM";
 _eventmap = new anywheresoftware.b4a.objects.collections.Map();
 _eventmap = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(mostCurrent._calendaractivity._calendarmap /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(_date))));
-RDebugUtils.currentLine=25952276;
- //BA.debugLineNum = 25952276;BA.debugLine="Dim allevents As List = eventmap.Get(\"AllEvents\"";
+RDebugUtils.currentLine=25886740;
+ //BA.debugLineNum = 25886740;BA.debugLine="Dim allevents As List = eventmap.Get(\"AllEvents\"";
 _allevents = new anywheresoftware.b4a.objects.collections.List();
 _allevents = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_eventmap.Get((Object)("AllEvents"))));
-RDebugUtils.currentLine=25952277;
- //BA.debugLineNum = 25952277;BA.debugLine="Dim timeline As List = eventmap.Get(\"Timeline\")";
+RDebugUtils.currentLine=25886741;
+ //BA.debugLineNum = 25886741;BA.debugLine="Dim timeline As List = eventmap.Get(\"Timeline\")";
 _timeline = new anywheresoftware.b4a.objects.collections.List();
 _timeline = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_eventmap.Get((Object)("Timeline"))));
-RDebugUtils.currentLine=25952279;
- //BA.debugLineNum = 25952279;BA.debugLine="Dim lbldate As Label";
+RDebugUtils.currentLine=25886743;
+ //BA.debugLineNum = 25886743;BA.debugLine="Dim lbldate As Label";
 _lbldate = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=25952280;
- //BA.debugLineNum = 25952280;BA.debugLine="lbldate.initialize(\"\")";
+RDebugUtils.currentLine=25886744;
+ //BA.debugLineNum = 25886744;BA.debugLine="lbldate.initialize(\"\")";
 _lbldate.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=25952281;
- //BA.debugLineNum = 25952281;BA.debugLine="lbldate.Text = SetDate(date)";
+RDebugUtils.currentLine=25886745;
+ //BA.debugLineNum = 25886745;BA.debugLine="lbldate.Text = SetDate(date)";
 _lbldate.setText(BA.ObjectToCharSequence(_setdate(_date)));
-RDebugUtils.currentLine=25952282;
- //BA.debugLineNum = 25952282;BA.debugLine="lbldate.TextSize = 16";
+RDebugUtils.currentLine=25886746;
+ //BA.debugLineNum = 25886746;BA.debugLine="lbldate.TextSize = 16";
 _lbldate.setTextSize((float) (16));
-RDebugUtils.currentLine=25952283;
- //BA.debugLineNum = 25952283;BA.debugLine="lbldate.Color = Colors.LightGray";
+RDebugUtils.currentLine=25886747;
+ //BA.debugLineNum = 25886747;BA.debugLine="lbldate.Color = Colors.LightGray";
 _lbldate.setColor(anywheresoftware.b4a.keywords.Common.Colors.LightGray);
-RDebugUtils.currentLine=25952284;
- //BA.debugLineNum = 25952284;BA.debugLine="lbldate.TextColor = Colors.Black";
+RDebugUtils.currentLine=25886748;
+ //BA.debugLineNum = 25886748;BA.debugLine="lbldate.TextColor = Colors.Black";
 _lbldate.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=25952286;
- //BA.debugLineNum = 25952286;BA.debugLine="If allevents.Size = 0 And timeline.size = 0 Then";
+RDebugUtils.currentLine=25886750;
+ //BA.debugLineNum = 25886750;BA.debugLine="If allevents.Size = 0 And timeline.size = 0 Then";
 if (_allevents.getSize()==0 && _timeline.getSize()==0) { 
-RDebugUtils.currentLine=25952287;
- //BA.debugLineNum = 25952287;BA.debugLine="Continue";
+RDebugUtils.currentLine=25886751;
+ //BA.debugLineNum = 25886751;BA.debugLine="Continue";
 if (true) continue;
  };
-RDebugUtils.currentLine=25952290;
- //BA.debugLineNum = 25952290;BA.debugLine="scheduleSV.Panel.AddView(lbldate, 0, y, schedule";
+RDebugUtils.currentLine=25886754;
+ //BA.debugLineNum = 25886754;BA.debugLine="scheduleSV.Panel.AddView(lbldate, 0, y, schedule";
 mostCurrent._schedulesv.getPanel().AddView((android.view.View)(_lbldate.getObject()),(int) (0),_y,mostCurrent._schedulesv.getWidth(),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=25952291;
- //BA.debugLineNum = 25952291;BA.debugLine="y = y+ 40dip";
+RDebugUtils.currentLine=25886755;
+ //BA.debugLineNum = 25886755;BA.debugLine="y = y+ 40dip";
 _y = (int) (_y+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=25952293;
- //BA.debugLineNum = 25952293;BA.debugLine="For Each ev As Map In allevents";
+RDebugUtils.currentLine=25886757;
+ //BA.debugLineNum = 25886757;BA.debugLine="For Each ev As Map In allevents";
 _ev = new anywheresoftware.b4a.objects.collections.Map();
 {
 final anywheresoftware.b4a.BA.IterableList group28 = _allevents;
@@ -520,31 +519,31 @@ final int groupLen28 = group28.getSize()
 ;
 for (; index28 < groupLen28;index28++){
 _ev = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(group28.Get(index28)));
-RDebugUtils.currentLine=25952294;
- //BA.debugLineNum = 25952294;BA.debugLine="Dim lbl As Label";
+RDebugUtils.currentLine=25886758;
+ //BA.debugLineNum = 25886758;BA.debugLine="Dim lbl As Label";
 _lbl = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=25952295;
- //BA.debugLineNum = 25952295;BA.debugLine="lbl.Initialize(\"\")";
+RDebugUtils.currentLine=25886759;
+ //BA.debugLineNum = 25886759;BA.debugLine="lbl.Initialize(\"\")";
 _lbl.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=25952296;
- //BA.debugLineNum = 25952296;BA.debugLine="lbl.Text = ev.Get(\"Title\")";
+RDebugUtils.currentLine=25886760;
+ //BA.debugLineNum = 25886760;BA.debugLine="lbl.Text = ev.Get(\"Title\")";
 _lbl.setText(BA.ObjectToCharSequence(_ev.Get((Object)("Title"))));
-RDebugUtils.currentLine=25952297;
- //BA.debugLineNum = 25952297;BA.debugLine="lbl.Color = IdentifyColor(ev.Get(\"Tags\"))";
+RDebugUtils.currentLine=25886761;
+ //BA.debugLineNum = 25886761;BA.debugLine="lbl.Color = IdentifyColor(ev.Get(\"Tags\"))";
 _lbl.setColor(_identifycolor(BA.ObjectToString(_ev.Get((Object)("Tags")))));
-RDebugUtils.currentLine=25952298;
- //BA.debugLineNum = 25952298;BA.debugLine="lbl.TextColor = Colors.Black";
+RDebugUtils.currentLine=25886762;
+ //BA.debugLineNum = 25886762;BA.debugLine="lbl.TextColor = Colors.Black";
 _lbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=25952299;
- //BA.debugLineNum = 25952299;BA.debugLine="scheduleSV.Panel.AddView(lbl, 10dip, y, schedul";
+RDebugUtils.currentLine=25886763;
+ //BA.debugLineNum = 25886763;BA.debugLine="scheduleSV.Panel.AddView(lbl, 10dip, y, schedul";
 mostCurrent._schedulesv.getPanel().AddView((android.view.View)(_lbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),_y,(int) (mostCurrent._schedulesv.getWidth()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=25952300;
- //BA.debugLineNum = 25952300;BA.debugLine="y = y + 40dip";
+RDebugUtils.currentLine=25886764;
+ //BA.debugLineNum = 25886764;BA.debugLine="y = y + 40dip";
 _y = (int) (_y+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
  }
 };
-RDebugUtils.currentLine=25952304;
- //BA.debugLineNum = 25952304;BA.debugLine="For Each ev As Map In timeline";
+RDebugUtils.currentLine=25886768;
+ //BA.debugLineNum = 25886768;BA.debugLine="For Each ev As Map In timeline";
 _ev = new anywheresoftware.b4a.objects.collections.Map();
 {
 final anywheresoftware.b4a.BA.IterableList group37 = _timeline;
@@ -553,60 +552,60 @@ final int groupLen37 = group37.getSize()
 ;
 for (; index37 < groupLen37;index37++){
 _ev = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(group37.Get(index37)));
-RDebugUtils.currentLine=25952305;
- //BA.debugLineNum = 25952305;BA.debugLine="Dim lbl As Label";
+RDebugUtils.currentLine=25886769;
+ //BA.debugLineNum = 25886769;BA.debugLine="Dim lbl As Label";
 _lbl = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=25952306;
- //BA.debugLineNum = 25952306;BA.debugLine="lbl.Initialize(\"\")";
+RDebugUtils.currentLine=25886770;
+ //BA.debugLineNum = 25886770;BA.debugLine="lbl.Initialize(\"\")";
 _lbl.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=25952307;
- //BA.debugLineNum = 25952307;BA.debugLine="Dim st As Int = ev.Get(\"Start\")";
+RDebugUtils.currentLine=25886771;
+ //BA.debugLineNum = 25886771;BA.debugLine="Dim st As Int = ev.Get(\"Start\")";
 _st = (int)(BA.ObjectToNumber(_ev.Get((Object)("Start"))));
-RDebugUtils.currentLine=25952308;
- //BA.debugLineNum = 25952308;BA.debugLine="Dim en As Int = ev.Get(\"End\")";
+RDebugUtils.currentLine=25886772;
+ //BA.debugLineNum = 25886772;BA.debugLine="Dim en As Int = ev.Get(\"End\")";
 _en = (int)(BA.ObjectToNumber(_ev.Get((Object)("End"))));
-RDebugUtils.currentLine=25952309;
- //BA.debugLineNum = 25952309;BA.debugLine="lbl.Text = ev.Get(\"Title\") & \" (\" & GetTimeStri";
+RDebugUtils.currentLine=25886773;
+ //BA.debugLineNum = 25886773;BA.debugLine="lbl.Text = ev.Get(\"Title\") & \" (\" & GetTimeStri";
 _lbl.setText(BA.ObjectToCharSequence(BA.ObjectToString(_ev.Get((Object)("Title")))+" ("+_gettimestring(_st)+" - "+_gettimestring(_en)+")"));
-RDebugUtils.currentLine=25952311;
- //BA.debugLineNum = 25952311;BA.debugLine="lbl.Color = IdentifyColor(ev.Get(\"Tags\"))";
+RDebugUtils.currentLine=25886775;
+ //BA.debugLineNum = 25886775;BA.debugLine="lbl.Color = IdentifyColor(ev.Get(\"Tags\"))";
 _lbl.setColor(_identifycolor(BA.ObjectToString(_ev.Get((Object)("Tags")))));
-RDebugUtils.currentLine=25952312;
- //BA.debugLineNum = 25952312;BA.debugLine="lbl.TextColor = Colors.Black";
+RDebugUtils.currentLine=25886776;
+ //BA.debugLineNum = 25886776;BA.debugLine="lbl.TextColor = Colors.Black";
 _lbl.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=25952313;
- //BA.debugLineNum = 25952313;BA.debugLine="scheduleSV.Panel.AddView(lbl, 10dip, y, schedul";
+RDebugUtils.currentLine=25886777;
+ //BA.debugLineNum = 25886777;BA.debugLine="scheduleSV.Panel.AddView(lbl, 10dip, y, schedul";
 mostCurrent._schedulesv.getPanel().AddView((android.view.View)(_lbl.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),_y,(int) (mostCurrent._schedulesv.getWidth()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=25952314;
- //BA.debugLineNum = 25952314;BA.debugLine="y = y+40dip";
+RDebugUtils.currentLine=25886778;
+ //BA.debugLineNum = 25886778;BA.debugLine="y = y+40dip";
 _y = (int) (_y+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
  }
 };
  }
 };
-RDebugUtils.currentLine=25952317;
- //BA.debugLineNum = 25952317;BA.debugLine="scheduleSV.Panel.Height = y";
+RDebugUtils.currentLine=25886781;
+ //BA.debugLineNum = 25886781;BA.debugLine="scheduleSV.Panel.Height = y";
 mostCurrent._schedulesv.getPanel().setHeight(_y);
-RDebugUtils.currentLine=25952319;
- //BA.debugLineNum = 25952319;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25886783;
+ //BA.debugLineNum = 25886783;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="schedule_module";
-RDebugUtils.currentLine=26279936;
- //BA.debugLineNum = 26279936;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=26279938;
- //BA.debugLineNum = 26279938;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26214400;
+ //BA.debugLineNum = 26214400;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=26214402;
+ //BA.debugLineNum = 26214402;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="schedule_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=26214400;
- //BA.debugLineNum = 26214400;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=26214402;
- //BA.debugLineNum = 26214402;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26148864;
+ //BA.debugLineNum = 26148864;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=26148866;
+ //BA.debugLineNum = 26148866;BA.debugLine="End Sub";
 return "";
 }
 public static String  _day_btn_click() throws Exception{
@@ -616,28 +615,28 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "day_btn_click", false))
 int _currentyear = 0;
 int _currentmonth = 0;
 int _currentday = 0;
-RDebugUtils.currentLine=26476544;
- //BA.debugLineNum = 26476544;BA.debugLine="Private Sub Day_btn_Click";
-RDebugUtils.currentLine=26476545;
- //BA.debugLineNum = 26476545;BA.debugLine="Dim currentyear As Int = DateTime.GetYear(DateTim";
+RDebugUtils.currentLine=26411008;
+ //BA.debugLineNum = 26411008;BA.debugLine="Private Sub Day_btn_Click";
+RDebugUtils.currentLine=26411009;
+ //BA.debugLineNum = 26411009;BA.debugLine="Dim currentyear As Int = DateTime.GetYear(DateTim";
 _currentyear = anywheresoftware.b4a.keywords.Common.DateTime.GetYear(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
-RDebugUtils.currentLine=26476546;
- //BA.debugLineNum = 26476546;BA.debugLine="Dim currentmonth As Int = DateTime.GetMonth(DateT";
+RDebugUtils.currentLine=26411010;
+ //BA.debugLineNum = 26411010;BA.debugLine="Dim currentmonth As Int = DateTime.GetMonth(DateT";
 _currentmonth = anywheresoftware.b4a.keywords.Common.DateTime.GetMonth(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
-RDebugUtils.currentLine=26476547;
- //BA.debugLineNum = 26476547;BA.debugLine="Dim currentday As Int = DateTime.GetDayOfMonth(Da";
+RDebugUtils.currentLine=26411011;
+ //BA.debugLineNum = 26411011;BA.debugLine="Dim currentday As Int = DateTime.GetDayOfMonth(Da";
 _currentday = anywheresoftware.b4a.keywords.Common.DateTime.GetDayOfMonth(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
-RDebugUtils.currentLine=26476548;
- //BA.debugLineNum = 26476548;BA.debugLine="day_module.currentDate = currentyear & \"-\" & curr";
+RDebugUtils.currentLine=26411012;
+ //BA.debugLineNum = 26411012;BA.debugLine="day_module.currentDate = currentyear & \"-\" & curr";
 mostCurrent._day_module._currentdate /*String*/  = BA.NumberToString(_currentyear)+"-"+BA.NumberToString(_currentmonth)+"-"+BA.NumberToString(_currentday);
-RDebugUtils.currentLine=26476549;
- //BA.debugLineNum = 26476549;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=26411013;
+ //BA.debugLineNum = 26411013;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=26476550;
- //BA.debugLineNum = 26476550;BA.debugLine="StartActivity(day_module)";
+RDebugUtils.currentLine=26411014;
+ //BA.debugLineNum = 26411014;BA.debugLine="StartActivity(day_module)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._day_module.getObject()));
-RDebugUtils.currentLine=26476551;
- //BA.debugLineNum = 26476551;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26411015;
+ //BA.debugLineNum = 26411015;BA.debugLine="End Sub";
 return "";
 }
 public static String  _setdate(String _tagdate) throws Exception{
@@ -652,142 +651,142 @@ String _monthname = "";
 long _ts = 0L;
 int _weekdaynum = 0;
 String _week = "";
-RDebugUtils.currentLine=26148864;
- //BA.debugLineNum = 26148864;BA.debugLine="Sub SetDate(Tagdate As String) As String";
-RDebugUtils.currentLine=26148866;
- //BA.debugLineNum = 26148866;BA.debugLine="Dim parts() As String = Regex.Split(\"-\", Tagdate)";
+RDebugUtils.currentLine=26083328;
+ //BA.debugLineNum = 26083328;BA.debugLine="Sub SetDate(Tagdate As String) As String";
+RDebugUtils.currentLine=26083330;
+ //BA.debugLineNum = 26083330;BA.debugLine="Dim parts() As String = Regex.Split(\"-\", Tagdate)";
 _parts = anywheresoftware.b4a.keywords.Common.Regex.Split("-",_tagdate);
-RDebugUtils.currentLine=26148867;
- //BA.debugLineNum = 26148867;BA.debugLine="Dim year As String = parts(0)";
+RDebugUtils.currentLine=26083331;
+ //BA.debugLineNum = 26083331;BA.debugLine="Dim year As String = parts(0)";
 _year = _parts[(int) (0)];
-RDebugUtils.currentLine=26148868;
- //BA.debugLineNum = 26148868;BA.debugLine="Dim monthNum As Int = parts(1)";
+RDebugUtils.currentLine=26083332;
+ //BA.debugLineNum = 26083332;BA.debugLine="Dim monthNum As Int = parts(1)";
 _monthnum = (int)(Double.parseDouble(_parts[(int) (1)]));
-RDebugUtils.currentLine=26148869;
- //BA.debugLineNum = 26148869;BA.debugLine="Dim day As String = parts(2)";
+RDebugUtils.currentLine=26083333;
+ //BA.debugLineNum = 26083333;BA.debugLine="Dim day As String = parts(2)";
 _day = _parts[(int) (2)];
-RDebugUtils.currentLine=26148871;
- //BA.debugLineNum = 26148871;BA.debugLine="Dim monthName As String";
+RDebugUtils.currentLine=26083335;
+ //BA.debugLineNum = 26083335;BA.debugLine="Dim monthName As String";
 _monthname = "";
-RDebugUtils.currentLine=26148872;
- //BA.debugLineNum = 26148872;BA.debugLine="Select monthNum";
+RDebugUtils.currentLine=26083336;
+ //BA.debugLineNum = 26083336;BA.debugLine="Select monthNum";
 switch (_monthnum) {
 case 1: {
-RDebugUtils.currentLine=26148873;
- //BA.debugLineNum = 26148873;BA.debugLine="Case 1: monthName = \"January\"";
+RDebugUtils.currentLine=26083337;
+ //BA.debugLineNum = 26083337;BA.debugLine="Case 1: monthName = \"January\"";
 _monthname = "January";
  break; }
 case 2: {
-RDebugUtils.currentLine=26148874;
- //BA.debugLineNum = 26148874;BA.debugLine="Case 2: monthName = \"February\"";
+RDebugUtils.currentLine=26083338;
+ //BA.debugLineNum = 26083338;BA.debugLine="Case 2: monthName = \"February\"";
 _monthname = "February";
  break; }
 case 3: {
-RDebugUtils.currentLine=26148875;
- //BA.debugLineNum = 26148875;BA.debugLine="Case 3: monthName = \"March\"";
+RDebugUtils.currentLine=26083339;
+ //BA.debugLineNum = 26083339;BA.debugLine="Case 3: monthName = \"March\"";
 _monthname = "March";
  break; }
 case 4: {
-RDebugUtils.currentLine=26148876;
- //BA.debugLineNum = 26148876;BA.debugLine="Case 4: monthName = \"April\"";
+RDebugUtils.currentLine=26083340;
+ //BA.debugLineNum = 26083340;BA.debugLine="Case 4: monthName = \"April\"";
 _monthname = "April";
  break; }
 case 5: {
-RDebugUtils.currentLine=26148877;
- //BA.debugLineNum = 26148877;BA.debugLine="Case 5: monthName = \"May\"";
+RDebugUtils.currentLine=26083341;
+ //BA.debugLineNum = 26083341;BA.debugLine="Case 5: monthName = \"May\"";
 _monthname = "May";
  break; }
 case 6: {
-RDebugUtils.currentLine=26148878;
- //BA.debugLineNum = 26148878;BA.debugLine="Case 6: monthName = \"June\"";
+RDebugUtils.currentLine=26083342;
+ //BA.debugLineNum = 26083342;BA.debugLine="Case 6: monthName = \"June\"";
 _monthname = "June";
  break; }
 case 7: {
-RDebugUtils.currentLine=26148879;
- //BA.debugLineNum = 26148879;BA.debugLine="Case 7: monthName = \"July\"";
+RDebugUtils.currentLine=26083343;
+ //BA.debugLineNum = 26083343;BA.debugLine="Case 7: monthName = \"July\"";
 _monthname = "July";
  break; }
 case 8: {
-RDebugUtils.currentLine=26148880;
- //BA.debugLineNum = 26148880;BA.debugLine="Case 8: monthName = \"August\"";
+RDebugUtils.currentLine=26083344;
+ //BA.debugLineNum = 26083344;BA.debugLine="Case 8: monthName = \"August\"";
 _monthname = "August";
  break; }
 case 9: {
-RDebugUtils.currentLine=26148881;
- //BA.debugLineNum = 26148881;BA.debugLine="Case 9: monthName = \"September\"";
+RDebugUtils.currentLine=26083345;
+ //BA.debugLineNum = 26083345;BA.debugLine="Case 9: monthName = \"September\"";
 _monthname = "September";
  break; }
 case 10: {
-RDebugUtils.currentLine=26148882;
- //BA.debugLineNum = 26148882;BA.debugLine="Case 10: monthName = \"October\"";
+RDebugUtils.currentLine=26083346;
+ //BA.debugLineNum = 26083346;BA.debugLine="Case 10: monthName = \"October\"";
 _monthname = "October";
  break; }
 case 11: {
-RDebugUtils.currentLine=26148883;
- //BA.debugLineNum = 26148883;BA.debugLine="Case 11: monthName = \"November\"";
+RDebugUtils.currentLine=26083347;
+ //BA.debugLineNum = 26083347;BA.debugLine="Case 11: monthName = \"November\"";
 _monthname = "November";
  break; }
 case 12: {
-RDebugUtils.currentLine=26148884;
- //BA.debugLineNum = 26148884;BA.debugLine="Case 12: monthName = \"December\"";
+RDebugUtils.currentLine=26083348;
+ //BA.debugLineNum = 26083348;BA.debugLine="Case 12: monthName = \"December\"";
 _monthname = "December";
  break; }
 }
 ;
-RDebugUtils.currentLine=26148887;
- //BA.debugLineNum = 26148887;BA.debugLine="Dim ts As Long = DateTime.DateParse(Tagdate)";
+RDebugUtils.currentLine=26083351;
+ //BA.debugLineNum = 26083351;BA.debugLine="Dim ts As Long = DateTime.DateParse(Tagdate)";
 _ts = anywheresoftware.b4a.keywords.Common.DateTime.DateParse(_tagdate);
-RDebugUtils.currentLine=26148888;
- //BA.debugLineNum = 26148888;BA.debugLine="Dim weekdayNum As Int = DateTime.GetDayOfWeek(ts)";
+RDebugUtils.currentLine=26083352;
+ //BA.debugLineNum = 26083352;BA.debugLine="Dim weekdayNum As Int = DateTime.GetDayOfWeek(ts)";
 _weekdaynum = anywheresoftware.b4a.keywords.Common.DateTime.GetDayOfWeek(_ts);
-RDebugUtils.currentLine=26148889;
- //BA.debugLineNum = 26148889;BA.debugLine="Dim week As String";
+RDebugUtils.currentLine=26083353;
+ //BA.debugLineNum = 26083353;BA.debugLine="Dim week As String";
 _week = "";
-RDebugUtils.currentLine=26148890;
- //BA.debugLineNum = 26148890;BA.debugLine="Select weekdayNum";
+RDebugUtils.currentLine=26083354;
+ //BA.debugLineNum = 26083354;BA.debugLine="Select weekdayNum";
 switch (_weekdaynum) {
 case 1: {
-RDebugUtils.currentLine=26148891;
- //BA.debugLineNum = 26148891;BA.debugLine="Case 1: week = \"Sunday\"";
+RDebugUtils.currentLine=26083355;
+ //BA.debugLineNum = 26083355;BA.debugLine="Case 1: week = \"Sunday\"";
 _week = "Sunday";
  break; }
 case 2: {
-RDebugUtils.currentLine=26148892;
- //BA.debugLineNum = 26148892;BA.debugLine="Case 2: week = \"Monday\"";
+RDebugUtils.currentLine=26083356;
+ //BA.debugLineNum = 26083356;BA.debugLine="Case 2: week = \"Monday\"";
 _week = "Monday";
  break; }
 case 3: {
-RDebugUtils.currentLine=26148893;
- //BA.debugLineNum = 26148893;BA.debugLine="Case 3: week = \"Tuesday\"";
+RDebugUtils.currentLine=26083357;
+ //BA.debugLineNum = 26083357;BA.debugLine="Case 3: week = \"Tuesday\"";
 _week = "Tuesday";
  break; }
 case 4: {
-RDebugUtils.currentLine=26148894;
- //BA.debugLineNum = 26148894;BA.debugLine="Case 4: week = \"Wednesday\"";
+RDebugUtils.currentLine=26083358;
+ //BA.debugLineNum = 26083358;BA.debugLine="Case 4: week = \"Wednesday\"";
 _week = "Wednesday";
  break; }
 case 5: {
-RDebugUtils.currentLine=26148895;
- //BA.debugLineNum = 26148895;BA.debugLine="Case 5: week = \"Thursday\"";
+RDebugUtils.currentLine=26083359;
+ //BA.debugLineNum = 26083359;BA.debugLine="Case 5: week = \"Thursday\"";
 _week = "Thursday";
  break; }
 case 6: {
-RDebugUtils.currentLine=26148896;
- //BA.debugLineNum = 26148896;BA.debugLine="Case 6: week = \"Friday\"";
+RDebugUtils.currentLine=26083360;
+ //BA.debugLineNum = 26083360;BA.debugLine="Case 6: week = \"Friday\"";
 _week = "Friday";
  break; }
 case 7: {
-RDebugUtils.currentLine=26148897;
- //BA.debugLineNum = 26148897;BA.debugLine="Case 7: week = \"Saturday\"";
+RDebugUtils.currentLine=26083361;
+ //BA.debugLineNum = 26083361;BA.debugLine="Case 7: week = \"Saturday\"";
 _week = "Saturday";
  break; }
 }
 ;
-RDebugUtils.currentLine=26148900;
- //BA.debugLineNum = 26148900;BA.debugLine="Return week & \", \" & monthName & \" \" & day & \", \"";
+RDebugUtils.currentLine=26083364;
+ //BA.debugLineNum = 26083364;BA.debugLine="Return week & \", \" & monthName & \" \" & day & \", \"";
 if (true) return _week+", "+_monthname+" "+_day+", "+_year;
-RDebugUtils.currentLine=26148901;
- //BA.debugLineNum = 26148901;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26083365;
+ //BA.debugLineNum = 26083365;BA.debugLine="End Sub";
 return "";
 }
 public static int  _identifycolor(String _typeofevent) throws Exception{
@@ -795,45 +794,45 @@ RDebugUtils.currentModule="schedule_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "identifycolor", false))
 	 {return ((Integer) Debug.delegate(mostCurrent.activityBA, "identifycolor", new Object[] {_typeofevent}));}
 int _mycolor = 0;
-RDebugUtils.currentLine=26083328;
- //BA.debugLineNum = 26083328;BA.debugLine="Sub IdentifyColor (typeofevent As String) As Int";
-RDebugUtils.currentLine=26083329;
- //BA.debugLineNum = 26083329;BA.debugLine="Dim mycolor As Int";
+RDebugUtils.currentLine=26017792;
+ //BA.debugLineNum = 26017792;BA.debugLine="Sub IdentifyColor (typeofevent As String) As Int";
+RDebugUtils.currentLine=26017793;
+ //BA.debugLineNum = 26017793;BA.debugLine="Dim mycolor As Int";
 _mycolor = 0;
-RDebugUtils.currentLine=26083330;
- //BA.debugLineNum = 26083330;BA.debugLine="If typeofevent = \"Task\" Then";
+RDebugUtils.currentLine=26017794;
+ //BA.debugLineNum = 26017794;BA.debugLine="If typeofevent = \"Task\" Then";
 if ((_typeofevent).equals("Task")) { 
-RDebugUtils.currentLine=26083331;
- //BA.debugLineNum = 26083331;BA.debugLine="mycolor = Colors.ARGB(255, 0, 191, 255)";
+RDebugUtils.currentLine=26017795;
+ //BA.debugLineNum = 26017795;BA.debugLine="mycolor = Colors.ARGB(255, 0, 191, 255)";
 _mycolor = anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (0),(int) (191),(int) (255));
  }else 
-{RDebugUtils.currentLine=26083332;
- //BA.debugLineNum = 26083332;BA.debugLine="Else if typeofevent = \"Event\" Then";
+{RDebugUtils.currentLine=26017796;
+ //BA.debugLineNum = 26017796;BA.debugLine="Else if typeofevent = \"Event\" Then";
 if ((_typeofevent).equals("Event")) { 
-RDebugUtils.currentLine=26083333;
- //BA.debugLineNum = 26083333;BA.debugLine="mycolor = Colors.ARGB(255, 152, 255, 152)";
+RDebugUtils.currentLine=26017797;
+ //BA.debugLineNum = 26017797;BA.debugLine="mycolor = Colors.ARGB(255, 152, 255, 152)";
 _mycolor = anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (152),(int) (255),(int) (152));
  }else 
-{RDebugUtils.currentLine=26083334;
- //BA.debugLineNum = 26083334;BA.debugLine="Else if typeofevent = \"Birthday\" Then";
+{RDebugUtils.currentLine=26017798;
+ //BA.debugLineNum = 26017798;BA.debugLine="Else if typeofevent = \"Birthday\" Then";
 if ((_typeofevent).equals("Birthday")) { 
-RDebugUtils.currentLine=26083335;
- //BA.debugLineNum = 26083335;BA.debugLine="mycolor = Colors.ARGB(255, 255, 182, 193)";
+RDebugUtils.currentLine=26017799;
+ //BA.debugLineNum = 26017799;BA.debugLine="mycolor = Colors.ARGB(255, 255, 182, 193)";
 _mycolor = anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (255),(int) (182),(int) (193));
  }else 
-{RDebugUtils.currentLine=26083336;
- //BA.debugLineNum = 26083336;BA.debugLine="Else if typeofevent = \"OOO\" Then";
+{RDebugUtils.currentLine=26017800;
+ //BA.debugLineNum = 26017800;BA.debugLine="Else if typeofevent = \"OOO\" Then";
 if ((_typeofevent).equals("OOO")) { 
-RDebugUtils.currentLine=26083337;
- //BA.debugLineNum = 26083337;BA.debugLine="mycolor = Colors.ARGB(255, 255, 215, 0)";
+RDebugUtils.currentLine=26017801;
+ //BA.debugLineNum = 26017801;BA.debugLine="mycolor = Colors.ARGB(255, 255, 215, 0)";
 _mycolor = anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (255),(int) (215),(int) (0));
  }}}}
 ;
-RDebugUtils.currentLine=26083340;
- //BA.debugLineNum = 26083340;BA.debugLine="Return mycolor";
+RDebugUtils.currentLine=26017804;
+ //BA.debugLineNum = 26017804;BA.debugLine="Return mycolor";
 if (true) return _mycolor;
-RDebugUtils.currentLine=26083341;
- //BA.debugLineNum = 26083341;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26017805;
+ //BA.debugLineNum = 26017805;BA.debugLine="End Sub";
 return 0;
 }
 public static String  _gettimestring(int _h) throws Exception{
@@ -842,107 +841,107 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "gettimestring", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "gettimestring", new Object[] {_h}));}
 int _num = 0;
 String _ampm = "";
-RDebugUtils.currentLine=26017792;
- //BA.debugLineNum = 26017792;BA.debugLine="Sub GetTimeString (h As Int) As String";
-RDebugUtils.currentLine=26017793;
- //BA.debugLineNum = 26017793;BA.debugLine="Dim num As Int";
+RDebugUtils.currentLine=25952256;
+ //BA.debugLineNum = 25952256;BA.debugLine="Sub GetTimeString (h As Int) As String";
+RDebugUtils.currentLine=25952257;
+ //BA.debugLineNum = 25952257;BA.debugLine="Dim num As Int";
 _num = 0;
-RDebugUtils.currentLine=26017794;
- //BA.debugLineNum = 26017794;BA.debugLine="Dim ampm As String";
+RDebugUtils.currentLine=25952258;
+ //BA.debugLineNum = 25952258;BA.debugLine="Dim ampm As String";
 _ampm = "";
-RDebugUtils.currentLine=26017795;
- //BA.debugLineNum = 26017795;BA.debugLine="If h = 0 Then";
+RDebugUtils.currentLine=25952259;
+ //BA.debugLineNum = 25952259;BA.debugLine="If h = 0 Then";
 if (_h==0) { 
-RDebugUtils.currentLine=26017796;
- //BA.debugLineNum = 26017796;BA.debugLine="num = 12";
+RDebugUtils.currentLine=25952260;
+ //BA.debugLineNum = 25952260;BA.debugLine="num = 12";
 _num = (int) (12);
-RDebugUtils.currentLine=26017797;
- //BA.debugLineNum = 26017797;BA.debugLine="ampm = \"am\"";
+RDebugUtils.currentLine=25952261;
+ //BA.debugLineNum = 25952261;BA.debugLine="ampm = \"am\"";
 _ampm = "am";
  }else 
-{RDebugUtils.currentLine=26017798;
- //BA.debugLineNum = 26017798;BA.debugLine="Else if h = 12 Then";
+{RDebugUtils.currentLine=25952262;
+ //BA.debugLineNum = 25952262;BA.debugLine="Else if h = 12 Then";
 if (_h==12) { 
-RDebugUtils.currentLine=26017799;
- //BA.debugLineNum = 26017799;BA.debugLine="num = h";
+RDebugUtils.currentLine=25952263;
+ //BA.debugLineNum = 25952263;BA.debugLine="num = h";
 _num = _h;
-RDebugUtils.currentLine=26017800;
- //BA.debugLineNum = 26017800;BA.debugLine="ampm = \"pm\"";
+RDebugUtils.currentLine=25952264;
+ //BA.debugLineNum = 25952264;BA.debugLine="ampm = \"pm\"";
 _ampm = "pm";
  }else 
-{RDebugUtils.currentLine=26017801;
- //BA.debugLineNum = 26017801;BA.debugLine="Else if h > 12 Then";
+{RDebugUtils.currentLine=25952265;
+ //BA.debugLineNum = 25952265;BA.debugLine="Else if h > 12 Then";
 if (_h>12) { 
-RDebugUtils.currentLine=26017802;
- //BA.debugLineNum = 26017802;BA.debugLine="num = h - 12";
+RDebugUtils.currentLine=25952266;
+ //BA.debugLineNum = 25952266;BA.debugLine="num = h - 12";
 _num = (int) (_h-12);
-RDebugUtils.currentLine=26017803;
- //BA.debugLineNum = 26017803;BA.debugLine="If num = 12 Then";
+RDebugUtils.currentLine=25952267;
+ //BA.debugLineNum = 25952267;BA.debugLine="If num = 12 Then";
 if (_num==12) { 
-RDebugUtils.currentLine=26017804;
- //BA.debugLineNum = 26017804;BA.debugLine="ampm = \"am\"";
+RDebugUtils.currentLine=25952268;
+ //BA.debugLineNum = 25952268;BA.debugLine="ampm = \"am\"";
 _ampm = "am";
  }else {
-RDebugUtils.currentLine=26017806;
- //BA.debugLineNum = 26017806;BA.debugLine="ampm = \"pm\"";
+RDebugUtils.currentLine=25952270;
+ //BA.debugLineNum = 25952270;BA.debugLine="ampm = \"pm\"";
 _ampm = "pm";
  };
  }else {
-RDebugUtils.currentLine=26017810;
- //BA.debugLineNum = 26017810;BA.debugLine="num = h";
+RDebugUtils.currentLine=25952274;
+ //BA.debugLineNum = 25952274;BA.debugLine="num = h";
 _num = _h;
-RDebugUtils.currentLine=26017811;
- //BA.debugLineNum = 26017811;BA.debugLine="ampm = \"am\"";
+RDebugUtils.currentLine=25952275;
+ //BA.debugLineNum = 25952275;BA.debugLine="ampm = \"am\"";
 _ampm = "am";
  }}}
 ;
-RDebugUtils.currentLine=26017814;
- //BA.debugLineNum = 26017814;BA.debugLine="Return num & \":00\" & ampm";
+RDebugUtils.currentLine=25952278;
+ //BA.debugLineNum = 25952278;BA.debugLine="Return num & \":00\" & ampm";
 if (true) return BA.NumberToString(_num)+":00"+_ampm;
-RDebugUtils.currentLine=26017815;
- //BA.debugLineNum = 26017815;BA.debugLine="End Sub";
+RDebugUtils.currentLine=25952279;
+ //BA.debugLineNum = 25952279;BA.debugLine="End Sub";
 return "";
 }
 public static String  _menu_btn_click() throws Exception{
 RDebugUtils.currentModule="schedule_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "menu_btn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "menu_btn_click", null));}
-RDebugUtils.currentLine=26345472;
- //BA.debugLineNum = 26345472;BA.debugLine="Private Sub menu_btn_Click";
-RDebugUtils.currentLine=26345473;
- //BA.debugLineNum = 26345473;BA.debugLine="menupanel.Visible =True";
+RDebugUtils.currentLine=26279936;
+ //BA.debugLineNum = 26279936;BA.debugLine="Private Sub menu_btn_Click";
+RDebugUtils.currentLine=26279937;
+ //BA.debugLineNum = 26279937;BA.debugLine="menupanel.Visible =True";
 mostCurrent._menupanel.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=26345474;
- //BA.debugLineNum = 26345474;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26279938;
+ //BA.debugLineNum = 26279938;BA.debugLine="End Sub";
 return "";
 }
 public static String  _month_btn_click() throws Exception{
 RDebugUtils.currentModule="schedule_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "month_btn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "month_btn_click", null));}
-RDebugUtils.currentLine=26542080;
- //BA.debugLineNum = 26542080;BA.debugLine="Private Sub Month_btn_Click";
-RDebugUtils.currentLine=26542081;
- //BA.debugLineNum = 26542081;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=26476544;
+ //BA.debugLineNum = 26476544;BA.debugLine="Private Sub Month_btn_Click";
+RDebugUtils.currentLine=26476545;
+ //BA.debugLineNum = 26476545;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=26542082;
- //BA.debugLineNum = 26542082;BA.debugLine="StartActivity(CalendarActivity)";
+RDebugUtils.currentLine=26476546;
+ //BA.debugLineNum = 26476546;BA.debugLine="StartActivity(CalendarActivity)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._calendaractivity.getObject()));
-RDebugUtils.currentLine=26542083;
- //BA.debugLineNum = 26542083;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26476547;
+ //BA.debugLineNum = 26476547;BA.debugLine="End Sub";
 return "";
 }
 public static String  _sched_btn_click() throws Exception{
 RDebugUtils.currentModule="schedule_module";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "sched_btn_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "sched_btn_click", null));}
-RDebugUtils.currentLine=26411008;
- //BA.debugLineNum = 26411008;BA.debugLine="Private Sub sched_btn_Click";
-RDebugUtils.currentLine=26411009;
- //BA.debugLineNum = 26411009;BA.debugLine="menupanel.visible = False";
+RDebugUtils.currentLine=26345472;
+ //BA.debugLineNum = 26345472;BA.debugLine="Private Sub sched_btn_Click";
+RDebugUtils.currentLine=26345473;
+ //BA.debugLineNum = 26345473;BA.debugLine="menupanel.visible = False";
 mostCurrent._menupanel.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=26411010;
- //BA.debugLineNum = 26411010;BA.debugLine="End Sub";
+RDebugUtils.currentLine=26345474;
+ //BA.debugLineNum = 26345474;BA.debugLine="End Sub";
 return "";
 }
 }

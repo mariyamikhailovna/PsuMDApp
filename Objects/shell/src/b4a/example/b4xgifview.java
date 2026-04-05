@@ -23,7 +23,6 @@ public static b4a.example.starter _starter = null;
 public static b4a.example.themeactivity _themeactivity = null;
 public static b4a.example.mainactivity _mainactivity = null;
 public static b4a.example.helpactivity _helpactivity = null;
-public static b4a.example.musiccodemodule _musiccodemodule = null;
 public static b4a.example.todoactivity _todoactivity = null;
 public static b4a.example.calendaractivity _calendaractivity = null;
 public static b4a.example.card_module _card_module = null;

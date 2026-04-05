@@ -146,7 +146,7 @@ mainactivity,bookie_longclick,0,0,360,368
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopopup,,showinfopage
-mainactivity,showinfopopup,0,1,155,185
+mainactivity,showinfopopup,0,0,155,185
 ,infopnl,,xui,,infotitlelbl,,infodesclbl,,infopagelbl,,infopage
 ,infopnl,,infopage
 ,showinfopage
@@ -309,10 +309,6 @@ helpactivity,nextbtn_click,0,0,210,214
 helpactivity,process_globals,0,1,6,11
 ,helppage
 ,helppage
-
-musiccodemodule,process_globals,0,1,3,7
-
-
 
 todoactivity,activity_create,1,0,38,62
 starter,darkmode,,addtitletextarea,,listslist,,newlistbtn,,progressbar,,progressnumber,,progresspercent,,taskslist,,kvs,starter,taskkvs,,addtaskbtnpnl,,addtaskbtn
